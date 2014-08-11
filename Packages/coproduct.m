@@ -4,7 +4,7 @@ ClearAll[IMPL,MPL,MZV,MPLtoIMPL,IMPLtoMPL,coproduct,maxCoproduct,higherCoproduct
 
 If[!ValueQ[useLJfunctions],useLJfunctions=True];
 
-LyndonBasisReplacements=Import["conservativeLyndonBasisReplacements.mx"];
+LyndonBasisReplacements=If[FileExistsQ["conservativeLyndonBasisReplacements.mx"],Import["conservativeLyndonBasisReplacements.mx"],Get["conservativeLyndonBasisReplacements.dat"]];
 completeLyndonBasisReplacements=Join[LyndonBasisReplacements,Table[IMPL[0,PadLeft[{},i],y_]->(IMPL[0,{0},y]^i)/(i!),{i,2,10}],Table[IMPL[0,PadLeft[{},i,1],y_]->(IMPL[0,{1},y]^i)/(i!),{i,2,10}]];
 <<canonicalIntegrationLimitsIMPL.m
 <<coproductDerivatives.m
