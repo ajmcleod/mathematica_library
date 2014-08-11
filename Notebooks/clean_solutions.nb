@@ -1,0 +1,1405 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     59902,       1396]
+NotebookOptionsPosition[     59284,       1373]
+NotebookOutlinePosition[     59661,       1390]
+CellTagsIndexPosition[     59618,       1387]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cleanSolutions", "[", 
+   RowBox[{
+   "newFunctions_", ",", "knownFunctions_", ",", "resultingFunctions_"}], 
+   "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "knownCoproducts", ",", "singlets", ",", "threeCycles", ",", 
+      "threeCycleImage", ",", "singletReplacementVector", ",", 
+      "updatedCyclicImage"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"knownCoproducts", "=", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"coproduct", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"transcendentalWeight", "[", 
+              RowBox[{"First", "[", "knownFunctions", "]"}], "]"}], "-", 
+             "1"}], ",", "1"}], "}"}], ",", "#"}], "]"}], "&"}], "/@", 
+       "knownFunctions"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "\"\<Anlyzing inputs:\>\"", "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"cyclicImage", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"ValueQ", "[", "cyclicImage", "]"}], ",", "cyclicImage", ",", 
+        
+        RowBox[{"Monitor", "[", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"cyclicDecomposition", "[", 
+             RowBox[{
+              RowBox[{"Join", "[", 
+               RowBox[{"newFunctions", ",", "knownCoproducts"}], "]"}], ",", 
+              "m"}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"m", ",", 
+              RowBox[{"Length", "@", "newFunctions"}]}], "}"}]}], "]"}], ",", 
+          
+          RowBox[{"{", 
+           RowBox[{"m", ",", 
+            RowBox[{"Length", "@", "newFunctions"}]}], "}"}]}], "]"}]}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"\"\<All \>\"", "<>", 
+       RowBox[{"ToString", "[", 
+        RowBox[{"Length", "@", "newFunctions"}], "]"}], "<>", 
+       "\"\< inputs analyzed.\\n\>\""}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"singlets", "=", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"IdentityMatrix", "[", 
+               RowBox[{"Length", "@", "newFunctions"}], "]"}], 
+              "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], 
+             "\[Equal]", 
+             RowBox[{"Take", "[", 
+              RowBox[{
+               RowBox[{
+               "cyclicImage", "\[LeftDoubleBracket]", "i", 
+                "\[RightDoubleBracket]"}], ",", 
+               RowBox[{"Length", "@", "newFunctions"}]}], "]"}]}], ",", "i", 
+            ",", "Null"}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "@", "newFunctions"}]}], "}"}]}], "]"}], ",", 
+        "Null"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "\"\<Singlets identified as\>\"", "]"}], ";", 
+     RowBox[{"Print", "[", "singlets", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"singletReplacementVector", "[", "i", "]"}], "=", 
+        RowBox[{"singletReplacements", "[", 
+         RowBox[{
+          RowBox[{
+          "cyclicImage", "\[LeftDoubleBracket]", "i", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"Length", "[", "knownFunctions", "]"}]}], "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "singlets"}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"resultingFunctions", "=", 
+      RowBox[{"ReplacePart", "[", 
+       RowBox[{"newFunctions", ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"i", "\[Rule]", 
+           RowBox[{"Expand", "[", 
+            RowBox[{
+             RowBox[{
+             "newFunctions", "\[LeftDoubleBracket]", "i", 
+              "\[RightDoubleBracket]"}], "+", 
+             RowBox[{
+              RowBox[{"singletReplacementVector", "[", "i", "]"}], ".", 
+              "knownCoproducts"}]}], "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "singlets"}], "}"}]}], "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"checkSinglets", "[", 
+       RowBox[{"resultingFunctions", ",", "singlets"}], "]"}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"threeCycles", "=", 
+      RowBox[{"identifyTriplets", "[", 
+       RowBox[{"cyclicImage", ",", 
+        RowBox[{"Length", "@", "newFunctions"}], ",", "singlets"}], "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", "\"\<Three-cycles identified as\>\"", "]"}], ";", 
+     RowBox[{"Print", "[", "threeCycles", "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"updatedCyclicImage", "=", 
+      RowBox[{"ReplacePart", "[", 
+       RowBox[{"cyclicImage", ",", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"j", "->", 
+           RowBox[{
+            RowBox[{
+            "cyclicImage", "\[LeftDoubleBracket]", "j", 
+             "\[RightDoubleBracket]"}], "-", 
+            RowBox[{"Sum", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"cyclicImage", "\[LeftDoubleBracket]", 
+                RowBox[{"j", ",", "i"}], "\[RightDoubleBracket]"}], 
+               RowBox[{"Join", "[", 
+                RowBox[{
+                 RowBox[{"ConstantArray", "[", 
+                  RowBox[{"0", ",", "13"}], "]"}], ",", 
+                 RowBox[{"singletReplacementVector", "[", "i", "]"}]}], 
+                "]"}]}], ",", 
+              RowBox[{"{", 
+               RowBox[{"i", ",", "singlets"}], "}"}]}], "]"}]}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"j", ",", 
+            RowBox[{"Flatten", "[", "threeCycles", "]"}]}], "}"}]}], "]"}]}], 
+       "]"}]}], ";", 
+     RowBox[{"resultingFunctions", "=", 
+      RowBox[{"ReplacePart", "[", 
+       RowBox[{"resultingFunctions", ",", 
+        RowBox[{"threeCycleReplacements", "[", 
+         RowBox[{
+         "threeCycles", ",", "updatedCyclicImage", ",", "resultingFunctions", 
+          ",", "knownCoproducts", ",", "singlets"}], "]"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Print", "[", 
+      RowBox[{"checkThreeCycles", "[", 
+       RowBox[{"resultingFunctions", ",", "threeCycles"}], "]"}], "]"}], ";", 
+     "\[IndentingNewLine]", "resultingFunctions"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.60756902501676*^9, 3.607569026165246*^9}, {
+   3.607569111230308*^9, 3.6075691268688917`*^9}, {3.607569186837172*^9, 
+   3.607569228540745*^9}, {3.607569266889887*^9, 3.607569405932201*^9}, {
+   3.6075694781871862`*^9, 3.607569514080648*^9}, {3.607569672765676*^9, 
+   3.6075697126750097`*^9}, 3.607569794412175*^9, {3.607569977455237*^9, 
+   3.60757014992516*^9}, {3.6075702764764013`*^9, 3.607570288996101*^9}, {
+   3.607570543284264*^9, 3.607570550675787*^9}, {3.607570709653713*^9, 
+   3.6075707144114637`*^9}, {3.6075711533446407`*^9, 3.6075711571194067`*^9}, 
+   3.6075764403105707`*^9, {3.607576605240897*^9, 3.607576659399404*^9}, {
+   3.607576874651648*^9, 3.607576875942733*^9}, {3.60757695479167*^9, 
+   3.6075769734680243`*^9}, {3.607577099831273*^9, 3.607577125942667*^9}, {
+   3.60757722203039*^9, 3.607577222288958*^9}, {3.607579070501397*^9, 
+   3.607579109346498*^9}, {3.607579238874645*^9, 3.607579263950624*^9}, {
+   3.607579307285132*^9, 3.607579331140745*^9}, {3.607579449514989*^9, 
+   3.60757952141407*^9}, {3.607579555585638*^9, 3.607579594028113*^9}, {
+   3.607579641767062*^9, 3.607579720528545*^9}, 3.607610015395561*^9, {
+   3.607610424712145*^9, 3.607610471035203*^9}, {3.607614896838614*^9, 
+   3.60761490095112*^9}, {3.60761901851038*^9, 3.6076190516011066`*^9}, {
+   3.607619130738508*^9, 3.607619153327173*^9}, {3.60761918444633*^9, 
+   3.607619236485457*^9}, {3.607619378713476*^9, 3.607619463523744*^9}, {
+   3.6076195512146187`*^9, 3.607619569372719*^9}, {3.6076197661977463`*^9, 
+   3.60761977377276*^9}, {3.607619831271111*^9, 3.607619837737503*^9}, {
+   3.6076209140577*^9, 3.607620916122431*^9}, {3.607621045207717*^9, 
+   3.6076210473858137`*^9}, {3.60762129687339*^9, 3.607621321536241*^9}, {
+   3.6076213591268187`*^9, 3.607621360628182*^9}, {3.607621850783226*^9, 
+   3.607621863814666*^9}, {3.6076220529487257`*^9, 3.607622141082184*^9}, {
+   3.607622437268256*^9, 3.607622439591977*^9}, {3.60762247502909*^9, 
+   3.6076224774040833`*^9}, {3.607625529106271*^9, 3.607625619394294*^9}, {
+   3.607625651671165*^9, 3.607625669650591*^9}, {3.607625784683146*^9, 
+   3.607625791368101*^9}, {3.607745012168963*^9, 3.607745014805794*^9}, {
+   3.607745217787031*^9, 3.607745221145318*^9}, {3.607800988507362*^9, 
+   3.607800990928887*^9}, {3.607802491297089*^9, 3.607802493677986*^9}, {
+   3.607802855985508*^9, 3.607802907000347*^9}, {3.6078032181488647`*^9, 
+   3.607803235220262*^9}, {3.6078053447387238`*^9, 3.607805351417927*^9}, {
+   3.607805511517467*^9, 3.607805527691111*^9}, {3.6078055814348803`*^9, 
+   3.6078056238601627`*^9}, {3.607805661223583*^9, 3.607805666936367*^9}, {
+   3.607807114450514*^9, 3.607807212680298*^9}, {3.607807265162333*^9, 
+   3.607807300582992*^9}, {3.607807423844119*^9, 3.607807424707629*^9}, {
+   3.60780749186071*^9, 3.6078075099347553`*^9}, {3.60782125413251*^9, 
+   3.607821332726974*^9}, 3.6078213943359203`*^9, {3.607821428189391*^9, 
+   3.607821444821843*^9}, {3.607821714279296*^9, 3.607821760534389*^9}, {
+   3.607821827621249*^9, 3.6078218333161707`*^9}, {3.607821871376243*^9, 
+   3.6078219176986113`*^9}, {3.6078219990571938`*^9, 
+   3.6078220057435513`*^9}, {3.607822533658489*^9, 3.607822553246359*^9}, {
+   3.6078225971885233`*^9, 3.6078225978358994`*^9}, {3.607824055063754*^9, 
+   3.6078240797017517`*^9}, {3.6078245949724207`*^9, 3.607824613660821*^9}, {
+   3.607824933368292*^9, 3.607824946003413*^9}, {3.607825056273366*^9, 
+   3.6078250956676283`*^9}, {3.607825735310123*^9, 3.607825823649987*^9}, {
+   3.607825853980462*^9, 3.607825855848587*^9}, {3.607826629708856*^9, 
+   3.607826632825946*^9}, {3.607826749576261*^9, 3.607826750694407*^9}, {
+   3.607829234728977*^9, 3.607829238874875*^9}, {3.6078293966674013`*^9, 
+   3.60782940393823*^9}, {3.607829676682497*^9, 3.607829677426538*^9}, {
+   3.607830249424378*^9, 3.607830273709173*^9}, {3.6078304041938763`*^9, 
+   3.60783043433422*^9}, {3.607830603443931*^9, 3.607830606680892*^9}, {
+   3.607830945844221*^9, 3.607830951478894*^9}, {3.607871535896779*^9, 
+   3.607871540480843*^9}, {3.607871622167845*^9, 3.607871666314974*^9}, {
+   3.607871704554028*^9, 3.607871706822714*^9}, {3.607872170415513*^9, 
+   3.6078722069989347`*^9}, {3.607872643813382*^9, 3.607872645689144*^9}, {
+   3.607872784730425*^9, 3.60787280841965*^9}, {3.607874289186831*^9, 
+   3.607874343092876*^9}, {3.6078743963768187`*^9, 3.607874396661418*^9}, {
+   3.607875071791868*^9, 3.607875077398011*^9}, {3.607875225839918*^9, 
+   3.607875270736351*^9}, {3.607876355009789*^9, 3.607876371572392*^9}, {
+   3.6078799758707867`*^9, 3.6078800000134077`*^9}, {3.607880775734478*^9, 
+   3.60788086838554*^9}, {3.6078809831407623`*^9, 3.607881191615652*^9}, {
+   3.6078860222611628`*^9, 3.607886051640222*^9}, {3.607886104656403*^9, 
+   3.607886121639168*^9}, 3.607886168520917*^9, {3.607886341536868*^9, 
+   3.60788634185007*^9}, 3.607887842835321*^9, {3.6078883976409693`*^9, 
+   3.6078883980218973`*^9}, {3.607889218148073*^9, 3.607889221562395*^9}, {
+   3.607905337684547*^9, 3.6079053669646587`*^9}, {3.6079059859672728`*^9, 
+   3.60790598627216*^9}, {3.6079061310822783`*^9, 3.607906171841762*^9}, {
+   3.607906263263918*^9, 3.607906267663851*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"singletReplacements", "[", 
+   RowBox[{"noncyclicImage_", ",", "numberOfKnownFunctions_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"replacementVector", "=", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"0", ",", "numberOfKnownFunctions"}], "]"}]}], ",", 
+      "triplet"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"triplet", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Take", "[", 
+             RowBox[{"noncyclicImage", ",", 
+              RowBox[{"-", "numberOfKnownFunctions"}]}], "]"}], 
+            "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", 
+             RowBox[{
+              RowBox[{"3", 
+               RowBox[{"(", 
+                RowBox[{"i", "-", "1"}], ")"}]}], "+", "1"}], ",", 
+             RowBox[{"3", "i"}]}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"triplet", "\[NotEqual]", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Total", "[", "triplet", "]"}], "\[Equal]", "0"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{"replacementVector", "=", 
+             RowBox[{"ReplacePart", "[", 
+              RowBox[{"replacementVector", ",", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"3", 
+                    RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}]}], "+", "1"}], "->", 
+                  RowBox[{"First", "[", "triplet", "]"}]}], ",", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"3", 
+                    RowBox[{"(", 
+                    RowBox[{"i", "-", "1"}], ")"}]}], "+", "2"}], "\[Rule]", 
+                  RowBox[{"-", 
+                   RowBox[{"Last", "[", "triplet", "]"}]}]}]}], "}"}]}], 
+              "]"}]}], ",", "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{
+             "Print", "[", 
+              "\"\<Nonstandard triplet found in cleanSinglet routine:\>\"", 
+              "]"}], ";", 
+             RowBox[{"Print", "[", "triplet", "]"}]}]}], "]"}]}], "]"}]}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"numberOfKnownFunctions", "/", "3"}]}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "replacementVector"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.607718030762048*^9, 3.607718041620975*^9}, {
+  3.607721681085299*^9, 3.607721705704891*^9}, {3.607721765992086*^9, 
+  3.607721807531829*^9}, {3.607722031258062*^9, 3.607722056078939*^9}, {
+  3.607722117701901*^9, 3.607722156548727*^9}, {3.607722230907633*^9, 
+  3.607722315688327*^9}, {3.607821415238968*^9, 3.6078214228877077`*^9}, {
+  3.607828963776598*^9, 3.6078290773177357`*^9}, {3.607829668875307*^9, 
+  3.607829672186215*^9}, {3.607829713199502*^9, 3.607829714375939*^9}, {
+  3.6078302082165947`*^9, 3.6078302302964973`*^9}, {3.607830300018387*^9, 
+  3.607830396627172*^9}, {3.6078305234649887`*^9, 3.607830528399366*^9}, {
+  3.60783084787418*^9, 3.607830857312458*^9}, {3.607830912545347*^9, 
+  3.607830923857095*^9}, {3.6078309729556303`*^9, 3.607830973098392*^9}, {
+  3.607887845875589*^9, 3.607887853698028*^9}, {3.607906257078281*^9, 
+  3.607906258876401*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"checkSinglets", "[", 
+   RowBox[{"functions_", ",", "singlets_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "check", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"check", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Simplify", "[", 
+          RowBox[{"Expand", "[", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+              "functions", "\[LeftDoubleBracket]", "j", 
+               "\[RightDoubleBracket]"}], "/.", "cycle"}], ")"}], "-", 
+            RowBox[{
+            "functions", "\[LeftDoubleBracket]", "j", 
+             "\[RightDoubleBracket]"}]}], "]"}], "]"}], "\[Equal]", "0"}], 
+        ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "singlets"}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"And", "@@", "check"}], ",", 
+       "\"\<All singlets clean and verified. \\n\>\"", ",", 
+       RowBox[{"\"\<Unable to clean \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Select", "[", 
+          RowBox[{"singlets", ",", 
+           RowBox[{
+            RowBox[{"!", 
+             RowBox[{
+             "check", "\[LeftDoubleBracket]", "#", 
+              "\[RightDoubleBracket]"}]}], "&"}]}], "]"}], "]"}]}]}], 
+      "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6076221330291767`*^9, 3.607622380075412*^9}, {
+  3.60762257070116*^9, 3.60762260445935*^9}, {3.607625765984981*^9, 
+  3.607625766382183*^9}, {3.6078750827054243`*^9, 3.6078750833304977`*^9}, {
+  3.607875242557645*^9, 3.607875243203576*^9}, {3.607887855873163*^9, 
+  3.607887860090425*^9}, {3.6079062524757433`*^9, 3.6079062531794024`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"identifyTriplets", "[", 
+   RowBox[{"fullImage_", ",", "numberOfFunctions_", ",", "knownSinglets_"}], 
+   "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "remainingFunctions", ",", "image1", ",", "image2", ",", "image3", ",", 
+      RowBox[{"threeCycles", "=", 
+       RowBox[{"{", "}"}]}]}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"remainingFunctions", "=", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{"l", ",", 
+          RowBox[{"{", 
+           RowBox[{"l", ",", "numberOfFunctions"}], "}"}]}], "]"}], ",", 
+        RowBox[{"Alternatives", "@@", "knownSinglets"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{"remainingFunctions", "\[NotEqual]", 
+        RowBox[{"{", "}"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"image1", "=", 
+         RowBox[{"remainingFunctions", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"fullImage", "\[LeftDoubleBracket]", 
+                RowBox[{
+                 RowBox[{"First", "[", "remainingFunctions", "]"}], ",", 
+                 "l"}], "\[RightDoubleBracket]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"l", ",", "remainingFunctions"}], "}"}]}], "]"}], ",",
+              "1"}], "]"}], "\[LeftDoubleBracket]", 
+           RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], 
+          "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"image2", "=", 
+         RowBox[{"remainingFunctions", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"fullImage", "\[LeftDoubleBracket]", 
+                RowBox[{"image1", ",", "l"}], "\[RightDoubleBracket]"}], ",", 
+               
+               RowBox[{"{", 
+                RowBox[{"l", ",", "remainingFunctions"}], "}"}]}], "]"}], ",",
+              "1"}], "]"}], "\[LeftDoubleBracket]", 
+           RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], 
+          "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"image3", "=", 
+         RowBox[{"remainingFunctions", "\[LeftDoubleBracket]", 
+          RowBox[{
+           RowBox[{"Position", "[", 
+            RowBox[{
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{"fullImage", "\[LeftDoubleBracket]", 
+                RowBox[{"image2", ",", "l"}], "\[RightDoubleBracket]"}], ",", 
+               
+               RowBox[{"{", 
+                RowBox[{"l", ",", "remainingFunctions"}], "}"}]}], "]"}], ",",
+              "1"}], "]"}], "\[LeftDoubleBracket]", 
+           RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}], 
+          "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"image3", "\[NotEqual]", 
+           RowBox[{"First", "[", "remainingFunctions", "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"Print", "[", "\"\<Noncyclic triplet found\>\"", "]"}], 
+           ";", " ", 
+           RowBox[{"Print", "[", 
+            RowBox[{
+             RowBox[{"First", "[", "remainingFunctions", "]"}], "->", 
+             RowBox[{"image1", "->", 
+              RowBox[{"image2", "\[Rule]", "image3"}]}]}], "]"}], ";"}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"remainingFunctions", "=", 
+            RowBox[{"DeleteCases", "[", 
+             RowBox[{"remainingFunctions", ",", 
+              RowBox[{"Alternatives", "[", 
+               RowBox[{"image1", ",", "image2", ",", "image3"}], "]"}]}], 
+             "]"}]}], ";", 
+           RowBox[{"AppendTo", "[", 
+            RowBox[{"threeCycles", ",", 
+             RowBox[{"{", 
+              RowBox[{"image3", ",", "image1", ",", "image2"}], "}"}]}], 
+            "]"}]}]}], "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+     "threeCycles"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6075772311548653`*^9, 3.607577279680237*^9}, {
+  3.607577333353969*^9, 3.607577454093927*^9}, {3.607577497600615*^9, 
+  3.607577926610016*^9}, {3.607578453646193*^9, 3.607578485525868*^9}, {
+  3.607578532527081*^9, 3.6075785706712017`*^9}, {3.607578962475903*^9, 
+  3.607579021538574*^9}, {3.607887862016994*^9, 3.6078878699599943`*^9}, {
+  3.607906248842235*^9, 3.607906249479415*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"threeCycleReplacements", "[", 
+   RowBox[{
+   "threeCycles_", ",", "cyclicImage_", ",", "currentFunctions_", ",", 
+    "knownCoproducts_", ",", "singlets_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"replacements", "=", 
+       RowBox[{"{", "}"}]}], ",", "threeCycleImage", ",", 
+      "currentFunctionReplacements", ",", "knownFunctionReplacements"}], 
+     "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"threeCycleImage", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{
+           "cyclicImage", "\[LeftDoubleBracket]", "j", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"j", ",", 
+             RowBox[{
+             "threeCycles", "\[LeftDoubleBracket]", "i", 
+              "\[RightDoubleBracket]"}]}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"currentFunctionReplacements", "=", 
+         RowBox[{"threeCycleSingletReplacements", "[", 
+          RowBox[{
+           RowBox[{
+           "threeCycles", "\[LeftDoubleBracket]", "i", 
+            "\[RightDoubleBracket]"}], ",", "threeCycleImage", ",", 
+           "currentFunctions", ",", "singlets"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"knownFunctionReplacements", "=", 
+         RowBox[{"threeCycleKnownTripletReplacements", "[", 
+          RowBox[{
+           RowBox[{
+           "threeCycles", "\[LeftDoubleBracket]", "i", 
+            "\[RightDoubleBracket]"}], ",", "threeCycleImage", ",", 
+           RowBox[{"Length", "@", "knownCoproducts"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"replacements", ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"threeCycles", "\[LeftDoubleBracket]", 
+              RowBox[{"i", ",", "j"}], "\[RightDoubleBracket]"}], "\[Rule]", 
+             RowBox[{"Expand", "[", 
+              RowBox[{
+               RowBox[{"currentFunctions", "\[LeftDoubleBracket]", 
+                RowBox[{"threeCycles", "\[LeftDoubleBracket]", 
+                 RowBox[{"i", ",", "j"}], "\[RightDoubleBracket]"}], 
+                "\[RightDoubleBracket]"}], "-", 
+               RowBox[{
+                RowBox[{
+                "currentFunctionReplacements", "\[LeftDoubleBracket]", "j", 
+                 "\[RightDoubleBracket]"}], ".", "currentFunctions"}], "+", 
+               RowBox[{
+                RowBox[{
+                "knownFunctionReplacements", "\[LeftDoubleBracket]", "j", 
+                 "\[RightDoubleBracket]"}], ".", "knownCoproducts"}]}], 
+              "]"}]}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", "3"}], "}"}]}], "]"}]}], "]"}], ";"}], 
+       "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "[", "threeCycles", "]"}]}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Flatten", "[", "replacements", "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.607872675322226*^9, 3.607872675424272*^9}, {
+   3.6078743529716454`*^9, 3.607874378096425*^9}, {3.607874593515194*^9, 
+   3.607874594024461*^9}, {3.607874843025464*^9, 3.607874964294051*^9}, {
+   3.607875011117445*^9, 3.607875062041616*^9}, {3.607875284835204*^9, 
+   3.6078752878477077`*^9}, {3.607875341802802*^9, 3.607875374003429*^9}, {
+   3.607875431854698*^9, 3.607875441075972*^9}, {3.6078762832773733`*^9, 
+   3.607876306278071*^9}, {3.607876336797073*^9, 3.607876340011598*^9}, {
+   3.607877138705268*^9, 3.607877196238961*^9}, {3.607877401378731*^9, 
+   3.607877561109527*^9}, 3.607877603459937*^9, {3.607877831223228*^9, 
+   3.607877835639361*^9}, {3.6078797929901342`*^9, 3.607879874166835*^9}, {
+   3.607880049108395*^9, 3.607880049354156*^9}, {3.607886432238503*^9, 
+   3.60788643647272*^9}, {3.607886470562105*^9, 3.607886498128798*^9}, {
+   3.607886592397423*^9, 3.6078867251897993`*^9}, {3.607886786647807*^9, 
+   3.60788681681378*^9}, {3.607886852018112*^9, 3.60788686435504*^9}, {
+   3.6078870815870123`*^9, 3.607887093974812*^9}, {3.6078873972370358`*^9, 
+   3.6078874003644333`*^9}, {3.607887871940539*^9, 3.607887878212634*^9}, {
+   3.6078884750401173`*^9, 3.607888477004271*^9}, {3.607888507109652*^9, 
+   3.607888519910469*^9}, {3.607888778187333*^9, 3.607888778491459*^9}, {
+   3.607889248853943*^9, 3.607889257634645*^9}, {3.607889413414652*^9, 
+   3.60788941435885*^9}, {3.607905379166844*^9, 3.60790537949747*^9}, {
+   3.607906245895114*^9, 3.60790624657304*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"threeCycleSingletReplacements", "[", 
+   RowBox[{
+   "threeCycle_", ",", "threeCycleImage_", ",", "currentFunctions_", ",", 
+    "singlets_"}], "]"}], ":=", "\[IndentingNewLine]", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"replacementVectors", "=", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", 
+           RowBox[{"Length", "[", "currentFunctions", "]"}]}], "}"}]}], 
+        "]"}]}], 
+      RowBox[{"(*", 
+       RowBox[{"offset", "=", 
+        RowBox[{"{", "}"}]}], "*)"}], ",", "singletImage", ",", 
+      "negativeEntries", ",", "positiveEntries", ",", "positivePosition", ",",
+       "negativePosition"}], "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"singletImage", "=", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"threeCycleImage", "\[LeftDoubleBracket]", 
+            RowBox[{"k", ",", "j"}], "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"k", ",", "3"}], "}"}]}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"singletImage", "\[NotEqual]", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{
+           RowBox[{"negativeEntries", "=", 
+            RowBox[{"Select", "[", 
+             RowBox[{"singletImage", ",", 
+              RowBox[{
+               RowBox[{"Negative", "[", "#", "]"}], "&"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"positiveEntries", "=", 
+            RowBox[{"Select", "[", 
+             RowBox[{"singletImage", ",", 
+              RowBox[{
+               RowBox[{"Positive", "[", "#", "]"}], "&"}]}], "]"}]}], ";", 
+           "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Length", "[", "negativeEntries", "]"}], "\[Equal]", 
+               "1"}], "\[And]", 
+              RowBox[{
+               RowBox[{"Length", "[", "positiveEntries", "]"}], "\[Equal]", 
+               "1"}]}], ",", "\[IndentingNewLine]", "\t", 
+             RowBox[{
+              RowBox[{"positivePosition", "=", 
+               RowBox[{
+                RowBox[{"Position", "[", 
+                 RowBox[{"singletImage", ",", 
+                  RowBox[{"First", "[", "positiveEntries", "]"}]}], "]"}], 
+                "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+              "\[IndentingNewLine]", "\t", 
+              RowBox[{"negativePosition", "=", 
+               RowBox[{
+                RowBox[{"Position", "[", 
+                 RowBox[{"singletImage", ",", 
+                  RowBox[{"First", "[", "negativeEntries", "]"}]}], "]"}], 
+                "\[LeftDoubleBracket]", 
+                RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+              "\[IndentingNewLine]", "\t", 
+              RowBox[{"If", "[", 
+               RowBox[{
+                RowBox[{"positivePosition", "\[Equal]", 
+                 RowBox[{"Mod", "[", 
+                  RowBox[{
+                   RowBox[{"negativePosition", "-", "1"}], ",", "3", ",", 
+                   "1"}], "]"}]}], ",", "\[IndentingNewLine]", "\t", 
+                RowBox[{"replacementVectors", "=", 
+                 RowBox[{"ReplacePart", "[", 
+                  RowBox[{"replacementVectors", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"negativePosition", ",", "j"}], "}"}], "->", 
+                    RowBox[{"First", "[", "negativeEntries", "]"}]}]}], 
+                  "]"}]}], ",", "\[IndentingNewLine]", "\t", 
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"positivePosition", "\[Equal]", 
+                   RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"negativePosition", "+", "1"}], ",", "3", ",", 
+                    "1"}], "]"}]}], ",", "\[IndentingNewLine]", "\t", 
+                  RowBox[{"replacementVectors", "=", 
+                   RowBox[{"ReplacePart", "[", 
+                    RowBox[{"replacementVectors", ",", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"positivePosition", ",", "j"}], "}"}], "->", 
+                    RowBox[{"First", "[", "positiveEntries", "]"}]}]}], 
+                    "]"}]}], ",", "\[IndentingNewLine]", "\t", 
+                  RowBox[{
+                   RowBox[{
+                   "Print", "[", 
+                    "\"\<Nonstandard singlet image found in \
+threeCycleReplacements routine:\>\"", "]"}], ";", 
+                   RowBox[{"Print", "[", "singletImage", "]"}]}]}], "]"}]}], 
+               "]"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Length", "[", "negativeEntries", "]"}], "\[Equal]", 
+               "2"}], "\[And]", 
+              RowBox[{
+               RowBox[{"Length", "[", "positiveEntries", "]"}], "\[Equal]", 
+               "1"}]}], ",", "\[IndentingNewLine]", "\t", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", 
+                  RowBox[{"DeleteDuplicates", "[", "negativeEntries", "]"}], 
+                  "]"}], "\[Equal]", "1"}], "\[And]", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  RowBox[{"DeleteDuplicates", "[", "negativeEntries", "]"}]}],
+                  "\[Equal]", 
+                 RowBox[{"-", "positiveEntries"}]}]}], ",", 
+               "\[IndentingNewLine]", "\t", 
+               RowBox[{
+                RowBox[{"positivePosition", "=", 
+                 RowBox[{
+                  RowBox[{"Position", "[", 
+                   RowBox[{"singletImage", ",", 
+                    RowBox[{"First", "[", "positiveEntries", "]"}]}], "]"}], 
+                  "\[LeftDoubleBracket]", 
+                  RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+                "\[IndentingNewLine]", "\t", 
+                RowBox[{"replacementVectors", "=", 
+                 RowBox[{"ReplacePart", "[", 
+                  RowBox[{"replacementVectors", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"positivePosition", "+", "1"}], ",", "3", ",", 
+                    "1"}], "]"}], ",", "j"}], "}"}], "->", 
+                    RowBox[{"2", " ", 
+                    RowBox[{"First", "[", "negativeEntries", "]"}]}]}]}], 
+                  "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+                RowBox[{"replacementVectors", "=", 
+                 RowBox[{"ReplacePart", "[", 
+                  RowBox[{"replacementVectors", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"positivePosition", "+", "2"}], ",", "3", ",", 
+                    "1"}], "]"}], ",", "j"}], "}"}], "->", 
+                    RowBox[{"First", "[", "negativeEntries", "]"}]}]}], 
+                  "]"}]}]}], ",", "\[IndentingNewLine]", "\t", 
+               RowBox[{
+                RowBox[{
+                "Print", "[", 
+                 "\"\<Nonstandard singlet image found in \
+threeCycleReplacements routine:\>\"", "]"}], ";", 
+                RowBox[{"Print", "[", "singletImage", "]"}]}]}], "]"}]}], 
+            "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Length", "[", "negativeEntries", "]"}], "\[Equal]", 
+               "1"}], "\[And]", 
+              RowBox[{
+               RowBox[{"Length", "[", "positiveEntries", "]"}], "\[Equal]", 
+               "2"}]}], ",", "\[IndentingNewLine]", "\t", 
+             RowBox[{"If", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{
+                 RowBox[{"Length", "[", 
+                  RowBox[{"DeleteDuplicates", "[", "positiveEntries", "]"}], 
+                  "]"}], "\[Equal]", "1"}], "\[And]", 
+                RowBox[{
+                 RowBox[{"2", " ", 
+                  RowBox[{"DeleteDuplicates", "[", "positiveEntries", "]"}]}],
+                  "\[Equal]", 
+                 RowBox[{"-", "negativeEntries"}]}]}], ",", 
+               "\[IndentingNewLine]", "\t", 
+               RowBox[{
+                RowBox[{"negativePosition", "=", 
+                 RowBox[{
+                  RowBox[{"Position", "[", 
+                   RowBox[{"singletImage", ",", 
+                    RowBox[{"First", "[", "negativeEntries", "]"}]}], "]"}], 
+                  "\[LeftDoubleBracket]", 
+                  RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ";", 
+                "\[IndentingNewLine]", "\t", 
+                RowBox[{"replacementVectors", "=", 
+                 RowBox[{"ReplacePart", "[", 
+                  RowBox[{"replacementVectors", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"negativePosition", "+", "1"}], ",", "3", ",", 
+                    "1"}], "]"}], ",", "j"}], "}"}], "->", 
+                    RowBox[{
+                    RowBox[{"-", "2"}], " ", 
+                    RowBox[{"First", "[", "positiveEntries", "]"}]}]}]}], 
+                  "]"}]}], ";", "\[IndentingNewLine]", "\t", 
+                RowBox[{"replacementVectors", "=", 
+                 RowBox[{"ReplacePart", "[", 
+                  RowBox[{"replacementVectors", ",", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"Mod", "[", 
+                    RowBox[{
+                    RowBox[{"negativePosition", "+", "2"}], ",", "3", ",", 
+                    "1"}], "]"}], ",", "j"}], "}"}], "->", 
+                    RowBox[{"-", 
+                    RowBox[{"First", "[", "positiveEntries", "]"}]}]}]}], 
+                  "]"}]}], ";"}], ",", "\[IndentingNewLine]", "\t", 
+               RowBox[{
+                RowBox[{
+                "Print", "[", 
+                 "\"\<Nonstandard singlet image found in \
+threeCycleReplacements routine:\>\"", "]"}], ";", 
+                RowBox[{"Print", "[", "singletImage", "]"}]}]}], "]"}]}], 
+            "]"}], ";", "\[IndentingNewLine]", 
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{"Length", "[", "negativeEntries", "]"}], "\[Equal]", 
+               "0"}], "\[Or]", 
+              RowBox[{
+               RowBox[{"Length", "[", "positiveEntries", "]"}], "\[Equal]", 
+               "0"}]}], ",", 
+             RowBox[{
+              RowBox[{
+              "Print", "[", 
+               "\"\<Nonstandard singlet image found in threeCycleReplacements \
+routine:\>\"", "]"}], ";", 
+              RowBox[{"Print", "[", "singletImage", "]"}]}]}], "]"}]}]}], 
+         "]"}], ";"}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", "singlets"}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "replacementVectors"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.607807318350281*^9, 3.607807333357238*^9}, {
+   3.607807365744513*^9, 3.607807415871023*^9}, {3.607822191486293*^9, 
+   3.607822207095059*^9}, {3.607822398301518*^9, 3.6078224834047318`*^9}, {
+   3.607822974975781*^9, 3.607822988360958*^9}, {3.607823148588025*^9, 
+   3.6078231502714148`*^9}, {3.607823419688266*^9, 3.607823458251693*^9}, {
+   3.6078235215330153`*^9, 3.607823527513659*^9}, {3.607823570662278*^9, 
+   3.607823590510096*^9}, {3.6078238455681973`*^9, 3.6078238473456173`*^9}, {
+   3.6078240867089357`*^9, 3.6078240989563637`*^9}, {3.607826541768635*^9, 
+   3.6078265580699253`*^9}, {3.6078266432394953`*^9, 3.607826736815215*^9}, {
+   3.607826912912217*^9, 3.607826915185773*^9}, {3.6078271441169977`*^9, 
+   3.607827146067453*^9}, {3.6078271779633007`*^9, 3.607827211530232*^9}, {
+   3.607828616027506*^9, 3.6078286178802853`*^9}, 3.6078286750115957`*^9, {
+   3.607874724055052*^9, 3.6078748319927483`*^9}, {3.607875734811215*^9, 
+   3.607875805438909*^9}, {3.60787592106901*^9, 3.6078761441148357`*^9}, {
+   3.607876430037304*^9, 3.607876489920784*^9}, {3.607876546840117*^9, 
+   3.607876550375057*^9}, {3.607887882605081*^9, 3.6078878852886887`*^9}, {
+   3.607905386887109*^9, 3.6079054328421288`*^9}, {3.607906241664649*^9, 
+   3.607906242604184*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"threeCycleKnownTripletReplacements", "[", 
+   RowBox[{
+   "threeCycle_", ",", "threeCycleImage_", ",", "numberOfKnownFunctions_"}], 
+   "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"replacementVectors", "=", 
+       RowBox[{"ConstantArray", "[", 
+        RowBox[{"0", ",", 
+         RowBox[{"{", 
+          RowBox[{"3", ",", "numberOfKnownFunctions"}], "}"}]}], "]"}]}], ",",
+       "currentBlock", ",", "numberOfNewFunctions"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"numberOfNewFunctions", "=", 
+      RowBox[{
+       RowBox[{"Length", "[", 
+        RowBox[{"First", "[", "threeCycleImage", "]"}], "]"}], "-", 
+       "numberOfKnownFunctions"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"currentBlock", "=", 
+         RowBox[{
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{"threeCycleImage", "\[LeftDoubleBracket]", 
+             RowBox[{"All", ",", "k"}], "\[RightDoubleBracket]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"k", ",", 
+              RowBox[{"numberOfNewFunctions", "+", 
+               RowBox[{"3", 
+                RowBox[{"(", 
+                 RowBox[{"j", "-", "1"}], ")"}]}], "+", "1"}], ",", 
+              RowBox[{"numberOfNewFunctions", "+", 
+               RowBox[{"3", "j"}]}]}], "}"}]}], "]"}], "\[Transpose]"}]}], 
+        ";", "\[IndentingNewLine]", 
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"currentBlock", "\[NotEqual]", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0", ",", "0"}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0", ",", "0"}], "}"}]}], "}"}]}], ",", 
+          "\[IndentingNewLine]", 
+          RowBox[{"replacementVectors", "=", 
+           RowBox[{"ReplacePart", "[", 
+            RowBox[{"replacementVectors", ",", 
+             RowBox[{"Flatten", "[", 
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{"m", ",", 
+                   RowBox[{
+                    RowBox[{"3", 
+                    RowBox[{"(", 
+                    RowBox[{"j", "-", "1"}], ")"}]}], "+", "n"}]}], "}"}], 
+                 "\[Rule]", 
+                 RowBox[{"blockReplacements", "[", 
+                  RowBox[{"m", ",", "n", ",", "currentBlock"}], "]"}]}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{"m", ",", "3"}], "}"}], ",", 
+                RowBox[{"{", 
+                 RowBox[{"n", ",", "3"}], "}"}]}], "]"}], "]"}]}], "]"}]}]}], 
+         "]"}]}], "\[IndentingNewLine]", ",", 
+       RowBox[{"{", 
+        RowBox[{"j", ",", 
+         RowBox[{"numberOfKnownFunctions", "/", "3"}]}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", "replacementVectors"}]}], "]"}]}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQAWIQvUenvrn+4SvHHcoTWkH0t+l7JoDoQwYPJ4HooHfJ
+M0D046CGOSA6fnrPQhDtXcqxFERzPH64AkRf+Bi6EkR/uPx/E4gWm3jtEIiu
+4mU6AaI544xugehW4xlPQfQtgztvQPR9bqYvILp/9p1fYHMFrZkagHTEqk4w
+7bxmQgiIrtw3D0wLGckkgehbUr9SQLT54YtZIPofd1w2iL4WbFrWBqTdv7TX
+geii/PRmEM2iNbcDRPt8XNkLonM/vQLTZsx+50D056ZlYHp1x92SdiA975Ji
+OYg+JK44rQNIH/HVBdNfpPO/g+iAXwvANAAyTrvv
+  "]],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"1", ",", "1", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "/", "2"}], "+", 
+    
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"1", ",", "2", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"1", ",", "3", ",", "currentBlock_"}], "]"}], ":=", "0"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"2", ",", "1", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "/", "2"}], "+", 
+    
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"2", ",", "2", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"2", ",", "3", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"-", "3"}], "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"5", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"3", ",", "1", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", "2"}], "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "+", 
+    RowBox[{"2", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}]}], "-", 
+    RowBox[{"2", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}]}], "-", 
+    RowBox[{"3", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], "+", 
+    RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "+", 
+    RowBox[{"2", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}]}], "-", 
+    RowBox[{"2", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}]}], "-", 
+    RowBox[{"3", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"3", ",", "2", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+       RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "/", "2"}], "+", 
+    
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "/", "2"}], "+", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}], "/", "2"}], "-", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"3", "*", 
+       RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+        RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}], ")"}], "/", 
+     "2"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"blockReplacements", "[", 
+    RowBox[{"3", ",", "3", ",", "currentBlock_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"1", ",", "1"}], "\[RightDoubleBracket]"}]}], "+", 
+    RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightDoubleBracket]"}], "-", 
+    RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightDoubleBracket]"}], "-", 
+    RowBox[{"2", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"2", ",", "2"}], "\[RightDoubleBracket]"}]}], "+", 
+    RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightDoubleBracket]"}], "+", 
+    RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+     RowBox[{"3", ",", "1"}], "\[RightDoubleBracket]"}], "-", 
+    RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+     RowBox[{"3", ",", "2"}], "\[RightDoubleBracket]"}], "-", 
+    RowBox[{"2", "*", 
+     RowBox[{"currentBlock", "\[LeftDoubleBracket]", 
+      RowBox[{"3", ",", "3"}], "\[RightDoubleBracket]"}]}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6078880133924227`*^9, 3.607888048595209*^9}, {
+   3.607888180896014*^9, 3.607888388567932*^9}, {3.60788963276367*^9, 
+   3.607889667036111*^9}, {3.6078897165004797`*^9, 3.607889813676935*^9}, {
+   3.60788987380424*^9, 3.607889974940988*^9}, 3.607894340803816*^9, {
+   3.607894381630286*^9, 3.607894655915821*^9}, {3.607894910159707*^9, 
+   3.607894929550592*^9}, {3.60790169921315*^9, 3.6079017686287947`*^9}, {
+   3.607902357345619*^9, 3.607902401908105*^9}, {3.607903026497765*^9, 
+   3.6079030305101347`*^9}, {3.607903192951823*^9, 3.6079032506190166`*^9}, {
+   3.607904072761681*^9, 3.6079041177252502`*^9}, {3.607906182528286*^9, 
+   3.607906230746628*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"checkThreeCycles", "[", 
+   RowBox[{"resultingFunctions_", ",", "threeCycles_"}], "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", "check", "}"}], ",", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"check", "=", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"cyclicDecomposition", "[", 
+          RowBox[{"Table", "[", 
+           RowBox[{
+            RowBox[{
+            "resultingFunctions", "\[LeftDoubleBracket]", "j", 
+             "\[RightDoubleBracket]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"j", ",", 
+              RowBox[{
+              "threeCycles", "\[LeftDoubleBracket]", "k", 
+               "\[RightDoubleBracket]"}]}], "}"}]}], "]"}], "]"}], "\[Equal]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"1", ",", "0", ",", "0"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"k", ",", 
+          RowBox[{"Length", "@", "threeCycles"}]}], "}"}]}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"And", "@@", "check"}], ",", 
+       "\"\<All singlets clean and verified. \\n\>\"", ",", 
+       RowBox[{"\"\<Unable to clean \>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{"Select", "[", 
+          RowBox[{"threeCycles", ",", 
+           RowBox[{
+            RowBox[{"!", 
+             RowBox[{
+             "check", "\[LeftDoubleBracket]", "#", 
+              "\[RightDoubleBracket]"}]}], "&"}]}], "]"}], "]"}]}]}], 
+      "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.60790620681813*^9, 3.60790621857561*^9}, {
+   3.607906303071043*^9, 3.6079063977552433`*^9}, 3.607906437907133*^9}]
+},
+WindowSize->{1279, 423},
+WindowMargins->{{-1, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 11651, 231, 313, "Input"],
+Cell[12211, 253, 3683, 85, 133, "Input"],
+Cell[15897, 340, 1777, 45, 58, "Input"],
+Cell[17677, 387, 4602, 104, 148, "Input"],
+Cell[22282, 493, 4657, 96, 163, "Input"],
+Cell[26942, 591, 12937, 280, 478, "Input"],
+Cell[39882, 873, 3459, 86, 133, "Input"],
+Cell[43344, 961, 14020, 358, 268, "Input"],
+Cell[57367, 1321, 1913, 50, 58, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

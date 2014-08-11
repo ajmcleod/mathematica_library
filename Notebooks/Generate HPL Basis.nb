@@ -1,0 +1,369 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12998,        360]
+NotebookOptionsPosition[     12245,        328]
+NotebookOutlinePosition[     12623,        345]
+CellTagsIndexPosition[     12580,        342]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"<<", "symbology.m"}]], "Input"],
+
+Cell[BoxData[
+ FormBox["\<\"u, v, and w variables adopted\"\>", TraditionalForm]], "Print",
+ CellChangeTimes->{3.601825206926786*^9, 3.609104312260559*^9, 
+  3.609609760322754*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"imposeFirstEntryCondition", "=", "False"}]], "Input",
+ CellChangeTimes->{{3.601825235879511*^9, 3.601825251323637*^9}, {
+  3.60910419183527*^9, 3.6091041925300703`*^9}, {3.609609832821607*^9, 
+  3.6096098415476437`*^9}}],
+
+Cell[BoxData[
+ FormBox["False", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.6018252520494623`*^9, 3.6091041936049023`*^9, 3.60910431406188*^9, 
+   3.609609761741599*^9, {3.609609834294602*^9, 3.609609841912051*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"knownSymbols", "[", "n_", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"LyndonBasis", "=", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"imposeFirstEntryCondition", "\[Equal]", "True"}], ",", 
+         RowBox[{"DeleteCases", "[", 
+          RowBox[{
+           RowBox[{"generateLyndonBasis", "[", 
+            RowBox[{"n", ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1"}], "}"}]}], "]"}], ",", 
+           RowBox[{"{", "0", "}"}]}], "]"}], ",", 
+         RowBox[{"generateLyndonBasis", "[", 
+          RowBox[{"n", ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "]"}]}], "]"}]}], ",", 
+      "irreducible", ",", "standardProduct", ",", "multipleProduct", ",", 
+      "HPLproducts", ",", "i", ",", "p", " ", ",", "q"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "0"}], ",", 
+       RowBox[{"i", "\[LessEqual]", "n"}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"irreducible", "[", "i", "]"}], "=", 
+        RowBox[{"{", "}"}]}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"For", "[", 
+      RowBox[{
+       RowBox[{"i", "=", "0"}], ",", 
+       RowBox[{"i", "\[LessEqual]", 
+        RowBox[{"Length", "@", "LyndonBasis"}]}], ",", 
+       RowBox[{"i", "++"}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"irreducible", "[", 
+         RowBox[{"Length", "@", 
+          RowBox[{
+          "LyndonBasis", "\[LeftDoubleBracket]", "i", 
+           "\[RightDoubleBracket]"}]}], "]"}], "=", 
+        RowBox[{"Append", "[", 
+         RowBox[{
+          RowBox[{"irreducible", "[", 
+           RowBox[{"Length", "@", 
+            RowBox[{
+            "LyndonBasis", "\[LeftDoubleBracket]", "i", 
+             "\[RightDoubleBracket]"}]}], "]"}], ",", 
+          RowBox[{
+          "LyndonBasis", "\[LeftDoubleBracket]", "i", 
+           "\[RightDoubleBracket]"}]}], "]"}]}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"standardProduct", "[", "weights_", "]"}], ":=", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Product", "[", 
+           RowBox[{
+            RowBox[{"MPL", "[", 
+             RowBox[{
+              RowBox[{"p", "[", "k", "]"}], ",", 
+              RowBox[{"1", "-", 
+               RowBox[{"q", "[", "k", "]"}]}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"k", ",", 
+              RowBox[{"Length", "@", "weights"}]}], "}"}]}], "]"}], ",", 
+          "##"}], "]"}], "&"}], "@@", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"p", "[", "l", "]"}], ",", 
+             RowBox[{"irreducible", "[", 
+              RowBox[{
+              "weights", "\[LeftDoubleBracket]", "l", 
+               "\[RightDoubleBracket]"}], "]"}]}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"l", ",", 
+             RowBox[{"Length", "@", "weights"}]}], "}"}]}], "]"}], ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"q", "[", "r", "]"}], ",", "variables"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"r", ",", 
+             RowBox[{"Length", "@", "weights"}]}], "}"}]}], "]"}]}], 
+        "]"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"multipleProduct", "[", 
+       RowBox[{"weight_", ",", "multiplicity_"}], "]"}], ":=", 
+      "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{"Product", "[", 
+           RowBox[{
+            RowBox[{"MPL", "[", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"irreducible", "[", "weight", "]"}], 
+               "\[LeftDoubleBracket]", 
+               RowBox[{"p", "[", "k", "]"}], "\[RightDoubleBracket]"}], ",", 
+              RowBox[{"1", "-", 
+               RowBox[{"q", "[", "k", "]"}]}]}], "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"k", ",", "multiplicity"}], "}"}]}], "]"}], ",", "##"}], 
+         "]"}], "&"}], "@@", 
+       RowBox[{"Join", "[", 
+        RowBox[{
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"If", "[", 
+            RowBox[{
+             RowBox[{"l", ">", "1"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"p", "[", "l", "]"}], ",", 
+               RowBox[{"p", "[", 
+                RowBox[{"l", "-", "1"}], "]"}], ",", 
+               RowBox[{"Length", "@", 
+                RowBox[{"irreducible", "[", "weight", "]"}]}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"p", "[", "1", "]"}], ",", 
+               RowBox[{"Length", "@", 
+                RowBox[{"irreducible", "[", "weight", "]"}]}]}], "}"}]}], 
+            "]"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"l", ",", "multiplicity"}], "}"}]}], "]"}], ",", 
+         RowBox[{"Table", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"q", "[", "r", "]"}], ",", "variables"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"r", ",", "multiplicity"}], "}"}]}], "]"}]}], "]"}]}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"HPLproducts", "[", "weights_", "]"}], ":=", 
+      "\[IndentingNewLine]", 
+      RowBox[{"Module", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"largestMultiplicity", "=", 
+           RowBox[{"Max", "[", 
+            RowBox[{
+             RowBox[{"Tally", "[", "weights", "]"}], "\[LeftDoubleBracket]", 
+             RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}], "]"}]}], 
+          ",", "multipleWeightElements", ",", "multiplyLeftoverWeights"}], 
+         "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"Catch", "[", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"largestMultiplicity", "\[Equal]", "1"}], "\[Or]", 
+             RowBox[{"largestMultiplicity", "==", 
+              TagBox[
+               StyleBox[
+                RowBox[{"DirectedInfinity", "[", 
+                 RowBox[{"-", "1"}], "]"}],
+                ShowSpecialCharacters->False,
+                ShowStringCharacters->True,
+                NumberMarks->True],
+               FullForm]}]}], ",", 
+            RowBox[{"Throw", "[", 
+             RowBox[{"standardProduct", "[", "weights", "]"}], "]"}]}], "]"}],
+           ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"largestMultiplicity", ">", "1"}], ",", 
+            "\[IndentingNewLine]", 
+            RowBox[{
+             RowBox[{"multipleWeightElements", "=", 
+              RowBox[{
+               RowBox[{"Tally", "[", "weights", "]"}], "\[LeftDoubleBracket]", 
+               RowBox[{
+                RowBox[{"Flatten", "@", 
+                 RowBox[{"Position", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"Tally", "[", "weights", "]"}], 
+                    "\[LeftDoubleBracket]", 
+                    RowBox[{"All", ",", "2"}], "\[RightDoubleBracket]"}], ",",
+                    "largestMultiplicity"}], "]"}]}], ",", "1"}], 
+               "\[RightDoubleBracket]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"multiplyLeftoverWeights", "=", 
+              RowBox[{"HPLproducts", "[", 
+               RowBox[{"DeleteCases", "[", 
+                RowBox[{"weights", ",", 
+                 RowBox[{"Alternatives", "@@", "multipleWeightElements"}]}], 
+                "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+             RowBox[{"Throw", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"If", "[", 
+                 RowBox[{
+                  RowBox[{"multiplyLeftoverWeights", "===", "1"}], ",", 
+                  RowBox[{"Outer", "[", 
+                   RowBox[{"Times", ",", "##"}], "]"}], ",", 
+                  RowBox[{"Outer", "[", 
+                   RowBox[{
+                   "Times", ",", "multiplyLeftoverWeights", ",", "##"}], 
+                   "]"}]}], "]"}], "&"}], "@@", "\[IndentingNewLine]", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{"multipleProduct", "[", 
+                  RowBox[{
+                   RowBox[{
+                   "multipleWeightElements", "\[LeftDoubleBracket]", "d", 
+                    "\[RightDoubleBracket]"}], ",", "largestMultiplicity"}], 
+                  "]"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{"d", ",", 
+                   RowBox[{"Length", "@", "multipleWeightElements"}]}], 
+                  "}"}]}], "]"}]}], "]"}]}]}], "]"}], ";"}], "]"}]}], "]"}]}],
+      ";", "\[IndentingNewLine]", 
+     RowBox[{"Flatten", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"DeleteDuplicates", "@", 
+         RowBox[{"Flatten", "@", 
+          RowBox[{"HPLproducts", "[", "j", "]"}]}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", 
+          RowBox[{"Table", "[", 
+           RowBox[{"m", ",", 
+            RowBox[{"{", 
+             RowBox[{"m", ",", 
+              RowBox[{"IntegerPartitions", "[", "n", "]"}]}], "}"}]}], 
+           "]"}]}], "}"}]}], "]"}]}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.601825395801008*^9, 3.601825419089818*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", 
+  RowBox[{"Get", "[", "\"\<weight_10_HPL_basis.dat\>\"", "]"}]}]], "Input",
+ CellChangeTimes->{{3.60960979412342*^9, 3.6096098541162567`*^9}, {
+  3.609609899170663*^9, 3.609609899231867*^9}, {3.6096099646893053`*^9, 
+  3.609609966670596*^9}, {3.609610146379443*^9, 3.609610164068818*^9}}],
+
+Cell[BoxData[
+ FormBox["67584", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.609609810758484*^9, 3.609609854456476*^9}, 
+   3.609609899601907*^9, 3.609609967096015*^9, {3.609610149763402*^9, 
+   3.609610167747341*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"SetDirectory", "[", 
+  "\"\<~/Google\\ Drive/Stanford/Lance/Mathematica\\ \
+Library/coproduct_library/\>\"", "]"}]], "Input",
+ CellChangeTimes->{{3.609609910615033*^9, 3.609609915537053*^9}}],
+
+Cell[BoxData[
+ FormBox["\<\"/Users/thatscottishkid/Google Drive/Stanford/Lance/Mathematica \
+Library/coproduct_library\"\>", TraditionalForm]], "Output",
+ CellChangeTimes->{3.601825428561398*^9, 3.609609917589817*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"knownSymbols", "[", "10", "]"}], ">>", 
+  "\"\<weight_10_HPL_basis.dat\>\""}]], "Input",
+ CellChangeTimes->{{3.6096099222239428`*^9, 3.609610027571254*^9}}]
+},
+Evaluator->"Kernal 2",
+WindowSize->{1031, 657},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 55, 1, 27, "Input"],
+Cell[637, 25, 180, 3, 20, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[854, 33, 244, 4, 27, "Input"],
+Cell[1101, 39, 224, 4, 27, "Output"]
+}, Open  ]],
+Cell[1340, 46, 9644, 244, 388, "Input"],
+Cell[CellGroupData[{
+Cell[11009, 294, 327, 5, 27, "Input"],
+Cell[11339, 301, 224, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11600, 310, 215, 4, 27, "Input"],
+Cell[11818, 316, 217, 3, 27, "Output"]
+}, Open  ]],
+Cell[12050, 322, 191, 4, 27, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

@@ -1,0 +1,6 @@
+{MPL[{0}, 1 - u]*Subscript[OverTilde[\[CapitalPhi]], 6], 
+ MPL[{0}, 1 - v]*Subscript[OverTilde[\[CapitalPhi]], 6], 
+ MPL[{0}, 1 - w]*Subscript[OverTilde[\[CapitalPhi]], 6], 
+ MPL[{1}, 1 - u]*Subscript[OverTilde[\[CapitalPhi]], 6], 
+ MPL[{1}, 1 - v]*Subscript[OverTilde[\[CapitalPhi]], 6], 
+ MPL[{1}, 1 - w]*Subscript[OverTilde[\[CapitalPhi]], 6]}

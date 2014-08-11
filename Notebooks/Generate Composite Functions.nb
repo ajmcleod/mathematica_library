@@ -1,0 +1,171 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5662,        162]
+NotebookOptionsPosition[      5148,        141]
+NotebookOutlinePosition[      5503,        157]
+CellTagsIndexPosition[      5460,        154]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.6096177582290173`*^9, 3.609617762338634*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"w", "[", "n", "]"}], "=", 
+   RowBox[{"Get", "[", 
+    RowBox[{"\"\<weight_\>\"", "<>", 
+     RowBox[{"ToString", "[", "n", "]"}], "<>", 
+     "\"\<_irreducible_functions_wfec.dat\>\""}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.615436541593732*^9, 3.615436566823575*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"irreducibleFunctionsWeight", "[", "3", "]"}], "=", 
+   RowBox[{"w", "[", "3", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"irreducibleFunctionsWeight", "[", "4", "]"}], "=", 
+   RowBox[{"w", "[", "4", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"irreducibleFunctionsWeight", "[", "5", "]"}], "=", 
+   RowBox[{"w", "[", "5", "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"irreducibleFunctionsWeight", "[", "6", "]"}], "=", 
+   RowBox[{"Append", "[", 
+    RowBox[{
+     RowBox[{"w", "[", "6", "]"}], ",", 
+     RowBox[{
+      RowBox[{"H3", "[", "1", "]"}], "^", "2"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"irreducibleFunctionsWeight", "[", "7", "]"}], "=", 
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"H3", "[", "1", "]"}], 
+      RowBox[{"H4", "[", "i", "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"i", ",", "6"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.615436519412293*^9, 3.615436528099934*^9}, {
+  3.615436581666512*^9, 3.6154367019397573`*^9}, {3.6154367519396067`*^9, 
+  3.6154368013572273`*^9}, {3.615436911288886*^9, 3.615436917027803*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"HPLfunctionsWeight", "[", "0", "]"}], "=", "1"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.615437013864311*^9, 3.615437021710441*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"HPLfunctionsWeight", "[", "n", "]"}], "=", 
+    RowBox[{"Get", "[", 
+     RowBox[{"\"\<weight_\>\"", "<>", 
+      RowBox[{"ToString", "[", "n", "]"}], "<>", 
+      "\"\<_HPL_basis_wfec.dat\>\""}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"n", ",", "10"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.615436841953226*^9, 3.61543687350975*^9}, {
+  3.61543692267393*^9, 3.6154369282989893`*^9}, {3.615437029314089*^9, 
+  3.615437034080543*^9}, {3.615437356217053*^9, 3.6154373630822077`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"compositeWeight", "=", "7"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"compositeFunctions", "=", 
+   RowBox[{"Flatten", "[", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"x", " ", "y"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", 
+           RowBox[{"irreducibleFunctionsWeight", "[", "j", "]"}]}], "}"}], 
+         ",", 
+         RowBox[{"{", 
+          RowBox[{"y", ",", 
+           RowBox[{"HPLfunctionsWeight", "[", 
+            RowBox[{"compositeWeight", "-", "j"}], "]"}]}], "}"}]}], "]"}], 
+       "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"j", ",", "3", ",", "compositeWeight"}], "}"}]}], "]"}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6067810247172937`*^9, 3.6067812212805557`*^9}, {
+   3.606781509236912*^9, 3.6067815514100237`*^9}, {3.6067816136763687`*^9, 
+   3.6067818731298647`*^9}, {3.606781905654015*^9, 3.60678192287599*^9}, {
+   3.607922255500657*^9, 3.6079222672112293`*^9}, {3.608667694383875*^9, 
+   3.608667704440523*^9}, {3.608667765726574*^9, 3.6086677699274807`*^9}, {
+   3.6086678425035973`*^9, 3.608667844449437*^9}, {3.609617543688117*^9, 
+   3.6096176423114433`*^9}, {3.609617715465852*^9, 3.609617750061281*^9}, {
+   3.609617854199328*^9, 3.609617860962028*^9}, {3.615436826091783*^9, 
+   3.615436826190547*^9}, {3.6154368903997507`*^9, 3.615436897469788*^9}, {
+   3.615436931318328*^9, 3.6154369472558727`*^9}, {3.615437058264076*^9, 
+   3.615437058390154*^9}, {3.61543708943044*^9, 3.615437144386245*^9}, {
+   3.615437218686108*^9, 3.61543726618124*^9}, 3.6154373141444197`*^9, {
+   3.615437375879476*^9, 3.6154374184330187`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"compositeFunctions", ">>", 
+  "\"\</Users/thatscottishkid/Google\\ Drive/Stanford/Lance/Mathematica\\ \
+Library/Function Library/Weight\\ \
+7/weight_7_composite_functions_wfec.dat\>\""}]], "Input",
+ CellChangeTimes->{{3.615436954884337*^9, 3.6154369577921257`*^9}, {
+  3.615437437097561*^9, 3.615437486644493*^9}}]
+},
+WindowSize->{740, 652},
+WindowMargins->{{65, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 123, 2, 27, "Input"],
+Cell[683, 24, 361, 9, 27, "Input"],
+Cell[1047, 35, 1264, 34, 88, "Input"],
+Cell[2314, 71, 181, 5, 27, "Input"],
+Cell[2498, 78, 567, 13, 43, "Input"],
+Cell[3068, 93, 81, 2, 27, "Input"],
+Cell[3152, 97, 1651, 34, 73, "Input"],
+Cell[4806, 133, 338, 6, 58, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

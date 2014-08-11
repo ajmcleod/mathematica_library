@@ -1,0 +1,174 @@
+MRK[Subscript[OverTilde[\[CapitalPhi]],6]] = -4*Pi*I*SVHPL[0, 1]
+
+MRK[Superscript[\[CapitalOmega],"(2)"][u,v,w]] = Pi^2*Log[\[Xi]]*SVHPL[0] - (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0] - (Pi^2*SVHPL[0]^2)/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0]^2 + ((5*I)/24)*Pi*SVHPL[0]^3 - 
+ 2*Pi^2*Log[\[Xi]]*SVHPL[1] + I*Pi*Log[\[Xi]]^2*SVHPL[1] + Pi^2*SVHPL[0]*SVHPL[1] - I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1] + (I/4)*Pi*SVHPL[0]^2*SVHPL[1] - 
+ Pi^2*SVHPL[1]^2 + I*Pi*Log[\[Xi]]*SVHPL[1]^2 + (I/2)*Pi*SVHPL[0]*SVHPL[1]^2 + (I/3)*Pi*SVHPL[1]^3 - (2*I)*Pi*SVHPL[0, 0, 1] - (4*I)*Pi*SVHPL[0, 1, 1] + 
+ I*Pi*SVHPL[0]*\[Zeta][2] - (2*I)*Pi*SVHPL[1]*\[Zeta][2] - (4*I)*Pi*\[Zeta][3]
+
+MRK[Superscript[\[CapitalOmega],"(2)"][v,w,u]] = ((2*I)/3)*Pi*Log[\[Xi]]^3 + Log[\[Xi]]^4/4 - (I/2)*Pi*Log[\[Xi]]*SVHPL[0]^2 - (Log[\[Xi]]^2*SVHPL[0]^2)/8 + SVHPL[0]^4/64 + (2*I)*Pi*Log[\[Xi]]^2*SVHPL[1] + 
+ Log[\[Xi]]^3*SVHPL[1] + (I/2)*Pi*SVHPL[0]^2*SVHPL[1] - (Log[\[Xi]]*SVHPL[0]^2*SVHPL[1])/4 + (2*I)*Pi*Log[\[Xi]]*SVHPL[1]^2 + (3*Log[\[Xi]]^2*SVHPL[1]^2)/2 - 
+ (SVHPL[0]^2*SVHPL[1]^2)/8 + ((2*I)/3)*Pi*SVHPL[1]^3 + Log[\[Xi]]*SVHPL[1]^3 + SVHPL[1]^4/4 - (4*I)*Pi*SVHPL[0, 0, 1] + (4*I)*Pi*Log[\[Xi]]*\[Zeta][2] + 
+ Log[\[Xi]]^2*\[Zeta][2] + (SVHPL[0]^2*\[Zeta][2])/4 + (4*I)*Pi*SVHPL[1]*\[Zeta][2] + 2*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + SVHPL[1]^2*\[Zeta][2] + \[Zeta][2]^2 + (4*I)*Pi*\[Zeta][3] + 
+ 4*Log[\[Xi]]*\[Zeta][3] + 4*SVHPL[1]*\[Zeta][3]
+
+MRK[Superscript[\[CapitalOmega],"(2)"][w,u,v]] = -(Pi^2*Log[\[Xi]]*SVHPL[0]) + (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0] - (Pi^2*SVHPL[0]^2)/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0]^2 - ((5*I)/24)*Pi*SVHPL[0]^3 - 
+ 2*Pi^2*Log[\[Xi]]*SVHPL[1] + I*Pi*Log[\[Xi]]^2*SVHPL[1] - Pi^2*SVHPL[0]*SVHPL[1] + I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1] + (I/4)*Pi*SVHPL[0]^2*SVHPL[1] - 
+ Pi^2*SVHPL[1]^2 + I*Pi*Log[\[Xi]]*SVHPL[1]^2 - (I/2)*Pi*SVHPL[0]*SVHPL[1]^2 + (I/3)*Pi*SVHPL[1]^3 - (2*I)*Pi*SVHPL[0, 0, 1] + (4*I)*Pi*SVHPL[0, 1, 1] - 
+ I*Pi*SVHPL[0]*\[Zeta][2] - (2*I)*Pi*SVHPL[1]*\[Zeta][2] - (4*I)*Pi*\[Zeta][3]
+
+MRK[Subscript[F,1][u,v,w]] = (-4*I)*Pi*Log[\[Xi]]*SVHPL[0, 1]
+
+MRK[Subscript[F,1][v,w,u]] = 0
+
+MRK[Subscript[F,1][w,u,v]] = 0
+
+MRK[Subscript[H,1][u,v,w]] = 4*Pi^2*Log[\[Xi]]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] + Pi^2*SVHPL[0]*SVHPL[0, 1] - I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] - 
+ I*Pi*SVHPL[0]^2*SVHPL[0, 1] + 2*Pi^2*SVHPL[1]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] + I*Pi*SVHPL[0]*SVHPL[1]*SVHPL[0, 1] + 
+ (8*I)*Pi*SVHPL[0, 0, 0, 1] - (6*I)*Pi*SVHPL[0, 0, 1, 1] - (4*I)*Pi*SVHPL[0, 1, 1, 1] + (4*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[H,1][v,w,u]] = 4*Pi^2*Log[\[Xi]]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] - Pi^2*SVHPL[0]*SVHPL[0, 1] + I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] - 
+ I*Pi*SVHPL[0]^2*SVHPL[0, 1] + 2*Pi^2*SVHPL[1]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] - I*Pi*SVHPL[0]*SVHPL[1]*SVHPL[0, 1] + 
+ (8*I)*Pi*SVHPL[0, 0, 0, 1] + (6*I)*Pi*SVHPL[0, 0, 1, 1] - (4*I)*Pi*SVHPL[0, 1, 1, 1] + (4*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[H,1][w,u,v]] = (-2*I)*Pi*SVHPL[0]^2*SVHPL[0, 1] + (12*I)*Pi*SVHPL[0, 0, 0, 1]
+
+MRK[Subscript[J,1][u,v,w]] = 16*Pi^2*Log[\[Xi]]*SVHPL[0, 1] - (8*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] + 4*Pi^2*SVHPL[0]*SVHPL[0, 1] - (4*I)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] + 
+ 8*Pi^2*SVHPL[1]*SVHPL[0, 1] - (8*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] - (4*I)*Pi*SVHPL[0]*SVHPL[1]*SVHPL[0, 1] + (8*I)*Pi*SVHPL[0, 0, 1, 1] - 
+ (16*I)*Pi*SVHPL[0, 1, 1, 1] + (80*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[J,1][v,w,u]] = 16*Pi^2*Log[\[Xi]]*SVHPL[0, 1] - (8*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] - 4*Pi^2*SVHPL[0]*SVHPL[0, 1] + (4*I)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] + 
+ 8*Pi^2*SVHPL[1]*SVHPL[0, 1] - (8*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] + (4*I)*Pi*SVHPL[0]*SVHPL[1]*SVHPL[0, 1] - (8*I)*Pi*SVHPL[0, 0, 1, 1] - 
+ (16*I)*Pi*SVHPL[0, 1, 1, 1] + (80*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[J,1][w,u,v]] = (-16*I)*Pi*SVHPL[0, 0, 0, 1] + (32*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[K,1][u,v,w]] = -8*Pi^2*Log[\[Xi]]*SVHPL[0, 1] + (4*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] - 4*Pi^2*SVHPL[0]*SVHPL[0, 1] + (2*I)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] - 
+ 8*Pi^2*SVHPL[1]*SVHPL[0, 1] + (4*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] + (8*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[K,1][v,w,u]] = -8*Pi^2*Log[\[Xi]]*SVHPL[0, 1] + (4*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] + 4*Pi^2*SVHPL[0]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] - 
+ 8*Pi^2*SVHPL[1]*SVHPL[0, 1] + (4*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] + (8*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[K,1][w,u,v]] = (-4*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] + I*Pi*SVHPL[0]^2*SVHPL[0, 1] - (8*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] - (4*I)*Pi*SVHPL[1]^2*SVHPL[0, 1] + 
+ (8*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[G] = (16*I)*Pi*SVHPL[0, 1]*\[Zeta][2]
+
+MRK[Subscript[Q, "ep"][u, v, w]] = -(Pi^2*Log[\[Xi]]^3)/24 + ((11*I)/192)*Pi*Log[\[Xi]]^4 + (3*Log[\[Xi]]^5)/256 - (I/32)*Pi*Log[\[Xi]]^3*SVHPL[0] - (3*Log[\[Xi]]^4*SVHPL[0])/512 + 
+ (Pi^2*Log[\[Xi]]*SVHPL[0]^2)/32 - ((5*I)/128)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 - (3*Log[\[Xi]]^3*SVHPL[0]^2)/512 + ((3*I)/128)*Pi*Log[\[Xi]]*SVHPL[0]^3 + 
+ (3*Log[\[Xi]]^2*SVHPL[0]^3)/1024 - ((17*I)/3072)*Pi*SVHPL[0]^4 + (3*Log[\[Xi]]*SVHPL[0]^4)/4096 - (3*SVHPL[0]^5)/8192 - (Pi^2*Log[\[Xi]]^2*SVHPL[1])/8 + 
+ ((11*I)/48)*Pi*Log[\[Xi]]^3*SVHPL[1] + (15*Log[\[Xi]]^4*SVHPL[1])/256 - ((3*I)/32)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] - (3*Log[\[Xi]]^3*SVHPL[0]*SVHPL[1])/128 - 
+ (Pi^2*SVHPL[0]^2*SVHPL[1])/32 - (I/64)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] - (9*Log[\[Xi]]^2*SVHPL[0]^2*SVHPL[1])/512 - ((3*I)/128)*Pi*SVHPL[0]^3*SVHPL[1] + 
+ (3*Log[\[Xi]]*SVHPL[0]^3*SVHPL[1])/512 + (3*SVHPL[0]^4*SVHPL[1])/4096 - (Pi^2*Log[\[Xi]]*SVHPL[1]^2)/8 + ((11*I)/32)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 + 
+ (15*Log[\[Xi]]^3*SVHPL[1]^2)/128 - ((3*I)/32)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 - (9*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1]^2)/256 + (I/128)*Pi*SVHPL[0]^2*SVHPL[1]^2 - 
+ (9*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1]^2)/512 + (3*SVHPL[0]^3*SVHPL[1]^2)/1024 - (Pi^2*SVHPL[1]^3)/24 + ((11*I)/48)*Pi*Log[\[Xi]]*SVHPL[1]^3 + 
+ (15*Log[\[Xi]]^2*SVHPL[1]^3)/128 - (I/32)*Pi*SVHPL[0]*SVHPL[1]^3 - (3*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^3)/128 - (3*SVHPL[0]^2*SVHPL[1]^3)/512 + 
+ ((11*I)/192)*Pi*SVHPL[1]^4 + (15*Log[\[Xi]]*SVHPL[1]^4)/256 - (3*SVHPL[0]*SVHPL[1]^4)/512 + (3*SVHPL[1]^5)/256 - (I/16)*Pi*SVHPL[0, 1]^2 + 
+ (Pi^2*SVHPL[0, 0, 1])/4 - (I/4)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] + ((3*I)/16)*Pi*SVHPL[0]*SVHPL[0, 0, 1] - (I/4)*Pi*SVHPL[1]*SVHPL[0, 0, 1] + 
+ (I/8)*Pi*SVHPL[0]*SVHPL[0, 1, 1] - (Pi^2*Log[\[Xi]]*\[Zeta][2])/4 + ((3*I)/16)*Pi*Log[\[Xi]]^2*\[Zeta][2] + (Log[\[Xi]]^3*\[Zeta][2])/64 - 
+ ((3*I)/16)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] - (Log[\[Xi]]^2*SVHPL[0]*\[Zeta][2])/128 + ((3*I)/64)*Pi*SVHPL[0]^2*\[Zeta][2] + (5*Log[\[Xi]]*SVHPL[0]^2*\[Zeta][2])/256 - 
+ (5*SVHPL[0]^3*\[Zeta][2])/512 - (Pi^2*SVHPL[1]*\[Zeta][2])/4 + ((3*I)/8)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + (3*Log[\[Xi]]^2*SVHPL[1]*\[Zeta][2])/64 - 
+ ((3*I)/16)*Pi*SVHPL[0]*SVHPL[1]*\[Zeta][2] - (Log[\[Xi]]*SVHPL[0]*SVHPL[1]*\[Zeta][2])/64 + (5*SVHPL[0]^2*SVHPL[1]*\[Zeta][2])/256 + ((3*I)/16)*Pi*SVHPL[1]^2*\[Zeta][2] + 
+ (3*Log[\[Xi]]*SVHPL[1]^2*\[Zeta][2])/64 - (SVHPL[0]*SVHPL[1]^2*\[Zeta][2])/128 + (SVHPL[1]^3*\[Zeta][2])/64 - ((11*I)/80)*Pi*\[Zeta][2]^2 - (Log[\[Xi]]*\[Zeta][2]^2)/64 - 
+ (7*SVHPL[0]*\[Zeta][2]^2)/128 - (SVHPL[1]*\[Zeta][2]^2)/64 - (Pi^2*\[Zeta][3])/4 + (I/2)*Pi*Log[\[Xi]]*\[Zeta][3] + (15*Log[\[Xi]]^2*\[Zeta][3])/64 - ((3*I)/8)*Pi*SVHPL[0]*\[Zeta][3] - 
+ (13*Log[\[Xi]]*SVHPL[0]*\[Zeta][3])/64 - (SVHPL[0]^2*\[Zeta][3])/256 + (I/2)*Pi*SVHPL[1]*\[Zeta][3] + (15*Log[\[Xi]]*SVHPL[1]*\[Zeta][3])/32 - (13*SVHPL[0]*SVHPL[1]*\[Zeta][3])/64 + 
+ (15*SVHPL[1]^2*\[Zeta][3])/64 + (5*\[Zeta][2]*\[Zeta][3])/128 - \[Zeta][5]/64
+
+MRK[Subscript[Q, "ep"][v, w, u]] = (-3*Pi^2*Log[\[Xi]]^3)/64 - (I/48)*Pi*Log[\[Xi]]^4 - (9*Pi^2*Log[\[Xi]]^2*SVHPL[0])/128 - (I/384)*Pi*Log[\[Xi]]^3*SVHPL[0] - (9*Pi^2*Log[\[Xi]]*SVHPL[0]^2)/256 + 
+ ((5*I)/256)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 - (3*Pi^2*SVHPL[0]^3)/512 - ((31*I)/1536)*Pi*Log[\[Xi]]*SVHPL[0]^3 - ((23*I)/3072)*Pi*SVHPL[0]^4 - 
+ (9*Pi^2*Log[\[Xi]]^2*SVHPL[1])/64 - (I/192)*Pi*Log[\[Xi]]^3*SVHPL[1] - (9*Pi^2*Log[\[Xi]]*SVHPL[0]*SVHPL[1])/64 + ((5*I)/64)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] - 
+ (9*Pi^2*SVHPL[0]^2*SVHPL[1])/256 + ((17*I)/256)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] + (I/384)*Pi*SVHPL[0]^3*SVHPL[1] - (9*Pi^2*Log[\[Xi]]*SVHPL[1]^2)/64 + 
+ ((5*I)/64)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 - (9*Pi^2*SVHPL[0]*SVHPL[1]^2)/128 + (I/128)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + ((3*I)/128)*Pi*SVHPL[0]^2*SVHPL[1]^2 - 
+ (3*Pi^2*SVHPL[1]^3)/64 + ((17*I)/192)*Pi*Log[\[Xi]]*SVHPL[1]^3 - (I/96)*Pi*SVHPL[0]*SVHPL[1]^3 + ((5*I)/192)*Pi*SVHPL[1]^4 + (I/16)*Pi*SVHPL[0, 1]^2 - 
+ (I/4)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] - (I/8)*Pi*SVHPL[0]*SVHPL[0, 0, 1] - (I/4)*Pi*SVHPL[1]*SVHPL[0, 0, 1] + (I/2)*Pi*Log[\[Xi]]*SVHPL[0, 1, 1] + 
+ (I/8)*Pi*SVHPL[0]*SVHPL[0, 1, 1] + (I/4)*Pi*SVHPL[1]*SVHPL[0, 1, 1] - (3*Pi^2*Log[\[Xi]]*\[Zeta][2])/32 - ((3*I)/32)*Pi*Log[\[Xi]]^2*\[Zeta][2] - 
+ (3*Pi^2*SVHPL[0]*\[Zeta][2])/64 - ((5*I)/64)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] - (I/64)*Pi*SVHPL[0]^2*\[Zeta][2] - (3*Pi^2*SVHPL[1]*\[Zeta][2])/32 - 
+ ((5*I)/32)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] - (I/16)*Pi*SVHPL[0]*SVHPL[1]*\[Zeta][2] - (I/16)*Pi*SVHPL[1]^2*\[Zeta][2] + ((11*I)/80)*Pi*\[Zeta][2]^2 + (3*Pi^2*\[Zeta][3])/16 - 
+ (I/16)*Pi*Log[\[Xi]]*\[Zeta][3] + (9*\[Zeta][2]*\[Zeta][3])/128 + (21*\[Zeta][5])/64
+
+MRK[Subscript[Q, "ep"][w, u, v]] = (Pi^2*Log[\[Xi]]^3)/64 + (I/384)*Pi*Log[\[Xi]]^4 - (3*Pi^2*Log[\[Xi]]^2*SVHPL[0])/64 + (I/384)*Pi*Log[\[Xi]]^3*SVHPL[0] + (9*Pi^2*Log[\[Xi]]*SVHPL[0]^2)/256 - 
+ ((3*I)/512)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 + (5*Pi^2*SVHPL[0]^3)/128 - ((5*I)/384)*Pi*Log[\[Xi]]*SVHPL[0]^3 + ((7*I)/3072)*Pi*SVHPL[0]^4 + 
+ (3*Pi^2*Log[\[Xi]]^2*SVHPL[1])/32 - (I/192)*Pi*Log[\[Xi]]^3*SVHPL[1] - (9*Pi^2*Log[\[Xi]]*SVHPL[0]*SVHPL[1])/64 + ((3*I)/128)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] + 
+ (3*Pi^2*SVHPL[0]^2*SVHPL[1])/64 - (I/64)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] - (I/96)*Pi*SVHPL[0]^3*SVHPL[1] + (9*Pi^2*Log[\[Xi]]*SVHPL[1]^2)/64 - 
+ ((3*I)/128)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 + (3*Pi^2*SVHPL[0]*SVHPL[1]^2)/32 - (I/32)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + ((3*I)/128)*Pi*SVHPL[0]^2*SVHPL[1]^2 + 
+ (Pi^2*SVHPL[1]^3)/16 - (I/48)*Pi*Log[\[Xi]]*SVHPL[1]^3 - (I/48)*Pi*SVHPL[0]*SVHPL[1]^3 - (I/192)*Pi*SVHPL[1]^4 + (I/16)*Pi*SVHPL[0, 1]^2 - 
+ (3*Pi^2*SVHPL[0, 0, 1])/8 + (I/8)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] + (I/32)*Pi*SVHPL[0]*SVHPL[0, 0, 1] - (I/16)*Pi*SVHPL[1]*SVHPL[0, 0, 1] - 
+ (3*Pi^2*SVHPL[0, 1, 1])/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0, 1, 1] - (I/16)*Pi*SVHPL[0]*SVHPL[0, 1, 1] + (I/8)*Pi*SVHPL[1]*SVHPL[0, 1, 1] - 
+ (5*Pi^2*Log[\[Xi]]*\[Zeta][2])/32 + ((95*I)/128)*Pi*Log[\[Xi]]^2*\[Zeta][2] + (Pi^2*SVHPL[0]*\[Zeta][2])/8 - ((43*I)/64)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] + 
+ ((39*I)/256)*Pi*SVHPL[0]^2*\[Zeta][2] - (Pi^2*SVHPL[1]*\[Zeta][2])/4 + ((43*I)/32)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] - ((39*I)/64)*Pi*SVHPL[0]*SVHPL[1]*\[Zeta][2] + 
+ ((39*I)/64)*Pi*SVHPL[1]^2*\[Zeta][2] + ((399*I)/320)*Pi*\[Zeta][2]^2 - (7*Pi^2*\[Zeta][3])/16 + ((21*I)/32)*Pi*Log[\[Xi]]*\[Zeta][3] - ((3*I)/16)*Pi*SVHPL[0]*\[Zeta][3] + 
+ ((3*I)/8)*Pi*SVHPL[1]*\[Zeta][3] + (9*\[Zeta][5])/32
+
+MRK[Subscript[Q, "ep"][u, w, v]] = -(Pi^2*Log[\[Xi]]^3)/24 + ((11*I)/192)*Pi*Log[\[Xi]]^4 + (3*Log[\[Xi]]^5)/256 + (I/32)*Pi*Log[\[Xi]]^3*SVHPL[0] + (3*Log[\[Xi]]^4*SVHPL[0])/512 + 
+ (Pi^2*Log[\[Xi]]*SVHPL[0]^2)/32 - ((5*I)/128)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 - (3*Log[\[Xi]]^3*SVHPL[0]^2)/512 - ((3*I)/128)*Pi*Log[\[Xi]]*SVHPL[0]^3 - 
+ (3*Log[\[Xi]]^2*SVHPL[0]^3)/1024 - ((17*I)/3072)*Pi*SVHPL[0]^4 + (3*Log[\[Xi]]*SVHPL[0]^4)/4096 + (3*SVHPL[0]^5)/8192 - (Pi^2*Log[\[Xi]]^2*SVHPL[1])/8 + 
+ ((11*I)/48)*Pi*Log[\[Xi]]^3*SVHPL[1] + (15*Log[\[Xi]]^4*SVHPL[1])/256 + ((3*I)/32)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] + (3*Log[\[Xi]]^3*SVHPL[0]*SVHPL[1])/128 - 
+ (Pi^2*SVHPL[0]^2*SVHPL[1])/32 - (I/64)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] - (9*Log[\[Xi]]^2*SVHPL[0]^2*SVHPL[1])/512 + ((3*I)/128)*Pi*SVHPL[0]^3*SVHPL[1] - 
+ (3*Log[\[Xi]]*SVHPL[0]^3*SVHPL[1])/512 + (3*SVHPL[0]^4*SVHPL[1])/4096 - (Pi^2*Log[\[Xi]]*SVHPL[1]^2)/8 + ((11*I)/32)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 + 
+ (15*Log[\[Xi]]^3*SVHPL[1]^2)/128 + ((3*I)/32)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + (9*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1]^2)/256 + (I/128)*Pi*SVHPL[0]^2*SVHPL[1]^2 - 
+ (9*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1]^2)/512 - (3*SVHPL[0]^3*SVHPL[1]^2)/1024 - (Pi^2*SVHPL[1]^3)/24 + ((11*I)/48)*Pi*Log[\[Xi]]*SVHPL[1]^3 + 
+ (15*Log[\[Xi]]^2*SVHPL[1]^3)/128 + (I/32)*Pi*SVHPL[0]*SVHPL[1]^3 + (3*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^3)/128 - (3*SVHPL[0]^2*SVHPL[1]^3)/512 + 
+ ((11*I)/192)*Pi*SVHPL[1]^4 + (15*Log[\[Xi]]*SVHPL[1]^4)/256 + (3*SVHPL[0]*SVHPL[1]^4)/512 + (3*SVHPL[1]^5)/256 - (I/16)*Pi*SVHPL[0, 1]^2 + 
+ (Pi^2*SVHPL[0, 0, 1])/4 - (I/4)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] - ((3*I)/16)*Pi*SVHPL[0]*SVHPL[0, 0, 1] - (I/4)*Pi*SVHPL[1]*SVHPL[0, 0, 1] + 
+ (I/8)*Pi*SVHPL[0]*SVHPL[0, 1, 1] - (Pi^2*Log[\[Xi]]*\[Zeta][2])/4 + ((3*I)/16)*Pi*Log[\[Xi]]^2*\[Zeta][2] + (Log[\[Xi]]^3*\[Zeta][2])/64 + 
+ ((3*I)/16)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] + (Log[\[Xi]]^2*SVHPL[0]*\[Zeta][2])/128 + ((3*I)/64)*Pi*SVHPL[0]^2*\[Zeta][2] + (5*Log[\[Xi]]*SVHPL[0]^2*\[Zeta][2])/256 + 
+ (5*SVHPL[0]^3*\[Zeta][2])/512 - (Pi^2*SVHPL[1]*\[Zeta][2])/4 + ((3*I)/8)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + (3*Log[\[Xi]]^2*SVHPL[1]*\[Zeta][2])/64 + 
+ ((3*I)/16)*Pi*SVHPL[0]*SVHPL[1]*\[Zeta][2] + (Log[\[Xi]]*SVHPL[0]*SVHPL[1]*\[Zeta][2])/64 + (5*SVHPL[0]^2*SVHPL[1]*\[Zeta][2])/256 + ((3*I)/16)*Pi*SVHPL[1]^2*\[Zeta][2] + 
+ (3*Log[\[Xi]]*SVHPL[1]^2*\[Zeta][2])/64 + (SVHPL[0]*SVHPL[1]^2*\[Zeta][2])/128 + (SVHPL[1]^3*\[Zeta][2])/64 - ((11*I)/80)*Pi*\[Zeta][2]^2 - (Log[\[Xi]]*\[Zeta][2]^2)/64 + 
+ (7*SVHPL[0]*\[Zeta][2]^2)/128 - (SVHPL[1]*\[Zeta][2]^2)/64 - (Pi^2*\[Zeta][3])/4 + (I/2)*Pi*Log[\[Xi]]*\[Zeta][3] + (15*Log[\[Xi]]^2*\[Zeta][3])/64 + ((3*I)/8)*Pi*SVHPL[0]*\[Zeta][3] + 
+ (13*Log[\[Xi]]*SVHPL[0]*\[Zeta][3])/64 - (SVHPL[0]^2*\[Zeta][3])/256 + (I/2)*Pi*SVHPL[1]*\[Zeta][3] + (15*Log[\[Xi]]*SVHPL[1]*\[Zeta][3])/32 + 
+ (13*SVHPL[0]*SVHPL[1]*\[Zeta][3])/64 + (15*SVHPL[1]^2*\[Zeta][3])/64 + (5*\[Zeta][2]*\[Zeta][3])/128 - \[Zeta][5]/64
+
+MRK[Subscript[Q, "ep"][w, v, u]] = (-3*Pi^2*Log[\[Xi]]^3)/64 - (I/48)*Pi*Log[\[Xi]]^4 + (9*Pi^2*Log[\[Xi]]^2*SVHPL[0])/128 + (I/384)*Pi*Log[\[Xi]]^3*SVHPL[0] - (9*Pi^2*Log[\[Xi]]*SVHPL[0]^2)/256 + 
+ ((5*I)/256)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 + (3*Pi^2*SVHPL[0]^3)/512 + ((31*I)/1536)*Pi*Log[\[Xi]]*SVHPL[0]^3 - ((23*I)/3072)*Pi*SVHPL[0]^4 - 
+ (9*Pi^2*Log[\[Xi]]^2*SVHPL[1])/64 - (I/192)*Pi*Log[\[Xi]]^3*SVHPL[1] + (9*Pi^2*Log[\[Xi]]*SVHPL[0]*SVHPL[1])/64 - ((5*I)/64)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] - 
+ (9*Pi^2*SVHPL[0]^2*SVHPL[1])/256 + ((17*I)/256)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] - (I/384)*Pi*SVHPL[0]^3*SVHPL[1] - (9*Pi^2*Log[\[Xi]]*SVHPL[1]^2)/64 + 
+ ((5*I)/64)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 + (9*Pi^2*SVHPL[0]*SVHPL[1]^2)/128 - (I/128)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + ((3*I)/128)*Pi*SVHPL[0]^2*SVHPL[1]^2 - 
+ (3*Pi^2*SVHPL[1]^3)/64 + ((17*I)/192)*Pi*Log[\[Xi]]*SVHPL[1]^3 + (I/96)*Pi*SVHPL[0]*SVHPL[1]^3 + ((5*I)/192)*Pi*SVHPL[1]^4 + (I/16)*Pi*SVHPL[0, 1]^2 - 
+ (I/4)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] + (I/8)*Pi*SVHPL[0]*SVHPL[0, 0, 1] - (I/4)*Pi*SVHPL[1]*SVHPL[0, 0, 1] - (I/2)*Pi*Log[\[Xi]]*SVHPL[0, 1, 1] + 
+ (I/8)*Pi*SVHPL[0]*SVHPL[0, 1, 1] - (I/4)*Pi*SVHPL[1]*SVHPL[0, 1, 1] - (3*Pi^2*Log[\[Xi]]*\[Zeta][2])/32 - ((3*I)/32)*Pi*Log[\[Xi]]^2*\[Zeta][2] + 
+ (3*Pi^2*SVHPL[0]*\[Zeta][2])/64 + ((5*I)/64)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] - (I/64)*Pi*SVHPL[0]^2*\[Zeta][2] - (3*Pi^2*SVHPL[1]*\[Zeta][2])/32 - 
+ ((5*I)/32)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + (I/16)*Pi*SVHPL[0]*SVHPL[1]*\[Zeta][2] - (I/16)*Pi*SVHPL[1]^2*\[Zeta][2] + ((11*I)/80)*Pi*\[Zeta][2]^2 + (3*Pi^2*\[Zeta][3])/16 - 
+ (I/16)*Pi*Log[\[Xi]]*\[Zeta][3] + (9*\[Zeta][2]*\[Zeta][3])/128 + (21*\[Zeta][5])/64
+
+MRK[Subscript[Q, "ep"][v, u, w]] = (Pi^2*Log[\[Xi]]^3)/64 + (I/384)*Pi*Log[\[Xi]]^4 + (3*Pi^2*Log[\[Xi]]^2*SVHPL[0])/64 - (I/384)*Pi*Log[\[Xi]]^3*SVHPL[0] + (9*Pi^2*Log[\[Xi]]*SVHPL[0]^2)/256 - 
+ ((3*I)/512)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 - (5*Pi^2*SVHPL[0]^3)/128 + ((5*I)/384)*Pi*Log[\[Xi]]*SVHPL[0]^3 + ((7*I)/3072)*Pi*SVHPL[0]^4 + 
+ (3*Pi^2*Log[\[Xi]]^2*SVHPL[1])/32 - (I/192)*Pi*Log[\[Xi]]^3*SVHPL[1] + (9*Pi^2*Log[\[Xi]]*SVHPL[0]*SVHPL[1])/64 - ((3*I)/128)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] + 
+ (3*Pi^2*SVHPL[0]^2*SVHPL[1])/64 - (I/64)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] + (I/96)*Pi*SVHPL[0]^3*SVHPL[1] + (9*Pi^2*Log[\[Xi]]*SVHPL[1]^2)/64 - 
+ ((3*I)/128)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 - (3*Pi^2*SVHPL[0]*SVHPL[1]^2)/32 + (I/32)*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + ((3*I)/128)*Pi*SVHPL[0]^2*SVHPL[1]^2 + 
+ (Pi^2*SVHPL[1]^3)/16 - (I/48)*Pi*Log[\[Xi]]*SVHPL[1]^3 + (I/48)*Pi*SVHPL[0]*SVHPL[1]^3 - (I/192)*Pi*SVHPL[1]^4 + (I/16)*Pi*SVHPL[0, 1]^2 - 
+ (3*Pi^2*SVHPL[0, 0, 1])/8 + (I/8)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] - (I/32)*Pi*SVHPL[0]*SVHPL[0, 0, 1] - (I/16)*Pi*SVHPL[1]*SVHPL[0, 0, 1] + 
+ (3*Pi^2*SVHPL[0, 1, 1])/4 - (I/4)*Pi*Log[\[Xi]]*SVHPL[0, 1, 1] - (I/16)*Pi*SVHPL[0]*SVHPL[0, 1, 1] - (I/8)*Pi*SVHPL[1]*SVHPL[0, 1, 1] - 
+ (5*Pi^2*Log[\[Xi]]*\[Zeta][2])/32 + ((95*I)/128)*Pi*Log[\[Xi]]^2*\[Zeta][2] - (Pi^2*SVHPL[0]*\[Zeta][2])/8 + ((43*I)/64)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] + 
+ ((39*I)/256)*Pi*SVHPL[0]^2*\[Zeta][2] - (Pi^2*SVHPL[1]*\[Zeta][2])/4 + ((43*I)/32)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + ((39*I)/64)*Pi*SVHPL[0]*SVHPL[1]*\[Zeta][2] + 
+ ((39*I)/64)*Pi*SVHPL[1]^2*\[Zeta][2] + ((399*I)/320)*Pi*\[Zeta][2]^2 - (7*Pi^2*\[Zeta][3])/16 + ((21*I)/32)*Pi*Log[\[Xi]]*\[Zeta][3] + ((3*I)/16)*Pi*SVHPL[0]*\[Zeta][3] + 
+ ((3*I)/8)*Pi*SVHPL[1]*\[Zeta][3] + (9*\[Zeta][5])/32
+
+MRK[N] = (-I)*Pi*Log[\[Xi]]^4 + (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 + ((17*I)/48)*Pi*SVHPL[0]^4 - ((8*I)/3)*Pi*Log[\[Xi]]^3*SVHPL[1] - (2*I)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 + 
+ ((5*I)/2)*Pi*SVHPL[0]^2*SVHPL[1]^2 + (I/3)*Pi*SVHPL[1]^4 + (4*I)*Pi*SVHPL[0, 1]^2 - (8*I)*Pi*SVHPL[1]*SVHPL[0, 0, 1] - (8*I)*Pi*SVHPL[0]*SVHPL[0, 1, 1] - 
+ (12*I)*Pi*Log[\[Xi]]^2*\[Zeta][2] + I*Pi*SVHPL[0]^2*\[Zeta][2] - (16*I)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] - (4*I)*Pi*SVHPL[1]^2*\[Zeta][2] - ((108*I)/5)*Pi*\[Zeta][2]^2 + 
+ (24*Log[\[Xi]]*\[Zeta][2]^2)/5 + (24*SVHPL[1]*\[Zeta][2]^2)/5 - (8*I)*Pi*Log[\[Xi]]*\[Zeta][3] - 4*Log[\[Xi]]^2*\[Zeta][3] + SVHPL[0]^2*\[Zeta][3] - 8*Log[\[Xi]]*SVHPL[1]*\[Zeta][3] - 
+ 4*SVHPL[1]^2*\[Zeta][3] + 8*\[Zeta][2]*\[Zeta][3] - 8*\[Zeta][5]
+
+MRK[O] = (-2*Pi^2*Log[\[Xi]]^3)/3 + (I/6)*Pi*Log[\[Xi]]^4 - (2*I)*Pi*Log[\[Xi]]^2*\[Zeta][2] + ((38*I)/5)*Pi*\[Zeta][2]^2 - 8*Pi^2*\[Zeta][3] - 8*\[Zeta][2]*\[Zeta][3] + 17*\[Zeta][5]
+
+MRK[Subscript[M, 1][u, v, w]] = ((2*I)/3)*Pi*Log[\[Xi]]^4 + I*Pi*Log[\[Xi]]^3*SVHPL[0] + (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 - ((5*I)/12)*Pi*Log[\[Xi]]*SVHPL[0]^3 + (2*I)*Pi*Log[\[Xi]]^3*SVHPL[1] + 
+ (2*I)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] + (I/2)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] + (2*I)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 - I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + 
+ ((2*I)/3)*Pi*Log[\[Xi]]*SVHPL[1]^3 - (4*I)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] + (8*I)*Pi*Log[\[Xi]]*SVHPL[0, 1, 1] + (2*I)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] + 
+ (4*I)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + (12*Log[\[Xi]]*\[Zeta][2]^2)/5 + (6*SVHPL[0]*\[Zeta][2]^2)/5 + (12*SVHPL[1]*\[Zeta][2]^2)/5 - 2*Log[\[Xi]]^2*\[Zeta][3] - 
+ 2*Log[\[Xi]]*SVHPL[0]*\[Zeta][3] - (SVHPL[0]^2*\[Zeta][3])/2 - 4*Log[\[Xi]]*SVHPL[1]*\[Zeta][3] - 2*SVHPL[0]*SVHPL[1]*\[Zeta][3] - 2*SVHPL[1]^2*\[Zeta][3] + 4*\[Zeta][2]*\[Zeta][3] - 
+ 4*\[Zeta][5]
+
+MRK[Subscript[M, 1][v, w, u]] = 2*\[Zeta][5]-2*\[Zeta][2]*\[Zeta][3]
+
+MRK[Subscript[M, 1][w, u, v]] = 2*\[Zeta][5]-2*\[Zeta][2]*\[Zeta][3]
+
+MRK[Subscript[M, 1][u, w, v]] = ((2*I)/3)*Pi*Log[\[Xi]]^4 - I*Pi*Log[\[Xi]]^3*SVHPL[0] + (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0]^2 + ((5*I)/12)*Pi*Log[\[Xi]]*SVHPL[0]^3 + (2*I)*Pi*Log[\[Xi]]^3*SVHPL[1] - 
+ (2*I)*Pi*Log[\[Xi]]^2*SVHPL[0]*SVHPL[1] + (I/2)*Pi*Log[\[Xi]]*SVHPL[0]^2*SVHPL[1] + (2*I)*Pi*Log[\[Xi]]^2*SVHPL[1]^2 + I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1]^2 + 
+ ((2*I)/3)*Pi*Log[\[Xi]]*SVHPL[1]^3 - (4*I)*Pi*Log[\[Xi]]*SVHPL[0, 0, 1] - (8*I)*Pi*Log[\[Xi]]*SVHPL[0, 1, 1] - (2*I)*Pi*Log[\[Xi]]*SVHPL[0]*\[Zeta][2] + 
+ (4*I)*Pi*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + (12*Log[\[Xi]]*\[Zeta][2]^2)/5 - (6*SVHPL[0]*\[Zeta][2]^2)/5 + (12*SVHPL[1]*\[Zeta][2]^2)/5 - 2*Log[\[Xi]]^2*\[Zeta][3] + 
+ 2*Log[\[Xi]]*SVHPL[0]*\[Zeta][3] - (SVHPL[0]^2*\[Zeta][3])/2 - 4*Log[\[Xi]]*SVHPL[1]*\[Zeta][3] + 2*SVHPL[0]*SVHPL[1]*\[Zeta][3] - 2*SVHPL[1]^2*\[Zeta][3] + 4*\[Zeta][2]*\[Zeta][3] - 
+ 4*\[Zeta][5]
+
+MRK[Subscript[M, 1][v, u, w]] = 2*\[Zeta][5]-2*\[Zeta][2]*\[Zeta][3]
+
+MRK[Subscript[M, 1][w, v, u]] = 2*\[Zeta][5]-2*\[Zeta][2]*\[Zeta][3]

@@ -1,0 +1,196 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[      5586,        186]
+NotebookOptionsPosition[      4999,        161]
+NotebookOutlinePosition[      5353,        177]
+CellTagsIndexPosition[      5310,        174]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"basis", "[", "1", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"1", ",", 
+     RowBox[{"-", "1"}], ",", "0"}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"basis", "[", "2", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", 
+     RowBox[{"-", "1"}]}], "}"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"basis", "[", "3", "]"}], "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", "1", ",", "0"}], "}"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.609976554338179*^9, 3.609976584635055*^9}, {
+  3.609976681954544*^9, 3.6099766865865593`*^9}, {3.609976717673428*^9, 
+  3.609976769240712*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"currentNumber", "=", "3"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"Reduce", "[", 
+    RowBox[{
+     RowBox[{"basis", "[", "#", "]"}], "\[Equal]", 
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Array", "[", 
+          RowBox[{"q", ",", 
+           RowBox[{"currentNumber", "-", "1"}]}], "]"}], 
+         "\[LeftDoubleBracket]", "t", "\[RightDoubleBracket]"}], 
+        RowBox[{"basis", "[", 
+         RowBox[{
+          RowBox[{"DeleteCases", "[", 
+           RowBox[{
+            RowBox[{"Range", "[", "currentNumber", "]"}], ",", "#"}], "]"}], 
+          "\[LeftDoubleBracket]", "t", "\[RightDoubleBracket]"}], "]"}]}], 
+       ",", 
+       RowBox[{"{", 
+        RowBox[{"t", ",", 
+         RowBox[{"currentNumber", "-", "1"}]}], "}"}]}], "]"}]}], "]"}], 
+   "&"}], "/@", 
+  RowBox[{"Range", "[", "currentNumber", "]"}]}]}], "Input",
+ CellChangeTimes->{{3.609976603902451*^9, 3.609976604748827*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"False", ",", "False", ",", "False"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.609976603181882*^9, 3.609976605347226*^9}, {
+  3.609976670085616*^9, 3.609976688072392*^9}, {3.609976719908318*^9, 
+  3.609976770349862*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"replace", "=", 
+   RowBox[{
+    RowBox[{"List", "@@", 
+     RowBox[{"Reduce", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"a", ",", "b", ",", "c"}], "}"}], "\[Equal]", 
+        RowBox[{"Sum", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"Array", "[", 
+             RowBox[{"q", ",", "3"}], "]"}], "\[LeftDoubleBracket]", "t", 
+            "\[RightDoubleBracket]"}], 
+           RowBox[{"basis", "[", "t", "]"}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"t", ",", "3"}], "}"}]}], "]"}]}], ",", 
+       RowBox[{"Array", "[", 
+        RowBox[{"q", ",", "3"}], "]"}]}], "]"}]}], "/.", 
+    RowBox[{
+     RowBox[{"Equal", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], ":>", 
+     RowBox[{"Rule", "[", 
+      RowBox[{"x", ",", "y"}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6099766413839083`*^9, 3.609976649405239*^9}, {
+   3.609976751186213*^9, 3.609976753298107*^9}, 3.609976808073702*^9, {
+   3.6099769135258923`*^9, 3.609976926733732*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"matrixReplace", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"a", "\[Rule]", 
+      RowBox[{"currentTriplet", "[", "1", "]"}]}], ",", 
+     RowBox[{"b", "->", 
+      RowBox[{"currentTriplet", "[", "2", "]"}]}], ",", 
+     RowBox[{"c", "->", 
+      RowBox[{"currentTriplet", "[", "3", "]"}]}]}], "}"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.609976782907263*^9, 3.6099768062004147`*^9}, {
+  3.6099768906791887`*^9, 3.609976893629324*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"response", "=", 
+   RowBox[{"{", 
+    RowBox[{"0", ",", 
+     RowBox[{"q", "[", "1", "]"}], ",", 
+     RowBox[{"q", "[", "2", "]"}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.609976810899856*^9, 3.609976829221773*^9}, {
+  3.609976870197612*^9, 3.609976873758781*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"(", 
+  RowBox[{
+   RowBox[{"response", "/.", "replace"}], "/.", "matrixReplace"}], 
+  ")"}]], "Input",
+ CellChangeTimes->{{3.609976875584381*^9, 3.609976885700205*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"0", ",", 
+    RowBox[{"currentTriplet", "(", "1", ")"}], ",", 
+    RowBox[{"-", 
+     RowBox[{"currentTriplet", "(", "3", ")"}]}]}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.609976886261958*^9, 3.609976895749035*^9}, 
+   3.609976929671979*^9}]
+}, Open  ]]
+},
+WindowSize->{740, 652},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 689, 20, 58, "Input"],
+Cell[CellGroupData[{
+Cell[1271, 44, 1007, 28, 88, "Input"],
+Cell[2281, 74, 292, 7, 27, "Output"]
+}, Open  ]],
+Cell[2588, 84, 1064, 29, 43, "Input"],
+Cell[3655, 115, 480, 13, 27, "Input"],
+Cell[4138, 130, 310, 8, 27, "Input"],
+Cell[CellGroupData[{
+Cell[4473, 142, 192, 5, 27, "Input"],
+Cell[4668, 149, 315, 9, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

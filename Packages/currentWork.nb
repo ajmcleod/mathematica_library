@@ -1,0 +1,391 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     12175,        382]
+NotebookOptionsPosition[     10778,        330]
+NotebookOutlinePosition[     11307,        353]
+CellTagsIndexPosition[     11222,        348]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"useLJfunctions", "=", "False"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "coproduct.m"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "irreducible_function_package.m"}]}], "Input",
+ CellChangeTimes->{{3.616096035501205*^9, 3.616096053486637*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"currentWeight", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"basis", "=", "Mbasis"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"loadFunctionsAndDefinitions", "[", "currentWeight", "]"}], 
+  ";"}]}], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w7evenSolutions", "=", 
+   RowBox[{
+   "<<", "\"\<~/Google\\ Drive/Stanford/Lance/Mathematica\\ Library/Temp\\ \
+Files/weight7evenSolutionVectors.dat\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6160959196367397`*^9, 3.61609597142735*^9}, 
+   3.616383774971294*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w7evenKnown", "=", 
+   RowBox[{"(", 
+    RowBox[{"functionToVector", "/@", 
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Select", "[", 
+         RowBox[{
+          RowBox[{"Join", "[", 
+           RowBox[{
+           "currentWeightLyndonBasisFunctions", ",", 
+            "currentWeightCompositeFunctions", ",", 
+            RowBox[{"beyondSymbolTerms", "[", "currentWeight", "]"}]}], "]"}],
+           ",", 
+          RowBox[{
+           RowBox[{"EvenQ", "[", 
+            RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}], "/.", 
+        
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{"MZV", "[", 
+             RowBox[{"currentWeight", "-", "1"}], "]"}], 
+            "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}], "\[Rule]",
+            "0"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", 
+            RowBox[{"Length", "[", 
+             RowBox[{"MZV", "[", 
+              RowBox[{"currentWeight", "-", "1"}], "]"}], "]"}]}], "}"}]}], 
+         "]"}]}], ",", 
+       RowBox[{"Append", "[", 
+        RowBox[{"pureMZV", ",", "0"}], "]"}]}], "]"}]}], ")"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6160961182288446`*^9, 3.616096146040042*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"knownNullSpace", "=", 
+      RowBox[{"NullSpace", "[", "w7evenKnown", "]"}]}], ";"}], "//", 
+    "AbsoluteTiming"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"knownNullSpace", "=", 
+    RowBox[{
+    "<<", "\"\<~/Google\\ Drive/Stanford/Lance/Mathematica\\ Library/Temp\\ \
+Files/weight7evenKnownNullSpace.dat\>\""}]}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.616131807449769*^9, 3.616131834018862*^9}, {
+   3.6161320967683907`*^9, 3.616132098437037*^9}, {3.616132145066539*^9, 
+   3.61613215544492*^9}, {3.616164863655603*^9, 3.616164865828421*^9}, {
+   3.616193682919999*^9, 3.616193714646803*^9}, 3.616261205129135*^9, {
+   3.616383414215685*^9, 3.616383421335548*^9}, 3.6163837777807302`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"irreducibleEvenSolutions", "=", 
+   RowBox[{"{", "}"}]}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{"Monitor", "[", 
+  RowBox[{
+   RowBox[{"Do", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"overlap", "=", 
+       RowBox[{"knownNullSpace", ".", 
+        RowBox[{"(", 
+         RowBox[{
+         "w7evenSolutions", "\[LeftDoubleBracket]", "vec", 
+          "\[RightDoubleBracket]"}], ")"}]}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"overlap", "!=", 
+         RowBox[{"ConstantArray", "[", 
+          RowBox[{"0", ",", 
+           RowBox[{"Length", "@", "knownNullSpace"}]}], "]"}]}], ",", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"irreducibleEvenSolutions", ",", 
+          RowBox[{
+          "w7evenSolutions", "\[LeftDoubleBracket]", "vec", 
+           "\[RightDoubleBracket]"}]}], "]"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"vec", ",", 
+       RowBox[{"Length", "@", "w7evenSolutions"}]}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"Length", "@", "irreducibleEvenSolutions"}], ",", "vec", ",", 
+     RowBox[{"Length", "@", "w7evenSolutions"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6162612325077267`*^9, 3.616261324190806*^9}, {
+  3.6163278364269867`*^9, 3.616327898937642*^9}, {3.61638546546804*^9, 
+  3.616385744618767*^9}, {3.616385962649906*^9, 3.6163859628545933`*^9}, {
+  3.616386212954577*^9, 3.616386215193615*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Return", "[", "]"}]], "Input",
+ CellChangeTimes->{{3.616329853034683*^9, 3.616329855173944*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6162612273282757`*^9, 3.6162612277112226`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w7oddSolutions", "=", 
+   RowBox[{
+   "<<", "\"\<~/Google\\ Drive/Stanford/Lance/Mathematica\\ Library/Temp\\ \
+Files/weight7oddSolutionVectors.dat\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.616361983906108*^9, 3.6163621410297737`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w7oddKnown", "=", 
+   RowBox[{
+   "<<", "\"\<~/Google\\ Drive/Stanford/Lance/Mathematica\\ Library/Temp\\ \
+Files/weight7knownOddSolutionVectors.dat\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.616362148437579*^9, 3.616362167507641*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"oddNullSpace", "=", 
+    RowBox[{"NullSpace", "[", "w7oddKnown", "]"}]}], ";"}], "//", 
+  "AbsoluteTiming"}]], "Input",
+ CellChangeTimes->{{3.616362213114869*^9, 3.616362217899906*^9}}],
+
+Cell["\<\
+
+No more memory available.
+Mathematica kernel has shut down.
+Try quitting other applications and then retry.\
+\>", "Print",
+ CellChangeTimes->{3.616426124913863*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Factor", "[", 
+  RowBox[{"Expand", "[", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"b", "[", "s", "]"}], " ", 
+       RowBox[{"b", "[", "r", "]"}]}], "-", 
+      RowBox[{
+       RowBox[{"b", "[", "s", "]"}], " ", "x"}], " ", "+", " ", 
+      RowBox[{"m", " ", "x"}], " ", "-", 
+      RowBox[{"x", "^", "2"}], " ", "-", "x"}], ")"}], 
+    RowBox[{"(", 
+     RowBox[{"m", "-", "1"}], ")"}]}], "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.616432859401408*^9, 3.6164329212345552`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"(", 
+     RowBox[{"m", "-", "1"}], ")"}]}], " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"-", 
+      RowBox[{
+       RowBox[{"b", "(", "r", ")"}], " ", 
+       RowBox[{"b", "(", "s", ")"}]}]}], "+", 
+     RowBox[{"x", " ", 
+      RowBox[{"b", "(", "s", ")"}]}], "-", 
+     RowBox[{"m", " ", "x"}], "+", 
+     SuperscriptBox["x", "2"], "+", "x"}], ")"}]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.616432909860816*^9, 3.616432921652185*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"?", "Numerator"}]], "Input",
+ CellChangeTimes->{{3.616433743957506*^9, 3.616433745325162*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Numerator\\\", \\\"[\\\", \
+StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the numerator of \\!\
+\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\). \"\>", "MSG"], 
+  "\[NonBreakingSpace]", 
+  ButtonBox[
+   StyleBox["\[RightSkeleton]", "SR"],
+   Active->True,
+   BaseStyle->"Link",
+   ButtonData->"paclet:ref/Numerator"]}]], "Print", "PrintUsage",
+ CellChangeTimes->{3.61643374620716*^9},
+ CellTags->"Info3616408545-2405152"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Expand", "[", 
+   RowBox[{"Numerator", "[", 
+    RowBox[{"Factor", "[", 
+     RowBox[{"Expand", "[", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"b", "[", "s", "]"}], "+", "x", "+", 
+         RowBox[{
+          RowBox[{"b", "[", "s", "]"}], 
+          FractionBox[
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"b", "[", "r", "]"}], "-", "x"}], ")"}], 
+           RowBox[{"m", "-", "x", "-", "1"}]]}]}], ")"}], "-", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"b", "[", "s", "]"}], "+", 
+         FractionBox[
+          RowBox[{
+           RowBox[{"b", "[", "s", "]"}], " ", 
+           RowBox[{"b", "[", "r", "]"}]}], 
+          RowBox[{"m", "-", "1"}]]}], ")"}]}], "]"}], "]"}], "]"}], "]"}], "//",
+   "Factor"}]], "Input",
+ CellChangeTimes->{{3.6164336742077417`*^9, 3.6164337522545347`*^9}, {
+  3.616434484651458*^9, 3.616434490367559*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"x", " ", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"m", " ", 
+      RowBox[{"b", "(", "s", ")"}]}], "-", 
+     RowBox[{
+      RowBox[{"b", "(", "r", ")"}], " ", 
+      RowBox[{"b", "(", "s", ")"}]}], "-", 
+     RowBox[{"b", "(", "s", ")"}], "-", 
+     SuperscriptBox["m", "2"], "+", 
+     RowBox[{"m", " ", "x"}], "+", 
+     RowBox[{"2", " ", "m"}], "-", "x", "-", "1"}], ")"}]}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6164337229804897`*^9, 3.6164337526588*^9}, 
+   3.616434490801818*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{"a", ",", "b", ",", "c", ",", 
+    RowBox[{"a", " ", "b", " ", "c"}], ",", 
+    RowBox[{
+     RowBox[{"a", " ", "b", " ", "c"}], " ", "+", " ", 
+     RowBox[{"a", " ", "b"}], "+", 
+     RowBox[{"a", " ", "c"}], "+", 
+     RowBox[{"b", " ", "c"}], "+", "a", "+", "b", "+", "c", "+", "1"}], ",", 
+    RowBox[{
+     RowBox[{"a", " ", "b", " ", "c"}], " ", "+", 
+     RowBox[{"a", " ", "b"}], "+", " ", "a", "+", "1"}]}], "}"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"a", "\[Rule]", "5"}], ",", 
+    RowBox[{"b", "\[Rule]", "10"}], ",", 
+    RowBox[{"c", "\[Rule]", "10"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.616439202850501*^9, 3.616439206440061*^9}, {
+  3.616439286917297*^9, 3.6164392887388163`*^9}, {3.616439335252069*^9, 
+  3.616439377623535*^9}, {3.616439485877244*^9, 3.616439586656197*^9}, {
+  3.616440720551887*^9, 3.61644075854827*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{"5", ",", "10", ",", "10", ",", "500", ",", "726", ",", "556"}], 
+   "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.61644072292994*^9, 3.616440759123603*^9}}]
+}, Open  ]]
+},
+WindowSize->{1213, 350},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "Info3616408545-2405152"->{
+  Cell[7583, 232, 489, 12, 39, "Print",
+   CellTags->"Info3616408545-2405152"]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"Info3616408545-2405152", 11118, 342}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 283, 5, 58, "Input"],
+Cell[843, 27, 272, 7, 58, "Input"],
+Cell[1118, 36, 304, 7, 27, "Input"],
+Cell[1425, 45, 1314, 37, 73, "Input"],
+Cell[2742, 84, 789, 17, 43, "Input"],
+Cell[3534, 103, 109, 3, 27, "Input"],
+Cell[3646, 108, 1360, 33, 58, "Input"],
+Cell[5009, 143, 120, 2, 27, "Input"],
+Cell[5132, 147, 199, 3, 88, "Input"],
+Cell[5334, 152, 277, 6, 27, "Input"],
+Cell[5614, 160, 276, 6, 27, "Input"],
+Cell[CellGroupData[{
+Cell[5915, 170, 232, 6, 27, "Input"],
+Cell[6150, 178, 175, 6, 59, "Print"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6362, 189, 538, 15, 27, "Input"],
+Cell[6903, 206, 522, 17, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7462, 228, 118, 2, 27, "Input"],
+Cell[7583, 232, 489, 12, 39, "Print",
+ CellTags->"Info3616408545-2405152"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8109, 249, 939, 27, 46, "Input"],
+Cell[9051, 278, 541, 16, 33, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9629, 299, 910, 21, 27, "Input"],
+Cell[10542, 322, 220, 5, 27, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
