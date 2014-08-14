@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     12175,        382]
-NotebookOptionsPosition[     10778,        330]
-NotebookOutlinePosition[     11307,        353]
-CellTagsIndexPosition[     11222,        348]
+NotebookDataLength[      8435,        260]
+NotebookOptionsPosition[      7377,        221]
+NotebookOutlinePosition[      7753,        238]
+CellTagsIndexPosition[      7710,        235]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -168,6 +168,22 @@ Files/weight7knownOddSolutionVectors.dat\>\""}]}], ";"}]], "Input",
 
 Cell[CellGroupData[{
 
+Cell[BoxData[{
+ RowBox[{"Length", "@", "w7oddSolutions"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "@", "w7oddKnown"}]}], "Input",
+ CellChangeTimes->{{3.6164520265837717`*^9, 3.6164520416254396`*^9}}],
+
+Cell[BoxData[
+ FormBox["474", TraditionalForm]], "Output",
+ CellChangeTimes->{3.616452073143487*^9}],
+
+Cell[BoxData[
+ FormBox["368", TraditionalForm]], "Output",
+ CellChangeTimes->{3.616452073145981*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
 Cell[BoxData[
  RowBox[{
   RowBox[{
@@ -182,153 +198,28 @@ No more memory available.
 Mathematica kernel has shut down.
 Try quitting other applications and then retry.\
 \>", "Print",
- CellChangeTimes->{3.616426124913863*^9}]
+ CellChangeTimes->{3.616457428187249*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"Factor", "[", 
-  RowBox[{"Expand", "[", 
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"b", "[", "s", "]"}], " ", 
-       RowBox[{"b", "[", "r", "]"}]}], "-", 
-      RowBox[{
-       RowBox[{"b", "[", "s", "]"}], " ", "x"}], " ", "+", " ", 
-      RowBox[{"m", " ", "x"}], " ", "-", 
-      RowBox[{"x", "^", "2"}], " ", "-", "x"}], ")"}], 
-    RowBox[{"(", 
-     RowBox[{"m", "-", "1"}], ")"}]}], "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.616432859401408*^9, 3.6164329212345552`*^9}}],
+ RowBox[{"Length", "@", "oddNullSpace"}]], "Input",
+ CellChangeTimes->{{3.616464942466084*^9, 3.6164649484771757`*^9}}],
 
 Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"-", 
-    RowBox[{"(", 
-     RowBox[{"m", "-", "1"}], ")"}]}], " ", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"-", 
-      RowBox[{
-       RowBox[{"b", "(", "r", ")"}], " ", 
-       RowBox[{"b", "(", "s", ")"}]}]}], "+", 
-     RowBox[{"x", " ", 
-      RowBox[{"b", "(", "s", ")"}]}], "-", 
-     RowBox[{"m", " ", "x"}], "+", 
-     SuperscriptBox["x", "2"], "+", "x"}], ")"}]}], 
-  TraditionalForm]], "Output",
- CellChangeTimes->{{3.616432909860816*^9, 3.616432921652185*^9}}]
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.616464951703038*^9}]
 }, Open  ]],
 
-Cell[CellGroupData[{
-
 Cell[BoxData[
- RowBox[{"?", "Numerator"}]], "Input",
- CellChangeTimes->{{3.616433743957506*^9, 3.616433745325162*^9}}],
-
-Cell[BoxData[
- RowBox[{
-  StyleBox["\<\"\\!\\(\\*RowBox[{\\\"Numerator\\\", \\\"[\\\", \
-StyleBox[\\\"expr\\\", \\\"TI\\\"], \\\"]\\\"}]\\) gives the numerator of \\!\
-\\(\\*StyleBox[\\\"expr\\\", \\\"TI\\\"]\\). \"\>", "MSG"], 
-  "\[NonBreakingSpace]", 
-  ButtonBox[
-   StyleBox["\[RightSkeleton]", "SR"],
-   Active->True,
-   BaseStyle->"Link",
-   ButtonData->"paclet:ref/Numerator"]}]], "Print", "PrintUsage",
- CellChangeTimes->{3.61643374620716*^9},
- CellTags->"Info3616408545-2405152"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"Expand", "[", 
-   RowBox[{"Numerator", "[", 
-    RowBox[{"Factor", "[", 
-     RowBox[{"Expand", "[", 
-      RowBox[{
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"b", "[", "s", "]"}], "+", "x", "+", 
-         RowBox[{
-          RowBox[{"b", "[", "s", "]"}], 
-          FractionBox[
-           RowBox[{"(", 
-            RowBox[{
-             RowBox[{"b", "[", "r", "]"}], "-", "x"}], ")"}], 
-           RowBox[{"m", "-", "x", "-", "1"}]]}]}], ")"}], "-", 
-       RowBox[{"(", 
-        RowBox[{
-         RowBox[{"b", "[", "s", "]"}], "+", 
-         FractionBox[
-          RowBox[{
-           RowBox[{"b", "[", "s", "]"}], " ", 
-           RowBox[{"b", "[", "r", "]"}]}], 
-          RowBox[{"m", "-", "1"}]]}], ")"}]}], "]"}], "]"}], "]"}], "]"}], "//",
-   "Factor"}]], "Input",
- CellChangeTimes->{{3.6164336742077417`*^9, 3.6164337522545347`*^9}, {
-  3.616434484651458*^9, 3.616434490367559*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{"x", " ", 
-   RowBox[{"(", 
-    RowBox[{
-     RowBox[{"m", " ", 
-      RowBox[{"b", "(", "s", ")"}]}], "-", 
-     RowBox[{
-      RowBox[{"b", "(", "r", ")"}], " ", 
-      RowBox[{"b", "(", "s", ")"}]}], "-", 
-     RowBox[{"b", "(", "s", ")"}], "-", 
-     SuperscriptBox["m", "2"], "+", 
-     RowBox[{"m", " ", "x"}], "+", 
-     RowBox[{"2", " ", "m"}], "-", "x", "-", "1"}], ")"}]}], 
-  TraditionalForm]], "Output",
- CellChangeTimes->{{3.6164337229804897`*^9, 3.6164337526588*^9}, 
-   3.616434490801818*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"{", 
-   RowBox[{"a", ",", "b", ",", "c", ",", 
-    RowBox[{"a", " ", "b", " ", "c"}], ",", 
-    RowBox[{
-     RowBox[{"a", " ", "b", " ", "c"}], " ", "+", " ", 
-     RowBox[{"a", " ", "b"}], "+", 
-     RowBox[{"a", " ", "c"}], "+", 
-     RowBox[{"b", " ", "c"}], "+", "a", "+", "b", "+", "c", "+", "1"}], ",", 
-    RowBox[{
-     RowBox[{"a", " ", "b", " ", "c"}], " ", "+", 
-     RowBox[{"a", " ", "b"}], "+", " ", "a", "+", "1"}]}], "}"}], "/.", 
-  RowBox[{"{", 
-   RowBox[{
-    RowBox[{"a", "\[Rule]", "5"}], ",", 
-    RowBox[{"b", "\[Rule]", "10"}], ",", 
-    RowBox[{"c", "\[Rule]", "10"}]}], "}"}]}]], "Input",
- CellChangeTimes->{{3.616439202850501*^9, 3.616439206440061*^9}, {
-  3.616439286917297*^9, 3.6164392887388163`*^9}, {3.616439335252069*^9, 
-  3.616439377623535*^9}, {3.616439485877244*^9, 3.616439586656197*^9}, {
-  3.616440720551887*^9, 3.61644075854827*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{"{", 
-   RowBox[{"5", ",", "10", ",", "10", ",", "500", ",", "726", ",", "556"}], 
-   "}"}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.61644072292994*^9, 3.616440759123603*^9}}]
-}, Open  ]]
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.616451994182489*^9, 3.616451995287825*^9}}]
 },
-WindowSize->{1213, 350},
+WindowSize->{1246, 259},
 WindowMargins->{{4, Automatic}, {Automatic, 4}},
 ShowSelection->True,
 FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
@@ -339,16 +230,10 @@ StyleDefinitions->"Default.nb"
 
 (* Internal cache information *)
 (*CellTagsOutline
-CellTagsIndex->{
- "Info3616408545-2405152"->{
-  Cell[7583, 232, 489, 12, 39, "Print",
-   CellTags->"Info3616408545-2405152"]}
- }
+CellTagsIndex->{}
 *)
 (*CellTagsIndex
-CellTagsIndex->{
- {"Info3616408545-2405152", 11118, 342}
- }
+CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
@@ -364,26 +249,19 @@ Cell[5132, 147, 199, 3, 88, "Input"],
 Cell[5334, 152, 277, 6, 27, "Input"],
 Cell[5614, 160, 276, 6, 27, "Input"],
 Cell[CellGroupData[{
-Cell[5915, 170, 232, 6, 27, "Input"],
-Cell[6150, 178, 175, 6, 59, "Print"]
+Cell[5915, 170, 203, 3, 43, "Input"],
+Cell[6121, 175, 100, 2, 27, "Output"],
+Cell[6224, 179, 100, 2, 27, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[6362, 189, 538, 15, 27, "Input"],
-Cell[6903, 206, 522, 17, 33, "Output"]
+Cell[6361, 186, 232, 6, 27, "Input"],
+Cell[6596, 194, 175, 6, 59, "Print"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[7462, 228, 118, 2, 27, "Input"],
-Cell[7583, 232, 489, 12, 39, "Print",
- CellTags->"Info3616408545-2405152"]
+Cell[6808, 205, 133, 2, 27, "Input"],
+Cell[6944, 209, 98, 2, 27, "Output"]
 }, Open  ]],
-Cell[CellGroupData[{
-Cell[8109, 249, 939, 27, 46, "Input"],
-Cell[9051, 278, 541, 16, 33, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[9629, 299, 910, 21, 27, "Input"],
-Cell[10542, 322, 220, 5, 27, "Output"]
-}, Open  ]]
+Cell[7057, 214, 316, 5, 163, "Input"]
 }
 ]
 *)

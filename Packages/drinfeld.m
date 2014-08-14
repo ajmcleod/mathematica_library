@@ -54184,9 +54184,5 @@ inverseDrinfeldCoefficient[{x1, x1, x1, x1, x1, x1, x1, x1, x1, x1}] =
       \[Zeta][x1, x1, x1, x1, x1, x1] + 2*\[Zeta][x1, x1, x1]*
       \[Zeta][x1, x1, x1, x1, x1, x1, x1] + 2*\[Zeta][x1, x1]*
       \[Zeta][x1, x1, x1, x1, x1, x1, x1, x1] - \[Zeta][x1, x1, x1, x1, x1, 
-      x1, x1, x1, x1, x1]
+      x1, x1, x1, x1, x1];
 
-generatingSeriesProduct[sum1_, sum2_] := Module[{maxWeight, wJoin, list1 = If[MatchQ[sum1, Plus[_, __]], List @@ sum1, {sum1}], list2 = If[MatchQ[sum2, Plus[_, __]], List @@ sum2, {sum2}]},
-	maxWeight = Min[Max[list1 /. {Times[r___, w[word__]] :> Length[List[word]]}], Max[list2 /. {Times[r___, w[word__]] :> Length[List[word]]}]];
-	wJoin[t1_,t2_] := (w@@Join[t1 /. {Times[r___, w[word__]] :> List[word]}, t2 /. {Times[r___, w[word__]] :> List[word]}]) /. {w[a___, 1,b___] :> w @@ Join[a, b]} /. {w[] -> 1, w[1] -> 1} /. {w[word__] :> 0 /; Length[List[word]] > maxWeight};
-	Expand[Sum[(f1 /. {w[__] -> 1}) (f2 /. {w[__] -> 1}) wJoin[f1, f2], {f1, list1}, {f2, list2}]]]
