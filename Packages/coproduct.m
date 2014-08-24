@@ -168,11 +168,16 @@ toLinearBasis[CircleDot[x__]]:=CircleDot@@Table[shuffleMPL[List[x][[i]]/.toMPL],
 toLyndonBasis[func_]:=func/.toIMPL/.LyndonBasisReplacements/.IMPLtoMPL;
 toStrictLyndonBasis[func_]:=func/.toIMPL/.completeLyndonBasisReplacements/.IMPLtoMPL;
 
-checkIntegrability[func_,n_:max]:=Module[{maxCoproduct,checkEntries,weight=transcendentalWeight[func]},
+checkIntegrability[func_,max]:=Module[{maxCoproduct,checkEntries,weight=transcendentalWeight[func]},
+	maxCoproduct=coproduct[max,func]/.toLogs/.\[Pi]to\[Zeta]/.{CircleDot[a_,b__]:>a checkIntegrability[CircleDot[b],max]/;MatchQ[a,pureMZV]\[And]Length[List[b]]>1,CircleDot[a_,b__]:>0/;MatchQ[a,pureMZV]\[And]Length[List[b]]==1};
+	checkEntries[m_]:=maxCoproduct/.{CircleDot[a___,Log[b_],Log[c_],d___]:>SubMinus[CircleDot[a]]SubPlus[CircleDot[d]]AngleBracket[b,c]/;Length[List[a]]==m-1\[And]Length[List[d]]==weight-1-m};
+	Sum[Expand[checkEntries[i]],{i,weight-1}]];
+checkIntegrability[func_,last]:=Expand[func/.{CircleDot[x_,y_]:>CircleDot[coproduct[{transcendentalWeight[func]-2,1},x],y]}/.{CircleDot[a__,b_,c_]:>CircleDot[a,b/.toLogs,c/.toLogs]}/.\[Pi]to\[Zeta]/.{CircleDot[a___,Log[b_],Log[c_]]:>SubMinus[CircleDot[a]]AngleBracket[b,c]}];
+(*checkIntegrability[func_,n_:max]:=Module[{maxCoproduct,checkEntries,weight=transcendentalWeight[func]},
 	maxCoproduct=coproduct[max,func]/.toLogs/.\[Pi]to\[Zeta]/.{CircleDot[a_,b__]:>a checkIntegrability[CircleDot[b],n]/;MatchQ[a,pureMZV]\[And]Length[List[b]]>1,CircleDot[a_,b__]:>0/;MatchQ[a,pureMZV]\[And]Length[List[b]]==1};
 	checkEntries[m_]:=maxCoproduct/.{CircleDot[a___,Log[b_],Log[c_],d___]:>SubMinus[CircleDot[a]]SubPlus[CircleDot[d]]AngleBracket[b,c]/;Length[List[a]]==m-1\[And]Length[List[d]]==weight-1-m};
 	Which[n===max,Sum[Expand[checkEntries[i]],{i,weight-1}],
-		n===last,Expand[checkEntries[weight-1]]]];
+		n===last,Expand[checkEntries[weight-1]]]];*)
 exteriorD[func_,n_:max]:=Simplify[Expand[exteriorDeriv[func,n]],0<u<1\[And]0<v<1\[And]0<w<1];
 exteriorDeriv[Plus[x_,y__],n_]:=Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}];
 exteriorDeriv[c_ Plus[x_,y__],n_]:=c Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}]/;NumericQ[c];
