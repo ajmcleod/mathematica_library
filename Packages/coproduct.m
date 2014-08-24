@@ -2,7 +2,8 @@
 
 ClearAll[IMPL,MPL,MZV,MPLtoIMPL,IMPLtoMPL,coproduct,maxCoproduct,higherCoproduct,zetaValueCoproduct,transcendentalWeight,sumOverTwo,twoCoproduct,fullCoproduct,coproductTimes,CircleMinus,CircleDot,LogsToIMPL,IMPLtoMZVtoZero,IMPLtoLogs,LyndonBasisReplacements,completeLyndonBasisReplacements,exteriorD,exteriorDeriv,exteriorDifferentiation,coproductD,allIrreducibleFunctions,irreducibleFunctionCoproduct,shuffleW,shuffleMPL,toLinearBasis,cycle,exchange,yWeight,yGrading,replace\[CapitalDelta],coproductEntry,uReplacements,yReplacements,yMatchReplacements,Z,expand,expandTo,expandHPL,compressedNotation,toStrictLyndonBasis];
 
-If[!ValueQ[useLJfunctions],useLJfunctions=True];
+If[!ValueQ[useLJfunctions],useLJfunctions=False];
+If[!ValueQ[stayInLyndonBasis],stayInLyndonBasis=True];
 
 LyndonBasisReplacements=If[FileExistsQ["conservativeLyndonBasisReplacements.mx"],Import["conservativeLyndonBasisReplacements.mx"],Get["conservativeLyndonBasisReplacements.dat"]];
 completeLyndonBasisReplacements=Join[LyndonBasisReplacements,Table[IMPL[0,PadLeft[{},i],y_]->(IMPL[0,{0},y]^i)/(i!),{i,2,10}],Table[IMPL[0,PadLeft[{},i,1],y_]->(IMPL[0,{1},y]^i)/(i!),{i,2,10}]];
@@ -27,7 +28,7 @@ IMPLwordToMZV[aVector_]:=Module[{pos},If[Length[aVector]==1,If[aVector=={1},-\[Z
 IMPLtoMZVtoZero={IMPL[0,aVector_,1]->0};
 toMZVbasis={Power[HPL[{1},x_],n_]:>(n!)HPL[PadLeft[{},n,1],x], Power[HPL[{0},x_],n_]:>(-1)^(n)(n!)HPL[PadLeft[{},n,1],1-x], Power[MPL[{1},x_],n_]:>(n!)MPL[PadLeft[{},n,1],x], Power[MPL[{0},x_],n_]:>(n!)MPL[PadLeft[{},n,1],1-x]};
 
-allIrreducibleFunctions={H3[_],H4[_],H5[_],H6[_],H7[_],H8[_],H9[_],H10[_], Subscript[OverTilde[\[CapitalPhi]],6], Superscript[\[CapitalOmega],"(2)"][_,_,_], Subscript[F,1][_,_,_], Subscript[H, 1][_,_,_], Subscript[J, 1][_,_,_], N, O, Subscript[M, 1][_,_,_], Subscript[Q, "ep"][_,_,_], G, Subscript[K, 1][_,_,_]};
+allIrreducibleFunctions={H3[_],H4[_],H5[_],H6[_],H7[_],H8[_],H9[_],H10[_],DS3[_],DS4[_],DS5[_],DS6[_],DS7[_],DS8[_],DS9[_],DS10[_] Subscript[OverTilde[\[CapitalPhi]],6], Superscript[\[CapitalOmega],"(2)"][_,_,_], Subscript[F,1][_,_,_], Subscript[H, 1][_,_,_], Subscript[J, 1][_,_,_], N, O, Subscript[M, 1][_,_,_], Subscript[Q, "ep"][_,_,_], G, Subscript[K, 1][_,_,_]};
 oddIrreducibleFunctions={H3[1],H4[4],H4[5],H4[6],H5[1],H5[2],H5[3],H5[4],H5[5],H5[6],H5[20],H5[21],H5[22],H5[23], Subscript[OverTilde[\[CapitalPhi]],6], Subscript[F,1][_,_,_], Subscript[H, 1][_,_,_], Subscript[J, 1][_,_,_], G, Subscript[K, 1][_,_,_]};
 evenIrreducibleFunctions={H4[1],H4[2],H4[3],H5[7],H5[8],H5[9],H5[10],H5[11],H5[12],H5[13],H5[14], H5[15], H5[16],H5[17],H5[18],H5[19], Superscript[\[CapitalOmega],"(2)"][_,_,_], N, O, Subscript[M, 1][_,_,_], Subscript[Q, "ep"][_,_,_]};
 
@@ -125,7 +126,8 @@ CircleMinus[x_,y_]:=Plus@@Table[CircleMinus[x,y[[i]]],{i,Length[y]}]/;MatchQ[y,P
 CircleMinus[x_,y_]:=-CircleMinus[-x,y]/;MatchQ[x,Times[-1,__]];
 CircleMinus[x_,y_]:=-CircleMinus[x,-y]/;MatchQ[y,Times[-1,__]];
 CircleMinus[x_,y_]:=0/;MatchQ[x/.{Power->Times},IMPL[0,_,0]]\[Or]MatchQ[y/.{Power->Times},IMPL[0,_,0]]\[Or]MatchQ[x/.{Power->Times},Times[IMPL[0,_,0],___]]\[Or]MatchQ[y/.{Power->Times},Times[IMPL[0,_,0],___]];
-CircleMinus[x_,y_]:=(CircleDot[x,y/.{\[Zeta][__]->0}]//.completeLyndonBasisReplacements/.IMPLtoMPL);\[AliasDelimiter]
+CircleMinus[x_,y_]:=(CircleDot[x,y/.{\[Zeta][__]->0}]//.completeLyndonBasisReplacements/.IMPLtoMPL)/;stayInLyndonBasis;
+CircleMinus[x_,y_]:=(CircleDot[x,y/.{\[Zeta][__]->0}]/.IMPLtoMPL)/;!stayInLyndonBasis;
 
 CircleDot[x___,y_,z___]:=Plus@@Table[CircleDot[x,y[[i]],z],{i,Length[y]}]/;MatchQ[y,Plus[_,__]];
 CircleDot[x___,c_ y_,z___]:=c CircleDot[x,y,z]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[y];
@@ -167,7 +169,7 @@ toLyndonBasis[func_]:=func/.toIMPL/.LyndonBasisReplacements/.IMPLtoMPL;
 toStrictLyndonBasis[func_]:=func/.toIMPL/.completeLyndonBasisReplacements/.IMPLtoMPL;
 
 checkIntegrability[func_,n_:max]:=Module[{maxCoproduct,checkEntries,weight=transcendentalWeight[func]},
-	maxCoproduct=coproduct[max,func]/.toLogs/.\[Pi]To\[Zeta]/.{CircleDot[a_,b__]:>a checkIntegrability[CircleDot[b],n]/;MatchQ[a,pureMZV]\[And]Length[List[b]]>1,CircleDot[a_,b__]:>0/;MatchQ[a,pureMZV]\[And]Length[List[b]]==1};
+	maxCoproduct=coproduct[max,func]/.toLogs/.\[Pi]to\[Zeta]/.{CircleDot[a_,b__]:>a checkIntegrability[CircleDot[b],n]/;MatchQ[a,pureMZV]\[And]Length[List[b]]>1,CircleDot[a_,b__]:>0/;MatchQ[a,pureMZV]\[And]Length[List[b]]==1};
 	checkEntries[m_]:=maxCoproduct/.{CircleDot[a___,Log[b_],Log[c_],d___]:>SubMinus[CircleDot[a]]SubPlus[CircleDot[d]]AngleBracket[b,c]/;Length[List[a]]==m-1\[And]Length[List[d]]==weight-1-m};
 	Which[n===max,Sum[Expand[checkEntries[i]],{i,weight-1}],
 		n===last,Expand[checkEntries[weight-1]]]];
@@ -211,16 +213,21 @@ If[useLJfunctions,Do[Get["weight_"<>ToString[i]<>"_irreducible_basis_functions_w
 coproductEntry[0,var_]:=0;
 coproductEntry[func_,var_]:=coproductEntry[Expand[func],var]/;!MatchQ[Expand[func],func];
 coproductEntry[Plus[func1_,funcN__],var_]:=Sum[coproductEntry[i,var],{i,List[func1,funcN]}];
-coproductEntry[func_,var_]:=Module[{functionCoproduct},
+coproductEntry[func_,var_]:=Expand[Module[{functionCoproduct},
 	functionCoproduct=Which[MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]]\[And](func/.{c_ CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})==1,func,
 							MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]]\[And](func/.{c_ CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})>1,func/.{CircleDot[x__,y_]:>CircleDot[x,coproduct[{transcendentalWeight[y]-1,1},y]]},
 							!MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]],coproduct[{transcendentalWeight[func]-1,1},func]];
-	functionCoproduct/.toLogs/.{CircleDot[x__,Log[var]]:>If[Length@List[x]>1,CircleDot[x],x],CircleDot[x__,Log[y_]]:>0/;y=!=var}]/.LogsToMPL;
+	functionCoproduct/.toLogs/.{CircleDot[x__,Log[var]]:>If[Length@List[x]>1,CircleDot[x],x],CircleDot[x__,Log[y_]]:>0/;y=!=var}]/.LogsToHPL/.flipArgument[{u,v,w}]/.toMPL];
 
 IntegrateHPL[func_,{var_,ll_,ul_}]:=Sum[IntegrateHPL[i,{var,ll,ul}],{i,List@@Expand[func]}]/;MatchQ[Expand[func],Plus[_,__]];
 IntegrateHPL[c_ func_,{var_,ll_,ul_}]:=Expand[c IntegrateHPL[func,{var,ll,ul}]]/;NumericQ[c];
 IntegrateHPL[func_,{var_,ll_,ul_}]:=IntegrateHPL[func,{var,0,ul}]-IntegrateHPL[func,{var,0,ll}]/;ll=!=0;
-IntegrateHPL[func_,{var_,0,0}]:=0;IntegrateHPL[func_,{var_,0,ul_}]:=Expand[toStrictLyndonBasis[Expand[Apart[toLinearBasis[Expand[func/.toHPL/.flipArgument[1-var]]/.toHPL/.flipArgument[1-var]],var]]/.toHPL/.{Times[f_,Power[var-1,-1]]:>-Times[f,Power[1-var,-1]]}/.{(HPL[aVec_,var]/var):>HPL[Prepend[aVec,0],lTemp],(HPL[aVec_,var]/(1-var)):>HPL[Prepend[aVec,1],lTemp],1/var:>HPL[{0},lTemp],1/(1-var):>HPL[{1},lTemp]}]/.lTemp->ul/.toHPL]/;(!MatchQ[Expand[func],Plus[_,__]]\[And]ul=!=0\[And]FreeQ[func,Alternatives@@allIrreducibleFunctions]);
+IntegrateHPL[func_,{var_,0,0}]:=0;
+IntegrateHPL[func_,{var_,0,ul_}]:=Expand[toStrictLyndonBasis[Expand[Apart[toLinearBasis[Expand[func/.toHPL/.flipArgument[1-var]]/.toHPL/.flipArgument[1-var]],var]]/.toHPL/.{Times[f_,Power[var-1,-1]]:>-Times[f,Power[1-var,-1]]}/.{(HPL[aVec_,var]/var):>HPL[Prepend[aVec,0],lTemp],(HPL[aVec_,var]/(1-var)):>HPL[Prepend[aVec,1],lTemp],1/var:>HPL[{0},lTemp],1/(1-var):>HPL[{1},lTemp]}]/.lTemp->ul/.toHPL]/;(!MatchQ[Expand[func],Plus[_,__]]\[And]ul=!=0\[And]FreeQ[func,Alternatives@@allIrreducibleFunctions]);
+
+(*symbolLevelFunctionsWeight[n_]:=symbolLevelFunctionsWeight[n]=If[n>2\[And]basis===Lbasis,Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_basis_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_basis_functions_wfec.dat"]],Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_functions_wfec.dat"]]];
+beyondSymbolTerms[weight_]:=beyondSymbolTerms[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelFunctionsWeight[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelFunctionsWeight[n][[k]],{k,Length[symbolLevelFunctionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
+functionsWeight[n_]:=functionsWeight[n]=If[n>2\[And]basis===Lbasis,Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_basis_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_basis_functions_wfec.dat"],beyondSymbolTerms[n]],Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_functions_wfec.dat"],beyondSymbolTerms[n]]];*)
 
 Z[{m1_,mr__},j_]:=(j^(-m1))Sum[Z[{mr},l-1],{l,2,j}]
 Z[{m1_},j_]:=j^(-m1)/;j>0

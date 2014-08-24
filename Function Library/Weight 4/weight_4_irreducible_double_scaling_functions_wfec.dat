@@ -1,0 +1,45 @@
+irreducibleFunctionCoproduct[{3,1},DS4[1]]= 
+  -(MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u]/4 - (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - w]/4 + 
+ (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w]/2 + (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - w]/2 - 
+ (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w] + (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{1}, 1 - u]/2 + 
+ MPL[{0, 0, 1}, 1 - w] \[CircleDot] MPL[{0}, 1 - u - w] - MPL[{0, 0, 1}, 1 - w] \[CircleDot] MPL[{1}, 1 - u]/2 - MPL[{0, 1, 1}, 1 - u] \[CircleDot] MPL[{0}, 1 - u - w] + 
+ MPL[{0, 1, 1}, 1 - u] \[CircleDot] MPL[{1}, 1 - w]/2 + \[Zeta][3] \[CircleDot] MPL[{0}, 1 - u - w]
+ 
+irreducibleFunctionCoproduct[{3,1},DS4[2]]= 
+  -(MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - u]/4 - (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - w]/4 + 
+ (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - u - w]/2 + (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - u]/2 - 
+ (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - u - w] + (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{1}, 1 - w]/2 + 
+ MPL[{0, 0, 1}, 1 - u] \[CircleDot] MPL[{0}, 1 - u - w] - MPL[{0, 0, 1}, 1 - u] \[CircleDot] MPL[{1}, 1 - w]/2 - MPL[{0, 1, 1}, 1 - w] \[CircleDot] MPL[{0}, 1 - u - w] + 
+ MPL[{0, 1, 1}, 1 - w] \[CircleDot] MPL[{1}, 1 - u]/2 + \[Zeta][3] \[CircleDot] MPL[{0}, 1 - u - w]
+ 
+irreducibleFunctionCoproduct[{3,1},DS4[3]]= 
+  DS3[1] \[CircleDot] MPL[{0}, 1 - w] + (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u]/2 + (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - w]/2 - 
+ (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w] - (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - w] + 
+ (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - u - w] - (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - w]/2 + 
+ (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u]/2 - (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - w]/2 + 
+ (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w] - (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{1}, 1 - u] + 
+ MPL[{0, 0, 1}, 1 - w] \[CircleDot] MPL[{1}, 1 - u]/2 + 2*MPL[{0, 1, 1}, 1 - u] \[CircleDot] MPL[{0}, 1 - w] - MPL[{0, 1, 1}, 1 - u] \[CircleDot] MPL[{1}, 1 - w] - 
+ (MPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] MPL[{0}, 1 - w] + (MPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] MPL[{0}, 1 - u - w]
+ 
+irreducibleFunctionCoproduct[{3,1},DS4[4]]= 
+  DS3[1] \[CircleDot] MPL[{0}, 1 - u] + (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - u]/2 + (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - w]/2 - 
+ (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - u - w] - (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - u]/2 + 
+ (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - w]/2 + (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{0}, 1 - u - w] - 
+ (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{1}, 1 - w] - (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u]/2 - 
+ (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u] + (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w] + 
+ MPL[{0, 0, 1}, 1 - u] \[CircleDot] MPL[{1}, 1 - w]/2 + 2*MPL[{0, 1, 1}, 1 - w] \[CircleDot] MPL[{0}, 1 - u] - MPL[{0, 1, 1}, 1 - w] \[CircleDot] MPL[{1}, 1 - u] - 
+ (MPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] MPL[{0}, 1 - u] + (MPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] MPL[{0}, 1 - u - w]
+ 
+irreducibleFunctionCoproduct[{3,1},DS4[5]]= 
+  DS3[1] \[CircleDot] MPL[{0}, 1 - u - w] + (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u]/4 + (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - w]/4 - 
+ (MPL[{1}, 1 - u]^2*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w]/2 + (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - u]/4 + 
+ (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - w]/4 - (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]^2) \[CircleDot] MPL[{0}, 1 - u - w]/2 - 
+ (MPL[{1}, 1 - w]*MPL[{0, 1}, 1 - u]) \[CircleDot] MPL[{1}, 1 - w]/2 - (MPL[{1}, 1 - u]*MPL[{0, 1}, 1 - w]) \[CircleDot] MPL[{1}, 1 - u]/2 + 
+ MPL[{0, 1, 1}, 1 - u] \[CircleDot] MPL[{0}, 1 - u - w] - MPL[{0, 1, 1}, 1 - u] \[CircleDot] MPL[{1}, 1 - w]/2 + MPL[{0, 1, 1}, 1 - w] \[CircleDot] MPL[{0}, 1 - u - w] - 
+ MPL[{0, 1, 1}, 1 - w] \[CircleDot] MPL[{1}, 1 - u]/2 + \[Zeta][3] \[CircleDot] MPL[{0}, 1 - u - w]
+
+Do[If[FreeQ[exchange[u,w], j], AppendTo[exchange[u,w], j]], {j,{DS4[1] -> DS4[2], DS4[2] -> DS4[1], DS4[3] -> DS4[4], DS4[4] -> DS4[3]}}];
+
+transcendentalWeight[DS4[_]]:=4;
+
+Table[DS4[i],{i,5}]
