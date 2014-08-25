@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     49185,       1339]
-NotebookOptionsPosition[     47256,       1270]
-NotebookOutlinePosition[     47655,       1288]
-CellTagsIndexPosition[     47612,       1285]
+NotebookDataLength[     67662,       1785]
+NotebookOptionsPosition[     62043,       1628]
+NotebookOutlinePosition[     62442,       1646]
+CellTagsIndexPosition[     62399,       1643]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -42,7 +42,7 @@ Cell[BoxData[{
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"currentWeight", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"currentWeight", "=", "6"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"loadFunctionsAndDefinitions", "[", "currentWeight", "]"}], 
   ";"}]}], "Input",
@@ -82,7 +82,12 @@ Cell[BoxData[{
    3.617395963044311*^9, 3.617395963122539*^9}, {3.61774574078059*^9, 
    3.6177457408592978`*^9}, {3.617746294241795*^9, 3.617746294360656*^9}, {
    3.617746335425715*^9, 3.6177463354749613`*^9}, {3.617746936301482*^9, 
-   3.617746936518306*^9}, {3.617748087322304*^9, 3.6177480883046713`*^9}}],
+   3.617746936518306*^9}, {3.617748087322304*^9, 3.6177480883046713`*^9}, {
+   3.6178989167314863`*^9, 3.6178989168193903`*^9}, {3.617900440018955*^9, 
+   3.617900440288073*^9}, {3.61790788798765*^9, 3.617907888247327*^9}, {
+   3.617911473404529*^9, 3.617911473484152*^9}, {3.617911553097311*^9, 
+   3.61791155330514*^9}, {3.617974150330134*^9, 3.617974150665263*^9}, {
+   3.617974616360723*^9, 3.617974616584593*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -238,19 +243,13 @@ Cell[BoxData[{
    3.608254242124564*^9, 3.608254247748855*^9}, {3.617373866259568*^9, 
    3.617373866448164*^9}, {3.617641676536971*^9, 3.617641677589066*^9}, {
    3.617643218554673*^9, 3.6176432261725693`*^9}, {3.617644125658738*^9, 
-   3.6176441263741503`*^9}}],
+   3.6176441263741503`*^9}, {3.617973120817415*^9, 3.61797312322502*^9}, {
+   3.6179732642320957`*^9, 3.6179732644770193`*^9}}],
 
 Cell[BoxData[
- FormBox["115", TraditionalForm]], "Output",
- CellChangeTimes->CompressedData["
-1:eJxTTMoPSmVkYGBQB+KgPv/wGZ9fOUrlLPu7AEjvuNPvuhBIuxye9xhET2px
-/Aui7VcLiC0C0nEH2BeC6BfKy+SXAuk1nHUOx4G0jLRbmtSXV44fHoqESQPp
-WdXbYkF0nnr8WRCt++reNxDNkChUIwOkA5J7OkB03KccJlkgPU3CgQ9EKz39
-5agApM8o+YeC6BNzXi4H0XWlletAdIUTB7siyBzhS4FaQFqiJ2IjiL7HU74P
-RE9KT7+qDaTnqE9+BKJfJ794C6If9R1O0gG5z8B7O4heH2f0A0Q3d+hq6QHp
-hEXG00H0rtPPt/kC6bmNnxn8gLS8XswEEN3F+PM0iLZb8+EmiAYAwQOrfw==
-
-  "]]
+ FormBox["328", TraditionalForm]], "Output",
+ CellChangeTimes->{3.617973198339921*^9, 3.617974179606407*^9, 
+  3.617974657919258*^9, 3.6179753305813227`*^9}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -338,12 +337,18 @@ Cell[BoxData[{
    3.617677007825679*^9, 3.6176770109701014`*^9}, 3.617677094236915*^9}],
 
 Cell[BoxData[
- FormBox["34", TraditionalForm]], "Output",
+ FormBox["139", TraditionalForm]], "Output",
  CellChangeTimes->{3.617677096144524*^9, 3.6176771674022818`*^9, 
   3.617678102322138*^9, 3.6176787785049067`*^9, 3.617679297726554*^9, 
   3.6176817455638113`*^9, 3.617682617773665*^9, 3.617746360779233*^9, 
   3.617746954832665*^9, 3.617748099012813*^9, 3.617748575993045*^9, 
-  3.617748687734805*^9}]
+  3.617748687734805*^9, 3.617898930743306*^9, 3.617900450226652*^9, 
+  3.6179007189632187`*^9, 3.617900778153611*^9, 3.617900965888158*^9, 
+  3.617901090306279*^9, 3.617901231232522*^9, 3.617907978760832*^9, 
+  3.617910265276188*^9, 3.617910852777964*^9, 3.6179114876698217`*^9, 
+  3.617911571540291*^9, 3.617940894477015*^9, 3.6179720693676434`*^9, 
+  3.61797321057203*^9, 3.6179741811293364`*^9, 3.6179746582220497`*^9, 
+  3.617975330916481*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -448,9 +453,10 @@ Cell[BoxData[{
   3.6176781538962803`*^9, 3.617678155683792*^9}, {3.617678371574849*^9, 
   3.61767843024242*^9}, {3.617678477339301*^9, 3.6176784919532423`*^9}, {
   3.617678614649168*^9, 3.617678651996559*^9}, {3.617678684098938*^9, 
-  3.617678684273013*^9}, {3.617678729075787*^9, 3.6176787399407053`*^9}}],
+  3.617678684273013*^9}, {3.617678729075787*^9, 3.6176787399407053`*^9}, {
+  3.61791425384857*^9, 3.617914254556707*^9}}],
 
-Cell[BoxData[{
+Cell[BoxData[
  RowBox[{
   RowBox[{"knownVectors", "=", 
    RowBox[{"functionToVector", "/@", 
@@ -472,7 +478,14 @@ Cell[BoxData[{
         RowBox[{"Alternatives", "@@", 
          RowBox[{"MZV", "[", 
           RowBox[{"currentWeight", "-", "1"}], "]"}]}], "\[Rule]", "0"}], 
-       "}"}]}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+       "}"}]}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.617941830600547*^9, 3.617941877782798*^9}, {
+  3.6179419109542828`*^9, 3.617941921015119*^9}, {3.617972108202327*^9, 
+  3.617972156729691*^9}, {3.617972567022704*^9, 3.6179725989330883`*^9}, {
+  3.617972738047716*^9, 3.6179728174771433`*^9}, {3.617973303545436*^9, 
+  3.617973341116301*^9}, {3.617974699974165*^9, 3.6179747167446527`*^9}}],
+
+Cell[BoxData[
  RowBox[{
   RowBox[{"knownNontrivialVectors", "=", 
    RowBox[{"Module", "[", 
@@ -551,9 +564,13 @@ Cell[BoxData[{
         RowBox[{"{", 
          RowBox[{"i", ",", 
           RowBox[{"Length", "@", "initialVectors"}]}], "}"}]}], "]"}]}]}], 
-    "]"}]}], ";"}]}], "Input",
+    "]"}]}], ";"}]], "Input",
  CellChangeTimes->{{3.617679643024233*^9, 3.617679681678133*^9}, {
-  3.617681668863658*^9, 3.6176816758060503`*^9}}],
+   3.617681668863658*^9, 3.6176816758060503`*^9}, {3.6179103456667356`*^9, 
+   3.617910346575149*^9}, {3.6179108512025843`*^9, 3.6179109084860277`*^9}, {
+   3.617911752497401*^9, 3.617911768743284*^9}, {3.617941144584798*^9, 
+   3.617941154395219*^9}, {3.61794166595453*^9, 3.617941691705064*^9}, 
+   3.617941723784668*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -589,66 +606,72 @@ Cell[BoxData[{
   RowBox[{"irreducibleVectors", "=", 
    RowBox[{"{", "}"}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"Do", "[", 
+  RowBox[{"Monitor", "[", 
    RowBox[{
-    RowBox[{"If", "[", 
+    RowBox[{"Do", "[", 
      RowBox[{
-      RowBox[{"checkIndependence", "[", 
+      RowBox[{"If", "[", 
        RowBox[{
-        RowBox[{
-        "isolatedVectors", "\[LeftDoubleBracket]", "i", 
-         "\[RightDoubleBracket]"}], ",", 
-        RowBox[{"Join", "[", 
-         RowBox[{"knownNontrivialVectors", ",", "irreducibleVectors"}], 
-         "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
-      RowBox[{
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"irreducibleFunctions", ",", 
+        RowBox[{"checkIndependence", "[", 
          RowBox[{
-         "isolatedFunctions", "\[LeftDoubleBracket]", "i", 
-          "\[RightDoubleBracket]"}]}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"AppendTo", "[", 
-        RowBox[{"irreducibleVectors", ",", 
-         RowBox[{
-         "isolatedVectors", "\[LeftDoubleBracket]", "i", 
-          "\[RightDoubleBracket]"}]}], "]"}], ";", "\[IndentingNewLine]", 
-       RowBox[{"If", "[", 
-        RowBox[{
-         RowBox[{"checkIndependence", "[", 
           RowBox[{
-           RowBox[{"functionToVector", "[", 
+          "isolatedVectors", "\[LeftDoubleBracket]", "k", 
+           "\[RightDoubleBracket]"}], ",", 
+          RowBox[{"Join", "[", 
+           RowBox[{"knownNontrivialVectors", ",", "irreducibleVectors"}], 
+           "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"irreducibleFunctions", ",", 
+           RowBox[{
+           "isolatedFunctions", "\[LeftDoubleBracket]", "k", 
+            "\[RightDoubleBracket]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"AppendTo", "[", 
+          RowBox[{"irreducibleVectors", ",", 
+           RowBox[{
+           "isolatedVectors", "\[LeftDoubleBracket]", "k", 
+            "\[RightDoubleBracket]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"If", "[", 
+          RowBox[{
+           RowBox[{"checkIndependence", "[", 
             RowBox[{
-             RowBox[{
-             "isolatedFunctions", "\[LeftDoubleBracket]", "i", 
-              "\[RightDoubleBracket]"}], "/.", 
-             RowBox[{"exchange", "[", 
-              RowBox[{"u", ",", "w"}], "]"}]}], "]"}], ",", 
-           RowBox[{"Join", "[", 
-            RowBox[{"knownNontrivialVectors", ",", "irreducibleVectors"}], 
-            "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
-         RowBox[{
-          RowBox[{"AppendTo", "[", 
-           RowBox[{"irreducibleFunctions", ",", 
-            RowBox[{
-             RowBox[{
-             "isolatedFunctions", "\[LeftDoubleBracket]", "i", 
-              "\[RightDoubleBracket]"}], "/.", 
-             RowBox[{"exchange", "[", 
-              RowBox[{"u", ",", "w"}], "]"}]}]}], "]"}], ";", 
-          "\[IndentingNewLine]", 
-          RowBox[{"AppendTo", "[", 
-           RowBox[{"irreducibleVectors", ",", 
-            RowBox[{"functionToVector", "[", 
-             RowBox[{
+             RowBox[{"functionToVector", "[", 
               RowBox[{
-              "isolatedFunctions", "\[LeftDoubleBracket]", "i", 
-               "\[RightDoubleBracket]"}], "/.", 
-              RowBox[{"exchange", "[", 
-               RowBox[{"u", ",", "w"}], "]"}]}], "]"}]}], "]"}]}]}], 
-        "]"}]}]}], "]"}], ",", 
+               RowBox[{
+               "isolatedFunctions", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}], "/.", 
+               RowBox[{"exchange", "[", 
+                RowBox[{"u", ",", "w"}], "]"}]}], "]"}], ",", 
+             RowBox[{"Join", "[", 
+              RowBox[{"knownNontrivialVectors", ",", "irreducibleVectors"}], 
+              "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"AppendTo", "[", 
+             RowBox[{"irreducibleFunctions", ",", 
+              RowBox[{
+               RowBox[{
+               "isolatedFunctions", "\[LeftDoubleBracket]", "k", 
+                "\[RightDoubleBracket]"}], "/.", 
+               RowBox[{"exchange", "[", 
+                RowBox[{"u", ",", "w"}], "]"}]}]}], "]"}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"AppendTo", "[", 
+             RowBox[{"irreducibleVectors", ",", 
+              RowBox[{"functionToVector", "[", 
+               RowBox[{
+                RowBox[{
+                "isolatedFunctions", "\[LeftDoubleBracket]", "k", 
+                 "\[RightDoubleBracket]"}], "/.", 
+                RowBox[{"exchange", "[", 
+                 RowBox[{"u", ",", "w"}], "]"}]}], "]"}]}], "]"}]}]}], 
+          "]"}]}]}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"k", ",", 
+        RowBox[{"Length", "@", "isolatedVectors"}]}], "}"}]}], "]"}], ",", 
     RowBox[{"{", 
-     RowBox[{"i", ",", 
-      RowBox[{"Length", "@", "isolatedVectors"}]}], "}"}]}], "]"}], 
+     RowBox[{"k", ",", 
+      RowBox[{"Length", "@", "isolatedVectors"}], ",", 
+      RowBox[{"Length", "@", "irreducibleFunctions"}]}], "}"}]}], "]"}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.6176550498516283`*^9, 3.617655054388432*^9}, {
    3.6176563160923233`*^9, 3.617656388011003*^9}, {3.617656420401766*^9, 
@@ -664,7 +687,9 @@ Cell[BoxData[{
    3.617681859129374*^9}, {3.6176819287510223`*^9, 3.617681932657642*^9}, 
    3.617682111155694*^9, {3.617682641305779*^9, 3.617682641594717*^9}, {
    3.6177475978863688`*^9, 3.617747601637437*^9}, {3.617748570020329*^9, 
-   3.617748570928383*^9}}],
+   3.617748570928383*^9}, {3.617899274243722*^9, 3.617899297229005*^9}, {
+   3.617899682044471*^9, 3.617899684955933*^9}, {3.617973415767488*^9, 
+   3.617973468027979*^9}}],
 
 Cell[CellGroupData[{
 
@@ -673,14 +698,18 @@ Cell[BoxData[
  CellChangeTimes->{{3.6176799298710423`*^9, 3.617679974198226*^9}}],
 
 Cell[BoxData[
- FormBox["18", TraditionalForm]], "Output",
+ FormBox["57", TraditionalForm]], "Output",
  CellChangeTimes->{{3.617679937273081*^9, 3.617679990273478*^9}, 
    3.617680040692129*^9, 3.617680076752532*^9, 3.617680115921373*^9, {
    3.617680193852611*^9, 3.617680209590191*^9}, 3.617681749335598*^9, 
    3.6176818307302217`*^9, 3.617681861011923*^9, 3.617682114554738*^9, {
    3.617682630725932*^9, 3.617682643349552*^9}, 3.617746369784965*^9, 
    3.617746962281887*^9, 3.617748178884829*^9, 3.617748579657649*^9, 
-   3.617748693164118*^9}]
+   3.617748693164118*^9, 3.617898938492653*^9, 3.6178996880196867`*^9, 
+   3.61790045389977*^9, 3.617900722527561*^9, 3.617900781854957*^9, 
+   3.617900969693468*^9, 3.617901093943213*^9, 3.617901234826982*^9, 
+   3.617911515175922*^9, 3.6179735148770523`*^9, 3.617974192702025*^9, 
+   3.617975428186442*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -758,517 +787,846 @@ Cell[BoxData[
          "\"\< along u+w=1 line.\>\""}], "]"}], ",", 
        RowBox[{
        "Print", "[", "\"\<1-u-w coproduct entry condition satisfied.\>\"", 
-        "]"}]}], "]"}], ";"}]}], "]"}]}]], "Input",
+        "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"MatchQ", "[", 
+         RowBox[{
+          RowBox[{"uTo1", "//.", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Times", "[", 
+              RowBox[{"c_", ",", "zeta_"}], "]"}], "\[RuleDelayed]", 
+             RowBox[{"zeta", "/;", 
+              RowBox[{"NumericQ", "[", "c", "]"}]}]}], "}"}]}], ",", 
+          RowBox[{"Append", "[", 
+           RowBox[{"pureMZV", ",", "0"}], "]"}]}], "]"}], "\[And]", 
+        RowBox[{"MatchQ", "[", 
+         RowBox[{
+          RowBox[{"wTo1", "//.", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Times", "[", 
+              RowBox[{"c_", ",", "zeta_"}], "]"}], "\[RuleDelayed]", 
+             RowBox[{"zeta", "/;", 
+              RowBox[{"NumericQ", "[", "c", "]"}]}]}], "}"}]}], ",", 
+          RowBox[{"Append", "[", 
+           RowBox[{"pureMZV", ",", "0"}], "]"}]}], "]"}], "\[And]", 
+        RowBox[{"MatchQ", "[", 
+         RowBox[{
+          RowBox[{"uwTo1", "//.", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"Times", "[", 
+              RowBox[{"c_", ",", "zeta_"}], "]"}], "\[RuleDelayed]", 
+             RowBox[{"zeta", "/;", 
+              RowBox[{"NumericQ", "[", "c", "]"}]}]}], "}"}]}], ",", 
+          RowBox[{"Append", "[", 
+           RowBox[{"pureMZV", ",", "0"}], "]"}]}], "]"}]}], ",", 
+       RowBox[{"func", "-", 
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"uTo1", ",", 
+          RowBox[{"MPL", "[", 
+           RowBox[{
+            RowBox[{"{", "0", "}"}], ",", 
+            RowBox[{"1", "-", "u"}]}], "]"}]}], "]"}], "-", 
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"wTo1", ",", 
+          RowBox[{"MPL", "[", 
+           RowBox[{
+            RowBox[{"{", "0", "}"}], ",", 
+            RowBox[{"1", "-", "w"}]}], "]"}]}], "]"}], "-", 
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"uwTo1", ",", 
+          RowBox[{"MPL", "[", 
+           RowBox[{
+            RowBox[{"{", "0", "}"}], ",", 
+            RowBox[{"1", "-", "u", "-", "w"}]}], "]"}]}], "]"}]}], ",", 
+       "Null"}], "]"}]}]}], "]"}]}]], "Input",
  CellChangeTimes->{{3.6173707350771523`*^9, 3.6173707735246553`*^9}, {
-  3.617371124707662*^9, 3.61737131790827*^9}, {3.617371403876009*^9, 
-  3.617371549235827*^9}, {3.617371599804385*^9, 3.617371662632099*^9}, {
-  3.617381106233782*^9, 3.617381109457444*^9}, {3.6173926497598047`*^9, 
-  3.617392693619443*^9}, {3.617392727125821*^9, 3.617392751785858*^9}}],
+   3.617371124707662*^9, 3.61737131790827*^9}, {3.617371403876009*^9, 
+   3.617371549235827*^9}, {3.617371599804385*^9, 3.617371662632099*^9}, {
+   3.617381106233782*^9, 3.617381109457444*^9}, {3.6173926497598047`*^9, 
+   3.617392693619443*^9}, {3.617392727125821*^9, 3.617392751785858*^9}, {
+   3.617900851502165*^9, 3.617900854813711*^9}, 3.617900889173011*^9, {
+   3.6179009888294153`*^9, 3.6179009896609993`*^9}, {3.617901048369873*^9, 
+   3.6179010592099943`*^9}, {3.6179011030881357`*^9, 3.617901105985538*^9}, {
+   3.61790129397661*^9, 3.617901387170916*^9}, {3.6179014329810133`*^9, 
+   3.617901470162662*^9}, 3.617901573667762*^9, {3.6179016228507442`*^9, 
+   3.61790166713621*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"stayInLyndonBasis", "=", "True"}], ";"}]], "Input"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"checkDoubleScalingFunctionSingularityStructure", "[", 
-  RowBox[{"coproduct", "[", 
+ RowBox[{
+  RowBox[{"finalFuncs", "=", 
    RowBox[{
-    RowBox[{"{", 
-     RowBox[{"3", ",", "1"}], "}"}], ",", 
-    RowBox[{"DS4", "[", "1", "]"}]}], "]"}], "]"}]], "Input",
- CellChangeTimes->{{3.617682730701806*^9, 3.6176827739296427`*^9}, {
-  3.617746379423843*^9, 3.617746409534711*^9}, {3.617746824185748*^9, 
-  3.61774684960809*^9}, {3.6177469912201*^9, 3.6177469937951393`*^9}, {
-  3.617747734142724*^9, 3.617747829569886*^9}, {3.6177487602241898`*^9, 
-  3.617748764044923*^9}, {3.617748968357316*^9, 3.617748991043269*^9}}],
+    RowBox[{
+     RowBox[{"checkDoubleScalingFunctionSingularityStructure", "[", 
+      RowBox[{
+      "irreducibleLyndonFunctions", "\[LeftDoubleBracket]", "#", 
+       "\[RightDoubleBracket]"}], "]"}], "&"}], "/@", 
+    RowBox[{"Range", "[", 
+     RowBox[{"Length", "@", "irreducibleLyndonFunctions"}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.617900475547531*^9, 3.617900493978628*^9}, {
+   3.617900548132107*^9, 3.6179005519150057`*^9}, {3.617900724776215*^9, 
+   3.617900728574004*^9}, {3.617900789959505*^9, 3.6179007958065434`*^9}, {
+   3.617900842541327*^9, 3.6179008448051453`*^9}, {3.617901126775997*^9, 
+   3.6179011318481216`*^9}, {3.6179014822656193`*^9, 3.6179014899848022`*^9}, 
+   3.617904325623332*^9, {3.617904357432899*^9, 3.6179044159578457`*^9}, {
+   3.617974201497238*^9, 3.617974270794011*^9}}],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
  FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
   TraditionalForm]], "Print",
- CellChangeTimes->{{3.6177489871506243`*^9, 3.617748991760043*^9}, 
-   3.617751137728718*^9}],
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742763231907`*^9}],
 
 Cell[BoxData[
  FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
   TraditionalForm]], "Print",
- CellChangeTimes->{{3.6177489871506243`*^9, 3.617748991760043*^9}, 
-   3.617751137731365*^9}],
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742763263397`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    FractionBox[
+     RowBox[{"3", " ", 
+      SuperscriptBox[
+       RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], "10"], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[3, 10] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742763315697`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974277359394*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742773621798`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"], "10"], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[1, 10] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974277365179*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742786103067`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974278615036*^9}],
 
 Cell[BoxData[
  FormBox[
   InterpretationBox[
    RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
     RowBox[{
-     RowBox[{
-      RowBox[{"-", 
-       RowBox[{"HPL", "(", 
-        RowBox[{
-         RowBox[{"{", "1", "}"}], ",", "u"}], ")"}]}], " ", 
-      SuperscriptBox[
-       RowBox[{"HPL", "(", 
-        RowBox[{
-         RowBox[{"{", "0", "}"}], ",", "u"}], ")"}], "2"]}], "+", 
-     RowBox[{"2", " ", 
-      RowBox[{"HPL", "(", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"0", ",", "1"}], "}"}], ",", "u"}], ")"}], " ", 
-      RowBox[{"HPL", "(", 
-       RowBox[{
-        RowBox[{"{", "0", "}"}], ",", "u"}], ")"}]}], "-", 
-     RowBox[{"2", " ", 
-      RowBox[{"HPL", "(", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", "u"}], ")"}]}], "+", 
-     RowBox[{"2", " ", 
-      RowBox[{"\[Zeta]", "(", "3", ")"}]}]}], 
+     RowBox[{"-", 
+      FractionBox["2", "5"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
     "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
    SequenceForm[
-   "1-u-w coproduct goes to ", -$CellContext`HPL[{
-        0}, $CellContext`u]^2 $CellContext`HPL[{1}, $CellContext`u] + 
-    2 $CellContext`HPL[{0}, $CellContext`u] $CellContext`HPL[{0, 
-       1}, $CellContext`u] - 2 $CellContext`HPL[{0, 0, 1}, $CellContext`u] + 
-    2 $CellContext`\[Zeta][3], " along u+w=1 line."],
+   "1-u-w coproduct goes to ", Rational[-2, 5] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
    Editable->False], TraditionalForm]], "Print",
- CellChangeTimes->{{3.6177489871506243`*^9, 3.617748991760043*^9}, 
-   3.617751137734425*^9}]
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974278619972*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742796743937`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974279677031*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["2", "5"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-2, 5] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974279680315*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797428097136*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974280974176*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-1, 2] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974280977233*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742822267857`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974282229536*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-1, 2] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974282232975*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742835205708`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974283523254*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974283525876*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974284840691*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974284847343*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742848522*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974286185801*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974286190093*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742861941547`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742874995613`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974287502077*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974287504469*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974288925971*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974288928506*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-1, 2] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974288931082*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797429034755*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742903501062`*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["1", "2"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-1, 2] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974290352586*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797429263621*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974292640023*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["2", "5"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-2, 5] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797429264253*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742946161613`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974294618683*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797429462107*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974296552699*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797429655521*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974296557644*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742994845552`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.61797429948768*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["7", "10"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-7, 10] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179742994912043`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974302271974*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974302275172*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{
+     RowBox[{"-", 
+      FractionBox["7", "10"]}], " ", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", Rational[-7, 10] $CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974302278595*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179743042378893`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.617974304243964*^9}],
+
+Cell[BoxData[
+ FormBox[
+  InterpretationBox[
+   RowBox[{"\<\"1-u-w coproduct goes to \"\>", "\[InvisibleSpace]", 
+    RowBox[{"-", 
+     SuperscriptBox[
+      RowBox[{"\[Zeta]", "(", "2", ")"}], "2"]}], 
+    "\[InvisibleSpace]", "\<\" along u+w=1 line.\"\>"}],
+   SequenceForm[
+   "1-u-w coproduct goes to ", -$CellContext`\[Zeta][2]^2, 
+    " along u+w=1 line."],
+   Editable->False], TraditionalForm]], "Print",
+ CellChangeTimes->{{3.61790439307896*^9, 3.617904416569543*^9}, 
+   3.617911522945299*^9, 3.6179743042486134`*^9}]
 }, Open  ]]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"coproduct", "[", 
-  RowBox[{
-   RowBox[{"{", 
-    RowBox[{"3", ",", "1"}], "}"}], ",", 
-   RowBox[{"DS4", "[", "1", "]"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.617751144369876*^9, 3.617751151784484*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{
-    RowBox[{"\[Zeta]", "(", "3", ")"}], "\[CircleDot]", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", "0", "}"}], ",", 
-      RowBox[{
-       RowBox[{"-", "u"}], "-", "w", "+", "1"}]}], ")"}]}], "-", 
-   RowBox[{
-    FractionBox["1", "4"], " ", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       SuperscriptBox[
-        RowBox[{"MPL", "(", 
-         RowBox[{
-          RowBox[{"{", "1", "}"}], ",", 
-          RowBox[{"1", "-", "u"}]}], ")"}], "2"], " ", 
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", "1", "}"}], ",", 
-         RowBox[{"1", "-", "w"}]}], ")"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "0", "}"}], ",", 
-       RowBox[{"1", "-", "u"}]}], ")"}]}]}], "-", 
-   RowBox[{
-    FractionBox["1", "4"], " ", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       SuperscriptBox[
-        RowBox[{"MPL", "(", 
-         RowBox[{
-          RowBox[{"{", "1", "}"}], ",", 
-          RowBox[{"1", "-", "u"}]}], ")"}], "2"], " ", 
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", "1", "}"}], ",", 
-         RowBox[{"1", "-", "w"}]}], ")"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "0", "}"}], ",", 
-       RowBox[{"1", "-", "w"}]}], ")"}]}]}], "+", 
-   RowBox[{
-    FractionBox["1", "2"], " ", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       SuperscriptBox[
-        RowBox[{"MPL", "(", 
-         RowBox[{
-          RowBox[{"{", "1", "}"}], ",", 
-          RowBox[{"1", "-", "u"}]}], ")"}], "2"], " ", 
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", "1", "}"}], ",", 
-         RowBox[{"1", "-", "w"}]}], ")"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "0", "}"}], ",", 
-       RowBox[{
-        RowBox[{"-", "u"}], "-", "w", "+", "1"}]}], ")"}]}]}], "+", 
-   RowBox[{
-    FractionBox["1", "2"], " ", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", "1", "}"}], ",", 
-         RowBox[{"1", "-", "u"}]}], ")"}], " ", 
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"0", ",", "1"}], "}"}], ",", 
-         RowBox[{"1", "-", "w"}]}], ")"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "0", "}"}], ",", 
-       RowBox[{"1", "-", "w"}]}], ")"}]}]}], "-", 
-   RowBox[{
-    RowBox[{"(", 
-     RowBox[{
-      RowBox[{"MPL", "(", 
-       RowBox[{
-        RowBox[{"{", "1", "}"}], ",", 
-        RowBox[{"1", "-", "u"}]}], ")"}], " ", 
-      RowBox[{"MPL", "(", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"0", ",", "1"}], "}"}], ",", 
-        RowBox[{"1", "-", "w"}]}], ")"}]}], ")"}], "\[CircleDot]", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", "0", "}"}], ",", 
-      RowBox[{
-       RowBox[{"-", "u"}], "-", "w", "+", "1"}]}], ")"}]}], "+", 
-   RowBox[{
-    FractionBox["1", "2"], " ", 
-    RowBox[{
-     RowBox[{"(", 
-      RowBox[{
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", "1", "}"}], ",", 
-         RowBox[{"1", "-", "u"}]}], ")"}], " ", 
-       RowBox[{"MPL", "(", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"0", ",", "1"}], "}"}], ",", 
-         RowBox[{"1", "-", "w"}]}], ")"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "1", "}"}], ",", 
-       RowBox[{"1", "-", "u"}]}], ")"}]}]}], "+", 
-   RowBox[{
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
-      RowBox[{"1", "-", "w"}]}], ")"}], "\[CircleDot]", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", "0", "}"}], ",", 
-      RowBox[{
-       RowBox[{"-", "u"}], "-", "w", "+", "1"}]}], ")"}]}], "-", 
-   RowBox[{
-    FractionBox["1", "2"], " ", 
-    RowBox[{
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
-       RowBox[{"1", "-", "w"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "1", "}"}], ",", 
-       RowBox[{"1", "-", "u"}]}], ")"}]}]}], "-", 
-   RowBox[{
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
-      RowBox[{"1", "-", "u"}]}], ")"}], "\[CircleDot]", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", "0", "}"}], ",", 
-      RowBox[{
-       RowBox[{"-", "u"}], "-", "w", "+", "1"}]}], ")"}]}], "+", 
-   RowBox[{
-    FractionBox["1", "2"], " ", 
-    RowBox[{
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
-       RowBox[{"1", "-", "u"}]}], ")"}], "\[CircleDot]", 
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "1", "}"}], ",", 
-       RowBox[{"1", "-", "w"}]}], ")"}]}]}]}], TraditionalForm]], "Output",
- CellChangeTimes->{3.617751152208468*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"coproductEntry", "[", 
-  RowBox[{
-   RowBox[{"coproduct", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"3", ",", "1"}], "}"}], ",", 
-     RowBox[{"DS4", "[", "1", "]"}]}], "]"}], ",", 
-   RowBox[{"1", "-", "u", "-", "w"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.6177511622250223`*^9, 3.6177511711444387`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{
-    FractionBox["1", "2"], " ", 
-    SuperscriptBox[
-     RowBox[{"MPL", "(", 
-      RowBox[{
-       RowBox[{"{", "1", "}"}], ",", 
-       RowBox[{"1", "-", "u"}]}], ")"}], "2"], " ", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", "1", "}"}], ",", 
-      RowBox[{"1", "-", "w"}]}], ")"}]}], "-", 
-   RowBox[{
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", "1", "}"}], ",", 
-      RowBox[{"1", "-", "u"}]}], ")"}], " ", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"0", ",", "1"}], "}"}], ",", 
-      RowBox[{"1", "-", "w"}]}], ")"}]}], "-", 
-   RowBox[{"MPL", "(", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
-     RowBox[{"1", "-", "u"}]}], ")"}], "+", 
-   RowBox[{"MPL", "(", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
-     RowBox[{"1", "-", "w"}]}], ")"}], "+", 
-   RowBox[{"\[Zeta]", "(", "3", ")"}]}], TraditionalForm]], "Output",
- CellChangeTimes->{3.6177511716481543`*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{"toDSPointE", "[", 
-  RowBox[{
-   RowBox[{"coproductEntry", "[", 
-    RowBox[{
-     RowBox[{"coproduct", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"3", ",", "1"}], "}"}], ",", 
-       RowBox[{"DS4", "[", "1", "]"}]}], "]"}], ",", 
-     RowBox[{"1", "-", "u", "-", "w"}]}], "]"}], ",", 
-   RowBox[{"{", 
-    RowBox[{"u", ",", "1"}], "}"}], ",", 
-   RowBox[{"u", "\[Rule]", "0"}]}], "]"}]], "Input",
- CellChangeTimes->{{3.617751360765085*^9, 3.617751380187364*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{"2", " ", 
-   RowBox[{"\[Zeta]", "(", "3", ")"}]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.6177513735222273`*^9, 3.61775138055521*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"toLinearBasis", "[", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"IntegrateHPL", "[", 
-      RowBox[{
-       RowBox[{
-        RowBox[{"coproductD", "[", 
-         RowBox[{
-          RowBox[{"coproductEntry", "[", 
-           RowBox[{
-            RowBox[{"coproduct", "[", 
-             RowBox[{
-              RowBox[{"{", 
-               RowBox[{"3", ",", "1"}], "}"}], ",", 
-              RowBox[{"DS4", "[", "5", "]"}]}], "]"}], ",", 
-            RowBox[{"1", "-", "u", "-", "w"}]}], "]"}], ",", "u"}], "]"}], "/.", 
-        RowBox[{"w", "\[Rule]", "1"}]}], ",", 
-       RowBox[{"{", 
-        RowBox[{"u", ",", "1", ",", "u"}], "}"}]}], "]"}], "+", 
-     RowBox[{"IntegrateHPL", "[", 
-      RowBox[{
-       RowBox[{"coproductD", "[", 
-        RowBox[{
-         RowBox[{"coproductEntry", "[", 
-          RowBox[{
-           RowBox[{"coproduct", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"3", ",", "1"}], "}"}], ",", 
-             RowBox[{"DS4", "[", "5", "]"}]}], "]"}], ",", 
-           RowBox[{"1", "-", "u", "-", "w"}]}], "]"}], ",", "w"}], "]"}], ",", 
-       RowBox[{"{", 
-        RowBox[{"w", ",", "1", ",", 
-         RowBox[{"1", "-", "u"}]}], "}"}]}], "]"}]}], "/.", 
-    RowBox[{"flipArgument", "[", "u", "]"}]}], "]"}], "//", 
-  "Expand"}]], "Input",
- CellChangeTimes->{{3.617751477249546*^9, 3.617751612235588*^9}, {
-  3.617751672186461*^9, 3.6177517121937113`*^9}}],
-
-Cell[BoxData[
- FormBox[
-  RowBox[{
-   RowBox[{"-", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"0", ",", "0", ",", "1"}], "}"}], ",", 
-      RowBox[{"1", "-", "u"}]}], ")"}]}], "-", 
-   RowBox[{"MPL", "(", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"0", ",", "1", ",", "0"}], "}"}], ",", 
-     RowBox[{"1", "-", "u"}]}], ")"}], "-", 
-   RowBox[{"2", " ", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
-      RowBox[{"1", "-", "u"}]}], ")"}]}], "-", 
-   RowBox[{"2", " ", 
-    RowBox[{"MPL", "(", 
-     RowBox[{
-      RowBox[{"{", 
-       RowBox[{"1", ",", "0", ",", "0"}], "}"}], ",", 
-      RowBox[{"1", "-", "u"}]}], ")"}]}], "+", 
-   RowBox[{"MPL", "(", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "0", ",", "1"}], "}"}], ",", 
-     RowBox[{"1", "-", "u"}]}], ")"}], "+", 
-   RowBox[{"MPL", "(", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"1", ",", "1", ",", "0"}], "}"}], ",", 
-     RowBox[{"1", "-", "u"}]}], ")"}], "-", 
-   RowBox[{"\[Zeta]", "(", "3", ")"}]}], TraditionalForm]], "Output",
- CellChangeTimes->{
-  3.617751497838627*^9, {3.617751530196001*^9, 3.617751533666327*^9}, {
-   3.617751573496318*^9, 3.617751613409286*^9}, {3.6177516755169363`*^9, 
-   3.617751712742977*^9}}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"toDSLineE", "[", 
-   RowBox[{
-    RowBox[{"coproductEntry", "[", 
-     RowBox[{
-      RowBox[{"coproduct", "[", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"3", ",", "1"}], "}"}], ",", 
-        RowBox[{"DS4", "[", "1", "]"}]}], "]"}], ",", 
-      RowBox[{"1", "-", "u", "-", "w"}]}], "]"}], ",", 
-    RowBox[{"{", 
-     RowBox[{"1", ",", "w"}], "}"}]}], "]"}], "/.", 
-  RowBox[{"w", "\[Rule]", "0"}]}]], "Input",
- CellChangeTimes->{{3.61775188718991*^9, 3.617751922243305*^9}, {
-  3.6177519812338037`*^9, 3.617751981462811*^9}}],
-
-Cell[BoxData[
- FormBox["0", TraditionalForm]], "Output",
- CellChangeTimes->{{3.617751903164845*^9, 3.61775192264674*^9}, 
-   3.617751981801798*^9}]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[
  RowBox[{
   RowBox[{
    RowBox[{
-    RowBox[{"IntegrateHPL", "[", 
+    RowBox[{"checkDoubleScalingFunctionSingularityStructure", "[", 
      RowBox[{
-      RowBox[{
-       RowBox[{"coproductD", "[", 
-        RowBox[{
-         RowBox[{"coproductEntry", "[", 
-          RowBox[{
-           RowBox[{"coproduct", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"3", ",", "1"}], "}"}], ",", 
-             RowBox[{"DS4", "[", "1", "]"}]}], "]"}], ",", 
-           RowBox[{"1", "-", "u", "-", "w"}]}], "]"}], ",", "u"}], "]"}], "/.", 
-       RowBox[{"{", 
-        RowBox[{"w", "\[Rule]", 
-         RowBox[{"(", 
-          RowBox[{"1", "-", "u"}], ")"}]}], "}"}]}], ",", 
-      RowBox[{"{", 
-       RowBox[{"u", ",", "1", ",", "u"}], "}"}]}], "]"}], "+", 
-    RowBox[{"IntegrateHPL", "[", 
-     RowBox[{
-      RowBox[{
-       RowBox[{"coproductD", "[", 
-        RowBox[{
-         RowBox[{"coproductEntry", "[", 
-          RowBox[{
-           RowBox[{"coproduct", "[", 
-            RowBox[{
-             RowBox[{"{", 
-              RowBox[{"3", ",", "1"}], "}"}], ",", 
-             RowBox[{"DS4", "[", "1", "]"}]}], "]"}], ",", 
-           RowBox[{"1", "-", "u", "-", "w"}]}], "]"}], ",", "w"}], "]"}], "/.", 
-       RowBox[{"{", 
-        RowBox[{"u", "\[Rule]", 
-         RowBox[{"(", 
-          RowBox[{"1", "-", "w"}], ")"}]}], "}"}]}], ",", 
-      RowBox[{"{", 
-       RowBox[{"w", ",", "0", ",", "w"}], "}"}]}], "]"}]}], "/.", 
-   RowBox[{"{", 
-    RowBox[{"w", "\[Rule]", 
-     RowBox[{"(", 
-      RowBox[{"1", "-", "u"}], ")"}]}], "}"}]}], "/.", 
-  RowBox[{"flipArgument", "[", "u", "]"}]}]], "Input",
- CellChangeTimes->{{3.617751942908033*^9, 3.617751951930069*^9}, {
-  3.617752031282736*^9, 3.617752072182618*^9}, {3.617758900394919*^9, 
-  3.617758976545472*^9}, {3.617759055147029*^9, 3.617759143152299*^9}}],
+     "finalFuncs", "\[LeftDoubleBracket]", "#", "\[RightDoubleBracket]"}], 
+     "]"}], "&"}], "/@", 
+   RowBox[{"Range", "[", 
+    RowBox[{"Length", "@", "irreducibleLyndonFunctions"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.617974324189599*^9, 3.617974325691403*^9}}],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
- FormBox[
-  RowBox[{"2", " ", 
-   RowBox[{"HPL", "(", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"0", ",", "1", ",", "1"}], "}"}], ",", 
-     RowBox[{"1", "-", "u"}]}], ")"}]}], TraditionalForm]], "Output",
- CellChangeTimes->{{3.617751935612153*^9, 3.617751952300467*^9}, {
-   3.617752030146593*^9, 3.6177520724546967`*^9}, 3.6177589007515287`*^9, {
-   3.617758937941758*^9, 3.617758955165164*^9}, {3.617759115870982*^9, 
-   3.6177591435551453`*^9}}]
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974327793997*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974327794826*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974327798999*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974328779093*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974328780291*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974328781272*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974329810302*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974329812149*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974329813698*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974330832616*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.61797433083464*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974330835764*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974332116336*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974332117469*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743321184273`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974333384417*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974333385569*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974333386507*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743346629877`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974334666862*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974334669765*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974335955536*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743359567013`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974335957695*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974337284937*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974337286778*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974337288353*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.61797433861695*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974338618369*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974338619285*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743400681133`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974340069306*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974340071293*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974341509078*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974341510234*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.61797434151126*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743438183117`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743438202744`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974343821808*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974345899397*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743459006*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974345901567*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974347863676*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.61797434786644*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.6179743478691463`*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.61797435072311*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974350726231*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974350730678*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974353514907*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974353517867*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974353520834*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974355407175*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974355413742*^9}],
+
+Cell[BoxData[
+ FormBox["\<\"1-u-w coproduct entry condition satisfied.\"\>", 
+  TraditionalForm]], "Print",
+ CellChangeTimes->{3.617974355418612*^9}]
+}, Open  ]]
 }, Open  ]]
 },
-Evaluator->"Kernal 2",
+Evaluator->"Kernal 3",
 WindowSize->{1239, 662},
 WindowMargins->{{4, Automatic}, {Automatic, 0}},
 ShowSelection->True,
@@ -1288,58 +1646,146 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[557, 20, 1239, 20, 73, "Input"],
-Cell[1799, 42, 2921, 42, 43, "Input"],
-Cell[4723, 86, 2458, 59, 118, "Input"],
-Cell[7184, 147, 1119, 29, 27, "Input"],
+Cell[1799, 42, 3265, 47, 43, "Input"],
+Cell[5067, 91, 2458, 59, 118, "Input"],
+Cell[7528, 152, 1119, 29, 27, "Input"],
 Cell[CellGroupData[{
-Cell[8328, 180, 2644, 60, 103, "Input"],
-Cell[10975, 242, 468, 10, 27, "Output"]
+Cell[8672, 185, 2743, 61, 103, "Input"],
+Cell[11418, 248, 171, 3, 27, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[11480, 257, 3462, 80, 163, "Input"],
-Cell[14945, 339, 359, 6, 27, "Output"]
+Cell[11626, 256, 3462, 80, 163, "Input"],
+Cell[15091, 338, 783, 12, 27, "Output"]
 }, Open  ]],
-Cell[15319, 348, 3990, 102, 118, "Input"],
-Cell[19312, 452, 3822, 103, 178, "Input"],
-Cell[23137, 557, 907, 24, 58, "Input"],
-Cell[24047, 583, 3707, 83, 133, "Input"],
+Cell[15889, 353, 4038, 103, 118, "Input"],
+Cell[19930, 458, 1086, 27, 43, "Input"],
+Cell[21019, 487, 3369, 85, 148, "Input"],
+Cell[24391, 574, 907, 24, 58, "Input"],
+Cell[25301, 600, 4189, 91, 148, "Input"],
 Cell[CellGroupData[{
-Cell[27779, 670, 141, 2, 27, "Input"],
-Cell[27923, 674, 505, 8, 27, "Output"]
+Cell[29515, 695, 141, 2, 27, "Input"],
+Cell[29659, 699, 788, 12, 27, "Output"]
 }, Open  ]],
-Cell[28443, 685, 262, 6, 27, "Input"],
-Cell[28708, 693, 2758, 72, 118, "Input"],
+Cell[30462, 714, 262, 6, 27, "Input"],
+Cell[30727, 722, 5304, 134, 163, "Input"],
+Cell[36034, 858, 86, 2, 27, "Input"],
 Cell[CellGroupData[{
-Cell[31491, 769, 599, 11, 27, "Input"],
+Cell[36145, 864, 895, 18, 27, "Input"],
 Cell[CellGroupData[{
-Cell[32115, 784, 199, 4, 20, "Print"],
-Cell[32317, 790, 199, 4, 20, "Print"],
-Cell[32519, 796, 1433, 38, 23, "Print"]
+Cell[37065, 886, 220, 4, 20, "Print"],
+Cell[37288, 892, 220, 4, 20, "Print"],
+Cell[37511, 898, 575, 14, 43, "Print"],
+Cell[38089, 914, 218, 4, 20, "Print"],
+Cell[38310, 920, 220, 4, 20, "Print"],
+Cell[38533, 926, 545, 13, 43, "Print"],
+Cell[39081, 941, 220, 4, 20, "Print"],
+Cell[39304, 947, 218, 4, 20, "Print"],
+Cell[39525, 953, 592, 15, 40, "Print"],
+Cell[40120, 970, 220, 4, 20, "Print"],
+Cell[40343, 976, 218, 4, 20, "Print"],
+Cell[40564, 982, 592, 15, 40, "Print"],
+Cell[41159, 999, 217, 4, 20, "Print"],
+Cell[41379, 1005, 218, 4, 20, "Print"],
+Cell[41600, 1011, 592, 15, 40, "Print"],
+Cell[42195, 1028, 220, 4, 20, "Print"],
+Cell[42418, 1034, 218, 4, 20, "Print"],
+Cell[42639, 1040, 592, 15, 40, "Print"],
+Cell[43234, 1057, 220, 4, 20, "Print"],
+Cell[43457, 1063, 218, 4, 20, "Print"],
+Cell[43678, 1069, 220, 4, 20, "Print"],
+Cell[43901, 1075, 218, 4, 20, "Print"],
+Cell[44122, 1081, 218, 4, 20, "Print"],
+Cell[44343, 1087, 218, 4, 20, "Print"],
+Cell[44564, 1093, 218, 4, 20, "Print"],
+Cell[44785, 1099, 218, 4, 20, "Print"],
+Cell[45006, 1105, 222, 4, 20, "Print"],
+Cell[45231, 1111, 220, 4, 20, "Print"],
+Cell[45454, 1117, 218, 4, 20, "Print"],
+Cell[45675, 1123, 220, 4, 20, "Print"],
+Cell[45898, 1129, 218, 4, 20, "Print"],
+Cell[46119, 1135, 218, 4, 20, "Print"],
+Cell[46340, 1141, 592, 15, 40, "Print"],
+Cell[46935, 1158, 217, 4, 20, "Print"],
+Cell[47155, 1164, 220, 4, 20, "Print"],
+Cell[47378, 1170, 592, 15, 40, "Print"],
+Cell[47973, 1187, 217, 4, 20, "Print"],
+Cell[48193, 1193, 218, 4, 20, "Print"],
+Cell[48414, 1199, 591, 15, 40, "Print"],
+Cell[49008, 1216, 220, 4, 20, "Print"],
+Cell[49231, 1222, 218, 4, 20, "Print"],
+Cell[49452, 1228, 219, 4, 20, "Print"],
+Cell[49674, 1234, 218, 4, 20, "Print"],
+Cell[49895, 1240, 217, 4, 20, "Print"],
+Cell[50115, 1246, 220, 4, 20, "Print"],
+Cell[50338, 1252, 220, 4, 20, "Print"],
+Cell[50561, 1258, 217, 4, 20, "Print"],
+Cell[50781, 1264, 596, 15, 40, "Print"],
+Cell[51380, 1281, 218, 4, 20, "Print"],
+Cell[51601, 1287, 218, 4, 20, "Print"],
+Cell[51822, 1293, 594, 15, 40, "Print"],
+Cell[52419, 1310, 220, 4, 20, "Print"],
+Cell[52642, 1316, 218, 4, 20, "Print"],
+Cell[52863, 1322, 528, 13, 23, "Print"]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[34001, 840, 231, 6, 27, "Input"],
-Cell[34235, 848, 4991, 164, 119, "Output"]
-}, Open  ]],
+Cell[53440, 1341, 410, 11, 27, "Input"],
 Cell[CellGroupData[{
-Cell[39263, 1017, 342, 9, 27, "Input"],
-Cell[39608, 1028, 1065, 35, 47, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[40710, 1068, 502, 14, 27, "Input"],
-Cell[41215, 1084, 181, 4, 27, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[41433, 1093, 1442, 39, 43, "Input"],
-Cell[42878, 1134, 1309, 40, 27, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[44224, 1179, 575, 16, 27, "Input"],
-Cell[44802, 1197, 147, 3, 27, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[44986, 1205, 1783, 49, 43, "Input"],
-Cell[46772, 1256, 468, 11, 27, "Output"]
+Cell[53875, 1356, 147, 3, 20, "Print"],
+Cell[54025, 1361, 147, 3, 20, "Print"],
+Cell[54175, 1366, 149, 3, 20, "Print"],
+Cell[54327, 1371, 147, 3, 20, "Print"],
+Cell[54477, 1376, 147, 3, 20, "Print"],
+Cell[54627, 1381, 149, 3, 20, "Print"],
+Cell[54779, 1386, 147, 3, 20, "Print"],
+Cell[54929, 1391, 147, 3, 20, "Print"],
+Cell[55079, 1396, 149, 3, 20, "Print"],
+Cell[55231, 1401, 147, 3, 20, "Print"],
+Cell[55381, 1406, 146, 3, 20, "Print"],
+Cell[55530, 1411, 149, 3, 20, "Print"],
+Cell[55682, 1416, 147, 3, 20, "Print"],
+Cell[55832, 1421, 147, 3, 20, "Print"],
+Cell[55982, 1426, 151, 3, 20, "Print"],
+Cell[56136, 1431, 147, 3, 20, "Print"],
+Cell[56286, 1436, 147, 3, 20, "Print"],
+Cell[56436, 1441, 149, 3, 20, "Print"],
+Cell[56588, 1446, 149, 3, 20, "Print"],
+Cell[56740, 1451, 147, 3, 20, "Print"],
+Cell[56890, 1456, 149, 3, 20, "Print"],
+Cell[57042, 1461, 147, 3, 20, "Print"],
+Cell[57192, 1466, 149, 3, 20, "Print"],
+Cell[57344, 1471, 149, 3, 20, "Print"],
+Cell[57496, 1476, 147, 3, 20, "Print"],
+Cell[57646, 1481, 147, 3, 20, "Print"],
+Cell[57796, 1486, 149, 3, 20, "Print"],
+Cell[57948, 1491, 146, 3, 20, "Print"],
+Cell[58097, 1496, 147, 3, 20, "Print"],
+Cell[58247, 1501, 149, 3, 20, "Print"],
+Cell[58399, 1506, 149, 3, 20, "Print"],
+Cell[58551, 1511, 147, 3, 20, "Print"],
+Cell[58701, 1516, 149, 3, 20, "Print"],
+Cell[58853, 1521, 147, 3, 20, "Print"],
+Cell[59003, 1526, 147, 3, 20, "Print"],
+Cell[59153, 1531, 148, 3, 20, "Print"],
+Cell[59304, 1536, 149, 3, 20, "Print"],
+Cell[59456, 1541, 149, 3, 20, "Print"],
+Cell[59608, 1546, 149, 3, 20, "Print"],
+Cell[59760, 1551, 147, 3, 20, "Print"],
+Cell[59910, 1556, 145, 3, 20, "Print"],
+Cell[60058, 1561, 149, 3, 20, "Print"],
+Cell[60210, 1566, 147, 3, 20, "Print"],
+Cell[60360, 1571, 146, 3, 20, "Print"],
+Cell[60509, 1576, 151, 3, 20, "Print"],
+Cell[60663, 1581, 146, 3, 20, "Print"],
+Cell[60812, 1586, 147, 3, 20, "Print"],
+Cell[60962, 1591, 149, 3, 20, "Print"],
+Cell[61114, 1596, 147, 3, 20, "Print"],
+Cell[61264, 1601, 147, 3, 20, "Print"],
+Cell[61414, 1606, 149, 3, 20, "Print"],
+Cell[61566, 1611, 147, 3, 20, "Print"],
+Cell[61716, 1616, 147, 3, 20, "Print"],
+Cell[61866, 1621, 149, 3, 20, "Print"]
+}, Open  ]]
 }, Open  ]]
 }
 ]

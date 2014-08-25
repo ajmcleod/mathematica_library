@@ -500,4 +500,4 @@ Do[If[FreeQ[exchange[u,w], j], AppendTo[exchange[u,w], j]], {j,{DS5[1] -> DS5[2]
 
 transcendentalWeight[DS5[_]]:=5;
 
-Table[DS4[i],{i,18}]
+Table[DS5[i],{i,18}]

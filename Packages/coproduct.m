@@ -129,6 +129,9 @@ CircleMinus[x_,y_]:=0/;MatchQ[x/.{Power->Times},IMPL[0,_,0]]\[Or]MatchQ[y/.{Powe
 CircleMinus[x_,y_]:=(CircleDot[x,y/.{\[Zeta][__]->0}]//.completeLyndonBasisReplacements/.IMPLtoMPL)/;stayInLyndonBasis;
 CircleMinus[x_,y_]:=(CircleDot[x,y/.{\[Zeta][__]->0}]/.IMPLtoMPL)/;!stayInLyndonBasis;
 
+CircleDot[y_,z__]:=CircleDot[Expand[y],z]/;!MatchQ[y,Expand[y]];
+CircleDot[x__,y_]:=CircleDot[x,Expand[y]]/;!MatchQ[y,Expand[y]];
+CircleDot[x__,y_,z__]:=CircleDot[x,Expand[y],z]/;!MatchQ[y,Expand[y]];
 CircleDot[x___,y_,z___]:=Plus@@Table[CircleDot[x,y[[i]],z],{i,Length[y]}]/;MatchQ[y,Plus[_,__]];
 CircleDot[x___,c_ y_,z___]:=c CircleDot[x,y,z]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[y];
 CircleDot[x___,y_,z___]:=-CircleDot[x,-y,z]/;MatchQ[y,Times[-1,__]];
@@ -161,7 +164,7 @@ shuffleMPL[\[Zeta][x__]func_]:=\[Zeta][x]shuffleMPL[func];
 shuffleMPL[\[Zeta][x__]^n_ func_]:=\[Zeta][x]^n shuffleMPL[func];
 
 toLinearBasis[Times[a_,x__]]:=a toLinearBasis[Times[x]]/;NumericQ[a];
-toLinearBasis[Plus[x_,y__]]:=Plus@@Table[toLinearBasis[i],{i,List[x,y]}];
+toLinearBasis[Plus[x_,y__]]:=Sum[toLinearBasis[i],{i,List[x,y]}];
 toLinearBasis[Times[x__,Plus[y_,z__]]]:=toLinearBasis[Expand[Times[x,Plus[y,z]]]]/;!Or@@NumericQ/@List[x];
 toLinearBasis[func_]:=shuffleMPL[func/.toMPL]/;!MatchQ[func,Alternatives[Times[x_,y__]/;NumericQ[x],Plus[_,__],CircleDot[__]]];
 toLinearBasis[CircleDot[x__]]:=CircleDot@@Table[shuffleMPL[List[x][[i]]/.toMPL],{i,Length@List[x]}];
@@ -172,7 +175,7 @@ checkIntegrability[func_,max]:=Module[{maxCoproduct,checkEntries,weight=transcen
 	maxCoproduct=coproduct[max,func]/.toLogs/.\[Pi]to\[Zeta]/.{CircleDot[a_,b__]:>a checkIntegrability[CircleDot[b],max]/;MatchQ[a,pureMZV]\[And]Length[List[b]]>1,CircleDot[a_,b__]:>0/;MatchQ[a,pureMZV]\[And]Length[List[b]]==1};
 	checkEntries[m_]:=maxCoproduct/.{CircleDot[a___,Log[b_],Log[c_],d___]:>SubMinus[CircleDot[a]]SubPlus[CircleDot[d]]AngleBracket[b,c]/;Length[List[a]]==m-1\[And]Length[List[d]]==weight-1-m};
 	Sum[Expand[checkEntries[i]],{i,weight-1}]];
-checkIntegrability[func_,last]:=Expand[func/.{CircleDot[x_,y_]:>CircleDot[coproduct[{transcendentalWeight[func]-2,1},x],y]}/.{CircleDot[a__,b_,c_]:>CircleDot[a,b/.toLogs,c/.toLogs]}/.\[Pi]to\[Zeta]/.{CircleDot[a___,Log[b_],Log[c_]]:>SubMinus[CircleDot[a]]AngleBracket[b,c]}];
+checkIntegrability[func_,last]:=Expand[func/.CircleDot[x_,y_]:>CircleDot[coproduct[{transcendentalWeight[func]-2,1},x],y]/.CircleDot[a__,b_,c_]:>CircleDot[a,b/.toLogs,c/.toLogs]/.\[Pi]to\[Zeta]/.{CircleDot[a___,Log[b_],Log[c_]]:>CircleDot[a]AngleBracket[b,c]}/.toHPL/.flipArgument[{u,v,w}]/.CircleDot[a__]:>toLinearBasis[CircleDot[a]]];
 (*checkIntegrability[func_,n_:max]:=Module[{maxCoproduct,checkEntries,weight=transcendentalWeight[func]},
 	maxCoproduct=coproduct[max,func]/.toLogs/.\[Pi]to\[Zeta]/.{CircleDot[a_,b__]:>a checkIntegrability[CircleDot[b],n]/;MatchQ[a,pureMZV]\[And]Length[List[b]]>1,CircleDot[a_,b__]:>0/;MatchQ[a,pureMZV]\[And]Length[List[b]]==1};
 	checkEntries[m_]:=maxCoproduct/.{CircleDot[a___,Log[b_],Log[c_],d___]:>SubMinus[CircleDot[a]]SubPlus[CircleDot[d]]AngleBracket[b,c]/;Length[List[a]]==m-1\[And]Length[List[d]]==weight-1-m};
@@ -182,7 +185,7 @@ exteriorD[func_,n_:max]:=Simplify[Expand[exteriorDeriv[func,n]],0<u<1\[And]0<v<1
 exteriorDeriv[Plus[x_,y__],n_]:=Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}];
 exteriorDeriv[c_ Plus[x_,y__],n_]:=c Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}]/;NumericQ[c];
 exteriorDeriv[c_ CircleDot[x__],n_]:=c exteriorDeriv[CircleDot[x],n]/;NumericQ[c];
-exteriorDeriv[CircleDot[pureMZV,x_],n_]:=0/;MatchQ[x/.MPLtoLogs,Log[_]];
+exteriorDeriv[CircleDot[x_,y_],n_]:=0/;MatchQ[y/.MPLtoLogs,Log[_]]\[And]MatchQ[x,pureMZV];
 exteriorDeriv[CircleDot[x___,y_,z_],n_]:=exteriorDeriv[CircleDot[x,coproduct[{transcendentalWeight[y]-1,1},y],z],n]/;MemberQ[irreducibleFunctions,y];
 exteriorDeriv[CircleDot[x___,y_,z___],n_]:=exteriorDeriv[CircleDot[x,coproduct[max,y]/.MPLtoLogs,z],n]/;transcendentalWeight[y]>1\[And]!MatchQ[y,pureMZV];
 exteriorDeriv[CircleDot[x___,MPL[{a_},af_],z___],n_]:=exteriorDeriv[CircleDot[x,MPL[{a},af]/.MPLtoLogs,z],n];
