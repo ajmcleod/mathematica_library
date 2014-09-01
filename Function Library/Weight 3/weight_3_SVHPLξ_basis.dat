@@ -1,0 +1,5 @@
+{SVHPL[0]^3, SVHPL[0]^2*SVHPL[1], Log[\[Xi]]*SVHPL[0]^2, SVHPL[0]*SVHPL[1]^2, 
+ Log[\[Xi]]*SVHPL[0]*SVHPL[1], Log[\[Xi]]^2*SVHPL[0], SVHPL[0]*SVHPL[0, 1], 
+ SVHPL[1]^3, Log[\[Xi]]*SVHPL[1]^2, Log[\[Xi]]^2*SVHPL[1], 
+ SVHPL[1]*SVHPL[0, 1], Log[\[Xi]]^3, Log[\[Xi]]*SVHPL[0, 1], SVHPL[0, 0, 1], 
+ SVHPL[0, 1, 1]}
