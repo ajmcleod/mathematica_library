@@ -1,0 +1,387 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     11764,        378]
+NotebookOptionsPosition[     10752,        337]
+NotebookOutlinePosition[     11130,        354]
+CellTagsIndexPosition[     11087,        351]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"<<", "coproduct.m"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "\"\<collinearLimits.m\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "NMHV.m"}]}], "Input",
+ CellChangeTimes->{{3.620746538644785*^9, 3.620746542122067*^9}, 
+   3.625206993694048*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"loops", "=", "1"}], ";"}]], "Input",
+ CellChangeTimes->{{3.625207004763102*^9, 3.625207011940186*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Vansatz", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Ve", "[", "i", "]"}], 
+        RowBox[{"#", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "@", "#"}]}], "}"}]}], "]"}], "&"}], "@", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"functionsWeight", "[", 
+       RowBox[{"2", "loops"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"EvenQ", "[", 
+        RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vtansatz", " ", "=", " ", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"Sum", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vo", "[", "i", "]"}], 
+        RowBox[{"#", "\[LeftDoubleBracket]", "i", "\[RightDoubleBracket]"}]}],
+        ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", 
+         RowBox[{"Length", "@", "#"}]}], "}"}]}], "]"}], "&"}], "@", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"functionsWeight", "[", 
+       RowBox[{"2", "loops"}], "]"}], ",", 
+      RowBox[{
+       RowBox[{"OddQ", "[", 
+        RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft", "[", "Vansatz", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft", "[", "Vtansatz", "]"}]}], "Input"],
+
+Cell[BoxData[
+ FormBox["10", TraditionalForm]], "Output",
+ CellChangeTimes->{3.625207085974126*^9, 3.6252075597087803`*^9, 
+  3.6252086383374662`*^9, 3.6254252886746397`*^9, 3.625441205307169*^9, 
+  3.625445322272505*^9, 3.625447588319215*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.625207085974126*^9, 3.6252075597087803`*^9, 
+  3.6252086383374662`*^9, 3.6254252886746397`*^9, 3.625441205307169*^9, 
+  3.625445322272505*^9, 3.62544758832106*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"uwSymmetryV", "=", 
+   RowBox[{"constraintRules", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"Vansatz", "/.", 
+        RowBox[{"exchange", "[", 
+         RowBox[{"u", ",", "w"}], "]"}]}], ")"}], "-", "Vansatz"}], ",", 
+     RowBox[{"2", " ", "loops"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vansatz1", "=", 
+   RowBox[{"Vansatz", "/.", "uwSymmetryV"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft", "[", "Vansatz1", "]"}]}], "Input",
+ CellChangeTimes->{{3.625207703791586*^9, 3.6252077170205193`*^9}}],
+
+Cell[BoxData[
+ FormBox["7", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6252070873551903`*^9, 3.6252075601114883`*^9, 
+  3.6252077174266663`*^9, 3.625208639632247*^9, 3.6254252899750223`*^9, 
+  3.625441205721696*^9, 3.625445322629908*^9, 3.625447588726667*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"finalEntryConditionU1", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"constraintRules", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", "u"}], "]"}], "+", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", "v"}], "]"}], "+", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"1", "-", "u"}]}], "]"}], "+", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"1", "-", "v"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "loops"}], "-", "1"}]}], "]"}], "&"}], "@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Uansatz", "[", "loops", "]"}], "/.", "uwSymmetryV"}], 
+     ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finalEntryConditionU2", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"constraintRules", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", "w"}], "]"}], "+", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", "v"}], "]"}], "+", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"1", "-", "w"}]}], "]"}], "+", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"1", "-", "v"}]}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "loops"}], "-", "1"}]}], "]"}], "&"}], "@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Uansatz", "[", "loops", "]"}], "/.", "uwSymmetryV"}], "/.", 
+      "finalEntryConditionU1"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finalEntryConditionU3", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"constraintRules", "[", 
+      RowBox[{
+       RowBox[{"coproductEntryV", "[", 
+        RowBox[{"#", ",", 
+         RowBox[{"1", "-", "v"}]}], "]"}], ",", 
+       RowBox[{
+        RowBox[{"2", "loops"}], "-", "1"}]}], "]"}], "&"}], "@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Uansatz", "[", "loops", "]"}], "/.", "uwSymmetryV"}], "/.", 
+       "finalEntryConditionU1"}], "/.", "finalEntryConditionU2"}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finalEntryConditionU4", "=", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"constraintRules", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", "yu"}], "]"}], "-", 
+        RowBox[{"coproductEntryV", "[", 
+         RowBox[{"#", ",", "yw"}], "]"}]}], ",", 
+       RowBox[{
+        RowBox[{"2", "loops"}], "-", "1"}]}], "]"}], "&"}], "@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Uansatz", "[", "loops", "]"}], "/.", "uwSymmetryV"}], "/.", 
+        "finalEntryConditionU1"}], "/.", "finalEntryConditionU2"}], "/.", 
+      "finalEntryConditionU3"}], ")"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vansatz2", "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Vansatz1", "/.", "finalEntryConditionU1"}], "/.", 
+       "finalEntryConditionU2"}], "/.", "finalEntryConditionU3"}], "/.", 
+     "finalEntryConditionU4"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft", "[", "Vansatz2", "]"}]}], "Input",
+ CellChangeTimes->{{3.625207399878977*^9, 3.625207448902096*^9}, {
+  3.6252077327177258`*^9, 3.625207741419895*^9}, {3.625425442488965*^9, 
+  3.62542544554571*^9}}],
+
+Cell[BoxData[
+ FormBox["3", TraditionalForm]], "Output",
+ CellChangeTimes->{3.625207155507469*^9, 3.625207566152638*^9, 
+  3.625207743707253*^9, 3.625208643249024*^9, 3.625425293977558*^9, 
+  3.625425447796996*^9, 3.625441208605591*^9, 3.625445326259227*^9, 
+  3.6254475923321238`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"collinearVanishingV", "=", 
+   RowBox[{"collinearConstraintRules", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{"Vansatz2", "/.", "cycle"}], ")"}], "+", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{"Vansatz2", "/.", "cycle"}], "/.", "cycle"}], ")"}]}], ")"}],
+      ",", 
+     RowBox[{"2", " ", "loops"}]}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vansatz3", "=", 
+   RowBox[{"Vansatz2", "/.", "collinearVanishingV"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft", "[", "Vansatz3", "]"}]}], "Input",
+ CellChangeTimes->{{3.625445230845057*^9, 3.6254452979986877`*^9}, 
+   3.625446742284822*^9, {3.625447504268882*^9, 3.62544753512306*^9}, 
+   3.6254476468130007`*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.62544740821585*^9, 3.6254474293061323`*^9}, 
+   3.625447592606585*^9, 3.625447647211934*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{"Vansatz3", "-", 
+    RowBox[{"V", "[", "1", "]"}]}], "/.", "toHPL"}], "]"}]], "Input",
+ CellChangeTimes->{{3.625447629834153*^9, 3.6254476667527723`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.625447635112105*^9, 3.625447667116187*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["Vansatz3"], "Input"],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"1", "-", "u"}]}], ")"}], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"1", "-", "v"}]}], ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"1", "-", "u"}]}], ")"}], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"1", "-", "w"}]}], ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}], ",", 
+      RowBox[{"1", "-", "u"}]}], ")"}]}], "+", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"1", "-", "v"}]}], ")"}], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", "1", "}"}], ",", 
+      RowBox[{"1", "-", "w"}]}], ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}], ",", 
+      RowBox[{"1", "-", "v"}]}], ")"}]}], "-", 
+   RowBox[{
+    FractionBox["1", "2"], " ", 
+    RowBox[{"MPL", "(", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"0", ",", "1"}], "}"}], ",", 
+      RowBox[{"1", "-", "w"}]}], ")"}]}], "-", 
+   RowBox[{"\[Zeta]", "(", "2", ")"}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{3.625447671576749*^9}]
+}, Open  ]]
+},
+WindowSize->{1186, 691},
+WindowMargins->{{Automatic, 16}, {Automatic, 21}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 270, 5, 58, "Input"],
+Cell[830, 27, 137, 3, 27, "Input"],
+Cell[CellGroupData[{
+Cell[992, 34, 1456, 44, 73, "Input"],
+Cell[2451, 80, 243, 4, 27, "Output"],
+Cell[2697, 86, 241, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2975, 95, 603, 15, 58, "Input"],
+Cell[3581, 112, 266, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3884, 121, 3493, 99, 163, "Input"],
+Cell[7380, 222, 285, 5, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7702, 232, 798, 21, 58, "Input"],
+Cell[8503, 255, 171, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8711, 263, 216, 5, 27, "Input"],
+Cell[8930, 270, 122, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9089, 277, 34, 0, 27, "Input"],
+Cell[9126, 279, 1610, 55, 47, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

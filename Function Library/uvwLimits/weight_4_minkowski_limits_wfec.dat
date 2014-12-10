@@ -1,0 +1,305 @@
+lineM[H4[1], {1, 1, w}] = (-2*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] + 
+     HPL[{0}, w]*HPL[{1}, w]*HPL[{0, 1}, w] + HPL[{0, 1}, w]^2/2 - 
+     2*HPL[{1}, w]*HPL[{0, 0, 1}, w] + (4*I)*Pi*HPL[{0, 1, 1}, w] - 
+     2*HPL[{0}, w]*HPL[{0, 1, 1}, w] + 2*HPL[{0, 0, 1, 1}, w] + 
+     (2*I)*Pi*HPL[{1}, w]*\[Zeta][2] - HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] + 
+     HPL[{0, 1}, w]*\[Zeta][2] - (17*\[Zeta][2]^2)/10 + 
+     2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[1], {1, v, 1}] = (-2*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] + 
+     HPL[{0}, v]*HPL[{1}, v]*HPL[{0, 1}, v] + HPL[{0, 1}, v]^2/2 - 
+     2*HPL[{1}, v]*HPL[{0, 0, 1}, v] + (4*I)*Pi*HPL[{0, 1, 1}, v] - 
+     2*HPL[{0}, v]*HPL[{0, 1, 1}, v] + 2*HPL[{0, 0, 1, 1}, v] + 
+     (2*I)*Pi*HPL[{1}, v]*\[Zeta][2] - HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] + 
+     HPL[{0, 1}, v]*\[Zeta][2] - (17*\[Zeta][2]^2)/10 + 
+     2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[1], {1, v, v}] = 2*Pi^2*HPL[{0}, v]^2 + (2*I)*Pi*HPL[{0}, v]^3 + 
+     4*Pi^2*HPL[{0}, v]*HPL[{1}, v] - (8*I)*Pi*HPL[{0}, v]^2*HPL[{1}, v] + 
+     (4*I)*Pi*HPL[{0}, v]*HPL[{0}, Subscript[\[Xi], u]]*HPL[{1}, v] + 
+     (4*I)*Pi*HPL[{0}, v]*HPL[{1}, v]^2 + HPL[{0}, v]^2*HPL[{1}, v]^2 - 
+     4*Pi^2*HPL[{0, 1}, v] + (16*I)*Pi*HPL[{0}, v]*HPL[{0, 1}, v] - 
+     (4*I)*Pi*HPL[{0}, Subscript[\[Xi], u]]*HPL[{0, 1}, v] - 
+     (8*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] + 2*HPL[{0, 1}, v]^2 - 
+     (16*I)*Pi*HPL[{0, 0, 1}, v] - 4*HPL[{1}, v]*HPL[{0, 0, 1}, v] + 
+     (8*I)*Pi*HPL[{0, 1, 1}, v] - 4*HPL[{0}, v]*HPL[{0, 1, 1}, v] + 
+     4*HPL[{0, 0, 1, 1}, v] + 2*Pi^2*\[Zeta][2] + 
+     (4*I)*Pi*HPL[{0}, Subscript[\[Xi], u]]*\[Zeta][2] + 
+     (8*I)*Pi*HPL[{1}, v]*\[Zeta][2] - (12*\[Zeta][2]^2)/5 + 
+     (6*I)*Pi*\[Zeta][3] + 4*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[1], {u, 1, 1}] = (4*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] - 
+     2*HPL[{0}, u]*HPL[{1}, u]*HPL[{0, 1}, u] - HPL[{0, 1}, u]^2 + 
+     (2*I)*Pi*HPL[{0, 0, 1}, u] - HPL[{0}, u]*HPL[{0, 0, 1}, u] + 
+     4*HPL[{1}, u]*HPL[{0, 0, 1}, u] - (8*I)*Pi*HPL[{0, 1, 1}, u] + 
+     4*HPL[{0}, u]*HPL[{0, 1, 1}, u] + 3*HPL[{0, 0, 0, 1}, u] - 
+     4*HPL[{0, 0, 1, 1}, u] - 2*Pi^2*\[Zeta][2] - (2*I)*Pi*HPL[{0}, u]*
+      \[Zeta][2] + (HPL[{0}, u]^2*\[Zeta][2])/2 - (4*I)*Pi*HPL[{1}, u]*
+      \[Zeta][2] + 2*HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] - 
+     2*HPL[{0, 1}, u]*\[Zeta][2] + (11*\[Zeta][2]^2)/5 + 
+     (4*I)*Pi*\[Zeta][3] - 2*HPL[{0}, u]*\[Zeta][3] - 4*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[1], {u, u, 1}] = 2*Pi^2*HPL[{0}, u]^2 + 
+     ((4*I)/3)*Pi*HPL[{0}, u]^3 + 8*Pi^2*HPL[{0}, u]*
+      HPL[{0}, Subscript[\[Xi], w]] - I*Pi*HPL[{0}, u]^2*
+      HPL[{0}, Subscript[\[Xi], w]] + (3*HPL[{0}, u]^3*HPL[{1}, u])/2 - 
+     (2*I)*Pi*HPL[{0}, u]*HPL[{1}, u]^2 - (2*I)*Pi*HPL[{0}, u]*
+      HPL[{0, 1}, u] - (HPL[{0}, u]^2*HPL[{0, 1}, u])/2 + 
+     (4*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] - HPL[{0}, u]*HPL[{1}, u]*
+      HPL[{0, 1}, u] - HPL[{0, 1}, u]^2/2 + (4*I)*Pi*HPL[{0, 0, 1}, u] - 
+     3*HPL[{0}, u]*HPL[{0, 0, 1}, u] + 2*HPL[{1}, u]*HPL[{0, 0, 1}, u] - 
+     (4*I)*Pi*HPL[{0, 1, 1}, u] + 2*HPL[{0}, u]*HPL[{0, 1, 1}, u] + 
+     3*HPL[{0, 0, 0, 1}, u] - 2*HPL[{0, 0, 1, 1}, u] + 
+     (2*I)*Pi*HPL[{0}, u]*\[Zeta][2] + HPL[{0}, u]^2*\[Zeta][2] - 
+     (4*I)*Pi*HPL[{1}, u]*\[Zeta][2] + HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] - 
+     HPL[{0, 1}, u]*\[Zeta][2] + \[Zeta][2]^2/2 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[1], {w, 1, w}] = 2*Pi^2*HPL[{0}, w]^2 + 
+     ((4*I)/3)*Pi*HPL[{0}, w]^3 + 8*Pi^2*HPL[{0}, w]*
+      HPL[{0}, Subscript[\[Xi], v]] - I*Pi*HPL[{0}, w]^2*
+      HPL[{0}, Subscript[\[Xi], v]] + (3*HPL[{0}, w]^3*HPL[{1}, w])/2 - 
+     (2*I)*Pi*HPL[{0}, w]*HPL[{1}, w]^2 - (2*I)*Pi*HPL[{0}, w]*
+      HPL[{0, 1}, w] - (HPL[{0}, w]^2*HPL[{0, 1}, w])/2 + 
+     (4*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] - HPL[{0}, w]*HPL[{1}, w]*
+      HPL[{0, 1}, w] - HPL[{0, 1}, w]^2/2 + (4*I)*Pi*HPL[{0, 0, 1}, w] - 
+     3*HPL[{0}, w]*HPL[{0, 0, 1}, w] + 2*HPL[{1}, w]*HPL[{0, 0, 1}, w] - 
+     (4*I)*Pi*HPL[{0, 1, 1}, w] + 2*HPL[{0}, w]*HPL[{0, 1, 1}, w] + 
+     3*HPL[{0, 0, 0, 1}, w] - 2*HPL[{0, 0, 1, 1}, w] + 
+     (2*I)*Pi*HPL[{0}, w]*\[Zeta][2] + HPL[{0}, w]^2*\[Zeta][2] - 
+     (4*I)*Pi*HPL[{1}, w]*\[Zeta][2] + HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] - 
+     HPL[{0, 1}, w]*\[Zeta][2] + \[Zeta][2]^2/2 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[2], {1, 1, w}] = (-2*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] + 
+     HPL[{0}, w]*HPL[{1}, w]*HPL[{0, 1}, w] + HPL[{0, 1}, w]^2/2 - 
+     2*HPL[{1}, w]*HPL[{0, 0, 1}, w] + (4*I)*Pi*HPL[{0, 1, 1}, w] - 
+     2*HPL[{0}, w]*HPL[{0, 1, 1}, w] + 2*HPL[{0, 0, 1, 1}, w] + 
+     (2*I)*Pi*HPL[{1}, w]*\[Zeta][2] - HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] + 
+     HPL[{0, 1}, w]*\[Zeta][2] - (17*\[Zeta][2]^2)/10 + 
+     2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[2], {1, v, 1}] = (4*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] - 
+     2*HPL[{0}, v]*HPL[{1}, v]*HPL[{0, 1}, v] - HPL[{0, 1}, v]^2 + 
+     (2*I)*Pi*HPL[{0, 0, 1}, v] - HPL[{0}, v]*HPL[{0, 0, 1}, v] + 
+     4*HPL[{1}, v]*HPL[{0, 0, 1}, v] - (8*I)*Pi*HPL[{0, 1, 1}, v] + 
+     4*HPL[{0}, v]*HPL[{0, 1, 1}, v] + 3*HPL[{0, 0, 0, 1}, v] - 
+     4*HPL[{0, 0, 1, 1}, v] - 2*Pi^2*\[Zeta][2] - (2*I)*Pi*HPL[{0}, v]*
+      \[Zeta][2] + (HPL[{0}, v]^2*\[Zeta][2])/2 - (4*I)*Pi*HPL[{1}, v]*
+      \[Zeta][2] + 2*HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] - 
+     2*HPL[{0, 1}, v]*\[Zeta][2] + (11*\[Zeta][2]^2)/5 + 
+     (4*I)*Pi*\[Zeta][3] - 2*HPL[{0}, v]*\[Zeta][3] - 4*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[2], {1, v, v}] = 2*Pi^2*HPL[{0}, v]^2 + 
+     ((4*I)/3)*Pi*HPL[{0}, v]^3 + 8*Pi^2*HPL[{0}, v]*
+      HPL[{0}, Subscript[\[Xi], u]] - I*Pi*HPL[{0}, v]^2*
+      HPL[{0}, Subscript[\[Xi], u]] + (3*HPL[{0}, v]^3*HPL[{1}, v])/2 - 
+     (2*I)*Pi*HPL[{0}, v]*HPL[{1}, v]^2 - (2*I)*Pi*HPL[{0}, v]*
+      HPL[{0, 1}, v] - (HPL[{0}, v]^2*HPL[{0, 1}, v])/2 + 
+     (4*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] - HPL[{0}, v]*HPL[{1}, v]*
+      HPL[{0, 1}, v] - HPL[{0, 1}, v]^2/2 + (4*I)*Pi*HPL[{0, 0, 1}, v] - 
+     3*HPL[{0}, v]*HPL[{0, 0, 1}, v] + 2*HPL[{1}, v]*HPL[{0, 0, 1}, v] - 
+     (4*I)*Pi*HPL[{0, 1, 1}, v] + 2*HPL[{0}, v]*HPL[{0, 1, 1}, v] + 
+     3*HPL[{0, 0, 0, 1}, v] - 2*HPL[{0, 0, 1, 1}, v] + 
+     (2*I)*Pi*HPL[{0}, v]*\[Zeta][2] + HPL[{0}, v]^2*\[Zeta][2] - 
+     (4*I)*Pi*HPL[{1}, v]*\[Zeta][2] + HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] - 
+     HPL[{0, 1}, v]*\[Zeta][2] + \[Zeta][2]^2/2 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[2], {u, 1, 1}] = (-2*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] + 
+     HPL[{0}, u]*HPL[{1}, u]*HPL[{0, 1}, u] + HPL[{0, 1}, u]^2/2 - 
+     2*HPL[{1}, u]*HPL[{0, 0, 1}, u] + (4*I)*Pi*HPL[{0, 1, 1}, u] - 
+     2*HPL[{0}, u]*HPL[{0, 1, 1}, u] + 2*HPL[{0, 0, 1, 1}, u] + 
+     (2*I)*Pi*HPL[{1}, u]*\[Zeta][2] - HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] + 
+     HPL[{0, 1}, u]*\[Zeta][2] - (17*\[Zeta][2]^2)/10 + 
+     2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[2], {u, u, 1}] = 2*Pi^2*HPL[{0}, u]^2 + 
+     ((4*I)/3)*Pi*HPL[{0}, u]^3 + 8*Pi^2*HPL[{0}, u]*
+      HPL[{0}, Subscript[\[Xi], w]] - I*Pi*HPL[{0}, u]^2*
+      HPL[{0}, Subscript[\[Xi], w]] + (3*HPL[{0}, u]^3*HPL[{1}, u])/2 - 
+     (2*I)*Pi*HPL[{0}, u]*HPL[{1}, u]^2 - (2*I)*Pi*HPL[{0}, u]*
+      HPL[{0, 1}, u] - (HPL[{0}, u]^2*HPL[{0, 1}, u])/2 + 
+     (4*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] - HPL[{0}, u]*HPL[{1}, u]*
+      HPL[{0, 1}, u] - HPL[{0, 1}, u]^2/2 + (4*I)*Pi*HPL[{0, 0, 1}, u] - 
+     3*HPL[{0}, u]*HPL[{0, 0, 1}, u] + 2*HPL[{1}, u]*HPL[{0, 0, 1}, u] - 
+     (4*I)*Pi*HPL[{0, 1, 1}, u] + 2*HPL[{0}, u]*HPL[{0, 1, 1}, u] + 
+     3*HPL[{0, 0, 0, 1}, u] - 2*HPL[{0, 0, 1, 1}, u] + 
+     (2*I)*Pi*HPL[{0}, u]*\[Zeta][2] + HPL[{0}, u]^2*\[Zeta][2] - 
+     (4*I)*Pi*HPL[{1}, u]*\[Zeta][2] + HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] - 
+     HPL[{0, 1}, u]*\[Zeta][2] + \[Zeta][2]^2/2 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[2], {w, 1, w}] = 2*Pi^2*HPL[{0}, w]^2 + (2*I)*Pi*HPL[{0}, w]^3 + 
+     4*Pi^2*HPL[{0}, w]*HPL[{1}, w] - (8*I)*Pi*HPL[{0}, w]^2*HPL[{1}, w] + 
+     (4*I)*Pi*HPL[{0}, w]*HPL[{0}, Subscript[\[Xi], v]]*HPL[{1}, w] + 
+     (4*I)*Pi*HPL[{0}, w]*HPL[{1}, w]^2 + HPL[{0}, w]^2*HPL[{1}, w]^2 - 
+     4*Pi^2*HPL[{0, 1}, w] + (16*I)*Pi*HPL[{0}, w]*HPL[{0, 1}, w] - 
+     (4*I)*Pi*HPL[{0}, Subscript[\[Xi], v]]*HPL[{0, 1}, w] - 
+     (8*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] + 2*HPL[{0, 1}, w]^2 - 
+     (16*I)*Pi*HPL[{0, 0, 1}, w] - 4*HPL[{1}, w]*HPL[{0, 0, 1}, w] + 
+     (8*I)*Pi*HPL[{0, 1, 1}, w] - 4*HPL[{0}, w]*HPL[{0, 1, 1}, w] + 
+     4*HPL[{0, 0, 1, 1}, w] + 2*Pi^2*\[Zeta][2] + 
+     (4*I)*Pi*HPL[{0}, Subscript[\[Xi], v]]*\[Zeta][2] + 
+     (8*I)*Pi*HPL[{1}, w]*\[Zeta][2] - (12*\[Zeta][2]^2)/5 + 
+     (6*I)*Pi*\[Zeta][3] + 4*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[3], {1, 1, w}] = (4*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] - 
+     2*HPL[{0}, w]*HPL[{1}, w]*HPL[{0, 1}, w] - HPL[{0, 1}, w]^2 + 
+     (2*I)*Pi*HPL[{0, 0, 1}, w] - HPL[{0}, w]*HPL[{0, 0, 1}, w] + 
+     4*HPL[{1}, w]*HPL[{0, 0, 1}, w] - (8*I)*Pi*HPL[{0, 1, 1}, w] + 
+     4*HPL[{0}, w]*HPL[{0, 1, 1}, w] + 3*HPL[{0, 0, 0, 1}, w] - 
+     4*HPL[{0, 0, 1, 1}, w] - 2*Pi^2*\[Zeta][2] - (2*I)*Pi*HPL[{0}, w]*
+      \[Zeta][2] + (HPL[{0}, w]^2*\[Zeta][2])/2 - (4*I)*Pi*HPL[{1}, w]*
+      \[Zeta][2] + 2*HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] - 
+     2*HPL[{0, 1}, w]*\[Zeta][2] + (11*\[Zeta][2]^2)/5 + 
+     (4*I)*Pi*\[Zeta][3] - 2*HPL[{0}, w]*\[Zeta][3] - 4*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[3], {1, v, 1}] = (-2*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] + 
+     HPL[{0}, v]*HPL[{1}, v]*HPL[{0, 1}, v] + HPL[{0, 1}, v]^2/2 - 
+     2*HPL[{1}, v]*HPL[{0, 0, 1}, v] + (4*I)*Pi*HPL[{0, 1, 1}, v] - 
+     2*HPL[{0}, v]*HPL[{0, 1, 1}, v] + 2*HPL[{0, 0, 1, 1}, v] + 
+     (2*I)*Pi*HPL[{1}, v]*\[Zeta][2] - HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] + 
+     HPL[{0, 1}, v]*\[Zeta][2] - (17*\[Zeta][2]^2)/10 + 
+     2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[3], {1, v, v}] = 2*Pi^2*HPL[{0}, v]^2 + 
+     ((4*I)/3)*Pi*HPL[{0}, v]^3 + 8*Pi^2*HPL[{0}, v]*
+      HPL[{0}, Subscript[\[Xi], u]] - I*Pi*HPL[{0}, v]^2*
+      HPL[{0}, Subscript[\[Xi], u]] + (3*HPL[{0}, v]^3*HPL[{1}, v])/2 - 
+     (2*I)*Pi*HPL[{0}, v]*HPL[{1}, v]^2 - (2*I)*Pi*HPL[{0}, v]*
+      HPL[{0, 1}, v] - (HPL[{0}, v]^2*HPL[{0, 1}, v])/2 + 
+     (4*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] - HPL[{0}, v]*HPL[{1}, v]*
+      HPL[{0, 1}, v] - HPL[{0, 1}, v]^2/2 + (4*I)*Pi*HPL[{0, 0, 1}, v] - 
+     3*HPL[{0}, v]*HPL[{0, 0, 1}, v] + 2*HPL[{1}, v]*HPL[{0, 0, 1}, v] - 
+     (4*I)*Pi*HPL[{0, 1, 1}, v] + 2*HPL[{0}, v]*HPL[{0, 1, 1}, v] + 
+     3*HPL[{0, 0, 0, 1}, v] - 2*HPL[{0, 0, 1, 1}, v] + 
+     (2*I)*Pi*HPL[{0}, v]*\[Zeta][2] + HPL[{0}, v]^2*\[Zeta][2] - 
+     (4*I)*Pi*HPL[{1}, v]*\[Zeta][2] + HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] - 
+     HPL[{0, 1}, v]*\[Zeta][2] + \[Zeta][2]^2/2 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[3], {u, 1, 1}] = (-2*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] + 
+     HPL[{0}, u]*HPL[{1}, u]*HPL[{0, 1}, u] + HPL[{0, 1}, u]^2/2 - 
+     2*HPL[{1}, u]*HPL[{0, 0, 1}, u] + (4*I)*Pi*HPL[{0, 1, 1}, u] - 
+     2*HPL[{0}, u]*HPL[{0, 1, 1}, u] + 2*HPL[{0, 0, 1, 1}, u] + 
+     (2*I)*Pi*HPL[{1}, u]*\[Zeta][2] - HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] + 
+     HPL[{0, 1}, u]*\[Zeta][2] - (17*\[Zeta][2]^2)/10 + 
+     2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[3], {u, u, 1}] = 2*Pi^2*HPL[{0}, u]^2 + (2*I)*Pi*HPL[{0}, u]^3 + 
+     4*Pi^2*HPL[{0}, u]*HPL[{1}, u] - (8*I)*Pi*HPL[{0}, u]^2*HPL[{1}, u] + 
+     (4*I)*Pi*HPL[{0}, u]*HPL[{0}, Subscript[\[Xi], w]]*HPL[{1}, u] + 
+     (4*I)*Pi*HPL[{0}, u]*HPL[{1}, u]^2 + HPL[{0}, u]^2*HPL[{1}, u]^2 - 
+     4*Pi^2*HPL[{0, 1}, u] + (16*I)*Pi*HPL[{0}, u]*HPL[{0, 1}, u] - 
+     (4*I)*Pi*HPL[{0}, Subscript[\[Xi], w]]*HPL[{0, 1}, u] - 
+     (8*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] + 2*HPL[{0, 1}, u]^2 - 
+     (16*I)*Pi*HPL[{0, 0, 1}, u] - 4*HPL[{1}, u]*HPL[{0, 0, 1}, u] + 
+     (8*I)*Pi*HPL[{0, 1, 1}, u] - 4*HPL[{0}, u]*HPL[{0, 1, 1}, u] + 
+     4*HPL[{0, 0, 1, 1}, u] + 2*Pi^2*\[Zeta][2] + 
+     (4*I)*Pi*HPL[{0}, Subscript[\[Xi], w]]*\[Zeta][2] + 
+     (8*I)*Pi*HPL[{1}, u]*\[Zeta][2] - (12*\[Zeta][2]^2)/5 + 
+     (6*I)*Pi*\[Zeta][3] + 4*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[3], {w, 1, w}] = 2*Pi^2*HPL[{0}, w]^2 + 
+     ((4*I)/3)*Pi*HPL[{0}, w]^3 + 8*Pi^2*HPL[{0}, w]*
+      HPL[{0}, Subscript[\[Xi], v]] - I*Pi*HPL[{0}, w]^2*
+      HPL[{0}, Subscript[\[Xi], v]] + (3*HPL[{0}, w]^3*HPL[{1}, w])/2 - 
+     (2*I)*Pi*HPL[{0}, w]*HPL[{1}, w]^2 - (2*I)*Pi*HPL[{0}, w]*
+      HPL[{0, 1}, w] - (HPL[{0}, w]^2*HPL[{0, 1}, w])/2 + 
+     (4*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] - HPL[{0}, w]*HPL[{1}, w]*
+      HPL[{0, 1}, w] - HPL[{0, 1}, w]^2/2 + (4*I)*Pi*HPL[{0, 0, 1}, w] - 
+     3*HPL[{0}, w]*HPL[{0, 0, 1}, w] + 2*HPL[{1}, w]*HPL[{0, 0, 1}, w] - 
+     (4*I)*Pi*HPL[{0, 1, 1}, w] + 2*HPL[{0}, w]*HPL[{0, 1, 1}, w] + 
+     3*HPL[{0, 0, 0, 1}, w] - 2*HPL[{0, 0, 1, 1}, w] + 
+     (2*I)*Pi*HPL[{0}, w]*\[Zeta][2] + HPL[{0}, w]^2*\[Zeta][2] - 
+     (4*I)*Pi*HPL[{1}, w]*\[Zeta][2] + HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] - 
+     HPL[{0, 1}, w]*\[Zeta][2] + \[Zeta][2]^2/2 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[4], {1, 1, w}] = (2*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] - 
+     HPL[{0}, w]*HPL[{1}, w]*HPL[{0, 1}, w] - HPL[{0, 1}, w]^2/2 + 
+     2*HPL[{1}, w]*HPL[{0, 0, 1}, w] - (4*I)*Pi*HPL[{0, 1, 1}, w] + 
+     2*HPL[{0}, w]*HPL[{0, 1, 1}, w] - 2*HPL[{0, 0, 1, 1}, w] - 
+     (2*I)*Pi*HPL[{1}, w]*\[Zeta][2] + HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] - 
+     HPL[{0, 1}, w]*\[Zeta][2] + (17*\[Zeta][2]^2)/10 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{0}, w]*\[Zeta][3] - 2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[4], {1, v, 1}] = (2*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] - 
+     HPL[{0}, v]*HPL[{1}, v]*HPL[{0, 1}, v] - HPL[{0, 1}, v]^2/2 + 
+     2*HPL[{1}, v]*HPL[{0, 0, 1}, v] - (4*I)*Pi*HPL[{0, 1, 1}, v] + 
+     2*HPL[{0}, v]*HPL[{0, 1, 1}, v] - 2*HPL[{0, 0, 1, 1}, v] - 
+     (2*I)*Pi*HPL[{1}, v]*\[Zeta][2] + HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] - 
+     HPL[{0, 1}, v]*\[Zeta][2] + (17*\[Zeta][2]^2)/10 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{0}, v]*\[Zeta][3] - 2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[4], {1, v, v}] = 0
+ 
+lineM[H4[4], {u, 1, 1}] = (2*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] - 
+     HPL[{0}, u]*HPL[{1}, u]*HPL[{0, 1}, u] + HPL[{0, 1}, u]^2/2 + 
+     2*HPL[{1}, u]*HPL[{0, 0, 1}, u] - 2*HPL[{0, 0, 1, 1}, u] - 
+     (2*I)*Pi*HPL[{1}, u]*\[Zeta][2] + HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] - 
+     3*HPL[{0, 1}, u]*\[Zeta][2] + (27*\[Zeta][2]^2)/10 - 
+     2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[4], {u, u, 1}] = 0
+ 
+lineM[H4[4], {w, 1, w}] = 0
+ 
+lineM[H4[5], {1, 1, w}] = (2*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] - 
+     HPL[{0}, w]*HPL[{1}, w]*HPL[{0, 1}, w] - HPL[{0, 1}, w]^2/2 + 
+     2*HPL[{1}, w]*HPL[{0, 0, 1}, w] - (4*I)*Pi*HPL[{0, 1, 1}, w] + 
+     2*HPL[{0}, w]*HPL[{0, 1, 1}, w] - 2*HPL[{0, 0, 1, 1}, w] - 
+     (2*I)*Pi*HPL[{1}, w]*\[Zeta][2] + HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] - 
+     HPL[{0, 1}, w]*\[Zeta][2] + (17*\[Zeta][2]^2)/10 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{0}, w]*\[Zeta][3] - 2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[5], {1, v, 1}] = (2*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] - 
+     HPL[{0}, v]*HPL[{1}, v]*HPL[{0, 1}, v] + HPL[{0, 1}, v]^2/2 + 
+     2*HPL[{1}, v]*HPL[{0, 0, 1}, v] - 2*HPL[{0, 0, 1, 1}, v] - 
+     (2*I)*Pi*HPL[{1}, v]*\[Zeta][2] + HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] - 
+     3*HPL[{0, 1}, v]*\[Zeta][2] + (27*\[Zeta][2]^2)/10 - 
+     2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[5], {1, v, v}] = 0
+ 
+lineM[H4[5], {u, 1, 1}] = (2*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] - 
+     HPL[{0}, u]*HPL[{1}, u]*HPL[{0, 1}, u] - HPL[{0, 1}, u]^2/2 + 
+     2*HPL[{1}, u]*HPL[{0, 0, 1}, u] - (4*I)*Pi*HPL[{0, 1, 1}, u] + 
+     2*HPL[{0}, u]*HPL[{0, 1, 1}, u] - 2*HPL[{0, 0, 1, 1}, u] - 
+     (2*I)*Pi*HPL[{1}, u]*\[Zeta][2] + HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] - 
+     HPL[{0, 1}, u]*\[Zeta][2] + (17*\[Zeta][2]^2)/10 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{0}, u]*\[Zeta][3] - 2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[5], {u, u, 1}] = 0
+ 
+lineM[H4[5], {w, 1, w}] = 0
+ 
+lineM[H4[6], {1, 1, w}] = (2*I)*Pi*HPL[{1}, w]*HPL[{0, 1}, w] - 
+     HPL[{0}, w]*HPL[{1}, w]*HPL[{0, 1}, w] + HPL[{0, 1}, w]^2/2 + 
+     2*HPL[{1}, w]*HPL[{0, 0, 1}, w] - 2*HPL[{0, 0, 1, 1}, w] - 
+     (2*I)*Pi*HPL[{1}, w]*\[Zeta][2] + HPL[{0}, w]*HPL[{1}, w]*\[Zeta][2] - 
+     3*HPL[{0, 1}, w]*\[Zeta][2] + (27*\[Zeta][2]^2)/10 - 
+     2*HPL[{1}, w]*\[Zeta][3]
+ 
+lineM[H4[6], {1, v, 1}] = (2*I)*Pi*HPL[{1}, v]*HPL[{0, 1}, v] - 
+     HPL[{0}, v]*HPL[{1}, v]*HPL[{0, 1}, v] - HPL[{0, 1}, v]^2/2 + 
+     2*HPL[{1}, v]*HPL[{0, 0, 1}, v] - (4*I)*Pi*HPL[{0, 1, 1}, v] + 
+     2*HPL[{0}, v]*HPL[{0, 1, 1}, v] - 2*HPL[{0, 0, 1, 1}, v] - 
+     (2*I)*Pi*HPL[{1}, v]*\[Zeta][2] + HPL[{0}, v]*HPL[{1}, v]*\[Zeta][2] - 
+     HPL[{0, 1}, v]*\[Zeta][2] + (17*\[Zeta][2]^2)/10 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{0}, v]*\[Zeta][3] - 2*HPL[{1}, v]*\[Zeta][3]
+ 
+lineM[H4[6], {1, v, v}] = 0
+ 
+lineM[H4[6], {u, 1, 1}] = (2*I)*Pi*HPL[{1}, u]*HPL[{0, 1}, u] - 
+     HPL[{0}, u]*HPL[{1}, u]*HPL[{0, 1}, u] - HPL[{0, 1}, u]^2/2 + 
+     2*HPL[{1}, u]*HPL[{0, 0, 1}, u] - (4*I)*Pi*HPL[{0, 1, 1}, u] + 
+     2*HPL[{0}, u]*HPL[{0, 1, 1}, u] - 2*HPL[{0, 0, 1, 1}, u] - 
+     (2*I)*Pi*HPL[{1}, u]*\[Zeta][2] + HPL[{0}, u]*HPL[{1}, u]*\[Zeta][2] - 
+     HPL[{0, 1}, u]*\[Zeta][2] + (17*\[Zeta][2]^2)/10 + (4*I)*Pi*\[Zeta][3] - 
+     2*HPL[{0}, u]*\[Zeta][3] - 2*HPL[{1}, u]*\[Zeta][3]
+ 
+lineM[H4[6], {u, u, 1}] = 0
+ 
+lineM[H4[6], {w, 1, w}] = 0

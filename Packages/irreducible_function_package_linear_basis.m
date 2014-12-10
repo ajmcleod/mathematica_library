@@ -1,5 +1,6 @@
 (* ::Package:: *)
 
+ClearAll[beyondSymbolTerms,functionsWeight];
 <<angle_bracket_identities.m
 stayInLyndonBasis=False;
 variables={u,v,w,1-u,1-v,1-w,yu,yv,yw};

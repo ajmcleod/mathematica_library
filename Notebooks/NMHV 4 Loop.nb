@@ -1,0 +1,3048 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[    106082,       3039]
+NotebookOptionsPosition[     99490,       2846]
+NotebookOutlinePosition[     99938,       2864]
+CellTagsIndexPosition[     99895,       2861]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["load definitions", "Section",
+ CellChangeTimes->{{3.625671447917399*^9, 3.62567145072265*^9}, {
+  3.626721431602838*^9, 3.6267214399866533`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"<<", "coproduct.m"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "\"\<collinearLimits.m\>\""}], "\[IndentingNewLine]", 
+ RowBox[{"<<", "NMHV.m"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"loops", "=", "4"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<oddIntegrabilitySolutionsWeight8.dat\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<evenIntegrabilitySolutionsWeight8.dat\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"previousWeightFunctions", ":=", 
+   RowBox[{"previousWeightFunctions", "=", 
+    RowBox[{"Join", "[", 
+     RowBox[{
+      RowBox[{"Get", "[", 
+       RowBox[{"\"\<weight_\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{
+          RowBox[{"2", "loops"}], "-", "1"}], "]"}], "<>", 
+        "\"\<_irreducible_functions_wfec.dat\>\""}], "]"}], ",", " ", 
+      RowBox[{"Get", "[", 
+       RowBox[{"\"\<weight_\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{
+          RowBox[{"2", "loops"}], "-", "1"}], "]"}], "<>", 
+        "\"\<_composite_functions_wfec.dat\>\""}], "]"}], ",", " ", 
+      RowBox[{"Get", "[", 
+       RowBox[{"\"\<weight_\>\"", "<>", 
+        RowBox[{"ToString", "[", 
+         RowBox[{
+          RowBox[{"2", "loops"}], "-", "1"}], "]"}], "<>", 
+        "\"\<_HPL_basis_wfec.dat\>\""}], "]"}], ",", " ", 
+      RowBox[{"beyondSymbolTerms", "[", 
+       RowBox[{
+        RowBox[{"2", "loops"}], "-", "1"}], "]"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"previousWeightTerms", ":=", 
+   RowBox[{"previousWeightTerms", "=", 
+    RowBox[{"DeleteCases", "[", 
+     RowBox[{"previousWeightFunctions", ",", 
+      RowBox[{"Alternatives", "@@", "pureMZV"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"oddPreviousWeightTerms", ":=", 
+   RowBox[{"oddPreviousWeightTerms", "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{"previousWeightTerms", ",", 
+      RowBox[{
+       RowBox[{"OddQ", "[", 
+        RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"evenPreviousWeightTerms", ":=", 
+   RowBox[{"evenPreviousWeightTerms", "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{"previousWeightTerms", ",", 
+      RowBox[{
+       RowBox[{"EvenQ", "[", 
+        RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"coefficientsLeft8", "[", "func_", "]"}], ":=", 
+   RowBox[{"Length", "[", 
+    RowBox[{"DeleteDuplicates", "[", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{
+       RowBox[{"Reap", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"e", "[", "i__", "]"}], ":>", 
+            RowBox[{"Sow", "[", 
+             RowBox[{"e", "[", "i", "]"}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"o", "[", "i__", "]"}], ":>", 
+            RowBox[{"Sow", "[", 
+             RowBox[{"o", "[", "i", "]"}], "]"}]}]}], "}"}]}], "]"}], "[", 
+       RowBox[{"[", "2", "]"}], "]"}], "]"}], "]"}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"weight8functions", ":=", 
+   RowBox[{"weight8functions", "=", 
+    RowBox[{"Join", "[", 
+     RowBox[{
+      RowBox[{"Flatten", "@", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"circleDot", "[", 
+          RowBox[{"func", ",", 
+           RowBox[{"Log", "[", "var", "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"func", ",", 
+           RowBox[{"Join", "[", 
+            RowBox[{
+            "oddPreviousWeightTerms", ",", "evenPreviousWeightTerms"}], 
+            "]"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"var", ",", 
+           RowBox[{"{", 
+            RowBox[{"u", ",", "v", ",", "w", ",", 
+             RowBox[{"1", "-", "u"}], ",", 
+             RowBox[{"1", "-", "v"}], ",", 
+             RowBox[{"1", "-", "w"}], ",", "yu", ",", "yv", ",", "yw"}], 
+            "}"}]}], "}"}]}], "]"}]}], ",", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"circleDot", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"MZV", "[", "7", "]"}], "\[LeftDoubleBracket]", "i", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"Log", "[", "var", "]"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "3"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"var", ",", 
+           RowBox[{"{", 
+            RowBox[{"u", ",", "v", ",", "w"}], "}"}]}], "}"}]}], "]"}], 
+       "]"}]}], "]"}]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"weight7functions", ":=", 
+   RowBox[{"weight7functions", "=", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"c", "[", 
+       RowBox[{
+        RowBox[{"functionsWeight", "[", "7", "]"}], "\[LeftDoubleBracket]", 
+        "i", "\[RightDoubleBracket]"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"i", ",", 
+        RowBox[{"Length", "@", 
+         RowBox[{"functionsWeight", "[", "7", "]"}]}]}], "}"}]}], "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", "u", "]"}], "=", "uVar"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", "v", "]"}], "=", "vVar"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", "w", "]"}], "=", "wVar"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", 
+    RowBox[{"1", "-", "u"}], "]"}], "=", 
+   RowBox[{"1", "-", "uVar"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", 
+    RowBox[{"1", "-", "v"}], "]"}], "=", 
+   RowBox[{"1", "-", "vVar"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", 
+    RowBox[{"1", "-", "w"}], "]"}], "=", 
+   RowBox[{"1", "-", "wVar"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", "yu", "]"}], "=", "yuVar"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", "yv", "]"}], "=", "yvVar"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"upper", "[", "yw", "]"}], "=", "ywVar"}], ";"}]}], "Input",
+ CellChangeTimes->{{3.62542836404924*^9, 3.625428370562173*^9}, {
+  3.626736965404751*^9, 3.6267369656518507`*^9}, {3.626738356034177*^9, 
+  3.626738356984165*^9}, {3.626894126259445*^9, 3.6268941789504747`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Vansatz", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"o", "[", 
+          RowBox[{"l", ",", 
+           RowBox[{"upper", "[", "m", "]"}]}], "]"}], 
+         RowBox[{"circleDot", "[", 
+          RowBox[{
+           RowBox[{
+           "oddPreviousWeightTerms", "\[LeftDoubleBracket]", "l", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"Log", "[", "m", "]"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"l", ",", 
+          RowBox[{"Length", "@", "oddPreviousWeightTerms"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"m", ",", 
+          RowBox[{"{", 
+           RowBox[{"yu", ",", "yv", ",", "yw"}], "}"}]}], "}"}]}], "]"}], "+", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"e", "[", 
+          RowBox[{"l", ",", 
+           RowBox[{"upper", "[", "m", "]"}]}], "]"}], 
+         RowBox[{"circleDot", "[", 
+          RowBox[{
+           RowBox[{
+           "evenPreviousWeightTerms", "\[LeftDoubleBracket]", "l", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"Log", "[", "m", "]"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"l", ",", 
+          RowBox[{"Length", "@", "evenPreviousWeightTerms"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"m", ",", 
+          RowBox[{"{", 
+           RowBox[{"u", ",", "v", ",", "w", ",", 
+            RowBox[{"1", "-", "u"}], ",", 
+            RowBox[{"1", "-", "v"}], ",", 
+            RowBox[{"1", "-", "w"}]}], "}"}]}], "}"}]}], "]"}], "+", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"e", "[", 
+          RowBox[{
+           RowBox[{"-", "i"}], ",", 
+           RowBox[{"upper", "[", "m", "]"}]}], "]"}], 
+         RowBox[{"circleDot", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"MZV", "[", "7", "]"}], "\[LeftDoubleBracket]", "i", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"Log", "[", "m", "]"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "3"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"m", ",", 
+          RowBox[{"{", 
+           RowBox[{"u", ",", "v", ",", "w"}], "}"}]}], "}"}]}], "]"}]}], ",", 
+     "evenSol"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"Vtansatz", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"o", "[", 
+          RowBox[{"l", ",", 
+           RowBox[{"upper", "[", "m", "]"}]}], "]"}], 
+         RowBox[{"circleDot", "[", 
+          RowBox[{
+           RowBox[{
+           "oddPreviousWeightTerms", "\[LeftDoubleBracket]", "l", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"Log", "[", "m", "]"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"l", ",", 
+          RowBox[{"Length", "@", "oddPreviousWeightTerms"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"m", ",", 
+          RowBox[{"{", 
+           RowBox[{"u", ",", "v", ",", "w", ",", 
+            RowBox[{"1", "-", "u"}], ",", 
+            RowBox[{"1", "-", "v"}], ",", 
+            RowBox[{"1", "-", "w"}]}], "}"}]}], "}"}]}], "]"}], "+", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"e", "[", 
+          RowBox[{"l", ",", 
+           RowBox[{"upper", "[", "m", "]"}]}], "]"}], 
+         RowBox[{"circleDot", "[", 
+          RowBox[{
+           RowBox[{
+           "evenPreviousWeightTerms", "\[LeftDoubleBracket]", "l", 
+            "\[RightDoubleBracket]"}], ",", 
+           RowBox[{"Log", "[", "m", "]"}]}], "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"l", ",", 
+          RowBox[{"Length", "@", "evenPreviousWeightTerms"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"m", ",", 
+          RowBox[{"{", 
+           RowBox[{"yu", ",", "yv", ",", "yw"}], "}"}]}], "}"}]}], "]"}]}], 
+     ",", "oddSol"}], "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft8", "[", "Vansatz", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"coefficientsLeft8", "[", "Vtansatz", "]"}]}], "Input",
+ CellChangeTimes->{{3.62575954003295*^9, 3.625759544174767*^9}, {
+   3.625760951596168*^9, 3.6257609571217527`*^9}, {3.625854578466268*^9, 
+   3.625854580621111*^9}, 3.625855036874872*^9, {3.626375576663905*^9, 
+   3.6263755823037853`*^9}, 3.626632537651876*^9, {3.626721303020015*^9, 
+   3.6267213052937717`*^9}}],
+
+Cell[BoxData[
+ FormBox["5149", TraditionalForm]], "Output",
+ CellChangeTimes->{3.62689294480014*^9, 3.6269123426324997`*^9}],
+
+Cell[BoxData[
+ FormBox["1763", TraditionalForm]], "Output",
+ CellChangeTimes->{3.62689294480014*^9, 3.6269123531003723`*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["uw symmetry/antisymmetry", "Section",
+ CellChangeTimes->{{3.625672136296012*^9, 3.625672141393828*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uwSymmetryExpressionV", "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Vansatz", "/.", 
+       RowBox[{"exchange", "[", 
+        RowBox[{"u", ",", "w"}], "]"}]}], ")"}], "-", "VansatzS"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625598923015374*^9, 3.625598991603167*^9}, {
+   3.625644127217599*^9, 3.625644127680118*^9}, 3.625644475643416*^9, {
+   3.625669859028792*^9, 3.6256698633319473`*^9}, {3.625759567443928*^9, 
+   3.625759584515156*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uwSymmetryEquationsV", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"uwSymmetryExpressionV", ",", "weight8functions"}], "]"}], 
+     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625669820707449*^9, 3.625669880062697*^9}, {
+  3.625670331752061*^9, 3.625670346787755*^9}, {3.6256723534598846`*^9, 
+  3.62567235468155*^9}, {3.625759589970916*^9, 3.62575959124364*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uwAntisymmetryExpressionVt", "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{"Vtansatz", "/.", 
+       RowBox[{"exchange", "[", 
+        RowBox[{"u", ",", "w"}], "]"}]}], ")"}], "+", "Vtansatz"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625645096031726*^9, 3.625645111117167*^9}, {
+  3.625645238227995*^9, 3.625645251735273*^9}, {3.6256703871230927`*^9, 
+  3.625670393233405*^9}, {3.625759594489601*^9, 3.625759598522922*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"uwAntisymmetryEquationsVt", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"uwAntisymmetryExpressionVt", ",", "weight8functions"}], "]"}], 
+     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625645301905645*^9, 3.625645347503585*^9}, {
+   3.6256704288159857`*^9, 3.625670497932295*^9}, 3.625670702016797*^9, {
+   3.625672358994796*^9, 3.625672360058927*^9}, {3.62575960327487*^9, 
+   3.625759604403386*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<uwSymmetryEquationsV.dat\>\"", ",", "uwSymmetryEquationsV"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.625670832724174*^9, 3.625670857632011*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<uwAntisymmetryEquationsVt.dat\>\"", ",", "uwAntisymmetryEquationsVt"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.625670886196979*^9, 3.625670888396553*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<uwSymmetrySolutionsV.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.625675290985466*^9, 3.625675299255219*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<uwAntisymmetrySolutionsVt.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6256753014048347`*^9, 3.625675318703372*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5153", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"uwSymmetrySolutionsV", ",", "True"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6256753372178297`*^9, 3.6256753436110973`*^9}, {
+  3.625682616642927*^9, 3.62568265930532*^9}, {3.6256868275951157`*^9, 
+  3.625686828004644*^9}}],
+
+Cell[BoxData[
+ FormBox["2797", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.625675344134798*^9, {3.6256826121193333`*^9, 3.625682659760908*^9}, {
+   3.625686807512673*^9, 3.625686830760363*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1763", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"uwAntisymmetrySolutionsVt", ",", "True"}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.625675376416291*^9, 3.6256754066319027`*^9}, {
+  3.6256756772062187`*^9, 3.625675710733329*^9}, {3.62568272034263*^9, 
+  3.625682740191168*^9}}],
+
+Cell[BoxData[
+ FormBox["786", TraditionalForm]], "Output",
+ CellChangeTimes->{3.625684593399267*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["cyclic vanishing", "Section",
+ CellChangeTimes->{{3.625673954099572*^9, 3.625673973186411*^9}, {
+  3.62672142988975*^9, 3.626721449390373*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cyclicVanishingExpressionVt", "=", 
+   RowBox[{"Vtansatz", "+", 
+    RowBox[{"(", 
+     RowBox[{"Vtansatz", "/.", "cycle"}], ")"}], "+", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Vtansatz", "/.", "cycle"}], "/.", "cycle"}], ")"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625674036047058*^9, 3.625674046338822*^9}, {
+  3.625674082642829*^9, 3.625674139848145*^9}, {3.62575961973332*^9, 
+  3.6257596266670856`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"cyclicVanishingEquationsVt", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"cyclicVanishingExpressionVt", ",", "weight8functions"}], "]"}],
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625682888068493*^9, 3.625682892338717*^9}, 
+   3.625682941904125*^9, {3.6257596414989*^9, 3.625759642794978*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<cyclicVanishingEquationsVt.dat\>\"", ",", 
+   "cyclicVanishingEquationsVt"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6256829497964478`*^9, 3.625682964366338*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<cyclicVanishingSolutionsVt.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.625683754871231*^9, 3.6256837696518393`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line2equationsOdd", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{
+        "uwAntisymmetrySolutionsVt", ",", "cyclicVanishingSolutionsVt"}], 
+        "]"}], ",", "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.62568378403436*^9, 3.625683784468349*^9}, {
+  3.62568386224759*^9, 3.625683903236483*^9}, {3.6256840641236477`*^9, 
+  3.625684082738296*^9}, {3.625761784410537*^9, 3.6257617879446497`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line2equationsOdd.dat\>\"", ",", "line2equationsOdd"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.625683905092078*^9, 3.6256839190518093`*^9}, {
+  3.6257617979435053`*^9, 3.6257618061050262`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line2solutionsOdd.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.625684251146266*^9, 3.6256842626155376`*^9}, {
+  3.625761807553787*^9, 3.625761820946988*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1763", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line2solutionsOdd", ",", "True"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.625684295008114*^9, 3.625684329021056*^9}, 
+   3.625761823892996*^9}],
+
+Cell[BoxData[
+ FormBox["583", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6256843124140997`*^9, 3.625684329550919*^9}, 
+   3.62576207299876*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["old final entry conditions", "Section",
+ CellChangeTimes->{{3.6263098245709867`*^9, 3.62630982881082*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionExpressionVt1", "=", 
+   RowBox[{"Vtansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626309865732624*^9, 3.6263098678305283`*^9}, {
+  3.626309998110155*^9, 3.626310017592566*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionEquationsVt1", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+      "oldFinalEntryConditionExpressionVt1", ",", "weight7functions"}], "]"}],
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6263102457116833`*^9, 3.626310250799535*^9}, 
+   3.6263104855521507`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionExpressionVt2", "=", 
+   RowBox[{"Vtansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626310262757354*^9, 3.6263102759751997`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionEquationsVt2", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+      "oldFinalEntryConditionExpressionVt2", ",", "weight7functions"}], "]"}],
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6263102823672657`*^9, 3.626310284230248*^9}, 
+   3.626310501562606*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionEquationsVt", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "oldFinalEntryConditionEquationsVt1", ",", 
+     "oldFinalEntryConditionEquationsVt2"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626310306312463*^9, 3.6263103193989487`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<oldFinalEntryConditionEquationsVt.dat\>\"", ",", 
+   "oldFinalEntryConditionEquationsVt"}], "]"}]], "Input",
+ CellChangeTimes->{{3.626310329326447*^9, 3.6263103385572977`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<oldFinalEntryConditionSolutionsVt.dat\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6263110304584923`*^9, 3.6263110358200274`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line3oldEquationsOdd", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{
+        "oldFinalEntryConditionSolutionsVt", ",", "line2solutionsOdd"}], 
+        "]"}], ",", "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626311092886014*^9, 3.626311104429397*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line3oldEquationsOdd.dat\>\"", ",", "line3oldEquationsOdd"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.626311126394648*^9, 3.626311136320068*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line3oldSolutionsOdd.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6263112097230997`*^9, 3.626311210439891*^9}, {
+  3.626311484438904*^9, 3.626311506421565*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1763", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line3oldSolutionsOdd", ",", "True"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{3.626311513160638*^9}],
+
+Cell[BoxData[
+ FormBox["222", TraditionalForm]], "Output",
+ CellChangeTimes->{3.626311513851365*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionExpressionV1", "=", 
+   RowBox[{"Vansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626310732045845*^9, 3.626310737206271*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionEquationsV1", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"oldFinalEntryConditionExpressionV1", ",", "weight7functions"}],
+       "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.626310747707267*^9, 3.626310750537023*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionExpressionV2", "=", 
+   RowBox[{"Vtansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{3.626310759317988*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionEquationsV2", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"oldFinalEntryConditionExpressionV2", ",", "weight7functions"}],
+       "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}],
+   ";"}]], "Input",
+ CellChangeTimes->{{3.6263107706898193`*^9, 3.626310773041088*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"oldFinalEntryConditionEquationsV", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "oldFinalEntryConditionEquationsV1", ",", 
+     "oldFinalEntryConditionEquationsV2"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626310790083288*^9, 3.6263107934813147`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<oldFinalEntryConditionEquationsV.dat\>\"", ",", 
+   "oldFinalEntryConditionEquationsV"}], "]"}]], "Input",
+ CellChangeTimes->{{3.626310802920993*^9, 3.6263108052162437`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<oldFinalEntryConditionSolutionsV.dat\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.626311386237947*^9, 3.626311390495391*^9}, {
+  3.6263114439833107`*^9, 3.6263114457983294`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line3oldEquationsEven", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{
+        "oldFinalEntryConditionSolutionsV", ",", "uwSymmetrySolutionsV"}], 
+        "]"}], ",", "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626311539528307*^9, 3.6263115905371447`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line3oldEquationsEven.dat\>\"", ",", "line3oldEquationsEven"}],
+   "]"}]], "Input",
+ CellChangeTimes->{{3.626311591992564*^9, 3.6263116059723988`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line3oldSolutionsEven.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.626312269877932*^9, 3.626312280085253*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5153", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line3oldSolutionsEven", ",", "True"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{3.6263129231139803`*^9}],
+
+Cell[BoxData[
+ FormBox["798", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6263129270549107`*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["new final entry conditions", "Section",
+ CellChangeTimes->{{3.625685224760852*^9, 3.625685229802115*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionVt1", "=", 
+   RowBox[{"Vtansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625730821253428*^9, 3.625730983034933*^9}, 
+   3.625759350651863*^9, {3.625759694315299*^9, 3.625759695339013*^9}, {
+   3.62630999015641*^9, 3.6263099935712233`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsVt1", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionVt1", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625761105106373*^9, 3.6257611623853207`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionVt2", "=", 
+   RowBox[{"Vtansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6257310334877253`*^9, 3.6257310528715076`*^9}, 
+   3.6257593479002037`*^9, {3.62575969971905*^9, 3.625759700636016*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsVt2", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionVt2", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6257611707706413`*^9, 3.6257611737706337`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionVt3", "=", 
+   RowBox[{"Vtansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625731066012882*^9, 3.6257310810768137`*^9}, 
+   3.6257593431570997`*^9, {3.625759703219589*^9, 3.625759704594974*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsVt3", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionVt3", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625761181516708*^9, 3.625761184122446*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsVt", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "finalEntryConditionEquationsVt1", ",", "finalEntryConditionEquationsVt2",
+      ",", "finalEntryConditionEquationsVt3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625761247884058*^9, 3.625761252064032*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<finalEntryConditionEquationsVt.dat\>\"", ",", 
+   "finalEntryConditionEquationsVt"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6257611867801447`*^9, 3.62576125694033*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<finalEntryConditionSolutionsVt.dat\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625761595840826*^9, 3.625761619225356*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line3equationsOdd", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{"finalEntryConditionSolutionsVt", ",", "line2solutionsOdd"}], 
+        "]"}], ",", "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6257616477679663`*^9, 3.6257617112696457`*^9}, {
+  3.625761751048979*^9, 3.625761777512205*^9}, {3.625762107011064*^9, 
+  3.6257621187421*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line3equationsOdd.dat\>\"", ",", "line3equationsOdd"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.625761732831387*^9, 3.625761763578175*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line3solutionsOdd.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6257625533872213`*^9, 3.6257625626826687`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"1763", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line3solutionsOdd", ",", "True"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.625762640838709*^9, 3.62576264091483*^9}}],
+
+Cell[BoxData[
+ FormBox["222", TraditionalForm]], "Output",
+ CellChangeTimes->{3.625762641600211*^9, 3.6257654207439117`*^9, 
+  3.625767053847378*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "R64.dat"}], ";"}]], "Input",
+ CellChangeTimes->{{3.625768024710044*^9, 3.625768030441821*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"U4ansatz", " ", "=", " ", 
+   RowBox[{"Uansatz4", "[", "Vansatz", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6257311126937*^9, 3.625731144567885*^9}, {
+  3.6257311799936132`*^9, 3.625731182824545*^9}, {3.625761281920917*^9, 
+  3.625761282814707*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionU1", "=", 
+   RowBox[{"U4ansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.625731199543055*^9, 3.625762838698227*^9, {3.6257629877704983`*^9, 
+   3.625763020422093*^9}, {3.62576325956989*^9, 3.625763273036895*^9}, {
+   3.625763436194837*^9, 3.625763447363378*^9}, {3.625763662851903*^9, 
+   3.6257636635442657`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsU1", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionU1", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625763644490511*^9, 3.6257636689154663`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionU2", "=", 
+   RowBox[{"U4ansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625763043136375*^9, 3.62576307304978*^9}, {
+  3.625763118037889*^9, 3.6257631619710827`*^9}, {3.62576334034214*^9, 
+  3.62576335685574*^9}, {3.625763400452573*^9, 3.625763429764604*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsU2", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionU2", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625768262861341*^9, 3.6257682667831573`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionU3", "=", 
+   RowBox[{"U4ansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", "0"}]}], 
+     "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625763456275968*^9, 3.625763461801057*^9}, {
+  3.6257683390642242`*^9, 3.625768341477333*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsU3", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionU3", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6257682788802834`*^9, 3.625768281110385*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionExpressionU4", "=", 
+   RowBox[{"U4ansatz", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"c", "[", "func", "]"}]}], ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+      ",", 
+      RowBox[{
+       RowBox[{"circleDot", "[", 
+        RowBox[{"func_", ",", 
+         RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"-", 
+        RowBox[{"c", "[", "func", "]"}]}]}]}], "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625730654654584*^9, 3.625730660007065*^9}, {
+  3.625763112384556*^9, 3.625763113948303*^9}, {3.625763170723394*^9, 
+  3.62576317610632*^9}, {3.625763243005518*^9, 3.625763253841927*^9}, {
+  3.6257633736498747`*^9, 3.625763392051961*^9}, {3.6257634666067038`*^9, 
+  3.625763470784782*^9}, {3.6257683477792597`*^9, 3.62576834988093*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsU4", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"finalEntryConditionExpressionU4", ",", "weight7functions"}], 
+      "]"}], "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.625768285887334*^9, 3.625768288326364*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsU12", " ", "=", " ", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "finalEntryConditionEquationsU1", ",", "finalEntryConditionEquationsU2"}],
+     "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"finalEntryConditionEquationsU34", " ", "=", " ", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "finalEntryConditionEquationsU3", ",", "finalEntryConditionEquationsU4"}],
+     "]"}]}], ";"}]}], "Input",
+ CellChangeTimes->{{3.6258420300171757`*^9, 3.6258420560320053`*^9}, {
+  3.625844366374949*^9, 3.62584439576757*^9}}],
+
+Cell[BoxData[{
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<finalEntryConditionEquationsU12.dat\>\"", ",", 
+   "finalEntryConditionEquationsU12"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<finalEntryConditionEquationsU34.dat\>\"", ",", 
+   "finalEntryConditionEquationsU34"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.625785463712348*^9, 3.625785477548368*^9}, {
+  3.625786673924076*^9, 3.625786684886835*^9}, {3.6258444685569487`*^9, 
+  3.625844480437624*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "\"\<finalEntryConditionSolutionsU12.dat\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<finalEntryConditionSolutionsU34.dat\>\""}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.625786646307206*^9, 3.625786667968133*^9}, {
+  3.625786833223132*^9, 3.625786847581073*^9}, {3.625844984229477*^9, 
+  3.625844988973627*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line3equationsEven", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{
+        "finalEntryConditionSolutionsU12", ",", 
+         "finalEntryConditionSolutionsU34", ",", "uwSymmetrySolutionsV"}], 
+        "]"}], ",", "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.625788210471201*^9, 3.625788247386944*^9}, {
+  3.6258450083519917`*^9, 3.625845047370823*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line3equationsEven.dat\>\"", ",", "line3equationsEven"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.625845050056765*^9, 3.625845058223299*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line3solutionsEven.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6258458276573133`*^9, 3.6258458365323*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5153", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line3solutionsEven", ",", "True"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.625768725339426*^9, 3.625768737160915*^9}}],
+
+Cell[BoxData[
+ FormBox["487", TraditionalForm]], "Output",
+ CellChangeTimes->{3.625845844797043*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["collinear vanishing", "Section",
+ CellChangeTimes->{{3.6258460559971237`*^9, 3.625846058483444*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression", "=", 
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"Normal", "[", 
+      RowBox[{
+       RowBox[{"CoefficientArrays", "[", 
+        RowBox[{
+         RowBox[{"Expand", "[", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{"Vansatz", "/.", "cycle"}], ")"}], "+", 
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{"Vansatz", "/.", "cycle"}], "/.", "cycle"}], ")"}]}], 
+           ")"}], "]"}], ",", "weight8functions"}], "]"}], 
+       "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}], ".", 
+     "weight8functions"}], ")"}]}], ";"}]], "Input",
+ CellChangeTimes->{
+  3.6263723425067797`*^9, {3.626372687708647*^9, 3.626372688619673*^9}, {
+   3.626372815189704*^9, 3.6263728211497297`*^9}, 3.626629728419938*^9, {
+   3.6266298355066347`*^9, 3.626629843365384*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression1a", "=", 
+   RowBox[{"List", "@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"base", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "func"}], ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+         ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+          "func"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "0"}]}], "}"}]}], "/.", "toHPL"}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626320997710908*^9, 3.62632101213091*^9}, 
+   3.62637232683344*^9, {3.626372696169312*^9, 3.6263727210664587`*^9}, {
+   3.6263728250256643`*^9, 3.6263728274139338`*^9}, {3.626373689470313*^9, 
+   3.6263737278265333`*^9}, {3.626375405454808*^9, 3.626375414577527*^9}, {
+   3.626629852526925*^9, 3.626629859890214*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"collinearVanishingBaseExpression1b", "[", "num_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"collinearVanishingBaseExpression1b", "[", "num", "]"}], "=", 
+    RowBox[{"ParallelTable", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "collinearVanishingBaseExpression1a", "\[LeftDoubleBracket]", "ii", 
+         "\[RightDoubleBracket]"}], "/.", 
+        RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}],
+        "/.", 
+       RowBox[{
+        RowBox[{"HPL", "[", 
+         RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"HPLexpand", "[", 
+         RowBox[{
+          RowBox[{"HPL", "[", 
+           RowBox[{"word", ",", 
+            RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"ii", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"num", "-", "1"}], ")"}], "*", "100"}], "+", "1"}], ",", 
+        RowBox[{"num", "*", "100"}]}], "}"}]}], "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6263740959595213`*^9, 3.626374251625998*^9}, {
+   3.6263745498830223`*^9, 3.626374563077474*^9}, {3.626374609926422*^9, 
+   3.626374672961817*^9}, {3.626374710293172*^9, 3.62637471146021*^9}, {
+   3.62637487103577*^9, 3.626374884770191*^9}, 3.626374919535534*^9, {
+   3.6263754374757643`*^9, 3.6263754469673033`*^9}, {3.626629864379242*^9, 
+   3.626629869099168*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Print", "[", 
+    RowBox[{"AbsoluteTiming", "[", 
+     RowBox[{
+      RowBox[{"collinearVanishingBaseExpression1b", "[", "j", "]"}], ";"}], 
+     "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "35"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.626374922910528*^9, 3.626374960520043*^9}, {
+   3.626375132996519*^9, 3.626375139044232*^9}, {3.62637516948624*^9, 
+   3.62637521533224*^9}, {3.626375520040861*^9, 3.626375565271947*^9}, {
+   3.6263756876499357`*^9, 3.6263756935927877`*^9}, {3.626377065195364*^9, 
+   3.6263770652878304`*^9}, 3.6266298820409403`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression1bLast", "=", 
+   RowBox[{"ParallelTable", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "collinearVanishingBaseExpression1a", "\[LeftDoubleBracket]", "ii", 
+        "\[RightDoubleBracket]"}], "/.", 
+       RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}], 
+      "/.", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"HPLexpand", "[", 
+        RowBox[{
+         RowBox[{"HPL", "[", 
+          RowBox[{"word", ",", 
+           RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ii", ",", "3501", ",", 
+       RowBox[{"Length", "@", "collinearVanishingBaseExpression1a"}]}], 
+      "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626381927215781*^9, 3.626381982145256*^9}, {
+  3.626629885986702*^9, 3.6266299050007887`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression1c", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{"Plus", "@@", 
+         RowBox[{"(", 
+          RowBox[{"uvwExpression1b", "[", "ii", "]"}], ")"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"ii", ",", "35"}], "}"}]}], "]"}], "+", 
+      RowBox[{"Plus", "@@", 
+       RowBox[{"(", "uvwExpression1bLast", ")"}]}]}], "]"}], "/.", 
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.626381987687727*^9, 3.626382032311*^9}, {
+  3.626629915377894*^9, 3.6266299224389143`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingEquationsV1", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"collinearVanishingBaseExpression1c", ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"col", "[", 
+          RowBox[{"7", ",", "i"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "@", 
+            RowBox[{"collinearFunctionsWeight", "[", "7", "]"}]}]}], "}"}]}], 
+        "]"}]}], "]"}], "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626382867190452*^9, 3.6263828875935593`*^9}, {
+   3.6263829286500273`*^9, 3.626382936745982*^9}, {3.626383159999819*^9, 
+   3.62638316585506*^9}, 3.626629930918971*^9}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<collinearVanishingEquationsV1.dat\>\"", ",", 
+   "collinearVanishingEquationsV1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.626383327480364*^9, 3.626383335498304*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression2a", "=", 
+   RowBox[{"List", "@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"base", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+         ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+         ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "func"}], ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+          "func"}], ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "0"}]}], "}"}]}], "/.", "toHPL"}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626332207399871*^9, 3.626332218391184*^9}, 
+   3.6263322688110857`*^9, {3.626372738933676*^9, 3.626372767145752*^9}, {
+   3.62637283243312*^9, 3.626372836925942*^9}, {3.6263831981106443`*^9, 
+   3.626383217954321*^9}, {3.626629969036944*^9, 3.626629970792636*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"collinearVanishingBaseExpression2b", "[", "num_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"collinearVanishingBaseExpression2b", "[", "num", "]"}], "=", 
+    RowBox[{"ParallelTable", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "collinearVanishingBaseExpression2a", "\[LeftDoubleBracket]", "ii", 
+         "\[RightDoubleBracket]"}], "/.", 
+        RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}],
+        "/.", 
+       RowBox[{
+        RowBox[{"HPL", "[", 
+         RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"HPLexpand", "[", 
+         RowBox[{
+          RowBox[{"HPL", "[", 
+           RowBox[{"word", ",", 
+            RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"ii", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"num", "-", "1"}], ")"}], "*", "100"}], "+", "1"}], ",", 
+        RowBox[{"num", "*", "100"}]}], "}"}]}], "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626383241493269*^9, 3.626383263999649*^9}, {
+  3.6266299723286877`*^9, 3.6266299822629957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Print", "[", 
+    RowBox[{"AbsoluteTiming", "[", 
+     RowBox[{
+      RowBox[{"collinearVanishingBaseExpression2b", "[", "j", "]"}], ";"}], 
+     "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "35"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.626383302346405*^9, 3.626383302408553*^9}, 
+   3.626629988942933*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression2bLast", "=", 
+   RowBox[{"ParallelTable", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "collinearVanishingBaseExpression2a", "\[LeftDoubleBracket]", "ii", 
+        "\[RightDoubleBracket]"}], "/.", 
+       RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}], 
+      "/.", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"HPLexpand", "[", 
+        RowBox[{
+         RowBox[{"HPL", "[", 
+          RowBox[{"word", ",", 
+           RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ii", ",", "3501", ",", 
+       RowBox[{"Length", "@", "collinearVanishingBaseExpression2a"}]}], 
+      "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626388337202079*^9, 3.6263883452957697`*^9}, {
+  3.626629991384961*^9, 3.626629999742231*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression2c", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{"Plus", "@@", 
+         RowBox[{"(", 
+          RowBox[{"collinearVanishingBaseExpression2b", "[", "ii", "]"}], 
+          ")"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"ii", ",", "35"}], "}"}]}], "]"}], "+", 
+      RowBox[{"Plus", "@@", 
+       RowBox[{"(", "collinearVanishingBaseExpression2bLast", ")"}]}]}], 
+     "]"}], "/.", 
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.626388376054722*^9, 3.626388382258965*^9}, {
+  3.6266300130073013`*^9, 3.626630027918787*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingEquationsV2", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"collinearVanishingBaseExpression2c", ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"col", "[", 
+          RowBox[{"7", ",", "i"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "@", 
+            RowBox[{"collinearFunctionsWeight", "[", "7", "]"}]}]}], "}"}]}], 
+        "]"}]}], "]"}], "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626388412357127*^9, 3.626388414267256*^9}, 
+   3.6266300342731647`*^9}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<collinearVanishingEquationsV2.dat\>\"", ",", 
+   "collinearVanishingEquationsV2"}], "]"}]], "Input",
+ CellChangeTimes->{{3.62638844368439*^9, 3.626388445469537*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression3a", "=", 
+   RowBox[{"List", "@@", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"base", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+         ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "func"}], ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", "0"}], 
+         ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", 
+             RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", "\[IndentingNewLine]", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", "0"}],
+          ",", 
+         RowBox[{
+          RowBox[{"circleDot", "[", 
+           RowBox[{"func_", ",", 
+            RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "0"}]}], "}"}]}], "/.", "toHPL"}], ")"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626392531914034*^9, 3.626392544994401*^9}, {
+  3.626393887573022*^9, 3.6263938986647787`*^9}, {3.6266300490431623`*^9, 
+  3.626630051359582*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"collinearVanishingBaseExpression3b", "[", "num_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"collinearVanishingBaseExpression3b", "[", "num", "]"}], "=", 
+    RowBox[{"ParallelTable", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "collinearVanishingBaseExpression3b", "\[LeftDoubleBracket]", "ii", 
+         "\[RightDoubleBracket]"}], "/.", 
+        RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}],
+        "/.", 
+       RowBox[{
+        RowBox[{"HPL", "[", 
+         RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"HPLexpand", "[", 
+         RowBox[{
+          RowBox[{"HPL", "[", 
+           RowBox[{"word", ",", 
+            RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], ",", 
+      RowBox[{"{", 
+       RowBox[{"ii", ",", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"num", "-", "1"}], ")"}], "*", "100"}], "+", "1"}], ",", 
+        RowBox[{"num", "*", "100"}]}], "}"}]}], "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6263939446504097`*^9, 3.6263939507071447`*^9}, {
+  3.626630053471916*^9, 3.626630062205916*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{"Print", "[", 
+    RowBox[{"AbsoluteTiming", "[", 
+     RowBox[{
+      RowBox[{"collinearVanishingBaseExpression3b", "[", "j", "]"}], ";"}], 
+     "]"}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"j", ",", "1", ",", "18"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.626393966068589*^9, 3.626393982321917*^9}, {
+  3.626630195819133*^9, 3.626630199603072*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression3bLast", "=", 
+   RowBox[{"ParallelTable", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "collinearVanishingBaseExpression3a", "\[LeftDoubleBracket]", "ii", 
+        "\[RightDoubleBracket]"}], "/.", 
+       RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}], 
+      "/.", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"HPLexpand", "[", 
+        RowBox[{
+         RowBox[{"HPL", "[", 
+          RowBox[{"word", ",", 
+           RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ii", ",", "1801", ",", 
+       RowBox[{"Length", "@", "collinearVanishingBaseExpression3a"}]}], 
+      "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6263940571815863`*^9, 3.6263940693395967`*^9}, {
+  3.626630202806666*^9, 3.6266302304431953`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingBaseExpression3c", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{"Plus", "@@", 
+         RowBox[{"(", 
+          RowBox[{"collinearVanishingBaseExpression3b", "[", "ii", "]"}], 
+          ")"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"ii", ",", "18"}], "}"}]}], "]"}], "+", 
+      RowBox[{"Plus", "@@", 
+       RowBox[{"(", "collinearVanishingBaseExpression3bLast", ")"}]}]}], 
+     "]"}], "/.", 
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6263940844732447`*^9, 3.626394095176015*^9}, {
+  3.626630235940275*^9, 3.626630237090104*^9}, {3.6266302944110937`*^9, 
+  3.6266303008741913`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingEquationsV3", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{"collinearVanishingBaseExpression3c", ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"col", "[", 
+          RowBox[{"7", ",", "i"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "@", 
+            RowBox[{"collinearFunctionsWeight", "[", "7", "]"}]}]}], "}"}]}], 
+        "]"}]}], "]"}], "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626394118451518*^9, 3.6263941218337*^9}, 
+   3.626630308812352*^9}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<collinearVanishingEquationsV3.dat\>\"", ",", 
+   "collinearVanishingEquationsV3"}], "]"}]], "Input",
+ CellChangeTimes->{{3.626394133360396*^9, 3.626394134896812*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"collinearVanishingEquationsV", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "collinearVanishingEquationsV1", ",", "collinearVanishingEquationsV2", 
+     ",", "collinearVanishingEquationsV3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626397703518244*^9, 3.626397724507622*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<collinearVanishingEquationsV.dat\>\"", ",", 
+   "collinearVanishingEquationsV"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6263977310852222`*^9, 3.626397732555339*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<collinearVanishingSolutionsV.dat\>\""}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.626398670085881*^9, 3.6263986846586647`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line4equationsEven", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{"collinearVanishingSolutionsV", ",", "line3solutionsEven"}], 
+        "]"}], ",", "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6263987008766403`*^9, 3.626398748852799*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line4equationsEven.dat\>\"", ",", "line4equationsEven"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.626398744178288*^9, 3.6263987567630577`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line4SolutionsEven.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6264025194419537`*^9, 3.626402526590747*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5153", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line4SolutionsEven", ",", "True"}], "]"}], "]"}], "-", 
+  "4"}]], "Input",
+ CellChangeTimes->{
+  3.6264025742419853`*^9, {3.626402714294961*^9, 3.626402714452742*^9}}],
+
+Cell[BoxData[
+ FormBox["284", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6264026555295687`*^9, 3.626402714823834*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["6134 OPE", "Section",
+ CellChangeTimes->{{3.6266303649079733`*^9, 3.626630368491803*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"OPE6134targetExpression", "=", 
+   RowBox[{"Sum", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"OPE6134target", "[", 
+       RowBox[{"4", ",", "n"}], "]"}], " ", 
+      RowBox[{
+       RowBox[{"Log", "[", "T", "]"}], "^", "n"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"n", ",", "0", ",", "4"}], "}"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"OPE6134targetExpression1", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "/", "2"}], ")"}], 
+      RowBox[{"Coefficient", "[", 
+       RowBox[{
+        RowBox[{"Plus", "@@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Factor", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"S", "^", "2"}]}], ")"}], "#"}], "]"}], "&"}], "/@", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"HPLfuncD", "[", 
+               RowBox[{"#", ",", "S"}], "]"}], "&"}], "/@", 
+             RowBox[{"List", "@@", "OPE6134targetExpression"}]}], ")"}]}], 
+          ")"}]}], ",", 
+        RowBox[{"1", "/", "S"}]}], "]"}]}], "]"}], "/.", 
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"OPE6134targetExpression2", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"-", "1"}], "/", "2"}], ")"}], 
+      RowBox[{"Coefficient", "[", 
+       RowBox[{
+        RowBox[{"Plus", "@@", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"Factor", "[", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{"1", "+", 
+                RowBox[{"S", "^", "2"}]}], ")"}], "#"}], "]"}], "&"}], "/@", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"HPLfuncD", "[", 
+               RowBox[{"#", ",", "S"}], "]"}], "&"}], "/@", 
+             RowBox[{"List", "@@", "OPE6134targetExpression"}]}], ")"}]}], 
+          ")"}]}], ",", "S"}], "]"}]}], "]"}], "/.", 
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"OPE6134targetExpression3", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{"1", "/", "2"}], ")"}], 
+      RowBox[{"Coefficient", "[", 
+       RowBox[{
+        RowBox[{"HPLfuncD", "[", 
+         RowBox[{"OPE6134targetExpression", ",", "T"}], "]"}], ",", 
+        RowBox[{"1", "/", "T"}]}], "]"}]}], "]"}], "/.", 
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6266787665394506`*^9, 3.626678782508679*^9}, {
+  3.626678812668705*^9, 3.626678823835328*^9}, {3.626678924538185*^9, 
+  3.626678970608938*^9}, {3.626711631195611*^9, 3.6267116503049583`*^9}, {
+  3.626711695682255*^9, 3.6267117084696283`*^9}, {3.626712212367099*^9, 
+  3.6267122229391336`*^9}, {3.6267134113583097`*^9, 3.626713418229294*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134expression1", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vansatz", "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "func"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "func"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}]}], "}"}]}], "/.", "toHPL"}], "/.", 
+       RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}], 
+      "/.", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"HPLexpand", "[", 
+        RowBox[{
+         RowBox[{"HPL", "[", 
+          RowBox[{"word", ",", 
+           RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], "]"}], "/.", 
+    
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6266303773250637`*^9, 3.6266303778591747`*^9}, 
+   3.6266306937900763`*^9, 3.626630734093783*^9, {3.626631070290003*^9, 
+   3.6266311151198673`*^9}, {3.62667609809552*^9, 3.626676101899006*^9}, {
+   3.626676372021964*^9, 3.626676377071137*^9}, {3.6266764288578978`*^9, 
+   3.6266764360404463`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134expression2", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vansatz", "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "func"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "func"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}]}], "}"}]}], "/.", "toHPL"}], "/.", 
+       RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}], 
+      "/.", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"HPLexpand", "[", 
+        RowBox[{
+         RowBox[{"HPL", "[", 
+          RowBox[{"word", ",", 
+           RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], "]"}], "/.", 
+    
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.626676517975506*^9, 3.626676544814324*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134expression3", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{"Vansatz", "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "func"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", 
+               RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}], ",", 
+           RowBox[{
+            RowBox[{"circleDot", "[", 
+             RowBox[{"func_", ",", 
+              RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+            "0"}]}], "}"}]}], "/.", "toHPL"}], "/.", 
+       RowBox[{"irreducibleFunctionsToCollinearExpansion", "[", "0", "]"}]}], 
+      "/.", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word_", ",", "arg_"}], "]"}], "\[RuleDelayed]", 
+       RowBox[{"HPLexpand", "[", 
+        RowBox[{
+         RowBox[{"HPL", "[", 
+          RowBox[{"word", ",", 
+           RowBox[{"arg", "/.", "uvwToFST"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"T", ",", "0", ",", "0"}], "}"}]}], "]"}]}]}], "]"}], "/.", 
+    
+    RowBox[{"collinearFunctionsToCoefficients", "[", "7", "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6266772907539377`*^9, 3.626677312473548*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134equations1", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"OPE6134expression1", "-", "OPE6134targetExpression1"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"col", "[", 
+          RowBox[{"7", ",", "i"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "@", 
+            RowBox[{"collinearFunctionsWeight", "[", "7", "]"}]}]}], "}"}]}], 
+        "]"}]}], "]"}], "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626677588609844*^9, 3.626677593451746*^9}, {
+  3.626677638990068*^9, 3.626677655989523*^9}, {3.626678027469243*^9, 
+  3.626678100911941*^9}, {3.626713518832458*^9, 3.6267135190524073`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134equations2", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"OPE6134expression2", "-", "OPE6134targetExpression2"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"col", "[", 
+          RowBox[{"7", ",", "i"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "@", 
+            RowBox[{"collinearFunctionsWeight", "[", "7", "]"}]}]}], "}"}]}], 
+        "]"}]}], "]"}], "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626678114033677*^9, 3.626678116080531*^9}, {
+  3.626713530289525*^9, 3.626713531342841*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134equations3", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"OPE6134expression3", "-", "OPE6134targetExpression3"}], ",", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{"col", "[", 
+          RowBox[{"7", ",", "i"}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "@", 
+            RowBox[{"collinearFunctionsWeight", "[", "7", "]"}]}]}], "}"}]}], 
+        "]"}]}], "]"}], "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.62667811911614*^9, 3.626678120840043*^9}, {
+  3.626713535425377*^9, 3.6267135368413067`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"OPE6134equationsV", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "OPE6134equations1", ",", "OPE6134equations2", ",", "OPE6134equations3"}],
+     "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626678207402605*^9, 3.626678229146411*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<OPE6134equationsV.dat\>\"", ",", "OPE6134equationsV"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.626678232243998*^9, 3.626678242146522*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<OPE6134solutionsV.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.626713914481861*^9, 3.6267139254275293`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"line5equationsEven", "=", 
+   RowBox[{"ReplaceAll", "[", 
+    RowBox[{
+     RowBox[{"DeleteCases", "[", 
+      RowBox[{
+       RowBox[{"Join", "[", 
+        RowBox[{"OPE6134solutionsV", ",", "line4SolutionsEven"}], "]"}], ",", 
+       "True"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{"Equal", "[", 
+       RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"(", 
+       RowBox[{"x", "-", "y"}], ")"}]}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626713969551441*^9, 3.62671398946906*^9}, 
+   3.626714036199897*^9}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<line5equationsEven.dat\>\"", ",", "line5equationsEven"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.626714048768621*^9, 3.6267140657562428`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<line5solutionsEven.dat\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.62671887885872*^9, 3.626718907821212*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"5153", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{"line5solutionsEven", ",", "True"}], "]"}], "]"}], "-", 
+  "4"}]], "Input",
+ CellChangeTimes->{3.626718911251587*^9}],
+
+Cell[BoxData[
+ FormBox["110", TraditionalForm]], "Output",
+ CellChangeTimes->{3.626720004691142*^9}]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["spurious pole constraint", "Section",
+ CellChangeTimes->{{3.626893187696795*^9, 3.626893200297923*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"VtansatzList", "=", 
+   RowBox[{"List", "@@", "Vtansatz"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.626911968632642*^9, 3.6269119861492357`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"VtansatzSymbolTable", "[", "n_", "]"}], ":=", 
+  RowBox[{
+   RowBox[{"VtansatzSymbolTable", "[", "n", "]"}], "=", 
+   RowBox[{"ParallelTable", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+       "VtansatzList", "\[LeftDoubleBracket]", "ii", 
+        "\[RightDoubleBracket]"}], "/.", 
+       RowBox[{
+        RowBox[{"circleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "var_", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", 
+         RowBox[{
+          RowBox[{"coproduct", "[", 
+           RowBox[{"max", ",", "func"}], "]"}], ",", 
+          RowBox[{"Log", "[", "var", "]"}]}], "]"}]}]}], "/.", "toLogs"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"ii", ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"n", "-", "1"}], ")"}], "*", "100"}], " ", "+", "1"}], ",", 
+       
+       RowBox[{"n", "*", "100"}]}], "}"}]}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.626912064170044*^9, 3.6269121612306967`*^9}, {
+  3.626912249437975*^9, 3.626912258532757*^9}, {3.6269123894523163`*^9, 
+  3.6269123899767637`*^9}, {3.626912454475011*^9, 3.626912502364243*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Monitor", "[", 
+  RowBox[{
+   RowBox[{"Do", "[", 
+    RowBox[{
+     RowBox[{"VtansatzSymbolTable", "[", "nn", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"nn", ",", "80"}], "}"}]}], "]"}], ",", "nn"}], "]"}]], "Input",\
+
+ CellChangeTimes->{
+  3.626912451683137*^9, {3.626912535008133*^9, 3.62691259004827*^9}}],
+
+Cell[BoxData[
+ FormBox["$Aborted", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6269125779701653`*^9, 3.626924757111465*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"VtansatzSymbol", "=", 
+   RowBox[{
+    RowBox[{"Vtansatz", "/.", 
+     RowBox[{
+      RowBox[{"circleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "var_", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", 
+       RowBox[{
+        RowBox[{"coproduct", "[", 
+         RowBox[{"max", ",", "func"}], "]"}], ",", 
+        RowBox[{"Log", "[", "var", "]"}]}], "]"}]}]}], "/.", "toLogs"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6268933803687572`*^9, 3.626893382176134*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"VansatzSymbol", "=", 
+   RowBox[{
+    RowBox[{"Vansatz", "/.", 
+     RowBox[{
+      RowBox[{"circleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "var_", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", 
+       RowBox[{
+        RowBox[{"coproduct", "[", 
+         RowBox[{"max", ",", "func"}], "]"}], ",", 
+        RowBox[{"Log", "[", "var", "]"}]}], "]"}]}]}], "/.", "toLogs"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.626893218970332*^9, 3.6268932355967903`*^9}, {
+  3.626893297241729*^9, 3.6268933726947517`*^9}}]
+}, Open  ]]
+},
+WindowSize->{1218, 515},
+WindowMargins->{{12, Automatic}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->FrontEnd`FileName[{"Creative"}, "NaturalColor.nb", 
+  CharacterEncoding -> "UTF-8"]
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 151, 2, 72, "Section"],
+Cell[733, 26, 6432, 180, 443, "Input"],
+Cell[CellGroupData[{
+Cell[7190, 210, 4506, 120, 143, "Input"],
+Cell[11699, 332, 124, 2, 37, "Output"],
+Cell[11826, 336, 124, 2, 37, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11999, 344, 109, 1, 72, "Section"],
+Cell[12111, 347, 525, 13, 37, "Input"],
+Cell[12639, 362, 517, 11, 37, "Input"],
+Cell[13159, 375, 503, 12, 37, "Input"],
+Cell[13665, 389, 556, 12, 37, "Input"],
+Cell[14224, 403, 199, 4, 37, "Input"],
+Cell[14426, 409, 212, 5, 37, "Input"],
+Cell[14641, 416, 160, 3, 37, "Input"],
+Cell[14804, 421, 167, 3, 37, "Input"],
+Cell[CellGroupData[{
+Cell[14996, 428, 340, 7, 37, "Input"],
+Cell[15339, 437, 202, 4, 37, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15578, 446, 347, 8, 37, "Input"],
+Cell[15928, 456, 100, 2, 37, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[16077, 464, 149, 2, 42, "Section"],
+Cell[16229, 468, 460, 12, 37, "Input"],
+Cell[16692, 482, 455, 10, 37, "Input"],
+Cell[17150, 494, 217, 5, 37, "Input"],
+Cell[17370, 501, 168, 3, 37, "Input"],
+Cell[17541, 506, 721, 18, 37, "Input"],
+Cell[18265, 526, 248, 5, 37, "Input"],
+Cell[18516, 533, 208, 4, 37, "Input"],
+Cell[CellGroupData[{
+Cell[18749, 541, 260, 6, 37, "Input"],
+Cell[19012, 549, 151, 3, 37, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[19212, 558, 112, 1, 42, "Section"],
+Cell[19327, 561, 2050, 55, 68, "Input"],
+Cell[21380, 618, 438, 11, 37, "Input"],
+Cell[21821, 631, 2001, 54, 68, "Input"],
+Cell[23825, 687, 436, 11, 37, "Input"],
+Cell[24264, 700, 301, 7, 37, "Input"],
+Cell[24568, 709, 231, 5, 37, "Input"],
+Cell[24802, 716, 180, 4, 37, "Input"],
+Cell[24985, 722, 577, 16, 37, "Input"],
+Cell[25565, 740, 199, 4, 37, "Input"],
+Cell[25767, 746, 211, 4, 37, "Input"],
+Cell[CellGroupData[{
+Cell[26003, 754, 213, 5, 37, "Input"],
+Cell[26219, 761, 100, 2, 37, "Output"]
+}, Open  ]],
+Cell[26334, 766, 1997, 54, 68, "Input"],
+Cell[28334, 822, 400, 9, 37, "Input"],
+Cell[28737, 833, 1974, 54, 68, "Input"],
+Cell[30714, 889, 402, 9, 37, "Input"],
+Cell[31119, 900, 298, 7, 37, "Input"],
+Cell[31420, 909, 229, 5, 37, "Input"],
+Cell[31652, 916, 228, 5, 37, "Input"],
+Cell[31883, 923, 582, 16, 37, "Input"],
+Cell[32468, 941, 203, 4, 37, "Input"],
+Cell[32674, 947, 161, 3, 37, "Input"],
+Cell[CellGroupData[{
+Cell[32860, 954, 216, 5, 37, "Input"],
+Cell[33079, 961, 102, 2, 37, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[33230, 969, 111, 1, 42, "Section"],
+Cell[33344, 972, 2015, 56, 83, "Input"],
+Cell[35362, 1030, 398, 9, 37, "Input"],
+Cell[35763, 1041, 1969, 55, 83, "Input"],
+Cell[37735, 1098, 400, 9, 37, "Input"],
+Cell[38138, 1109, 1968, 55, 83, "Input"],
+Cell[40109, 1166, 396, 9, 37, "Input"],
+Cell[40508, 1177, 330, 7, 37, "Input"],
+Cell[40841, 1186, 224, 5, 37, "Input"],
+Cell[41068, 1193, 173, 4, 37, "Input"],
+Cell[41244, 1199, 662, 17, 37, "Input"],
+Cell[41909, 1218, 193, 4, 37, "Input"],
+Cell[42105, 1224, 161, 3, 37, "Input"],
+Cell[CellGroupData[{
+Cell[42291, 1231, 233, 5, 37, "Input"],
+Cell[42527, 1238, 149, 3, 37, "Output"]
+}, Open  ]],
+Cell[42691, 1244, 135, 3, 37, "Input"],
+Cell[42829, 1249, 290, 6, 37, "Input"],
+Cell[43122, 1257, 2195, 58, 68, "Input"],
+Cell[45320, 1317, 396, 9, 37, "Input"],
+Cell[45719, 1328, 2138, 56, 68, "Input"],
+Cell[47860, 1386, 396, 9, 37, "Input"],
+Cell[48259, 1397, 1959, 55, 68, "Input"],
+Cell[50221, 1454, 396, 9, 37, "Input"],
+Cell[50620, 1465, 2254, 59, 68, "Input"],
+Cell[52877, 1526, 394, 9, 37, "Input"],
+Cell[53274, 1537, 585, 14, 53, "Input"],
+Cell[53862, 1553, 487, 11, 53, "Input"],
+Cell[54352, 1566, 383, 9, 53, "Input"],
+Cell[54738, 1577, 677, 18, 53, "Input"],
+Cell[55418, 1597, 195, 4, 37, "Input"],
+Cell[55616, 1603, 158, 3, 37, "Input"],
+Cell[CellGroupData[{
+Cell[55799, 1610, 235, 5, 37, "Input"],
+Cell[56037, 1617, 100, 2, 37, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[56186, 1625, 106, 1, 42, "Section"],
+Cell[56295, 1628, 906, 23, 53, "Input"],
+Cell[57204, 1653, 2399, 61, 68, "Input"],
+Cell[59606, 1716, 1544, 37, 83, "Input"],
+Cell[61153, 1755, 646, 14, 37, "Input"],
+Cell[61802, 1771, 1049, 27, 68, "Input"],
+Cell[62854, 1800, 678, 18, 53, "Input"],
+Cell[63535, 1820, 804, 19, 53, "Input"],
+Cell[64342, 1841, 221, 5, 37, "Input"],
+Cell[64566, 1848, 2346, 60, 68, "Input"],
+Cell[66915, 1910, 1273, 33, 83, "Input"],
+Cell[68191, 1945, 398, 11, 37, "Input"],
+Cell[68592, 1958, 1049, 27, 68, "Input"],
+Cell[69644, 1987, 736, 20, 68, "Input"],
+Cell[70383, 2009, 707, 18, 53, "Input"],
+Cell[71093, 2029, 220, 5, 37, "Input"],
+Cell[71316, 2036, 2223, 59, 68, "Input"],
+Cell[73542, 2097, 1273, 33, 83, "Input"],
+Cell[74818, 2132, 421, 11, 37, "Input"],
+Cell[75242, 2145, 1053, 27, 68, "Input"],
+Cell[76298, 2174, 789, 21, 68, "Input"],
+Cell[77090, 2197, 703, 18, 53, "Input"],
+Cell[77796, 2217, 221, 5, 37, "Input"],
+Cell[78020, 2224, 322, 7, 37, "Input"],
+Cell[78345, 2233, 221, 5, 37, "Input"],
+Cell[78569, 2240, 172, 4, 37, "Input"],
+Cell[78744, 2246, 564, 15, 37, "Input"],
+Cell[79311, 2263, 197, 4, 37, "Input"],
+Cell[79511, 2269, 160, 3, 37, "Input"],
+Cell[CellGroupData[{
+Cell[79696, 2276, 275, 7, 37, "Input"],
+Cell[79974, 2285, 124, 2, 37, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[80147, 2293, 95, 1, 42, "Section"],
+Cell[80245, 2296, 3097, 87, 113, "Input"],
+Cell[83345, 2385, 3052, 78, 98, "Input"],
+Cell[86400, 2465, 2797, 74, 98, "Input"],
+Cell[89200, 2541, 2796, 74, 98, "Input"],
+Cell[91999, 2617, 848, 20, 53, "Input"],
+Cell[92850, 2639, 751, 19, 53, "Input"],
+Cell[93604, 2660, 752, 19, 53, "Input"],
+Cell[94359, 2681, 274, 7, 37, "Input"],
+Cell[94636, 2690, 193, 4, 37, "Input"],
+Cell[94832, 2696, 159, 3, 37, "Input"],
+Cell[94994, 2701, 575, 16, 37, "Input"],
+Cell[95572, 2719, 197, 4, 37, "Input"],
+Cell[95772, 2725, 157, 3, 37, "Input"],
+Cell[CellGroupData[{
+Cell[95954, 2732, 224, 6, 37, "Input"],
+Cell[96181, 2740, 100, 2, 37, "Output"]
+}, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[96330, 2748, 109, 1, 42, "Section"],
+Cell[96442, 2751, 181, 4, 37, "Input"],
+Cell[96626, 2757, 1194, 32, 68, "Input"],
+Cell[CellGroupData[{
+Cell[97845, 2793, 336, 10, 37, "Input"],
+Cell[98184, 2805, 129, 2, 37, "Output"]
+}, Open  ]],
+Cell[98328, 2810, 547, 15, 37, "Input"],
+Cell[98878, 2827, 596, 16, 37, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

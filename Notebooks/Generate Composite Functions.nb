@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[      5662,        162]
-NotebookOptionsPosition[      5148,        141]
-NotebookOutlinePosition[      5503,        157]
-CellTagsIndexPosition[      5460,        154]
+NotebookDataLength[      6702,        193]
+NotebookOptionsPosition[      6182,        172]
+NotebookOutlinePosition[      6537,        188]
+CellTagsIndexPosition[      6494,        185]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -58,16 +58,45 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{
    RowBox[{"irreducibleFunctionsWeight", "[", "7", "]"}], "=", 
-   RowBox[{"Table", "[", 
+   RowBox[{"Join", "[", 
     RowBox[{
-     RowBox[{
-      RowBox[{"H3", "[", "1", "]"}], 
-      RowBox[{"H4", "[", "i", "]"}]}], ",", 
-     RowBox[{"{", 
-      RowBox[{"i", ",", "6"}], "}"}]}], "]"}]}], ";"}]}], "Input",
+     RowBox[{"w", "[", "7", "]"}], ",", 
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"H3", "[", "1", "]"}], 
+        RowBox[{"H4", "[", "i", "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "6"}], "}"}]}], "]"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"irreducibleFunctionsWeight", "[", "8", "]"}], "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{"Table", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"H3", "[", "1", "]"}], 
+        RowBox[{"H5", "[", "i", "]"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "23"}], "}"}]}], "]"}], ",", 
+     RowBox[{"Flatten", "@", 
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"H4", "[", "i", "]"}], 
+         RowBox[{"H4", "[", "j", "]"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", "6"}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"j", ",", "6"}], "}"}]}], "]"}]}]}], "]"}]}], 
+  ";"}]}], "Input",
  CellChangeTimes->{{3.615436519412293*^9, 3.615436528099934*^9}, {
   3.615436581666512*^9, 3.6154367019397573`*^9}, {3.6154367519396067`*^9, 
-  3.6154368013572273`*^9}, {3.615436911288886*^9, 3.615436917027803*^9}}],
+  3.6154368013572273`*^9}, {3.615436911288886*^9, 3.615436917027803*^9}, {
+  3.619793854015993*^9, 3.61979385789209*^9}, {3.619793908063219*^9, 
+  3.619794019175131*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -93,7 +122,8 @@ Cell[BoxData[
 
 Cell[BoxData[
  RowBox[{
-  RowBox[{"compositeWeight", "=", "7"}], ";"}]], "Input"],
+  RowBox[{"compositeWeight", "=", "8"}], ";"}]], "Input",
+ CellChangeTimes->{{3.619794059919853*^9, 3.619794060375765*^9}}],
 
 Cell[BoxData[
  RowBox[{
@@ -135,9 +165,10 @@ Cell[BoxData[
  RowBox[{"compositeFunctions", ">>", 
   "\"\</Users/thatscottishkid/Google\\ Drive/Stanford/Lance/Mathematica\\ \
 Library/Function Library/Weight\\ \
-7/weight_7_composite_functions_wfec.dat\>\""}]], "Input",
+8/weight_8_composite_functions_wfec.dat\>\""}]], "Input",
  CellChangeTimes->{{3.615436954884337*^9, 3.6154369577921257`*^9}, {
-  3.615437437097561*^9, 3.615437486644493*^9}}]
+  3.615437437097561*^9, 3.615437486644493*^9}, {3.619794561577589*^9, 
+  3.6197945645851717`*^9}}]
 },
 WindowSize->{740, 652},
 WindowMargins->{{65, Automatic}, {Automatic, 0}},
@@ -158,12 +189,12 @@ CellTagsIndex->{}
 Notebook[{
 Cell[557, 20, 123, 2, 27, "Input"],
 Cell[683, 24, 361, 9, 27, "Input"],
-Cell[1047, 35, 1264, 34, 88, "Input"],
-Cell[2314, 71, 181, 5, 27, "Input"],
-Cell[2498, 78, 567, 13, 43, "Input"],
-Cell[3068, 93, 81, 2, 27, "Input"],
-Cell[3152, 97, 1651, 34, 73, "Input"],
-Cell[4806, 133, 338, 6, 58, "Input"]
+Cell[1047, 35, 2181, 63, 118, "Input"],
+Cell[3231, 100, 181, 5, 27, "Input"],
+Cell[3415, 107, 567, 13, 43, "Input"],
+Cell[3985, 122, 147, 3, 27, "Input"],
+Cell[4135, 127, 1651, 34, 73, "Input"],
+Cell[5789, 163, 389, 7, 58, "Input"]
 }
 ]
 *)

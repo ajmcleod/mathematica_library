@@ -1,26 +1,26 @@
-MRK[Subscript[OverTilde[\[CapitalPhi]],6]] = -4*Pi*I*SVHPL[0, 1]
+MRK[Subscript[OverTilde[\[CapitalPhi]],6], x_ -> 1] := -4*Pi*I*SVHPL[0, 1]
 
-MRK[Superscript[\[CapitalOmega],"(2)"][u,v,w]] = Pi^2*Log[\[Xi]]*SVHPL[0] - (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0] - (Pi^2*SVHPL[0]^2)/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0]^2 + ((5*I)/24)*Pi*SVHPL[0]^3 - 
+MRK[Superscript[\[CapitalOmega],"(2)"][u,v,w], u -> 1] = Pi^2*Log[\[Xi]]*SVHPL[0] - (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0] - (Pi^2*SVHPL[0]^2)/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0]^2 + ((5*I)/24)*Pi*SVHPL[0]^3 - 
  2*Pi^2*Log[\[Xi]]*SVHPL[1] + I*Pi*Log[\[Xi]]^2*SVHPL[1] + Pi^2*SVHPL[0]*SVHPL[1] - I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1] + (I/4)*Pi*SVHPL[0]^2*SVHPL[1] - 
  Pi^2*SVHPL[1]^2 + I*Pi*Log[\[Xi]]*SVHPL[1]^2 + (I/2)*Pi*SVHPL[0]*SVHPL[1]^2 + (I/3)*Pi*SVHPL[1]^3 - (2*I)*Pi*SVHPL[0, 0, 1] - (4*I)*Pi*SVHPL[0, 1, 1] + 
  I*Pi*SVHPL[0]*\[Zeta][2] - (2*I)*Pi*SVHPL[1]*\[Zeta][2] - (4*I)*Pi*\[Zeta][3]
 
-MRK[Superscript[\[CapitalOmega],"(2)"][v,w,u]] = ((2*I)/3)*Pi*Log[\[Xi]]^3 + Log[\[Xi]]^4/4 - (I/2)*Pi*Log[\[Xi]]*SVHPL[0]^2 - (Log[\[Xi]]^2*SVHPL[0]^2)/8 + SVHPL[0]^4/64 + (2*I)*Pi*Log[\[Xi]]^2*SVHPL[1] + 
+MRK[Superscript[\[CapitalOmega],"(2)"][v,w,u], u -> 1] = ((2*I)/3)*Pi*Log[\[Xi]]^3 + Log[\[Xi]]^4/4 - (I/2)*Pi*Log[\[Xi]]*SVHPL[0]^2 - (Log[\[Xi]]^2*SVHPL[0]^2)/8 + SVHPL[0]^4/64 + (2*I)*Pi*Log[\[Xi]]^2*SVHPL[1] + 
  Log[\[Xi]]^3*SVHPL[1] + (I/2)*Pi*SVHPL[0]^2*SVHPL[1] - (Log[\[Xi]]*SVHPL[0]^2*SVHPL[1])/4 + (2*I)*Pi*Log[\[Xi]]*SVHPL[1]^2 + (3*Log[\[Xi]]^2*SVHPL[1]^2)/2 - 
  (SVHPL[0]^2*SVHPL[1]^2)/8 + ((2*I)/3)*Pi*SVHPL[1]^3 + Log[\[Xi]]*SVHPL[1]^3 + SVHPL[1]^4/4 - (4*I)*Pi*SVHPL[0, 0, 1] + (4*I)*Pi*Log[\[Xi]]*\[Zeta][2] + 
  Log[\[Xi]]^2*\[Zeta][2] + (SVHPL[0]^2*\[Zeta][2])/4 + (4*I)*Pi*SVHPL[1]*\[Zeta][2] + 2*Log[\[Xi]]*SVHPL[1]*\[Zeta][2] + SVHPL[1]^2*\[Zeta][2] + \[Zeta][2]^2 + (4*I)*Pi*\[Zeta][3] + 
  4*Log[\[Xi]]*\[Zeta][3] + 4*SVHPL[1]*\[Zeta][3]
 
-MRK[Superscript[\[CapitalOmega],"(2)"][w,u,v]] = -(Pi^2*Log[\[Xi]]*SVHPL[0]) + (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0] - (Pi^2*SVHPL[0]^2)/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0]^2 - ((5*I)/24)*Pi*SVHPL[0]^3 - 
+MRK[Superscript[\[CapitalOmega],"(2)"][w,u,v], u -> 1] = -(Pi^2*Log[\[Xi]]*SVHPL[0]) + (I/2)*Pi*Log[\[Xi]]^2*SVHPL[0] - (Pi^2*SVHPL[0]^2)/4 + (I/4)*Pi*Log[\[Xi]]*SVHPL[0]^2 - ((5*I)/24)*Pi*SVHPL[0]^3 - 
  2*Pi^2*Log[\[Xi]]*SVHPL[1] + I*Pi*Log[\[Xi]]^2*SVHPL[1] - Pi^2*SVHPL[0]*SVHPL[1] + I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[1] + (I/4)*Pi*SVHPL[0]^2*SVHPL[1] - 
  Pi^2*SVHPL[1]^2 + I*Pi*Log[\[Xi]]*SVHPL[1]^2 - (I/2)*Pi*SVHPL[0]*SVHPL[1]^2 + (I/3)*Pi*SVHPL[1]^3 - (2*I)*Pi*SVHPL[0, 0, 1] + (4*I)*Pi*SVHPL[0, 1, 1] - 
  I*Pi*SVHPL[0]*\[Zeta][2] - (2*I)*Pi*SVHPL[1]*\[Zeta][2] - (4*I)*Pi*\[Zeta][3]
 
-MRK[Subscript[F,1][u,v,w]] = (-4*I)*Pi*Log[\[Xi]]*SVHPL[0, 1]
+MRK[Subscript[F,1][u,v,w], u -> 1] = (-4*I)*Pi*Log[\[Xi]]*SVHPL[0, 1]
 
-MRK[Subscript[F,1][v,w,u]] = 0
+MRK[Subscript[F,1][v,w,u], u -> 1] = 0
 
-MRK[Subscript[F,1][w,u,v]] = 0
+MRK[Subscript[F,1][w,u,v], u -> 1] = 0
 
 MRK[Subscript[H,1][u,v,w]] = 4*Pi^2*Log[\[Xi]]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]^2*SVHPL[0, 1] + Pi^2*SVHPL[0]*SVHPL[0, 1] - I*Pi*Log[\[Xi]]*SVHPL[0]*SVHPL[0, 1] - 
  I*Pi*SVHPL[0]^2*SVHPL[0, 1] + 2*Pi^2*SVHPL[1]*SVHPL[0, 1] - (2*I)*Pi*Log[\[Xi]]*SVHPL[1]*SVHPL[0, 1] + I*Pi*SVHPL[0]*SVHPL[1]*SVHPL[0, 1] + 

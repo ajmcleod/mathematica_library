@@ -1,0 +1,75 @@
+collinearExpansionTerm[H3[1], 0, 0, u] = 0
+ 
+collinearExpansionTerm[H3[1], 0, 1, u] = 0
+ 
+collinearExpansionTerm[H3[1], 0, 2, u] = 0
+ 
+collinearExpansionTerm[H3[1], 0, 3, u] = 0
+ 
+collinearExpansionTerm[H3[1], 1, 0, u] = (2*HPL[{1}, -S^2])/(F*S) - 
+     (2*F*HPL[{1}, -S^2])/S + (2*S*HPL[{1}, -S^2])/F - 2*F*S*HPL[{1}, -S^2] + 
+     HPL[{1}, -S^2]^2/(F*S) - (F*HPL[{1}, -S^2]^2)/S + 
+     (S*HPL[{1}, -S^2]^2)/F - F*S*HPL[{1}, -S^2]^2 + (2*S*Log[S^2])/F - 
+     2*F*S*Log[S^2] + (HPL[{1}, -S^2]*Log[S^2])/(F*S) - 
+     (F*HPL[{1}, -S^2]*Log[S^2])/S + (S*HPL[{1}, -S^2]*Log[S^2])/F - 
+     F*S*HPL[{1}, -S^2]*Log[S^2]
+ 
+collinearExpansionTerm[H3[1], 1, 1, u] = (-2*HPL[{1}, -S^2])/(F*S) + 
+     (2*F*HPL[{1}, -S^2])/S - (2*S*HPL[{1}, -S^2])/F + 2*F*S*HPL[{1}, -S^2] - 
+     (2*S*Log[S^2])/F + 2*F*S*Log[S^2]
+ 
+collinearExpansionTerm[H3[1], 1, 2, u] = 0
+ 
+collinearExpansionTerm[H3[1], 1, 3, u] = 0
+ 
+collinearExpansionTerm[H3[1], 2, 0, u] = -1/(2*F^2) + F^2/2 - 
+     HPL[{1}, -S^2]/F^2 + F^2*HPL[{1}, -S^2] - HPL[{1}, -S^2]/(2*F^2*S^2) + 
+     (F^2*HPL[{1}, -S^2])/(2*S^2) - (S^2*HPL[{1}, -S^2])/(2*F^2) + 
+     (F^2*S^2*HPL[{1}, -S^2])/2 - HPL[{1}, -S^2]^2/(2*F^2*S^2) + 
+     (F^2*HPL[{1}, -S^2]^2)/(2*S^2) - (S^2*HPL[{1}, -S^2]^2)/(2*F^2) + 
+     (F^2*S^2*HPL[{1}, -S^2]^2)/2 - Log[S^2]/(2*F^2) + (F^2*Log[S^2])/2 - 
+     (S^2*Log[S^2])/(2*F^2) + (F^2*S^2*Log[S^2])/2 - 
+     (HPL[{1}, -S^2]*Log[S^2])/(2*F^2*S^2) + (F^2*HPL[{1}, -S^2]*Log[S^2])/
+      (2*S^2) - (S^2*HPL[{1}, -S^2]*Log[S^2])/(2*F^2) + 
+     (F^2*S^2*HPL[{1}, -S^2]*Log[S^2])/2
+ 
+collinearExpansionTerm[H3[1], 2, 1, u] = F^(-2) - F^2 + 
+     HPL[{1}, -S^2]/(F^2*S^2) - (F^2*HPL[{1}, -S^2])/S^2 + 
+     (S^2*HPL[{1}, -S^2])/F^2 - F^2*S^2*HPL[{1}, -S^2] + (S^2*Log[S^2])/F^2 - 
+     F^2*S^2*Log[S^2]
+ 
+collinearExpansionTerm[H3[1], 2, 2, u] = 0
+ 
+collinearExpansionTerm[H3[1], 2, 3, u] = 0
+ 
+collinearExpansionTerm[H3[1], 3, 0, u] = 2/(9*F^3*S) - (2*F^3)/(9*S) + 
+     (2*S)/(9*F^3) - (2*F^3*S)/9 + (2*HPL[{1}, -S^2])/(9*F^3*S^3) - 
+     (2*F^3*HPL[{1}, -S^2])/(9*S^3) + (2*HPL[{1}, -S^2])/(3*F^3*S) - 
+     (2*F^3*HPL[{1}, -S^2])/(3*S) + (2*S*HPL[{1}, -S^2])/(3*F^3) - 
+     (2*F^3*S*HPL[{1}, -S^2])/3 + (2*S^3*HPL[{1}, -S^2])/(9*F^3) - 
+     (2*F^3*S^3*HPL[{1}, -S^2])/9 - (S*HPL[{1}, -S^2])/(F^3*(1 + S^2)) - 
+     (S*HPL[{1}, -S^2])/(F*(1 + S^2)) + (F*S*HPL[{1}, -S^2])/(1 + S^2) + 
+     (F^3*S*HPL[{1}, -S^2])/(1 + S^2) + HPL[{1}, -S^2]^2/(3*F^3*S^3) - 
+     (F^3*HPL[{1}, -S^2]^2)/(3*S^3) - (S*HPL[{1}, -S^2]^2)/F + 
+     F*S*HPL[{1}, -S^2]^2 + (S^3*HPL[{1}, -S^2]^2)/(3*F^3) - 
+     (F^3*S^3*HPL[{1}, -S^2]^2)/3 + Log[S^2]/(3*F^3*S) - 
+     (F^3*Log[S^2])/(3*S) + (S*Log[S^2])/(3*F^3) - (F^3*S*Log[S^2])/3 + 
+     (2*S^3*Log[S^2])/(9*F^3) - (2*F^3*S^3*Log[S^2])/9 - 
+     (S*Log[S^2])/(2*F^3*(1 + S^2)) - (S*Log[S^2])/(2*F*(1 + S^2)) + 
+     (F*S*Log[S^2])/(2*(1 + S^2)) + (F^3*S*Log[S^2])/(2*(1 + S^2)) + 
+     (HPL[{1}, -S^2]*Log[S^2])/(3*F^3*S^3) - (F^3*HPL[{1}, -S^2]*Log[S^2])/
+      (3*S^3) - (S*HPL[{1}, -S^2]*Log[S^2])/F + F*S*HPL[{1}, -S^2]*Log[S^2] + 
+     (S^3*HPL[{1}, -S^2]*Log[S^2])/(3*F^3) - 
+     (F^3*S^3*HPL[{1}, -S^2]*Log[S^2])/3
+ 
+collinearExpansionTerm[H3[1], 3, 1, u] = -2/(3*F^3*S) + (2*F^3)/(3*S) - 
+     (2*S)/(3*F^3) + (2*F^3*S)/3 + S/(F^3*(1 + S^2)) + S/(F*(1 + S^2)) - 
+     (F*S)/(1 + S^2) - (F^3*S)/(1 + S^2) - (2*HPL[{1}, -S^2])/(3*F^3*S^3) + 
+     (2*F^3*HPL[{1}, -S^2])/(3*S^3) + (2*S*HPL[{1}, -S^2])/F - 
+     2*F*S*HPL[{1}, -S^2] - (2*S^3*HPL[{1}, -S^2])/(3*F^3) + 
+     (2*F^3*S^3*HPL[{1}, -S^2])/3 + (2*S*Log[S^2])/F - 2*F*S*Log[S^2] - 
+     (2*S^3*Log[S^2])/(3*F^3) + (2*F^3*S^3*Log[S^2])/3
+ 
+collinearExpansionTerm[H3[1], 3, 2, u] = 0
+ 
+collinearExpansionTerm[H3[1], 3, 3, u] = 0

@@ -1,0 +1,790 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     29621,        781]
+NotebookOptionsPosition[     28377,        738]
+NotebookOutlinePosition[     28755,        755]
+CellTagsIndexPosition[     28712,        752]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.610565782255829*^9, 3.610565786977323*^9}, {
+  3.615148563728994*^9, 3.615148567896106*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"LB", "=", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{
+     RowBox[{"generateLyndonBasis", "[", 
+      RowBox[{"10", ",", 
+       RowBox[{"{", 
+        RowBox[{"0", ",", "1"}], "}"}]}], "]"}], ",", 
+     RowBox[{"{", "0", "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6150425950181637`*^9, 3.615042616149308*^9}, {
+   3.61505113993887*^9, 3.615051140026504*^9}, {3.615054422091069*^9, 
+   3.6150544249043083`*^9}, 3.615819182143059*^9, {3.621311976675892*^9, 
+   3.621311976989925*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"invertArguments", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"HPL", "[", 
+       RowBox[{
+        RowBox[{"{", "0", "}"}], ",", " ", 
+        RowBox[{"1", "/", "z"}]}], "]"}], " ", "->", " ", 
+      RowBox[{"-", 
+       RowBox[{"HPL", "[", 
+        RowBox[{
+         RowBox[{"{", "0", "}"}], ",", " ", "z"}], "]"}]}]}], ",", 
+     RowBox[{
+      RowBox[{"HPL", "[", 
+       RowBox[{
+        RowBox[{"{", "1", "}"}], ",", 
+        RowBox[{"1", "/", "z"}]}], "]"}], "->", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{
+         RowBox[{"{", "1", "}"}], ",", "z"}], "]"}], "+", 
+       RowBox[{"HPL", "[", 
+        RowBox[{
+         RowBox[{"{", "0", "}"}], ",", "z"}], "]"}], "-", 
+       RowBox[{"Pi", " ", "I"}]}]}]}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.610565938891067*^9, 3.6105660737349443`*^9}, {
+  3.6105661843803787`*^9, 3.610566235113353*^9}, {3.610566966046369*^9, 
+  3.610566974068755*^9}, {3.615042372519657*^9, 3.61504239628473*^9}, {
+  3.6150427928790913`*^9, 3.615042797742135*^9}, {3.615054511863248*^9, 
+  3.615054521453416*^9}, {3.61566521149054*^9, 3.615665211722574*^9}, {
+  3.6156659508768377`*^9, 3.615665951090177*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"invertArguments", "=", 
+   RowBox[{"invertArgument", "[", "z", "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6213119920261374`*^9, 3.621311997821292*^9}, {
+  3.621312031709959*^9, 3.6213120410528717`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"invertedArgument", "[", "word_", "]"}], ":=", 
+  RowBox[{"Block", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"weight", "=", 
+       RowBox[{"Length", "[", "word", "]"}]}], ",", 
+      RowBox[{"a", "=", 
+       RowBox[{"{", 
+        RowBox[{
+        "a1", ",", "a2", ",", "a3", ",", "a4", ",", "a5", ",", "a6", ",", 
+         "a7", ",", "a8", ",", "a9", ",", "a10"}], "}"}]}], ",", "aToPattern",
+       ",", "symbolLevelReconstruction", ",", "reconstructHPLs", ",", 
+      "reconstruct\[Pi]Terms", ",", "reconstruct\[Zeta]Terms", ",", 
+      RowBox[{"\[Zeta]terms", "=", "0"}], ",", "pureConstant"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"aToPattern", "=", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"a1", "\[Rule]", 
+         RowBox[{"a1", ":", "_"}]}], ",", 
+        RowBox[{"a2", "\[Rule]", 
+         RowBox[{"a2", ":", "_"}]}], ",", 
+        RowBox[{"a3", "\[Rule]", 
+         RowBox[{"a3", ":", "_"}]}], ",", 
+        RowBox[{"a4", "\[Rule]", 
+         RowBox[{"a4", ":", "_"}]}], ",", 
+        RowBox[{"a5", "\[Rule]", 
+         RowBox[{"a5", ":", "_"}]}], ",", 
+        RowBox[{"a6", "\[Rule]", 
+         RowBox[{"a6", ":", "_"}]}], ",", 
+        RowBox[{"a7", "\[Rule]", 
+         RowBox[{"a7", ":", "_"}]}], ",", 
+        RowBox[{"a8", "\[Rule]", 
+         RowBox[{"a8", ":", "_"}]}], ",", 
+        RowBox[{"a9", "\[Rule]", 
+         RowBox[{"a9", ":", "_"}]}], ",", 
+        RowBox[{"a10", "\[Rule]", 
+         RowBox[{"a10", ":", "_"}]}]}], "}"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"reconstructHPLs", "=", 
+      RowBox[{
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"CircleDot", "@@", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{"HPL", "[", 
+              RowBox[{
+               RowBox[{"{", 
+                RowBox[{
+                "a", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+                "}"}], ",", "z"}], "]"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"j", ",", "i"}], "}"}]}], "]"}]}], "\[Rule]", 
+          RowBox[{"HPL", "[", 
+           RowBox[{
+            RowBox[{"Reverse", "[", 
+             RowBox[{"Table", "[", 
+              RowBox[{
+               RowBox[{
+               "a", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+               ",", 
+               RowBox[{"{", 
+                RowBox[{"j", ",", "i"}], "}"}]}], "]"}], "]"}], ",", "z"}], 
+           "]"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", "2", ",", "10"}], "}"}]}], "]"}], "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Rule", "[", 
+          RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+         RowBox[{"Rule", "[", 
+          RowBox[{
+           RowBox[{"x", "/.", "aToPattern"}], ",", "y"}], "]"}]}], "}"}]}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"reconstruct\[Pi]Terms", "=", 
+      RowBox[{
+       RowBox[{"Flatten", "[", 
+        RowBox[{"Table", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"CircleDot", "@@", 
+            RowBox[{"Prepend", "[", 
+             RowBox[{
+              RowBox[{"Table", "[", 
+               RowBox[{
+                RowBox[{"HPL", "[", 
+                 RowBox[{
+                  RowBox[{"{", 
+                   RowBox[{
+                   "a", "\[LeftDoubleBracket]", "j", 
+                    "\[RightDoubleBracket]"}], "}"}], ",", "z"}], "]"}], ",", 
+                
+                RowBox[{"{", 
+                 RowBox[{"j", ",", "i"}], "}"}]}], "]"}], ",", 
+              RowBox[{"Pi", "^", "m"}]}], "]"}]}], "\[Rule]", 
+           RowBox[{
+            RowBox[{"Pi", "^", "m"}], " ", 
+            RowBox[{"HPL", "[", 
+             RowBox[{
+              RowBox[{"Reverse", "[", 
+               RowBox[{"Table", "[", 
+                RowBox[{
+                 RowBox[{
+                 "a", "\[LeftDoubleBracket]", "j", "\[RightDoubleBracket]"}], 
+                 ",", 
+                 RowBox[{"{", 
+                  RowBox[{"j", ",", "i"}], "}"}]}], "]"}], "]"}], ",", "z"}], 
+             "]"}]}]}], ",", 
+          RowBox[{"{", 
+           RowBox[{"i", ",", "9"}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"m", ",", 
+            RowBox[{"10", "-", "i"}]}], "}"}]}], "]"}], "]"}], "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Rule", "[", 
+          RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+         RowBox[{"Rule", "[", 
+          RowBox[{
+           RowBox[{"x", "/.", "aToPattern"}], ",", "y"}], "]"}]}], "}"}]}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"reconstruct\[Zeta]Terms", "=", 
+      RowBox[{"Flatten", "[", 
+       RowBox[{"Table", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"CircleDot", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Pi", "^", "j"}], " ", 
+             RowBox[{
+              RowBox[{"MZV", "[", "m", "]"}], "\[LeftDoubleBracket]", "i", 
+              "\[RightDoubleBracket]"}]}], ",", "func_"}], "]"}], "\[Rule]", 
+          RowBox[{
+           RowBox[{"Pi", "^", "j"}], " ", 
+           RowBox[{
+            RowBox[{"MZV", "[", "m", "]"}], "\[LeftDoubleBracket]", "i", 
+            "\[RightDoubleBracket]"}], " ", "func"}]}], ",", 
+         RowBox[{"{", 
+          RowBox[{"j", ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"m", ",", "2", ",", "10"}], "}"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"i", ",", 
+           RowBox[{"Length", "[", 
+            RowBox[{"MZV", "[", "m", "]"}], "]"}]}], "}"}]}], "]"}], "]"}]}], 
+     ";", "\[IndentingNewLine]", 
+     RowBox[{"symbolLevelReconstruction", "=", 
+      RowBox[{"Expand", "[", 
+       RowBox[{
+        RowBox[{"toStrictLyndonBasis", "[", 
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{"coproduct", "[", 
+               RowBox[{"max", ",", 
+                RowBox[{"HPL", "[", 
+                 RowBox[{"word", ",", 
+                  RowBox[{"1", "/", "z"}]}], "]"}]}], "]"}], "/.", "toHPL"}], 
+             "/.", "invertArguments"}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"CircleDot", "[", 
+               RowBox[{"x__", ",", "Pi", ",", "z___"}], "]"}], "\[Rule]", 
+              "0"}], "}"}]}], "/.", "reconstructHPLs"}], "/.", 
+          "reconstruct\[Pi]Terms"}], "]"}], "/.", "toHPL"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Do", "[", 
+      RowBox[{
+       RowBox[{"\[Zeta]terms", "+=", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"Expand", "[", 
+              RowBox[{
+               RowBox[{
+                RowBox[{"ReplaceAll", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"coproduct", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"weight", "-", "i"}]}], "}"}], ",", 
+                    RowBox[{"HPL", "[", 
+                    RowBox[{"word", ",", 
+                    RowBox[{"1", "/", "z"}]}], "]"}]}], "]"}], "/.", 
+                    "toHPL"}], "/.", "invertArguments"}], ",", 
+                  RowBox[{
+                   RowBox[{"CircleDot", "[", 
+                    RowBox[{"x_", ",", "y_"}], "]"}], ":>", 
+                   RowBox[{"0", "/;", 
+                    RowBox[{"MemberQ", "[", 
+                    RowBox[{
+                    RowBox[{"{", "y", "}"}], ",", 
+                    RowBox[{"Alternatives", "[", 
+                    RowBox[{"Pi", ",", 
+                    RowBox[{"\[Zeta]", "[", "__", "]"}]}], "]"}], ",", 
+                    "Infinity"}], "]"}]}]}]}], "]"}], "-", 
+                RowBox[{"ReplaceAll", "[", 
+                 RowBox[{
+                  RowBox[{"coproduct", "[", 
+                   RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"i", ",", 
+                    RowBox[{"weight", "-", "i"}]}], "}"}], ",", 
+                    RowBox[{
+                    "symbolLevelReconstruction", "+", "\[Zeta]terms"}]}], 
+                   "]"}], ",", "toHPL"}], "]"}]}], "/.", 
+               RowBox[{"{", 
+                RowBox[{
+                 RowBox[{"CircleDot", "[", 
+                  RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+                 RowBox[{"CircleDot", "[", 
+                  RowBox[{
+                   RowBox[{"Expand", "[", "x", "]"}], ",", "y"}], "]"}]}], 
+                "}"}]}], "]"}], "/.", 
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"CircleDot", "[", 
+                RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+               RowBox[{
+                RowBox[{"toStrictLyndonBasis", "[", 
+                 RowBox[{
+                  RowBox[{"(", 
+                   RowBox[{"toLinearBasis", "[", 
+                    RowBox[{"CircleDot", "[", 
+                    RowBox[{"x", ",", "y"}], "]"}], "]"}], ")"}], "/.", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"CircleDot", "[", " ", 
+                    RowBox[{
+                    RowBox[{"MPL", "[", 
+                    RowBox[{"word1_", ",", "z"}], "]"}], ",", 
+                    RowBox[{"MPL", "[", 
+                    RowBox[{"word2_", ",", "z"}], "]"}]}], "]"}], 
+                    "\[RuleDelayed]", " ", 
+                    RowBox[{"MPL", "[", 
+                    RowBox[{
+                    RowBox[{"Join", "[", 
+                    RowBox[{"word2", ",", "word1"}], "]"}], ",", "z"}], 
+                    "]"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"CircleDot", "[", 
+                    RowBox[{
+                    RowBox[{"transConst_", " ", 
+                    RowBox[{"MPL", "[", 
+                    RowBox[{"word1_", ",", "z"}], "]"}]}], ",", 
+                    RowBox[{"MPL", "[", 
+                    RowBox[{"word2_", ",", "z"}], "]"}]}], "]"}], 
+                    "\[RuleDelayed]", 
+                    RowBox[{"transConst", " ", 
+                    RowBox[{"MPL", "[", 
+                    RowBox[{
+                    RowBox[{"Join", "[", 
+                    RowBox[{"word2", ",", "word1"}], "]"}], ",", "z"}], 
+                    "]"}]}]}]}], "}"}]}], "]"}], "/;", 
+                RowBox[{"MemberQ", "[", 
+                 RowBox[{
+                  RowBox[{"{", "x", "}"}], ",", 
+                  RowBox[{"HPL", "[", 
+                   RowBox[{"_", ",", "_"}], "]"}], ",", "Infinity"}], 
+                 "]"}]}]}], "}"}]}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Pi", "^", "2"}], "\[Rule]", 
+               RowBox[{"6", 
+                RowBox[{"\[Zeta]", "[", "2", "]"}]}]}], ",", 
+              RowBox[{
+               RowBox[{"Pi", "^", "3"}], "->", 
+               RowBox[{"6", " ", "Pi", " ", 
+                RowBox[{"\[Zeta]", "[", "2", "]"}]}]}], ",", 
+              RowBox[{
+               RowBox[{"Pi", "^", "4"}], "\[Rule]", 
+               RowBox[{"90", 
+                RowBox[{"\[Zeta]", "[", "4", "]"}]}]}], ",", 
+              RowBox[{
+               RowBox[{"Pi", "^", "5"}], "->", 
+               RowBox[{"90", " ", "Pi", " ", 
+                RowBox[{"\[Zeta]", "[", "4", "]"}]}]}]}], "}"}]}], "/.", 
+           "toHPL"}], "/.", "reconstruct\[Pi]Terms"}], "/.", 
+         "reconstruct\[Zeta]Terms"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"i", ",", "2", ",", 
+         RowBox[{"weight", "-", "1"}]}], "}"}]}], "]"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"pureConstant", "=", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{"word", ",", "1"}], "]"}], "-", 
+       RowBox[{"ReplaceAll", "[", 
+        RowBox[{
+         RowBox[{"symbolLevelReconstruction", "+", "\[Zeta]terms"}], ",", 
+         RowBox[{"z", "\[Rule]", "1"}]}], "]"}]}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Expand", "[", 
+      RowBox[{
+      "symbolLevelReconstruction", "+", "\[Zeta]terms", "+", "pureConstant"}],
+       "]"}]}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.615044773848235*^9, 3.6150449014586277`*^9}, {
+   3.6150458090737677`*^9, 3.615045828710911*^9}, {3.615045867126458*^9, 
+   3.6150460266552143`*^9}, {3.61504606473351*^9, 3.615046086244939*^9}, 
+   3.615046228403151*^9, {3.615046267834044*^9, 3.615046316089532*^9}, {
+   3.6150463660290127`*^9, 3.615046394080721*^9}, {3.615046426434935*^9, 
+   3.615046480752701*^9}, {3.615046530884781*^9, 3.61504653395332*^9}, {
+   3.6150466018114853`*^9, 3.6150466140266657`*^9}, {3.615046708335739*^9, 
+   3.615046788643949*^9}, {3.615046909150331*^9, 3.615046975891315*^9}, {
+   3.615047227405252*^9, 3.61504723396245*^9}, 3.615047391598898*^9, {
+   3.615050571825151*^9, 3.615050572001392*^9}, {3.615050685495603*^9, 
+   3.615050709762744*^9}, 3.615050749480888*^9, {3.615051743270217*^9, 
+   3.615051942879434*^9}, {3.615051973274453*^9, 3.615052085179926*^9}, {
+   3.615052156968163*^9, 3.6150521970357847`*^9}, {3.615052238139831*^9, 
+   3.615052267114859*^9}, {3.615052496359127*^9, 3.6150524964888363`*^9}, {
+   3.6150527023312263`*^9, 3.615052810332925*^9}, {3.615052840434511*^9, 
+   3.615052840538032*^9}, {3.615052870640119*^9, 3.615052874376823*^9}, {
+   3.615053309004715*^9, 3.6150533173963118`*^9}, {3.615053374534668*^9, 
+   3.615053482850099*^9}, {3.6150535190347137`*^9, 3.615053527842544*^9}, {
+   3.61505362616671*^9, 3.615053641032599*^9}, {3.615053679923688*^9, 
+   3.6150537044381723`*^9}, {3.61505380274914*^9, 3.615053823231915*^9}, {
+   3.615053857368349*^9, 3.615053941657145*^9}, {3.615054605431081*^9, 
+   3.615054609206802*^9}, {3.615128275106152*^9, 3.615128287944203*^9}, {
+   3.615128438158079*^9, 3.615128445783373*^9}, {3.615142681639801*^9, 
+   3.615142683180832*^9}, 3.615143152725247*^9, {3.6151433596481*^9, 
+   3.615143363255187*^9}, {3.6151434623524857`*^9, 3.615143571572752*^9}, {
+   3.615143757777117*^9, 3.6151439219758797`*^9}, {3.615144023638172*^9, 
+   3.615144055290188*^9}, {3.615144245985189*^9, 3.615144251015753*^9}, {
+   3.615144316394342*^9, 3.6151443218560047`*^9}, {3.615144481603683*^9, 
+   3.615144514863379*^9}, {3.615144665193878*^9, 3.6151447017590322`*^9}, {
+   3.615144734563447*^9, 3.6151447383679523`*^9}, {3.6151447830989943`*^9, 
+   3.615144842768441*^9}, {3.615144876684657*^9, 3.615144880897395*^9}, {
+   3.615144911261512*^9, 3.6151449279591637`*^9}, {3.6151449752146587`*^9, 
+   3.61514501172442*^9}, {3.615145046813129*^9, 3.6151450905858192`*^9}, {
+   3.6151452831920958`*^9, 3.615145301924176*^9}, {3.615145757986361*^9, 
+   3.615145823875958*^9}, {3.615145900703013*^9, 3.615146034433498*^9}, {
+   3.6151461080163794`*^9, 3.6151461099191837`*^9}, {3.615146202836361*^9, 
+   3.615146205059149*^9}, {3.615146828076544*^9, 3.6151468283756733`*^9}, {
+   3.615146874300178*^9, 3.615146875985306*^9}, {3.615146907907559*^9, 
+   3.615146909776031*^9}, {3.615148556532556*^9, 3.615148558616137*^9}, {
+   3.615148679396963*^9, 3.615148713361538*^9}, {3.615149265510201*^9, 
+   3.6151492705849667`*^9}, {3.6151493094957123`*^9, 
+   3.6151493289984913`*^9}, {3.615149360265368*^9, 3.6151494146752653`*^9}, {
+   3.6151497713634644`*^9, 3.6151497782107563`*^9}, {3.61515054563783*^9, 
+   3.6151505502599154`*^9}, {3.615150589376624*^9, 3.6151505918103113`*^9}, {
+   3.6151506551344147`*^9, 3.615150667272169*^9}, {3.6151508062197523`*^9, 
+   3.615150807700025*^9}, {3.615150845016779*^9, 3.615150953844954*^9}, {
+   3.61565562142091*^9, 3.615655636586974*^9}, {3.615655825756927*^9, 
+   3.615655850813407*^9}, {3.6156562128245687`*^9, 3.615656220973377*^9}, {
+   3.6156637677724447`*^9, 3.6156637818107843`*^9}, {3.6156638702331676`*^9, 
+   3.615663874505978*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Monitor", "[", 
+  RowBox[{
+   RowBox[{"Do", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"LyndonWords", "=", 
+       RowBox[{"Select", "[", 
+        RowBox[{"LB", ",", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"Length", "@", "#"}], "\[Equal]", "w"}], "&"}]}], "]"}]}], 
+      ";", "\[IndentingNewLine]", 
+      RowBox[{"Do", "[", 
+       RowBox[{
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"invertArguments", ",", 
+          RowBox[{
+           RowBox[{"HPL", "[", 
+            RowBox[{
+             RowBox[{
+             "LyndonWords", "\[LeftDoubleBracket]", "l", 
+              "\[RightDoubleBracket]"}], ",", 
+             RowBox[{"1", "/", "z"}]}], "]"}], "\[Rule]", 
+           RowBox[{"Expand", "[", 
+            RowBox[{"invertedArgument", "[", 
+             RowBox[{
+             "LyndonWords", "\[LeftDoubleBracket]", "l", 
+              "\[RightDoubleBracket]"}], "]"}], "]"}]}]}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"l", ",", 
+          RowBox[{"Length", "@", "LyndonWords"}]}], "}"}]}], "]"}]}], ",", 
+     RowBox[{"{", 
+      RowBox[{"w", ",", "2", ",", "9"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"w", ",", "l", ",", 
+     RowBox[{"Length", "@", "LyndonWords"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.615054384755293*^9, 3.615054404681096*^9}, {
+  3.6150544577721*^9, 3.615054457947295*^9}, {3.6151282007954283`*^9, 
+  3.615128200986321*^9}, {3.615143062243608*^9, 3.615143062466536*^9}, {
+  3.61514359385717*^9, 3.615143593967968*^9}, {3.615143956122759*^9, 
+  3.6151439945409*^9}, {3.6151453161771927`*^9, 3.6151453163702097`*^9}, {
+  3.6151498146392803`*^9, 3.615149816421899*^9}, {3.6151499900456676`*^9, 
+  3.615149991437684*^9}, {3.6151506081872807`*^9, 3.615150608337653*^9}, {
+  3.615656198153769*^9, 3.615656198234673*^9}, {3.6156660356831083`*^9, 
+  3.615666112174169*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Select", "[", 
+    RowBox[{"LB", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "@", "#"}], "\[Equal]", "10"}], "&"}]}], "]"}], "//",
+    "Last"}], "//", "InputForm"}]], "Input",
+ CellChangeTimes->{{3.6213120941965437`*^9, 3.62131209821301*^9}, {
+  3.621312128357418*^9, 3.621312130036394*^9}}],
+
+Cell["{0, 1, 1, 1, 1, 1, 1, 1, 1, 1}", "Output",
+ CellChangeTimes->{3.621312098539752*^9, 3.621312130276495*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"lastReplacement", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"HPL", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+         "1", ",", "1", ",", "1"}], "}"}], ",", 
+       RowBox[{"1", "/", "z"}]}], "]"}], "\[Rule]", 
+     RowBox[{"Expand", "[", 
+      RowBox[{"invertedArgument", "[", 
+       RowBox[{"{", 
+        RowBox[{
+        "0", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", "1", ",", 
+         "1", ",", "1", ",", "1"}], "}"}], "]"}], "]"}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.621312112435161*^9, 3.621312147006179*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"invertArgumentImproved", "=", 
+   RowBox[{"ReplacePart", "[", 
+    RowBox[{
+     RowBox[{"invertArgument", "[", "t", "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"124", "\[Rule]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"invertArgument", "[", "t", "]"}], ")"}], 
+          "\[LeftDoubleBracket]", "124", "\[RightDoubleBracket]"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"7", "*", 
+            RowBox[{"Pi", "^", "8"}], "*", 
+            RowBox[{"HPL", "[", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", "t"}], "]"}]}], ")"}], "/", 
+          "4320"}]}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"119", "\[Rule]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"invertArgument", "[", "t", "]"}], ")"}], 
+          "\[LeftDoubleBracket]", "119", "\[RightDoubleBracket]"}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Pi", "^", "8"}], "*", 
+            RowBox[{"HPL", "[", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", "t"}], "]"}]}], ")"}], "/", 
+          "4320"}]}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"125", "\[Rule]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"invertArgument", "[", "t", "]"}], ")"}], 
+          "\[LeftDoubleBracket]", "125", "\[RightDoubleBracket]"}], "-", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"7", "*", 
+            RowBox[{"Pi", "^", "8"}], "*", 
+            RowBox[{"HPL", "[", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", "t"}], "]"}]}], ")"}], "/", 
+          "1440"}]}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"126", "\[Rule]", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"invertArgument", "[", "t", "]"}], ")"}], 
+          "\[LeftDoubleBracket]", "126", "\[RightDoubleBracket]"}], "+", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{"7", "*", 
+            RowBox[{"Pi", "^", "8"}], "*", 
+            RowBox[{"HPL", "[", 
+             RowBox[{
+              RowBox[{"{", "0", "}"}], ",", "t"}], "]"}]}], ")"}], "/", 
+          "1440"}]}]}]}], "}"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.616049282828821*^9, 3.616049386687482*^9}}],
+
+Cell[BoxData[
+ RowBox[{"ClearAll", "[", "invertArgument", "]"}]], "Input",
+ CellChangeTimes->{{3.616049397171886*^9, 3.616049402450235*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Expand", "[", 
+   RowBox[{"invertArgumentImproved", "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Pi", "^", "8"}], "\[Rule]", 
+       RowBox[{"9450", 
+        RowBox[{"\[Zeta]", "[", "8", "]"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"Pi", "^", "6"}], "\[Rule]", 
+       RowBox[{"945", 
+        RowBox[{"\[Zeta]", "[", "6", "]"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"Pi", "^", "4"}], "\[Rule]", 
+       RowBox[{"90", 
+        RowBox[{"\[Zeta]", "[", "4", "]"}]}]}], ",", 
+      RowBox[{
+       RowBox[{"Pi", "^", "2"}], "\[Rule]", 
+       RowBox[{"6", 
+        RowBox[{"\[Zeta]", "[", "2", "]"}]}]}]}], "}"}]}], "]"}], "//", 
+  "InputForm"}]], "Input",
+ CellChangeTimes->{{3.6160494080834827`*^9, 3.6160495161453753`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "invertArgument.m"}]], "Input",
+ CellChangeTimes->{{3.616049784195562*^9, 3.616049788426145*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"test", "=", 
+   RowBox[{
+    RowBox[{"invertArgument", "[", "t", "]"}], "/.", 
+    RowBox[{
+     RowBox[{"Rule", "[", 
+      RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"(", 
+      RowBox[{"x", "-", "y"}], ")"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.616049791576413*^9, 3.616049818726329*^9}, {
+  3.616049956356268*^9, 3.616049980857799*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"identities1", "=", 
+   RowBox[{"<<", "first60.dat"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.621372211070407*^9, 3.621372224256872*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"identities2", "=", 
+   RowBox[{"<<", "next31.dat"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.621372250588347*^9, 3.621372278297628*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"identities3", "=", 
+   RowBox[{"<<", "last8temp.dat"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.621372294799714*^9, 3.621372307944716*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"w10identities", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "identities1", ",", "identities2", ",", "identities3", ",", 
+     "lastReplacement"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.621372404785131*^9, 3.62137242655091*^9}, {
+  3.62137250297857*^9, 3.621372523617194*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "@", "w10identities"}]], "Input",
+ CellChangeTimes->{{3.6213725092431393`*^9, 3.621372518560254*^9}}],
+
+Cell[BoxData[
+ FormBox["99", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.621372518813971*^9, 3.621372526463224*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Join", "[", 
+    RowBox[{
+    "identities1", ",", "identities2", ",", "identities3", ",", 
+     "lastReplacement"}], "]"}], ">>", "\"\<weight10inversions.dat\>\""}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6213725403345957`*^9, 3.6213725475841513`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"FreeQ", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"coproduct", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"_", ",", "_"}], "}"}], ",", 
+         RowBox[{"CircleDot", "[", 
+          RowBox[{"_", ",", "_"}], "]"}]}], "]"}]}], "]"}], "&"}], "/@", 
+    "w10identities"}], ",", "False"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6216086585164537`*^9, 3.621608789301556*^9}, {
+  3.6216091188294353`*^9, 3.621609142634754*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"31"},
+     {"57"},
+     {"73"},
+     {"86"},
+     {"87"},
+     {"88"},
+     {"95"},
+     {"97"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.621608666008357*^9, 3.621608786925864*^9}, {
+  3.621609119138143*^9, 3.621609143039343*^9}}]
+}, Open  ]]
+},
+WindowSize->{1196, 582},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 170, 3, 27, "Input"],
+Cell[730, 25, 533, 13, 27, "Input"],
+Cell[1266, 40, 1223, 32, 27, "Input"],
+Cell[2492, 74, 242, 5, 27, "Input"],
+Cell[2737, 81, 15932, 362, 388, "Input"],
+Cell[18672, 445, 1890, 45, 58, "Input"],
+Cell[CellGroupData[{
+Cell[20587, 494, 354, 10, 27, "Input"],
+Cell[20944, 506, 112, 1, 39, "Output"]
+}, Open  ]],
+Cell[21071, 510, 688, 19, 27, "Input"],
+Cell[21762, 531, 2366, 64, 73, "Input"],
+Cell[24131, 597, 140, 2, 27, "Input"],
+Cell[24274, 601, 787, 23, 27, "Input"],
+Cell[25064, 626, 126, 2, 27, "Input"],
+Cell[25193, 630, 407, 11, 27, "Input"],
+Cell[25603, 643, 173, 4, 27, "Input"],
+Cell[25779, 649, 172, 4, 27, "Input"],
+Cell[25954, 655, 175, 4, 27, "Input"],
+Cell[26132, 661, 324, 8, 27, "Input"],
+Cell[CellGroupData[{
+Cell[26481, 673, 134, 2, 27, "Input"],
+Cell[26618, 677, 123, 2, 27, "Output"]
+}, Open  ]],
+Cell[26756, 682, 302, 8, 27, "Input"],
+Cell[CellGroupData[{
+Cell[27083, 694, 536, 15, 27, "Input"],
+Cell[27622, 711, 739, 24, 144, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
