@@ -1,0 +1,26 @@
+toLineM[H3[1], {1, 1, w}] = (-2*I)*Pi*HPL[{0, 1}, w] + 
+     HPL[{0}, w]*HPL[{0, 1}, w] - 2*HPL[{0, 0, 1}, w] + (2*I)*Pi*\[Zeta][2] - 
+     HPL[{0}, w]*\[Zeta][2] + 2*\[Zeta][3]
+ 
+toLineM[H3[1], {1, v, 1}] = (-2*I)*Pi*HPL[{0, 1}, v] + 
+     HPL[{0}, v]*HPL[{0, 1}, v] - 2*HPL[{0, 0, 1}, v] + (2*I)*Pi*\[Zeta][2] - 
+     HPL[{0}, v]*\[Zeta][2] + 2*\[Zeta][3]
+ 
+toLineM[H3[1], {1, v, v}] = 0
+ 
+toLineM[H3[1], {u, 1, 1}] = (-2*I)*Pi*HPL[{0, 1}, u] + 
+     HPL[{0}, u]*HPL[{0, 1}, u] - 2*HPL[{0, 0, 1}, u] + (2*I)*Pi*\[Zeta][2] - 
+     HPL[{0}, u]*\[Zeta][2] + 2*\[Zeta][3]
+ 
+toLineM[H3[1], {u, u, 1}] = 0
+ 
+toLineM[H3[1], {w, 1, w}] = 0
+
+toSurfaceM[H3[1],w->1] = (2*I)*Pi*HPL[{0}, 1 - w]*HPL[{1}, 1 - u] - 
+     (2*I)*Pi*HPL[{0}, 1 - w]*HPL[{1}, 1 - v] + (2*I)*Pi*HPL[{0, 1}, 1 - u] + 
+     HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u] - HPL[{1}, 1 - v]*
+      HPL[{0, 1}, 1 - u] - (2*I)*Pi*HPL[{0, 1}, 1 - v] + 
+     HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v] - HPL[{1}, 1 - v]*
+      HPL[{0, 1}, 1 - v] - 2*HPL[{0, 1, 1}, 1 - u] + 
+     2*HPL[{0, 1, 1}, 1 - v] - (4*I)*Pi*SP2[1] - 2*HPL[{1}, 1 - u]*
+      \[Zeta][2] + 2*HPL[{1}, 1 - v]*\[Zeta][2]

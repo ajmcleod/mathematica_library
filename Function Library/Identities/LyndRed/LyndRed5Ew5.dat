@@ -1,0 +1,1088 @@
+LyndRed5Ew5[{lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]}] = 
+    QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]}] = 
+    QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]}] = 
+    QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]}] = 
+    QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]}] = 
+    QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]}] = 
+    QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]}] = 
+    QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]}] = 
+    QR[lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]}] = 
+    QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]}] = 
+    QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]}] = 
+    QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]}] = 
+    QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]}] = 
+    QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]}] = 
+    QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]}] = 
+    QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]}] = 
+    QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]}] = 
+    QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]}] = 
+    QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]}] = 
+    QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]}] = 
+    QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]}] = 
+    QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]}] = 
+    QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]}] = 
+    QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]}] = 
+    QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[1], lyn[3], lyn[4], lyn[5]}] = 
+    QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[1], lyn[3], lyn[5], lyn[4]}] = 
+    QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[1], lyn[4], lyn[3], lyn[5]}] = 
+    QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[1], lyn[4], lyn[5], lyn[3]}] = 
+    QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] - QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[1], lyn[5], lyn[3], lyn[4]}] = 
+    QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[1], lyn[5], lyn[4], lyn[3]}] = 
+    QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[4], lyn[3]] - QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[3], lyn[1], lyn[4], lyn[5]}] = 
+    QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] + QR[lyn[1], lyn[3], lyn[4], 
+      lyn[2], lyn[5]] + QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]] + QR[lyn[1], lyn[4], lyn[3], 
+      lyn[5], lyn[2]] + QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[3], lyn[1], lyn[5], lyn[4]}] = 
+    QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], 
+      lyn[2], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]] + QR[lyn[1], lyn[5], lyn[3], 
+      lyn[4], lyn[2]] + QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[3], lyn[4], lyn[1], lyn[5]}] = 
+    -(QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]]) - 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]] - QR[lyn[1], lyn[4], lyn[3], 
+      lyn[5], lyn[2]] - QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[3], lyn[4], lyn[5], lyn[1]}] = 
+    QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[3], lyn[5], lyn[1], lyn[4]}] = 
+    -(QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]]) - 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] - QR[lyn[1], lyn[5], lyn[3], 
+      lyn[2], lyn[4]] - QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[3], lyn[5], lyn[4], lyn[1]}] = 
+    QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[4], lyn[1], lyn[3], lyn[5]}] = 
+    QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] + QR[lyn[1], lyn[3], lyn[4], 
+      lyn[5], lyn[2]] + QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] + QR[lyn[1], lyn[4], lyn[3], 
+      lyn[2], lyn[5]] + QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[4], lyn[1], lyn[5], lyn[3]}] = 
+    QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]] + QR[lyn[1], lyn[5], lyn[4], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[4], lyn[3], lyn[1], lyn[5]}] = 
+    -(QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]]) - 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - QR[lyn[1], lyn[3], lyn[4], 
+      lyn[5], lyn[2]] - QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[4], lyn[3], lyn[5], lyn[1]}] = 
+    QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[4], lyn[5], lyn[1], lyn[3]}] = 
+    -(QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]]) - 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] - QR[lyn[1], lyn[5], lyn[3], 
+      lyn[4], lyn[2]] - QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[4], lyn[5], lyn[3], lyn[1]}] = 
+    QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[5], lyn[1], lyn[3], lyn[4]}] = 
+    QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] + QR[lyn[1], lyn[3], lyn[5], 
+      lyn[2], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]] + QR[lyn[1], lyn[5], lyn[3], 
+      lyn[2], lyn[4]] + QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[5], lyn[1], lyn[4], lyn[3]}] = 
+    QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]] + QR[lyn[1], lyn[4], lyn[5], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[5], lyn[3], lyn[1], lyn[4]}] = 
+    -(QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]]) - 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] - QR[lyn[1], lyn[3], lyn[5], 
+      lyn[2], lyn[4]] - QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[5], lyn[3], lyn[4], lyn[1]}] = 
+    QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[5], lyn[4], lyn[1], lyn[3]}] = 
+    -(QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]]) - 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] - QR[lyn[1], lyn[4], lyn[3], 
+      lyn[5], lyn[2]] - QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[2], lyn[5], lyn[4], lyn[3], lyn[1]}] = 
+    QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[1], lyn[2], lyn[4], lyn[5]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[2], lyn[4], 
+      lyn[3], lyn[5]] - QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[1], lyn[2], lyn[5], lyn[4]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[1], lyn[4], lyn[2], lyn[5]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[1], lyn[4], lyn[5], lyn[2]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] - QR[lyn[1], lyn[4], lyn[3], 
+      lyn[5], lyn[2]] - QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[1], lyn[5], lyn[2], lyn[4]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[1], lyn[5], lyn[4], lyn[2]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] - QR[lyn[1], lyn[5], lyn[3], 
+      lyn[4], lyn[2]] - QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[2], lyn[1], lyn[4], lyn[5]}] = 
+    QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] + QR[lyn[1], lyn[2], lyn[4], 
+      lyn[3], lyn[5]] + QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] + QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[2], lyn[1], lyn[5], lyn[4]}] = 
+    QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]] + QR[lyn[1], lyn[5], lyn[2], 
+      lyn[4], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[2], lyn[4], lyn[1], lyn[5]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] + 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] + 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] - QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[2], lyn[4], lyn[5], lyn[1]}] = 
+    -(QR[lyn[3]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4]]) + 
+     QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[2], lyn[5], lyn[1], lyn[4]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] + 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] + 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[2], lyn[5], lyn[4], lyn[1]}] = 
+    -(QR[lyn[3]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5]]) + 
+     QR[lyn[2]]*QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] - 
+     QR[lyn[2], lyn[3]]*QR[lyn[1], lyn[4], lyn[5]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[4], lyn[1], lyn[2], lyn[5]}] = 
+    QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] + 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] + QR[lyn[1], lyn[2], lyn[4], 
+      lyn[5], lyn[3]] + QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] + QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] + QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[4], lyn[1], lyn[5], lyn[2]}] = 
+    QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]] + QR[lyn[1], lyn[4], lyn[5], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[4], lyn[2], lyn[1], lyn[5]}] = 
+    -(QR[lyn[3]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4]]) + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] - QR[lyn[1], lyn[2], lyn[4], 
+      lyn[5], lyn[3]] - QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[4], lyn[2], lyn[5], lyn[1]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5]]*QR[lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5]]*QR[lyn[3], lyn[4]] + 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[4], lyn[5], lyn[1], lyn[2]}] = 
+    -(QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]]) - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[4], lyn[3]] - QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[4], lyn[5], lyn[2], lyn[1]}] = 
+    -(QR[lyn[1]]*QR[lyn[2], lyn[5]]*QR[lyn[3], lyn[4]]) + 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[5], lyn[1], lyn[2], lyn[4]}] = 
+    QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[2], lyn[4]] + 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] + QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]] + QR[lyn[1], lyn[5], lyn[2], 
+      lyn[4], lyn[3]] + QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[5], lyn[1], lyn[4], lyn[2]}] = 
+    QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]] + QR[lyn[1], lyn[5], lyn[4], 
+      lyn[2], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[5], lyn[2], lyn[1], lyn[4]}] = 
+    -(QR[lyn[3]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5]]) + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4]]*QR[lyn[3], lyn[5]] - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] - QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[5], lyn[2], lyn[4], lyn[1]}] = 
+    QR[lyn[3]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4]]*QR[lyn[3], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4]]*QR[lyn[3], lyn[5]] + 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[5], lyn[4], lyn[1], lyn[2]}] = 
+    -(QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]]) - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[2], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[4], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] - QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[3], lyn[5], lyn[4], lyn[2], lyn[1]}] = 
+    -(QR[lyn[1]]*QR[lyn[2], lyn[4]]*QR[lyn[3], lyn[5]]) + 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[1], lyn[2], lyn[3], lyn[5]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[1], lyn[2], lyn[5], lyn[3]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] - QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[1], lyn[3], lyn[2], lyn[5]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[1], lyn[3], lyn[5], lyn[2]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] - QR[lyn[1], lyn[3], lyn[5], 
+      lyn[2], lyn[4]] - QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[1], lyn[5], lyn[2], lyn[3]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[1], lyn[5], lyn[3], lyn[2]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] - QR[lyn[1], lyn[5], lyn[3], 
+      lyn[2], lyn[4]] - QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[2], lyn[1], lyn[3], lyn[5]}] = 
+    QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] + QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] + QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[2], lyn[1], lyn[5], lyn[3]}] = 
+    QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] + QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]] + QR[lyn[1], lyn[5], lyn[2], 
+      lyn[4], lyn[3]] + QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[2], lyn[3], lyn[1], lyn[5]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] + 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] + 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[2], lyn[3], lyn[5], lyn[1]}] = 
+    -(QR[lyn[4]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3]]) + 
+     QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[2], lyn[5], lyn[1], lyn[3]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] + 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] + 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[2], lyn[5], lyn[3], lyn[1]}] = 
+    -(QR[lyn[4]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5]]) + 
+     QR[lyn[2]]*QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] - 
+     QR[lyn[2], lyn[4]]*QR[lyn[1], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[3], lyn[1], lyn[2], lyn[5]}] = 
+    QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] + QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] + QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[3], lyn[1], lyn[5], lyn[2]}] = 
+    QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] + QR[lyn[1], lyn[3], lyn[5], 
+      lyn[2], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]] + QR[lyn[1], lyn[5], lyn[3], 
+      lyn[2], lyn[4]] + QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[3], lyn[2], lyn[1], lyn[5]}] = 
+    QR[lyn[2]]*QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[5]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] + 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] + 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[3], lyn[2], lyn[5], lyn[1]}] = 
+    -(QR[lyn[2]]*QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[5]]) + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[4]]*QR[lyn[2], lyn[5]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[5]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5]]*QR[lyn[3], lyn[4]] + 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[3], lyn[5], lyn[1], lyn[2]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] + 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] + 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[2], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[3], lyn[5], lyn[2], lyn[1]}] = 
+    -(QR[lyn[1]]*QR[lyn[3]]*QR[lyn[4]]*QR[lyn[2], lyn[5]]) + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5]]*QR[lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[4]]*QR[lyn[3], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] - 
+     QR[lyn[3], lyn[4]]*QR[lyn[1], lyn[2], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[5], lyn[1], lyn[2], lyn[3]}] = 
+    QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[2], lyn[3]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]] + QR[lyn[1], lyn[5], lyn[2], 
+      lyn[4], lyn[3]] + QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[5], lyn[1], lyn[3], lyn[2]}] = 
+    QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[5], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], 
+      lyn[2], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]] + QR[lyn[1], lyn[5], lyn[3], 
+      lyn[4], lyn[2]] + QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[5], lyn[2], lyn[1], lyn[3]}] = 
+    -(QR[lyn[4]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5]]) + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], 
+      lyn[3], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[5], lyn[2], lyn[3], lyn[1]}] = 
+    QR[lyn[4]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[5], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[5], lyn[3], lyn[1], lyn[2]}] = 
+    -(QR[lyn[4]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5]]) + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[2], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[1], lyn[3], lyn[5], lyn[2]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[4], lyn[5], lyn[3], lyn[2], lyn[1]}] = 
+    -(QR[lyn[1]]*QR[lyn[2]]*QR[lyn[4]]*QR[lyn[3], lyn[5]]) + 
+     QR[lyn[4]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[4]]*QR[lyn[1], lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[5], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[1], lyn[2], lyn[3], lyn[4]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[5], lyn[2], lyn[3], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[1], lyn[2], lyn[4], lyn[3]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] - QR[lyn[1], lyn[2], lyn[4], 
+      lyn[5], lyn[3]] - QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[2], lyn[4], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[1], lyn[3], lyn[2], lyn[4]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[1], lyn[3], lyn[4], lyn[2]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - QR[lyn[1], lyn[3], lyn[4], 
+      lyn[5], lyn[2]] - QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[5], lyn[3], lyn[4], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[1], lyn[4], lyn[2], lyn[3]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] - QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[1], lyn[4], lyn[3], lyn[2]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]] - QR[lyn[1], lyn[4], lyn[3], 
+      lyn[5], lyn[2]] - QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[5], lyn[4], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[2], lyn[1], lyn[3], lyn[4]}] = 
+    QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] + QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] + QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[2], lyn[1], lyn[4], lyn[3]}] = 
+    QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] + QR[lyn[1], lyn[2], lyn[4], 
+      lyn[5], lyn[3]] + QR[lyn[1], lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] + QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] + QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[2], lyn[3], lyn[1], lyn[4]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] + 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] + 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[2], lyn[3], lyn[4], lyn[1]}] = 
+    -(QR[lyn[5]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3]]) + 
+     QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[3], lyn[4]] + 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[2], lyn[4], lyn[1], lyn[3]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] + 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] + 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[2], lyn[4], lyn[3], lyn[1]}] = 
+    -(QR[lyn[5]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4]]) + 
+     QR[lyn[2]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] - 
+     QR[lyn[2], lyn[5]]*QR[lyn[1], lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[5], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[5], lyn[4], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[3], lyn[1], lyn[2], lyn[4]}] = 
+    QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] + QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] + QR[lyn[1], lyn[3], lyn[2], 
+      lyn[5], lyn[4]] + QR[lyn[1], lyn[3], lyn[5], lyn[2], lyn[4]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[3], lyn[1], lyn[4], lyn[2]}] = 
+    QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] + QR[lyn[1], lyn[3], lyn[4], 
+      lyn[5], lyn[2]] + QR[lyn[1], lyn[3], lyn[5], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] + QR[lyn[1], lyn[4], lyn[3], 
+      lyn[2], lyn[5]] + QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[3], lyn[2], lyn[1], lyn[4]}] = 
+    QR[lyn[2]]*QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[4]]*QR[lyn[3], lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] + 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] + 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] + 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[2], lyn[3], 
+      lyn[5], lyn[4]] - QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] - 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[3], lyn[2], lyn[4], lyn[1]}] = 
+    -(QR[lyn[2]]*QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[4]]) + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[3]]*QR[lyn[5]]*QR[lyn[2], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[4]]*QR[lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4]]*QR[lyn[3], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1], lyn[4]]*QR[lyn[2], lyn[3], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[3], lyn[4], lyn[1], lyn[2]}] = 
+    QR[lyn[5]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] + 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] + 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[2], 
+      lyn[3], lyn[5]] - QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[4], lyn[3], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[3], lyn[4], lyn[2], lyn[1]}] = 
+    -(QR[lyn[1]]*QR[lyn[3]]*QR[lyn[5]]*QR[lyn[2], lyn[4]]) + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[5]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4]]*QR[lyn[3], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] - 
+     QR[lyn[3], lyn[5]]*QR[lyn[1], lyn[2], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[5], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1], lyn[2], lyn[4], lyn[3], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[4], lyn[1], lyn[2], lyn[3]}] = 
+    QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] + QR[lyn[1], lyn[2], lyn[4], 
+      lyn[3], lyn[5]] + QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[4], lyn[2], lyn[3], lyn[5]] + QR[lyn[1], lyn[4], lyn[2], 
+      lyn[5], lyn[3]] + QR[lyn[1], lyn[4], lyn[5], lyn[2], lyn[3]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[4], lyn[1], lyn[3], lyn[2]}] = 
+    QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]] + QR[lyn[1], lyn[3], lyn[4], 
+      lyn[2], lyn[5]] + QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]] + 
+     QR[lyn[1], lyn[4], lyn[3], lyn[2], lyn[5]] + QR[lyn[1], lyn[4], lyn[3], 
+      lyn[5], lyn[2]] + QR[lyn[1], lyn[4], lyn[5], lyn[3], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[4], lyn[2], lyn[1], lyn[3]}] = 
+    QR[lyn[2]]*QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[3]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4]] - 
+     QR[lyn[2]]*QR[lyn[1], lyn[3]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] + 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] + 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[2], lyn[4], 
+      lyn[3], lyn[5]] - QR[lyn[1], lyn[2], lyn[4], lyn[5], lyn[3]] - 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[4], lyn[2], lyn[3], lyn[1]}] = 
+    -(QR[lyn[2]]*QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[3]]) + 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[5]]*QR[lyn[2], lyn[3]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4]] + 
+     QR[lyn[2]]*QR[lyn[1], lyn[3]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[4], lyn[3]] - 
+     QR[lyn[1], lyn[3]]*QR[lyn[2], lyn[4], lyn[5]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[3], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[4], lyn[5], lyn[3]] + 
+     QR[lyn[1], lyn[3], lyn[2], lyn[4], lyn[5]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[4], lyn[3], lyn[1], lyn[2]}] = 
+    QR[lyn[3]]*QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[2]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[3]]*QR[lyn[1], lyn[2]]*QR[lyn[4], lyn[5]] - 
+     QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] + 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] + 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[3], lyn[2]] + 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[2], 
+      lyn[4], lyn[5]] - QR[lyn[1], lyn[3], lyn[4], lyn[2], lyn[5]] - 
+     QR[lyn[1], lyn[3], lyn[4], lyn[5], lyn[2]]
+ 
+LyndRed5Ew5[{lyn[5], lyn[4], lyn[3], lyn[2], lyn[1]}] = 
+    QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3]]*QR[lyn[4]]*QR[lyn[5]] - 
+     QR[lyn[3]]*QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[2]] - 
+     QR[lyn[1]]*QR[lyn[4]]*QR[lyn[5]]*QR[lyn[2], lyn[3]] - 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[5]]*QR[lyn[3], lyn[4]] + 
+     QR[lyn[5]]*QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[3]]*QR[lyn[1], lyn[2]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[1]]*QR[lyn[2], lyn[3]]*QR[lyn[4], lyn[5]] + 
+     QR[lyn[4]]*QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] - 
+     QR[lyn[4], lyn[5]]*QR[lyn[1], lyn[2], lyn[3]] + 
+     QR[lyn[1]]*QR[lyn[5]]*QR[lyn[2], lyn[3], lyn[4]] + 
+     QR[lyn[1]]*QR[lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[1], lyn[2]]*QR[lyn[3], lyn[4], lyn[5]] - 
+     QR[lyn[5]]*QR[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+     QR[lyn[1]]*QR[lyn[2], lyn[3], lyn[4], lyn[5]] + 
+     QR[lyn[1], lyn[2], lyn[3], lyn[4], lyn[5]]

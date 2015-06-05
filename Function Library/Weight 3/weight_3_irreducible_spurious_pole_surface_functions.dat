@@ -1,0 +1,29 @@
+irreducibleFunctionCoproduct[{2, 1}, SP3[1]] = 
+    (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]) \[CircleDot] HPL[{0}, 1 - v]/2 - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] + 
+     HPL[{0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     SP2[1] \[CircleDot] HPL[{0}, 1 - v]
+ 
+irreducibleFunctionCoproduct[{2, 1}, SP3[2]] = 
+    (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]) \[CircleDot] HPL[{0}, 1 - u]/2 - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] + 
+     HPL[{0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] - 
+     SP2[1] \[CircleDot] HPL[{0}, 1 - u]
+ 
+irreducibleFunctionCoproduct[{2, 1}, SP3[3]] = 
+    (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]) \[CircleDot] HPL[{1}, 1 - v]/2 - 
+     2*SP2[1] \[CircleDot] HPL[{0}, u - v] - SP2[1] \[CircleDot] 
+      HPL[{1}, 1 - v]
+ 
+irreducibleFunctionCoproduct[{2, 1}, SP3[4]] = 
+    (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]) \[CircleDot] HPL[{1}, 1 - u]/2 + 
+     2*SP2[1] \[CircleDot] HPL[{0}, u - v] + SP2[1] \[CircleDot] 
+      HPL[{1}, 1 - u]
+
+Do[If[FreeQ[exchangeSP[u,v], j], AppendTo[exchangeSP[u,v], j]], {j,{SP3[1]->SP3[2], SP3[2]->SP3[1], SP3[3]->SP3[4], SP3[4]->SP3[3]}}];
+
+transcendentalWeight[SP3[_]]:=3;
+
+Table[SP3[ii],{ii,4}]

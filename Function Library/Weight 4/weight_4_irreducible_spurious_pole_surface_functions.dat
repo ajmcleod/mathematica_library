@@ -1,0 +1,113 @@
+irreducibleFunctionCoproduct[{3, 1}, SP4[1]] = 
+    -HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     SP3[1] \[CircleDot] HPL[{0}, 1 - v]
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[2]] = 
+    -HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     SP3[2] \[CircleDot] HPL[{0}, 1 - u]
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[3]] = 
+    (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]^2) \[CircleDot] HPL[{0}, u - v]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]^2) \[CircleDot] HPL[{1}, 1 - u]/2 - 
+     HPL[{1}, 1 - v]^3 \[CircleDot] HPL[{0}, u - v]/6 - 
+     HPL[{1}, 1 - v]^3 \[CircleDot] HPL[{1}, 1 - u]/6 - 
+     2*SP3[4] \[CircleDot] HPL[{0}, u - v] - SP3[4] \[CircleDot] 
+      HPL[{1}, 1 - u]
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[4]] = 
+    -HPL[{1}, 1 - u]^3 \[CircleDot] HPL[{0}, u - v]/6 - 
+     HPL[{1}, 1 - u]^3 \[CircleDot] HPL[{1}, 1 - v]/6 + 
+     (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - v]) \[CircleDot] HPL[{0}, u - v]/2 + 
+     (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - v]) \[CircleDot] HPL[{1}, 1 - v]/2 - 
+     2*SP3[3] \[CircleDot] HPL[{0}, u - v] - SP3[3] \[CircleDot] 
+      HPL[{1}, 1 - v]
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[5]] = 
+    -HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{1}, 1 - u]/2 + 
+     (HPL[{1}, 1 - v]*SP2[1]) \[CircleDot] HPL[{0}, 1 - v]/2 + 
+     SP3[1] \[CircleDot] HPL[{0}, u - v] - 
+     SP3[3] \[CircleDot] HPL[{0}, 1 - v]/2
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[6]] = 
+    -HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{1}, 1 - v]/2 - 
+     (HPL[{1}, 1 - u]*SP2[1]) \[CircleDot] HPL[{0}, 1 - u]/2 + 
+     SP3[2] \[CircleDot] HPL[{0}, u - v] - 
+     SP3[4] \[CircleDot] HPL[{0}, 1 - u]/2
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[7]] = 
+    (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] HPL[{1}, 1 - v]/2 - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     (HPL[{1}, 1 - v]*SP2[1]) \[CircleDot] HPL[{0}, 1 - u]/2 + 
+     SP3[2] \[CircleDot] HPL[{0}, u - v] + 
+     SP3[3] \[CircleDot] HPL[{0}, 1 - u]/2
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[8]] = 
+    (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] HPL[{1}, 1 - u]/2 - 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     (HPL[{1}, 1 - u]*SP2[1]) \[CircleDot] HPL[{0}, 1 - v]/2 + 
+     SP3[1] \[CircleDot] HPL[{0}, u - v] + 
+     SP3[4] \[CircleDot] HPL[{0}, 1 - v]/2
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[9]] = 
+    (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] HPL[{1}, 1 - v]/2 + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] - 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{1}, 1 - u]/2 + 
+     (HPL[{1}, 1 - v]*SP2[1]) \[CircleDot] HPL[{0}, 1 - u]/2 - 
+     (HPL[{1}, 1 - v]*SP2[1]) \[CircleDot] HPL[{0}, 1 - v]/2 + 
+     SP3[2] \[CircleDot] HPL[{0}, 1 - v] + 
+     SP3[3] \[CircleDot] HPL[{0}, 1 - u]/2 - 
+     SP3[3] \[CircleDot] HPL[{0}, 1 - v]/2
+ 
+irreducibleFunctionCoproduct[{3, 1}, SP4[10]] = 
+    (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] HPL[{1}, 1 - u]/2 - 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, 1 - u] - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{0}, 1 - v] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{1}, 1 - v]/2 + 
+     (HPL[{1}, 1 - u]*SP2[1]) \[CircleDot] HPL[{0}, 1 - u]/2 - 
+     (HPL[{1}, 1 - u]*SP2[1]) \[CircleDot] HPL[{0}, 1 - v]/2 + 
+     SP3[1] \[CircleDot] HPL[{0}, 1 - u] - 
+     SP3[4] \[CircleDot] HPL[{0}, 1 - u]/2 + 
+     SP3[4] \[CircleDot] HPL[{0}, 1 - v]/2
+     
+irreducibleFunctionCoproduct[{3, 1}, SP4[11]] = 
+    2*SP3[3] \[CircleDot] HPL[{0}, u - v] + SP3[3] \[CircleDot] 
+      HPL[{1}, 1 - u] - 2*SP3[4] \[CircleDot] HPL[{0}, u - v] - 
+     SP3[4] \[CircleDot] HPL[{1}, 1 - v]
+     
+irreducibleFunctionCoproduct[{3, 1}, SP4[12]] = 
+    -2*(HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] HPL[{0}, u - v] + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] HPL[{1}, 1 - u] - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] HPL[{1}, 1 - v] + 
+     2*(HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] HPL[{0}, u - v] + 
+     4*HPL[{0, 1, 1}, 1 - u] \[CircleDot] HPL[{0}, u - v] - 
+     4*HPL[{0, 1, 1}, 1 - v] \[CircleDot] HPL[{0}, u - v] - 
+     SP3[1] \[CircleDot] HPL[{1}, 1 - v] + SP3[2] \[CircleDot] HPL[{1}, 1 - u]
+
+Do[If[FreeQ[exchangeSP[u,v], j], AppendTo[exchangeSP[u,v], j]], {j,{SP4[1]->SP4[2], SP4[2]->SP4[1], SP4[3]->SP4[4], SP4[4]->SP4[3], SP4[5]->SP4[6], SP4[6]->SP4[5], SP4[7]->SP4[8], SP4[8]->SP4[7], SP4[9]->SP4[10], SP4[10]->SP4[9], SP4[11]->-SP4[11], SP4[12]->-SP4[12]}}];
+
+transcendentalWeight[SP4[_]]:=4;
+
+Table[SP4[ii],{ii,12}]

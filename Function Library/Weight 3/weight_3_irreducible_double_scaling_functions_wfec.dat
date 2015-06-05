@@ -1,8 +1,0 @@
-irreducibleFunctionCoproduct[{2,1},DS3[1]]= 
-  (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u] + (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - w] - 
-  (MPL[{1}, 1 - u]*MPL[{1}, 1 - w]) \[CircleDot] MPL[{0}, 1 - u - w] + MPL[{0, 1}, 1 - u] \[CircleDot] MPL[{0}, 1 - u - w] + 
-  MPL[{0, 1}, 1 - w] \[CircleDot] MPL[{0}, 1 - u - w] + \[Zeta][2] \[CircleDot] MPL[{0}, 1 - u - w]
-  
-transcendentalWeight[DS3[_]]:=3;
-
-{DS3[1]}

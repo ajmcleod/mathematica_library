@@ -1,0 +1,21 @@
+irreducibleFunctionCoproduct[{2, 1}, Subscript[OverTilde[\[CapitalPhi]], 
+      6]] = -(HPL[{1}, 1 - u]*HPL[{1}, 1 - v]) \[CircleDot] Log[yw] - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]) \[CircleDot] Log[yv] - 
+     (HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[yv] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[yw] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] Log[yv] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] Log[yw] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[yv] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[yw] + 
+     2*\[Zeta][2] \[CircleDot] Log[yu] + 2*\[Zeta][2] \[CircleDot] Log[yv] + 
+     2*\[Zeta][2] \[CircleDot] Log[yw]
+ 
+Do[If[FreeQ[yWeight[1], j], AppendTo[yWeight[1], j]], {j,{Subscript[OverTilde[\[CapitalPhi]], 6]}}];
+
+transcendentalWeight[Subscript[OverTilde[\[CapitalPhi]],6]]=3;
+
+{Subscript[OverTilde[\[CapitalPhi]], 6]}

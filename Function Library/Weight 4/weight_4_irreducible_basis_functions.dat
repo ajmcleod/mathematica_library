@@ -1,0 +1,290 @@
+irreducibleFunctionCoproduct[{3, 1}, Subscript[F, 1][u, v, w]] = 
+    -(HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yw] - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yv] + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[yw] + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[yv] + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[yw] + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[yv] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[yu] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[yv] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[yw] - 
+     2*HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[yw] - 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[yv] + 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[1 - u] - 
+     2*(HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[yw] - 
+     2*(HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[yv] + 
+     2*\[Zeta][3] \[CircleDot] Log[yu] + 2*\[Zeta][3] \[CircleDot] Log[yv] + 
+     2*\[Zeta][3] \[CircleDot] Log[yw]
+ 
+irreducibleFunctionCoproduct[{3, 1}, Subscript[F, 1][v, w, u]] = 
+    (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yw] + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yu] - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[yw] - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[yu] + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[yw] + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[yu] - 
+     2*HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[yu] - 
+     2*HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[yv] - 
+     2*HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[yw] - 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[yw] - 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[yu] + 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[1 - v] - 
+     2*(HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[yw] - 
+     2*(HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[yu] + 
+     2*\[Zeta][3] \[CircleDot] Log[yu] + 2*\[Zeta][3] \[CircleDot] Log[yv] + 
+     2*\[Zeta][3] \[CircleDot] Log[yw]
+ 
+irreducibleFunctionCoproduct[{3, 1}, Subscript[F, 1][w, u, v]] = 
+    (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yv] + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yu] + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[yv] + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[yu] - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[yv] - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[yu] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[yu] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[yv] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[yw] - 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[yv] - 
+     2*HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[yu] + 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[1 - w] - 
+     2*(HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[yv] - 
+     2*(HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[yu] + 
+     2*\[Zeta][3] \[CircleDot] Log[yu] + 2*\[Zeta][3] \[CircleDot] Log[yv] + 
+     2*\[Zeta][3] \[CircleDot] Log[yw]
+ 
+irreducibleFunctionCoproduct[{3, 1}, Superscript[\[CapitalOmega], "(2)"][u, 
+      v, w]] = (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - v]) \[CircleDot] Log[1 - v]/
+      2 - (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - v]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]^2) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]^2) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] 
+       Log[1 - u]/2 + (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*
+        HPL[{1}, 1 - w]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] 
+       Log[1 - v]/2 + (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*
+        HPL[{1}, 1 - w]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[v]/2 - 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u] + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[u] - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[1 - v] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[v] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - v] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[v] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[1 - u] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[u] + 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u] - 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[u] + 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - v] - 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[v] - 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[yu]/2 - 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[yv]/2 + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[1 - u] - 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[u] - 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[1 - v] + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[v] - 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[1 - u] + 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[u] + 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[1 - v] - 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[v] + 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[1 - u] - 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[u] + 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[1 - v] - 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[v]
+ 
+irreducibleFunctionCoproduct[{3, 1}, Superscript[\[CapitalOmega], "(2)"][v, 
+      w, u]] = 
+    -(HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] 
+        Log[1 - v]/2 + (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*
+        HPL[{1}, 1 - w]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] 
+       Log[1 - w]/2 + (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*
+        HPL[{1}, 1 - w]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - v]^2*HPL[{1}, 1 - w]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - v]^2*HPL[{1}, 1 - w]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{1}, 1 - w]^2) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{1}, 1 - w]^2) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - v]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[v]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[v]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[w]/2 - 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[1 - v] + 
+     HPL[{0, 0, 1}, 1 - v] \[CircleDot] Log[v] - 
+     HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - w] + 
+     HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[w] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - v] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[v] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - w] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[w] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[1 - w] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[w] - 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - v] + 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[v] - 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[yv]/2 - 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[yw]/2 + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[1 - v] - 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[v] + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[1 - w] - 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[w] + 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[1 - v] - 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[v] - 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[1 - w] + 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[w] - 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[1 - v] + 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[v] + 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[1 - w] - 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, Superscript[\[CapitalOmega], "(2)"][w, 
+      u, v]] = (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - w]) \[CircleDot] Log[1 - w]/
+      2 - (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - w]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] 
+       Log[1 - u]/2 + (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*
+        HPL[{1}, 1 - w]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] 
+       Log[1 - w]/2 + (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*
+        HPL[{1}, 1 - w]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]^2) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]^2) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - v]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[u]/2 + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - w]/2 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[w]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[u]/2 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - w]/2 + 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[w]/2 - 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u] + 
+     HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[u] - 
+     HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - w] + 
+     HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[w] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[w] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[1 - u] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[u] + 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[1 - w] - 
+     HPL[{0, 1, 1}, 1 - v] \[CircleDot] Log[w] - 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[u] - 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[yu]/2 - 
+     Subscript[OverTilde[\[CapitalPhi]], 6] \[CircleDot] Log[yw]/2 + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[1 - u] - 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[u] - 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[1 - w] + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]) \[CircleDot] Log[w] + 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[1 - u] - 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[u] + 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[1 - w] - 
+     (HPL[{1}, 1 - v]*\[Zeta][2]) \[CircleDot] Log[w] - 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[1 - u] + 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[u] + 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[1 - w] - 
+     (HPL[{1}, 1 - w]*\[Zeta][2]) \[CircleDot] Log[w]
+ 
+Do[If[FreeQ[yWeight[2], j], AppendTo[yWeight[2], j]], {j, {Superscript[\[CapitalOmega], "(2)"][_,_,_]}}];
+Do[If[FreeQ[yWeight[1], j], AppendTo[yWeight[1], j]], {j, {Subscript[F, 1][_,_,_]}}];
+
+Subscript[F, 1][v, u, w] = Subscript[F, 1][v, w, u];
+Subscript[F, 1][u, w, v] = Subscript[F, 1][u, v, w];
+Subscript[F, 1][w, v, u] = Subscript[F, 1][w, u, v];
+Superscript[\[CapitalOmega], "(2)"][v, u, w] = Superscript[\[CapitalOmega], "(2)"][u, v, w];
+Superscript[\[CapitalOmega], "(2)"][w, v, u] = Superscript[\[CapitalOmega], "(2)"][v, w, u];
+Superscript[\[CapitalOmega], "(2)"][u, w, v] = Superscript[\[CapitalOmega], "(2)"][w, u, v];
+
+transcendentalWeight[Alternatives[Superscript[\[CapitalOmega], "(2)"][_,_,_], Subscript[F,1][_,_,_]]] = 4;
+
+{Superscript[\[CapitalOmega], "(2)"][u, v, w], Superscript[\[CapitalOmega], "(2)"][v, w, u],Superscript[\[CapitalOmega], "(2)"][w, u, v],Subscript[F, 1][u, v, w],Subscript[F, 1][v, w, u],Subscript[F, 1][w, u, v]}

@@ -1,0 +1,23 @@
+(*irreducibleFunctionCoproduct[{2, 1}, H3[1]] = 
+    -(HPL[{1}, 1 - u]*HPL[{1}, 1 - v]) \[CircleDot] Log[yw] - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]) \[CircleDot] Log[yv] - 
+     (HPL[{1}, 1 - v]*HPL[{1}, 1 - w]) \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[yv] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[yw] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] Log[yv] - 
+     HPL[{0, 1}, 1 - v] \[CircleDot] Log[yw] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[yu] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[yv] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[yw] + 
+     2*\[Zeta][2] \[CircleDot] Log[yu] + 2*\[Zeta][2] \[CircleDot] Log[yv] + 
+     2*\[Zeta][2] \[CircleDot] Log[yw]*)
+     
+Get["weight_3_irreducible_coproducts.mx"];
+
+Do[If[FreeQ[yWeight[1], j], AppendTo[yWeight[1], j]], {j,{H3[1]}}];
+
+transcendentalWeight[H3[_]]:=3;
+
+{H3[1]}
