@@ -532,7 +532,7 @@ MZV[10]={\[Zeta][2]^5, \[Zeta][7,3], \[Zeta][3]\[Zeta][7], \[Zeta][5]^2, \[Zeta]
 \[Zeta][2,1,1,2,4] = (925559*\[Zeta][2]^5)/323400-(7*\[Zeta][2]^2*\[Zeta][3]^2)/5+22*\[Zeta][2]*\[Zeta][3]*\[Zeta][5]-(3849*\[Zeta][5]^2)/112-(61*\[Zeta][3]*\[Zeta][7])/2-(359*\[Zeta][7,3])/112;
 \[Zeta][2,1,1,1,5] = (-85073*\[Zeta][2]^5)/77000+(7*\[Zeta][2]^2*\[Zeta][3]^2)/10-11*\[Zeta][2]*\[Zeta][3]*\[Zeta][5]+(113*\[Zeta][5]^2)/8-(3*\[Zeta][2]*\[Zeta][5,3])/5+(61*\[Zeta][3]*\[Zeta][7])/4+(11*\[Zeta][7,3])/8;
 
-\[Pi]to\[Zeta]={Pi^(10)->93555*\[Zeta][10], Pi^9->9450*Pi*\[Zeta][8], Pi^8->9450*\[Zeta][8], Pi^7->945*Pi*\[Zeta][6], Pi^6->945*\[Zeta][6], Pi^5->90*Pi*\[Zeta][4], Pi^4->90*\[Zeta][4], Pi^3->6*Pi*\[Zeta][2], Pi^2->6\[Zeta][2]};
+\[Pi]to\[Zeta]={Pi^(10)->93555*\[Zeta][10], Pi^9->9450*Pi*\[Zeta][8], Pi^8->9450*\[Zeta][8], Pi^7->945*Pi*\[Zeta][6], Pi^6->945*\[Zeta][6], Pi^5->90*Pi*\[Zeta][4], Pi^4->90*\[Zeta][4], Pi^3->6*Pi*\[Zeta][2], Pi^2->6\[Zeta][2], Power[\[Delta], n_]:>\[Delta]/;OddQ[n]\[And]n>0, Power[\[Delta], n_]:>1/;EvenQ[n]\[And]n>0};
 MZVreplacements={\[Zeta][2]^2->(5/2)\[Zeta][4], \[Zeta][2]^3->(35/8)\[Zeta][6], \[Zeta][2]^4->(175/24)\[Zeta][8], \[Zeta][2]^5->(385/32)\[Zeta][10]};
 pureMZV=Alternatives[\[Zeta][a__],\[Zeta][a__]\[Zeta][b__],\[Zeta][a__]\[Zeta][b__]\[Zeta][c__],\[Zeta][a__]\[Zeta][b__]\[Zeta][c__]\[Zeta][d__],Power[\[Zeta][a__],p1_],\[Zeta][a__]Power[\[Zeta][b__],p1_],\[Zeta][a__]\[Zeta][b__]Power[\[Zeta][c__],p1_],\[Zeta][a__]Power[\[Zeta][b__],p2_]Power[\[Zeta][c__],p2_]];
 

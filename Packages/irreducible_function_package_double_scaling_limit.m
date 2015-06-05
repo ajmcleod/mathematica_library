@@ -1,33 +1,24 @@
 (* ::Package:: *)
 
 <<"angle_bracket_identities_double_scaling_limit.m"
-stayInLyndonBasis=False;
-variables={u,w,1-u,1-w,1-u-w};
+stayInLyndonBasis=True;
+variables={1-u-w,1-u,1-w,u,w};
 uniquePairs={{u,w},{u,1-w},{u,1-u-w},{w,1-u},{w,1-u-w},{1-u,1-w},{1-u,1-u-w},{1-w,1-u-w}};
 
-uwLinearBasisWeight[1]={MPL[{1}, 1 - u], MPL[{1}, 1 - w]};
-uwLinearBasisWeight[weight_,normalize_:False]:=uwLinearBasisWeight[weight,normalize]=DeleteDuplicates[Join[Flatten@Table[{MPL[word,1-u],MPL[word,1-w]},{word,DeleteCases[Tuples[{0,1},weight],{___,0}]}],Flatten@MapThread[Flatten@Table[{MPL[word1,1-u]MPL[word2,1-w]/If[normalize,Sqrt[2],1],MPL[word1,1-w]MPL[word2,1-u]/If[normalize,Sqrt[2],1]},{word1,DeleteCases[Tuples[{0,1},#1],{___,0}]},{word2,DeleteCases[Tuples[{0,1},#2],{___,0}]}]&,IntegerPartitions[weight,{2}]\[Transpose]]]];
-functionsWeight[n_]:=functionsWeight[n]=Join[uwLinearBasisWeight[n],Get["weight_"<>ToString[n]<>"_composite_double_scaling_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_double_scaling_functions_wfec.dat"]];
-beyondSymbolTerms[weight_,wfec_:True]:=Module[{functionsOfWeight,beyondSymbolFunctions},
-	Do[functionsOfWeight[n]=functionsWeight[n],{n,weight-2}];
-	beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]functionsWeight[n][[k]],{k,Length[functionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]];
+(*uwLinearBasisWeight[1]={MPL[{1}, 1 - u], MPL[{1}, 1 - w]};
+uwLinearBasisWeight[weight_,normalize_:False]:=uwLinearBasisWeight[weight,normalize]=DeleteDuplicates[Join[Flatten@Table[{MPL[word,1-u],MPL[word,1-w]},{word,DeleteCases[Tuples[{0,1},weight],{___,0}]}],Flatten@MapThread[Flatten@Table[{MPL[word1,1-u]MPL[word2,1-w]/If[normalize,Sqrt[2],1],MPL[word1,1-w]MPL[word2,1-u]/If[normalize,Sqrt[2],1]},{word1,DeleteCases[Tuples[{0,1},#1],{___,0}]},{word2,DeleteCases[Tuples[{0,1},#2],{___,0}]}]&,IntegerPartitions[weight,{2}]\[Transpose]]]];*)
+DSfunctionsWeight[n_]:=DSfunctionsWeight[n]=Join[Get["weight_"<>ToString[n]<>"_irreducible_double_scaling_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_double_scaling_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"]];
+DSbeyondSymbolTerms[weight_]:=Module[{functionsOfWeight,beyondSymbolFunctions},
+	Do[functionsOfWeight[n]=DSfunctionsWeight[n],{n,weight-2}];
+	beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]DSfunctionsWeight[n][[k]],{k,Length[DSfunctionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]];
 	Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
 
 loadFunctionsAndDefinitions[weight_]:=Block[{},
-	currentWeightHPLs=uwLinearBasisWeight[weight];
-	previousWeightHPLs=uwLinearBasisWeight[weight-1];
-	previousPreviousWeightHPLs=uwLinearBasisWeight[weight-2];
-	
+	currentWeightHPLs=Get["weight_"<>ToString[weight]<>"_HPL_double_scaling_basis_wfec.dat"];	
 	currentWeightCompositeFunctions=Get["weight_"<>ToString[weight]<>"_composite_double_scaling_functions_wfec.dat"];
-	previousWeightCompositeFunctions=Get["weight_"<>ToString[weight-1]<>"_composite_double_scaling_functions_wfec.dat"];
-	previousPreviousWeightCompositeFunctions=Get["weight_"<>ToString[weight-2]<>"_composite_double_scaling_functions_wfec.dat"];
-	
-	previousWeightIrreducibleFunctions=Get["weight_"<>ToString[weight-1]<>"_irreducible_double_scaling_functions_wfec.dat"];
-	previousPreviousWeightIrreducibleFunctions=Get["weight_"<>ToString[weight-2]<>"_irreducible_double_scaling_functions_wfec.dat"];
-	
-	knownCurrentWeightFunctions=DeleteCases[Join[currentWeightHPLs,currentWeightCompositeFunctions,beyondSymbolTerms[currentWeight]],Alternatives@@MZV[currentWeight]];
-	previousWeightFunctions=Join[previousWeightIrreducibleFunctions, previousWeightCompositeFunctions, previousWeightHPLs, beyondSymbolTerms[weight-1]];
-	previousPreviousWeightFunctions=Join[previousPreviousWeightIrreducibleFunctions, previousPreviousWeightCompositeFunctions, previousPreviousWeightHPLs, beyondSymbolTerms[weight-2]];
+	knownCurrentWeightFunctions=DeleteCases[Join[currentWeightCompositeFunctions,currentWeightHPLs,DSbeyondSymbolTerms[weight]],Alternatives@@MZV[currentWeight]];
+	previousWeightFunctions=Join[DSfunctionsWeight[weight-1],DSbeyondSymbolTerms[weight-1]];
+	previousPreviousWeightFunctions=Join[DSfunctionsWeight[weight-2],DSbeyondSymbolTerms[weight-2]];
 
 	functions=Flatten@Table[t[i,AngleBracket@@j],{i,Length@previousPreviousWeightFunctions},{j,uniquePairs}];
 	independentFunctions=Flatten@Table[t[i,AngleBracket@@j],{i,Length@previousPreviousWeightFunctions},{j,DeleteCases[uniquePairs,Alternatives@@{{1-u,1-u-w},{1-w,1-u-w}}]}];

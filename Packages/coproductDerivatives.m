@@ -2,8 +2,8 @@
 
 ClearAll[coproductD,replace\[CapitalDelta]];
 
-coproductD[func_,u]:=coproductEntry[func,u]/u-coproductEntry[func,1-u]/(1-u)+coproductEntry[func,yu](1-u-v-w)/(u Sqrt[\[CapitalDelta]])+coproductEntry[func,yv](1-u-v+w)/((1-u)Sqrt[\[CapitalDelta]])+coproductEntry[func,yw](1-u+v-w)/((1-u)Sqrt[\[CapitalDelta]])-coproductEntry[func,1-u-w]/(1-u-w);
-coproductD[func_,v]:=coproductEntry[func,v]/v-coproductEntry[func,1-v]/(1-v)+coproductEntry[func,yv](1-u-v-w)/(v Sqrt[\[CapitalDelta]])+coproductEntry[func,yw](1+u-v-w)/((1-v)Sqrt[\[CapitalDelta]])+coproductEntry[func,yu](1-u-v+w)/((1-v)Sqrt[\[CapitalDelta]]);
+coproductD[func_,u]:=coproductEntry[func,u]/u-coproductEntry[func,1-u]/(1-u)+coproductEntry[func,yu](1-u-v-w)/(u Sqrt[\[CapitalDelta]])+coproductEntry[func,yv](1-u-v+w)/((1-u)Sqrt[\[CapitalDelta]])+coproductEntry[func,yw](1-u+v-w)/((1-u)Sqrt[\[CapitalDelta]])-coproductEntry[func,1-u-w]/(1-u-w)+coproductEntry[func,u-v]/(u-v);
+coproductD[func_,v]:=coproductEntry[func,v]/v-coproductEntry[func,1-v]/(1-v)+coproductEntry[func,yv](1-u-v-w)/(v Sqrt[\[CapitalDelta]])+coproductEntry[func,yw](1+u-v-w)/((1-v)Sqrt[\[CapitalDelta]])+coproductEntry[func,yu](1-u-v+w)/((1-v)Sqrt[\[CapitalDelta]])-coproductEntry[func,u-v]/(u-v);
 coproductD[func_,w]:=coproductEntry[func,w]/w-coproductEntry[func,1-w]/(1-w)+coproductEntry[func,yw](1-u-v-w)/(w Sqrt[\[CapitalDelta]])+coproductEntry[func,yu](1-u+v-w)/((1-w)Sqrt[\[CapitalDelta]])+coproductEntry[func,yv](1+u-v-w)/((1-w)Sqrt[\[CapitalDelta]])-coproductEntry[func,1-u-w]/(1-u-w);
 coproductD[func_,yu]:=coproductEntry[func,u](1-u)(1-v-w)/(yu Sqrt[\[CapitalDelta]])-coproductEntry[func,v]u (1-v)/(yu Sqrt[\[CapitalDelta]])-coproductEntry[func,w]u (1-w)/(yu Sqrt[\[CapitalDelta]])-coproductEntry[func,1-u]u (1-v-w)/(yu Sqrt[\[CapitalDelta]])+coproductEntry[func,1-v] u v/(yu Sqrt[\[CapitalDelta]])+coproductEntry[func,1-w] u w/(yu Sqrt[\[CapitalDelta]])+coproductEntry[func,yu]/(yu);
 coproductD[func_,yv]:=coproductEntry[func,v](1-v)(1-u-w)/(yv Sqrt[\[CapitalDelta]])-coproductEntry[func,w]v (1-w)/(yv Sqrt[\[CapitalDelta]])-coproductEntry[func,u]v (1-u)/(yv Sqrt[\[CapitalDelta]])-coproductEntry[func,1-v]v (1-w-u)/(yv Sqrt[\[CapitalDelta]])+coproductEntry[func,1-w] v w/(yv Sqrt[\[CapitalDelta]])+coproductEntry[func,1-u] v u/(yv Sqrt[\[CapitalDelta]])+coproductEntry[func,yv]/(yv);
@@ -34,6 +34,22 @@ coproductD[func_,zb]:=coproductD[func,Subscript[zb,u]];
 coproductD[func_,\[Xi]]:=coproductD[func,Subscript[\[Xi],u]];
 
 replace\[CapitalDelta]={\[CapitalDelta]->(1-u-v-w)^2-4u v w};
+
+exteriorD[func_,n_:max]:=Simplify[Expand[exteriorDeriv[func,n]],0<u<1\[And]0<v<1\[And]0<w<1];
+exteriorDeriv[Plus[x_,y__],n_]:=Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}];
+exteriorDeriv[c_ Plus[x_,y__],n_]:=c Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}]/;NumericQ[c];
+exteriorDeriv[c_ CircleDot[x__],n_]:=c exteriorDeriv[CircleDot[x],n]/;NumericQ[c];
+exteriorDeriv[CircleDot[x_,y_],n_]:=0/;MatchQ[y/.MPLtoLogs,Log[_]]\[And]MatchQ[x,pureMZV];
+exteriorDeriv[CircleDot[x___,y_,z_],n_]:=exteriorDeriv[CircleDot[x,coproduct[{transcendentalWeight[y]-1,1},y],z],n]/;MemberQ[irreducibleFunctions,y];
+exteriorDeriv[CircleDot[x___,y_,z___],n_]:=exteriorDeriv[CircleDot[x,coproduct[max,y]/.MPLtoLogs,z],n]/;transcendentalWeight[y]>1\[And]!MatchQ[y,pureMZV];
+exteriorDeriv[CircleDot[x___,MPL[{a_},af_],z___],n_]:=exteriorDeriv[CircleDot[x,MPL[{a},af]/.MPLtoLogs,z],n];
+exteriorDeriv[CircleDot[x__,Log[y_],Log[z_]],last]:=SubMinus[CircleDot[x]]exteriorDifferentiation[CircleDot[Log[y],Log[z]]];
+exteriorDeriv[CircleDot[x__],max]:=Sum[exteriorDeriv[CircleDot[x],i],{i,2,Length@List[x]}]/;FreeQ[List[x],MPL[a_,af_],Infinity];
+exteriorDeriv[CircleDot[x__],n_]:=If[n>Length@List[x]\[Or]n<2,Print["Cannot take the exterior derivative at the entry you specified."],SubMinus[CircleDot@@Take[List[x],n-2]]SubPlus[CircleDot@@Drop[List[x],n]]exteriorDifferentiation[CircleDot@@Join[Take[List[x],{n-1}],Take[List[x],{n}]]]]/;FreeQ[List[x],MPL[_,_],Infinity]\[And]n=!=last;
+exteriorDifferentiation[CircleDot[Log[x_],Log[y_]]]:=Expand[Module[{a=x/.yReplacements,b=y/.yReplacements},(D[Log[a],u]D[Log[b],v]-D[Log[b],u]D[Log[a],v])Wedge[du,dv]+(D[Log[a],u]D[Log[b],w]-D[Log[b],u]D[Log[a],w])Wedge[du,dw]+(D[Log[a],v]D[Log[b],w]-D[Log[b],v]D[Log[a],w])Wedge[dv,dw]]];
+exteriorDifferentiation[CircleDot[\[Zeta][__],Log[_]]]:=0;
+SubMinus[CircleDot[]]:=1;
+SubPlus[CircleDot[]]:=1;
 
 (*coproductD[func_,z]:=Block[{fullFunction=func/.SVHPLreplacements},(1/z)(coproductEntry[fullFunction,w]-coproductEntry[fullFunction,yw]+coproductEntry[fullFunction,z])+(1/(1-z))(coproductEntry[fullFunction,v]+coproductEntry[fullFunction,w]+coproductEntry[fullFunction,yv]-coproductEntry[fullFunction,yw]-coproductEntry[fullFunction,1-z])];
 coproductD[func_,zb]:=Block[{fullFunction=func/.SVHPLreplacements},(1/zb)(coproductEntry[fullFunction,w]+coproductEntry[fullFunction,yw]+coproductEntry[fullFunction,zb])+(1/(1-zb))(coproductEntry[fullFunction,v]+coproductEntry[fullFunction,w]-coproductEntry[fullFunction,yv]+coproductEntry[fullFunction,yw]-coproductEntry[fullFunction,1-zb])];
