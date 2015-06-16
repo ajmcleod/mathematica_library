@@ -14,7 +14,7 @@
      2*\[Zeta][2] \[CircleDot] Log[yu] + 2*\[Zeta][2] \[CircleDot] Log[yv] + 
      2*\[Zeta][2] \[CircleDot] Log[yw]*)
      
-Get["weight_3_irreducible_coproducts.mx"];
+Get[$MathematicaLibrary<>"/Function Library/Weight 3/Local Binaries/weight_3_irreducible_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
 
 Do[If[FreeQ[yWeight[1], j], AppendTo[yWeight[1], j]], {j,{H3[1]}}];
 

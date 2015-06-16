@@ -7,6 +7,23 @@ Do[Evaluate[Symbol["toSingularArgP2Ew"<>ToString[ii]<>"HPL"][x_, \[Delta]_]]={},
 Do[Evaluate[Symbol["flipArgument2Ew"<>ToString[ii]<>"HPL"][x_, \[Delta]_]]={},{ii,5,10}];
 SVHPLreplacements=irreducibleFunctionsToLineE[x_]=irreducibleDoubleScalingFunctionsToLineE[x_]={};
 
+(*To do: separate out convertLanceToMe and convertMeToLance into separate weights above weight 5*)
+loadConversions[weight_:5]:=Module[{currentWeight=If[ValueQ[conversionWeight],conversionWeight,5]},
+  If[!ValueQ[conversionWeight],
+     Get[$MathematicaLibrary<>"/Function Library/Weight 3/weight_3_irreducible_basis_functions.dat"];
+     Get[$MathematicaLibrary<>"/Function Library/Weight 4/weight_4_irreducible_basis_functions.dat"];
+     Get[$MathematicaLibrary<>"/Function Library/Weight 5/weight_5_irreducible_basis_functions.dat"];
+     Get[$MathematicaLibrary<>"/Function Library/Basis Conversions/Local Binaries/convertLanceToMe_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+     Get[$MathematicaLibrary<>"/Function Library/Basis Conversions/Local Binaries/convertMeToLance_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+     Get[$MathematicaLibrary<>"/Function Library/Basis Conversions/Local Binaries/LanceToMe_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+     Get[$MathematicaLibrary<>"/Function Library/Basis Conversions/Local Binaries/meToLance_"<>ToString[Floor[$VersionNumber]]<>".mx"]];
+  If[!ValueQ[conversionWeight]\[Or]conversionWeight<weight,
+     Unprotect[conversionWeight];
+     conversionWeight=weight;
+     Protect[conversionWeight];
+     Print["conversions loaded through weight "<>ToString[conversionWeight]];
+     ,Print["conversions already loaded through weight "<>ToString[conversionWeight]]]]/;10>=weight>=5;
+
 loadHPL2E[weight_:5]:=Module[{currentWeight=If[ValueQ[HPL2Eweight],HPL2Eweight,5]},
   Do[Clear[Evaluate[Symbol["invertArgument2Ew"<>ToString[n]<>"HPL"]]];
      Clear[Evaluate[Symbol["toSingularArgN2Ew"<>ToString[n]<>"HPL"]]];
@@ -21,8 +38,8 @@ loadHPL2E[weight_:5]:=Module[{currentWeight=If[ValueQ[HPL2Eweight],HPL2Eweight,5
      Unprotect[HPL2Eweight];
      HPL2Eweight=weight;
      Protect[HPL2Eweight];
-     Print["HPL identities for letters {0,1} loaded through weight"<>ToString[HPL2Eweight]];
-     ,Print["HPL identities for letters {0,1} already loaded through weight"<>ToString[HPL2Eweight]]]]/;10>=weight>=5;    
+     Print["HPL identities for letters {0,1} loaded through weight "<>ToString[HPL2Eweight]];
+     ,Print["HPL identities for letters {0,1} already loaded through weight "<>ToString[HPL2Eweight]]]]/;10>=weight>=5;    
 
 loadHPL3E[weight_:5]:=Module[{currentWeight=If[ValueQ[HPL3Eweight],HPL3Eweight,5]},
   loadHPL2E[weight];
@@ -35,8 +52,8 @@ loadHPL3E[weight_:5]:=Module[{currentWeight=If[ValueQ[HPL3Eweight],HPL3Eweight,5
      Unprotect[HPL3Eweight];
      HPL3Eweight=weight;
      Protect[HPL3Eweight];
-     Print["HPL identities for letters {0,-1,1} loaded through weight"<>ToString[HPL3Eweight]];
-     ,Print["HPL identities for letters {0,-1,1} already loaded through weight"<>ToString[HPL3Eweight]]]]/;10>=weight>=5;
+     Print["HPL identities for letters {0,-1,1} loaded through weight "<>ToString[HPL3Eweight]];
+     ,Print["HPL identities for letters {0,-1,1} already loaded through weight "<>ToString[HPL3Eweight]]]]/;10>=weight>=5;
 
 loadMPL5E[weight_:5]:=Module[{currentWeight=If[ValueQ[MPL5Eweight],MPL5Eweight,5]},
   loadHPL2E[weight]
@@ -78,13 +95,15 @@ toSingularArgP[x_, \[Delta]_:-1]:=Flatten[Table[Symbol["toSingularArgP2Ew"<>ToSt
 flipArgument[x_, \[Delta]_:-1]:=Flatten[Table[Symbol["flipArgument2Ew"<>ToString[ii]<>"HPL"][x,\[Delta]],{ii,5,10}]];
 irrToLineE[line_]:=Join[irreducibleFunctionsToLineE[line],irreducibleDoubleScalingFunctionsToLineE[line]];
 
-Get["Lyndon.m"];
-Get["irreducible_function_coproducts.m"];
-Get[$MathematicaLibrary<>"/Function Library/Identities/Canonical Integration Limits/Local Binaries/canonical_integration_limits_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-Get["coproductDerivatives.m"];
-Get["functionConversions.m"];
 Get["MZV2E.m"];
 Get["MZV3E.m"];
+Get["coproductDerivatives.m"];
+Get["functionConversions.m"];
+Get["irreducible_function_coproducts.m"];
+Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Lyndon.m"];
+Get[$MathematicaLibrary<>"/Function Library/Double Scaling Limits/uwLimits.m"];
+Get[$MathematicaLibrary<>"/Function Library/Hexagon Limits/uvwLimits.m"];
+Get[$MathematicaLibrary<>"/Function Library/Identities/Canonical Integration Limits/Local Binaries/canonical_integration_limits_"<>ToString[Floor[$VersionNumber]]<>".mx"];
 
 HPL[aVec_,arg_]:=HPL[aVec,Simplify[arg]]/;!MatchQ[arg,Simplify[arg]];
 HPL[{0},0]=-\[Zeta][1];
@@ -136,8 +155,8 @@ coproduct[weights_:Null,func_]:=Expand[If[MemberQ[{func},Alternatives[\[Zeta][__
 													If[Length[weights]>2,higherCoproduct[weights,func/.SVHPLreplacements/.toIMPL,If[FreeQ[func,G[__]],CircleDotHPL,CircleDotG]]]]]]]]]/;!MatchQ[func,Alternatives[Times[-1,__],Plus[_,__]]]\[And]FreeQ[func,CircleDot];
 
 twoCoproduct[weights_,0,outputType_]:=0;
-twoCoproduct[weights_,c_func _,outputType_]:=c twoCoproduct[weights,func,outputType]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[func];
-twoCoproduct[weights_,IMPL[ai_,aVector_,af_],ouputType_]:=Print[StringJoin["The coproduct weights",ToString[weights]," don't match the transcendental weight of the function",ToString[IMPL[ai,aVector,af]]]]/;Length[aVector]!=Total[weights];
+twoCoproduct[weights_,c_ func_,outputType_]:=c twoCoproduct[weights,func,outputType]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[func];
+twoCoproduct[weights_,IMPL[ai_,aVector_,af_],ouputType_]:=Print[StringJoin["The coproduct weights ",ToString[weights]," don't match the transcendental weight of the function ",ToString[IMPL[ai,aVector,af]]]]/;Length[aVector]!=Total[weights];
 twoCoproduct[{0,w_},IMPL[ai_,aVector_,af_],outputType_]:=outputType[1,IMPL[ai,aVector,af]]/;w!=0;
 twoCoproduct[{w_,0},IMPL[ai_,aVector_,af_],outputType_]:=outputType[IMPL[ai,aVector,af],1]/;w!=0;
 sumOverTwo[weights_]:=Module[{partitions=IntegerPartitions[Total[weights]+1],choose,allPermutations},
@@ -152,7 +171,7 @@ twoCoproduct[weights_,Times[x_,y__],outputType_]:=Block[{functions,functionWeigh
 	partitions=Select[Flatten[Table[Array[b,Length@functions],##]&@@Table[{b[i],Max[0,Last@weights-Total[Drop[functionWeights,{i}]]],Min[functionWeights[[i]],Last@weights]},{i,Length@functions}],Length@functions-1],Total[#]==Last[weights]&];	
 	combinedCoproduct[remainingFunctionWeights_,remainingPartitionWeights_,remainingFunctions_]:=coproductTimes[combinedCoproduct[Drop[remainingFunctionWeights,-1],Drop[remainingPartitionWeights,-1],Drop[remainingFunctions,-1]],twoCoproduct[{Last[remainingFunctionWeights]-Last[remainingPartitionWeights],Last[remainingPartitionWeights]},Last[remainingFunctions],outputType]]/;Length@remainingFunctions>2;
 	combinedCoproduct[remainingFunctionWeights_,remainingPartitionWeights_,remainingFunctions_]:=coproductTimes[twoCoproduct[{First[remainingFunctionWeights]-First[remainingPartitionWeights],First[remainingPartitionWeights]},First[remainingFunctions],outputType],twoCoproduct[{Last[remainingFunctionWeights]-Last[remainingPartitionWeights],Last[remainingPartitionWeights]},Last[remainingFunctions],outputType]]/;Length@remainingFunctions==2;
-	If[Total[weights]==Total[functionWeights],Sum[combinedCoproduct[functionWeights,partitions[[i]],functions],{i,Length@partitions}]//.{outputType[f1_,f2_]:>outputType[f1,f2]},Print[StringJoin["The coproduct weights",ToString[weights]," don't match the transcendental weight of the function",ToString[Times[x,y]]]]]]/;FreeQ[List[x,y],Power,Infinity]\[And]Select[List[x,y],NumericQ[#]&]=={};
+	If[Total[weights]==Total[functionWeights],Sum[combinedCoproduct[functionWeights,partitions[[i]],functions],{i,Length@partitions}]//.{outputType[f1_,f2_]:>outputType[f1,f2]},Print[StringJoin["The coproduct weights ",ToString[weights]," don't match the transcendental weight of the function ",ToString[Times[x,y]]]]]]/;FreeQ[List[x,y],Power,Infinity]\[And]Select[List[x,y],NumericQ[#]&]=={};
 twoCoproduct[weights_,Power[IMPL[0,aVector_,af_],n_],outputType_]:=Module[{dummyVars=Table[Unique[d],{i,n}]}, twoCoproduct[weights,Product[IMPL[0,aVector,dummyVars[[i]]],{i,n}],outputType]/.Table[dummyVars[[i]]->af,{i,n}]];
 twoCoproduct[weights_,Times[x___,Power[IMPL[0,aVector_,af_],n_],y___],outputType_]:=Module[{dummyVars=Table[Unique[d],{i,n}]}, twoCoproduct[weights,Times@@Join[Table[IMPL[0,aVector,dummyVars[[i]]],{i,n}],{x,y}],outputType]/.Table[dummyVars[[i]]->af,{i,n}]];
 twoCoproduct[weights_,Times[x___,IMPL[0,aVector_,Power[af_,n_]],y___],outputType_]:=Module[{tempVar},twoCoproduct[weights,Times[x,IMPL[0,aVector,tempVar],y],outputType]/.{tempVar->Power[af,n]}];
@@ -163,7 +182,7 @@ higherCoproduct[weights_,func_,outputType_]:=Module[{lastEntry,intermediate},
 	lastEntry/.{intermediate[x_,y_]:>outputType[coproduct[Drop[weights,-1],x],y]}//Expand];
 
 maxCoproduct[CircleDot[x__]]:=CircleDot@@Table[If[transcendentalWeight[List[x][[i]]]>1\[And]!MatchQ[List[x][[i]],pureMZV],coproduct[max,List[x][[i]]],List[x][[i]]],{i,Length@List[x]}];
-maxCoproduct[c_CircleDot[x__]]:=c CircleDot@@Table[If[transcendentalWeight[List[x][[i]]]>1\[And]!MatchQ[List[x][[i]],pureMZV],coproduct[max,List[x][[i]]],List[x][[i]]],{i,Length@List[x]}]/;NumericQ[c]\[And]FreeQ[c,Pi];
+maxCoproduct[c_ CircleDot[x__]]:=c CircleDot@@Table[If[transcendentalWeight[List[x][[i]]]>1\[And]!MatchQ[List[x][[i]],pureMZV],coproduct[max,List[x][[i]]],List[x][[i]]],{i,Length@List[x]}]/;NumericQ[c]\[And]FreeQ[c,Pi];
 maxCoproduct[func_]:=Module[{w=transcendentalWeight[func]}, If[w>1\[And]!MatchQ[func,pureMZV],coproduct[{Floor[w/2],Ceiling[w/2]},func]/.{CircleDot[x_,y_]:>CircleDot[coproduct[max,x],coproduct[max,y]]},func]]/;FreeQ[func,CircleDot[x__],Infinity];
 
 fullCoproduct[Times[x_,y__],outputType_]:=coproductTimes[fullCoproduct[x,outputType],fullCoproduct[Times[y],outputType]];
@@ -178,7 +197,7 @@ irreducibleFunctionCoproduct[max,Times[func1_,funcN__]]:=Sum[coproduct[{transcen
 irreducibleFunctionCoproduct[max,func_]:=coproduct[{transcendentalWeight[func]-1,1},func]/.CircleDot[x_,y_]:>CircleDot[coproduct[max,x],y];
 
 zetaValueCoproduct[weights_,0]=0;
-zetaValueCoproduct[weights_,c_func _]:=c zetaValueCoproduct[weights,func]/;NumericQ[c]\[And]FreeQ[c,Pi];
+zetaValueCoproduct[weights_,c_ func_]:=c zetaValueCoproduct[weights,func]/;NumericQ[c]\[And]FreeQ[c,Pi];
 zetaValueCoproduct[max,x_]:=CircleDot[x]/;MatchQ[x,pureMZV];
 zetaValueCoproduct[max,Times[func_,x_]]:=(coproduct[{transcendentalWeight[Times[func,x]]-1,1},Times[func,x]]/.{CircleDot[a_,b_]:>CircleDot[coproduct[max,a],b]})/;MatchQ[x,pureMZV]\[And]FreeQ[func,\[Zeta][__]]\[And]MemberQ[{func},Alternatives@@allIrreducibleFunctions,Infinity];
 zetaValueCoproduct[max,Times[func_,x_]]:=CircleDot[x,coproduct[max,func]]/;MatchQ[x,pureMZV]\[And]FreeQ[func,Alternatives@@Append[allIrreducibleFunctions,\[Zeta][__]]];
@@ -194,7 +213,7 @@ splitCoproduct[weights_,func_,pureConstant_]:=Module[{\[Zeta]weight=transcendent
 			\[Zeta]weight==First[weights]\[And]Length[weights]==2\[And]Total[Drop[weights,1]]==transcendentalWeight[func], CircleDot[pureConstant,func],
 			\[Zeta]weight==First[weights]\[And]Length[weights]>2, CircleDot[pureConstant,coproduct[Drop[weights,1],func]],
 			\[Zeta]weight>First[weights],0,
-			Total[weights]!=transcendentalWeight[func],Print[StringJoin["The coproduct weights",ToString[weights]," don't match the transcendental weight of the function",ToString[Times[pureConstant,func]]]]]];
+			Total[weights]!=transcendentalWeight[func],Print[StringJoin["The coproduct weights ",ToString[weights]," don't match the transcendental weight of the function ",ToString[Times[pureConstant,func]]]]]];
 
 CircleDotG[x_,y_]:=toStrictLyndonBasis[CircleDot[x,y/.{\[Zeta][__]->0}]/.IMPLtoG]/;stayInLyndonBasis;
 CircleDotG[x_,y_]:=Expand[CircleDot[x,y/.{\[Zeta][__]->0}]/.IMPLtoG]/;!stayInLyndonBasis;
@@ -205,17 +224,17 @@ CircleDot[y_,z__]:=CircleDot[Expand[y],z]/;!MatchQ[y,Expand[y]];
 CircleDot[x__,y_]:=CircleDot[x,Expand[y]]/;!MatchQ[y,Expand[y]];
 CircleDot[x__,y_,z__]:=CircleDot[x,Expand[y],z]/;!MatchQ[y,Expand[y]];
 CircleDot[x___,y_,z___]:=Plus@@Table[CircleDot[x,y[[i]],z],{i,Length[y]}]/;MatchQ[y,Plus[_,__]];
-CircleDot[x___,c_y _,z___]:=c CircleDot[x,y,z]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[y];
+CircleDot[x___,c_ y_,z___]:=c CircleDot[x,y,z]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[y];
 CircleDot[x___,y_,z___]:=-CircleDot[x,-y,z]/;MatchQ[y,Times[-1,__]];
 CircleDot[x___,CircleDot[y__],z___]:=CircleDot[x,y,z];
-CircleDot[x___,y1_y2 __,z___]:=y1 CircleDot[x,y2,z]/;NumberQ[y1];
+CircleDot[x___,y1_ y2__,z___]:=y1 CircleDot[x,y2,z]/;NumberQ[y1];
 CircleDot[x___,0,z___]:=0;
 CircleDot[x__,\[Pi]*\[Delta],z___]:=0;
 
 coproductTimes[x_,y_]:=Plus@@Table[coproductTimes[x,y[[i]]],{i,Length[y]}]/;MatchQ[y,Plus[_,__]];
 coproductTimes[x_,y_]:=Plus@@Table[coproductTimes[x[[i]],y],{i,Length[x]}]/;MatchQ[x,Plus[_,__]];
-coproductTimes[c_CircleDot[x__],y_]:=c coproductTimes[CircleDot[x],y]/;NumericQ[c]\[And]FreeQ[c,Pi];
-coproductTimes[x_,c_CircleDot[y__]]:=c coproductTimes[x,CircleDot[y]]/;NumericQ[c]\[And]FreeQ[c,Pi];
+coproductTimes[c_ CircleDot[x__],y_]:=c coproductTimes[CircleDot[x],y]/;NumericQ[c]\[And]FreeQ[c,Pi];
+coproductTimes[x_,c_ CircleDot[y__]]:=c coproductTimes[x,CircleDot[y]]/;NumericQ[c]\[And]FreeQ[c,Pi];
 coproductTimes[x_,y_]:=-coproductTimes[x,-y]/;MatchQ[y,Times[-1,__]];
 coproductTimes[fullCoproduct[c_],CircleDot[x__]]:=c CircleDot[x]/;NumericQ[c]\[And]FreeQ[c,Pi]; (*new!*)
 coproductTimes[CircleDot[x1_,y1_],CircleDot[x2_,y2_]]:=CircleDot[x1 x2, y1 y2];
@@ -229,14 +248,14 @@ shuffleIMPL[Times[x___,IMPL[0,aVector_,f_],y___,IMPL[0,bVector_,f_],z___]]:=Modu
 shuffleIMPL[Times[x___,IMPL[0,aVector_,f_],y___]]:=IMPL[0,aVector,f] shuffleIMPL[Times[x,y]]/;FreeQ[List[x,y],IMPL[0,_,f],Infinity];
 shuffleIMPL[Power[IMPL[0,aVector_,f_],n_]]:=Module[{shuffles,l,j}, shuffles=shuffleW[aVector,aVector]; For[l=2,l<n,l++,shuffles=Join@@Table[shuffleW[aVector,shuffles[[j]]],{j,Length@shuffles}]]; Sum[IMPL[0,shuffles[[j]],f],{j,Length@shuffles}]];
 shuffleIMPL[Times[x__,Power[IMPL[0,aVector_,f_],n_]]]:=Module[{shuffles,l,j}, shuffles=shuffleW[aVector,aVector]; For[l=2,l<n,l++,shuffles=Join@@Table[shuffleW[aVector,shuffles[[j]]],{j,Length@shuffles}]]; Sum[shuffleIMPL[Times[x,IMPL[0,shuffles[[j]],f]]],{j,Length@shuffles}]];
-shuffleIMPL[c_IMPL[0,aVector_,f_]]:=IMPL[0,aVector,f]/;NumericQ[c];
+shuffleIMPL[c_ IMPL[0,aVector_,f_]]:=IMPL[0,aVector,f]/;NumericQ[c];
 shuffleIMPL[IMPL[0,aVector_,f_]]:=IMPL[0,aVector,f];
 shuffleIMPL[c_]:=c/;NumericQ[c];
 shuffleIMPL[rational_]:=rational/;FreeQ[rational,IMPL[0,_,_]];
 shuffleIMPL[\[Zeta][x__]]:=\[Zeta][x];
 shuffleIMPL[\[Zeta][x__]^n_]:=\[Zeta][x]^n;
 shuffleIMPL[\[Zeta][x__]func_]:=\[Zeta][x]shuffleIMPL[func];
-shuffleIMPL[\[Zeta][x__]^n_func_]:=\[Zeta][x]^n shuffleIMPL[func];
+shuffleIMPL[\[Zeta][x__]^n_ func_]:=\[Zeta][x]^n shuffleIMPL[func];
 shuffleW[s1_,s2_]:=Module[{p,tp,accf,ord}, p=Permutations@Join[1&/@s1,0&/@s2]; tp=BitXor[p,1]; accf=Accumulate[#\[Transpose]]\[Transpose] #&; ord=accf[p]+(accf[tp]+Length[s1]) tp; Outer[Part,{Join[s1,s2]},ord,1]//First];
 
 toLinearBasis[Times[a_,x__]]:=a toLinearBasis[Times[x]]/;NumericQ[a];
@@ -267,7 +286,7 @@ uReplacements={1-u->(1-yu)(1-yu*yv*yw)/((1-yu*yv)(1-yu*yw)),1-v->(1-yv)(1-yu*yv*
 zLogReplacements = {Log[Subscript[z,u]]->Log[((1-yv)*(1-yu*yv)*yw)/(yv*(1-yw)*(1-yu*yw))]-Log[Subscript[zb,u]],Log[1-Subscript[z,u]]->Log[((1-yv*yw)*(1-yu*yv*yw))/(yv*(1-yw)*(1-yu*yw))]-Log[1-Subscript[zb,u]],Log[Subscript[z,v]]->Log[(yu*(1-yw)*(1-yv*yw))/((1-yu)*(1-yu*yv)*yw)]-Log[Subscript[zb,v]],Log[1-Subscript[z,v]]->Log[((1-yu*yw)*(1-yu*yv*yw))/((1-yu)*(1-yu*yv)*yw)]-Log[1-Subscript[zb,v]],Log[Subscript[z,w]]->Log[((1-yu)*yv*(1-yu*yw))/(yu*(1-yv)*(1-yv*yw))]-Log[Subscript[zb,w]],Log[1-Subscript[z,w]]->Log[((1-yu*yv)*(1-yu*yv*yw))/(yu*(1-yv)*(1-yv*yw))]-Log[1-Subscript[zb,w]],Log[z]->Log[((1-yv)*(1-yu*yv)*yw)/(yv*(1-yw)*(1-yu*yw))]-Log[zb],Log[1-z]->Log[((1-yv*yw)*(1-yu*yv*yw))/(yv*(1-yw)*(1-yu*yw))]-Log[1-zb]};
 yMatchReplacements={ -((-1 - u + v + w + Sqrt[-4*u*v*w + (-1 + u + v + w)^2])/(1 + u - v - w + Sqrt[-4*u*v*w + (-1 + u + v + w)^2]))->yu,-((-1+u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2]))->yv,-((-1+u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2]))->yw};
 uToMRK={u->1-\[Xi],v->\[Xi] z zp,w->\[Xi](1-z)(1-zp)};
-expandLogs={Log[a_b _]:>Log[a]+Log[b],Log[Power[a_,b_]]:>b Log[a]};
+expandLogs={Log[a_ b_]:>Log[a]+Log[b],Log[Power[a_,b_]]:>b Log[a]};
 
 cycle={u->v,v->w,w->u,yu->yv,yv->yw,yw->yu};
 exchange[u,v]={u->v,v->u,yu->yv,yv->yu};
@@ -278,7 +297,7 @@ yWeight[1]={yu,yv,yw};
 Do[yWeight[i]={};,{i,2,8}];
 yGrading[func_]:=Module[{entries,gradings,k,yCount},
 	yCount[f_]:=Sum[k Count[f,Alternatives@@yWeight[k],Infinity],{k,8}]+Sum[k(n-1)Count[f,Alternatives@@Power[yWeight[k],n],Infinity],{n,2,3},{k,8}];
-	If[MatchQ[Expand[func],Plus[_,__]],entries=List@@Expand[func],entries={func}]/.{c_CircleDot[x__]:>CircleDot[x]};
+	If[MatchQ[Expand[func],Plus[_,__]],entries=List@@Expand[func],entries={func}]/.{c_ CircleDot[x__]:>CircleDot[x]};
 	gradings=Table[yCount[{k}],{k,entries}];
 	If[And@@(EvenQ/@gradings)\[Or]And@@(OddQ/@gradings),Max[gradings],Print["Function has mixed parity."]]];
 
@@ -286,13 +305,13 @@ coproductEntry[0,var_]:=0;
 coproductEntry[func_,var_]:=coproductEntry[Expand[func],var]/;!MatchQ[Expand[func],func];
 coproductEntry[Plus[func1_,funcN__],var_]:=Sum[coproductEntry[i,var],{i,List[func1,funcN]}];
 coproductEntry[func_,var_]:=Expand[Module[{functionCoproduct},
-	functionCoproduct=Which[MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]]\[And](func/.{c_CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})==1,func,
-							MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]]\[And](func/.{c_CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})>1,func/.{CircleDot[x__,y_]:>CircleDot[x,coproduct[{transcendentalWeight[y]-1,1},y]]},
+	functionCoproduct=Which[MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]]\[And](func/.{c_ CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})==1,func,
+							MatchQ[func,Alternatives[CircleDot[__,_],Times[__,CircleDot[__,_]]]]\[And](func/.{c_ CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})>1,func/.{CircleDot[x__,y_]:>CircleDot[x,coproduct[{transcendentalWeight[y]-1,1},y]]},
 							FreeQ[func,CircleDot[__]],coproduct[{transcendentalWeight[func]-1,1},func]];
 	functionCoproduct/.CircleDot[x__,y_]:>CircleDot[x,y/.toLogs]/.{CircleDot[x__,Log[var]]:>If[Length[List[x]]>1,CircleDot[x],x],CircleDot[x__,Log[y_]]:>0/;y=!=var}]/.flipArgument[{u,v,w}]];
 
 IntegrateHPL[func_,{var_,ll_,ul_}]:=Sum[IntegrateHPL[i,{var,ll,ul}],{i,List@@Expand[func]}]/;MatchQ[Expand[func],Plus[_,__]];
-IntegrateHPL[c_func _,{var_,ll_,ul_}]:=Expand[c IntegrateHPL[func,{var,ll,ul}]]/;NumericQ[c];
+IntegrateHPL[c_ func_,{var_,ll_,ul_}]:=Expand[c IntegrateHPL[func,{var,ll,ul}]]/;NumericQ[c];
 IntegrateHPL[func_,{var_,ll_,ul_}]:=IntegrateHPL[func,{var,0,ul}]-IntegrateHPL[func,{var,0,ll}]/;ll=!=0;
 IntegrateHPL[func_,{var_,0,0}]:=0;
 IntegrateHPL[func_,{var_,0,ul_}]:=Expand[toStrictLyndonBasis[Expand[Apart[toLinearBasis[Expand[func/.toHPL/.flipArgument[1-var]]],var]]/.toHPL/.{Times[f_,Power[var-1,-1]]:>-Times[f,Power[1-var,-1]]}/.{(HPL[aVec_,var]/var):>HPL[Prepend[aVec,0],lTemp],(HPL[aVec_,var]/(1-var)):>HPL[Prepend[aVec,1],lTemp],1/var:>HPL[{0},lTemp],1/(1-var):>HPL[{1},lTemp]}]/.lTemp->ul/.toHPL]/;(!MatchQ[Expand[func],Plus[_,__]]\[And]ul=!=0\[And]FreeQ[func,Alternatives@@allIrreducibleFunctions]);
@@ -321,9 +340,9 @@ HPLseries[func_,{var_,var0_,order_}]:=Module[{tempVar,function,termsList,expandT
 	termsList=If[MatchQ[function,Plus[_,__]],List@@function,{function}];
 	Expand[Normal[Series[Expand[Simplify[Plus@@(expandToProperOrder/@termsList)]],{var,var0,order}]]]];*)
 
-symbolLevelFunctionsWeight[n_]:=symbolLevelFunctionsWeight[n]=If[n>2\[And]basis===Lbasis,Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_basis_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_basis_functions_wfec.dat"]],Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_functions_wfec.dat"]]];
+symbolLevelFunctionsWeight[n_]:=symbolLevelFunctionsWeight[n]=If[n>2\[And]basis===Lbasis,Join[Get["weight_ "<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_ "<>ToString[n]<>"_composite_basis_functions_wfec.dat"],Get["weight_ "<>ToString[n]<>"_irreducible_basis_functions_wfec.dat"]],Join[Get["weight_ "<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_ "<>ToString[n]<>"_composite_functions_wfec.dat"],Get["weight_ "<>ToString[n]<>"_irreducible_functions_wfec.dat"]]];
 beyondSymbolTerms[weight_]:=beyondSymbolTerms[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelFunctionsWeight[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelFunctionsWeight[n][[k]],{k,Length[symbolLevelFunctionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
-functionsWeight[n_]:=functionsWeight[n]=If[n>2\[And]basis===Lbasis,Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_basis_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_basis_functions_wfec.dat"],beyondSymbolTerms[n]],Join[Get["weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_"<>ToString[n]<>"_composite_functions_wfec.dat"],Get["weight_"<>ToString[n]<>"_irreducible_functions_wfec.dat"],beyondSymbolTerms[n]]];
+functionsWeight[n_]:=functionsWeight[n]=If[n>2\[And]basis===Lbasis,Join[Get["weight_ "<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_ "<>ToString[n]<>"_composite_basis_functions_wfec.dat"],Get["weight_ "<>ToString[n]<>"_irreducible_basis_functions_wfec.dat"],beyondSymbolTerms[n]],Join[Get["weight_ "<>ToString[n]<>"_HPL_basis_wfec.dat"],Get["weight_ "<>ToString[n]<>"_composite_functions_wfec.dat"],Get["weight_ "<>ToString[n]<>"_irreducible_functions_wfec.dat"],beyondSymbolTerms[n]]];
 
 expandHPL[order_:10]:={HPL[{0},z_]:>Log[z],HPL[aVec_,z_]:>HPLexpansion[compressedNotation[aVec],z,order]};
 HPLexpansion[{m__},z_,order_]:=Sum[z^l Z[{m},l],{l,1,order}];

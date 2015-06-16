@@ -27692,7 +27692,7 @@ irreducibleFunctionCoproduct[{5, 1}, H6[78]] =
      2*\[Zeta][5] \[CircleDot] Log[yu] - 2*\[Zeta][5] \[CircleDot] Log[yv] - 
      2*\[Zeta][5] \[CircleDot] Log[yw]*)
      
-Get["weight_6_irreducible_coproducts.mx"];
+Get[$MathematicaLibrary<>"/Function Library/Weight 6/Local Binaries/weight_6_irreducible_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
  
 Do[If[FreeQ[yWeight[4], j], AppendTo[yWeight[4], j]], {j, Table[H6[i],{i,18}]}];
 Do[If[FreeQ[yWeight[3], j], AppendTo[yWeight[3], j]], {j, Table[H6[i],{i,19,47}]}];

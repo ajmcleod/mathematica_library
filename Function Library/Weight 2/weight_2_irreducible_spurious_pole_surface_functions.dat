@@ -1,0 +1,11 @@
+irreducibleFunctionCoproduct[{1, 1}, SP2[1]] = 	
+	HPL[{1}, 1 - u] \[CircleDot] HPL[{0}, u - v] + 
+	 HPL[{1}, 1 - u] \[CircleDot] HPL[{1}, 1 - v]/2 - 
+	 HPL[{1}, 1 - v] \[CircleDot] HPL[{0}, u - v] - 
+	 HPL[{1}, 1 - v] \[CircleDot] HPL[{1}, 1 - u]/2
+
+Do[If[FreeQ[exchangeSP[u,v], j], AppendTo[exchangeSP[u,v], j]], {j,{SP2[1]->-SP2[1]}}];
+
+transcendentalWeight[SP2[_]]:=2;
+
+{SP2[1]}

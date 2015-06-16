@@ -190,7 +190,7 @@ irreducibleFunctionCoproduct[{3, 1}, H4[6]] =
      2*\[Zeta][3] \[CircleDot] Log[yu] + 2*\[Zeta][3] \[CircleDot] Log[yv] + 
      2*\[Zeta][3] \[CircleDot] Log[yw]*)
      
-Get["weight_4_irreducible_coproducts.mx"];
+Get[$MathematicaLibrary<>"/Function Library/Weight 4/Local Binaries/weight_4_irreducible_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
 
 Do[If[FreeQ[yWeight[2], j], AppendTo[yWeight[2], j]], {j, Table[H4[i],{i,3}]}];
 Do[If[FreeQ[yWeight[1], j], AppendTo[yWeight[1], j]], {j, Table[H4[i],{i,4,6}]}];

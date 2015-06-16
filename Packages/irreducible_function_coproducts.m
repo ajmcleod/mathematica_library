@@ -1,0 +1,81 @@
+(* ::Package:: *)
+
+numHfuncs[3]=1;
+numHfuncs[4]=6;
+numHfuncs[5]=23;
+numHfuncs[6]=78;
+numOfuncs[7]=106;
+numEfuncs[7]=149;
+
+numDSfuncs[3]=1;
+numDSfuncs[4]=5;
+numDSfuncs[5]=18;
+numDSfuncs[6]=57;
+numDSfuncs[7]=174;
+numDSfuncs[8]=510;
+
+transcendentalWeight[H3[_]]:=3;
+transcendentalWeight[H4[_]]:=4;
+transcendentalWeight[H5[_]]:=5;
+transcendentalWeight[H6[_]]:=6;
+transcendentalWeight[E7[_]]:=7;
+transcendentalWeight[O7[_]]:=7;
+
+transcendentalWeight[DS3[_]]:=3;
+transcendentalWeight[DS4[_]]:=4;
+transcendentalWeight[DS5[_]]:=5;
+transcendentalWeight[DS6[_]]:=6;
+transcendentalWeight[DS7[_]]:=7;
+transcendentalWeight[DS8[_]]:=8;
+
+irreducibleFunctionCoproduct[{2,1},H3[a_]]:=Module[{},irreducibleFunctionCoproduct[{2,1},H3[temp_]]=.;
+  Get["weight_3_irreducible_functions.dat"];
+  If[debug,Print["weight 3 hexagon functions loaded"]];
+  coproduct[{2,1},H3[a]]];
+irreducibleFunctionCoproduct[{3,1},H4[a_]]:=Module[{},irreducibleFunctionCoproduct[{3,1},H4[temp_]]=.;
+  Get["weight_4_irreducible_functions.dat"];
+  If[debug,Print["weight 4 hexagon functions loaded"]];
+  coproduct[{3,1},H4[a]]];
+irreducibleFunctionCoproduct[{4,1},H5[a_]]:=Module[{},irreducibleFunctionCoproduct[{4,1},H5[temp_]]=.;
+  Get["weight_5_irreducible_functions.dat"];
+  If[debug,Print["weight 5 hexagon functions loaded"]];
+  coproduct[{4,1},H5[a]]];
+irreducibleFunctionCoproduct[{5,1},H6[a_]]:=Module[{},irreducibleFunctionCoproduct[{5,1},H6[temp_]]=.;
+  Get["weight_6_irreducible_functions.dat"];
+  If[debug,Print["weight 6 hexagon functions loaded"]];
+  coproduct[{5,1},H6[a]]];
+irreducibleFunctionCoproduct[{6,1},E7[a_]]:=Module[{},irreducibleFunctionCoproduct[{6,1},E7[temp_]]=.;
+  irreducibleFunctionCoproduct[{6,1},O7[temp_]]=.;
+  Get["weight_7_irreducible_functions.dat"];
+  If[debug,Print["weight 7 hexagon functions loaded"]];
+  coproduct[{6,1},E7[a]]];
+irreducibleFunctionCoproduct[{6,1},O7[a_]]:=Module[{},irreducibleFunctionCoproduct[{6,1},O7[temp_]]=.;
+  irreducibleFunctionCoproduct[{6,1},E7[temp_]]=.;
+  Get["weight_7_irreducible_functions.dat"];
+  If[debug,Print["weight 7 hexagon functions loaded"]];
+  coproduct[{6,1},O7[a]]];
+
+irreducibleFunctionCoproduct[{2,1},DS3[a_]]:=Module[{},irreducibleFunctionCoproduct[{2,1},DS3[temp_]]=.;
+  Get["weight_3_irreducible_double_scaling_functions.dat"];
+  If[debug,Print["weight 3 double scaling functions loaded"]];
+  coproduct[{2,1},DS3[a]]];
+irreducibleFunctionCoproduct[{3,1},DS4[a_]]:=Module[{},irreducibleFunctionCoproduct[{3,1},DS4[temp_]]=.;
+  Get["weight_4_irreducible_double_scaling_functions.dat"];
+  If[debug,Print["weight 4 double scaling functions loaded"]];
+  coproduct[{3,1},DS4[a]]];
+irreducibleFunctionCoproduct[{4,1},DS5[a_]]:=Module[{},irreducibleFunctionCoproduct[{4,1},DS5[temp_]]=.;
+  Get["weight_5_irreducible_double_scaling_functions.dat"];
+  If[debug,Print["weight 5 double scaling functions loaded"]];
+  coproduct[{4,1},DS5[a]]];
+irreducibleFunctionCoproduct[{5,1},DS6[a_]]:=Module[{},irreducibleFunctionCoproduct[{5,1},DS6[temp_]]=.;
+  Get["weight_6_irreducible_double_scaling_functions.dat"];
+  If[debug,Print["weight 6 double scaling functions loaded"]];
+  coproduct[{5,1},DS6[a]]];
+irreducibleFunctionCoproduct[{6,1},DS7[a_]]:=Module[{},irreducibleFunctionCoproduct[{6,1},DS7[temp_]]=.;
+  Get["weight_7_irreducible_double_scaling_functions.dat"];
+  If[debug,Print["weight 7 double scaling functions loaded"]];
+  coproduct[{6,1},DS7[a]]];
+irreducibleFunctionCoproduct[{7,1},DS8[a_]]:=Module[{},irreducibleFunctionCoproduct[{7,1},DS8[temp_]]=.;
+  Get["weight_8_irreducible_double_scaling_functions.dat"];
+  If[debug,Print["weight 8 double scaling functions loaded"]];
+  coproduct[{7,1},DS8[a]]];

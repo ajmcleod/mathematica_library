@@ -2,18 +2,26 @@
 
 LyndOrder[0]=0;
 LyndOrder[u]=1;
-LyndOrder[-1]=2;
-LyndOrder[1]=3;
-LyndOrder[1/yu]=4;
-LyndOrder[1/yv]=5;
-LyndOrder[1/(yu*yv)]=6;
+LyndOrder[1-u]=2;
+LyndOrder[-1]=3;
+LyndOrder[var3]=3;
+LyndOrder[1-var3]=3;
+LyndOrder[var4]=4;
+LyndOrder[1-var4]=4;
+LyndOrder[1]=4;
+LyndOrder[1/yu]=5;
+LyndOrder[1-1/yu]=6;
+LyndOrder[1/yv]=7;
+LyndOrder[1-1/yv]=8;
+LyndOrder[1/(yu*yv)]=9;
+LyndOrder[1-1/(yu*yv)]=10;
 
 GredL[{},b_]:=1;
 HredL[{},b_]:=1;
 GredL[A_,b_]:=GredL[A,b]=Block[{Atemp,vars,FFF}, 
   vars=FFF/@SortBy[Union[A],LyndOrder]; 
   Atemp=(FFF/@A)/. Thread[vars->Array[lyn,Length[vars]]]; 
-  If[Length[vars]>1,Expand[Evaluate[Symbol["LyndRed "<>ToString[Length[vars]]<>"Ew "<>ToString[Max[Length[Atemp],5]]]][Atemp]/. Thread[Array[lyn,Length[vars]]->vars]/. FFF[C__]:>C/. QR[B__]:>G[{B},b]],G[A,b]]];
+  If[Length[vars]>1,Expand[Evaluate[Symbol["LyndRed"<>ToString[Length[vars]]<>"Ew"<>ToString[Max[Length[Atemp],5]]]][Atemp]/. Thread[Array[lyn,Length[vars]]->vars]/. FFF[C__]:>C/. QR[B__]:>G[{B},b]],G[A,b]]];
 HredL[A_,b_]:=HredL[A,b]=Block[{Atemp,vars,FFF}, 
   vars=FFF/@SortBy[Union[A],LyndOrder]; 
   Atemp=(FFF/@A)/. Thread[vars->Array[lyn,Length[vars]]];

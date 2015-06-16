@@ -2019,7 +2019,7 @@ irreducibleFunctionCoproduct[{4, 1}, H5[23]] =
      (4*\[Zeta][2]^2 \[CircleDot] Log[yv])/5 + 
      (4*\[Zeta][2]^2 \[CircleDot] Log[yw])/5*)
      
-Get["weight_5_irreducible_coproducts.mx"];
+Get[$MathematicaLibrary<>"/Function Library/Weight 5/Local Binaries/weight_5_irreducible_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
  
 Do[If[FreeQ[yWeight[3], j], AppendTo[yWeight[3], j]], {j, Table[H5[i],{i,6}]}];
 Do[If[FreeQ[yWeight[2], j], AppendTo[yWeight[2], j]], {j, Table[H5[i],{i,7,19}]}];
