@@ -89,10 +89,11 @@ LyndRed4Ew7[word_]:=Module[{},LyndRed4Ew7[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew7_"<>ToString[Floor[$VersionNumber]]<>".mx"];
   If[debug,Print["LyndRed4Ew7 definitions loaded"]];
   LyndRed4Ew7[word]]
-LyndRed4Ew8[word_]:=Module[{},LyndRed4Ew8[temp_]=.;
+(*LyndRed4Ew8[word_]:=Module[{},LyndRed4Ew8[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew8_"<>ToString[Floor[$VersionNumber]]<>".mx"];
   If[debug,Print["LyndRed4Ew8 definitions loaded"]];
-  LyndRed4Ew8[word]]
+  LyndRed4Ew8[word]]*)
+LyndRed4Ew8[word_]:=LyndRed[word];
 LyndRed4Ew9[word_]:=Module[{},LyndRed4Ew9[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew9_"<>ToString[Floor[$VersionNumber]]<>".mx"];
   If[debug,Print["LyndRed4Ew9 definitions loaded"]];
@@ -114,10 +115,11 @@ LyndRed5Ew7[word_]:=Module[{},LyndRed5Ew7[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew7_"<>ToString[Floor[$VersionNumber]]<>".mx"];
   If[debug,Print["LyndRed5Ew7 definitions loaded"]];
   LyndRed5Ew7[word]]
-LyndRed5Ew8[word_]:=Module[{},LyndRed5Ew8[temp_]=.;
+(*LyndRed5Ew8[word_]:=Module[{},LyndRed5Ew8[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew8_"<>ToString[Floor[$VersionNumber]]<>".mx"];
   If[debug,Print["LyndRed5Ew8 definitions loaded"]];
-  LyndRed5Ew8[word]]
+  LyndRed5Ew8[word]]*)
+LyndRed5Ew8[word_]:=LyndRed[word];
 LyndRed5Ew9[word_]:=Module[{},LyndRed5Ew9[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew9_"<>ToString[Floor[$VersionNumber]]<>".mx"];
   If[debug,Print["LyndRed5Ew9 definitions loaded"]];
