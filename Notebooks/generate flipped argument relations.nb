@@ -1,0 +1,315 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11170,        306]
+NotebookOptionsPosition[     10350,        275]
+NotebookOutlinePosition[     10707,        291]
+CellTagsIndexPosition[     10664,        288]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.643144665199552*^9, 3.643144668431862*^9}, {
+  3.64339532770584*^9, 3.643395328174921*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"LBoverlap", "=", 
+   RowBox[{"Select", "[", 
+    RowBox[{
+     RowBox[{"Intersection", "[", 
+      RowBox[{
+       RowBox[{"generateLyndonBasis", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "var3", ",", "var4", ",", "1"}], "}"}]}], "]"}], 
+       ",", 
+       RowBox[{"generateLyndonBasis", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "var4", ",", "var3", ",", "1"}], "}"}]}], "]"}]}],
+       "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"FreeQ", "[", 
+         RowBox[{"#", ",", "var3"}], "]"}]}], "\[And]", 
+       RowBox[{"!", 
+        RowBox[{"FreeQ", "[", 
+         RowBox[{"#", ",", "var4"}], "]"}]}], "\[And]", 
+       RowBox[{
+        RowBox[{"Length", "[", "#", "]"}], "\[Equal]", "8"}]}], "&"}]}], 
+    "]"}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "LBoverlap", "]"}]}], "Input",
+ CellChangeTimes->{{3.643392426049789*^9, 3.6433925031036367`*^9}, {
+  3.643393569960565*^9, 3.643393572022204*^9}, {3.643394362663084*^9, 
+  3.6433943823835087`*^9}, {3.643394878898181*^9, 3.64339487968466*^9}, {
+  3.6433950424879007`*^9, 3.643395063469763*^9}, {3.643395330936426*^9, 
+  3.643395331206164*^9}}],
+
+Cell[BoxData[
+ FormBox["5056", TraditionalForm]], "Output",
+ CellChangeTimes->{3.643395064353693*^9, 3.643395136528915*^9, 
+  3.64339533192175*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"LB", "=", 
+   RowBox[{"DeleteCases", "[", 
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{
+       RowBox[{"generateLyndonBasis", "[", 
+        RowBox[{"8", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "var3", ",", "var4", ",", "1"}], "}"}]}], "]"}], 
+       ",", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"!", 
+          RowBox[{"FreeQ", "[", 
+           RowBox[{"#", ",", "var3"}], "]"}]}], "\[And]", 
+         RowBox[{"!", 
+          RowBox[{"FreeQ", "[", 
+           RowBox[{"#", ",", "var4"}], "]"}]}], "\[And]", 
+         RowBox[{
+          RowBox[{"Length", "[", "#", "]"}], "\[Equal]", "8"}]}], "&"}]}], 
+      "]"}], ",", 
+     RowBox[{"Alternatives", "@@", "LBoverlap"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", "LB", "]"}]}], "Input",
+ CellChangeTimes->{{3.6433932620665283`*^9, 3.643393267645836*^9}, {
+  3.6433935830313807`*^9, 3.643393601899934*^9}, {3.643393770577697*^9, 
+  3.64339377165751*^9}, {3.643394411944317*^9, 3.643394429504106*^9}, {
+  3.643395053100644*^9, 3.643395069163765*^9}, {3.643395333841617*^9, 
+  3.643395334078339*^9}}],
+
+Cell[BoxData[
+ FormBox["1514", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6433950696313066`*^9, 3.6433951368684797`*^9, 
+  3.64339533464073*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"flippedArgumentG", "[", 
+     RowBox[{
+      RowBox[{
+      "LBoverlap", "\[LeftDoubleBracket]", "ii", "\[RightDoubleBracket]"}], 
+      ",", "xxx"}], "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"toStrictLyndonBasis", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"G", "[", 
+           RowBox[{
+            RowBox[{
+            "LBoverlap", "\[LeftDoubleBracket]", "ii", 
+             "\[RightDoubleBracket]"}], ",", "yyy"}], "]"}], "/.", 
+          "GtoIMPL"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"IMPL", "[", 
+            RowBox[{"0", ",", "bVec_", ",", "var_"}], "]"}], "\[RuleDelayed]", 
+           RowBox[{
+            RowBox[{"Power", "[", 
+             RowBox[{
+              RowBox[{"-", "1"}], ",", 
+              RowBox[{"Length", "[", "bVec", "]"}]}], "]"}], 
+            RowBox[{"IMPL", "[", 
+             RowBox[{
+              RowBox[{"1", "-", "var"}], ",", 
+              RowBox[{"1", "-", 
+               RowBox[{"Reverse", "[", "bVec", "]"}]}], ",", "1"}], "]"}]}]}],
+           "}"}]}], "/.", "IMPLtoG"}], "]"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"var3", "\[Rule]", "v3"}], ",", 
+        RowBox[{"var4", "\[Rule]", "v4"}]}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", 
+     RowBox[{"Length", "[", "LBoverlap", "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.643393855084509*^9, 3.6433938620379257`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"flippedArgumentG", "[", 
+     RowBox[{
+      RowBox[{"LB", "\[LeftDoubleBracket]", "ii", "\[RightDoubleBracket]"}], 
+      ",", "xxx"}], "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"toStrictLyndonBasis", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"G", "[", 
+           RowBox[{
+            RowBox[{
+            "LB", "\[LeftDoubleBracket]", "ii", "\[RightDoubleBracket]"}], 
+            ",", "yyy"}], "]"}], "/.", "GtoIMPL"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"IMPL", "[", 
+            RowBox[{"0", ",", "bVec_", ",", "var_"}], "]"}], "\[RuleDelayed]", 
+           RowBox[{
+            RowBox[{"Power", "[", 
+             RowBox[{
+              RowBox[{"-", "1"}], ",", 
+              RowBox[{"Length", "[", "bVec", "]"}]}], "]"}], 
+            RowBox[{"IMPL", "[", 
+             RowBox[{
+              RowBox[{"1", "-", "var"}], ",", 
+              RowBox[{"1", "-", 
+               RowBox[{"Reverse", "[", "bVec", "]"}]}], ",", "1"}], "]"}]}]}],
+           "}"}]}], "/.", "IMPLtoG"}], "]"}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"var3", "\[Rule]", "v3"}], ",", 
+        RowBox[{"var4", "\[Rule]", "v4"}]}], "}"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", 
+     RowBox[{"Length", "[", "LB", "]"}]}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.64304989028749*^9, 3.6430499205393057`*^9}, {
+   3.643050589196145*^9, 3.643050604441251*^9}, {3.643050642904907*^9, 
+   3.643050657483281*^9}, {3.643051049045589*^9, 3.643051055876162*^9}, {
+   3.6430793185259132`*^9, 3.6430793257882423`*^9}, {3.643079356540484*^9, 
+   3.643079370548126*^9}, {3.643079939365156*^9, 3.643079962605451*^9}, {
+   3.6430803991753597`*^9, 3.643080403807211*^9}, {3.643080453666737*^9, 
+   3.643080468913188*^9}, {3.643080530939352*^9, 3.643080537795493*^9}, {
+   3.6430806185640717`*^9, 3.643080655564666*^9}, {3.643080688069812*^9, 
+   3.643080693989812*^9}, {3.643082238416336*^9, 3.643082325641658*^9}, {
+   3.6430823993034363`*^9, 3.643082400854566*^9}, {3.643082567095832*^9, 
+   3.6430825741604156`*^9}, {3.643082976176055*^9, 3.643082989455398*^9}, {
+   3.643084643722396*^9, 3.643084652458562*^9}, {3.643084780958268*^9, 
+   3.643084794735181*^9}, {3.643084939692301*^9, 3.6430849475799503`*^9}, {
+   3.643085115617744*^9, 3.643085120153466*^9}, {3.643085195943007*^9, 
+   3.643085199211306*^9}, {3.64308530029174*^9, 3.6430853037316093`*^9}, {
+   3.643085397574321*^9, 3.6430854011898317`*^9}, {3.643085441038211*^9, 
+   3.643085445295515*^9}, {3.643145270539383*^9, 3.643145330495305*^9}, {
+   3.643145361142558*^9, 3.6431453615886793`*^9}, {3.643146427732293*^9, 
+   3.6431464780098763`*^9}, {3.6431474039419613`*^9, 3.643147408276272*^9}, {
+   3.6431476149315*^9, 3.64314768771771*^9}, {3.643148312138954*^9, 
+   3.6431483442517653`*^9}, 3.6431485766678953`*^9, {3.643148826947796*^9, 
+   3.643148830939693*^9}, {3.6431490846237926`*^9, 3.643149105656406*^9}, 
+   3.643149224508031*^9, {3.6433928741461287`*^9, 3.6433928834807177`*^9}, {
+   3.643393807643071*^9, 3.64339384281839*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<flipArgument4Ew7.dat\>\"", ",", "flippedArgumentG"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6431474368778687`*^9, 3.643147438610577*^9}, {
+  3.643147624534487*^9, 3.643147624706539*^9}, {3.643147656814899*^9, 
+  3.6431476568683443`*^9}, {3.6431476919999447`*^9, 3.643147692308755*^9}, {
+  3.643148844696794*^9, 3.643148846715814*^9}, {3.643149114090157*^9, 
+  3.6431491142000847`*^9}, {3.64314924215668*^9, 3.643149302767508*^9}, {
+  3.6433938699104033`*^9, 3.643393871290846*^9}, {3.6433944779927692`*^9, 
+  3.643394497699267*^9}, {3.6433945697249527`*^9, 3.64339458495002*^9}, {
+  3.643395077361163*^9, 3.643395078062078*^9}, {3.643395139388081*^9, 
+  3.6433951395226507`*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{
+  3.6433944597129173`*^9, {3.643394847882944*^9, 3.643394849008078*^9}}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.643394460411853*^9}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.643394460933449*^9}],
+
+Cell[BoxData["\[IndentingNewLine]"], "Input",
+ CellChangeTimes->{3.643394461404087*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"flipArgumentTest", "[", "x_", "]"}], ":=", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"HPL", "[", 
+      RowBox[{"aVec_", ",", "x"}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"flipArgumentH", "[", 
+      RowBox[{"aVec", ",", "x"}], "]"}]}], ",", 
+    RowBox[{
+     RowBox[{"G", "[", 
+      RowBox[{"aVec_", ",", "x"}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"flipArgumentG", "[", 
+      RowBox[{"aVec", ",", "x"}], "]"}]}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.643086168842874*^9, 3.643086247308193*^9}, {
+  3.6430863071774*^9, 3.6430863131089573`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"flipArgumentG", "[", 
+   RowBox[{"aVec_", ",", "x_"}], "]"}], ":=", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"flippedArgument", "[", 
+     RowBox[{"aVec", ",", "x"}], "]"}], "/.", 
+    RowBox[{"tempFunc", "\[Rule]", "G"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.643086323393503*^9, 3.643086366828088*^9}}]
+},
+WindowSize->{808, 587},
+WindowMargins->{{234, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 169, 3, 28, "Input"],
+Cell[CellGroupData[{
+Cell[752, 27, 1270, 33, 80, "Input"],
+Cell[2025, 62, 147, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2209, 70, 1150, 30, 63, "Input"],
+Cell[3362, 102, 151, 3, 28, "Output"]
+}, Open  ]],
+Cell[3528, 108, 1535, 43, 131, "Input"],
+Cell[5066, 153, 3177, 64, 114, "Input"],
+Cell[8246, 219, 735, 12, 28, "Input"],
+Cell[8984, 233, 138, 2, 46, "Input"],
+Cell[9125, 237, 87, 1, 46, "Input"],
+Cell[9215, 240, 87, 1, 46, "Input"],
+Cell[9305, 243, 87, 1, 46, "Input"],
+Cell[9395, 246, 604, 16, 46, "Input"],
+Cell[10002, 264, 344, 9, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

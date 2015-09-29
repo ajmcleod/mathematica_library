@@ -33,7 +33,8 @@ toLineE[DS8[a_],line_]:=Module[{},toLineE[DS8[temp1_],temp2_]=.;
   If[debug,Print["weight 8 double scaling euclidean lines loaded"]];
   toLineE[DS8[a],line]];
 
-toLineE[func_,line_]:=(toLineE[func,line]=toLineE[toSurfaceE[func,v->0],line])/;!FreeQ[func,Alternatives[H3[_],H4[_],H5[_],H6[_],E7[_],O7[_],E8[_],O8[_],E9[_],O9[_]]]\[And]MatchQ[line,Alternatives[{u,0,1},{1,0,w},{u,0,1-u},{u,0,0}]];
+(*toLineE[func_,{1,0,w}]:=(toLineE[func,{1,0,w}]=toLineE[toSurfaceE[func,v->0],{1,0,w}])/;!FreeQ[func,Alternatives[H3[_],H4[_],H5[_],H6[_],E7[_],O7[_],E8[_],O8[_],E9[_],O9[_]]];*)
+
 toLineE[func_,{u,0,1}]:=(toLineE[func,{u,0,1}]=Expand[func/.irreducibleDoubleScalingFunctionsToLineE[{u,0,1}]/.flipArgument[w]/.{HPL[{___,1},1-w]->0,HPL[{0},w]->Log[w]}])/;FreeQ[func,Alternatives[H3[_],H4[_],H5[_],H6[_],E7[_],O7[_],E8[_],O8[_],E9[_],O9[_]]];
 toLineE[func_,{1,0,w}]:=(toLineE[func,{1,0,w}]=Expand[func/.irreducibleDoubleScalingFunctionsToLineE[{1,0,w}]/.flipArgument[u]/.{HPL[{___,1},1-u]->0,HPL[{0},u]->Log[u]}])/;FreeQ[func,Alternatives[H3[_],H4[_],H5[_],H6[_],E7[_],O7[_],E8[_],O8[_],E9[_],O9[_]]];
 toLineE[func_,{u,0,1-u}]:=(toLineE[func,{u,0,1-u}]:=Expand[func/.irreducibleDoubleScalingFunctionsToLineE[{u,0,1-u}]/.{w->1-u}/.flipArgument[1-u]])/;FreeQ[func,Alternatives[H3[_],H4[_],H5[_],H6[_],E7[_],O7[_],E8[_],O8[_],E9[_],O9[_]]];

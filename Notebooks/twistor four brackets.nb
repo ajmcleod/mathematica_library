@@ -1,0 +1,1261 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     46301,       1251]
+NotebookOptionsPosition[     45631,       1223]
+NotebookOutlinePosition[     45987,       1239]
+CellTagsIndexPosition[     45944,       1236]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FourBracket", "[", 
+   RowBox[{"i_", ",", "j_", ",", "k_", ",", "l_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"i", ",", "j"}], "]"}], 
+    RowBox[{
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "k"}], "]"}], "\[CenterDot]", 
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "l"}], "]"}]}]}], "+", 
+   RowBox[{
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"i", ",", "k"}], "]"}], 
+    RowBox[{
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "l"}], "]"}], "\[CenterDot]", 
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "j"}], "]"}]}]}], "+", 
+   RowBox[{
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"i", ",", "l"}], "]"}], 
+    RowBox[{
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "j"}], "]"}], "\[CenterDot]", 
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "k"}], "]"}]}]}], "+", 
+   RowBox[{
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"k", ",", "l"}], "]"}], 
+    RowBox[{
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "i"}], "]"}], "\[CenterDot]", 
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "j"}], "]"}]}]}], "+", 
+   RowBox[{
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"l", ",", "j"}], "]"}], 
+    RowBox[{
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "i"}], "]"}], "\[CenterDot]", 
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "k"}], "]"}]}]}], "+", 
+   RowBox[{
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"j", ",", "k"}], "]"}], 
+    RowBox[{
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "i"}], "]"}], "\[CenterDot]", 
+     RowBox[{"Subscript", "[", 
+      RowBox[{"\[Mu]", ",", "l"}], "]"}]}]}]}]}]], "Input",
+ CellChangeTimes->{{3.647180023993168*^9, 3.647180080229495*^9}, {
+  3.647180207608893*^9, 3.6471802571975803`*^9}, {3.647180360932876*^9, 
+  3.647180404899385*^9}, {3.647180553222865*^9, 3.647180626955872*^9}, {
+  3.64718298482934*^9, 3.6471829860058804`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"Subscript", "[", 
+    RowBox[{"\[Mu]", ",", "a_"}], "]"}], "\[CenterDot]", 
+   RowBox[{"Subscript", "[", 
+    RowBox[{"\[Mu]", ",", "b_"}], "]"}]}], ":=", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"Subscript", "[", 
+       RowBox[{"\[Mu]", ",", "b"}], "]"}], "\[CenterDot]", 
+      RowBox[{"Subscript", "[", 
+       RowBox[{"\[Mu]", ",", "a"}], "]"}]}], ")"}]}], "/;", 
+   RowBox[{"a", ">", "b"}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"AngleBracket", "[", 
+   RowBox[{"a_", ",", "b_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"-", 
+    RowBox[{"AngleBracket", "[", 
+     RowBox[{"b", ",", "a"}], "]"}]}], "/;", 
+   RowBox[{"a", ">", "b"}]}]}]}], "Input",
+ CellChangeTimes->{{3.647180665697942*^9, 3.64718067624935*^9}, {
+  3.647181247992505*^9, 3.647181279720808*^9}, {3.647181438103006*^9, 
+  3.647181484702626*^9}, {3.647183016710113*^9, 3.647183051309482*^9}, {
+  3.6471831595587187`*^9, 3.647183160143353*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FourBracket", "[", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}], "+", 
+  RowBox[{"FourBracket", "[", 
+   RowBox[{"2", ",", "3", ",", "4", ",", "1"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.647180633049658*^9, 3.647180661049048*^9}, {
+  3.647181492343747*^9, 3.647181497790854*^9}, {3.6471825141071157`*^9, 
+  3.647182524094946*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.647180638355154*^9, 3.647180661448031*^9}, 
+   3.647181282246993*^9, {3.6471814463911963`*^9, 3.647181498163254*^9}, {
+   3.6471825145569477`*^9, 3.647182524526442*^9}, 3.647183164826207*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"FourBracket", "[", 
+   RowBox[{"1", ",", "2", ",", "3", ",", "4"}], "]"}], "-", 
+  RowBox[{"FourBracket", "[", 
+   RowBox[{"4", ",", "3", ",", "2", ",", "1"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.647182566537217*^9, 3.647182578230672*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.64718257876272*^9, 3.647183165421582*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{"Subscript", "[", 
+       RowBox[{"\[Mu]", ",", "a_"}], "]"}], "\[CenterDot]", 
+      RowBox[{"Subscript", "[", 
+       RowBox[{"\[Mu]", ",", "b_"}], "]"}]}], "*", 
+     RowBox[{
+      RowBox[{"Subscript", "[", 
+       RowBox[{"\[Mu]", ",", "c_"}], "]"}], "\[CenterDot]", 
+      RowBox[{"Subscript", "[", 
+       RowBox[{"\[Mu]", ",", "d_"}], "]"}]}]}], ":>", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"\[Mu]", ",", "c"}], "]"}], "\[CenterDot]", 
+       RowBox[{"Subscript", "[", 
+        RowBox[{"\[Mu]", ",", "d"}], "]"}]}], "*", 
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"\[Mu]", ",", "a"}], "]"}], "\[CenterDot]", 
+       RowBox[{"Subscript", "[", 
+        RowBox[{"\[Mu]", ",", "b"}], "]"}]}]}], "/;", 
+     RowBox[{"a", ">", "c"}]}]}], "}"}]}]], "Input",
+ EmphasizeSyntaxErrors->True],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Expand", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"FourBracket", "[", 
+      RowBox[{"i", ",", "j", ",", "s", ",", "t"}], "]"}], "*", 
+     RowBox[{"FourBracket", "[", 
+      RowBox[{"k", ",", "l", ",", "s", ",", "t"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"FourBracket", "[", 
+      RowBox[{"i", ",", "k", ",", "s", ",", "t"}], "]"}], "*", 
+     RowBox[{"FourBracket", "[", 
+      RowBox[{"j", ",", "l", ",", "s", ",", "t"}], "]"}]}], "-", 
+    RowBox[{
+     RowBox[{"FourBracket", "[", 
+      RowBox[{"i", ",", "l", ",", "s", ",", "t"}], "]"}], "*", 
+     RowBox[{"FourBracket", "[", 
+      RowBox[{"j", ",", "k", ",", "s", ",", "t"}], "]"}]}]}], "]"}], "/.", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"i", "\[Rule]", "1"}], ",", 
+    RowBox[{"j", "\[Rule]", "2"}], ",", 
+    RowBox[{"k", "\[Rule]", "3"}], ",", 
+    RowBox[{"l", "\[Rule]", "4"}], ",", 
+    RowBox[{"s", "\[Rule]", "5"}], ",", 
+    RowBox[{"t", "\[Rule]", "6"}]}], "}"}]}]], "Input",
+ CellChangeTimes->{{3.647180633049658*^9, 3.647180661049048*^9}, {
+  3.647181492343747*^9, 3.6471815317590313`*^9}, {3.647181834129808*^9, 
+  3.6471819205931263`*^9}, {3.6471831685359507`*^9, 3.647183212515718*^9}, {
+  3.6471832588489857`*^9, 3.6471832991746693`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{
+   RowBox[{
+    RowBox[{"-", 
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+       SubscriptBox["\[Mu]", "4"]}], ")"}]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    SuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}], "2"]}], "-", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    SuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}], "2"]}], "+", 
+   RowBox[{
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "2"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    SuperscriptBox[
+     RowBox[{"\[LeftAngleBracket]", 
+      RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}], "2"]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "2"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "2"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "2"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "2"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "2"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "3"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "4"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"5", ",", "6"}], "\[RightAngleBracket]"}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+       SubscriptBox["\[Mu]", "6"]}], ")"}], "2"]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+       SubscriptBox["\[Mu]", "6"]}], ")"}], "2"]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    SuperscriptBox[
+     RowBox[{"(", 
+      RowBox[{
+       SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+       SubscriptBox["\[Mu]", "6"]}], ")"}], "2"]}], "-", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "-", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{"2", " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "1"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "2"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "4"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"4", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "3"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "6"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "5"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "+", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "3"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"2", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}], "-", 
+   RowBox[{
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"1", ",", "2"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{"\[LeftAngleBracket]", 
+     RowBox[{"3", ",", "5"}], "\[RightAngleBracket]"}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "4"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}], " ", 
+    RowBox[{
+     SubscriptBox["\[Mu]", "5"], "\[CenterDot]", 
+     SubscriptBox["\[Mu]", "6"]}]}]}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.647180638355154*^9, 3.647180661448031*^9}, 
+   3.647181282246993*^9, {3.6471814463911963`*^9, 3.647181498163254*^9}, {
+   3.647181528936143*^9, 3.647181531963368*^9}, {3.647181835062606*^9, 
+   3.64718185022549*^9}, 3.6471819209437113`*^9, 3.647183187839888*^9, {
+   3.647183261334395*^9, 3.647183299634473*^9}}]
+}, Open  ]]
+},
+WindowSize->{803, 374},
+WindowMargins->{{Automatic, 92}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 2033, 56, 131, "Input"],
+Cell[2594, 78, 1003, 27, 46, "Input"],
+Cell[CellGroupData[{
+Cell[3622, 109, 379, 8, 28, "Input"],
+Cell[4004, 119, 270, 4, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4311, 128, 279, 6, 28, "Input"],
+Cell[4593, 136, 119, 2, 28, "Output"]
+}, Open  ]],
+Cell[4727, 141, 964, 28, 46, "Input"],
+Cell[CellGroupData[{
+Cell[5716, 173, 1262, 30, 80, "Input"],
+Cell[6981, 205, 38634, 1015, 411, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

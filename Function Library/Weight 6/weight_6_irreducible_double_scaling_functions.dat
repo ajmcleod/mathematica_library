@@ -1,4 +1,4 @@
-(*irreducibleFunctionCoproduct[{5, 1}, DS6[1]] = 
+irreducibleFunctionCoproduct[{5, 1}, DS6[1]] = 
     -(HPL[{1}, 1 - u]^2*HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] 
         Log[1 - u]/4 - (HPL[{1}, 1 - u]^2*HPL[{1}, 1 - w]*
         HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w]/4 + 
@@ -2931,10 +2931,8 @@ irreducibleFunctionCoproduct[{5, 1}, DS6[57]] =
      (HPL[{0, 1}, 1 - u]*\[Zeta][3]) \[CircleDot] Log[1 - u - w] + 
      (HPL[{0, 1}, 1 - w]*\[Zeta][3]) \[CircleDot] Log[1 - u - w] + 
      3*(\[Zeta][2]*\[Zeta][3]) \[CircleDot] Log[1 - u - w] - 
-     (9*\[Zeta][5] \[CircleDot] Log[1 - u - w])/2*)
+     (9*\[Zeta][5] \[CircleDot] Log[1 - u - w])/2
        
-Get[$MathematicaLibrary<>"/Function Library/Weight 6/Local Binaries/weight_6_irreducible_double_scaling_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-
 Do[If[FreeQ[exchange[u,w], j], AppendTo[exchange[u,w], j]], {j,{DS6[1] -> DS6[2], DS6[2] -> DS6[1], DS6[3] -> DS6[4], DS6[4] -> DS6[3], DS6[5] -> DS6[6], DS6[6] -> DS6[5], DS6[7] -> DS6[8], DS6[8] -> DS6[7], DS6[9] -> DS6[10], DS6[10] -> DS6[9], DS6[11] -> DS6[12], DS6[12] -> DS6[11], DS6[13] -> DS6[14], DS6[14] -> DS6[13], DS6[15] -> DS6[16], DS6[16] -> DS6[15], DS6[17] -> DS6[18], DS6[18] -> DS6[17], DS6[19] -> DS6[20], DS6[20] -> DS6[19], DS6[21] -> DS6[22], DS6[22] -> DS6[21], DS6[23] -> DS6[24], DS6[24] -> DS6[23], DS6[25] -> DS6[26], DS6[26] -> DS6[25], DS6[27] -> DS6[28], DS6[28] -> DS6[27], DS6[29] -> DS6[30], DS6[30] -> DS6[29], DS6[31] -> DS6[32], DS6[32] -> DS6[31], DS6[33] -> DS6[34], DS6[34] -> DS6[33], DS6[35] -> DS6[36], DS6[36] -> DS6[35], DS6[37] -> DS6[38], DS6[38] -> DS6[37], DS6[39] -> DS6[40], DS6[40] -> DS6[39], DS6[41] -> DS6[42], DS6[42] -> DS6[41], DS6[43] -> DS6[44], DS6[44] -> DS6[43], DS6[45] -> DS6[46], DS6[46] -> DS6[45], DS6[47] -> DS6[48], DS6[48] -> DS6[47], DS6[49] -> DS6[50], DS6[50] -> DS6[49], DS6[51] -> DS6[52], DS6[52] -> DS6[51]}}];
 
 transcendentalWeight[DS6[_]]:=6;

@@ -1,6 +1,6 @@
 toSingularArgP2Ew8HPL[{x1_,xn___}, \[Delta]_:-1] :=Join@@Table[toSingularArgP2Ew8HPL[i, \[Delta]],{i,List[x1,xn]}];
 
-toSingularArgP2Ew8HPL[x_, \[Delta]_:-1] := toSingularArgP2Ew8HPL[x, \[Delta]] = {HPL[{0, 0, 0, 0, 0, 0, 0, 1}, x] -> 
+toSingularArgP2Ew8HPL[x_, \[Delta]_:-1] := toSingularArgP2Ew8HPL[x, \[Delta]] = <|HPL[{0, 0, 0, 0, 0, 0, 0, 1}, x] -> 
       -HPL[{1}, x/(-1 + x)]^8/40320 - (HPL[{1}, x/(-1 + x)]^6*
          HPL[{0, 1}, x/(-1 + x)])/720 - (HPL[{1}, x/(-1 + x)]^5*
          HPL[{0, 0, 1}, x/(-1 + x)])/120 + (HPL[{1}, x/(-1 + x)]^5*
@@ -841,4 +841,4 @@ toSingularArgP2Ew8HPL[x_, \[Delta]_:-1] := toSingularArgP2Ew8HPL[x, \[Delta]] = 
        HPL[{0, 1, 1, 0, 1, 1, 1, 1}, x/(-1 + x)] - 
        34*HPL[{0, 1, 1, 1, 1, 1, 1, 1}, x/(-1 + x)], 
      HPL[{0, 1, 1, 1, 1, 1, 1, 1}, x] -> -HPL[{1}, x/(-1 + x)]^8/40320 - 
-       HPL[{0, 1, 1, 1, 1, 1, 1, 1}, x/(-1 + x)]}
+       HPL[{0, 1, 1, 1, 1, 1, 1, 1}, x/(-1 + x)]|>;

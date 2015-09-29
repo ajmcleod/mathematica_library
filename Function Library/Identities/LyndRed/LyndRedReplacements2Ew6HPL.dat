@@ -1,0 +1,281 @@
+LyndRedReplacements2Ew6HPL[var_] := LyndRedReplacements2Ew6HPL[var] = <|HPL[{0, 0, 0, 0, 1, 0}, var] -> 
+      HPL[{0}, var]*HPL[{0, 0, 0, 0, 1}, var] - 
+       5*HPL[{0, 0, 0, 0, 0, 1}, var], HPL[{0, 0, 0, 1, 0, 0}, var] -> 
+      (HPL[{0}, var]^2*HPL[{0, 0, 0, 1}, var])/2 - 4*HPL[{0}, var]*
+        HPL[{0, 0, 0, 0, 1}, var] + 10*HPL[{0, 0, 0, 0, 0, 1}, var], 
+     HPL[{0, 0, 0, 1, 1, 0}, var] -> 
+      HPL[{0}, var]*HPL[{0, 0, 0, 1, 1}, var] - 
+       4*HPL[{0, 0, 0, 0, 1, 1}, var] - HPL[{0, 0, 0, 1, 0, 1}, var], 
+     HPL[{0, 0, 1, 0, 0, 0}, var] -> (HPL[{0}, var]^3*HPL[{0, 0, 1}, var])/
+        6 - (3*HPL[{0}, var]^2*HPL[{0, 0, 0, 1}, var])/2 + 
+       6*HPL[{0}, var]*HPL[{0, 0, 0, 0, 1}, var] - 
+       10*HPL[{0, 0, 0, 0, 0, 1}, var], HPL[{0, 0, 1, 0, 0, 1}, var] -> 
+      HPL[{0, 0, 1}, var]^2/2 - 6*HPL[{0, 0, 0, 0, 1, 1}, var] - 
+       3*HPL[{0, 0, 0, 1, 0, 1}, var], HPL[{0, 0, 1, 0, 1, 0}, var] -> 
+      -HPL[{0, 0, 1}, var]^2 + HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, var] + 
+       12*HPL[{0, 0, 0, 0, 1, 1}, var] + 3*HPL[{0, 0, 0, 1, 0, 1}, var], 
+     HPL[{0, 0, 1, 1, 0, 0}, var] -> HPL[{0, 0, 1}, var]^2/2 + 
+       (HPL[{0}, var]^2*HPL[{0, 0, 1, 1}, var])/2 - 3*HPL[{0}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] - HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, var], 
+     HPL[{0, 0, 1, 1, 1, 0}, var] -> 
+      HPL[{0}, var]*HPL[{0, 0, 1, 1, 1}, var] - 
+       3*HPL[{0, 0, 0, 1, 1, 1}, var] - HPL[{0, 0, 1, 0, 1, 1}, var] - 
+       HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{0, 1, 0, 0, 0, 0}, var] -> 
+      (HPL[{0}, var]^4*HPL[{0, 1}, var])/24 - 
+       (HPL[{0}, var]^3*HPL[{0, 0, 1}, var])/3 + 
+       (3*HPL[{0}, var]^2*HPL[{0, 0, 0, 1}, var])/2 - 
+       4*HPL[{0}, var]*HPL[{0, 0, 0, 0, 1}, var] + 
+       5*HPL[{0, 0, 0, 0, 0, 1}, var], HPL[{0, 1, 0, 0, 0, 1}, var] -> 
+      -HPL[{0, 0, 1}, var]^2 + HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] + 
+       4*HPL[{0, 0, 0, 0, 1, 1}, var] + 2*HPL[{0, 0, 0, 1, 0, 1}, var], 
+     HPL[{0, 1, 0, 0, 1, 0}, var] -> HPL[{0}, var]*HPL[{0, 1}, var]*
+        HPL[{0, 0, 1}, var] + 2*HPL[{0, 0, 1}, var]^2 - 
+       3*HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] - 6*HPL[{0}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] - 3*HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, 
+         var], HPL[{0, 1, 0, 0, 1, 1}, var] -> 
+      HPL[{0, 1}, var]*HPL[{0, 0, 1, 1}, var] - 
+       9*HPL[{0, 0, 0, 1, 1, 1}, var] - 4*HPL[{0, 0, 1, 0, 1, 1}, var] - 
+       HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{0, 1, 0, 1, 0, 0}, var] -> 
+      (HPL[{0}, var]^2*HPL[{0, 1}, var]^2)/4 - 2*HPL[{0}, var]*
+        HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] - HPL[{0, 0, 1}, var]^2 + 
+       3*HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] - HPL[{0}, var]^2*
+        HPL[{0, 0, 1, 1}, var] + 12*HPL[{0}, var]*HPL[{0, 0, 0, 1, 1}, var] + 
+       4*HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, var] - 
+       12*HPL[{0, 0, 0, 0, 1, 1}, var] - 3*HPL[{0, 0, 0, 1, 0, 1}, var], 
+     HPL[{0, 1, 0, 1, 0, 1}, var] -> HPL[{0, 1}, var]^3/6 - 
+       2*HPL[{0, 1}, var]*HPL[{0, 0, 1, 1}, var] + 
+       12*HPL[{0, 0, 0, 1, 1, 1}, var] + 4*HPL[{0, 0, 1, 0, 1, 1}, var], 
+     HPL[{0, 1, 0, 1, 1, 0}, var] -> -HPL[{0, 1}, var]^3/6 + 
+       HPL[{0}, var]*HPL[{0, 1, 0, 1, 1}, var] + 
+       6*HPL[{0, 0, 0, 1, 1, 1}, var] + 2*HPL[{0, 0, 1, 0, 1, 1}, var] + 
+       2*HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{0, 1, 1, 0, 0, 0}, var] -> 
+      -(HPL[{0}, var]^2*HPL[{0, 1}, var]^2)/4 + HPL[{0}, var]*
+        HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] + 
+       (HPL[{0}, var]^3*HPL[{0, 1, 1}, var])/6 - HPL[{0, 1}, var]*
+        HPL[{0, 0, 0, 1}, var] - 3*HPL[{0}, var]*HPL[{0, 0, 0, 1, 1}, var] - 
+       HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, var] + 
+       4*HPL[{0, 0, 0, 0, 1, 1}, var] + HPL[{0, 0, 0, 1, 0, 1}, var], 
+     HPL[{0, 1, 1, 0, 0, 1}, var] -> -HPL[{0, 1}, var]^3/6 + 
+       HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       3*HPL[{0, 0, 0, 1, 1, 1}, var] - HPL[{0, 0, 1, 0, 1, 1}, var], 
+     HPL[{0, 1, 1, 0, 1, 0}, var] -> HPL[{0, 1}, var]^3/6 + 
+       HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       2*HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] + 2*HPL[{0, 1}, var]*
+        HPL[{0, 0, 1, 1}, var] - 6*HPL[{0}, var]*HPL[{0, 0, 1, 1, 1}, var] - 
+       3*HPL[{0}, var]*HPL[{0, 1, 0, 1, 1}, var] - 
+       6*HPL[{0, 0, 0, 1, 1, 1}, var] - 2*HPL[{0, 0, 1, 0, 1, 1}, var] - 
+       2*HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{0, 1, 1, 0, 1, 1}, var] -> 
+      HPL[{0, 1, 1}, var]^2/2 - 6*HPL[{0, 0, 1, 1, 1, 1}, var] - 
+       3*HPL[{0, 1, 0, 1, 1, 1}, var], HPL[{0, 1, 1, 1, 0, 0}, var] -> 
+      -(HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var]) + 
+       HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] - HPL[{0, 1}, var]*
+        HPL[{0, 0, 1, 1}, var] + (HPL[{0}, var]^2*HPL[{0, 1, 1, 1}, var])/2 + 
+       4*HPL[{0}, var]*HPL[{0, 0, 1, 1, 1}, var] + 2*HPL[{0}, var]*
+        HPL[{0, 1, 0, 1, 1}, var] + 3*HPL[{0, 0, 0, 1, 1, 1}, var] + 
+       HPL[{0, 0, 1, 0, 1, 1}, var] + HPL[{0, 0, 1, 1, 0, 1}, var], 
+     HPL[{0, 1, 1, 1, 0, 1}, var] -> -HPL[{0, 1, 1}, var]^2 + 
+       HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] + 
+       4*HPL[{0, 0, 1, 1, 1, 1}, var] + 2*HPL[{0, 1, 0, 1, 1, 1}, var], 
+     HPL[{0, 1, 1, 1, 1, 0}, var] -> HPL[{0, 1, 1}, var]^2/2 - 
+       HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] + HPL[{0}, var]*
+        HPL[{0, 1, 1, 1, 1}, var], HPL[{1, 0, 0, 0, 0, 0}, var] -> 
+      (HPL[{0}, var]^5*HPL[{1}, var])/120 - 
+       (HPL[{0}, var]^4*HPL[{0, 1}, var])/24 + 
+       (HPL[{0}, var]^3*HPL[{0, 0, 1}, var])/6 - 
+       (HPL[{0}, var]^2*HPL[{0, 0, 0, 1}, var])/2 + 
+       HPL[{0}, var]*HPL[{0, 0, 0, 0, 1}, var] - HPL[{0, 0, 0, 0, 0, 1}, 
+        var], HPL[{1, 0, 0, 0, 0, 1}, var] -> HPL[{0, 0, 1}, var]^2/2 - 
+       HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] + HPL[{1}, var]*
+        HPL[{0, 0, 0, 0, 1}, var], HPL[{1, 0, 0, 0, 1, 0}, var] -> 
+      -(HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var]) - 
+       HPL[{0, 0, 1}, var]^2 + HPL[{0}, var]*HPL[{1}, var]*
+        HPL[{0, 0, 0, 1}, var] + 3*HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] - 
+       4*HPL[{1}, var]*HPL[{0, 0, 0, 0, 1}, var] + 4*HPL[{0}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] + 2*HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, 
+         var] - 4*HPL[{0, 0, 0, 0, 1, 1}, var] - 
+       2*HPL[{0, 0, 0, 1, 0, 1}, var], HPL[{1, 0, 0, 0, 1, 1}, var] -> 
+      -(HPL[{0, 1}, var]*HPL[{0, 0, 1, 1}, var]) + 
+       HPL[{1}, var]*HPL[{0, 0, 0, 1, 1}, var] + 
+       6*HPL[{0, 0, 0, 1, 1, 1}, var] + 3*HPL[{0, 0, 1, 0, 1, 1}, var] + 
+       HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{1, 0, 0, 1, 0, 0}, var] -> 
+      -(HPL[{0}, var]^2*HPL[{0, 1}, var]^2)/4 + 
+       (HPL[{0}, var]^2*HPL[{1}, var]*HPL[{0, 0, 1}, var])/2 + 
+       2*HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] + 
+       HPL[{0, 0, 1}, var]^2/2 - 3*HPL[{0}, var]*HPL[{1}, var]*
+        HPL[{0, 0, 0, 1}, var] - 3*HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] + 
+       6*HPL[{1}, var]*HPL[{0, 0, 0, 0, 1}, var] - 6*HPL[{0}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] - 3*HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, 
+         var] + 6*HPL[{0, 0, 0, 0, 1, 1}, var] + 
+       3*HPL[{0, 0, 0, 1, 0, 1}, var], HPL[{1, 0, 0, 1, 0, 1}, var] -> 
+      -HPL[{0, 1}, var]^3/6 + 2*HPL[{0, 1}, var]*HPL[{0, 0, 1, 1}, var] + 
+       HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, var] - 
+       12*HPL[{0, 0, 0, 1, 1, 1}, var] - 6*HPL[{0, 0, 1, 0, 1, 1}, var] - 
+       2*HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{1, 0, 0, 1, 1, 0}, var] -> 
+      HPL[{0, 1}, var]^3/6 + HPL[{0}, var]*HPL[{1}, var]*
+        HPL[{0, 0, 1, 1}, var] - 3*HPL[{1}, var]*HPL[{0, 0, 0, 1, 1}, var] - 
+       HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, var] - 3*HPL[{0}, var]*
+        HPL[{0, 0, 1, 1, 1}, var] - HPL[{0}, var]*HPL[{0, 1, 0, 1, 1}, var] + 
+       3*HPL[{0, 0, 0, 1, 1, 1}, var] + HPL[{0, 0, 1, 0, 1, 1}, var], 
+     HPL[{1, 0, 0, 1, 1, 1}, var] -> 
+      HPL[{1}, var]*HPL[{0, 0, 1, 1, 1}, var] - 
+       4*HPL[{0, 0, 1, 1, 1, 1}, var] - HPL[{0, 1, 0, 1, 1, 1}, var], 
+     HPL[{1, 0, 1, 0, 0, 0}, var] -> 
+      (HPL[{0}, var]^3*HPL[{1}, var]*HPL[{0, 1}, var])/6 + 
+       (HPL[{0}, var]^2*HPL[{0, 1}, var]^2)/4 - HPL[{0}, var]^2*HPL[{1}, var]*
+        HPL[{0, 0, 1}, var] - HPL[{0}, var]*HPL[{0, 1}, var]*
+        HPL[{0, 0, 1}, var] - (HPL[{0}, var]^3*HPL[{0, 1, 1}, var])/3 + 
+       3*HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 0, 0, 1}, var] + 
+       HPL[{0, 1}, var]*HPL[{0, 0, 0, 1}, var] + HPL[{0}, var]^2*
+        HPL[{0, 0, 1, 1}, var] - 4*HPL[{1}, var]*HPL[{0, 0, 0, 0, 1}, var] + 
+       HPL[{0}, var]*HPL[{0, 0, 1, 0, 1}, var] - HPL[{0, 0, 0, 1, 0, 1}, 
+        var], HPL[{1, 0, 1, 0, 0, 1}, var] -> HPL[{0, 1}, var]^3/6 + 
+       HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] - 
+       2*HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] - 6*HPL[{1}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] - 3*HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, 
+         var] + 12*HPL[{0, 0, 0, 1, 1, 1}, var] + 
+       6*HPL[{0, 0, 1, 0, 1, 1}, var] + 2*HPL[{0, 0, 1, 1, 0, 1}, var], 
+     HPL[{1, 0, 1, 0, 1, 0}, var] -> 
+      (HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 1}, var]^2)/2 - 
+       HPL[{0, 1}, var]^3/6 - 2*HPL[{1}, var]*HPL[{0, 1}, var]*
+        HPL[{0, 0, 1}, var] - 2*HPL[{0}, var]*HPL[{0, 1}, var]*
+        HPL[{0, 1, 1}, var] + 4*HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       2*HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 0, 1, 1}, var] - 
+       2*HPL[{0, 1}, var]*HPL[{0, 0, 1, 1}, var] + 12*HPL[{1}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] + 4*HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, 
+         var] + 12*HPL[{0}, var]*HPL[{0, 0, 1, 1, 1}, var] + 
+       4*HPL[{0}, var]*HPL[{0, 1, 0, 1, 1}, var] - 
+       12*HPL[{0, 0, 0, 1, 1, 1}, var] - 4*HPL[{0, 0, 1, 0, 1, 1}, var], 
+     HPL[{1, 0, 1, 0, 1, 1}, var] -> -HPL[{0, 1, 1}, var]^2 + 
+       HPL[{1}, var]*HPL[{0, 1, 0, 1, 1}, var] + 
+       12*HPL[{0, 0, 1, 1, 1, 1}, var] + 3*HPL[{0, 1, 0, 1, 1, 1}, var], 
+     HPL[{1, 0, 1, 1, 0, 0}, var] -> 
+      -(HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 1}, var]^2)/2 + 
+       HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] + 
+       (HPL[{0}, var]^2*HPL[{1}, var]*HPL[{0, 1, 1}, var])/2 + 
+       2*HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       2*HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] + HPL[{0, 1}, var]*
+        HPL[{0, 0, 1, 1}, var] - (3*HPL[{0}, var]^2*HPL[{0, 1, 1, 1}, var])/
+        2 - 3*HPL[{1}, var]*HPL[{0, 0, 0, 1, 1}, var] - 
+       HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, var] - 6*HPL[{0}, var]*
+        HPL[{0, 0, 1, 1, 1}, var] - 3*HPL[{0}, var]*HPL[{0, 1, 0, 1, 1}, 
+         var] - HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{1, 0, 1, 1, 0, 1}, var] -> 
+      HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] + 
+       2*HPL[{0, 1, 1}, var]^2 - 3*HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] - 
+       6*HPL[{1}, var]*HPL[{0, 0, 1, 1, 1}, var] - 3*HPL[{1}, var]*
+        HPL[{0, 1, 0, 1, 1}, var], HPL[{1, 0, 1, 1, 1, 0}, var] -> 
+      -(HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var]) - 
+       HPL[{0, 1, 1}, var]^2 + HPL[{0}, var]*HPL[{1}, var]*
+        HPL[{0, 1, 1, 1}, var] + 3*HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] + 
+       4*HPL[{1}, var]*HPL[{0, 0, 1, 1, 1}, var] + 2*HPL[{1}, var]*
+        HPL[{0, 1, 0, 1, 1}, var] - 4*HPL[{0}, var]*HPL[{0, 1, 1, 1, 1}, 
+         var] - 4*HPL[{0, 0, 1, 1, 1, 1}, var] - 
+       2*HPL[{0, 1, 0, 1, 1, 1}, var], HPL[{1, 0, 1, 1, 1, 1}, var] -> 
+      HPL[{1}, var]*HPL[{0, 1, 1, 1, 1}, var] - 
+       5*HPL[{0, 1, 1, 1, 1, 1}, var], HPL[{1, 1, 0, 0, 0, 0}, var] -> 
+      (HPL[{0}, var]^4*HPL[{1}, var]^2)/48 - (HPL[{0}, var]^3*HPL[{1}, var]*
+         HPL[{0, 1}, var])/6 + (HPL[{0}, var]^2*HPL[{1}, var]*
+         HPL[{0, 0, 1}, var])/2 + (HPL[{0}, var]^3*HPL[{0, 1, 1}, var])/6 - 
+       HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 0, 0, 1}, var] - 
+       (HPL[{0}, var]^2*HPL[{0, 0, 1, 1}, var])/2 + 
+       HPL[{1}, var]*HPL[{0, 0, 0, 0, 1}, var] + HPL[{0}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] - HPL[{0, 0, 0, 0, 1, 1}, var], 
+     HPL[{1, 1, 0, 0, 0, 1}, var] -> 
+      -(HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var]) + 
+       HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] + 
+       (HPL[{1}, var]^2*HPL[{0, 0, 0, 1}, var])/2 + 4*HPL[{1}, var]*
+        HPL[{0, 0, 0, 1, 1}, var] + 2*HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, 
+         var] - 6*HPL[{0, 0, 0, 1, 1, 1}, var] - 
+       3*HPL[{0, 0, 1, 0, 1, 1}, var] - HPL[{0, 0, 1, 1, 0, 1}, var], 
+     HPL[{1, 1, 0, 0, 1, 0}, var] -> 
+      -(HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 1}, var]^2)/2 + 
+       (HPL[{0}, var]*HPL[{1}, var]^2*HPL[{0, 0, 1}, var])/2 + 
+       2*HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] + 
+       HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       2*HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       (3*HPL[{1}, var]^2*HPL[{0, 0, 0, 1}, var])/2 - 
+       6*HPL[{1}, var]*HPL[{0, 0, 0, 1, 1}, var] - 3*HPL[{1}, var]*
+        HPL[{0, 0, 1, 0, 1}, var] - 3*HPL[{0}, var]*HPL[{0, 0, 1, 1, 1}, 
+         var] - HPL[{0}, var]*HPL[{0, 1, 0, 1, 1}, var] + 
+       9*HPL[{0, 0, 0, 1, 1, 1}, var] + 4*HPL[{0, 0, 1, 0, 1, 1}, var] + 
+       HPL[{0, 0, 1, 1, 0, 1}, var], HPL[{1, 1, 0, 0, 1, 1}, var] -> 
+      HPL[{0, 1, 1}, var]^2/2 + (HPL[{1}, var]^2*HPL[{0, 0, 1, 1}, var])/2 - 
+       3*HPL[{1}, var]*HPL[{0, 0, 1, 1, 1}, var] - 
+       HPL[{1}, var]*HPL[{0, 1, 0, 1, 1}, var], 
+     HPL[{1, 1, 0, 1, 0, 0}, var] -> 
+      (HPL[{0}, var]^2*HPL[{1}, var]^2*HPL[{0, 1}, var])/4 + 
+       (HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 1}, var]^2)/2 - 
+       HPL[{0}, var]*HPL[{1}, var]^2*HPL[{0, 0, 1}, var] - 
+       HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 0, 1}, var] - 
+       HPL[{0}, var]^2*HPL[{1}, var]*HPL[{0, 1, 1}, var] - 
+       HPL[{0}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] + 
+       HPL[{0, 0, 1}, var]*HPL[{0, 1, 1}, var] + 
+       (3*HPL[{1}, var]^2*HPL[{0, 0, 0, 1}, var])/2 + 
+       2*HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 0, 1, 1}, var] + 
+       (3*HPL[{0}, var]^2*HPL[{0, 1, 1, 1}, var])/2 + 
+       HPL[{1}, var]*HPL[{0, 0, 1, 0, 1}, var] + HPL[{0}, var]*
+        HPL[{0, 1, 0, 1, 1}, var] - HPL[{0, 0, 1, 0, 1, 1}, var], 
+     HPL[{1, 1, 0, 1, 0, 1}, var] -> (HPL[{1}, var]^2*HPL[{0, 1}, var]^2)/4 - 
+       2*HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       HPL[{0, 1, 1}, var]^2 - HPL[{1}, var]^2*HPL[{0, 0, 1, 1}, var] + 
+       3*HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] + 12*HPL[{1}, var]*
+        HPL[{0, 0, 1, 1, 1}, var] + 4*HPL[{1}, var]*HPL[{0, 1, 0, 1, 1}, 
+         var] - 12*HPL[{0, 0, 1, 1, 1, 1}, var] - 
+       3*HPL[{0, 1, 0, 1, 1, 1}, var], HPL[{1, 1, 0, 1, 1, 0}, var] -> 
+      -(HPL[{1}, var]^2*HPL[{0, 1}, var]^2)/4 + 
+       (HPL[{0}, var]*HPL[{1}, var]^2*HPL[{0, 1, 1}, var])/2 + 
+       2*HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] + 
+       HPL[{0, 1, 1}, var]^2/2 - 3*HPL[{0}, var]*HPL[{1}, var]*
+        HPL[{0, 1, 1, 1}, var] - 3*HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] - 
+       6*HPL[{1}, var]*HPL[{0, 0, 1, 1, 1}, var] - 3*HPL[{1}, var]*
+        HPL[{0, 1, 0, 1, 1}, var] + 6*HPL[{0}, var]*HPL[{0, 1, 1, 1, 1}, 
+         var] + 6*HPL[{0, 0, 1, 1, 1, 1}, var] + 
+       3*HPL[{0, 1, 0, 1, 1, 1}, var], HPL[{1, 1, 0, 1, 1, 1}, var] -> 
+      (HPL[{1}, var]^2*HPL[{0, 1, 1, 1}, var])/2 - 4*HPL[{1}, var]*
+        HPL[{0, 1, 1, 1, 1}, var] + 10*HPL[{0, 1, 1, 1, 1, 1}, var], 
+     HPL[{1, 1, 1, 0, 0, 0}, var] -> (HPL[{0}, var]^3*HPL[{1}, var]^3)/36 - 
+       (HPL[{0}, var]^2*HPL[{1}, var]^2*HPL[{0, 1}, var])/4 + 
+       (HPL[{0}, var]*HPL[{1}, var]^2*HPL[{0, 0, 1}, var])/2 + 
+       (HPL[{0}, var]^2*HPL[{1}, var]*HPL[{0, 1, 1}, var])/2 - 
+       (HPL[{1}, var]^2*HPL[{0, 0, 0, 1}, var])/2 - 
+       HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 0, 1, 1}, var] - 
+       (HPL[{0}, var]^2*HPL[{0, 1, 1, 1}, var])/2 + 
+       HPL[{1}, var]*HPL[{0, 0, 0, 1, 1}, var] + HPL[{0}, var]*
+        HPL[{0, 0, 1, 1, 1}, var] - HPL[{0, 0, 0, 1, 1, 1}, var], 
+     HPL[{1, 1, 1, 0, 0, 1}, var] -> -(HPL[{1}, var]^2*HPL[{0, 1}, var]^2)/
+        4 + (HPL[{1}, var]^3*HPL[{0, 0, 1}, var])/6 + 
+       HPL[{1}, var]*HPL[{0, 1}, var]*HPL[{0, 1, 1}, var] - 
+       HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] - 3*HPL[{1}, var]*
+        HPL[{0, 0, 1, 1, 1}, var] - HPL[{1}, var]*HPL[{0, 1, 0, 1, 1}, var] + 
+       4*HPL[{0, 0, 1, 1, 1, 1}, var] + HPL[{0, 1, 0, 1, 1, 1}, var], 
+     HPL[{1, 1, 1, 0, 1, 0}, var] -> 
+      (HPL[{0}, var]*HPL[{1}, var]^3*HPL[{0, 1}, var])/6 + 
+       (HPL[{1}, var]^2*HPL[{0, 1}, var]^2)/4 - 
+       (HPL[{1}, var]^3*HPL[{0, 0, 1}, var])/3 - HPL[{0}, var]*
+        HPL[{1}, var]^2*HPL[{0, 1, 1}, var] - HPL[{1}, var]*HPL[{0, 1}, var]*
+        HPL[{0, 1, 1}, var] + HPL[{1}, var]^2*HPL[{0, 0, 1, 1}, var] + 
+       3*HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 1, 1, 1}, var] + 
+       HPL[{0, 1}, var]*HPL[{0, 1, 1, 1}, var] + HPL[{1}, var]*
+        HPL[{0, 1, 0, 1, 1}, var] - 4*HPL[{0}, var]*HPL[{0, 1, 1, 1, 1}, 
+         var] - HPL[{0, 1, 0, 1, 1, 1}, var], HPL[{1, 1, 1, 0, 1, 1}, var] -> 
+      (HPL[{1}, var]^3*HPL[{0, 1, 1}, var])/6 - 
+       (3*HPL[{1}, var]^2*HPL[{0, 1, 1, 1}, var])/2 + 
+       6*HPL[{1}, var]*HPL[{0, 1, 1, 1, 1}, var] - 
+       10*HPL[{0, 1, 1, 1, 1, 1}, var], HPL[{1, 1, 1, 1, 0, 0}, var] -> 
+      (HPL[{0}, var]^2*HPL[{1}, var]^4)/48 - (HPL[{0}, var]*HPL[{1}, var]^3*
+         HPL[{0, 1}, var])/6 + (HPL[{1}, var]^3*HPL[{0, 0, 1}, var])/6 + 
+       (HPL[{0}, var]*HPL[{1}, var]^2*HPL[{0, 1, 1}, var])/2 - 
+       (HPL[{1}, var]^2*HPL[{0, 0, 1, 1}, var])/2 - 
+       HPL[{0}, var]*HPL[{1}, var]*HPL[{0, 1, 1, 1}, var] + 
+       HPL[{1}, var]*HPL[{0, 0, 1, 1, 1}, var] + HPL[{0}, var]*
+        HPL[{0, 1, 1, 1, 1}, var] - HPL[{0, 0, 1, 1, 1, 1}, var], 
+     HPL[{1, 1, 1, 1, 0, 1}, var] -> (HPL[{1}, var]^4*HPL[{0, 1}, var])/24 - 
+       (HPL[{1}, var]^3*HPL[{0, 1, 1}, var])/3 + 
+       (3*HPL[{1}, var]^2*HPL[{0, 1, 1, 1}, var])/2 - 
+       4*HPL[{1}, var]*HPL[{0, 1, 1, 1, 1}, var] + 
+       5*HPL[{0, 1, 1, 1, 1, 1}, var], HPL[{1, 1, 1, 1, 1, 0}, var] -> 
+      (HPL[{0}, var]*HPL[{1}, var]^5)/120 - 
+       (HPL[{1}, var]^4*HPL[{0, 1}, var])/24 + 
+       (HPL[{1}, var]^3*HPL[{0, 1, 1}, var])/6 - 
+       (HPL[{1}, var]^2*HPL[{0, 1, 1, 1}, var])/2 + 
+       HPL[{1}, var]*HPL[{0, 1, 1, 1, 1}, var] - HPL[{0, 1, 1, 1, 1, 1}, 
+        var]|>;

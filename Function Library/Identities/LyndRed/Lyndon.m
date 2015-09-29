@@ -2,129 +2,129 @@
 
 LyndOrder[0]=0;
 LyndOrder[u]=1;
-LyndOrder[1-u]=2;
-LyndOrder[-1]=3;
-LyndOrder[var3]=3;
-LyndOrder[1-var3]=3;
-LyndOrder[var4]=4;
-LyndOrder[1-var4]=4;
-LyndOrder[1]=4;
-LyndOrder[1/yu]=5;
-LyndOrder[1-1/yu]=6;
-LyndOrder[1/yv]=7;
-LyndOrder[1-1/yv]=8;
-LyndOrder[1/(yu*yv)]=9;
-LyndOrder[1-1/(yu*yv)]=10;
+LyndOrder[v]=2;
+LyndOrder[w]=3;
+LyndOrder[1-u]=4;
+LyndOrder[1-v]=5;
+LyndOrder[1-w]=6;
+LyndOrder[yu]=7;
+LyndOrder[yv]=8;
+LyndOrder[yw]=9;
+LyndOrder[_]=10;
+LyndOrder[-1]=11;
+LyndOrder[1]=12;
+LyndOrder[1/yu]=13;
+LyndOrder[1-1/yu]=14;
+LyndOrder[1/yv]=15;
+LyndOrder[1-1/yv]=16;
+LyndOrder[1/(yu*yv)]=17;
+LyndOrder[1-1/(yu*yv)]=18;
 
-GredL[{},b_]:=1;
-HredL[{},b_]:=1;
-GredL[A_,b_]:=GredL[A,b]=Block[{Atemp,vars,FFF}, 
-  vars=FFF/@SortBy[Union[A],LyndOrder]; 
-  Atemp=(FFF/@A)/. Thread[vars->Array[lyn,Length[vars]]]; 
-  If[Length[vars]>1,Expand[Evaluate[Symbol["LyndRed"<>ToString[Length[vars]]<>"Ew"<>ToString[Max[Length[Atemp],5]]]][Atemp]/. Thread[Array[lyn,Length[vars]]->vars]/. FFF[C__]:>C/. QR[B__]:>G[{B},b]],G[A,b]]];
-HredL[A_,b_]:=HredL[A,b]=Block[{Atemp,vars,FFF}, 
-  vars=FFF/@SortBy[Union[A],LyndOrder]; 
-  Atemp=(FFF/@A)/. Thread[vars->Array[lyn,Length[vars]]];
-  If[Length[vars]>1,Expand[Evaluate[Symbol["LyndRed"<>ToString[Length[vars]]<>"Ew"<>ToString[Max[Length[Atemp],5]]]][Atemp]/. Thread[Array[lyn,Length[vars]]->vars]/. FFF[C__]:>C/. QR[B__]:>HPL[{B},b]],HPL[A,b]]];
+optimizeLyndonBasisReplacement[func_]:=Module[{lettersAppearing,letters},
+  If[FreeQ[func,G],
+    lettersAppearing=DeleteDuplicates[Select[DeleteDuplicates[Flatten[Reap[func/.HPL[aVec_,arg_]:>(Sow[letters[DeleteDuplicates[aVec],arg,Length[aVec]]];0)][[2]]]],Length[First[#]]>1&]/.letters[ll_,arg_,weight_]:>List[Sort[ll,LyndOrder[#1]<LyndOrder[#2]&],arg,Max[weight,5]]];
+    Expand[func/.Join@@Table[Symbol["LyndRedReplacements"<>ToString[Length[lettersAppearing[[ii,1]]]]<>"Ew"<>ToString[lettersAppearing[[ii,3]]]<>"HPL"][lettersAppearing[[ii,2]]],{ii,Length[lettersAppearing]}]]
+   ,lettersAppearing=DeleteDuplicates[Select[DeleteDuplicates[Flatten[Reap[func/.G[aVec_,arg_]:>(Sow[letters[DeleteDuplicates[aVec],arg,Length[aVec]]];0)][[2]]]],Length[First[#]]>1&]/.letters[ll_,arg_,weight_]:>List[Sort[ll,LyndOrder[#1]<LyndOrder[#2]&],arg,Max[weight,5]]];
+    Expand[func/.Join@@Table[Symbol["LyndRedReplacements"<>ToString[Length[lettersAppearing[[ii,1]]]]<>"Ew"<>ToString[lettersAppearing[[ii,3]]]<>"G"][lettersAppearing[[ii,1]],lettersAppearing[[ii,2]]],{ii,Length[lettersAppearing]}]]]]
 
-LyndRed2Ew5[word_]:=Module[{},LyndRed2Ew5[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed2Ew5_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed2Ew5 definitions loaded"]];
-  LyndRed2Ew5[word]];
-LyndRed2Ew6[word_]:=Module[{},LyndRed2Ew6[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed2Ew6_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed2Ew6 definitions loaded"]];
-  LyndRed2Ew6[word]]
-LyndRed2Ew7[word_]:=Module[{},LyndRed2Ew7[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed2Ew7_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed2Ew7 definitions loaded"]];
-  LyndRed2Ew7[word]]
-LyndRed2Ew8[word_]:=Module[{},LyndRed2Ew8[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed2Ew8_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed2Ew8 definitions loaded"]];
-  LyndRed2Ew8[word]]
-LyndRed2Ew9[word_]:=Module[{},LyndRed2Ew9[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed2Ew9_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed2Ew9 definitions loaded"]];
-  LyndRed2Ew9[word]]
-LyndRed2Ew10[word_]:=Module[{},LyndRed2Ew10[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed2Ew10_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed2Ew10 definitions loaded"]];
-  LyndRed2Ew10[word]]
+LyndRedReplacements2Ew5HPL[arg_]:=Module[{},LyndRedReplacements2Ew5HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew5HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 2 letters at weight 5"]];
+  LyndRedReplacements2Ew5HPL[arg]];
+LyndRedReplacements2Ew6HPL[arg_]:=Module[{},LyndRedReplacements2Ew6HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew6HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 2 letters at weight 6"]];
+  LyndRedReplacements2Ew6HPL[arg]];
+LyndRedReplacements2Ew7HPL[arg_]:=Module[{},LyndRedReplacements2Ew7HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew7HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 2 letters at weight 7"]];
+  LyndRedReplacements2Ew7HPL[arg]];
+LyndRedReplacements2Ew8HPL[arg_]:=Module[{},LyndRedReplacements2Ew8HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew8HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 2 letters at weight 8"]];
+  LyndRedReplacements2Ew8HPL[arg]];
 
-LyndRed3Ew5[word_]:=Module[{},LyndRed3Ew5[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed3Ew5_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed3Ew5 definitions loaded"]];
-  LyndRed3Ew5[word]];
-LyndRed3Ew6[word_]:=Module[{},LyndRed3Ew6[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed3Ew6_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed3Ew6 definitions loaded"]];
-  LyndRed3Ew6[word]]
-LyndRed3Ew7[word_]:=Module[{},LyndRed3Ew7[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed3Ew7_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed3Ew7 definitions loaded"]];
-  LyndRed3Ew7[word]]
-LyndRed3Ew8[word_]:=Module[{},LyndRed3Ew8[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed3Ew8_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed3Ew8 definitions loaded"]];
-  LyndRed3Ew8[word]]
-LyndRed3Ew9[word_]:=Module[{},LyndRed3Ew9[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed3Ew9_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed3Ew9 definitions loaded"]];
-  LyndRed3Ew9[word]]
-LyndRed3Ew10[word_]:=Module[{},LyndRed3Ew10[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed3Ew10_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed3Ew10 definitions loaded"]];
-  LyndRed3Ew10[word]]
+LyndRedReplacements3Ew5HPL[arg_]:=Module[{},LyndRedReplacements3Ew5HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew5HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 3 letters at weight 5"]];
+  LyndRedReplacements3Ew5HPL[arg]];
+LyndRedReplacements3Ew6HPL[arg_]:=Module[{},LyndRedReplacements3Ew6HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew6HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 3 letters at weight 6"]];
+  LyndRedReplacements3Ew6HPL[arg]];
+LyndRedReplacements3Ew7HPL[arg_]:=Module[{},LyndRedReplacements3Ew7HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew7HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 3 letters at weight 7"]];
+  LyndRedReplacements3Ew7HPL[arg]];
+LyndRedReplacements3Ew8HPL[arg_]:=Module[{},LyndRedReplacements3Ew8HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew8HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["HPL LyndRedReplacements loaded loaded for 3 letters at weight 8"]];
+  LyndRedReplacements3Ew8HPL[arg]];
 
-LyndRed4Ew5[word_]:=Module[{},LyndRed4Ew5[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew5_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed4Ew5 definitions loaded"]];
-  LyndRed4Ew5[word]];
-LyndRed4Ew6[word_]:=Module[{},LyndRed4Ew6[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew6_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed4Ew6 definitions loaded"]];
-  LyndRed4Ew6[word]]
-LyndRed4Ew7[word_]:=Module[{},LyndRed4Ew7[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew7_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed4Ew7 definitions loaded"]];
-  LyndRed4Ew7[word]]
-(*LyndRed4Ew8[word_]:=Module[{},LyndRed4Ew8[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew8_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed4Ew8 definitions loaded"]];
-  LyndRed4Ew8[word]]*)
-LyndRed4Ew8[word_]:=LyndRedDebug[word];
-LyndRed4Ew9[word_]:=Module[{},LyndRed4Ew9[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew9_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed4Ew9 definitions loaded"]];
-  LyndRed4Ew9[word]]
-LyndRed4Ew10[word_]:=Module[{},LyndRed4Ew10[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed4Ew10_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed4Ew10 definitions loaded"]];
-  LyndRed4Ew10[word]]
+LyndRedReplacements2Ew5G[letters_,arg_]:=Module[{},LyndRedReplacements2Ew5G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 2 letters at weight 5"]];
+  LyndRedReplacements2Ew5G[letters,arg]];
+LyndRedReplacements2Ew6G[letters_,arg_]:=Module[{},LyndRedReplacements2Ew6G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 2 letters at weight 6"]];
+  LyndRedReplacements2Ew6G[letters,arg]];
+LyndRedReplacements2Ew7G[letters_,arg_]:=Module[{},LyndRedReplacements2Ew7G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 2 letters at weight 7"]];
+  LyndRedReplacements2Ew7G[letters,arg]];
+LyndRedReplacements2Ew8G[letters_,arg_]:=Module[{},LyndRedReplacements2Ew8G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements2Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 2 letters at weight 8"]];
+  LyndRedReplacements2Ew8G[letters,arg]];
 
-LyndRed5Ew5[word_]:=Module[{},LyndRed5Ew5[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew5_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed5Ew5 definitions loaded"]];
-  LyndRed5Ew5[word]];
-LyndRed5Ew6[word_]:=Module[{},LyndRed5Ew6[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew6_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed5Ew6 definitions loaded"]];
-  LyndRed5Ew6[word]]
-LyndRed5Ew7[word_]:=Module[{},LyndRed5Ew7[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew7_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed5Ew7 definitions loaded"]];
-  LyndRed5Ew7[word]]
-(*LyndRed5Ew8[word_]:=Module[{},LyndRed5Ew8[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew8_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed5Ew8 definitions loaded"]];
-  LyndRed5Ew8[word]]*)
-LyndRed5Ew8[word_]:=LyndRedDebug[word];
-LyndRed5Ew9[word_]:=Module[{},LyndRed5Ew9[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew9_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed5Ew9 definitions loaded"]];
-  LyndRed5Ew9[word]]
-LyndRed5Ew10[word_]:=Module[{},LyndRed5Ew10[temp_]=.;
-  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRed5Ew10_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-  If[debug,Print["LyndRed5Ew10 definitions loaded"]];
-  LyndRed5Ew10[word]]
+LyndRedReplacements3Ew5G[letters_,arg_]:=Module[{},LyndRedReplacements3Ew5G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 3 letters at weight 5"]];
+  LyndRedReplacements3Ew5G[letters,arg]];
+LyndRedReplacements3Ew6G[letters_,arg_]:=Module[{},LyndRedReplacements3Ew6G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 3 letters at weight 6"]];
+  LyndRedReplacements3Ew6G[letters,arg]];
+LyndRedReplacements3Ew7G[letters_,arg_]:=Module[{},LyndRedReplacements3Ew7G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 3 letters at weight 7"]];
+  LyndRedReplacements3Ew7G[letters,arg]];
+LyndRedReplacements3Ew8G[letters_,arg_]:=Module[{},LyndRedReplacements3Ew8G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements3Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 3 letters at weight 8"]];
+  LyndRedReplacements3Ew8G[letters,arg]];
+
+LyndRedReplacements4Ew5G[letters_,arg_]:=Module[{},LyndRedReplacements4Ew5G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements4Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 4 letters at weight 5"]];
+  LyndRedReplacements4Ew5G[letters,arg]];
+LyndRedReplacements4Ew6G[letters_,arg_]:=Module[{},LyndRedReplacements4Ew6G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements4Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 4 letters at weight 6"]];
+  LyndRedReplacements4Ew6G[letters,arg]];
+LyndRedReplacements4Ew7G[letters_,arg_]:=Module[{},LyndRedReplacements4Ew7G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements4Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 4 letters at weight 7"]];
+  LyndRedReplacements4Ew7G[letters,arg]];
+LyndRedReplacements4Ew8G[letters_,arg_]:=Module[{},LyndRedReplacements4Ew8G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements4Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 4 letters at weight 8"]];
+  LyndRedReplacements4Ew8G[letters,arg]];
+
+LyndRedReplacements5Ew5G[letters_,arg_]:=Module[{},LyndRedReplacements5Ew5G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements5Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 5 letters at weight 5"]];
+  LyndRedReplacements5Ew5G[letters,arg]];
+LyndRedReplacements5Ew6G[letters_,arg_]:=Module[{},LyndRedReplacements5Ew6G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements5Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 5 letters at weight 6"]];
+  LyndRedReplacements5Ew6G[letters,arg]];
+LyndRedReplacements5Ew7G[letters_,arg_]:=Module[{},LyndRedReplacements5Ew7G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements5Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 5 letters at weight 7"]];
+  LyndRedReplacements5Ew7G[letters,arg]];
+LyndRedReplacements5Ew8G[letters_,arg_]:=Module[{},LyndRedReplacements5Ew8G[temp1_,temp2_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Local Binaries/LyndRedReplacements5Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["MPL LyndRedReplacements loaded loaded for 5 letters at weight 8"]];
+  LyndRedReplacements5Ew8G[letters,arg]];

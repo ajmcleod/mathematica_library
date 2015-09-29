@@ -1,0 +1,840 @@
+EMRK[H6[1], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 - 
+     (39*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/4 - (271*\[Zeta][2]^3)/70 + 
+     2*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 6*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]*\[Zeta][3] + 5*\[Zeta][3]^2 + 
+     (2*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][0])/3 + 
+     (9*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/4 - 
+     \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (5*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/16 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/2 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/6 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/24 - 
+     (8*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (39*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/2 + 
+     6*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     6*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     2*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (9*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/4 - (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/2 - (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/6 - 4*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 - (39*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      4 + 6*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 + 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 - (8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 + 2*\[Zeta][3]*Subscript[SVHPL, w][1]^3 + 
+     (2*\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 - 
+     (2*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[2], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 + 
+     (41*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 23*\[Zeta][2]^3 + 
+     Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 14*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]*\[Zeta][3] + 2*\[Zeta][3]^2 - 
+     (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][0])/3 + 
+     (57*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/10 + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/2 - 
+     \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]^2)/2 + 
+     (93*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/8 - 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/12 - 
+     (8*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 + 
+     (41*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     14*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (57*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/10 + Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] - (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/4 + (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 - 4*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 + (41*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 + 3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 + (\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/2 + (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/2 - (8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 + \[Zeta][3]*Subscript[SVHPL, w][1]^3 - 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 - 
+     (2*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[3], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 - 
+     (22*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (634*\[Zeta][2]^3)/105 + 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 4*\[Zeta][3]^2 - (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/3 - (7*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/2 - Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+      Subscript[SVHPL, w][0] + (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][0]^2)/2 - 
+     (13*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/20 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 - 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/12 - 
+     (8*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (44*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - (7*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] + (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 - 4*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 - (22*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      5 - Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 - \[Zeta][3]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 + (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/2 - (8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^3)/3 - (2*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[4], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 + 
+     (41*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 23*\[Zeta][2]^3 + 
+     Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 14*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]*\[Zeta][3] + 2*\[Zeta][3]^2 + 
+     (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][0])/3 - 
+     (57*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/10 - 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/2 + 
+     \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]^2)/2 + 
+     (93*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/8 - 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/12 - 
+     (8*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 + 
+     (41*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     14*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - (57*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/10 - Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] - (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/4 - (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 - 4*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 + (41*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 + 3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 - (\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/2 + (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/2 - (8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 + \[Zeta][3]*Subscript[SVHPL, w][1]^3 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 - 
+     (2*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[5], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 - 
+     (39*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/4 - (271*\[Zeta][2]^3)/70 + 
+     2*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 6*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]*\[Zeta][3] + 5*\[Zeta][3]^2 - 
+     (2*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][0])/3 - 
+     (9*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/4 + 
+     \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (5*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/16 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/2 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/6 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/24 - 
+     (8*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (39*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/2 + 
+     6*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     6*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     2*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - (9*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/4 - (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/2 + (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/6 - 4*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 - (39*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      4 + 6*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 - (8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 + 2*\[Zeta][3]*Subscript[SVHPL, w][1]^3 - 
+     (2*\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 - 
+     (2*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[6], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 - 
+     (22*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (634*\[Zeta][2]^3)/105 + 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 4*\[Zeta][3]^2 + (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/3 + (7*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/2 + Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+      Subscript[SVHPL, w][0] + (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][0]^2)/2 - 
+     (13*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/20 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 - 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/12 - 
+     (8*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (44*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (7*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 + 2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] - (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 - 4*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 - (22*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      5 + Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 + \[Zeta][3]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 + (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/2 - (8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 + (\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^3)/3 - (2*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[7], w -> 1] = (13*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/12 - 
+     (94*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - (333*\[Zeta][2]^3)/35 - 
+     (Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 - 42*\[Zeta][3]^2 - 
+     (11*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][0])/6 - 
+     (57*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/10 + 
+     (15*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/4 + 
+     17*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]^2)/8 + 
+     (17*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/20 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 + 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/24 - 
+     (15*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 - 
+     (31*\[Zeta][2]*Subscript[SVHPL, w][0]^4)/192 + 
+     (13*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (188*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 - 
+     (11*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 - (57*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/10 + (15*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+       Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 + 
+     (3*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/4 + (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 + (11*\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/24 + (13*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^2)/2 - 
+     (94*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5 - 
+     (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/2 - 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/2 + (15*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/4 + (3*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/8 + (13*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (\[Zeta][3]*Subscript[SVHPL, w][1]^3)/
+      2 - (11*\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/6 + 
+     (13*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/12
+ 
+EMRK[H6[8], w -> 1] = (5*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/6 - 
+     (66*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (5233*\[Zeta][2]^3)/210 - (11*Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 - 
+     13*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 
+     (39*\[Zeta][3]^2)/2 - (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/3 + 10*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/4 + (5*\[Zeta][2]*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/2 - (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][0]^2)/4 + 
+     (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/10 + 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 - 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/96 + 
+     (10*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (132*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     (33*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 - 
+     13*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + 10*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+       Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/2 + (11*\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 + (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 + 5*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 - (66*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      5 - (33*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/
+      2 - Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 + (3*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/4 - (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/4 + (10*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (11*\[Zeta][3]*Subscript[SVHPL, w][1]^3)/
+      2 - (\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 + 
+     (5*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/6
+ 
+EMRK[H6[9], w -> 1] = (4*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/20 - (2621*\[Zeta][2]^3)/84 - 
+     (11*Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 - 
+     19*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 
+     (61*\[Zeta][3]^2)/2 - (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/3 - (7*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/4 + (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/4 + (21*\[Zeta][2]*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/2 - (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][0]^2)/2 + 
+     (149*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/80 + 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 - 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/24 + 
+     (16*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/10 - 
+     (33*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 - 
+     19*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - (7*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/4 + (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+       Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] + (11*\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 + (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 + 8*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 + (\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/20 - 
+     (33*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/2 - 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 + (3*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/4 - (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/2 + (16*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (11*\[Zeta][3]*Subscript[SVHPL, w][1]^3)/
+      2 - (\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 + 
+     (4*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[10], w -> 1] = (5*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/6 - 
+     (66*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (5233*\[Zeta][2]^3)/210 - (11*Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 - 
+     13*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 
+     (39*\[Zeta][3]^2)/2 + (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/3 - 10*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] - (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/4 - (5*\[Zeta][2]*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/2 - (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][0]^2)/4 + 
+     (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/10 + 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 + 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/96 + 
+     (10*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (132*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     (33*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 - 
+     13*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - 10*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+       Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/2 + (11*\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 - (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 + 5*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 - (66*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      5 - (33*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/
+      2 + Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 - (3*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/4 - (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/4 + (10*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (11*\[Zeta][3]*Subscript[SVHPL, w][1]^3)/
+      2 + (\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 + 
+     (5*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/6
+ 
+EMRK[H6[11], w -> 1] = (13*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/12 - 
+     (94*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - (333*\[Zeta][2]^3)/35 - 
+     (Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 - 42*\[Zeta][3]^2 + 
+     (11*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][0])/6 + 
+     (57*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/10 - 
+     (15*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/4 - 
+     17*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]^2)/8 + 
+     (17*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/20 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 - 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/24 + 
+     (15*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 - 
+     (31*\[Zeta][2]*Subscript[SVHPL, w][0]^4)/192 + 
+     (13*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 - 
+     (188*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 + 
+     (11*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 + (57*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/10 - (15*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+       Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 + 
+     (3*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/4 + (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 - (11*\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/24 + (13*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^2)/2 - 
+     (94*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5 - 
+     (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/2 + 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/2 - (15*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/4 + (3*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/8 + (13*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (\[Zeta][3]*Subscript[SVHPL, w][1]^3)/
+      2 + (11*\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/6 + 
+     (13*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/12
+ 
+EMRK[H6[12], w -> 1] = (4*Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/3 + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/20 - (2621*\[Zeta][2]^3)/84 - 
+     (11*Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 - 
+     19*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 
+     (61*\[Zeta][3]^2)/2 + (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/3 + (7*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/4 - (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/4 - (21*\[Zeta][2]*\[Zeta][3]*
+       Subscript[SVHPL, w][0])/2 - (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+       Subscript[SVHPL, w][0]^2)/2 + 
+     (149*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/80 + 
+     (11*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/12 + 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 + 
+     (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/24 + 
+     (16*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1])/3 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/10 - 
+     (33*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 - 
+     19*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (7*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/4 - (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+       Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] + (11*\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 - (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/12 + 8*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 + (\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/20 - 
+     (33*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/2 + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1]^2 - (3*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/4 - (\[Zeta][2]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1]^2)/2 + (16*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+       Subscript[SVHPL, w][1]^3)/3 - (11*\[Zeta][3]*Subscript[SVHPL, w][1]^3)/
+      2 + (\[Zeta][2]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^3)/3 + 
+     (4*\[Zeta][2]*Subscript[SVHPL, w][1]^4)/3
+ 
+EMRK[H6[13], w -> 1] = (Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/2 + 
+     (69*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 + 
+     (779*\[Zeta][2]^3)/35 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 20*\[Zeta][3]^2 - (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/6 - (Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/2 - \[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (119*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/
+      40 + (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/
+      24 - (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/32 + 
+     2*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1] + 
+     (69*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     2*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 - (\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 + (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/24 + 3*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 + (69*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/2 + 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^3 - (\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^3)/6 + (\[Zeta][2]*Subscript[SVHPL, w][1]^4)/2
+ 
+EMRK[H6[14], w -> 1] = (Log[Subscript[\[Xi], w]]^4*\[Zeta][2])/2 + 
+     (69*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 + 
+     (779*\[Zeta][2]^3)/35 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 20*\[Zeta][3]^2 + (Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*
+       Subscript[SVHPL, w][0])/6 + (Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/2 + \[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (119*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/
+      40 - (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]^3)/
+      24 - (\[Zeta][2]*Subscript[SVHPL, w][0]^4)/32 + 
+     2*Log[Subscript[\[Xi], w]]^3*\[Zeta][2]*Subscript[SVHPL, w][1] + 
+     (69*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     2*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 + (\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 - (\[Zeta][2]*Subscript[SVHPL, w][0]^3*
+       Subscript[SVHPL, w][1])/24 + 3*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^2 + (69*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 + (Log[Subscript[\[Xi], w]]*\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^2)/2 + 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      Subscript[SVHPL, w][1]^3 + (\[Zeta][2]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1]^3)/6 + (\[Zeta][2]*Subscript[SVHPL, w][1]^4)/2
+ 
+EMRK[H6[15], w -> 1] = (27*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 + 
+     (1159*\[Zeta][2]^3)/105 - 20*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 12*\[Zeta][3]^2 + 
+     (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/20 + 
+     (54*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     20*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (27*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5
+ 
+EMRK[H6[16], w -> 1] = (89*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (1693*\[Zeta][2]^3)/210 - 4*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 
+     7*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + (39*\[Zeta][3]^2)/2 + 
+     (17*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/2 - 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0] - 
+     (\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0])/2 + 
+     (\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 + Log[Subscript[\[Xi], w]]*
+      \[Zeta][3]*Subscript[SVHPL, w][0]^2 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 + 
+     (89*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     12*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     7*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (17*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + \[Zeta][3]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] + (89*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - 12*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     \[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2 - 
+     4*\[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[17], w -> 1] = (89*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (1693*\[Zeta][2]^3)/210 - 4*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 
+     7*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + (39*\[Zeta][3]^2)/2 - 
+     (17*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/2 + 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0])/2 + 
+     (\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 + Log[Subscript[\[Xi], w]]*
+      \[Zeta][3]*Subscript[SVHPL, w][0]^2 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 + 
+     (89*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     12*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     7*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     (17*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 + 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + \[Zeta][3]*Subscript[SVHPL, w][0]^2*
+      Subscript[SVHPL, w][1] + (89*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - 12*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 + 
+     \[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2 - 
+     4*\[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[18], w -> 1] = (-18*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 + 
+     (98*\[Zeta][2]^3)/15 - 4*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] + 
+     14*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - \[Zeta][3]^2 - 
+     (18*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/5 + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2 - 
+     (36*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     12*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     14*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     \[Zeta][3]*Subscript[SVHPL, w][0]^2*Subscript[SVHPL, w][1] - 
+     (18*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5 - 
+     12*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     4*\[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[48], w -> 1] = (-37*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (351*\[Zeta][2]^3)/70 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 4*\[Zeta][3]^2 + 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + 3*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 - 
+     (37*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     2*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     2*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (37*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/10
+ 
+EMRK[H6[49], w -> 1] = (-7*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (2479*\[Zeta][2]^3)/210 - 8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 5*\[Zeta][3]^2 - Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + (17*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/
+      20 - (14*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/
+      5 - 8*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     \[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (7*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5
+ 
+EMRK[H6[50], w -> 1] = (-37*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (97*\[Zeta][2]^3)/21 - Log[Subscript[\[Xi], w]]^3*\[Zeta][3] + 
+     10*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 5*\[Zeta][3]^2 - 
+     3*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0] - 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/2 + 
+     \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] - 
+     (23*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 + 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/8 - 
+     (37*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     10*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     3*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/4 - (37*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - 3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2)/2 - 
+     \[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[51], w -> 1] = (-7*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (2479*\[Zeta][2]^3)/210 - 8*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 5*\[Zeta][3]^2 + Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + (17*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/
+      20 - (14*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/
+      5 - 8*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     \[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (7*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5
+ 
+EMRK[H6[52], w -> 1] = (-37*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (351*\[Zeta][2]^3)/70 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 4*\[Zeta][3]^2 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] - 3*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 - 
+     (37*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     2*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     2*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (37*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/10
+ 
+EMRK[H6[53], w -> 1] = (-37*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (97*\[Zeta][2]^3)/21 - Log[Subscript[\[Xi], w]]^3*\[Zeta][3] + 
+     10*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 5*\[Zeta][3]^2 + 
+     3*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0] + 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/2 - 
+     \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] - 
+     (23*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 - 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/8 - 
+     (37*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     10*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     3*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/4 - (37*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - 3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 + 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2)/2 - 
+     \[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[54], w -> 1] = 2*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2 + 
+     (123*\[Zeta][2]^3)/35 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 6*\[Zeta][3]^2 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + 3*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] + (\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/2 + 
+     4*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1] - 
+     2*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     2*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     2*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2
+ 
+EMRK[H6[55], w -> 1] = -(Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2) + 
+     (1187*\[Zeta][2]^3)/105 - 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 5*\[Zeta][3]^2 + Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + 4*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/4 - 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1] - 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     \[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     \[Zeta][2]^2*Subscript[SVHPL, w][1]^2
+ 
+EMRK[H6[56], w -> 1] = 3*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2 - 
+     (16*\[Zeta][2]^3)/15 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - \[Zeta][3]^2 + 3*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] + Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+      Subscript[SVHPL, w][0] + \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/4 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 + 6*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]^2*Subscript[SVHPL, w][1] - 2*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][1] + 3*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + 2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     3*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2 + 
+     \[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2
+ 
+EMRK[H6[57], w -> 1] = -(Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2) + 
+     (1187*\[Zeta][2]^3)/105 - 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 5*\[Zeta][3]^2 - Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] - 4*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/4 - 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1] - 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     \[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     \[Zeta][2]^2*Subscript[SVHPL, w][1]^2
+ 
+EMRK[H6[58], w -> 1] = 2*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2 + 
+     (123*\[Zeta][2]^3)/35 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 6*\[Zeta][3]^2 + 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] - 3*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] + (\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/2 + 
+     4*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1] - 
+     2*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     2*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     2*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2
+ 
+EMRK[H6[59], w -> 1] = 3*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2 - 
+     (16*\[Zeta][2]^3)/15 - 2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - \[Zeta][3]^2 - 3*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+      Subscript[SVHPL, w][0] - Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - \[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/4 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 + 6*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]^2*Subscript[SVHPL, w][1] - 2*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][1] - 3*\[Zeta][2]^2*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - 2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] + 
+     3*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2 - 
+     \[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2
+ 
+EMRK[H6[60], w -> 1] = (17*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/2 + 
+     (62*\[Zeta][2]^3)/3 + Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + 10*\[Zeta][3]^2 - 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0] + 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/2 + 
+     5*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] - 
+     (21*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/8 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/8 + 17*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]^2*Subscript[SVHPL, w][1] + 3*Log[Subscript[\[Xi], w]]^2*
+      \[Zeta][3]*Subscript[SVHPL, w][1] - 2*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][1] - \[Zeta][2]^2*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] + Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^2*Subscript[SVHPL, w][1])/4 + 
+     (17*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/2 + 
+     3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2)/2 + 
+     \[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[61], w -> 1] = (17*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/2 + 
+     (62*\[Zeta][2]^3)/3 + Log[Subscript[\[Xi], w]]^3*\[Zeta][3] - 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + 10*\[Zeta][3]^2 + 
+     Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0] - 
+     (Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/2 - 
+     5*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] - 
+     (21*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/8 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/8 + 17*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]^2*Subscript[SVHPL, w][1] + 3*Log[Subscript[\[Xi], w]]^2*
+      \[Zeta][3]*Subscript[SVHPL, w][1] - 2*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][1] + \[Zeta][2]^2*Subscript[SVHPL, w][0]*
+      Subscript[SVHPL, w][1] - Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^2*Subscript[SVHPL, w][1])/4 + 
+     (17*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/2 + 
+     3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2)/2 + 
+     \[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[62], w -> 1] = (2*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 + 
+     (88*\[Zeta][2]^3)/35 + 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] + 8*\[Zeta][3]^2 - 
+     (11*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/10 + 
+     (4*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (2*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5
+ 
+EMRK[H6[63], w -> 1] = (-15*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/2 - 
+     (328*\[Zeta][2]^3)/15 + 2*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] + 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 10*\[Zeta][3]^2 - 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0] - 
+     5*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (23*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/8 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/2 + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 - 15*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]^2*Subscript[SVHPL, w][1] + 6*Log[Subscript[\[Xi], w]]^2*
+      \[Zeta][3]*Subscript[SVHPL, w][1] + 2*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][1] - 2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^2*Subscript[SVHPL, w][1])/2 - 
+     (15*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/2 + 
+     6*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     \[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2 + 
+     2*\[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[64], w -> 1] = (-15*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/2 - 
+     (328*\[Zeta][2]^3)/15 + 2*Log[Subscript[\[Xi], w]]^3*\[Zeta][3] + 
+     2*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 10*\[Zeta][3]^2 + 
+     Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     5*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0] + 
+     (23*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/8 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/2 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^3)/4 - 15*Log[Subscript[\[Xi], w]]*
+      \[Zeta][2]^2*Subscript[SVHPL, w][1] + 6*Log[Subscript[\[Xi], w]]^2*
+      \[Zeta][3]*Subscript[SVHPL, w][1] + 2*\[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][1] + 2*Log[Subscript[\[Xi], w]]*\[Zeta][3]*
+      Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1] - 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^2*Subscript[SVHPL, w][1])/2 - 
+     (15*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/2 + 
+     6*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2 + 
+     \[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2 + 
+     2*\[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[65], w -> 1] = (-2*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (48*\[Zeta][2]^3)/5 - 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] - 
+     8*\[Zeta][3]^2 + (11*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/10 - 
+     (4*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     (2*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5
+ 
+EMRK[H6[66], w -> 1] = (19*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/20 + 
+     \[Zeta][2]^3/10 - (19*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/80 + 
+     (19*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/10 + 
+     (19*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/20
+ 
+EMRK[H6[67], w -> 1] = (19*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/20 + 
+     \[Zeta][2]^3/10 - (19*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/80 + 
+     (19*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/10 + 
+     (19*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/20
+ 
+EMRK[H6[68], w -> 1] = (-44*\[Zeta][2]^3)/35 + 2*\[Zeta][3]^2
+ 
+EMRK[H6[69], w -> 1] = (49*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 + 
+     (2623*\[Zeta][2]^3)/210 - (Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 + 
+     9*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + 15*\[Zeta][3]^2 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/2 - 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/4 + 
+     (3*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0])/2 - 
+     (39*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 + 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 + 
+     (49*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 + 
+     9*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 + (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 + (49*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/
+      2 - (3*\[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2)/4 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][1]^3)/2
+ 
+EMRK[H6[70], w -> 1] = (49*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 + 
+     (2623*\[Zeta][2]^3)/210 - (Log[Subscript[\[Xi], w]]^3*\[Zeta][3])/2 + 
+     9*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + 15*\[Zeta][3]^2 - 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][0])/2 + 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][0])/4 - 
+     (3*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][0])/2 - 
+     (39*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/8 - 
+     (3*\[Zeta][3]*Subscript[SVHPL, w][0]^3)/16 + 
+     (49*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     (3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1])/2 + 
+     9*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     (\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 + 
+     (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]*
+       Subscript[SVHPL, w][1])/2 + (\[Zeta][3]*Subscript[SVHPL, w][0]^2*
+       Subscript[SVHPL, w][1])/8 + (49*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/
+      10 - (3*Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][1]^2)/
+      2 + (3*\[Zeta][3]*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1]^2)/4 - 
+     (\[Zeta][3]*Subscript[SVHPL, w][1]^3)/2
+ 
+EMRK[H6[71], w -> 1] = (6*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 + 
+     (1322*\[Zeta][2]^3)/105 - Log[Subscript[\[Xi], w]]^3*\[Zeta][3] + 
+     6*Log[Subscript[\[Xi], w]]*\[Zeta][2]*\[Zeta][3] + 4*\[Zeta][3]^2 - 
+     (4*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/5 + 
+     (Log[Subscript[\[Xi], w]]*\[Zeta][3]*Subscript[SVHPL, w][0]^2)/4 + 
+     (12*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     3*Log[Subscript[\[Xi], w]]^2*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     6*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (\[Zeta][3]*Subscript[SVHPL, w][0]^2*Subscript[SVHPL, w][1])/4 + 
+     (6*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5 - 3*Log[Subscript[\[Xi], w]]*
+      \[Zeta][3]*Subscript[SVHPL, w][1]^2 - 
+     \[Zeta][3]*Subscript[SVHPL, w][1]^3
+ 
+EMRK[H6[72], w -> 1] = (-27*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (1007*\[Zeta][2]^3)/105 + 10*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 7*\[Zeta][3]^2 - (5*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/2 + \[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 - 
+     (27*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     10*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     (5*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     (27*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/10
+ 
+EMRK[H6[73], w -> 1] = (-27*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/10 - 
+     (1007*\[Zeta][2]^3)/105 + 10*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 7*\[Zeta][3]^2 + (5*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*
+       Subscript[SVHPL, w][0])/2 - \[Zeta][2]*\[Zeta][3]*
+      Subscript[SVHPL, w][0] - (3*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/40 - 
+     (27*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 + 
+     10*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] + 
+     (5*\[Zeta][2]^2*Subscript[SVHPL, w][0]*Subscript[SVHPL, w][1])/2 - 
+     (27*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/10
+ 
+EMRK[H6[74], w -> 1] = (-7*Log[Subscript[\[Xi], w]]^2*\[Zeta][2]^2)/5 - 
+     (208*\[Zeta][2]^3)/15 - 4*Log[Subscript[\[Xi], w]]*\[Zeta][2]*
+      \[Zeta][3] - 13*\[Zeta][3]^2 + 
+     (27*\[Zeta][2]^2*Subscript[SVHPL, w][0]^2)/20 - 
+     (14*Log[Subscript[\[Xi], w]]*\[Zeta][2]^2*Subscript[SVHPL, w][1])/5 - 
+     4*\[Zeta][2]*\[Zeta][3]*Subscript[SVHPL, w][1] - 
+     (7*\[Zeta][2]^2*Subscript[SVHPL, w][1]^2)/5

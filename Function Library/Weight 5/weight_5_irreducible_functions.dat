@@ -1,4 +1,4 @@
-(*irreducibleFunctionCoproduct[{4, 1}, H5[1]] = H4[1] \[CircleDot] Log[yu] + 
+irreducibleFunctionCoproduct[{4, 1}, H5[1]] = H4[1] \[CircleDot] Log[yu] + 
      H4[5] \[CircleDot] Log[1 - v] + H4[6] \[CircleDot] Log[1 - w] - 
      (HPL[{1}, 1 - u]^3*HPL[{1}, 1 - v]) \[CircleDot] Log[yw]/6 - 
      (HPL[{1}, 1 - u]^3*HPL[{1}, 1 - w]) \[CircleDot] Log[yv]/6 + 
@@ -2017,10 +2017,8 @@ irreducibleFunctionCoproduct[{4, 1}, H5[23]] =
      HPL[{0, 0, 1, 1}, 1 - w] \[CircleDot] Log[yw] + 
      (4*\[Zeta][2]^2 \[CircleDot] Log[yu])/5 + 
      (4*\[Zeta][2]^2 \[CircleDot] Log[yv])/5 + 
-     (4*\[Zeta][2]^2 \[CircleDot] Log[yw])/5*)
-     
-Get[$MathematicaLibrary<>"/Function Library/Weight 5/Local Binaries/weight_5_irreducible_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
- 
+     (4*\[Zeta][2]^2 \[CircleDot] Log[yw])/5
+      
 Do[If[FreeQ[yWeight[3], j], AppendTo[yWeight[3], j]], {j, Table[H5[i],{i,6}]}];
 Do[If[FreeQ[yWeight[2], j], AppendTo[yWeight[2], j]], {j, Table[H5[i],{i,7,19}]}];
 Do[If[FreeQ[yWeight[1], j], AppendTo[yWeight[1], j]], {j, Table[H5[i],{i,20,23}]}];

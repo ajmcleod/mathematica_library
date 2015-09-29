@@ -1,16 +1,5 @@
 (* ::Package:: *)
 
-MZV[1]={};
-MZV[2]={\[Zeta][2]};
-MZV[3]={\[Zeta][3]};
-MZV[4]={\[Zeta][2]^2};
-MZV[5]={\[Zeta][5],\[Zeta][3]\[Zeta][2]};
-MZV[6]={\[Zeta][2]^3,\[Zeta][3]^2};
-MZV[7]={\[Zeta][7],\[Zeta][5]\[Zeta][2],\[Zeta][3]\[Zeta][2]^2};
-MZV[8]={\[Zeta][2]^4,\[Zeta][5,3],\[Zeta][3]\[Zeta][5],\[Zeta][2]\[Zeta][3]^2};
-MZV[9]={\[Zeta][9],\[Zeta][3]^3,\[Zeta][7]\[Zeta][2],\[Zeta][5]\[Zeta][2]^2,\[Zeta][3]\[Zeta][2]^3};
-MZV[10]={\[Zeta][2]^5,\[Zeta][7,3],\[Zeta][3]\[Zeta][7],\[Zeta][5]^2,\[Zeta][5,3]\[Zeta][2],\[Zeta][3]\[Zeta][5]\[Zeta][2],\[Zeta][2]^2 \[Zeta][3]^2};
-
 \[Zeta][1,1] = -(1/2)\[Zeta][2]+(1/2)\[Zeta][1]^2;
 
 \[Zeta][2,1] = \[Zeta][3];
@@ -245,12 +234,3 @@ MZV[10]={\[Zeta][2]^5,\[Zeta][7,3],\[Zeta][3]\[Zeta][7],\[Zeta][5]^2,\[Zeta][5,3
 \[Zeta][2,2,1,1,1,1,1,1] = (-816*\[Zeta][2]^5)/2695 + (8*\[Zeta][5]^2)/7 + 2*\[Zeta][3]*\[Zeta][7] - (2*\[Zeta][7,3])/7;
 \[Zeta][3,1,1,1,1,1,1,1] = (8*\[Zeta][2]^5)/55 - \[Zeta][5]^2/2 - \[Zeta][3]*\[Zeta][7];
 \[Zeta][2,1,1,1,1,1,1,1,1] = (32*\[Zeta][2]^5)/385;
-
-\[Zeta]n[w_] := N[Zeta[w],100];
-\[Zeta]n[5,3] = 0.03770767298484754401130478229365991482260131941527752401264507780391093875550721989138360298190770864;
-\[Zeta]n[7,3] = 0.008419668503096332423968579714670650636917875063958092272574516635904690047915337779627353923371587551;
-
-\[Pi]to\[Zeta]={Pi^(10)->93555*\[Zeta][10],Pi^9->9450*Pi*\[Zeta][8],Pi^8->9450*\[Zeta][8],Pi^7->945*Pi*\[Zeta][6],Pi^6->945*\[Zeta][6],Pi^5->90*Pi*\[Zeta][4],Pi^4->90*\[Zeta][4],Pi^3->6*Pi*\[Zeta][2],Pi^2->6\[Zeta][2],Power[\[Delta],n_]:>\[Delta]/;OddQ[n]\[And]n>0,Power[\[Delta],n_]:>1/;EvenQ[n]\[And]n>0};
-pureMZV=Alternatives[\[Zeta][a__],\[Zeta][a__]\[Zeta][b__],\[Zeta][a__]\[Zeta][b__]\[Zeta][c__],\[Zeta][a__]\[Zeta][b__]\[Zeta][c__]\[Zeta][d__],Power[\[Zeta][a__],p1_],\[Zeta][a__]Power[\[Zeta][b__],p1_],Power[\[Zeta][b__],p1_]Power[\[Zeta][c__],p2_],\[Zeta][a__]\[Zeta][b__]Power[\[Zeta][c__],p1_],\[Zeta][a__]Power[\[Zeta][b__],p2_]Power[\[Zeta][c__],p3_]];
-
-(*Identites found in MZV datamine: http://www.nikhef.nl/~form/datamine/mzv/complete/complete.html *)

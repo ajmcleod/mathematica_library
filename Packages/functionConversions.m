@@ -1,5 +1,22 @@
 (* ::Package:: *)
 
+(*HPL[aVec_,arg_]:=HPL[aVec,Simplify[arg]]/;!MatchQ[arg,Simplify[arg]];*)
+HPL[{0},0]=-\[Zeta][1];
+HPL[{0},1]=0;
+HPL[{0},-1]=\[Delta]*I*Pi;
+HPL[aVec_,0]:=0/;Last[aVec]=!=0;
+G[{0},0]=-\[Zeta][1];
+G[aVec_,0]:=0/;Last[aVec]=!=0;
+IMPL[0,aVec_,0]:=0/;Length[aVec]>=1;  
+HPL[aVec_,1]:=((HPL[aVec,x]/.HPLtoIMPL)/.x->1)/;Last[aVec]==1\[Or]Last[aVec]==-1;
+HPL[aVec_,-1]:=((HPL[aVec,x]/.HPLtoIMPL)/.x->-1)/;Last[aVec]==1\[Or]Last[aVec]==-1;
+G[aVec_,1]:=((G[aVec,x]/.GtoIMPL)/.x->1)/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+G[aVec_,-1]:=((G[aVec,x]/.GtoIMPL)/.x->-1)/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+IMPL[0,aVec_,1]:=Expand[ReplaceAll[toStrictLyndonBasis[IMPL[0,aVec,\[CapitalIota]]/.toHPL]/.toIMPL,IMPL[0,aVector_,\[CapitalIota]]:>IMPLwordToMZV[aVector]]]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+IMPL[0,aVec_,-1]:=Expand[ReplaceAll[toStrictLyndonBasis[IMPL[0,-aVec,\[CapitalIota]]/.toHPL]/.toIMPL,IMPL[0,aVector_,\[CapitalIota]]:>IMPLwordToMZV[aVector]]]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+IMPLwordToMZV[aVector_]:=Module[{pos},If[Length[aVector]==1,Which[aVector=={1},-\[Zeta][1],aVector=={0},0,aVector=={-1},Log[2]],If[Abs[First[aVector]]==1,((-1)^Count[aVector,1])\[Zeta]@@compressedNotation[Reverse[aVector]]]]]; 
+(*G[aVec_,1]:=Expand[Expand[G[aVec/u,1/u]/.GtoIMPL/.IMPLtoHPL/.toSingularArgP[1/u,\[Delta]]/.invertArgument[1/(1-u),\[Delta]]]/.Power[\[Delta],n_?EvenQ]:>1/.\[Pi]to\[Zeta]/.HPLtoG]/;Count[aVec,Alternatives[0,1,u]]==Length[aVec];*)
+
 LogsToHPL={Log[1-x_]:>HPL[{0},1-x],Log[x_]:>-HPL[{1},1-x],PolyLog[n_,x_]:>HPL[PadLeft[{1},n],x],PolyLog[i_,j_,y_]:>HPL[PadLeft[ConstantArray[1,j],i+j],y]};
 LogsToG={func_:>Expand[func/.LogsToIMPL/.IMPLtoG]};
 LogsToGI={Log[x_]:>(Log[x]/.LogsToHPL/.HPLtoGI)/;MatchQ[x,Alternatives[u,v,w,1-u,1-v,1-w]], PolyLog[n_,x_]:>(PolyLog[n,x]/.LogsToHPL/.HPLtoGI)/;MatchQ[x,Alternatives[u,v,w,1-u,1-v,1-w]], PolyLog[i_,j_,x_]:>(PolyLog[i,j,x]/.LogsToHPL/.HPLtoGI)/;MatchQ[x,Alternatives[u,v,w,1-u,1-v,1-w]], Log[x_]:>G[{0},x], Log[1-x_]:>G[{0},1-x], PolyLog[n_,x_]:>(-G[PadLeft[{1},n],x]),PolyLog[i_,j_,y_]:>Power[(-1),j]G[PadLeft[ConstantArray[1,j],i+j],y]};
@@ -17,6 +34,7 @@ GtoHPL={G[aVec_,af_]:>HPL[aVec,af](-1)^Count[aVec,1]/;Count[aVec,Alternatives[0,
 GtoIMPL={G[aVec_,af_]:>IMPL[0,Reverse[aVec],af]};
 
 MPLtoHPL={MPL[aVec_,af_]:>HPL[aVec,af](-1)^Count[aVec,1]};
+HPLtoMPL={HPL[aVec_,af_]:>MPL[aVec,af](-1)^Count[aVec,1]};
 
 IMPLtoLogs=Join[Table[IMPL[0,PadLeft[{},i],y_]->Log[y]^i/(i!),{i,10}],Table[IMPL[0,PadLeft[{},i,1],1-y_]->-(-Log[y])^i/(i!),{i,10}],Table[IMPL[0,PadRight[{1},i+1],y_]->-PolyLog[i+1,y],{i,0,9}]];
 IMPLtoHPL={IMPL[0,aVec_,af_]:>(-1)^Count[aVec,1]HPL[Reverse[aVec],af]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec]};
@@ -24,8 +42,8 @@ IMPLtoG={IMPL[0,aVec_,af_]:>G[Reverse[aVec],af]};
 
 toLogs=Join[HPLtoLogs,GtoLogs,IMPLtoLogs];
 toHPL=Join[LogsToHPL,GtoHPL,IMPLtoHPL];
-toGI=Join[LogsToGI,HPLtoGI,IMPLtoG,{func_:>irrToGI[func]/;MatchQ[func,Alternatives@@allIrreducibleFunctions]}];
-toGII=Join[LogsToGII,HPLtoGII,IMPLtoG,{func_:>irrToGII[func]/;MatchQ[func,Alternatives@@allIrreducibleFunctions]}];
+toGI={func_:>Expand[takeHPLtoGI[toLinearBasisHPL[func/.LogsToHPL/.flipArgument[{1-u,1-v,1-w}]/.{H3[a_]:>irrToGI[H3[a]],H4[a_]:>irrToGI[H4[a]],H5[a_]:>irrToGI[H5[a]],H6[a_]:>irrToGI[H6[a]],E7[a_]:>irrToGI[E7[a]],O7[a_]:>irrToGI[O7[a]],E8[a_]:>irrToGI[E8[a]],O8[a_]:>irrToGI[O8[a]]}]]]};
+toGII={func_:>Expand[takeHPLtoGII[toLinearBasisHPL[func/.LogsToHPL/.flipArgument[{1-u,1-v,1-w}]/.{H3[a_]:>irrToGII[H3[a]],H4[a_]:>irrToGII[H4[a]],H5[a_]:>irrToGII[H5[a]],H6[a_]:>irrToGII[H6[a]],E7[a_]:>irrToGII[E7[a]],O7[a_]:>irrToGII[O7[a]],E8[a_]:>irrToGII[E8[a]],O8[a_]:>irrToGII[O8[a]]}]]]};
 toIMPL=Join[LogsToIMPL,HPLtoIMPL,GtoIMPL];
 
 toHPLorG[func_]:=Expand[func/.toHPL]/;FreeQ[func,Alternatives[yu,yv,yw]];
@@ -106,7 +124,3 @@ compressedNotation[vec_]:=Block[{ones=Position[vec,Alternatives[1,-1]][[All,1]],
 decompressedNotation[vec_]:=Join@@Table[i/.{0:>{0},n_:>PadLeft[{Sign[n]},Abs[n]]/;n!=0},{i,vec}];
 toCompressedNotation[func_]:=func/.HPL[aVec_,var_]:>HPL[compressedNotation[aVec],var];
 toDecompressedNotation[func_]:=func/.(HPL[aVec_,var_]:>HPL[decompressedNotation[aVec],var]/;aVec!={0});
-
-allIrreducibleFunctions={H3[_],H4[_],H5[_],H6[_],E7[_],O7[_],E8[_],O8[_],DS3[_],DS4[_],DS5[_],DS6[_],DS7[_],DS8[_],DS9[_],DS10[_],SP2[_],SP3[_],SP4[_],SP5[_],SP6[_],SP7[_],SP8[_],SP9[_],SP10[_], Subscript[OverTilde[\[CapitalPhi]],6], Superscript[\[CapitalOmega],"(2)"][_,_,_], Subscript[F,1][_,_,_], Subscript[H, 1][_,_,_], Subscript[J, 1][_,_,_], N, O, Subscript[M, 1][_,_,_], Subscript[Q, "ep"][_,_,_], G, Subscript[K, 1][_,_,_]};
-(*oddIrreducibleFunctions={H3[1],H4[4],H4[5],H4[6],H5[1],H5[2],H5[3],H5[4],H5[5],H5[6],H5[20],H5[21],H5[22],H5[23],O7[_],Subscript[OverTilde[\[CapitalPhi]],6], Subscript[F,1][_,_,_], Subscript[H, 1][_,_,_], Subscript[J, 1][_,_,_], G, Subscript[K, 1][_,_,_]};
-evenIrreducibleFunctions={H4[1],H4[2],H4[3],H5[7],H5[8],H5[9],H5[10],H5[11],H5[12],H5[13],H5[14], H5[15], H5[16],H5[17],H5[18],H5[19],E7[_],Superscript[\[CapitalOmega],"(2)"][_,_,_], N, O, Subscript[M, 1][_,_,_], Subscript[Q, "ep"][_,_,_]};*)

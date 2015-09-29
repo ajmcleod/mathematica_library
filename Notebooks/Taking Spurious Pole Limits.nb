@@ -1,0 +1,633 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     21953,        624]
+NotebookOptionsPosition[     20882,        584]
+NotebookOutlinePosition[     21283,        602]
+CellTagsIndexPosition[     21240,        599]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{"<<", "coproduct.m"}], "\[IndentingNewLine]", 
+ RowBox[{"<<", 
+  "\"\<irreducible_function_package_spurious_pole_surface.m\>\""}]}], "Input",\
+
+ CellChangeTimes->{{3.630980362135249*^9, 3.6309803622298813`*^9}, {
+  3.630980420775182*^9, 3.6309804222220163`*^9}, {3.631040072071184*^9, 
+  3.631040072367284*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"<<", "\"\<weight_2_euclidean_spurious_pole_limits_wfec.dat\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<weight_3_euclidean_spurious_pole_limits_wfec.dat\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<weight_4_euclidean_spurious_pole_limits_wfec.dat\>\""}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"<<", "\"\<weight_5_euclidean_spurious_pole_limits_wfec.dat\>\""}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.6314557003207703`*^9, 3.631455728140386*^9}, {
+  3.631458021221298*^9, 3.631458023035344*^9}, {3.631476591679043*^9, 
+  3.6314765932474203`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"currentWeight", "=", "7"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"loadFunctionsAndDefinitions", "[", "currentWeight", "]"}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.631455272672756*^9, 3.631455290050571*^9}, {
+  3.631458033650875*^9, 3.631458033754429*^9}, {3.631476597623515*^9, 
+  3.6314765980071983`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"SPcoproductD", "[", 
+    RowBox[{"func_", ",", "u"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"coproductEntry", "[", 
+        RowBox[{"func", ",", "u"}], "]"}], "/", "u"}], "-", 
+      RowBox[{
+       RowBox[{"coproductEntry", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"1", "-", "u"}]}], "]"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "u"}], ")"}]}], "+", 
+      RowBox[{
+       RowBox[{"coproductEntry", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"u", "-", "v"}]}], "]"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"u", "-", "v"}], ")"}]}]}], ")"}], "/.", "toHPL"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"SPcoproductD", "[", 
+    RowBox[{"func_", ",", "v"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"coproductEntry", "[", 
+        RowBox[{"func", ",", "v"}], "]"}], "/", "v"}], "-", 
+      RowBox[{
+       RowBox[{"coproductEntry", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"1", "-", "v"}]}], "]"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"1", "-", "v"}], ")"}]}], "-", 
+      RowBox[{
+       RowBox[{"coproductEntry", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"u", "-", "v"}]}], "]"}], "/", 
+       RowBox[{"(", 
+        RowBox[{"u", "-", "v"}], ")"}]}]}], ")"}], "/.", "toHPL"}]}], 
+  ";"}]}], "Input",
+ CellChangeTimes->{{3.631455487892212*^9, 3.6314556090364733`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"lineEtemp", "[", 
+     RowBox[{
+      RowBox[{"SP5", "[", "ii", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"u", ",", "1"}], "}"}]}], "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"IntegrateHPL", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"SPcoproductD", "[", 
+           RowBox[{
+            RowBox[{"SP5", "[", "ii", "]"}], ",", "u"}], "]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"SP2", "[", "1", "]"}], "\[Rule]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP2", "[", "1", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"SP3", "[", "j_", "]"}], "\[RuleDelayed]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP3", "[", "j", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"SP4", "[", "j_", "]"}], "\[RuleDelayed]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP4", "[", "j", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}]}], "}"}]}], "/.", 
+         RowBox[{"v", "\[Rule]", "1"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"u", ",", "1", ",", "u"}], "}"}]}], "]"}], "/.", 
+      RowBox[{"flipArgument", "[", "u", "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "36"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.631455630083663*^9, 3.631455637632533*^9}, {
+  3.6314556701409607`*^9, 3.6314556763630877`*^9}, {3.631455837333844*^9, 
+  3.6314558495610523`*^9}, {3.631455897916091*^9, 3.631455934660994*^9}, {
+  3.6314762033944263`*^9, 3.631476226591238*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"lineEtemp", "[", 
+     RowBox[{
+      RowBox[{"SP5", "[", "ii", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"1", ",", "v"}], "}"}]}], "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"IntegrateHPL", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"SPcoproductD", "[", 
+           RowBox[{
+            RowBox[{"SP5", "[", "ii", "]"}], ",", "v"}], "]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"SP2", "[", "1", "]"}], "\[Rule]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP2", "[", "1", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"SP3", "[", "j_", "]"}], "\[RuleDelayed]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP3", "[", "j", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"SP4", "[", "j_", "]"}], "\[RuleDelayed]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP4", "[", "j", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}]}], "}"}]}], "/.", 
+         RowBox[{"u", "\[Rule]", "1"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"v", ",", "1", ",", "v"}], "}"}]}], "]"}], "/.", 
+      RowBox[{"flipArgument", "[", "v", "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "36"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.631455993719367*^9, 3.631456016366478*^9}, {
+  3.631476259294305*^9, 3.631476290038583*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"lineEtemp", "[", 
+     RowBox[{
+      RowBox[{"SP5", "[", "ii", "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"u", ",", "u"}], "}"}]}], "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{"IntegrateHPL", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"SPcoproductD", "[", 
+            RowBox[{
+             RowBox[{"SP5", "[", "ii", "]"}], ",", "u"}], "]"}], "+", 
+           RowBox[{"SPcoproductD", "[", 
+            RowBox[{
+             RowBox[{"SP5", "[", "ii", "]"}], ",", "v"}], "]"}]}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"SP2", "[", "1", "]"}], "\[Rule]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP2", "[", "1", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"SP3", "[", "j_", "]"}], "\[RuleDelayed]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP3", "[", "j", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"SP4", "[", "j_", "]"}], "\[RuleDelayed]", 
+             RowBox[{"lineE", "[", 
+              RowBox[{
+               RowBox[{"SP4", "[", "j", "]"}], ",", 
+               RowBox[{"{", 
+                RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}]}], "}"}]}], "/.", 
+         RowBox[{"v", "\[Rule]", "u"}]}], ",", 
+        RowBox[{"{", 
+         RowBox[{"u", ",", "1", ",", "u"}], "}"}]}], "]"}], "/.", 
+      RowBox[{"flipArgument", "[", "u", "]"}]}], "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "36"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.631457800212611*^9, 3.631457899634828*^9}, {
+  3.6314763020388317`*^9, 3.6314763021513863`*^9}, {3.631476341366644*^9, 
+  3.6314763664349422`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<weight_5_euclidean_spurious_pole_limits_wfec.dat\>\"", ",", 
+   "lineEtemp"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6314579146672773`*^9, 3.63145793060186*^9}, {
+  3.6314764856174088`*^9, 3.63147648579362*^9}}],
+
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.631456075819764*^9, 3.6314560761704683`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"lineEtemp", "[", 
+       RowBox[{
+        RowBox[{"SP5", "[", "#", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "v"}], "}"}]}], "]"}], "&"}], "/@", 
+     RowBox[{"Range", "[", "36", "]"}]}], "}"}], "\[Transpose]"}], "/.", 
+  RowBox[{"v", "\[Rule]", "1"}]}]], "Input",
+ CellChangeTimes->{{3.631455912012989*^9, 3.631455967455975*^9}, {
+  3.631456020579377*^9, 3.6314560215389433`*^9}, {3.631457907229463*^9, 
+  3.631457908626843*^9}, {3.631476406841588*^9, 3.6314764400307007`*^9}, {
+  3.631476473346192*^9, 3.631476481889106*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"},
+     {"0"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.63145591997095*^9, 3.631455967986443*^9}, 
+   3.6314560218559*^9, 3.631457908973489*^9, {3.6314764103269987`*^9, 
+   3.631476440290656*^9}, {3.6314764749029703`*^9, 3.631476482227542*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{"IntegrateHPL", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"SPcoproductD", "[", 
+           RowBox[{
+            RowBox[{"coproductEntry", "[", 
+             RowBox[{
+              RowBox[{"SP6", "[", "#", "]"}], ",", 
+              RowBox[{"u", "-", "v"}]}], "]"}], ",", "u"}], "]"}], "+", 
+          RowBox[{"SPcoproductD", "[", 
+           RowBox[{
+            RowBox[{"coproductEntry", "[", 
+             RowBox[{
+              RowBox[{"SP6", "[", "#", "]"}], ",", 
+              RowBox[{"u", "-", "v"}]}], "]"}], ",", "v"}], "]"}]}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"SP2", "[", "1", "]"}], "\[Rule]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP2", "[", "1", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP3", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP3", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP4", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP4", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP5", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP5", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "u"}], "}"}]}], "]"}]}]}], "}"}]}], "/.", 
+        RowBox[{"v", "\[Rule]", "u"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"u", ",", "1", ",", "u"}], "}"}]}], "]"}], "/.", 
+     RowBox[{"flipArgument", "[", "u", "]"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", "78", "]"}]}]], "Input",
+ CellChangeTimes->{{3.631459128917571*^9, 3.631459144211137*^9}, {
+  3.631476616971405*^9, 3.63147664691774*^9}, {3.631476734820636*^9, 
+  3.6314767349118032`*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.63145915180287*^9, 3.6314591718003902`*^9}, 
+   3.6314768987876673`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{"IntegrateHPL", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"SPcoproductD", "[", 
+          RowBox[{
+           RowBox[{"coproductEntry", "[", 
+            RowBox[{
+             RowBox[{"SP6", "[", "#", "]"}], ",", 
+             RowBox[{"1", "-", "v"}]}], "]"}], ",", "u"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"SP2", "[", "1", "]"}], "\[Rule]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP2", "[", "1", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP3", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP3", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP4", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP4", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP5", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP5", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", "1"}], "}"}]}], "]"}]}]}], "}"}]}], "/.", 
+        RowBox[{"v", "\[Rule]", "1"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"u", ",", "1", ",", "u"}], "}"}]}], "]"}], "/.", 
+     RowBox[{"flipArgument", "[", "u", "]"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", "78", "]"}]}]], "Input",
+ CellChangeTimes->{{3.631474094352621*^9, 3.631474155808654*^9}, {
+  3.631474204751071*^9, 3.6314742048271523`*^9}, {3.631476760246484*^9, 
+  3.631476795573654*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.6314741592473783`*^9, 3.631474209528344*^9, 
+  3.631476945329111*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{"IntegrateHPL", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"SPcoproductD", "[", 
+          RowBox[{
+           RowBox[{"coproductEntry", "[", 
+            RowBox[{
+             RowBox[{"SP6", "[", "#", "]"}], ",", 
+             RowBox[{"1", "-", "u"}]}], "]"}], ",", "v"}], "]"}], "/.", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{
+            RowBox[{"SP2", "[", "1", "]"}], "\[Rule]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP2", "[", "1", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP3", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP3", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP4", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP4", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}], ",", 
+           RowBox[{
+            RowBox[{"SP5", "[", "j_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"lineE", "[", 
+             RowBox[{
+              RowBox[{"SP5", "[", "j", "]"}], ",", 
+              RowBox[{"{", 
+               RowBox[{"1", ",", "v"}], "}"}]}], "]"}]}]}], "}"}]}], "/.", 
+        RowBox[{"u", "\[Rule]", "1"}]}], ",", 
+       RowBox[{"{", 
+        RowBox[{"v", ",", "1", ",", "v"}], "}"}]}], "]"}], "/.", 
+     RowBox[{"flipArgument", "[", "v", "]"}]}], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", "78", "]"}]}]], "Input",
+ CellChangeTimes->{{3.631474233252673*^9, 3.631474252256336*^9}, {
+  3.631476856577125*^9, 3.631476880607657*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0"}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{3.631474254434503*^9, 3.6314769616762133`*^9}]
+}, Open  ]]
+},
+Evaluator->"Kernal 2",
+WindowSize->{1081, 459},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 335, 7, 43, "Input"],
+Cell[895, 29, 657, 15, 73, "Input"],
+Cell[1555, 46, 361, 8, 43, "Input"],
+Cell[1919, 56, 1509, 47, 43, "Input"],
+Cell[3431, 105, 1947, 50, 103, "Input"],
+Cell[5381, 157, 1795, 48, 103, "Input"],
+Cell[7179, 207, 2007, 53, 103, "Input"],
+Cell[9189, 262, 267, 6, 27, "Input"],
+Cell[9459, 270, 197, 3, 88, "Input"],
+Cell[CellGroupData[{
+Cell[9681, 277, 641, 16, 27, "Input"],
+Cell[10325, 295, 1163, 53, 588, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11525, 353, 2283, 59, 73, "Input"],
+Cell[13811, 414, 1015, 17, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14863, 436, 2007, 52, 88, "Input"],
+Cell[16873, 490, 1011, 17, 43, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17921, 512, 1956, 51, 88, "Input"],
+Cell[19880, 565, 986, 16, 43, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

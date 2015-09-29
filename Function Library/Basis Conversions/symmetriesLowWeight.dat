@@ -1,0 +1,15 @@
+Superscript[\[CapitalOmega], "(2)"][v, u, w] = Superscript[\[CapitalOmega], "(2)"][u, v, w];
+Superscript[\[CapitalOmega], "(2)"][w, v, u] = Superscript[\[CapitalOmega], "(2)"][v, w, u];
+Superscript[\[CapitalOmega], "(2)"][u, w, v] = Superscript[\[CapitalOmega], "(2)"][w, u, v];
+Subscript[F, 1][v, u, w] = Subscript[F, 1][v, w, u];
+Subscript[F, 1][u, w, v] = Subscript[F, 1][u, v, w];
+Subscript[F, 1][w, v, u] = Subscript[F, 1][w, u, v];
+Subscript[H, 1][v, u, w] = Subscript[H, 1][w, u, v];
+Subscript[H, 1][w, v, u] = Subscript[H, 1][u, v, w];
+Subscript[H, 1][u, w, v] = Subscript[H, 1][v, w, u];
+Subscript[J, 1][v, u, w] = Subscript[J, 1][w, u, v];
+Subscript[J, 1][w, v, u] = Subscript[J, 1][u, v, w];
+Subscript[J, 1][u, w, v] = Subscript[J, 1][v, w, u];
+Subscript[K, 1][v, u, w] = Subscript[K, 1][w, u, v];
+Subscript[K, 1][w, v, u] = Subscript[K, 1][u, v, w];
+Subscript[K, 1][u, w, v] = Subscript[K, 1][v, w, u];

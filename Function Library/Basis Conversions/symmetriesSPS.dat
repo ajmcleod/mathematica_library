@@ -1,0 +1,45 @@
+SPw2f1[v,u] = -SPw2f1[u,v];
+
+SPw4f6[v,u] = -SPw4f6[u,v];
+SPw4f7[v,u] = -SPw4f7[u,v];
+
+SPw5f17[v,u] = SPw5f17[u,v];
+SPw5f18[v,u] = SPw5f18[u,v];
+SPw5f19[v,u] = -SPw5f19[u,v];
+SPw5f20[v,u] = -SPw5f20[u,v];
+
+SPw6f45[v,u] = SPw6f45[u,v];
+SPw6f46[v,u] = SPw6f46[u,v];
+SPw6f47[v,u] = SPw6f47[u,v];
+SPw6f48[v,u] = -SPw6f48[u,v];
+SPw6f49[v,u] = -SPw6f49[u,v];
+SPw6f50[v,u] = -SPw6f50[u,v];
+SPw6f51[v,u] = -SPw6f51[u,v];
+SPw6f52[v,u] = -SPw6f52[u,v];
+SPw6f53[v,u] = -SPw6f53[u,v];
+SPw6f54[v,u] = -SPw6f54[u,v];
+
+SPw7f127[v,u] = SPw7f127[u,v];
+SPw7f128[v,u] = SPw7f128[u,v];
+SPw7f129[v,u] = SPw7f129[u,v];
+SPw7f130[v,u] = SPw7f130[u,v];
+SPw7f131[v,u] = SPw7f131[u,v];
+SPw7f132[v,u] = SPw7f132[u,v];
+SPw7f133[v,u] = SPw7f133[u,v];
+SPw7f134[v,u] = SPw7f134[u,v];
+SPw7f135[v,u] = SPw7f135[u,v];
+SPw7f136[v,u] = SPw7f136[u,v];
+SPw7f137[v,u] = SPw7f137[u,v];
+SPw7f138[v,u] = SPw7f138[u,v];
+SPw7f139[v,u] = -SPw7f139[u,v];
+SPw7f140[v,u] = -SPw7f140[u,v];
+SPw7f141[v,u] = -SPw7f141[u,v];
+SPw7f142[v,u] = -SPw7f142[u,v];
+SPw7f143[v,u] = -SPw7f143[u,v];
+SPw7f144[v,u] = -SPw7f144[u,v];
+SPw7f145[v,u] = -SPw7f145[u,v];
+SPw7f146[v,u] = -SPw7f146[u,v];
+SPw7f147[v,u] = -SPw7f147[u,v];
+SPw7f148[v,u] = -SPw7f148[u,v];
+SPw7f149[v,u] = -SPw7f149[u,v];
+SPw7f150[v,u] = -SPw7f150[u,v];

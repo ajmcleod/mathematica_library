@@ -1,0 +1,1790 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     65372,       1781]
+NotebookOptionsPosition[     61533,       1653]
+NotebookOutlinePosition[     61909,       1670]
+CellTagsIndexPosition[     61866,       1667]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.6270667196967773`*^9, 3.6270667215223703`*^9}, {
+  3.627652904628392*^9, 3.627652905439165*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "MRK.m"}]], "Input",
+ CellChangeTimes->{{3.627105287728722*^9, 3.6271052895743856`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"initializeMRKsolver", "[", "7", "]"}]], "Input",
+ CellChangeTimes->{{3.6275993350504427`*^9, 3.627599335377342*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MRKbasisMatrix", "=", 
+   RowBox[{"<<", "\"\<MRKbasisMatrix7.dat\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6271587261456347`*^9, 3.627158743406855*^9}, {
+   3.6271780283075533`*^9, 3.62717803437007*^9}, {3.6272452119396133`*^9, 
+   3.627245224950584*^9}, 3.627409478706463*^9, {3.6274097332024384`*^9, 
+   3.62740973512109*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MRKtoVector", "=", 
+   RowBox[{"<<", "\"\<MRKtoVector7.dat\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6271587455669317`*^9, 3.6271587535988913`*^9}, {
+   3.627178036249983*^9, 3.627178041162071*^9}, {3.627245218962924*^9, 
+   3.6272452215207243`*^9}, 3.6274094876576853`*^9, {3.627409730065477*^9, 
+   3.6274097434020433`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MRKbackToSVHPL", "=", 
+   RowBox[{"<<", "\"\<MRKbackToSVHPL.dat\>\""}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.627158756425117*^9, 3.627158759054063*^9}, {
+   3.627178043161824*^9, 3.627178046506652*^9}, {3.627245227488736*^9, 
+   3.6272452277893343`*^9}, 3.627409491332746*^9, {3.627409726275413*^9, 
+   3.627409746896802*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MRKcoefficients", "=", 
+   RowBox[{"Flatten", "@", 
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Table", "[", 
+       RowBox[{
+        RowBox[{"c", "[", 
+         RowBox[{"w", ",", "i"}], "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", 
+          RowBox[{"Length", "[", 
+           RowBox[{"SVHPLtermsWeight", "[", "w", "]"}], "]"}]}], "}"}]}], 
+       "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"w", ",", "7"}], "}"}]}], "]"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.627552789499209*^9, 3.6275527921227913`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"zDiffInMRKlimitO7u", "[", "i_", "]"}], ":=", 
+   RowBox[{"toMRKlimit", "[", 
+    RowBox[{
+     RowBox[{"coproductD", "[", 
+      RowBox[{
+       RowBox[{"O7", "[", "i", "]"}], ",", 
+       RowBox[{"Subscript", "[", 
+        RowBox[{"z", ",", "u"}], "]"}]}], "]"}], ",", 
+     RowBox[{"u", "\[Rule]", "1"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6274098758659286`*^9, 3.627409919255378*^9}, {
+  3.627552666245224*^9, 3.6275526677795343`*^9}, {3.6275556767447863`*^9, 
+  3.627555691454729*^9}, {3.627555758679057*^9, 3.627555772823617*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MRK07u1", "[", "ii", "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{"MRKbackToSVHPL", ".", 
+      RowBox[{"(", 
+       RowBox[{"MRKcoefficients", "/.", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"reduce", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"zDiffInMRKlimitO7u", "[", "ii", "]"}], "/.", 
+               "MRKtoVector"}], ")"}], "-", 
+             RowBox[{"MRKbasisMatrix", ".", "MRKcoefficients"}]}], "/.", 
+            RowBox[{
+             RowBox[{"\[Zeta]", "[", "x_", "]"}], ":>", 
+             RowBox[{"z", "[", "x", "]"}]}]}], "]"}], "/.", 
+          RowBox[{
+           RowBox[{"Equal", "[", 
+            RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+           RowBox[{"Rule", "[", 
+            RowBox[{"x", ",", "y"}], "]"}]}]}], ")"}]}], ")"}]}], "]"}]}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "106"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6275559067639847`*^9, 3.627555934671554*^9}, {
+  3.627556617970419*^9, 3.6275566343454103`*^9}, {3.627603017675708*^9, 
+  3.627603017767366*^9}, {3.6276042806248827`*^9, 3.627604280686145*^9}, {
+  3.627610250507567*^9, 3.6276102505833597`*^9}, {3.627659064663561*^9, 
+  3.627659064822135*^9}, {3.627664971627985*^9, 3.627665022918095*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "\"\<O7A_MRK.m\>\""}]], "Input",
+ CellChangeTimes->{{3.6276778996300707`*^9, 3.627677901406322*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MattMRKO7", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "C1uvwMRK", ",", "C1vwuMRK", ",", "C1wuvMRK", ",", "C1uwvMRK", ",", 
+     "C1vuwMRK", ",", "C1wvuMRK", ",", "C2uvwMRK", ",", "C2vwuMRK", ",", 
+     "C2wuvMRK", ",", "C2uwvMRK", ",", "C2vuwMRK", ",", "C2wvuMRK", ",", 
+     "C3uvwMRK", ",", "C3vwuMRK", ",", "C3wuvMRK", ",", "C3uwvMRK", ",", 
+     "C3vuwMRK", ",", "C3wvuMRK", ",", "C4uvwMRK", ",", "C4vwuMRK", ",", 
+     "C4wuvMRK", ",", "C5uvwMRK", ",", "C5vwuMRK", ",", "C5wuvMRK", ",", 
+     "C6uvwMRK", ",", "C6vwuMRK", ",", "C6wuvMRK", ",", "C7uvwMRK", ",", 
+     "C7vwuMRK", ",", "C7wuvMRK", ",", "C8uvwMRK", ",", "C8vwuMRK", ",", 
+     "C8wuvMRK", ",", "C9uvwMRK", ",", "C9vwuMRK", ",", "C9wuvMRK", ",", 
+     "C10uvwMRK", ",", "C10vwuMRK", ",", "C10wuvMRK", ",", "C11uvwMRK", ",", 
+     "C11vwuMRK", ",", "C11wuvMRK", ",", "C11uwvMRK", ",", "C11vuwMRK", ",", 
+     "C11wvuMRK", ",", "C12uvwMRK", ",", "C12vwuMRK", ",", "C12wuvMRK", ",", 
+     "C12uwvMRK", ",", "C12vuwMRK", ",", "C12wvuMRK", ",", "C13uvwMRK", ",", 
+     "C13vwuMRK", ",", "C13wuvMRK", ",", "C13uwvMRK", ",", "C13vuwMRK", ",", 
+     "C13wvuMRK", ",", "C14uvwMRK", ",", "C14vwuMRK", ",", "C14wuvMRK", ",", 
+     "C14uwvMRK", ",", "C14vuwMRK", ",", "C14wvuMRK", ",", "C15uvwMRK", ",", 
+     "C15vwuMRK", ",", "C15wuvMRK", ",", "C15uwvMRK", ",", "C15vuwMRK", ",", 
+     "C15wvuMRK", ",", "C16uvwMRK", ",", "C16vwuMRK", ",", "C16wuvMRK", ",", 
+     "C17uvwMRK", ",", "C17vwuMRK", ",", "C17wuvMRK", ",", "C18uvwMRK", ",", 
+     "C18vwuMRK", ",", "C18wuvMRK", ",", "C19uvwMRK", ",", "C19vwuMRK", ",", 
+     "C19wuvMRK", ",", "C20uvwMRK", ",", "C20vwuMRK", ",", "C20wuvMRK", ",", 
+     "C21uvwMRK", ",", "C21vwuMRK", ",", "C21wuvMRK", ",", "C22uvwMRK", ",", 
+     "C22vwuMRK", ",", "C22wuvMRK", ",", "C23uvwMRK", ",", "C23vwuMRK", ",", 
+     "C23wuvMRK", ",", "C24uvwMRK", ",", "C24vwuMRK", ",", "C24wuvMRK", ",", 
+     "C25uvwMRK", ",", "C25vwuMRK", ",", "C25wuvMRK", ",", "C26uvwMRK", ",", 
+     "C26vwuMRK", ",", "C26wuvMRK", ",", "C27uvwMRK", ",", "C27vwuMRK", ",", 
+     "C27wuvMRK", ",", "C28uvwMRK"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.627678538143334*^9, 3.6276787075527782`*^9}, {
+  3.6276788151579638`*^9, 3.627678890358622*^9}, {3.62767897918004*^9, 
+  3.62767899663105*^9}, {3.627679108170485*^9, 3.627679119456573*^9}, {
+  3.6276793558230543`*^9, 3.6276794705505257`*^9}, {3.62767950966088*^9, 
+  3.627679559529707*^9}, {3.6276796018008547`*^9, 3.627679951645844*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"MRK07u1", "[", "#", "]"}], "-", 
+         RowBox[{
+         "MattMRKO7", "\[LeftDoubleBracket]", "#", 
+          "\[RightDoubleBracket]"}]}], "/.", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{
+           RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+           RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+          RowBox[{
+           RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+           RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+       RowBox[{"(", 
+        RowBox[{"\[Xi]", "\[Rule]", 
+         RowBox[{"1", "-", "u"}]}], ")"}]}], "/.", "\[Pi]to\[Zeta]"}], "/.", 
+     RowBox[{
+      RowBox[{"\[Zeta]", "[", "x_", "]"}], "\[RuleDelayed]", 
+      RowBox[{"Zeta", "[", "x", "]"}]}]}], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", "106", "]"}]}]], "Input",
+ CellChangeTimes->{{3.627677232938081*^9, 3.627677266992692*^9}, {
+  3.62767795633525*^9, 3.6276780538279943`*^9}, {3.6276780844032593`*^9, 
+  3.627678363522849*^9}, {3.6276784407334414`*^9, 3.627678470121777*^9}, {
+  3.627678518834178*^9, 3.627678531577715*^9}, {3.62767856298426*^9, 
+  3.6276785966610813`*^9}, {3.627678671848795*^9, 3.627678690080925*^9}, {
+  3.627678792874119*^9, 3.627678802614645*^9}, {3.627678867128757*^9, 
+  3.62767890569876*^9}, {3.627678999607388*^9, 3.627678999687542*^9}, {
+  3.627679122370206*^9, 3.62767912276156*^9}, {3.627679366576303*^9, 
+  3.627679446309101*^9}, {3.627679489179926*^9, 3.627679789406618*^9}, {
+  3.627679820076645*^9, 3.627679820309539*^9}, {3.6276798531810226`*^9, 
+  3.62767988850734*^9}, {3.6276799554968843`*^9, 3.627679958376573*^9}, {
+  3.6277859253152027`*^9, 3.627785926570137*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6276772345252647`*^9, 3.627677267534685*^9}, {
+   3.627677987811364*^9, 3.627678054497787*^9}, {3.6276780848899517`*^9, 
+   3.627678116287553*^9}, {3.627678154776919*^9, 3.627678363946495*^9}, {
+   3.6276784490255957`*^9, 3.627678458695428*^9}, {3.627678597748569*^9, 
+   3.62767871024448*^9}, {3.6276787942753277`*^9, 3.627678825500469*^9}, {
+   3.627678867708557*^9, 3.627678906296564*^9}, 3.6276790000749063`*^9, 
+   3.627679123325042*^9, {3.62767936714818*^9, 3.627679536745722*^9}, {
+   3.6276795670045757`*^9, 3.627679790488318*^9}, {3.62767982102002*^9, 
+   3.6276798890430517`*^9}, {3.627679953855535*^9, 3.62767995901691*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<bacupMRK.dat\>\"", ",", "MRK07u1"}], "]"}]], "Input",
+ CellChangeTimes->{{3.627679967732357*^9, 3.6276799745315723`*^9}, {
+  3.627680006181892*^9, 3.627680019573501*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MRK", "[", 
+     RowBox[{
+      RowBox[{"O7", "[", "ii", "]"}], ",", 
+      RowBox[{"u", "\[Rule]", "1"}]}], "]"}], "=", 
+    RowBox[{"MRK07u1", "[", "ii", "]"}]}], ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "106"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6277075288566093`*^9, 3.627707560368688*^9}, {
+  3.627707646479568*^9, 3.627707692837297*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{"\"\<MRK_limits_irreducible_functions.dat\>\"", ",", "MRK"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.62770773469193*^9, 3.6277077820076313`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"zDiffInMRKlimitE7u", "[", "i_", "]"}], ":=", 
+   RowBox[{"toMRKlimit", "[", 
+    RowBox[{
+     RowBox[{"coproductD", "[", 
+      RowBox[{
+       RowBox[{"E7", "[", "i", "]"}], ",", 
+       RowBox[{"Subscript", "[", 
+        RowBox[{"z", ",", "u"}], "]"}]}], "]"}], ",", 
+     RowBox[{"u", "\[Rule]", "1"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.627708253784279*^9, 3.627708270150289*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MRKE7u1", "[", "ii", "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{"MRKbackToSVHPL", ".", 
+      RowBox[{"(", 
+       RowBox[{"MRKcoefficients", "/.", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"reduce", "[", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"zDiffInMRKlimitE7u", "[", "ii", "]"}], "/.", 
+               "MRKtoVector"}], ")"}], "-", 
+             RowBox[{"MRKbasisMatrix", ".", "MRKcoefficients"}]}], "/.", 
+            RowBox[{
+             RowBox[{"\[Zeta]", "[", "x_", "]"}], ":>", 
+             RowBox[{"z", "[", "x", "]"}]}]}], "]"}], "/.", 
+          RowBox[{
+           RowBox[{"Equal", "[", 
+            RowBox[{"x_", ",", "y_"}], "]"}], "\[RuleDelayed]", 
+           RowBox[{"Rule", "[", 
+            RowBox[{"x", ",", "y"}], "]"}]}]}], ")"}]}], ")"}]}], "]"}]}], 
+   ",", 
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "149"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6277082402439833`*^9, 3.627708240297173*^9}, {
+  3.62770827380906*^9, 3.6277082889365683`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"<<", "\"\<E7A_MRK.m\>\""}], ";"}]], "Input",
+ CellChangeTimes->{{3.6277850823513813`*^9, 3.627785090864985*^9}, {
+  3.6277859059444017`*^9, 3.6277859062073727`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MattMRKE7", "=", 
+   RowBox[{"{", 
+    RowBox[{
+    "D1uvwMRK", ",", "D1vwuMRK", ",", "D1wuvMRK", ",", "D1uwvMRK", ",", 
+     "D1vuwMRK", ",", "D1wvuMRK", ",", "D2uvwMRK", ",", "D2vwuMRK", ",", 
+     "D2wuvMRK", ",", "D2uwvMRK", ",", "D2vuwMRK", ",", "D2wvuMRK", ",", 
+     "D3uvwMRK", ",", "D3vwuMRK", ",", "D3wuvMRK", ",", "D3uwvMRK", ",", 
+     "D3vuwMRK", ",", "D3wvuMRK", ",", "D4uvwMRK", ",", "D4vwuMRK", ",", 
+     "D4wuvMRK", ",", "D4uwvMRK", ",", "D4vuwMRK", ",", "D4wvuMRK", ",", 
+     "D5uvwMRK", ",", "D5vwuMRK", ",", "D5wuvMRK", ",", "D5uwvMRK", ",", 
+     "D5vuwMRK", ",", "D5wvuMRK", ",", "D6uvwMRK", ",", "D6vwuMRK", ",", 
+     "D6wuvMRK", ",", "D6uwvMRK", ",", "D6vuwMRK", ",", "D6wvuMRK", ",", 
+     "D7uvwMRK", ",", "D7vwuMRK", ",", "D7wuvMRK", ",", "D7uwvMRK", ",", 
+     "D7vuwMRK", ",", "D7wvuMRK", ",", "D8uvwMRK", ",", "D8vwuMRK", ",", 
+     "D8wuvMRK", ",", "D8uwvMRK", ",", "D8vuwMRK", ",", "D8wvuMRK", ",", 
+     "D9uvwMRK", ",", "D9vwuMRK", ",", "D9wuvMRK", ",", "D9uwvMRK", ",", 
+     "D9vuwMRK", ",", "D9wvuMRK", ",", "D10uvwMRK", ",", "D10vwuMRK", ",", 
+     "D10wuvMRK", ",", "D10uwvMRK", ",", "D10vuwMRK", ",", "D10wvuMRK", ",", 
+     "D11uvwMRK", ",", "D11vwuMRK", ",", "D11wuvMRK", ",", "D11uwvMRK", ",", 
+     "D11vuwMRK", ",", "D11wvuMRK", ",", "D12uvwMRK", ",", "D12vwuMRK", ",", 
+     "D12wuvMRK", ",", "D12uwvMRK", ",", "D12vuwMRK", ",", "D12wvuMRK", ",", 
+     "D13uvwMRK", ",", "D13vwuMRK", ",", "D13wuvMRK", ",", "D14uvwMRK", ",", 
+     "D14vwuMRK", ",", "D14wuvMRK", ",", "D15uvwMRK", ",", "D15vwuMRK", ",", 
+     "D15wuvMRK", ",", "D16uvwMRK", ",", "D16vwuMRK", ",", "D16wuvMRK", ",", 
+     "D17uvwMRK", ",", "D17vwuMRK", ",", "D17wuvMRK", ",", "D18uvwMRK", ",", 
+     "D18vwuMRK", ",", "D18wuvMRK", ",", "D19uvwMRK", ",", "D19vwuMRK", ",", 
+     "D19wuvMRK", ",", "D20uvwMRK", ",", "D20vwuMRK", ",", "D20wuvMRK", ",", 
+     "D21uvwMRK", ",", "D21vwuMRK", ",", "D21wuvMRK", ",", "D22uvwMRK", ",", 
+     "D22vwuMRK", ",", "D22wuvMRK", ",", "D23uvwMRK", ",", "D23vwuMRK", ",", 
+     "D23wuvMRK", ",", "D24uvwMRK", ",", "D24vwuMRK", ",", "D24wuvMRK", ",", 
+     "D25uvwMRK", ",", "D25vwuMRK", ",", "D25wuvMRK", ",", "D25uwvMRK", ",", 
+     "D25vuwMRK", ",", "D25wvuMRK", ",", "D26uvwMRK", ",", "D26vwuMRK", ",", 
+     "D26wuvMRK", ",", "D26uwvMRK", ",", "D26vuwMRK", ",", "D26wvuMRK", ",", 
+     "D27uvwMRK", ",", "D27vwuMRK", ",", "D27wuvMRK", ",", "D27uwvMRK", ",", 
+     "D27vuwMRK", ",", "D27wvuMRK", ",", "D28uvwMRK", ",", "D28vwuMRK", ",", 
+     "D28wuvMRK", ",", "D29uvwMRK", ",", "D29vwuMRK", ",", "D29wuvMRK", ",", 
+     "D30uvwMRK", ",", "D30vwuMRK", ",", "D30wuvMRK", ",", "D31uvwMRK", ",", 
+     "D31vwuMRK", ",", "D31wuvMRK", ",", "D32uvwMRK", ",", "D32vwuMRK", ",", 
+     "D32wuvMRK", ",", "D33uvwMRK", ",", "D33vwuMRK", ",", "D33wuvMRK", ",", 
+     "D34uvwMRK", ",", "D34vwuMRK", ",", "D34wuvMRK", ",", "D35uvwMRK", ",", 
+     "D36uvwMRK"}], "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6277851030162687`*^9, 3.627785105182438*^9}, {
+  3.6277858940833406`*^9, 3.62778592044211*^9}, {3.628019048333313*^9, 
+  3.6280191338638563`*^9}, {3.628052122010207*^9, 3.62805222418466*^9}, {
+  3.628052332666627*^9, 3.6280524988912773`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"Expand", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+            "MattMRKE7", "\[LeftDoubleBracket]", "#", 
+             "\[RightDoubleBracket]"}], "/.", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+               RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+              RowBox[{
+               RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+               RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+           "\[Pi]to\[Zeta]"}], "/.", 
+          RowBox[{"u", "\[Rule]", 
+           RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+         RowBox[{
+          RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+       RowBox[{"(", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{"toMRKmaple", "[", "#", "]"}], "/.", 
+           RowBox[{
+            RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+          RowBox[{
+           RowBox[{"Subscript", "[", 
+            RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+         
+         RowBox[{
+          RowBox[{
+           RowBox[{"Subscript", "[", 
+            RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+          "\[RuleDelayed]", 
+          RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+      "\[Pi]to\[Zeta]"}], "]"}], "&"}], "/@", 
+  RowBox[{"Range", "[", "149", "]"}]}]], "Input",
+ CellChangeTimes->CompressedData["
+1:eJxTTMoPSmViYGAQBWIQ3bI2Pbee/bUjs//VfBBtM6WwFETz+OrXgOhdcZs2
+PQbSO1IYtoDoTpeUYyC66tEUMB3B63ATRGfuLL8Poh9u+/8MRH+0DHsHoot4
+w3ifAOkXG9n4QPShtXPcQPSTJds8QHSS95SpT4H0hQ7zmSC6NnPdIhCtff7r
+EhD9Yn34ThB9/qXWXrB41YxDIJrJQuQIiLbdeanxGcidAjfBdGhFg/0XID1l
+mrkziP7npB0Gou/xHg0H0X7t4q0g+sjB7jYQvUExpBdEN0x6CKav/OOYAaIv
+pU2ZCaId2vecBZtjEngBROvc2HH7K5B+9H/rIxBtEMTP/A1I273VBtMAHhCv
+xQ==
+  "]],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+   "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", 
+    ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",",
+     "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", 
+    "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0", ",", "0",
+     ",", "0", ",", "0", ",", "0"}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.628048917279579*^9, 3.6280489362792387`*^9}, 
+   3.6280490876041737`*^9, {3.6280494541319017`*^9, 3.628049465175315*^9}, 
+   3.628049523998494*^9, {3.6280496043254547`*^9, 3.62804961718017*^9}, 
+   3.628050043378943*^9, {3.6280521965121183`*^9, 3.628052267064294*^9}, 
+   3.628052543061164*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"toMRKmaple", "[", "ii_", "]"}], ":=", " ", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "weight", ",", "zDiffInMRKlimit", ",", "zSolutionFunc", ",", 
+       "zLimitMatching", ",", "MRKfunc", ",", 
+       RowBox[{"u1", "=", "u"}], ",", 
+       RowBox[{"u2", "=", "v"}], ",", 
+       RowBox[{"u3", "=", "w"}]}], "}"}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"weight", "=", 
+       RowBox[{"transcendentalWeight", "[", 
+        RowBox[{"E7", "[", "ii", "]"}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"MRKsolverCurrentWeight", "=!=", "weight"}], ",", 
+        RowBox[{"initializeMRKsolver", "[", "weight", "]"}]}], "]"}], ";", 
+      "\[IndentingNewLine]", 
+      RowBox[{"zSolutionFunc", "=", 
+       RowBox[{"MRKE7u1", "[", "ii", "]"}]}], ";", 
+      RowBox[{"zLimitMatching", "=", 
+       RowBox[{"Expand", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+               RowBox[{
+                RowBox[{"ReplaceAll", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"toPointM", "[", 
+                    RowBox[{
+                    RowBox[{"E7", "[", "ii", "]"}], ",", 
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", "v", ",", "v"}], "}"}], ",", 
+                    RowBox[{"v", "->", "0"}]}], "]"}], "/.", "toLogs"}], ",", 
+                  
+                  RowBox[{
+                   RowBox[{"Log", "[", "u2", "]"}], "->", 
+                   RowBox[{
+                    RowBox[{"Log", "[", "\[Xi]", "]"}], "-", 
+                    RowBox[{"HPL", "[", 
+                    RowBox[{
+                    RowBox[{"{", "0", "}"}], ",", 
+                    RowBox[{"1", "-", "z"}]}], "]"}], "-", 
+                    RowBox[{"HPL", "[", 
+                    RowBox[{
+                    RowBox[{"{", "0", "}"}], ",", 
+                    RowBox[{"1", "-", "zb"}]}], "]"}]}]}]}], "]"}], "-", 
+                RowBox[{"ReplaceAll", "[", 
+                 RowBox[{
+                  RowBox[{
+                   RowBox[{"zSolutionFunc", "/.", "SVHPLreplacements"}], "/.", 
+                   RowBox[{"flipArgument", "[", 
+                    RowBox[{"{", 
+                    RowBox[{"z", ",", "zb"}], "}"}], "]"}]}], ",", 
+                  RowBox[{"{", 
+                   RowBox[{
+                    RowBox[{
+                    RowBox[{"HPL", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"___", ",", "1"}], "}"}], ",", 
+                    RowBox[{"1", "-", "z"}]}], "]"}], "->", "0"}], ",", 
+                    RowBox[{
+                    RowBox[{"HPL", "[", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"___", ",", "1"}], "}"}], ",", 
+                    RowBox[{"1", "-", "zb"}]}], "]"}], "->", "0"}]}], "}"}]}],
+                  "]"}]}], "/.", "toHPL"}], "/.", 
+              RowBox[{
+               RowBox[{"Subscript", "[", 
+                RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+             RowBox[{"flipArgument", "[", 
+              RowBox[{"{", 
+               RowBox[{"u", ",", 
+                RowBox[{"1", "-", "\[Xi]"}]}], "}"}], "]"}]}], "/.", 
+            RowBox[{"u", "\[Rule]", 
+             RowBox[{"(", 
+              RowBox[{"1", "-", "\[Xi]"}], ")"}]}]}], "/.", 
+           RowBox[{
+            RowBox[{"HPL", "[", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{"___", ",", "1"}], "}"}], ",", "\[Xi]"}], "]"}], 
+            "\[Rule]", "0"}]}], "/.", "\[Pi]to\[Zeta]"}], "/.", "toLogs"}], 
+        "]"}]}], ";", 
+      RowBox[{"MRKfunc", "=", 
+       RowBox[{"Expand", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Expand", "[", 
+           RowBox[{"zSolutionFunc", "+", "zLimitMatching"}], "]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"SVHPL", "[", "a__", "]"}], ":>", 
+             RowBox[{
+              RowBox[{"Subscript", "[", 
+               RowBox[{"SVHPL", ",", "u1"}], "]"}], "[", "a", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"Log", "[", "\[Xi]", "]"}], "->", 
+             RowBox[{"Log", "[", 
+              RowBox[{"Subscript", "[", 
+               RowBox[{"\[Xi]", ",", "u1"}], "]"}], "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "]"}]}], ";", "\n", "\t", 
+      RowBox[{"checkMRK\[Xi]D", "[", 
+       RowBox[{
+        RowBox[{"E7", "[", "ii", "]"}], ",", "MRKfunc", ",", 
+        RowBox[{"u", "\[Rule]", "1"}]}], "]"}], ";", "\n", "\t", 
+      "MRKfunc"}]}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6278151186966267`*^9, 3.62781520273669*^9}, {
+  3.627815233249132*^9, 3.627815285293783*^9}, {3.627816068154711*^9, 
+  3.627816080180406*^9}, {3.628014764572155*^9, 3.6280147700745*^9}, {
+  3.628014816915649*^9, 3.628014830457473*^9}, {3.628052047824415*^9, 
+  3.628052048158396*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "22", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "25", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.628049583237032*^9, 3.6280495863224154`*^9}, {
+  3.6280496259459267`*^9, 3.6280496327605886`*^9}, {3.628049723049946*^9, 
+  3.6280497300266314`*^9}, {3.628049864976411*^9, 3.628049867975196*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.628049586986812*^9, {3.628049627241116*^9, 3.628049634112954*^9}, 
+   3.6280497309151173`*^9, 3.628049879173266*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "23", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "26", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.628049873031081*^9, 3.628049877285842*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628049881236638*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "24", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "27", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.628049884344143*^9, 3.628049892805428*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6280498886539*^9, 3.6280498938901043`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Position", "[", 
+  RowBox[{
+   RowBox[{"Table", "[", 
+    RowBox[{
+     RowBox[{"Expand", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{
+              RowBox[{
+              "MattMRKE7", "\[LeftDoubleBracket]", "33", 
+               "\[RightDoubleBracket]"}], "/.", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+                 RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+                 RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+             "\[Pi]to\[Zeta]"}], "/.", 
+            RowBox[{"u", "\[Rule]", 
+             RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+           RowBox[{
+            RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+            RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"toMRKmaple", "[", "ii", "]"}], "/.", 
+             RowBox[{
+              RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+              RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+            RowBox[{
+             RowBox[{"Subscript", "[", 
+              RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Subscript", "[", 
+              RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+            "\[RuleDelayed]", 
+            RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+        "\[Pi]to\[Zeta]"}], "]"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"ii", ",", "48"}], "}"}]}], "]"}], ",", "0", ",", "1"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.628050000100671*^9, 3.628050014050489*^9}, {
+  3.628050069505274*^9, 3.628050098230111*^9}, {3.62805017963032*^9, 
+  3.62805017985979*^9}, {3.628050253113509*^9, 3.628050253225491*^9}, {
+  3.628050335677116*^9, 3.628050335827073*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"(", "\[NoBreak]", GridBox[{
+     {"45"}
+    },
+    GridBoxAlignment->{
+     "Columns" -> {{Center}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+      "RowsIndexed" -> {}},
+    GridBoxSpacings->{"Columns" -> {
+        Offset[0.27999999999999997`], {
+         Offset[0.7]}, 
+        Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+        Offset[0.2], {
+         Offset[0.4]}, 
+        Offset[0.2]}, "RowsIndexed" -> {}}], "\[NoBreak]", ")"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.62805000951114*^9, 3.6280500147600594`*^9}, 
+   3.6280501107074947`*^9, 3.628050192879382*^9, 3.628050265765374*^9, 
+   3.6280503486196003`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "25", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "25", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "31", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050136447873*^9, 3.628050140221998*^9}, {
+  3.628050417785111*^9, 3.628050478462438*^9}}],
+
+Cell[BoxData[
+ FormBox["d5uvwMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.628050140989518*^9, {3.628050424413838*^9, 3.628050478872045*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.628050140989518*^9, {3.628050424413838*^9, 3.628050479121006*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "26", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "26", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "32", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6280501486306343`*^9, 3.628050151669861*^9}, {
+  3.628050485670492*^9, 3.628050489366089*^9}}],
+
+Cell[BoxData[
+ FormBox["d5vwuMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.628050152370411*^9, {3.628050486974266*^9, 3.6280504901469307`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{
+  3.628050152370411*^9, {3.628050486974266*^9, 3.628050490359077*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "27", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "27", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "33", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050155198748*^9, 3.628050160685731*^9}, {
+  3.628050491988964*^9, 3.628050494261711*^9}}],
+
+Cell[BoxData[
+ FormBox["d5wuvMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050161406851*^9, 3.628050495240774*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050161406851*^9, 3.628050495508987*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "28", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "28", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "37", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050165501012*^9, 3.628050202588406*^9}, {
+  3.628050496943447*^9, 3.628050504205441*^9}}],
+
+Cell[BoxData[
+ FormBox["d5uwvMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.62805017322012*^9, 3.628050203909647*^9, 
+  3.628050504910308*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.62805017322012*^9, 3.628050203909647*^9, 
+  3.628050505198386*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "29", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "29", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "38", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050219811369*^9, 3.628050225767469*^9}, {
+  3.628050514402783*^9, 3.628050518346595*^9}}],
+
+Cell[BoxData[
+ FormBox["d5vuwMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.62805022654832*^9, 3.628050519427052*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.62805022654832*^9, 3.6280505196720343`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "30", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "30", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "39", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050236336362*^9, 3.6280502420313883`*^9}, {
+  3.628050521329488*^9, 3.6280505247415247`*^9}}],
+
+Cell[BoxData[
+ FormBox["d5wvuMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050242843151*^9, 3.6280505251189404`*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050242843151*^9, 3.6280505253896217`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "31", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "31", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "43", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050247272345*^9, 3.628050248087747*^9}, {
+  3.628050290336793*^9, 3.6280502939102716`*^9}, {3.62805052735914*^9, 
+  3.628050529362227*^9}}],
+
+Cell[BoxData[
+ FormBox["d6uvwMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050295240131*^9, 3.6280505297957687`*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050295240131*^9, 3.628050530079792*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "32", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "32", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "44", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.628050297703713*^9, 3.6280503166904917`*^9}, {
+  3.628050531209115*^9, 3.628050533880176*^9}}],
+
+Cell[BoxData[
+ FormBox["d6vwuMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050317362835*^9, 3.628050534472962*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050317362835*^9, 3.628050534724497*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"entries", "[", 
+  RowBox[{"[", "33", "]"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "33", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "45", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6280503191652737`*^9, 3.628050321074749*^9}, {
+  3.628050536165161*^9, 3.628050538649794*^9}}],
+
+Cell[BoxData[
+ FormBox["d6wuvMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050321804864*^9, 3.628050539033538*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628050321804864*^9, 3.628050539321876*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "33", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "45", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.628050324881968*^9, 3.628050356261807*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.628050328563754*^9, 3.6280503573879747`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"coproduct", "[", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"6", ",", "1"}], "}"}], ",", 
+      RowBox[{"E7", "[", "32", "]"}]}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"u", ",", "v"}], "]"}]}], ")"}], "-", 
+  RowBox[{"coproduct", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"6", ",", "1"}], "}"}], ",", 
+    RowBox[{"E7", "[", "34", "]"}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.628050564853429*^9, 3.628050662690221*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.628050602097982*^9, 3.628050663558599*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"E7", "[", "37", "]"}], ",", 
+    RowBox[{"E7", "[", "38", "]"}], ",", 
+    RowBox[{"E7", "[", "39", "]"}]}], "}"}], "/.", 
+  RowBox[{"exchange", "[", 
+   RowBox[{"u", ",", "v"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.628051134790797*^9, 3.628051158584457*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"E7", "(", "41", ")"}], ",", 
+    RowBox[{"E7", "(", "40", ")"}], ",", 
+    RowBox[{"E7", "(", "42", ")"}]}], "}"}], TraditionalForm]], "Output",
+ CellChangeTimes->{{3.628051150576585*^9, 3.628051158992523*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"D4uwvMRK", "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "22", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.628051769417336*^9, 3.6280519412349977`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.62805178945373*^9, 3.628051941866033*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"entries", "\[LeftDoubleBracket]", "22", 
+  "\[RightDoubleBracket]"}]], "Input",
+ CellChangeTimes->{{3.628051963307407*^9, 3.628051969790839*^9}}],
+
+Cell[BoxData[
+ FormBox["d4uwvMRK", TraditionalForm]], "Output",
+ CellChangeTimes->{3.628051970525193*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{
+          "MattMRKE7", "\[LeftDoubleBracket]", "22", 
+           "\[RightDoubleBracket]"}], "/.", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"lm", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}], ",", 
+            RowBox[{
+             RowBox[{"lp", "[", "word__", "]"}], "\[RuleDelayed]", 
+             RowBox[{"SVHPL", "[", "word", "]"}]}]}], "}"}]}], "/.", 
+         "\[Pi]to\[Zeta]"}], "/.", 
+        RowBox[{"u", "\[Rule]", 
+         RowBox[{"1", "-", "\[Xi]"}]}]}], "/.", 
+       RowBox[{
+        RowBox[{"Zeta", "[", "x_", "]"}], "\[RuleDelayed]", 
+        RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "22", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], ")"}]}], "/.", "toLogs"}], "/.",
+    "\[Pi]to\[Zeta]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.6280520806468363`*^9, 3.6280520916225843`*^9}, {
+  3.6280521458402557`*^9, 3.628052149535955*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.62805208145129*^9, 3.628052092403995*^9}, 
+   3.628052149883894*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Do", "[", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"MRKtemp", "[", 
+     RowBox[{
+      RowBox[{"E7", "[", "ii", "]"}], ",", 
+      RowBox[{"u", "\[Rule]", "1"}]}], "]"}], "=", 
+    RowBox[{"Expand", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"toMRKmaple", "[", "ii", "]"}], "/.", 
+         RowBox[{
+          RowBox[{"z", "[", "x_", "]"}], "\[RuleDelayed]", 
+          RowBox[{"\[Zeta]", "[", "x", "]"}]}]}], "/.", 
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"\[Xi]", ",", "u"}], "]"}], "\[Rule]", "\[Xi]"}]}], "/.", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"Subscript", "[", 
+          RowBox[{"SVHPL", ",", "u"}], "]"}], "[", "x__", "]"}], 
+        "\[RuleDelayed]", 
+        RowBox[{"SVHPL", "[", "x", "]"}]}]}], "/.", "toLogs"}], "]"}]}], ",", 
+   
+   RowBox[{"{", 
+    RowBox[{"ii", ",", "149"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.628052851451721*^9, 3.62805287680105*^9}, {
+  3.6280529512501183`*^9, 3.628052984773967*^9}}],
+
+Cell[BoxData[
+ RowBox[{"Save", "[", 
+  RowBox[{
+  "\"\<weight_7_MRK_limits_irreducible_functions.dat\>\"", ",", "MRKtemp"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.6280529879135513`*^9, 3.62805301906374*^9}}]
+},
+WindowSize->{1092, 686},
+WindowMargins->{{Automatic, 7}, {Automatic, 0}},
+ShowSelection->True,
+FrontEndVersion->"8.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (November 6, \
+2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[557, 20, 174, 3, 27, "Input"],
+Cell[734, 25, 117, 2, 27, "Input"],
+Cell[854, 29, 140, 2, 27, "Input"],
+Cell[997, 33, 370, 7, 27, "Input"],
+Cell[1370, 42, 368, 7, 27, "Input"],
+Cell[1741, 51, 365, 7, 27, "Input"],
+Cell[2109, 60, 582, 17, 27, "Input"],
+Cell[2694, 79, 597, 14, 27, "Input"],
+Cell[3294, 95, 1396, 34, 103, "Input"],
+Cell[4693, 131, 129, 2, 27, "Input"],
+Cell[4825, 135, 2498, 36, 163, "Input"],
+Cell[CellGroupData[{
+Cell[7348, 175, 1807, 39, 43, "Input"],
+Cell[9158, 216, 1875, 27, 43, "Output"]
+}, Open  ]],
+Cell[11048, 246, 222, 4, 27, "Input"],
+Cell[11273, 252, 433, 12, 27, "Input"],
+Cell[11709, 266, 195, 4, 27, "Input"],
+Cell[11907, 272, 447, 12, 27, "Input"],
+Cell[12357, 286, 1152, 31, 103, "Input"],
+Cell[13512, 319, 200, 4, 27, "Input"],
+Cell[13715, 325, 3224, 46, 223, "Input"],
+Cell[CellGroupData[{
+Cell[16964, 375, 2138, 57, 73, "Input"],
+Cell[19105, 434, 1994, 29, 43, "Output"]
+}, Open  ]],
+Cell[21114, 466, 5104, 123, 208, "Input"],
+Cell[CellGroupData[{
+Cell[26243, 593, 1771, 47, 58, "Input"],
+Cell[28017, 642, 197, 4, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[28251, 651, 1619, 45, 58, "Input"],
+Cell[29873, 698, 98, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30008, 705, 1619, 45, 58, "Input"],
+Cell[31630, 752, 122, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[31789, 759, 2169, 55, 103, "Input"],
+Cell[33961, 816, 700, 18, 29, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[34698, 839, 1755, 48, 73, "Input"],
+Cell[36456, 889, 154, 3, 27, "Output"],
+Cell[36613, 894, 147, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[36797, 902, 1757, 48, 73, "Input"],
+Cell[38557, 952, 156, 3, 27, "Output"],
+Cell[38716, 957, 147, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38900, 965, 1755, 48, 73, "Input"],
+Cell[40658, 1015, 127, 2, 27, "Output"],
+Cell[40788, 1019, 120, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[40945, 1026, 1755, 48, 73, "Input"],
+Cell[42703, 1076, 151, 3, 27, "Output"],
+Cell[42857, 1081, 144, 3, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[43038, 1089, 1755, 48, 73, "Input"],
+Cell[44796, 1139, 126, 2, 27, "Output"],
+Cell[44925, 1143, 121, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[45083, 1150, 1759, 48, 73, "Input"],
+Cell[46845, 1200, 129, 2, 27, "Output"],
+Cell[46977, 1204, 122, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[47136, 1211, 1805, 49, 73, "Input"],
+Cell[48944, 1262, 129, 2, 27, "Output"],
+Cell[49076, 1266, 120, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[49233, 1273, 1757, 48, 73, "Input"],
+Cell[50993, 1323, 127, 2, 27, "Output"],
+Cell[51123, 1327, 120, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[51280, 1334, 1757, 48, 73, "Input"],
+Cell[53040, 1384, 127, 2, 27, "Output"],
+Cell[53170, 1388, 120, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53327, 1395, 1619, 45, 58, "Input"],
+Cell[54949, 1442, 124, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55110, 1449, 522, 16, 27, "Input"],
+Cell[55635, 1467, 122, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[55794, 1474, 328, 9, 27, "Input"],
+Cell[56125, 1485, 275, 7, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[56437, 1497, 1521, 42, 58, "Input"],
+Cell[57961, 1541, 121, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58119, 1548, 169, 3, 27, "Input"],
+Cell[58291, 1553, 105, 2, 27, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[58433, 1560, 1674, 46, 58, "Input"],
+Cell[60110, 1608, 147, 3, 27, "Output"]
+}, Open  ]],
+Cell[60272, 1614, 1043, 30, 43, "Input"],
+Cell[61318, 1646, 211, 5, 27, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

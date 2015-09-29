@@ -1,0 +1,1221 @@
+LyndRedReplacements2Ew7G[{var1_, var2_}, var_] := LyndRedReplacements2Ew7G[{var1, var2}, var] = 
+    <|G[{var1, var1, var1, var1, var1, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var1, var1, var1, var1, var2}, var] - 
+       6*G[{var1, var1, var1, var1, var1, var1, var2}, var], 
+     G[{var1, var1, var1, var1, var2, var1, var1}, var] -> 
+      (G[{var1}, var]^2*G[{var1, var1, var1, var1, var2}, var])/2 - 
+       5*G[{var1}, var]*G[{var1, var1, var1, var1, var1, var2}, var] + 
+       15*G[{var1, var1, var1, var1, var1, var1, var2}, var], 
+     G[{var1, var1, var1, var1, var2, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       5*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       G[{var1, var1, var1, var1, var2, var1, var2}, var], 
+     G[{var1, var1, var1, var2, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^3*G[{var1, var1, var1, var2}, var])/6 - 
+       2*G[{var1}, var]^2*G[{var1, var1, var1, var1, var2}, var] + 
+       10*G[{var1}, var]*G[{var1, var1, var1, var1, var1, var2}, var] - 
+       20*G[{var1, var1, var1, var1, var1, var1, var2}, var], 
+     G[{var1, var1, var1, var2, var1, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       2*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var1, var1, var2, var2, var1, var1}, var] -> 
+      (G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 - 
+       4*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       10*G[{var1, var1, var1, var1, var1, var2, var2}, var] + 
+       4*G[{var1, var1, var1, var1, var2, var1, var2}, var] + 
+       G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var1, var1, var2, var2, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       4*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var], 
+     G[{var1, var1, var2, var1, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^4*G[{var1, var1, var2}, var])/24 - 
+       (G[{var1}, var]^3*G[{var1, var1, var1, var2}, var])/2 + 
+       3*G[{var1}, var]^2*G[{var1, var1, var1, var1, var2}, var] - 
+       10*G[{var1}, var]*G[{var1, var1, var1, var1, var1, var2}, var] + 
+       15*G[{var1, var1, var1, var1, var1, var1, var2}, var], 
+     G[{var1, var1, var2, var1, var1, var1, var2}, var] -> 
+      G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       20*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       10*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var1, var2, var1, var1, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var1, var2}, var]^2)/2 - 
+       3*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       6*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       3*G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       60*G[{var1, var1, var1, var1, var1, var2, var2}, var] + 
+       30*G[{var1, var1, var1, var1, var2, var1, var2}, var] + 
+       9*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var1, var2, var1, var2, var1, var1}, var] -> 
+      -(G[{var1}, var]*G[{var1, var1, var2}, var]^2) + 
+       3*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       12*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       3*G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       60*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       24*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       6*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var1, var2, var1, var2, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       3*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var1, var2, var2, var1, var1, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var1, var2}, var]^2)/2 - 
+       G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       (G[{var1}, var]^3*G[{var1, var1, var2, var2}, var])/6 - 
+       (3*G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 - 
+       (G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       10*G[{var1, var1, var1, var1, var1, var2, var2}, var] + 
+       4*G[{var1, var1, var1, var1, var2, var1, var2}, var] + 
+       G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var1, var2, var2, var1, var1, var2}, var] -> 
+      G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       18*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       9*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       3*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       3*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var1, var2, var2, var1, var2, var1}, var] -> 
+      -2*G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       36*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       18*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       3*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       6*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var1, var2, var2, var2, var1, var1}, var] -> 
+      G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 - 
+       3*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       12*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       6*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var1, var1, var2, var2}, var], 
+     G[{var1, var1, var2, var2, var2, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       3*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^5*G[{var1, var2}, var])/120 - 
+       (G[{var1}, var]^4*G[{var1, var1, var2}, var])/12 + 
+       (G[{var1}, var]^3*G[{var1, var1, var1, var2}, var])/2 - 
+       2*G[{var1}, var]^2*G[{var1, var1, var1, var1, var2}, var] + 
+       5*G[{var1}, var]*G[{var1, var1, var1, var1, var1, var2}, var] - 
+       6*G[{var1, var1, var1, var1, var1, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var1, var1, var2}, var] -> 
+      -2*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       30*G[{var1, var1, var1, var1, var1, var2, var2}, var] + 
+       15*G[{var1, var1, var1, var1, var2, var1, var2}, var] + 
+       5*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var1, var2, var1}, var] -> 
+      -(G[{var1}, var]*G[{var1, var1, var2}, var]^2) + 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       6*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       4*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       2*G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       80*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       40*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       12*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var1, var2, var2}, var] -> 
+      G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] - 
+       12*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       5*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       2*G[{var1, var1, var2, var1, var1, var2, var2}, var], 
+     G[{var1, var2, var1, var1, var2, var1, var1}, var] -> 
+      (G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 + 
+       2*G[{var1}, var]*G[{var1, var1, var2}, var]^2 - 
+       3*G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] - 6*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] + 6*G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, 
+         var] - 3*G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       60*G[{var1, var1, var1, var1, var1, var2, var2}, var] + 
+       30*G[{var1, var1, var1, var1, var2, var1, var2}, var] + 
+       9*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var2, var1, var2}, var] -> 
+      G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] - 
+       6*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       6*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       4*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var2, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       3*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] - 
+       G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] - 
+       9*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       4*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       36*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       21*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       9*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       8*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       4*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var1, var2, var2, var2}, var] -> 
+      G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] - 
+       12*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       5*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var2, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^3*G[{var1, var2}, var]^2)/12 - 
+       G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2}, var]^2 + 
+       3*G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] + 2*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] - (G[{var1}, var]^3*G[{var1, var1, var2, var2}, var])/3 - 
+       4*G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       6*G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var] + 
+       2*G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var] - 
+       12*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       3*G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       2*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var1, var2, var1, var2, var1, var1, var2}, var] -> 
+      (G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 - 
+       2*G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       6*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] - 
+       3*G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       72*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       42*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       18*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       16*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       7*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var2, var1, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var2}, var]^3)/6 - G[{var1, var2}, var]^2*
+        G[{var1, var1, var2}, var] - 2*G[{var1}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] + 4*G[{var1, var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] + 12*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] + 4*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] + 12*G[{var1}, var]*
+        G[{var1, var1, var1, var2, var2, var2}, var] + 
+       4*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       144*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       72*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       24*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       24*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       8*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var2, var2, var1, var1}, var] -> 
+      -(G[{var1}, var]*G[{var1, var2}, var]^3)/6 + 
+       (G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 - 
+       2*G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       3*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] - 
+       G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       6*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       2*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       2*G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       36*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       18*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       3*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       6*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var1, var2, var2, var1, var2}, var] -> 
+      -6*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       72*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       24*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       8*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       6*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       4*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var1, var2, var2, var2, var1}, var] -> 
+      4*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] - 
+       G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       48*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       16*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       4*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       4*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       3*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var2, var1, var1, var1, var1}, var] -> 
+      -(G[{var1}, var]^3*G[{var1, var2}, var]^2)/12 + 
+       (G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 + 
+       (G[{var1}, var]^4*G[{var1, var2, var2}, var])/24 - 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 - 
+       (G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       4*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       5*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       G[{var1, var1, var1, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var2, var1, var1, var1, var2}, var] -> 
+      -(G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 + 
+       G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       4*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] + 
+       2*G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] - 
+       24*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       15*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       7*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       6*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       3*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var2, var1, var1, var2, var1}, var] -> 
+      -(G[{var1}, var]*G[{var1, var2}, var]^3)/6 + G[{var1, var2}, var]^2*
+        G[{var1, var1, var2}, var] + G[{var1}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] - 3*G[{var1, var2, var2}, var]*
+        G[{var1, var1, var1, var2}, var] - 6*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] - 3*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] - 3*G[{var1}, var]*
+        G[{var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       36*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       21*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       9*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       8*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       4*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var2, var1, var1, var2, var2}, var] -> 
+      G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       3*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       18*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       6*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       3*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       3*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var2, var1, var2, var1, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var2}, var]^3)/6 - 
+       (G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 + 
+       (G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 - 
+       2*G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] + 3*G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] + 2*G[{var1}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] + G[{var1, var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] - 3*G[{var1}, var]^2*
+        G[{var1, var1, var2, var2, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 - 
+       6*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       2*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       3*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var1, var2, var2, var1, var2, var1, var2}, var] -> 
+      (G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 - 
+       2*G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       12*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] - 
+       3*G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       144*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       48*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       20*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       18*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       7*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var2, var1, var2, var2, var1}, var] -> 
+      -(G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 + 
+       (G[{var1}, var]*G[{var1, var2, var2}, var]^2)/2 - 
+       6*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       3*G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       6*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       3*G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       108*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       36*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       12*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       12*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       6*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var2, var2, var1, var1, var1}, var] -> 
+      -(G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 + 
+       G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, var] - 
+       G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       (G[{var1}, var]^3*G[{var1, var2, var2, var2}, var])/6 + 
+       G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] + 
+       2*G[{var1}, var]^2*G[{var1, var1, var2, var2, var2}, var] + 
+       G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var] + 
+       3*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var], 
+     G[{var1, var2, var2, var2, var1, var1, var2}, var] -> 
+      -(G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 + 
+       G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       3*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       2*G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       60*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       20*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       8*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       7*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       3*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var2, var2, var1, var2, var1}, var] -> 
+      (G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 - 
+       G[{var1}, var]*G[{var1, var2, var2}, var]^2 + 
+       2*G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       2*G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       2*G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       4*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       2*G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       48*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       16*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       4*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       4*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       3*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var1, var2, var2, var2, var1, var2, var2}, var] -> 
+      G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       20*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       10*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       4*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var1, var2, var2, var2, var2, var1, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var2, var2}, var]^2)/2 - 
+       G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var2, var2, var2, var2}, var])/2 - 
+       3*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var1, var2, var2, var2, var2, var1, var2}, var] -> 
+      -2*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] + 
+       30*G[{var1, var1, var2, var2, var2, var2, var2}, var] + 
+       15*G[{var1, var2, var1, var2, var2, var2, var2}, var] + 
+       5*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var1, var2, var2, var2, var2, var2, var1}, var] -> 
+      G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var2, var2, var2, var2, var2}, var] - 
+       12*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       6*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       2*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var1, var1, var1, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^6*G[{var2}, var])/720 - 
+       (G[{var1}, var]^5*G[{var1, var2}, var])/120 + 
+       (G[{var1}, var]^4*G[{var1, var1, var2}, var])/24 - 
+       (G[{var1}, var]^3*G[{var1, var1, var1, var2}, var])/6 + 
+       (G[{var1}, var]^2*G[{var1, var1, var1, var1, var2}, var])/2 - 
+       G[{var1}, var]*G[{var1, var1, var1, var1, var1, var2}, var] + 
+       G[{var1, var1, var1, var1, var1, var1, var2}, var], 
+     G[{var2, var1, var1, var1, var1, var1, var2}, var] -> 
+      G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       G[{var2}, var]*G[{var1, var1, var1, var1, var1, var2}, var] - 
+       12*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       6*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       2*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var2, var1, var1, var1, var1, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var1, var2}, var]^2)/2 - 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       3*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       4*G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] - 
+       5*G[{var2}, var]*G[{var1, var1, var1, var1, var1, var2}, var] + 
+       30*G[{var1, var1, var1, var1, var1, var2, var2}, var] + 
+       15*G[{var1, var1, var1, var1, var2, var1, var2}, var] + 
+       5*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var2, var1, var1, var1, var1, var2, var2}, var] -> 
+      -(G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var]) + 
+       G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       9*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       4*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       G[{var1, var1, var2, var1, var1, var2, var2}, var], 
+     G[{var2, var1, var1, var1, var2, var1, var1}, var] -> 
+      -(G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 - 
+       G[{var1}, var]*G[{var1, var1, var2}, var]^2 + 
+       (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var1, var2}, var])/2 + 
+       3*G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] + 3*G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] - 4*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var1, var1, var2}, var] - 6*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var1, var2}, var] + 2*G[{var1}, var]^2*
+        G[{var1, var1, var1, var2, var2}, var] + G[{var1}, var]^2*
+        G[{var1, var1, var2, var1, var2}, var] + 10*G[{var2}, var]*
+        G[{var1, var1, var1, var1, var1, var2}, var] - 
+       4*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       2*G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       20*G[{var1, var1, var1, var1, var1, var2, var2}, var] - 
+       10*G[{var1, var1, var1, var1, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var2, var1, var1, var1, var2, var1, var2}, var] -> 
+      -(G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var]) + 
+       G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       4*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       4*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       4*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       3*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var1, var1, var2, var2, var1}, var] -> 
+      -(G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, 
+          var]) + G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] + 3*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] + G[{var1, var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] - 4*G[{var2}, var]*
+        G[{var1, var1, var1, var1, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       6*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       3*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       24*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       15*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       7*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       6*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       3*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var1, var1, var2, var2, var2}, var] -> 
+      -(G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var]) + 
+       G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       8*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       4*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var2, var1, var1, var2, var1, var1, var1}, var] -> 
+      -(G[{var1}, var]^3*G[{var1, var2}, var]^2)/12 + 
+       (G[{var1}, var]^3*G[{var2}, var]*G[{var1, var1, var2}, var])/6 + 
+       G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var] + 
+       (G[{var1}, var]*G[{var1, var1, var2}, var]^2)/2 - 
+       (3*G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var1, var2}, var])/
+        2 - 3*G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] - G[{var1, var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       6*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var1, var2}, 
+         var] + 4*G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, 
+         var] - 3*G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 - 
+       10*G[{var2}, var]*G[{var1, var1, var1, var1, var1, var2}, var] + 
+       6*G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       3*G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       G[{var1, var1, var1, var2, var1, var1, var2}, var], 
+     G[{var2, var1, var1, var2, var1, var1, var2}, var] -> 
+      -(G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 + 
+       (G[{var2}, var]*G[{var1, var1, var2}, var]^2)/2 + 
+       6*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] + 
+       3*G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] - 
+       6*G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       3*G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       36*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       24*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       12*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       12*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       6*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var1, var2, var1, var2, var1}, var] -> 
+      -(G[{var1}, var]*G[{var1, var2}, var]^3)/6 + G[{var1, var2}, var]^2*
+        G[{var1, var1, var2}, var] - G[{var2}, var]*
+        G[{var1, var1, var2}, var]^2 + 2*G[{var1}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] - 12*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] + G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var1, var2, var1, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       12*G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       3*G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       12*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       6*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       72*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       42*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       18*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       16*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       7*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var1, var2, var1, var2, var2}, var] -> 
+      G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       3*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var1, var2, var2, var1, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var2}, var]^3)/6 - 
+       (G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 + 
+       (G[{var2}, var]*G[{var1, var1, var2}, var]^2)/2 + 
+       (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var2, var2}, var])/2 - 
+       3*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var2, var2}, 
+         var] + 3*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, 
+         var] - G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var1, 
+          var2}, var] + G[{var1, var2}, var]*G[{var1, var1, var2, var1, 
+          var2}, var] - (3*G[{var1}, var]^2*G[{var1, var1, var2, var2, var2}, 
+          var])/2 - (G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var])/
+        2 + 3*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       18*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       9*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       3*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       3*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var1, var2, var2, var1, var2}, var] -> 
+      6*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] - 
+       G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       72*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       24*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       10*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       9*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       4*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var1, var2, var2, var2, var1}, var] -> 
+      G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var2, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       3*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       4*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       60*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       20*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       8*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       7*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       3*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var1, var2, var2, var2, var2}, var] -> 
+      G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       5*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       G[{var1, var2, var1, var2, var2, var2, var2}, var], 
+     G[{var2, var1, var2, var1, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^4*G[{var2}, var]*G[{var1, var2}, var])/24 + 
+       (G[{var1}, var]^3*G[{var1, var2}, var]^2)/12 - 
+       (G[{var1}, var]^3*G[{var2}, var]*G[{var1, var1, var2}, var])/3 - 
+       (G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 - 
+       (G[{var1}, var]^4*G[{var1, var2, var2}, var])/12 + 
+       (3*G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var1, var2}, var])/
+        2 + G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] + (G[{var1}, var]^3*G[{var1, var1, var2, var2}, var])/3 - 
+       4*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var1, var2}, 
+         var] - G[{var1, var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       5*G[{var2}, var]*G[{var1, var1, var1, var1, var1, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       G[{var1, var1, var1, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var2, var1, var1, var1, var2}, var] -> 
+      (G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var1, var2}, var]^2 + 
+       G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       2*G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       2*G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] - 
+       2*G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       4*G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       2*G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       4*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       4*G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       4*G[{var1, var1, var2, var1, var1, var2, var2}, var] + 
+       3*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var2, var1, var1, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var1, var2}, var]^3)/6 + G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2}, var] - 
+       G[{var1, var2}, var]^2*G[{var1, var1, var2}, var] + 
+       2*G[{var2}, var]*G[{var1, var1, var2}, var]^2 - 
+       2*G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] - 3*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2}, var] + 6*G[{var1, var2, var2}, var]*
+        G[{var1, var1, var1, var2}, var] - 4*G[{var1, var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] - 6*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] + 6*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2, var2}, var] - 3*G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       3*G[{var1, var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       12*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       6*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       2*G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       6*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       6*G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       4*G[{var1, var1, var2, var1, var1, var2, var2}, var] - 
+       4*G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var2, var1, var1, var2, var2}, var] -> 
+      G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       2*G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       3*G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] - 
+       9*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       4*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       3*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       3*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var2, var1, var2, var1, var1}, var] -> 
+      (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2}, var]^2)/4 - 
+       (G[{var1}, var]*G[{var1, var2}, var]^3)/6 - 2*G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2}, var] + 
+       (G[{var1, var2}, var]^2*G[{var1, var1, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var1, var2}, var]^2 - 
+       G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var] + 
+       4*G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] + 3*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2}, var] - 6*G[{var1, var2, var2}, var]*
+        G[{var1, var1, var1, var2}, var] - G[{var1}, var]^2*G[{var2}, var]*
+        G[{var1, var1, var2, var2}, var] - 2*G[{var1}, var]*
+        G[{var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       2*G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       12*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var2, var2}, 
+         var] + 4*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] - G[{var1, var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] + 6*G[{var1}, var]^2*
+        G[{var1, var1, var2, var2, var2}, var] + 2*G[{var1}, var]^2*
+        G[{var1, var2, var1, var2, var2}, var] - 12*G[{var2}, var]*
+        G[{var1, var1, var1, var1, var2, var2}, var] - 
+       3*G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       12*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       4*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1, var1, var2, var1, var2, var1, var2}, var], 
+     G[{var2, var1, var2, var1, var2, var1, var2}, var] -> 
+      (G[{var2}, var]*G[{var1, var2}, var]^3)/6 - G[{var1, var2}, var]^2*
+        G[{var1, var2, var2}, var] - 2*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] + 4*G[{var1, var2, var2}, var]*
+        G[{var1, var1, var2, var2}, var] - 12*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2, var2}, var] + 4*G[{var1, var2}, var]*
+        G[{var1, var2, var1, var2, var2}, var] + 12*G[{var2}, var]*
+        G[{var1, var1, var1, var2, var2, var2}, var] + 
+       4*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       144*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       48*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       24*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       24*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       8*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var2, var1, var2, var2, var1}, var] -> 
+      -(G[{var2}, var]*G[{var1, var2}, var]^3)/6 + G[{var1, var2}, var]^2*
+        G[{var1, var2, var2}, var] - G[{var1}, var]*
+        G[{var1, var2, var2}, var]^2 + 6*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2, var2}, var] + G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       6*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       2*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       2*G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       12*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       3*G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       144*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       48*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       20*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       18*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       7*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var2, var1, var2, var2, var2}, var] -> 
+      G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       4*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       2*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var1, var2, var2, var1, var1, var1}, var] -> 
+      -(G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2}, var]^2)/4 + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2}, var] + (G[{var1}, var]^3*G[{var2}, var]*
+         G[{var1, var2, var2}, var])/6 + G[{var1}, var]^2*
+        G[{var1, var2}, var]*G[{var1, var2, var2}, var] - 
+       2*G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] - G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var1, var2}, var] + 2*G[{var1, var2, var2}, var]*
+        G[{var1, var1, var1, var2}, var] + G[{var1}, var]*
+        G[{var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       (G[{var1}, var]^3*G[{var1, var2, var2, var2}, var])/2 - 
+       3*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var2, var2}, 
+         var] - G[{var1, var2}, var]*G[{var1, var1, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var1, var2}, var] - 
+       3*G[{var1}, var]^2*G[{var1, var1, var2, var2, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       4*G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var], 
+     G[{var2, var1, var2, var2, var1, var1, var2}, var] -> 
+      -(G[{var2}, var]*G[{var1, var2}, var]^3)/6 + G[{var1, var2}, var]^2*
+        G[{var1, var2, var2}, var] + G[{var2}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] - 3*G[{var1, var1, var2}, var]*
+        G[{var1, var2, var2, var2}, var] + 3*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2, var2}, var] - 3*G[{var1, var2}, var]*
+        G[{var1, var2, var1, var2, var2}, var] - 3*G[{var2}, var]*
+        G[{var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       72*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       24*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       10*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       9*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       4*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var2, var2, var1, var2, var1}, var] -> 
+      (G[{var2}, var]*G[{var1, var2}, var]^3)/6 + G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2}, var] - 
+       G[{var1, var2}, var]^2*G[{var1, var2, var2}, var] - 
+       2*G[{var2}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] + 2*G[{var1}, var]*G[{var1, var2, var2}, var]^2 + 
+       2*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] - 4*G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] - 3*G[{var1}, var]*G[{var1, var2}, var]*
+        G[{var1, var2, var2, var2}, var] + 6*G[{var1, var1, var2}, var]*
+        G[{var1, var2, var2, var2}, var] - 6*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var2, var2, var2}, var] - 3*G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       3*G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       6*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       2*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       72*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       24*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       8*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       6*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       4*G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var1, var2, var2, var1, var2, var2}, var] -> 
+      (G[{var2}, var]*G[{var1, var2, var2}, var]^2)/2 - 
+       3*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       6*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       3*G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       60*G[{var1, var1, var2, var2, var2, var2, var2}, var] + 
+       30*G[{var1, var2, var1, var2, var2, var2, var2}, var] + 
+       9*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var1, var2, var2, var2, var1, var1}, var] -> 
+      -(G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+         G[{var1, var2, var2}, var]) + G[{var2}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] - G[{var1}, var]*
+        G[{var1, var2, var2}, var]^2 - G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2, var2}, var] + 2*G[{var1, var2, var2}, var]*
+        G[{var1, var1, var2, var2}, var] + (G[{var1}, var]^2*G[{var2}, var]*
+         G[{var1, var2, var2, var2}, var])/2 + 3*G[{var1}, var]*
+        G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       3*G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       4*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var2, var2}, 
+         var] - G[{var1, var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       2*G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var1, var2, var2}, 
+         var] - 2*G[{var1}, var]^2*G[{var1, var2, var2, var2, var2}, var] + 
+       3*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       4*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       2*G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var2, var1, var2, var2, var2, var1, var2}, var] -> 
+      -(G[{var2}, var]*G[{var1, var2, var2}, var]^2) + 
+       G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       6*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] + 
+       4*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       2*G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       80*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       40*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       12*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var1, var2, var2, var2, var2, var1}, var] -> 
+      (G[{var2}, var]*G[{var1, var2, var2}, var]^2)/2 - 
+       G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       3*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var2, var2, var2}, var] + 
+       4*G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] - 
+       5*G[{var1}, var]*G[{var1, var2, var2, var2, var2, var2}, var] + 
+       30*G[{var1, var1, var2, var2, var2, var2, var2}, var] + 
+       15*G[{var1, var2, var1, var2, var2, var2, var2}, var] + 
+       5*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var1, var2, var2, var2, var2, var2}, var] -> 
+      G[{var2}, var]*G[{var1, var2, var2, var2, var2, var2}, var] - 
+       6*G[{var1, var2, var2, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^5*G[{var2}, var]^2)/240 - 
+       (G[{var1}, var]^4*G[{var2}, var]*G[{var1, var2}, var])/24 + 
+       (G[{var1}, var]^3*G[{var2}, var]*G[{var1, var1, var2}, var])/6 + 
+       (G[{var1}, var]^4*G[{var1, var2, var2}, var])/24 - 
+       (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var1, var2}, var])/2 - 
+       (G[{var1}, var]^3*G[{var1, var1, var2, var2}, var])/6 + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var1, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var1, var1, var1, var1, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       G[{var1, var1, var1, var1, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var1, var1, var2}, var] -> 
+      (G[{var2}, var]*G[{var1, var1, var2}, var]^2)/2 - 
+       G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       (G[{var2}, var]^2*G[{var1, var1, var1, var1, var2}, var])/2 + 
+       9*G[{var1, var1, var1, var1, var2, var2, var2}, var] + 
+       4*G[{var1, var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var] + 
+       G[{var1, var1, var2, var1, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var1, var2, var1}, var] -> 
+      -(G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+         G[{var1, var1, var2}, var]) - G[{var2}, var]*
+        G[{var1, var1, var2}, var]^2 + G[{var1}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] + (G[{var1}, var]*G[{var2}, var]^2*
+         G[{var1, var1, var1, var2}, var])/2 + 3*G[{var2}, var]*
+        G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       3*G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       2*G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       2*G[{var2}, var]^2*G[{var1, var1, var1, var1, var2}, var] + 
+       4*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var2, var2}, 
+         var] + 2*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] - 4*G[{var2}, var]*
+        G[{var1, var1, var1, var1, var2, var2}, var] - 
+       2*G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       6*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       3*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       12*G[{var1, var1, var1, var1, var2, var2, var2}, var] - 
+       5*G[{var1, var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var1, var2, var2, var1, var2}, var] - 
+       2*G[{var1, var1, var2, var1, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var1, var2, var2}, var] -> 
+      -(G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, 
+          var]) + G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] + (G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 + 
+       6*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       3*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       12*G[{var1, var1, var1, var2, var2, var2, var2}, var] - 
+       6*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var2, var1, var1}, var] -> 
+      -(G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2}, var]^2)/4 + 
+       (G[{var1}, var]^2*G[{var2}, var]^2*G[{var1, var1, var2}, var])/4 + 
+       2*G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2}, var] + 
+       (G[{var2}, var]*G[{var1, var1, var2}, var]^2)/2 + 
+       (G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 - 
+       2*G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] - (3*G[{var1}, var]*G[{var2}, var]^2*
+         G[{var1, var1, var1, var2}, var])/2 - 3*G[{var2}, var]*
+        G[{var1, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       3*G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] - 
+       G[{var1, var1, var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       3*G[{var2}, var]^2*G[{var1, var1, var1, var1, var2}, var] - 
+       6*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var2, var2}, 
+         var] - 3*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var1, var2, var1, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 - 
+       (G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       6*G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] + 
+       3*G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] + 
+       9*G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       4*G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       G[{var1, var1, var2, var1, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var2, var1, var2}, var] -> 
+      -(G[{var2}, var]*G[{var1, var2}, var]^3)/6 + 
+       (G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 + 
+       2*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] - 2*G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] + (G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 - 
+       G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       12*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       6*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       2*G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       3*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       3*G[{var1, var1, var2, var2, var2, var1, var2}, var] + 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var2, var2, var1}, var] -> 
+      (G[{var2}, var]*G[{var1, var2}, var]^3)/6 - 
+       (G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 + 
+       (G[{var1}, var]*G[{var1, var2, var2}, var]^2)/2 + 
+       (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var1, var2, var2}, var])/2 - 
+       (3*G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 - 
+       (G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 - 
+       3*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var2, var2}, 
+         var] - G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var1, var2, 
+          var2}, var] + G[{var1, var2}, var]*G[{var1, var2, var1, var2, 
+          var2}, var] + 3*G[{var2}, var]*G[{var1, var1, var1, var2, var2, 
+          var2}, var] + G[{var2}, var]*G[{var1, var1, var2, var1, var2, 
+          var2}, var] + 18*G[{var1, var1, var1, var2, var2, var2, var2}, 
+         var] + 6*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       3*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       3*G[{var1, var1, var2, var2, var2, var1, var2}, var] - 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var1, var2, var2, var2}, var] -> 
+      (G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 - 
+       4*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       10*G[{var1, var1, var2, var2, var2, var2, var2}, var] + 
+       4*G[{var1, var2, var1, var2, var2, var2, var2}, var] + 
+       G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^3*G[{var2}, var]^2*G[{var1, var2}, var])/12 + 
+       (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2}, var]^2)/4 - 
+       (G[{var1}, var]^2*G[{var2}, var]^2*G[{var1, var1, var2}, var])/2 - 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var1, var2}, var] - (G[{var1}, var]^3*G[{var2}, var]*
+         G[{var1, var2, var2}, var])/3 - 
+       (G[{var1}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 + 
+       G[{var1}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, var] + 
+       (3*G[{var1}, var]*G[{var2}, var]^2*G[{var1, var1, var1, var2}, var])/
+        2 + G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var1, var2}, 
+         var] - G[{var1, var2, var2}, var]*G[{var1, var1, var1, var2}, var] + 
+       G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var2, var2}, var] + 
+       (G[{var1}, var]^3*G[{var1, var2, var2, var2}, var])/2 - 
+       2*G[{var2}, var]^2*G[{var1, var1, var1, var1, var2}, var] + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var1, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var1, var1, var2, var1, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       G[{var1, var1, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var1, var1, var2}, var] -> 
+      (G[{var2}, var]*G[{var1, var2}, var]^3)/6 + 
+       (G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 - 
+       (G[{var1, var2}, var]^2*G[{var1, var2, var2}, var])/2 - 
+       2*G[{var2}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, 
+         var] + 3*G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] - 3*G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var] - 
+       (3*G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] + 
+       12*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       6*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] + 
+       2*G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] - 
+       3*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var1, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2}, var]^2)/4 - 
+       (G[{var2}, var]*G[{var1, var2}, var]^3)/6 - G[{var2}, var]^2*
+        G[{var1, var2}, var]*G[{var1, var1, var2}, var] - 
+       2*G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var2, var2}, var] + (G[{var1, var2}, var]^2*
+         G[{var1, var2, var2}, var])/2 + 4*G[{var2}, var]*
+        G[{var1, var1, var2}, var]*G[{var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var2, var2}, var]^2 - 
+       G[{var1}, var]*G[{var2}, var]^2*G[{var1, var1, var2, var2}, var] - 
+       2*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] + 2*G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, 
+         var] + 3*G[{var1}, var]*G[{var1, var2}, var]*
+        G[{var1, var2, var2, var2}, var] - 6*G[{var1, var1, var2}, var]*
+        G[{var1, var2, var2, var2}, var] + 6*G[{var2}, var]^2*
+        G[{var1, var1, var1, var2, var2}, var] + 2*G[{var2}, var]^2*
+        G[{var1, var1, var2, var1, var2}, var] + 12*G[{var1}, var]*
+        G[{var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       4*G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var1, var2, var2}, 
+         var] - G[{var1, var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       12*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       4*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       12*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       3*G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       G[{var1, var2, var1, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var1, var2, var2}, var] -> 
+      -(G[{var2}, var]*G[{var1, var2, var2}, var]^2) + 
+       3*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       (G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       12*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       3*G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       60*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       24*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       6*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var2, var1, var1}, var] -> 
+      -(G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2}, var]^2)/4 + 
+       (G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 + 
+       (G[{var1}, var]^2*G[{var2}, var]^2*G[{var1, var2, var2}, var])/4 + 
+       2*G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var2, var2}, var] - 2*G[{var2}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] + 
+       (G[{var1}, var]*G[{var1, var2, var2}, var]^2)/2 + 
+       G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       G[{var1, var2, var2}, var]*G[{var1, var1, var2, var2}, var] - 
+       (3*G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2, var2, var2}, var])/
+        2 - 3*G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] + 3*G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] - (3*G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var])/
+        2 - (G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 - 
+       6*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var2, var2}, 
+         var] - 3*G[{var1}, var]*G[{var2}, var]*
+        G[{var1, var2, var1, var2, var2}, var] + 3*G[{var1}, var]^2*
+        G[{var1, var2, var2, var2, var2}, var] - G[{var2}, var]*
+        G[{var1, var1, var2, var2, var1, var2}, var] + 
+       6*G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       3*G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       G[{var1, var1, var2, var2, var1, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var2, var1, var2}, var] -> 
+      (G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 + 
+       2*G[{var2}, var]*G[{var1, var2, var2}, var]^2 - 
+       3*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] - 6*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] - 3*G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var] - 
+       (3*G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       6*G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] + 
+       60*G[{var1, var1, var2, var2, var2, var2, var2}, var] + 
+       30*G[{var1, var2, var1, var2, var2, var2, var2}, var] + 
+       9*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var2, var2, var1}, var] -> 
+      -(G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var2, var2}, var]^2 + 
+       (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2, var2, var2}, var])/2 + 
+       3*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] + 3*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] + 2*G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var] + 
+       G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var] - 
+       4*G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var2, var2, var2}, 
+         var] - 6*G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, 
+         var] - 4*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, 
+         var] - 2*G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, 
+         var] + 10*G[{var1}, var]*G[{var1, var2, var2, var2, var2, var2}, 
+         var] - 20*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       10*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       4*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var1, var2, var2, var2, var2}, var] -> 
+      (G[{var2}, var]^2*G[{var1, var2, var2, var2, var2}, var])/2 - 
+       5*G[{var2}, var]*G[{var1, var2, var2, var2, var2, var2}, var] + 
+       15*G[{var1, var2, var2, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var1, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^4*G[{var2}, var]^3)/144 - 
+       (G[{var1}, var]^3*G[{var2}, var]^2*G[{var1, var2}, var])/12 + 
+       (G[{var1}, var]^2*G[{var2}, var]^2*G[{var1, var1, var2}, var])/4 + 
+       (G[{var1}, var]^3*G[{var2}, var]*G[{var1, var2, var2}, var])/6 - 
+       (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var1, var1, var2}, var])/2 - 
+       (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var1, var2, var2}, var])/2 - 
+       (G[{var1}, var]^3*G[{var1, var2, var2, var2}, var])/6 + 
+       (G[{var2}, var]^2*G[{var1, var1, var1, var1, var2}, var])/2 + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var1, var2, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var1, var1, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var1, var2, var2, var2}, var] + 
+       G[{var1, var1, var1, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var1, var1, var1, var2}, var] -> 
+      -(G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 + 
+       G[{var2}, var]*G[{var1, var1, var2}, var]*G[{var1, var2, var2}, var] + 
+       (G[{var2}, var]^3*G[{var1, var1, var1, var2}, var])/6 - 
+       G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       2*G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var] + 
+       G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var] - 
+       6*G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       3*G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var1, var2}, var] + 
+       8*G[{var1, var1, var1, var2, var2, var2, var2}, var] + 
+       4*G[{var1, var1, var2, var1, var2, var2, var2}, var] + 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var] + 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var2, var2, var2, var1, var1, var2, var1}, var] -> 
+      -(G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2}, var]^2)/4 + 
+       (G[{var1}, var]*G[{var2}, var]^3*G[{var1, var1, var2}, var])/6 + 
+       G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var] + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var2, var2}, var] - 2*G[{var2}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] - 
+       (G[{var2}, var]^3*G[{var1, var1, var1, var2}, var])/2 - 
+       G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       2*G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       3*G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var] - 
+       (3*G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 - 
+       3*G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var2, var2}, 
+         var] - G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var1, var2, 
+          var2}, var] + 9*G[{var2}, var]*G[{var1, var1, var1, var2, var2, 
+          var2}, var] + 4*G[{var2}, var]*G[{var1, var1, var2, var1, var2, 
+          var2}, var] + G[{var2}, var]*G[{var1, var1, var2, var2, var1, 
+          var2}, var] + 4*G[{var1}, var]*G[{var1, var1, var2, var2, var2, 
+          var2}, var] + G[{var1}, var]*G[{var1, var2, var1, var2, var2, 
+          var2}, var] - 12*G[{var1, var1, var1, var2, var2, var2, var2}, 
+         var] - 5*G[{var1, var1, var2, var1, var2, var2, var2}, var] - 
+       2*G[{var1, var1, var2, var2, var1, var2, var2}, var] - 
+       G[{var1, var1, var2, var2, var2, var1, var2}, var], 
+     G[{var2, var2, var2, var1, var1, var2, var2}, var] -> 
+      (G[{var2}, var]*G[{var1, var2, var2}, var]^2)/2 + 
+       (G[{var2}, var]^3*G[{var1, var1, var2, var2}, var])/6 - 
+       G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       (3*G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 - 
+       (G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       10*G[{var1, var1, var2, var2, var2, var2, var2}, var] + 
+       4*G[{var1, var2, var1, var2, var2, var2, var2}, var] + 
+       G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var1, var2, var1, var1}, var] -> 
+      (G[{var1}, var]^2*G[{var2}, var]^3*G[{var1, var2}, var])/12 + 
+       (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2}, var]^2)/4 - 
+       (G[{var1}, var]*G[{var2}, var]^3*G[{var1, var1, var2}, var])/3 - 
+       (G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var1, var2}, var])/2 - 
+       (G[{var1}, var]^2*G[{var2}, var]^2*G[{var1, var2, var2}, var])/2 - 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2}, var]*
+        G[{var1, var2, var2}, var] + G[{var2}, var]*G[{var1, var1, var2}, 
+         var]*G[{var1, var2, var2}, var] + 
+       (G[{var2}, var]^3*G[{var1, var1, var1, var2}, var])/2 + 
+       G[{var1}, var]*G[{var2}, var]^2*G[{var1, var1, var2, var2}, var] + 
+       (3*G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2, var2, var2}, var])/
+        2 + G[{var1}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] - G[{var1, var1, var2}, var]*G[{var1, var2, var2, var2}, var] + 
+       (G[{var2}, var]^2*G[{var1, var1, var2, var1, var2}, var])/2 + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var1, var2, var2}, var] - 
+       2*G[{var1}, var]^2*G[{var1, var2, var2, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var1, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       G[{var1, var1, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var1, var2, var1, var2}, var] -> 
+      (G[{var2}, var]^3*G[{var1, var2}, var]^2)/12 - 
+       G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var2, var2}, var]^2 - 
+       (G[{var2}, var]^3*G[{var1, var1, var2, var2}, var])/3 + 
+       3*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] + 2*G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] + 6*G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var] + 
+       2*G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var] - 
+       4*G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] - 
+       12*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       3*G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       4*G[{var1, var2, var1, var2, var2, var2, var2}, var] - 
+       2*G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var1, var2, var2, var1}, var] -> 
+      -(G[{var2}, var]^3*G[{var1, var2}, var]^2)/12 + 
+       (G[{var1}, var]*G[{var2}, var]^3*G[{var1, var2, var2}, var])/6 + 
+       G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var] + 
+       (G[{var2}, var]*G[{var1, var2, var2}, var]^2)/2 - 
+       (3*G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2, var2, var2}, var])/
+        2 - 3*G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] - G[{var1, var2, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       3*G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var] - 
+       (3*G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       6*G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var2, var2, var2}, 
+         var] + 4*G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, 
+         var] + 6*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, 
+         var] + 3*G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, 
+         var] - 10*G[{var1}, var]*G[{var1, var2, var2, var2, var2, var2}, 
+         var] + G[{var1, var2, var2, var1, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var1, var2, var2, var2}, var] -> 
+      (G[{var2}, var]^3*G[{var1, var2, var2, var2}, var])/6 - 
+       2*G[{var2}, var]^2*G[{var1, var2, var2, var2, var2}, var] + 
+       10*G[{var2}, var]*G[{var1, var2, var2, var2, var2, var2}, var] - 
+       20*G[{var1, var2, var2, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var1, var1, var1}, var] -> 
+      (G[{var1}, var]^3*G[{var2}, var]^4)/144 - 
+       (G[{var1}, var]^2*G[{var2}, var]^3*G[{var1, var2}, var])/12 + 
+       (G[{var1}, var]*G[{var2}, var]^3*G[{var1, var1, var2}, var])/6 + 
+       (G[{var1}, var]^2*G[{var2}, var]^2*G[{var1, var2, var2}, var])/4 - 
+       (G[{var2}, var]^3*G[{var1, var1, var1, var2}, var])/6 - 
+       (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var1, var2, var2}, var])/2 - 
+       (G[{var1}, var]^2*G[{var2}, var]*G[{var1, var2, var2, var2}, var])/2 + 
+       (G[{var2}, var]^2*G[{var1, var1, var1, var2, var2}, var])/2 + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var1, var2, var2, var2}, var] + 
+       (G[{var1}, var]^2*G[{var1, var2, var2, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var1, var1, var2, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       G[{var1, var1, var1, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var1, var1, var2}, var] -> 
+      -(G[{var2}, var]^3*G[{var1, var2}, var]^2)/12 + 
+       (G[{var2}, var]^4*G[{var1, var1, var2}, var])/24 + 
+       (G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, var] - 
+       (3*G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 - 
+       (G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 + 
+       G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] + 
+       4*G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] + 
+       G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] - 
+       5*G[{var1, var1, var2, var2, var2, var2, var2}, var] - 
+       G[{var1, var2, var1, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var1, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var2}, var]^4*G[{var1, var2}, var])/24 + 
+       (G[{var2}, var]^3*G[{var1, var2}, var]^2)/12 - 
+       (G[{var2}, var]^4*G[{var1, var1, var2}, var])/12 - 
+       (G[{var1}, var]*G[{var2}, var]^3*G[{var1, var2, var2}, var])/3 - 
+       (G[{var2}, var]^2*G[{var1, var2}, var]*G[{var1, var2, var2}, var])/2 + 
+       (G[{var2}, var]^3*G[{var1, var1, var2, var2}, var])/3 + 
+       (3*G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2, var2, var2}, var])/
+        2 + G[{var2}, var]*G[{var1, var2}, var]*G[{var1, var2, var2, var2}, 
+         var] + (G[{var2}, var]^2*G[{var1, var2, var1, var2, var2}, var])/2 - 
+       4*G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var2, var2, var2}, 
+         var] - G[{var1, var2}, var]*G[{var1, var2, var2, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var2, var1, var2, var2, var2}, var] + 
+       5*G[{var1}, var]*G[{var1, var2, var2, var2, var2, var2}, var] + 
+       G[{var1, var2, var1, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var1, var2, var2}, var] -> 
+      (G[{var2}, var]^4*G[{var1, var2, var2}, var])/24 - 
+       (G[{var2}, var]^3*G[{var1, var2, var2, var2}, var])/2 + 
+       3*G[{var2}, var]^2*G[{var1, var2, var2, var2, var2}, var] - 
+       10*G[{var2}, var]*G[{var1, var2, var2, var2, var2, var2}, var] + 
+       15*G[{var1, var2, var2, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var2, var1, var1}, var] -> 
+      (G[{var1}, var]^2*G[{var2}, var]^5)/240 - 
+       (G[{var1}, var]*G[{var2}, var]^4*G[{var1, var2}, var])/24 + 
+       (G[{var2}, var]^4*G[{var1, var1, var2}, var])/24 + 
+       (G[{var1}, var]*G[{var2}, var]^3*G[{var1, var2, var2}, var])/6 - 
+       (G[{var2}, var]^3*G[{var1, var1, var2, var2}, var])/6 - 
+       (G[{var1}, var]*G[{var2}, var]^2*G[{var1, var2, var2, var2}, var])/2 + 
+       (G[{var2}, var]^2*G[{var1, var1, var2, var2, var2}, var])/2 + 
+       G[{var1}, var]*G[{var2}, var]*G[{var1, var2, var2, var2, var2}, var] - 
+       G[{var2}, var]*G[{var1, var1, var2, var2, var2, var2}, var] - 
+       G[{var1}, var]*G[{var1, var2, var2, var2, var2, var2}, var] + 
+       G[{var1, var1, var2, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var2, var1, var2}, var] -> 
+      (G[{var2}, var]^5*G[{var1, var2}, var])/120 - 
+       (G[{var2}, var]^4*G[{var1, var2, var2}, var])/12 + 
+       (G[{var2}, var]^3*G[{var1, var2, var2, var2}, var])/2 - 
+       2*G[{var2}, var]^2*G[{var1, var2, var2, var2, var2}, var] + 
+       5*G[{var2}, var]*G[{var1, var2, var2, var2, var2, var2}, var] - 
+       6*G[{var1, var2, var2, var2, var2, var2, var2}, var], 
+     G[{var2, var2, var2, var2, var2, var2, var1}, var] -> 
+      (G[{var1}, var]*G[{var2}, var]^6)/720 - 
+       (G[{var2}, var]^5*G[{var1, var2}, var])/120 + 
+       (G[{var2}, var]^4*G[{var1, var2, var2}, var])/24 - 
+       (G[{var2}, var]^3*G[{var1, var2, var2, var2}, var])/6 + 
+       (G[{var2}, var]^2*G[{var1, var2, var2, var2, var2}, var])/2 - 
+       G[{var2}, var]*G[{var1, var2, var2, var2, var2, var2}, var] + 
+       G[{var1, var2, var2, var2, var2, var2, var2}, var]|>

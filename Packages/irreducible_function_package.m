@@ -4,11 +4,11 @@
 LyndonBasis=True;
 variables={u,v,w,1-u,1-v,1-w,yu,yv,yw};
 uniquePairs={{u,v},{u,w},{u,1-v},{u,1-w},{u,yu},{u,yv},{u,yw},{v,w},{v,1-u},{v,1-w},{v,yu},{v,yv},{v,yw},{w,1-u},{w,1-v},{w,yu},{w,yv},{w,yw},{1-u,1-v},{1-u,1-w},{1-u,yu},{1-u,yv},{1-u,yw},{1-v,1-w},{1-v,yu},{1-v,yv},{1-v,yw},{1-w,yu},{1-w,yv},{1-w,yw},{yu,yv},{yu,yw},{yv,yw}};
-sortedFunctionsWeight[n_]:=DeleteDuplicates[Join[Sort[Select[functionsWeight[n],!FreeQ[#,E7[_]]&]],Sort[Select[functionsWeight[n],!FreeQ[#,O7[_]]&]],Sort[Select[functionsWeight[n],!FreeQ[#,H6[_]]&]],Sort[Select[functionsWeight[n],!FreeQ[#,H5[_]]&]],Sort[Select[functionsWeight[n],!FreeQ[#,H4[_]]&]],Sort[Select[functionsWeight[n],!FreeQ[#,H3[_]]&]],Sort[functionsWeight[n]]]];
+sortedFunctionsWeight[n_]:=(Join@@Table[Sort[Select[functionsWeight[n],yGrading[#]==pow&]/.{E8->A1,O8->A2,E7->A3,O7->A4,H6->A5,H5->A6,H4->A7,H3->A8}],{pow,Reverse[Range[0,6]]}])/.{A1->E8,A2->O8,A3->E7,A4->O7,A5->H6,A6->H5,A7->H4,A8->H3};
 
 loadFunctionsAndDefinitions[weight_]:=Block[{},
-	currentWeightLyndonBasisFunctions=Get["weight_"<>ToString[weight]<>"_HPL_basis_wfec.dat"];
-	currentWeightCompositeFunctions=Get["weight_"<>ToString[weight]<>"_composite_functions_wfec.dat"];
+	currentWeightLyndonBasisFunctions=Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[weight]<>"/weight_"<>ToString[weight]<>"_HPL_basis_wfec.dat"];
+	currentWeightCompositeFunctions=If[weight>3,Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[weight]<>"/weight_"<>ToString[weight]<>"_composite_functions_wfec.dat"],{}];
 
 	knownCurrentWeightFunctions=DeleteCases[Join[currentWeightLyndonBasisFunctions,currentWeightCompositeFunctions,beyondSymbolTerms[currentWeight](*,Flatten@Table[MZV[currentWeight-1][[i]]MPL[{0},j],{j,{1-u,1-v,1-w,yu,yv,yw}},{i,Length@MZV[currentWeight-1]}]*)],Alternatives@@MZV[currentWeight]];
 	previousWeightFunctions=sortedFunctionsWeight[weight-1];
@@ -31,19 +31,22 @@ loadFunctionsAndDefinitions[weight_]:=Block[{},
 
 vectorToFunction[vec_]:=vectorToEvenFunction[vec]/;(Length[vec]==Length[evenCoefficients]);
 vectorToFunction[vec_]:=vectorToOddFunction[vec]/;(Length[vec]==Length[oddCoefficients]);
-vectorToEvenFunction[vec_]:=vec.evenCoefficients/.{e[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->MPL[{0},1-u],1-v->MPL[{0},1-v],1-w->MPL[{0},1-w],u->MPL[{1},1-u],v->MPL[{1},1-v],w->MPL[{1},1-w],yu->MPL[{0},yu],yv->MPL[{0},yv],yw->MPL[{0},yw]}],o[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->MPL[{0},1-u],1-v->MPL[{0},1-v],1-w->MPL[{0},1-w],u->MPL[{1},1-u],v->MPL[{1},1-v],w->MPL[{1},1-w],yu->MPL[{0},yu],yv->MPL[{0},yv],yw->MPL[{0},yw]}]};
-vectorToOddFunction[vec_]:=vec.oddCoefficients/.{e[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->MPL[{0},1-u],1-v->MPL[{0},1-v],1-w->MPL[{0},1-w],u->MPL[{1},1-u],v->MPL[{1},1-v],w->MPL[{1},1-w],yu->MPL[{0},yu],yv->MPL[{0},yv],yw->MPL[{0},yw]}],o[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->MPL[{0},1-u],1-v->MPL[{0},1-v],1-w->MPL[{0},1-w],u->MPL[{1},1-u],v->MPL[{1},1-v],w->MPL[{1},1-w],yu->MPL[{0},yu],yv->MPL[{0},yv],yw->MPL[{0},yw]}]};
+vectorToEvenFunction[vec_]:=vec.evenCoefficients/.{e[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->Log[1-u],1-v->Log[1-v],1-w->Log[1-w],u->Log[u],v->Log[v],w->Log[w],yu->Log[yu],yv->Log[yv],yw->Log[yw]}],o[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->Log[1-u],1-v->Log[1-v],1-w->Log[1-w],u->Log[u],v->Log[v],w->Log[w],yu->Log[yu],yv->Log[yv],yw->Log[yw]}]};
+vectorToOddFunction[vec_]:=vec.oddCoefficients/.{e[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->Log[1-u],1-v->Log[1-v],1-w->Log[1-w],u->Log[u],v->Log[v],w->Log[w],yu->Log[yu],yv->Log[yv],yw->Log[yw]}],o[i_,j_]:>CircleDot[previousWeightTerms[[i]],j/.{1-u->Log[1-u],1-v->Log[1-v],1-w->Log[1-w],u->Log[u],v->Log[v],w->Log[w],yu->Log[yu],yv->Log[yv],yw->Log[yw]}]};
 
-functionToVector[func_]:=functionToEvenVectorBasis[Expand[func]]/;EvenQ[yGrading[func]];
-functionToVector[func_]:=functionToOddVectorBasis[Expand[func]]/;OddQ[yGrading[func]];
-functionToEvenVectorBasis[0]:=ConstantArray[0,Length@evenCoefficients];
+functionToVector[func_]:=functionToEvenVector[Expand[func]]/;EvenQ[yGrading[func]];
+functionToVector[func_]:=functionToOddVector[Expand[func]]/;OddQ[yGrading[func]];
+functionToOddVector[0]:=ConstantArray[0,Length@evenCoefficients];
+functionToOddVector[func_]:=Module[{sparse=CoefficientArrays[toOddCoefficients[func],oddCoefficients]}, If[sparse[[1]]!=0,Print["Function could not be converted to vector because of these terms: "<>ToString[sparse[[1]]]]]; Normal[sparse[[2]]]];
+functionToEvenVector[func_]:=Module[{sparse=CoefficientArrays[toEvenCoefficients[func],evenCoefficients]}, If[sparse[[1]]!=0,Print["Function could not be converted to vector because of these terms: "<>ToString[sparse[[1]]]]]; Normal[sparse[[2]]]];
+(*functionToEvenVectorBasis[0]:=ConstantArray[0,Length@evenCoefficients];
 functionToOddVectorBasis[0]:=ConstantArray[0,Length@oddCoefficients];
 functionToEvenVectorBasis[Plus[func1_,funcN__]]:=Sum[functionToVector[i],{i,List[func1,funcN]}];
 functionToOddVectorBasis[Plus[func1_,funcN__]]:=Sum[functionToVector[i],{i,List[func1,funcN]}];
 functionToEvenVectorBasis[func_]:=functionToEvenVectorBasis[coproduct[{currentWeight-1,1},func]]/;!MatchQ[func,CircleDot[__,_]]\[And]!MatchQ[func,Times[_,CircleDot[__,_]]];
 functionToOddVectorBasis[func_]:=functionToOddVectorBasis[coproduct[{currentWeight-1,1},func]]/;!MatchQ[func,CircleDot[__,_]]\[And]!MatchQ[func,Times[_,CircleDot[__,_]]];
 functionToEvenVectorBasis[func_]:=(toEvenCoefficients[func]/.{e[i_,j_]:>ReplacePart[ConstantArray[0,Length@evenCoefficients],Position[evenCoefficients,e[i,j]][[1,1]]->1],o[i_,j_]:>ReplacePart[ConstantArray[0,Length@evenCoefficients],Position[evenCoefficients,o[i,j]][[1,1]]->1]})/;MatchQ[func,CircleDot[__,_]]\[Or]MatchQ[func,Times[_,CircleDot[__,_]]];
-functionToOddVectorBasis[func_]:=(toOddCoefficients[func]/.{o[i_,j_]:>ReplacePart[ConstantArray[0,Length@oddCoefficients],Position[oddCoefficients,o[i,j]][[1,1]]->1],e[i_,j_]:>ReplacePart[ConstantArray[0,Length@oddCoefficients],Position[oddCoefficients,e[i,j]][[1,1]]->1]})/;MatchQ[func,CircleDot[__,_]]\[Or]MatchQ[func,Times[_,CircleDot[__,_]]];
+functionToOddVectorBasis[func_]:=(toOddCoefficients[func]/.{o[i_,j_]:>ReplacePart[ConstantArray[0,Length@oddCoefficients],Position[oddCoefficients,o[i,j]][[1,1]]->1],e[i_,j_]:>ReplacePart[ConstantArray[0,Length@oddCoefficients],Position[oddCoefficients,e[i,j]][[1,1]]->1]})/;MatchQ[func,CircleDot[__,_]]\[Or]MatchQ[func,Times[_,CircleDot[__,_]]];*)
 
 toCoefficients[func_]:=toEvenCoefficients[Expand[func]]/;EvenQ[yGrading[func]];
 toCoefficients[func_]:=toOddCoefficients[Expand[func]]/;OddQ[yGrading[func]];

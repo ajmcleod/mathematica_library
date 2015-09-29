@@ -1,0 +1,1248 @@
+LyndRedReplacements[2,7] = <|Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], 
+        lyn[1], lyn[2]}] -> Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], 
+       lyn[1], lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+       lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[1]}] -> (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+          lyn[2]])/2 - 5*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]] + 15*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[1], lyn[2]}] -> Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+       lyn[1], lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 5*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+       lyn[2]], Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], 
+        lyn[1]}] -> (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/6 - 
+       2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       10*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       20*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       10*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^4*Lyn[lyn[1], lyn[1], lyn[2]])/24 - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 + 
+       3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       10*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       15*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       20*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       10*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 - 
+       3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       60*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       9*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2) + 
+       3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]])/2 + 
+       12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       60*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 - 
+       Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/6 - 
+       (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]])/2 + 
+       10*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       18*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       9*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      -2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       36*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       18*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^5*Lyn[lyn[1], lyn[2]])/120 - 
+       (Lyn[lyn[1]]^4*Lyn[lyn[1], lyn[1], lyn[2]])/12 + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 - 
+       2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       5*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]}] -> 
+      -2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       15*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       5*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2) + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       6*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       80*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       40*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       5*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - 3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+          lyn[2]])/2 + 60*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 30*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] + 9*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], 
+         lyn[2]], Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+         lyn[2]], Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - 9*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 36*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 21*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 9*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 8*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + 4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[1], lyn[2]], Lin[{lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], 
+        lyn[2], lyn[2]}] -> Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 12*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 5*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+        lyn[1], lyn[2]], Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], 
+        lyn[1]}] -> (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2]]^2)/12 - 
+       Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 + 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/3 - 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       6*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]}] -> 
+      (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       72*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       42*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       18*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       16*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       7*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 - Lyn[lyn[1], lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[2]] - 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 4*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 12*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 4*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       144*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       72*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       8*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 + 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]])/2 + 
+       6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       36*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       18*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]}] -> 
+      -6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       72*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       24*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       8*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       48*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       16*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2]]^2)/12 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       (Lyn[lyn[1]]^4*Lyn[lyn[1], lyn[2], lyn[2]])/24 - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]])/2 + 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       5*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       15*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       7*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 + Lyn[lyn[1], lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 6*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       36*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       21*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       9*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       8*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       18*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 - 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - 3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], 
+          lyn[2], lyn[2]])/2 - 6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] - 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] - 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[1], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] - Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[1], lyn[2]], Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+        lyn[1], lyn[2]}] -> (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], 
+          lyn[2]])/2 - 2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + 12*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 144*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 48*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 20*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 18*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 7*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]], Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+        lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 - 
+       6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       108*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       36*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       12*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       12*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/6 + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       60*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       20*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       8*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       7*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2 + 
+       2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       48*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       16*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       20*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       10*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 - 
+       Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]])/2 - 
+       3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]}] -> 
+      -2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       15*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       5*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^6*Lyn[lyn[2]])/720 - (Lyn[lyn[1]]^5*Lyn[lyn[1], lyn[2]])/
+        120 + (Lyn[lyn[1]]^4*Lyn[lyn[1], lyn[1], lyn[2]])/24 - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/6 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       5*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       15*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       5*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       9*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 + 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]] - 6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]] + 2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] + 10*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] - 20*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 10*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2]}] -> -(Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+          lyn[2]]) + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] + 4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] + 4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[1]}] -> -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+          lyn[2], lyn[2]]) + Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] + 3*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       15*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       7*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       8*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2]]^2)/12 + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/6 + 
+       Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 - 
+       (3*Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 6*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]] + 4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]] - 3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] - (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], 
+          lyn[1], lyn[2]])/2 - 10*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[1], lyn[2]] + 6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] + 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[1], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[1], lyn[1], lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       (Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 + 
+       6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       36*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 + Lyn[lyn[1], lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[2]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^
+         2 + 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 12*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - 4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] + 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - 12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 72*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 42*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 18*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 16*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + 7*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[1], lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]}] -> Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+        lyn[1]}] -> (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 - 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       (Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] + Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], 
+          lyn[2], lyn[2]])/2 - (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], 
+          lyn[2], lyn[2]])/2 + 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] - 18*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] - 9*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[1], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] - Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[1], lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[1], lyn[2]}] -> 6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] - 72*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 24*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 10*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 9*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]], Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[2], lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] - 4*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       60*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       20*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       8*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       7*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       5*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]])/24 + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2]]^2)/12 - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/3 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^4*Lyn[lyn[1], lyn[2], lyn[2]])/12 + 
+       (3*Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/3 - 
+       4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+          lyn[2]])/2 + 5*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[1], lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], lyn[1], 
+        lyn[2]}] -> (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 + Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 - 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] - 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[1], lyn[2]] + 6*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 4*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 6*Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 6*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2]] + 12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], 
+        lyn[2]}] -> Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 3*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       9*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^2)/4 - 
+       (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]^3)/6 - 2*Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 - 
+       Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[1], lyn[2]] - 6*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - Lyn[lyn[1]]^2*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 2*Lyn[lyn[1]]*
+        Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       12*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] + 6*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - 12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+        lyn[1], lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+        lyn[2]}] -> (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 - 
+       Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 4*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 12*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 144*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] + 48*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 24*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 24*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] - 8*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+        lyn[1]}] -> -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 + 
+       Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2 + 6*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 4*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       144*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       48*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       20*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       18*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       7*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^2)/4 + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2]] + (Lyn[lyn[1]]^3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/
+        6 + Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[1], lyn[2]] + 2*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - 3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], 
+          lyn[2], lyn[2]])/2 + 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[1], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[1], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[2], lyn[1], lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], 
+        lyn[1], lyn[2]}] -> -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 + 
+       Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       72*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       10*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       9*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 + Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2 + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 6*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 6*Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] + 72*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] + 24*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 8*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + 6*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+        lyn[2]}] -> (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 - 
+       3*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       60*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       9*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+          lyn[2]]) + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^
+         2 - Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+          lyn[2]])/2 + 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 4*Lyn[lyn[1]]*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2]] - 4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], 
+        lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], 
+        lyn[2]}] -> -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       6*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       80*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       40*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       12*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       5*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       15*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       5*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^5*Lyn[lyn[2]]^2)/240 - (Lyn[lyn[1]]^4*Lyn[lyn[2]]*
+         Lyn[lyn[1], lyn[2]])/24 + (Lyn[lyn[1]]^3*Lyn[lyn[2]]*
+         Lyn[lyn[1], lyn[1], lyn[2]])/6 + 
+       (Lyn[lyn[1]]^4*Lyn[lyn[1], lyn[2], lyn[2]])/24 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/6 + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]}] -> 
+      (Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]])/2 + 
+       9*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+          lyn[2]]) - Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2 + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 + 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] - 3*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 2*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + 4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + 2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[1], lyn[2]] - 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[1], lyn[2]] - 6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] - 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[1], lyn[2]] - 12*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] - 5*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] - Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+        lyn[2], lyn[1], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[1], lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[1], 
+        lyn[1], lyn[2], lyn[2]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+          lyn[2]]) + Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+          lyn[2]])/2 + 6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] - 12*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], 
+        lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^2)/4 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/4 + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2]] + (Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]^2)/2 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       2*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] - (3*Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], 
+          lyn[2]])/2 - 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] + 3*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2]] - Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 3*Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - (3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], 
+          lyn[2], lyn[2]])/2 - (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], 
+          lyn[2], lyn[2]])/2 + 6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[1], lyn[2], lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[1], lyn[2]] + 9*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] + 4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[1], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[1], lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], 
+        lyn[1], lyn[2]}] -> -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 + 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+          lyn[2]])/2 - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[1]}] -> (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 - 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 18*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + 6*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[2]}] -> (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+          lyn[2]])/2 - 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 10*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + 4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], 
+        lyn[1]}] -> (Lyn[lyn[1]]^3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]])/12 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^2)/4 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2]] - (Lyn[lyn[1]]^3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/
+        3 - (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/
+        2 + Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + (3*Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], 
+          lyn[2]])/2 + Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[1], lyn[2]] - Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[1], lyn[2]] + Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], 
+         lyn[2], lyn[2]] + (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2], lyn[2], 
+          lyn[2]])/2 - 2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], 
+         lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] + (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+          lyn[2]])/2 - Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[1], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1], 
+        lyn[2]}] -> (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - 3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2]] - (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+          lyn[2]])/2 + Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] - 3*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], 
+        lyn[1]}] -> (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]^2)/4 - 
+       (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]^3)/6 - Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + (Lyn[lyn[1], lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2 - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 6*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 6*Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] + 
+       12*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - 12*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[1], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2], 
+        lyn[2]}] -> -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2) + 
+       3*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]])/2 + 
+       12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       60*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       24*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]^2)/4 + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/4 + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       (3*Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+          lyn[2]])/2 - (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+          lyn[2]])/2 - 6*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[1], lyn[2], lyn[2]] + 3*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], 
+         lyn[2], lyn[2], lyn[2]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[1], lyn[2]] + 6*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2], lyn[2]] + 3*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+        lyn[1], lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], 
+        lyn[1], lyn[2]}] -> (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*
+         Lyn[lyn[1], lyn[2], lyn[2]])/2 + 2*Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2]]^2 - 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 6*Lyn[lyn[1], lyn[2], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 3*Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]])/2 + 
+       6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       60*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       30*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       9*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2 + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 + 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 3*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 6*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 10*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 20*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 10*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 4*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], 
+        lyn[2], lyn[2]}] -> (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], 
+          lyn[2], lyn[2]])/2 - 5*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2], lyn[2]] + 15*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2], lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[2], lyn[1], 
+        lyn[1], lyn[1], lyn[1]}] -> (Lyn[lyn[1]]^4*Lyn[lyn[2]]^3)/144 - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]])/12 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2]])/4 + 
+       (Lyn[lyn[1]]^3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/6 - 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/6 + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/6 - 
+       Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]] - 
+       6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2]] + 
+       8*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]^2)/4 + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[2]])/6 + 
+       Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2]] - (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], 
+          lyn[1], lyn[2]])/2 - Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 2*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 3*Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]] - 
+       (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]])/2 - 
+       3*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + 9*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] + 4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[1], lyn[2]] + 4*Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 12*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] - 5*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[1], 
+         lyn[2], lyn[2]] - Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+        lyn[1], lyn[2]], Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2], 
+        lyn[2]}] -> (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 + 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/6 - 
+       Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]])/2 + 
+       10*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^2*Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2]])/12 + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]^2)/4 - 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[2]])/3 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], 
+         lyn[2]] + Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2]]*
+        Lyn[lyn[1], lyn[2], lyn[2]] + (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], 
+          lyn[1], lyn[2]])/2 + Lyn[lyn[1]]*Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[1], lyn[2], lyn[2]] + 
+       (3*Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       2*Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1], lyn[2]}] -> 
+      (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2]]^2)/12 - Lyn[lyn[2]]^2*
+        Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2 - 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/3 + 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 6*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] - 12*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] - 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - 4*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] - 2*Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], 
+        lyn[1]}] -> -(Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2]]^2)/12 + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], lyn[2]])/6 + 
+       Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       (Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]]^2)/2 - 
+       (3*Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - Lyn[lyn[1], lyn[2], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - 3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] - (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+          lyn[2]])/2 + 6*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + 4*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + 6*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + 3*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], 
+         lyn[2], lyn[2]] - 10*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[2], lyn[1], lyn[2], 
+        lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[2], 
+        lyn[2]}] -> (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/6 - 
+       2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       10*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       20*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^3*Lyn[lyn[2]]^4)/144 - (Lyn[lyn[1]]^2*Lyn[lyn[2]]^3*
+         Lyn[lyn[1], lyn[2]])/12 + (Lyn[lyn[1]]*Lyn[lyn[2]]^3*
+         Lyn[lyn[1], lyn[1], lyn[2]])/6 + (Lyn[lyn[1]]^2*Lyn[lyn[2]]^2*
+         Lyn[lyn[1], lyn[2], lyn[2]])/4 - 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[1], lyn[2]])/6 - 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2]]^2)/12 + 
+       (Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[1], lyn[2]])/24 + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       (3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       4*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2]] - 
+       5*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[2]])/24 + 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2]]^2)/12 - 
+       (Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[1], lyn[2]])/12 - 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], lyn[2]])/3 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2]])/2 + 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/3 + 
+       (3*Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]] + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2]])/2 - 
+       4*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] - Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], 
+         lyn[2]] + 5*Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], 
+         lyn[2]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[2], lyn[2], lyn[2], 
+        lyn[2]], Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2], 
+        lyn[2]}] -> (Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[2], lyn[2]])/24 - 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 + 
+       3*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       10*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       15*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^2*Lyn[lyn[2]]^5)/240 - (Lyn[lyn[1]]*Lyn[lyn[2]]^4*
+         Lyn[lyn[1], lyn[2]])/24 + (Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[1], 
+          lyn[2]])/24 + (Lyn[lyn[1]]*Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], 
+          lyn[2]])/6 - (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[1], lyn[2], lyn[2]])/
+        6 - (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/
+        2 + (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1], lyn[2]}] -> 
+      (Lyn[lyn[2]]^5*Lyn[lyn[1], lyn[2]])/120 - 
+       (Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[2], lyn[2]])/12 + 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/2 - 
+       2*Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       5*Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] - 
+       6*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[2]]^6)/720 - (Lyn[lyn[2]]^5*Lyn[lyn[1], lyn[2]])/
+        120 + (Lyn[lyn[2]]^4*Lyn[lyn[1], lyn[2], lyn[2]])/24 - 
+       (Lyn[lyn[2]]^3*Lyn[lyn[1], lyn[2], lyn[2], lyn[2]])/6 + 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2], lyn[2]]|>

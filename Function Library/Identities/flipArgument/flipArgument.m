@@ -1,0 +1,162 @@
+(* ::Package:: *)
+
+flipArgument[arg_]:=func_:>optimizeFlipArgumentReplacement[func,arg]
+flipArgument[{arg1_,argN__}]:=func_:>(optimizeFlipArgumentReplacement[func,arg1]/.flipArgument[{argN}])
+flipArgument[{arg1_}]:=flipArgument[arg1]
+optimizeFlipArgumentReplacement[func_,arg_]:=Module[{lettersAppearing,letters},
+  If[FreeQ[func,G],
+    lettersAppearing=Select[Range[5,Max[transcendentalWeight[func],5]],!FreeQ[func,HPL[aVec_,arg]/;Length[aVec]==#]&];
+    If[FreeQ[lettersAppearing,5],If[Or@@Table[!FreeQ[func,HPL[aVec_,arg]/;Length[aVec]==ii],{ii,4}],AppendTo[lettersAppearing,5]]];
+    Expand[func/.Join@@Table[Symbol["flipArgument2Ew"<>ToString[ii]<>"HPL"][arg],{ii,lettersAppearing}]]
+   ,lettersAppearing=DeleteDuplicates[DeleteDuplicates[Flatten[Reap[func/.G[aVec_,arg]:>(Sow[letters[DeleteDuplicates[aVec],Length[aVec]]];0)][[2]]]]/.{}->Null/.letters[ll_,weight_]:>List[Sort[DeleteCases[ll,Alternatives[0,1]],LyndOrder[#1]<LyndOrder[#2]&],Max[weight,5]]/.Null->{}];
+    Expand[func/.Join@@Table[Symbol["flipArgument"<>ToString[Length[lettersAppearing[[ii,1]]]+2]<>"Ew"<>ToString[lettersAppearing[[ii,2]]]<>"G"][arg,lettersAppearing[[ii,1]]],{ii,Length[lettersAppearing]}]]]]
+
+flipArgument2Ew5HPL[arg_]:=Module[{},flipArgument2Ew5HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew5HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 5 flip HPL argument identities loaded"]];
+  flipArgument2Ew5HPL[arg]];
+flipArgument2Ew6HPL[arg_]:=Module[{},flipArgument2Ew6HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew6HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 6 flip HPL argument identities loaded"]];
+  flipArgument2Ew6HPL[arg]];
+flipArgument2Ew7HPL[arg_]:=Module[{},flipArgument2Ew7HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew7HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 7 flip HPL argument identities loaded"]];
+  flipArgument2Ew7HPL[arg]];
+flipArgument2Ew8HPL[arg_]:=Module[{},flipArgument2Ew8HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew8HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 8 flip HPL argument identities loaded"]];
+  flipArgument2Ew8HPL[arg]];
+flipArgument2Ew9HPL[arg_]:=Module[{},flipArgument2Ew9HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew9HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 9 flip HPL argument identities loaded"]];
+  flipArgument2Ew9HPL[arg]];
+flipArgument2Ew10HPL[arg_]:=Module[{},flipArgument2Ew10HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew10HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 10 flip HPL argument identities loaded"]];
+  flipArgument2Ew10HPL[arg]];
+
+flipArgument3Ew5HPL[arg_]:=Module[{},flipArgument3Ew5HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew5HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 5 flip HPL argument identities loaded"]];
+  flipArgument3Ew5HPL[arg]];
+flipArgument3Ew6HPL[arg_]:=Module[{},flipArgument3Ew6HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew6HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 6 flip HPL argument identities loaded"]];
+  flipArgument3Ew6HPL[arg]];
+flipArgument3Ew7HPL[arg_]:=Module[{},flipArgument3Ew7HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew7HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 7 flip HPL argument identities loaded"]];
+  flipArgument3Ew7HPL[arg]];
+flipArgument3Ew8HPL[arg_]:=Module[{},flipArgument3Ew8HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew8HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 8 flip HPL argument identities loaded"]];
+  flipArgument3Ew8HPL[arg]];
+flipArgument3Ew9HPL[arg_]:=Module[{},flipArgument3Ew9HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew9HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 9 flip HPL argument identities loaded"]];
+  flipArgument3Ew9HPL[arg]];
+flipArgument3Ew10HPL[arg_]:=Module[{},flipArgument3Ew10HPL[temp_]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew10HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 10 flip HPL argument identities loaded"]];
+  flipArgument3Ew10HPL[arg]];
+
+flipArgument2Ew5G[arg_,{var0___}]:=Module[{},flipArgument2Ew5G[temp1_,{temp2___}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 5 flip G argument identities loaded for 2 variables"]];
+  flipArgument2Ew5G[arg,{}]];
+flipArgument2Ew6G[arg_,{var0___}]:=Module[{},flipArgument2Ew6G[temp1_,{temp2___}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 6 flip G argument identities loaded for 2 variables"]];
+  flipArgument2Ew6G[arg,{}]];
+flipArgument2Ew7G[arg_,{var0___}]:=Module[{},flipArgument2Ew7G[temp1_,{temp2___}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 7 flip G argument identities loaded for 2 variables"]];
+  flipArgument2Ew7G[arg,{}]];
+flipArgument2Ew8G[arg_,{var0___}]:=Module[{},flipArgument2Ew8G[temp1_,{temp2___}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 8 flip G argument identities loaded for 2 variables"]];
+  flipArgument2Ew8G[arg,{}]];
+flipArgument2Ew9G[arg_,{var0___}]:=Module[{},flipArgument2Ew9G[temp1_,{temp2___}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew9G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 9 flip G argument identities loaded for 2 variables"]];
+  flipArgument2Ew9G[arg,{}]];
+flipArgument2Ew10G[arg_,{var0___}]:=Module[{},flipArgument2Ew10G[temp1_,{temp2___}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew10G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 10 flip G argument identities loaded for 2 variables"]];
+  flipArgument2Ew10G[arg,{}]];
+
+flipArgument3Ew5G[arg_,{var3_}]:=Module[{},flipArgument3Ew5G[temp1_,{temp2_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 5 flip G argument identities loaded for 3 variables"]];
+  flipArgument3Ew5G[arg,{var3}]];
+flipArgument3Ew6G[arg_,{var3_}]:=Module[{},flipArgument3Ew6G[temp1_,{temp2_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 6 flip G argument identities loaded for 3 variables"]];
+  flipArgument3Ew6G[arg,{var3}]];
+flipArgument3Ew7G[arg_,{var3_}]:=Module[{},flipArgument3Ew7G[temp1_,{temp2_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 7 flip G argument identities loaded for 3 variables"]];
+  flipArgument3Ew7G[arg,{var3}]];
+flipArgument3Ew8G[arg_,{var3_}]:=Module[{},flipArgument3Ew8G[temp1_,{temp2_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 8 flip G argument identities loaded for 3 variables"]];
+  flipArgument3Ew8G[arg,{var3}]];
+flipArgument3Ew9G[arg_,{var3_}]:=Module[{},flipArgument3Ew9G[temp1_,{temp2_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew9G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 9 flip G argument identities loaded for 3 variables"]];
+  flipArgument3Ew9G[arg,{var3}]];
+flipArgument3Ew10G[arg_,{var3_}]:=Module[{},flipArgument3Ew10G[temp1_,{temp2_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument3Ew10G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 10 flip G argument identities loaded for 3 variables"]];
+  flipArgument3Ew10G[arg,{var3}]];
+
+flipArgument4Ew5G[arg_,{var3_,var4_}]:=Module[{},flipArgument4Ew5G[temp1_,{temp2_,temp3_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument4Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 5 flip G argument identities loaded for 4 variables"]];
+  flipArgument4Ew5G[arg,{var3,var4}]];
+flipArgument4Ew6G[arg_,{var3_,var4_}]:=Module[{},flipArgument4Ew6G[temp1_,{temp2_,temp3_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument4Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 6 flip G argument identities loaded for 4 variables"]];
+  flipArgument4Ew6G[arg,{var3,var4}]];
+flipArgument4Ew7G[arg_,{var3_,var4_}]:=Module[{},flipArgument4Ew7G[temp1_,{temp2_,temp3_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument4Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 7 flip G argument identities loaded for 4 variables"]];
+  flipArgument4Ew7G[arg,{var3,var4}]];
+flipArgument4Ew8G[arg_,{var3_,var4_}]:=Module[{},flipArgument4Ew8G[temp1_,{temp2_,temp3_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument4Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 8 flip G argument identities loaded for 4 variables"]];
+  flipArgument4Ew8G[arg,{var3,var4}]];
+flipArgument4Ew9G[arg_,{var3_,var4_}]:=Module[{},flipArgument4Ew9G[temp1_,{temp2_,temp3_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument4Ew9G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 9 flip G argument identities loaded for 4 variables"]];
+  flipArgument4Ew9G[arg,{var3,var4}]];
+flipArgument4Ew10G[arg_,{var3_,var4_}]:=Module[{},flipArgument4Ew10G[temp1_,{temp2_,temp3_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument4Ew10G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 10 flip G argument identities loaded for 4 variables"]];
+  flipArgument4Ew10G[arg,{var3,var4}]];
+
+flipArgument5Ew5G[arg_,{var3_,var4_,var5_}]:=Module[{},flipArgument5Ew5G[temp1_,{temp2_,temp3_,temp4_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument5Ew5G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 5 flip G argument identities loaded for 5 variables"]];
+  flipArgument5Ew5G[arg,{var3,var4,var5}]];
+flipArgument5Ew6G[arg_,{var3_,var4_,var5_}]:=Module[{},flipArgument5Ew6G[temp1_,{temp2_,temp3_,temp4_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument5Ew6G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 6 flip G argument identities loaded for 5 variables"]];
+  flipArgument5Ew6G[arg,{var3,var4,var5}]];
+flipArgument5Ew7G[arg_,{var3_,var4_,var5_}]:=Module[{},flipArgument5Ew7G[temp1_,{temp2_,temp3_,temp4_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument5Ew7G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 7 flip G argument identities loaded for 5 variables"]];
+  flipArgument5Ew7G[arg,{var3,var4,var5}]];
+flipArgument5Ew8G[arg_,{var3_,var4_,var5_}]:=Module[{},flipArgument5Ew8G[temp1_,{temp2_,temp3_,temp4_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument5Ew8G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 8 flip G argument identities loaded for 5 variables"]];
+  flipArgument5Ew8G[arg,{var3,var4,var5}]];
+flipArgument5Ew9G[arg_,{var3_,var4_,var5_}]:=Module[{},flipArgument5Ew9G[temp1_,{temp2_,temp3_,temp4_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument5Ew9G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 9 flip G argument identities loaded for 5 variables"]];
+  flipArgument5Ew9G[arg,{var3,var4,var5}]];
+flipArgument5Ew10G[arg_,{var3_,var4_,var5_}]:=Module[{},flipArgument5Ew10G[temp1_,{temp2_,temp3_,temp4_}]=.;
+  Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument5Ew10G_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+  If[debug,Print["weight 10 flip G argument identities loaded for 5 variables"]];
+  flipArgument5Ew10G[arg,{var3,var4,var5}]];

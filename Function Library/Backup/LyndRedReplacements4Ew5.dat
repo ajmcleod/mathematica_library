@@ -1,0 +1,1950 @@
+LyndRedReplacements[4,5] = <|Lin[{lyn[1], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[3]}] -> Lyn[lyn[1], lyn[2], lyn[4], 
+       lyn[3]], Lin[{lyn[1], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[4], lyn[2]}] -> Lyn[lyn[1], lyn[3], lyn[4], 
+       lyn[2]], Lin[{lyn[1], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[2]}] -> Lyn[lyn[1], lyn[4], lyn[3], 
+       lyn[2]], Lin[{lyn[2], lyn[1], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[3], lyn[4]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], 
+         lyn[3]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[4], lyn[3], 
+        lyn[2]], Lin[{lyn[2], lyn[3], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], lyn[3], 
+        lyn[2]], Lin[{lyn[2], lyn[4], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - Lyn[lyn[2]]*
+        Lyn[lyn[1], lyn[3], lyn[4]] - Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], 
+         lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[4], lyn[3], 
+        lyn[2]], Lin[{lyn[2], lyn[4], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], 
+        lyn[2]], Lin[{lyn[3], lyn[1], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[3], lyn[1], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], lyn[4], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[2], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]] - Lyn[lyn[1], lyn[4]]*
+        Lyn[lyn[2], lyn[3]] - Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]) + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] + Lyn[lyn[1]]*Lyn[lyn[3]]*
+        Lyn[lyn[2], lyn[4]] + Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], 
+        lyn[3]], Lin[{lyn[3], lyn[4], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - Lyn[lyn[3]]*
+        Lyn[lyn[1], lyn[2], lyn[4]] - Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], 
+         lyn[2]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[4], lyn[3], 
+        lyn[2]], Lin[{lyn[3], lyn[4], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[3], lyn[4]] + Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], 
+        lyn[3]], Lin[{lyn[4], lyn[1], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[4], lyn[1], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - Lyn[lyn[1], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[4], lyn[2], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]] - Lyn[lyn[1], lyn[3]]*
+        Lyn[lyn[2], lyn[4]] - Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]] + Lyn[lyn[1], lyn[3]]*
+        Lyn[lyn[2], lyn[4]] + Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[2], 
+        lyn[4]], Lin[{lyn[4], lyn[3], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]] - Lyn[lyn[1], lyn[2]]*
+        Lyn[lyn[3], lyn[4]] - Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[3], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]] - Lyn[lyn[1]]*Lyn[lyn[4]]*
+        Lyn[lyn[2], lyn[3]] - Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[3], 
+        lyn[4]], Lin[{lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[2], lyn[3], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[3], lyn[1], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[3], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[1], lyn[4]], Lin[{lyn[1], lyn[2], lyn[3], lyn[4], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]], Lin[{lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[3], lyn[1], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]], Lin[{lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[3], lyn[4], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[1], lyn[4], 
+        lyn[2]], Lin[{lyn[1], lyn[3], lyn[4], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]], Lin[{lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[4], lyn[1], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[1], 
+        lyn[4]], Lin[{lyn[1], lyn[4], lyn[1], lyn[3], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[1], lyn[4], lyn[2], lyn[1], lyn[3]}] -> 
+      -(Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]]) + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[1], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[1], 
+        lyn[4]], Lin[{lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[4], lyn[2], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]], 
+     Lin[{lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]]) + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[1], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]] + Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[1], lyn[4]], Lin[{lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[1], lyn[4], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[1], 
+        lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[1], lyn[3], lyn[4], 
+        lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]], 
+     Lin[{lyn[2], lyn[1], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[1], 
+        lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[1], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]], 
+     Lin[{lyn[2], lyn[1], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[2]], Lin[{lyn[2], lyn[1], lyn[2], lyn[4], 
+        lyn[3]}] -> Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[3], lyn[2]], Lin[{lyn[2], lyn[1], lyn[3], lyn[1], 
+        lyn[4]}] -> -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[1], 
+        lyn[4]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[1], lyn[4]], Lin[{lyn[2], lyn[1], lyn[3], lyn[2], 
+        lyn[4]}] -> Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[3], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[3], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[1], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]] + Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[2], lyn[1], lyn[3], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[2]] - 2*Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[3], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[3], lyn[4], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[4]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[4], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[1], lyn[4], lyn[2]], Lin[{lyn[2], lyn[1], lyn[4], lyn[2], 
+        lyn[3]}] -> Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[4], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4]]) + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[1], lyn[4], 
+        lyn[2]], Lin[{lyn[2], lyn[1], lyn[4], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[2]] - 2*Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[1], lyn[4], lyn[3], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[4], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[1], lyn[4], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[1], lyn[3], lyn[4]}] -> 
+      (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[3], lyn[4]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[2], lyn[3], lyn[4], 
+        lyn[2]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[1], lyn[4], 
+        lyn[3]}] -> (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[4], lyn[3]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[2]], Lin[{lyn[2], lyn[2], lyn[3], lyn[1], 
+        lyn[4]}] -> -(Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[3], lyn[4]])/2 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[4], lyn[3]])/2 + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[3], lyn[4], lyn[1]}] -> 
+      (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[4], lyn[3]])/2 - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[4], lyn[1], lyn[3]}] -> 
+      -(Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[3], lyn[4]])/2 - 
+       (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[4], lyn[3]])/2 + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[2], lyn[4], lyn[3], lyn[1]}] -> 
+      (Lyn[lyn[2]]^2*Lyn[lyn[1], lyn[3], lyn[4]])/2 - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[1], 
+        lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[1], lyn[4], 
+        lyn[2]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] + 2*Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       2*Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[3], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[1], lyn[4], lyn[4]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[4], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[4], 
+        lyn[4], lyn[3], lyn[2]], Lin[{lyn[2], lyn[3], lyn[2], lyn[1], 
+        lyn[4]}] -> Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[2], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]]) + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[3], lyn[1], lyn[4]}] -> 
+      -(Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]]) - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[3], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[4], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]]) + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[3], lyn[4]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[4], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[2]] - 2*Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[3], lyn[4], lyn[1], lyn[3]}] -> 
+      -(Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]]) - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[3]] - 2*Lyn[lyn[1], lyn[4], lyn[3], lyn[3], 
+         lyn[2]], Lin[{lyn[2], lyn[3], lyn[4], lyn[1], lyn[4]}] -> 
+      -2*Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[4], lyn[2]] - 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[3], 
+         lyn[2]], Lin[{lyn[2], lyn[3], lyn[4], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[4], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[3], lyn[4], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[1], lyn[1], lyn[3]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4]]) + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] - 
+       Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[1], 
+        lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[1], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[1], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] + 2*Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[1], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       2*Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[1], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[1], lyn[3], lyn[3]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[3], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[3], lyn[2]], Lin[{lyn[2], lyn[4], lyn[1], lyn[3], 
+        lyn[4]}] -> Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[4], 
+        lyn[2]], Lin[{lyn[2], lyn[4], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[4], lyn[2]] + 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+         lyn[3]] + 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[2], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[2], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[2], lyn[4]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[3], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[4], lyn[3]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[3], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]]) - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[2]] - 2*Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+         lyn[2]], Lin[{lyn[2], lyn[4], lyn[3], lyn[1], lyn[3]}] -> 
+      -2*Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[3], lyn[2]], Lin[{lyn[2], lyn[4], lyn[3], lyn[1], 
+        lyn[4]}] -> -(Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]]) - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[3], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[3], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[3], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[4], lyn[1], lyn[3]}] -> 
+      -(Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]]) - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[2], lyn[4], lyn[4], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]], 
+     Lin[{lyn[3], lyn[1], lyn[1], lyn[2], lyn[4]}] -> 
+      -(Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]]) + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[1], 
+        lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[1], lyn[3], lyn[2], 
+        lyn[4]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]], Lin[{lyn[3], lyn[1], lyn[1], lyn[4], 
+        lyn[2]}] -> Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[1], 
+        lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[1], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]], 
+     Lin[{lyn[3], lyn[1], lyn[2], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[1], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[3], lyn[1], lyn[2], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]], 
+     Lin[{lyn[3], lyn[1], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[3], lyn[4]], Lin[{lyn[3], lyn[1], lyn[2], lyn[4], 
+        lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[1], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[1], 
+        lyn[4]], Lin[{lyn[3], lyn[1], lyn[2], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[3], lyn[1], lyn[2], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[1], lyn[2], lyn[4], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[4], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]], 
+     Lin[{lyn[3], lyn[1], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[3]] - 2*Lyn[lyn[1], lyn[3], lyn[3], lyn[2], 
+         lyn[4]], Lin[{lyn[3], lyn[1], lyn[3], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[3], lyn[2]], Lin[{lyn[3], lyn[1], lyn[4], lyn[1], 
+        lyn[2]}] -> Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[1], lyn[4], lyn[2]], Lin[{lyn[3], lyn[1], lyn[4], lyn[2], 
+        lyn[1]}] -> -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4]]) - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]], 
+     Lin[{lyn[3], lyn[1], lyn[4], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[3], lyn[1], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[1], lyn[4], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[4], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[3], lyn[1], lyn[4], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[3]] - 2*Lyn[lyn[1], lyn[4], lyn[3], lyn[3], 
+         lyn[2]], Lin[{lyn[3], lyn[1], lyn[4], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[2], lyn[1], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[1], 
+        lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[1], lyn[4], lyn[2], 
+        lyn[3]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[1], lyn[4]], Lin[{lyn[3], lyn[2], lyn[1], lyn[2], 
+        lyn[4]}] -> Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]], Lin[{lyn[3], lyn[2], lyn[1], lyn[3], 
+        lyn[4]}] -> Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[4], 
+        lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[1], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] + 
+       2*Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[1], 
+        lyn[4]], Lin[{lyn[3], lyn[2], lyn[1], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] + 2*Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[2], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[1], lyn[4], lyn[4]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[4], 
+        lyn[3]] + Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[4], 
+        lyn[4], lyn[2], lyn[3]], Lin[{lyn[3], lyn[2], lyn[2], lyn[1], 
+        lyn[4]}] -> (Lyn[lyn[2]]^2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[2], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[2]]^2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]])/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[3], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[3], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4]])/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[3], lyn[4]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[4], lyn[3]])/2 - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[1], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] + 
+       2*Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[4], lyn[3]] - 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+         lyn[3]], Lin[{lyn[3], lyn[2], lyn[4], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[2], lyn[4], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] - 
+       Lyn[lyn[2], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[3], lyn[1], lyn[2], lyn[4]}] -> 
+      (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[2], lyn[4]])/2 - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[3]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[3], lyn[2], lyn[4]], Lin[{lyn[3], lyn[3], lyn[1], lyn[4], 
+        lyn[2]}] -> (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[4], lyn[2]])/2 - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[3], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[3], lyn[2]], Lin[{lyn[3], lyn[3], lyn[2], lyn[1], 
+        lyn[4]}] -> (Lyn[lyn[2]]*Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[4]])/2 - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[2], lyn[4]])/2 - 
+       (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[4], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]], 
+     Lin[{lyn[3], lyn[3], lyn[2], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[4]])/2 + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] + 
+       (Lyn[lyn[1]]*Lyn[lyn[3]]^2*Lyn[lyn[2], lyn[4]])/2 + 
+       (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[4], lyn[2]])/2 - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]], 
+     Lin[{lyn[3], lyn[3], lyn[4], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[2], lyn[4]])/2 - 
+       (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[4], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[3], lyn[4], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[3]]^2*Lyn[lyn[2], lyn[4]])/2 + 
+       (Lyn[lyn[3]]^2*Lyn[lyn[1], lyn[2], lyn[4]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[1], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4]]) + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[1], 
+        lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[1], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[1], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       2*Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[2]], Lin[{lyn[3], lyn[4], lyn[1], lyn[2], 
+        lyn[3]}] -> Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[1], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[4]], Lin[{lyn[3], lyn[4], lyn[1], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[3], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[4], lyn[1], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[4], lyn[2]] + 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+         lyn[3]] + 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[4], lyn[2], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]^2*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4]])/2 + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[4], lyn[3]])/2 - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[2], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       2*Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[2], lyn[3]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[3], lyn[2]], Lin[{lyn[3], lyn[4], lyn[2], lyn[1], 
+        lyn[3]}] -> -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[2], lyn[1], lyn[4]}] -> 
+      -(Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[2], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4]] + 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[3], lyn[4]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[2], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[2], lyn[4], lyn[1]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[3], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[4], lyn[3], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]], 
+     Lin[{lyn[3], lyn[4], lyn[4], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]]) - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[4], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[3], lyn[4], lyn[4], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2], lyn[4]]*Lyn[lyn[3], lyn[4]]) + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]], 
+     Lin[{lyn[4], lyn[1], lyn[1], lyn[2], lyn[3]}] -> 
+      -(Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]]) + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[1], 
+        lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[1], lyn[4], lyn[2], 
+        lyn[3]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[1], lyn[4]], Lin[{lyn[4], lyn[1], lyn[1], lyn[3], 
+        lyn[2]}] -> Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[1], 
+        lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[1], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]] + Lyn[lyn[1], lyn[3], lyn[1], lyn[4], 
+        lyn[2]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[4], lyn[1], lyn[2], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[1], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[4], lyn[1], lyn[2], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[2], lyn[3]], 
+     Lin[{lyn[4], lyn[1], lyn[2], lyn[3], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[1], lyn[4]], 
+     Lin[{lyn[4], lyn[1], lyn[2], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[2]], 
+     Lin[{lyn[4], lyn[1], lyn[2], lyn[3], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[3]], 
+     Lin[{lyn[4], lyn[1], lyn[2], lyn[3], lyn[4]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[4]], Lin[{lyn[4], lyn[1], lyn[2], lyn[4], 
+        lyn[3]}] -> Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]], 
+     Lin[{lyn[4], lyn[1], lyn[3], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[1], 
+        lyn[4]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[1], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[1], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[1], lyn[4]], Lin[{lyn[4], lyn[1], lyn[3], lyn[2], 
+        lyn[1]}] -> -(Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3]]) - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[1], lyn[4]], 
+     Lin[{lyn[4], lyn[1], lyn[3], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[2]], 
+     Lin[{lyn[4], lyn[1], lyn[3], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[3]], 
+     Lin[{lyn[4], lyn[1], lyn[3], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[4]], Lin[{lyn[4], lyn[1], lyn[3], lyn[3], 
+        lyn[2]}] -> Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[3], lyn[4], lyn[2]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[3], 
+        lyn[2]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[3], lyn[2]], 
+     Lin[{lyn[4], lyn[1], lyn[3], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[1], lyn[4], lyn[2], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[4], lyn[3]] - 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[2], 
+         lyn[3]], Lin[{lyn[4], lyn[1], lyn[4], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[4], lyn[2]] - 2*Lyn[lyn[1], lyn[4], lyn[4], lyn[3], 
+         lyn[2]], Lin[{lyn[4], lyn[2], lyn[1], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[1], 
+        lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[1], lyn[3], lyn[2], 
+        lyn[4]] + Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[1], lyn[3]], Lin[{lyn[4], lyn[2], lyn[1], lyn[2], 
+        lyn[3]}] -> Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[2], lyn[3]], Lin[{lyn[4], lyn[2], lyn[1], lyn[3], 
+        lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] + 
+       2*Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[1], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[1], 
+        lyn[3]], Lin[{lyn[4], lyn[2], lyn[1], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[2]] + 2*Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[2], lyn[1], lyn[3], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[3], 
+        lyn[3]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[3], lyn[2], lyn[4]], Lin[{lyn[4], lyn[2], lyn[1], lyn[3], 
+        lyn[4]}] -> Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[1], lyn[4], lyn[3]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[4]], Lin[{lyn[4], lyn[2], lyn[2], lyn[1], lyn[3]}] -> 
+      (Lyn[lyn[2]]^2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[2], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[2], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[2], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[2]]^2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]])/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[3], lyn[1], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]) + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[3], lyn[4]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[4], lyn[3]])/2 - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[1], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[3], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[2], lyn[3], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3]] - 
+       2*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] + 
+       2*Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[3]] - 2*Lyn[lyn[1], lyn[3], lyn[3], lyn[2], 
+         lyn[4]], Lin[{lyn[4], lyn[2], lyn[3], lyn[1], lyn[4]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[4]], Lin[{lyn[4], lyn[2], lyn[3], lyn[2], 
+        lyn[1]}] -> Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[3], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[3], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[4]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[4], lyn[1], lyn[3]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] + 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], lyn[2], lyn[4], 
+        lyn[3]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[2], lyn[4], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[2], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[1], lyn[1], lyn[2]}] -> 
+      -(Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3]]) + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] - 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[1], 
+        lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[1], lyn[3], lyn[4], 
+        lyn[2]] - Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[1], lyn[2], lyn[1]}] -> 
+      Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       2*Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[1], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[1], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[1], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[1], lyn[2], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[2], lyn[3], lyn[4], 
+        lyn[2]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[2]], Lin[{lyn[4], lyn[3], lyn[1], lyn[2], 
+        lyn[3]}] -> Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[3], lyn[2], lyn[4], 
+        lyn[3]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[3]], 
+     Lin[{lyn[4], lyn[3], lyn[1], lyn[2], lyn[4]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[1], lyn[3], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[3], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[3], lyn[2]], 
+     Lin[{lyn[4], lyn[3], lyn[1], lyn[4], lyn[2]}] -> 
+      Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[4], lyn[2], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[4], 
+        lyn[3], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[4], 
+        lyn[2]], Lin[{lyn[4], lyn[3], lyn[2], lyn[1], lyn[1]}] -> 
+      (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]] - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]])/2 - 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       (Lyn[lyn[1]]^2*Lyn[lyn[2], lyn[3], lyn[4]])/2 - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[1], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[2], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       2*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       2*Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[2], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[3], lyn[4], lyn[2]], Lin[{lyn[4], lyn[3], lyn[2], lyn[1], 
+        lyn[3]}] -> Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[3]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[3], lyn[4]], Lin[{lyn[4], lyn[3], lyn[2], lyn[1], 
+        lyn[4]}] -> Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] - 
+       2*Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[4]], Lin[{lyn[4], lyn[3], lyn[2], lyn[2], 
+        lyn[1]}] -> (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[3]]*Lyn[lyn[4]])/2 - 
+       Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3]] - 
+       (Lyn[lyn[1]]*Lyn[lyn[2]]^2*Lyn[lyn[3], lyn[4]])/2 + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[2], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[2], lyn[4], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4]]) + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[4]] + 
+       Lyn[lyn[2]]*Lyn[lyn[1], lyn[4]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       2*Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[3], lyn[1], lyn[2]}] -> 
+      (Lyn[lyn[3]]^2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[3], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[3], lyn[3], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]^2*Lyn[lyn[4]])/2 - 
+       (Lyn[lyn[3]]^2*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[3]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[3], lyn[4], lyn[1], lyn[2]}] -> 
+      Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] + 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2]] - 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], 
+        lyn[2], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[3], lyn[4], lyn[2], lyn[1]}] -> 
+      -(Lyn[lyn[1]]*Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[4]]) + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[3]]*Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] - 
+       Lyn[lyn[3], lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       2*Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] + 
+       2*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[4], lyn[3], lyn[4]], 
+     Lin[{lyn[4], lyn[4], lyn[1], lyn[2], lyn[3]}] -> 
+      (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[2], lyn[3]])/2 - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[2], lyn[3]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] + Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[3], lyn[4]] + Lyn[lyn[1], lyn[2], lyn[4], lyn[4], 
+        lyn[3]] + Lyn[lyn[1], lyn[4], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[2], lyn[4], lyn[3]] + Lyn[lyn[1], lyn[4], 
+        lyn[4], lyn[2], lyn[3]], Lin[{lyn[4], lyn[4], lyn[1], lyn[3], 
+        lyn[2]}] -> (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[3], lyn[2]])/2 - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[4], lyn[3], lyn[2]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]] + Lyn[lyn[1], lyn[3], 
+        lyn[4], lyn[2], lyn[4]] + Lyn[lyn[1], lyn[3], lyn[4], lyn[4], 
+        lyn[2]] + Lyn[lyn[1], lyn[4], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1], lyn[4], lyn[3], lyn[4], lyn[2]] + Lyn[lyn[1], lyn[4], 
+        lyn[4], lyn[3], lyn[2]], Lin[{lyn[4], lyn[4], lyn[2], lyn[1], 
+        lyn[3]}] -> (Lyn[lyn[2]]*Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[3]])/2 - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] - 
+       (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[2], lyn[3]])/2 - 
+       (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[3], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[4], lyn[3]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] - Lyn[lyn[1], lyn[2], 
+        lyn[4], lyn[3], lyn[4]] - Lyn[lyn[1], lyn[2], lyn[4], lyn[4], 
+        lyn[3]] - Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]], 
+     Lin[{lyn[4], lyn[4], lyn[2], lyn[3], lyn[1]}] -> 
+      -(Lyn[lyn[2]]*Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[3]])/2 + 
+       (Lyn[lyn[1]]*Lyn[lyn[4]]^2*Lyn[lyn[2], lyn[3]])/2 + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4]] + 
+       (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[3], lyn[2]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[4], lyn[3]] - 
+       Lyn[lyn[1], lyn[3]]*Lyn[lyn[2], lyn[4], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[4], lyn[4], lyn[3]] + 
+       Lyn[lyn[1], lyn[3], lyn[2], lyn[4], lyn[4]], 
+     Lin[{lyn[4], lyn[4], lyn[3], lyn[1], lyn[2]}] -> 
+      (Lyn[lyn[3]]*Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[2]])/2 - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] - 
+       (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[2], lyn[3]])/2 - 
+       (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[3], lyn[2]])/2 + 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[2], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[3], lyn[4], lyn[2]] - 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]] - Lyn[lyn[1], lyn[3], 
+        lyn[2], lyn[4], lyn[4]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[2], 
+        lyn[4]] - Lyn[lyn[1], lyn[3], lyn[4], lyn[4], lyn[2]], 
+     Lin[{lyn[4], lyn[4], lyn[3], lyn[2], lyn[1]}] -> 
+      (Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3]]*Lyn[lyn[4]]^2)/2 - 
+       (Lyn[lyn[3]]*Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[2]])/2 - 
+       (Lyn[lyn[1]]*Lyn[lyn[4]]^2*Lyn[lyn[2], lyn[3]])/2 - 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[4]]*Lyn[lyn[3], lyn[4]] + 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4]] + 
+       (Lyn[lyn[4]]^2*Lyn[lyn[1], lyn[2], lyn[3]])/2 + 
+       Lyn[lyn[1]]*Lyn[lyn[4]]*Lyn[lyn[2], lyn[3], lyn[4]] + 
+       Lyn[lyn[1]]*Lyn[lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[1], lyn[2]]*Lyn[lyn[3], lyn[4], lyn[4]] - 
+       Lyn[lyn[4]]*Lyn[lyn[1], lyn[2], lyn[3], lyn[4]] - 
+       Lyn[lyn[1]]*Lyn[lyn[2], lyn[3], lyn[4], lyn[4]] + 
+       Lyn[lyn[1], lyn[2], lyn[3], lyn[4], lyn[4]]|>

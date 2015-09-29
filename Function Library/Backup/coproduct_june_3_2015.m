@@ -177,7 +177,7 @@ coproduct[weights_:Null,func_]:=Expand[If[MemberQ[{func},Alternatives[\[Zeta][__
 													If[Length[weights]>2,higherCoproduct[weights,func/.SVHPLreplacements/.toIMPL,If[FreeQ[func,G[__]],CircleDotHPL,CircleDotG]]]]]]]]]/;!MatchQ[func,Alternatives[Times[-1,__],Plus[_,__]]]\[And]FreeQ[func,CircleDot];
 
 twoCoproduct[weights_,0,outputType_]:=0;
-twoCoproduct[weights_,c_ func_,outputType_]:=c twoCoproduct[weights,func,outputType]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[func];
+twoCoproduct[weights_,c_*func_,outputType_]:=c*twoCoproduct[weights,func,outputType]/;NumericQ[c]\[And]FreeQ[c,Pi]\[And]!NumericQ[func];
 twoCoproduct[weights_,IMPL[ai_,aVector_,af_],ouputType_]:=Print[StringJoin["The coproduct weights ",ToString[weights]," don't match the transcendental weight of the function ",ToString[IMPL[ai,aVector,af]]]]/;Length[aVector]!=Total[weights];
 twoCoproduct[{0,w_},IMPL[ai_,aVector_,af_],outputType_]:=outputType[1,IMPL[ai,aVector,af]]/;w!=0;
 twoCoproduct[{w_,0},IMPL[ai_,aVector_,af_],outputType_]:=outputType[IMPL[ai,aVector,af],1]/;w!=0;

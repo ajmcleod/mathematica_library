@@ -1,0 +1,104 @@
+convertMeToLanceTerms[irreducibles] = 
+    <|Subscript[OverTilde[\[CapitalPhi]], 6] -> tPhi6[u, v, w], 
+     Subscript[F, 1][u, v, w] -> F1[u, v, w], Subscript[F, 1][v, w, u] -> 
+      F1[v, w, u], Subscript[F, 1][w, u, v] -> F1[w, u, v], 
+     Superscript[\[CapitalOmega], "(2)"][u, v, w] -> Omega2t[u, v, w], 
+     Superscript[\[CapitalOmega], "(2)"][v, w, u] -> Omega2t[v, w, u], 
+     Superscript[\[CapitalOmega], "(2)"][w, u, v] -> Omega2t[w, u, v], 
+     G -> G[u, v, w], N -> Nt[u, v, w], O -> Ot[u, v, w], 
+     Subscript[H, 1][u, v, w] -> H1[u, v, w], Subscript[H, 1][v, w, u] -> 
+      H1[v, w, u], Subscript[H, 1][w, u, v] -> H1[w, u, v], 
+     Subscript[J, 1][u, v, w] -> J1[u, v, w], Subscript[J, 1][v, w, u] -> 
+      J1[v, w, u], Subscript[J, 1][w, u, v] -> J1[w, u, v], 
+     Subscript[K, 1][u, v, w] -> K1[u, v, w], Subscript[K, 1][v, w, u] -> 
+      K1[v, w, u], Subscript[K, 1][w, u, v] -> K1[w, u, v], 
+     Subscript[M, 1][u, v, w] -> M1t[u, v, w], Subscript[M, 1][v, w, u] -> 
+      M1t[v, w, u], Subscript[M, 1][w, u, v] -> M1t[w, u, v], 
+     Subscript[M, 1][u, w, v] -> M1t[u, w, v], Subscript[M, 1][w, v, u] -> 
+      M1t[w, v, u], Subscript[M, 1][v, u, w] -> M1t[v, u, w], 
+     Subscript[Q, "ep"][u, v, w] -> Qu[u, v, w], 
+     Subscript[Q, "ep"][v, w, u] -> Qu[v, w, u], 
+     Subscript[Q, "ep"][w, u, v] -> Qu[w, u, v], 
+     Subscript[Q, "ep"][u, w, v] -> Qu[u, w, v], 
+     Subscript[Q, "ep"][w, v, u] -> Qu[w, v, u], 
+     Subscript[Q, "ep"][v, u, w] -> Qu[v, u, w]|>
+ 
+convertMeToLanceTerms[\[Zeta]] = <|\[Zeta][2] -> z2, \[Zeta][3] -> z3, 
+     \[Zeta][5] -> z5, \[Zeta][7] -> z7, \[Zeta][5, 3] -> Zeta53, 
+     \[Zeta][9] -> z9, \[Zeta][7, 3] -> Zeta73|>
+ 
+convertMeToLanceTerms[HPLs, var_, 5] := convertMeToLanceTerms[HPLs, var, 5] = 
+     Association[HPL[{1}, 1 - var] -> H1m[var], HPL[{0, 1}, 1 - var] -> 
+       H2m[var], HPL[{0, 0, 1}, 1 - var] -> H3m[var], 
+      HPL[{0, 1, 1}, 1 - var] -> H21m[var], HPL[{0, 0, 0, 1}, 1 - var] -> 
+       H4m[var], HPL[{0, 0, 1, 1}, 1 - var] -> H31m[var], 
+      HPL[{0, 1, 1, 1}, 1 - var] -> H211m[var], 
+      HPL[{0, 0, 0, 0, 1}, 1 - var] -> H5m[var], 
+      HPL[{0, 0, 0, 1, 1}, 1 - var] -> H41m[var], 
+      HPL[{0, 0, 1, 0, 1}, 1 - var] -> H32m[var], 
+      HPL[{0, 0, 1, 1, 1}, 1 - var] -> H311m[var], 
+      HPL[{0, 1, 0, 1, 1}, 1 - var] -> H221m[var], 
+      HPL[{0, 1, 1, 1, 1}, 1 - var] -> H2111m[var]]
+ 
+convertMeToLanceTerms[HPLs, var_, 6] := convertMeToLanceTerms[HPLs, var, 6] = 
+     Association[HPL[{0, 0, 0, 0, 0, 1}, 1 - var] -> H6m[var], 
+      HPL[{0, 0, 0, 0, 1, 1}, 1 - var] -> H51m[var], 
+      HPL[{0, 0, 0, 1, 0, 1}, 1 - var] -> H42m[var], 
+      HPL[{0, 0, 0, 1, 1, 1}, 1 - var] -> H411m[var], 
+      HPL[{0, 0, 1, 0, 1, 1}, 1 - var] -> H321m[var], 
+      HPL[{0, 0, 1, 1, 0, 1}, 1 - var] -> H312m[var], 
+      HPL[{0, 0, 1, 1, 1, 1}, 1 - var] -> H3111m[var], 
+      HPL[{0, 1, 0, 1, 1, 1}, 1 - var] -> H2211m[var], 
+      HPL[{0, 1, 1, 1, 1, 1}, 1 - var] -> H21111m[var]]
+ 
+convertMeToLanceTerms[HPLs, var_, 7] := convertMeToLanceTerms[HPLs, var, 7] = 
+     Association[HPL[{0, 0, 0, 0, 0, 0, 1}, 1 - var] -> H7m[var], 
+      HPL[{0, 0, 0, 0, 0, 1, 1}, 1 - var] -> H61m[var], 
+      HPL[{0, 0, 0, 0, 1, 0, 1}, 1 - var] -> H52m[var], 
+      HPL[{0, 0, 0, 0, 1, 1, 1}, 1 - var] -> H511m[var], 
+      HPL[{0, 0, 0, 1, 0, 0, 1}, 1 - var] -> H43m[var], 
+      HPL[{0, 0, 0, 1, 0, 1, 1}, 1 - var] -> H421m[var], 
+      HPL[{0, 0, 0, 1, 1, 0, 1}, 1 - var] -> H412m[var], 
+      HPL[{0, 0, 0, 1, 1, 1, 1}, 1 - var] -> H4111m[var], 
+      HPL[{0, 0, 1, 0, 0, 1, 1}, 1 - var] -> H331m[var], 
+      HPL[{0, 0, 1, 0, 1, 0, 1}, 1 - var] -> H322m[var], 
+      HPL[{0, 0, 1, 0, 1, 1, 1}, 1 - var] -> H3211m[var], 
+      HPL[{0, 0, 1, 1, 0, 1, 1}, 1 - var] -> H3121m[var], 
+      HPL[{0, 0, 1, 1, 1, 0, 1}, 1 - var] -> H3112m[var], 
+      HPL[{0, 0, 1, 1, 1, 1, 1}, 1 - var] -> H31111m[var], 
+      HPL[{0, 1, 0, 1, 0, 1, 1}, 1 - var] -> H2221m[var], 
+      HPL[{0, 1, 0, 1, 1, 1, 1}, 1 - var] -> H22111m[var], 
+      HPL[{0, 1, 1, 0, 1, 1, 1}, 1 - var] -> H21211m[var], 
+      HPL[{0, 1, 1, 1, 1, 1, 1}, 1 - var] -> H211111m[var]]
+ 
+convertMeToLanceTerms[HPLs, var_, 8] := convertMeToLanceTerms[HPLs, var, 8] = 
+     Association[HPL[{0, 0, 0, 0, 0, 0, 0, 1}, 1 - var] -> H8m[var], 
+      HPL[{0, 0, 0, 0, 0, 0, 1, 1}, 1 - var] -> H71m[var], 
+      HPL[{0, 0, 0, 0, 0, 1, 0, 1}, 1 - var] -> H62m[var], 
+      HPL[{0, 0, 0, 0, 0, 1, 1, 1}, 1 - var] -> H611m[var], 
+      HPL[{0, 0, 0, 0, 1, 0, 0, 1}, 1 - var] -> H53m[var], 
+      HPL[{0, 0, 0, 0, 1, 0, 1, 1}, 1 - var] -> H521m[var], 
+      HPL[{0, 0, 0, 0, 1, 1, 0, 1}, 1 - var] -> H512m[var], 
+      HPL[{0, 0, 0, 0, 1, 1, 1, 1}, 1 - var] -> H5111m[var], 
+      HPL[{0, 0, 0, 1, 0, 0, 1, 1}, 1 - var] -> H431m[var], 
+      HPL[{0, 0, 0, 1, 0, 1, 0, 1}, 1 - var] -> H422m[var], 
+      HPL[{0, 0, 0, 1, 0, 1, 1, 1}, 1 - var] -> H4211m[var], 
+      HPL[{0, 0, 0, 1, 1, 0, 0, 1}, 1 - var] -> H413m[var], 
+      HPL[{0, 0, 0, 1, 1, 0, 1, 1}, 1 - var] -> H4121m[var], 
+      HPL[{0, 0, 0, 1, 1, 1, 0, 1}, 1 - var] -> H4112m[var], 
+      HPL[{0, 0, 0, 1, 1, 1, 1, 1}, 1 - var] -> H41111m[var], 
+      HPL[{0, 0, 1, 0, 0, 1, 0, 1}, 1 - var] -> H332m[var], 
+      HPL[{0, 0, 1, 0, 0, 1, 1, 1}, 1 - var] -> H3311m[var], 
+      HPL[{0, 0, 1, 0, 1, 0, 1, 1}, 1 - var] -> H3221m[var], 
+      HPL[{0, 0, 1, 0, 1, 1, 0, 1}, 1 - var] -> H3212m[var], 
+      HPL[{0, 0, 1, 0, 1, 1, 1, 1}, 1 - var] -> H32111m[var], 
+      HPL[{0, 0, 1, 1, 0, 1, 0, 1}, 1 - var] -> H3122m[var], 
+      HPL[{0, 0, 1, 1, 0, 1, 1, 1}, 1 - var] -> H31211m[var], 
+      HPL[{0, 0, 1, 1, 1, 0, 1, 1}, 1 - var] -> H31121m[var], 
+      HPL[{0, 0, 1, 1, 1, 1, 0, 1}, 1 - var] -> H31112m[var], 
+      HPL[{0, 0, 1, 1, 1, 1, 1, 1}, 1 - var] -> H311111m[var], 
+      HPL[{0, 1, 0, 1, 0, 1, 1, 1}, 1 - var] -> H22211m[var], 
+      HPL[{0, 1, 0, 1, 1, 0, 1, 1}, 1 - var] -> H22121m[var], 
+      HPL[{0, 1, 0, 1, 1, 1, 1, 1}, 1 - var] -> H221111m[var], 
+      HPL[{0, 1, 1, 0, 1, 1, 1, 1}, 1 - var] -> H212111m[var], 
+      HPL[{0, 1, 1, 1, 1, 1, 1, 1}, 1 - var] -> H2111111m[var]]

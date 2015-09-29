@@ -1,6 +1,6 @@
-flipArgument2Ew5HPL[{x1_,xn___}, \[Delta]_:-1]:=Join@@Table[flipArgument2Ew5HPL[i, \[Delta]],{i,List[x1,xn]}];
+flipArgument2Ew5HPL[{x1_,xn___}]:=Join@@Table[flipArgument2Ew5HPL[i],{i,List[x1,xn]}];
 
-flipArgument2Ew5HPL[x_, \[Delta]_:-1] := flipArgument2Ew5HPL[x, \[Delta]] = {HPL[{0}, x] -> -HPL[{1}, 1 - x], 
+flipArgument2Ew5HPL[x_] := flipArgument2Ew5HPL[x] = <|HPL[{0}, x] -> -HPL[{1}, 1 - x], 
      HPL[{1}, x] -> -HPL[{0}, 1 - x], HPL[{0, 1}, x] -> 
       HPL[{0}, 1 - x]*HPL[{1}, 1 - x] - HPL[{0, 1}, 1 - x] + \[Zeta][2], 
      HPL[{0, 0, 1}, x] -> -(HPL[{0}, 1 - x]*HPL[{1}, 1 - x]^2)/2 + 
@@ -69,4 +69,4 @@ flipArgument2Ew5HPL[x_, \[Delta]_:-1] := flipArgument2Ew5HPL[x, \[Delta]] = {HPL
        (HPL[{0}, 1 - x]^3*HPL[{0, 1}, 1 - x])/6 - 
        (HPL[{0}, 1 - x]^2*HPL[{0, 0, 1}, 1 - x])/2 + 
        HPL[{0}, 1 - x]*HPL[{0, 0, 0, 1}, 1 - x] - HPL[{0, 0, 0, 0, 1}, 
-        1 - x] + \[Zeta][5]}
+        1 - x] + \[Zeta][5]|>;

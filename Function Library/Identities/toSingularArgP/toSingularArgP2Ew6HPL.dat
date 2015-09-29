@@ -1,6 +1,6 @@
 toSingularArgP2Ew6HPL[{x1_,xn___}, \[Delta]_:-1]:=Join@@Table[toSingularArgP2Ew6HPL[i, \[Delta]],{i,List[x1,xn]}];
 
-toSingularArgP2Ew6HPL[x_ ,\[Delta]_:-1] := toSingularArgP2Ew6HPL[x, \[Delta]] = {HPL[{0, 0, 0, 0, 0, 1}, x] -> 
+toSingularArgP2Ew6HPL[x_ ,\[Delta]_:-1] := toSingularArgP2Ew6HPL[x, \[Delta]] = <|HPL[{0, 0, 0, 0, 0, 1}, x] -> 
       -HPL[{1}, x/(-1 + x)]^6/720 - (HPL[{1}, x/(-1 + x)]^4*
          HPL[{0, 1}, x/(-1 + x)])/24 - (HPL[{1}, x/(-1 + x)]^3*
          HPL[{0, 0, 1}, x/(-1 + x)])/6 + (HPL[{1}, x/(-1 + x)]^3*
@@ -79,4 +79,4 @@ toSingularArgP2Ew6HPL[x_ ,\[Delta]_:-1] := toSingularArgP2Ew6HPL[x, \[Delta]] = 
        4*HPL[{1}, x/(-1 + x)]*HPL[{0, 1, 1, 1, 1}, x/(-1 + x)] + 
        HPL[{0, 1, 0, 1, 1, 1}, x/(-1 + x)] + 
        11*HPL[{0, 1, 1, 1, 1, 1}, x/(-1 + x)], HPL[{0, 1, 1, 1, 1, 1}, x] -> 
-      -HPL[{1}, x/(-1 + x)]^6/720 - HPL[{0, 1, 1, 1, 1, 1}, x/(-1 + x)]}
+      -HPL[{1}, x/(-1 + x)]^6/720 - HPL[{0, 1, 1, 1, 1, 1}, x/(-1 + x)]|>;
