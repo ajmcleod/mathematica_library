@@ -1,0 +1,550 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     17504,        541]
+NotebookOptionsPosition[     15408,        469]
+NotebookOutlinePosition[     15765,        485]
+CellTagsIndexPosition[     15722,        482]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.6531111768400097`*^9, 3.653111179703165*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<allIntegrabilityEquationsEMHV.mx\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6530926380523577`*^9, 3.653092646849495*^9}, {
+  3.653096359015307*^9, 3.653096359074411*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "allIntegrabilityEquationsEMHV", "]"}]], "Input",
+ CellChangeTimes->{{3.653092659984289*^9, 3.653092660938402*^9}}],
+
+Cell[BoxData[
+ FormBox["112482", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653096272587722*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allIntegrabilityEquationsEMHVexpanded", "=", 
+   RowBox[{"DeleteDuplicates", "[", 
+    RowBox[{"DeleteCases", "[", 
+     RowBox[{
+      RowBox[{"Expand", "[", "allIntegrabilityEquationsEMHV", "]"}], ",", 
+      "0"}], "]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.653107561646533*^9, 3.653107583948287*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "allIntegrabilityEquationsEMHVexpanded", 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.653107694880515*^9, 3.653107700683219*^9}}],
+
+Cell[BoxData[
+ FormBox["110609", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6531081106823683`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<allIntegrabilityEquationsEMHVexpanded.mx\>\"", ",", 
+    "allIntegrabilityEquationsEMHVexpanded"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.653107592771558*^9, 3.653107601901445*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Get", "[", "\"\<allIntegrabilityEquationsEMHVexpanded.mx\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.653111116384142*^9, 3.6531111211214457`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allIntegrabilityEquationsEMHVsorted", "=", 
+   RowBox[{"Sort", "[", 
+    RowBox[{"allIntegrabilityEquationsEMHVexpanded", ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "#1", "]"}], "<", 
+       RowBox[{"Length", "[", "#2", "]"}]}], "&"}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.6531072951655903`*^9, 3.653107318573292*^9}, 
+   3.653107608385923*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"firstStageReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"Take", "[", 
+      RowBox[{"allIntegrabilityEquationsEMHVsorted", ",", "40000"}], "]"}], 
+     ",", "1"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.653109301760831*^9, 3.6531093146807203`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<firstStageReplacements.mx\>\"", ",", "firstStageReplacements"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.653127889204986*^9, 3.653127901243474*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Length", "[", "firstStageReplacements", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{"firstStageReplacements", ",", 
+    RowBox[{
+     RowBox[{"MatchQ", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"Rule", "[", 
+        RowBox[{"_", ",", "0"}], "]"}]}], "]"}], "&"}]}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{"firstStageReplacements", ",", 
+    RowBox[{
+     RowBox[{"!", 
+      RowBox[{"MatchQ", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"Rule", "[", 
+         RowBox[{"_", ",", "0"}], "]"}]}], "]"}]}], "&"}]}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6531100452178707`*^9, 3.653110095588155*^9}}],
+
+Cell[BoxData[
+ FormBox["9226", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653111838189465*^9, 3.653128695435298*^9}],
+
+Cell[BoxData[
+ FormBox["6006", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653111838189465*^9, 3.653128695476022*^9}],
+
+Cell[BoxData[
+ FormBox["3220", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653111838189465*^9, 3.6531286955148697`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"firstStageEquationsEMHV", "=", 
+   RowBox[{"Sort", "[", 
+    RowBox[{
+     RowBox[{"DeleteDuplicates", "[", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Select", "[", 
+             RowBox[{"firstStageReplacements", ",", 
+              RowBox[{
+               RowBox[{"!", 
+                RowBox[{"MatchQ", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"Rule", "[", 
+                   RowBox[{"_", ",", "0"}], "]"}]}], "]"}]}], "&"}]}], "]"}], 
+            "/.", 
+            RowBox[{
+             RowBox[{"Rule", "[", 
+              RowBox[{"a_", ",", "b_"}], "]"}], "\[RuleDelayed]", 
+             RowBox[{"(", 
+              RowBox[{"b", "-", "a"}], ")"}]}]}], ")"}], ",", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Drop", "[", 
+             RowBox[{"allIntegrabilityEquationsEMHVsorted", ",", "40000"}], 
+             "]"}], "/.", 
+            RowBox[{"Association", "@@", 
+             RowBox[{"Select", "[", 
+              RowBox[{"firstStageReplacements", ",", 
+               RowBox[{
+                RowBox[{"MatchQ", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"Rule", "[", 
+                   RowBox[{"_", ",", "0"}], "]"}]}], "]"}], "&"}]}], 
+              "]"}]}]}], ")"}]}], "]"}], ",", "0"}], "]"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "#1", "]"}], "<", 
+       RowBox[{"Length", "[", "#2", "]"}]}], "&"}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.653110105854068*^9, 3.653110147566448*^9}, {
+  3.653110181918983*^9, 3.653110199991274*^9}, {3.653110272750863*^9, 
+  3.653110280644199*^9}, {3.65311121304245*^9, 3.653111245375914*^9}, {
+  3.653112561010817*^9, 3.653112578314082*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<firstStageEquationsEMHV.mx\>\"", ",", "firstStageEquationsEMHV"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.653110205180891*^9, 3.653110224175579*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<firstStageEquationsEMHV.mx\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.653127310417117*^9, 3.653127317050293*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "firstStageEquationsEMHV", "]"}]], "Input",
+ CellChangeTimes->{{3.653112590791472*^9, 3.653112597953661*^9}}],
+
+Cell[BoxData[
+ FormBox["54710", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6531128313903503`*^9, 3.653127324572297*^9, 
+  3.653129045917562*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"secondStageReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"Take", "[", 
+      RowBox[{"firstStageEquationsEMHV", ",", "35000"}], "]"}], ",", "1"}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.653110299827415*^9, 3.653110314039254*^9}, {
+   3.653110974494338*^9, 3.653110985449801*^9}, {3.6531130108720083`*^9, 
+   3.6531130109567223`*^9}, 3.653113869318841*^9, {3.65312734526175*^9, 
+   3.6531273462029667`*^9}, {3.653128030246298*^9, 3.6531280303522367`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<secondStageReplacements.mx\>\"", ",", "secondStageReplacements"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6531279180511*^9, 3.653127925333271*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Length", "[", "secondStageReplacements", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{"secondStageReplacements", ",", 
+    RowBox[{
+     RowBox[{"MatchQ", "[", 
+      RowBox[{"#", ",", 
+       RowBox[{"Rule", "[", 
+        RowBox[{"_", ",", "0"}], "]"}]}], "]"}], "&"}]}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Length", "[", 
+  RowBox[{"Select", "[", 
+   RowBox[{"secondStageReplacements", ",", 
+    RowBox[{
+     RowBox[{"!", 
+      RowBox[{"MatchQ", "[", 
+       RowBox[{"#", ",", 
+        RowBox[{"Rule", "[", 
+         RowBox[{"_", ",", "0"}], "]"}]}], "]"}]}], "&"}]}], "]"}], 
+  "]"}]}], "Input",
+ CellChangeTimes->{{3.6531100452178707`*^9, 3.653110095588155*^9}, {
+  3.653113885203455*^9, 3.6531138880347347`*^9}}],
+
+Cell[BoxData[
+ FormBox["6877", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653111838189465*^9, 3.653113888632436*^9, 
+  3.653127715173311*^9, 3.653129709056801*^9}],
+
+Cell[BoxData[
+ FormBox["2678", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653111838189465*^9, 3.653113888632436*^9, 
+  3.653127715173311*^9, 3.6531297090848017`*^9}],
+
+Cell[BoxData[
+ FormBox["4199", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653111838189465*^9, 3.653113888632436*^9, 
+  3.653127715173311*^9, 3.6531297091094418`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"secondStageEquationsEMHV", "=", 
+   RowBox[{"Sort", "[", 
+    RowBox[{
+     RowBox[{"DeleteDuplicates", "[", 
+      RowBox[{"DeleteCases", "[", 
+       RowBox[{
+        RowBox[{"Join", "[", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Select", "[", 
+             RowBox[{"secondStageReplacements", ",", 
+              RowBox[{
+               RowBox[{"!", 
+                RowBox[{"MatchQ", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"Rule", "[", 
+                   RowBox[{"_", ",", "0"}], "]"}]}], "]"}]}], "&"}]}], "]"}], 
+            "/.", 
+            RowBox[{
+             RowBox[{"Rule", "[", 
+              RowBox[{"a_", ",", "b_"}], "]"}], "\[RuleDelayed]", 
+             RowBox[{"(", 
+              RowBox[{"b", "-", "a"}], ")"}]}]}], ")"}], ",", 
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{"Drop", "[", 
+             RowBox[{"firstStageEquationsEMHV", ",", "35000"}], "]"}], "/.", 
+            RowBox[{"Association", "@@", 
+             RowBox[{"Select", "[", 
+              RowBox[{"secondStageReplacements", ",", 
+               RowBox[{
+                RowBox[{"MatchQ", "[", 
+                 RowBox[{"#", ",", 
+                  RowBox[{"Rule", "[", 
+                   RowBox[{"_", ",", "0"}], "]"}]}], "]"}], "&"}]}], 
+              "]"}]}]}], ")"}]}], "]"}], ",", "0"}], "]"}], "]"}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Length", "[", "#1", "]"}], "<", 
+       RowBox[{"Length", "[", "#2", "]"}]}], "&"}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.653110105854068*^9, 3.653110147566448*^9}, {
+  3.653110181918983*^9, 3.653110199991274*^9}, {3.653110272750863*^9, 
+  3.653110280644199*^9}, {3.65311121304245*^9, 3.653111245375914*^9}, {
+  3.653112561010817*^9, 3.653112578314082*^9}, {3.653113945066214*^9, 
+  3.653113965525055*^9}, {3.653127727019154*^9, 3.653127727098166*^9}, {
+  3.653128037937842*^9, 3.65312803807341*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<secondStageEquationsEMHV.mx\>\"", ",", "secondStageEquationsEMHV"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.653127372918716*^9, 3.653127374136047*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "secondStageEquationsEMHV", "]"}]], "Input",
+ CellChangeTimes->{{3.653114003874166*^9, 3.653114006311331*^9}}],
+
+Cell[BoxData[
+ FormBox["23755", TraditionalForm]], "Output",
+ CellChangeTimes->{3.65311401167616*^9, 3.653127791352775*^9, 
+  3.653129760213264*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVintegrabilitySolutions", "=", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{"Select", "[", 
+      RowBox[{"firstStageReplacements", ",", 
+       RowBox[{
+        RowBox[{"MatchQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"Rule", "[", 
+           RowBox[{"_", ",", "0"}], "]"}]}], "]"}], "&"}]}], "]"}], ",", 
+     RowBox[{"Select", "[", 
+      RowBox[{"secondStageReplacements", ",", 
+       RowBox[{
+        RowBox[{"MatchQ", "[", 
+         RowBox[{"#", ",", 
+          RowBox[{"Rule", "[", 
+           RowBox[{"_", ",", "0"}], "]"}]}], "]"}], "&"}]}], "]"}], ",", 
+     RowBox[{"reduce", "[", 
+      RowBox[{"secondStageEquationsEMHV", ",", "1"}], "]"}]}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6531140322416677`*^9, 3.653114056311903*^9}, {
+   3.653127420805585*^9, 3.6531274527508173`*^9}, 3.653127503529675*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVintegrabilitySolutions.mx\>\"", ",", 
+    "EMHVintegrabilitySolutions"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.653127389759038*^9, 3.653127400100758*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "EMHVintegrabilitySolutions", "]"}]], "Input",
+ CellChangeTimes->{{3.6531145921189613`*^9, 3.653114597602562*^9}}],
+
+Cell[BoxData[
+ FormBox["14827", TraditionalForm]], "Output",
+ CellChangeTimes->{3.653114598009962*^9, 3.653130649107256*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ersatzSolutionSpace", "=", 
+   RowBox[{"allIntegrabilityEquationsEMHVexpanded", "/.", 
+    RowBox[{"Association", "@@", "EMHVintegrabilitySolutions"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.653114708568791*^9, 3.6531147200976257`*^9}, {
+  3.653114777384779*^9, 3.6531148323150587`*^9}, {3.6531275201681843`*^9, 
+  3.653127521081483*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"solutionCoefficients", "=", 
+   RowBox[{"DeleteDuplicates", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"Reap", "[", 
+       RowBox[{"ersatzSolutionSpace", "/.", 
+        RowBox[{
+         RowBox[{"coeff", "[", "a__", "]"}], "\[RuleDelayed]", 
+         RowBox[{"Sow", "[", 
+          RowBox[{"coeff", "[", "a", "]"}], "]"}]}]}], "]"}], 
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.653114843058207*^9, 3.653114857592619*^9}, {
+  3.6531149019280787`*^9, 3.653114940047954*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData["solutionCoefficients"], "Input",
+ CellChangeTimes->{{3.653127527882451*^9, 3.653127531139083*^9}, {
+  3.6531310969715767`*^9, 3.653131098252509*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"coeff", "(", 
+     RowBox[{"YU", ",", "YV", ",", "3964"}], ")"}], ",", 
+    RowBox[{"coeff", "(", 
+     RowBox[{"YU", ",", "YV", ",", "4329"}], ")"}], ",", 
+    RowBox[{"coeff", "(", 
+     RowBox[{"YU", ",", "YV", ",", "5023"}], ")"}], ",", 
+    RowBox[{"coeff", "(", 
+     RowBox[{"YU", ",", "YV", ",", "5126"}], ")"}], ",", 
+    RowBox[{"coeff", "(", 
+     RowBox[{"YU", ",", "YV", ",", "5125"}], ")"}]}], "}"}], 
+  TraditionalForm]], "Output",
+ CellChangeTimes->{{3.6531310773744173`*^9, 3.6531310985508137`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DeleteCases", "[", 
+   RowBox[{"ersatzSolutionSpace", ",", "0"}], "]"}], "//", 
+  "Length"}]], "Input",
+ CellChangeTimes->{{3.653115785931707*^9, 3.653115794945719*^9}}],
+
+Cell[BoxData[
+ FormBox["9869", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6531156612769737`*^9, 3.653115795409163*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 587},
+WindowMargins->{{20, Automatic}, {Automatic, 44}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 123, 2, 28, "Input"],
+Cell[684, 24, 233, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[942, 33, 153, 2, 28, "Input"],
+Cell[1098, 37, 103, 2, 28, "Output"]
+}, Open  ]],
+Cell[1216, 42, 351, 8, 46, "Input"],
+Cell[CellGroupData[{
+Cell[1592, 54, 164, 3, 28, "Input"],
+Cell[1759, 59, 105, 2, 28, "Output"]
+}, Open  ]],
+Cell[1879, 64, 261, 6, 46, "Input"],
+Cell[2143, 72, 195, 5, 28, "Input"],
+Cell[2341, 79, 416, 11, 46, "Input"],
+Cell[2760, 92, 320, 8, 28, "Input"],
+Cell[3083, 102, 230, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[3338, 112, 756, 22, 63, "Input"],
+Cell[4097, 136, 123, 2, 28, "Output"],
+Cell[4223, 140, 123, 2, 28, "Output"],
+Cell[4349, 144, 125, 2, 28, "Output"]
+}, Open  ]],
+Cell[4489, 149, 1870, 48, 148, "Input"],
+Cell[6362, 199, 232, 6, 28, "Input"],
+Cell[6597, 207, 176, 4, 28, "Input"],
+Cell[CellGroupData[{
+Cell[6798, 215, 147, 2, 28, "Input"],
+Cell[6948, 219, 151, 3, 28, "Output"]
+}, Open  ]],
+Cell[7114, 225, 531, 11, 28, "Input"],
+Cell[7648, 238, 230, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[7903, 248, 810, 23, 63, "Input"],
+Cell[8716, 273, 170, 3, 28, "Output"],
+Cell[8889, 278, 172, 3, 28, "Output"],
+Cell[9064, 283, 172, 3, 28, "Output"]
+}, Open  ]],
+Cell[9251, 289, 1990, 49, 148, "Input"],
+Cell[11244, 340, 234, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[11503, 350, 148, 2, 28, "Input"],
+Cell[11654, 354, 148, 3, 28, "Output"]
+}, Open  ]],
+Cell[11817, 360, 885, 23, 63, "Input"],
+Cell[12705, 385, 239, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[12969, 395, 152, 2, 28, "Input"],
+Cell[13124, 399, 124, 2, 28, "Output"]
+}, Open  ]],
+Cell[13263, 404, 380, 8, 46, "Input"],
+Cell[13646, 414, 605, 15, 46, "Input"],
+Cell[CellGroupData[{
+Cell[14276, 433, 163, 2, 28, "Input"],
+Cell[14442, 437, 581, 15, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15060, 457, 204, 5, 28, "Input"],
+Cell[15267, 464, 125, 2, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
