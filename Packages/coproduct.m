@@ -285,5 +285,5 @@ evaluateG[funcName_,expression_,vars_,points_]:=Module[{formattedExpression,func
 	Export[StringJoin[functionDirectory,"/points.csv"],points];]
 
 Gn[args__]:=Module[{},Gn[temp__]=.;
-    Get["/afs/ir.stanford.edu/users/a/j/ajmcleod/Mathematica/ginac/Gn.m"];
+    Get[$MathematicaLibrary<>"Function Library/GiNaC/Gn.m"];
     Gn[args]]/;$OperatingSystem=="Unix"
