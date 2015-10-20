@@ -1,7 +1,7 @@
 (* ::Package:: *)
 
 Y[a_,b_,c_] := Y[a,b,c] = HPL[{0,1},1-a] + HPL[{0,1},1-b] + HPL[{0,1},1-c] + (HPL[{1},1-a]^2 + HPL[{1},1-b]^2 + HPL[{1},1-c]^2)/2;
-Subscript[\[Gamma],K] = 4*a - 4*\[Zeta][2]*a^2 + 22*\[Zeta][4]*a^3 - 4*((219/8)*\[Zeta][6]+\[Zeta][3]^2)*a^4 + weight5term*a^5;
+Subscript[\[Gamma],K] = 4*a - 4*\[Zeta][2]*a^2 + 22*\[Zeta][4]*a^3 - 4*((219/8)*\[Zeta][6]+\[Zeta][3]^2)*a^4 + ((14192*\[Zeta][2]^4)/175 + 8*\[Zeta][2]*\[Zeta][3]^2 + 40*\[Zeta][3]*\[Zeta][5])*a^5 + weight6terms*a^6;
 
 R6[0] = 0;
 R6[1] = 0;

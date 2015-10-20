@@ -1,4 +1,4 @@
-(*irreducibleFunctionCoproduct[{4, 1}, G] = 
+irreducibleFunctionCoproduct[{4, 1}, G] = 
     (HPL[{1}, 1 - u]*HPL[{1}, 1 - v]*HPL[{0, 1}, 1 - u]) \[CircleDot] 
       Log[yw] + (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]*
        HPL[{0, 1}, 1 - u]) \[CircleDot] Log[yv] + 
@@ -3307,7 +3307,7 @@ irreducibleFunctionCoproduct[{4, 1}, Subscript[Q, "ep"][w, v, u]] =
       32 + Superscript[\[CapitalOmega], "(2)"][v, w, u] \[CircleDot] Log[v]/
       32 - Superscript[\[CapitalOmega], "(2)"][w, u, v] \[CircleDot] 
        Log[1 - u]/32 + Superscript[\[CapitalOmega], "(2)"][w, u, 
-        v] \[CircleDot] Log[u]/32*)
+        v] \[CircleDot] Log[u]/32
         
 Get[$MathematicaLibrary<>"/Function Library/Weight 5/Local Binaries/weight_5_irreducible_basis_coproducts_"<>ToString[Floor[$VersionNumber]]<>".mx"];
  

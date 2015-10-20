@@ -1,0 +1,1005 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     29811,        996]
+NotebookOptionsPosition[     25429,        853]
+NotebookOutlinePosition[     25785,        869]
+CellTagsIndexPosition[     25742,        866]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.6542690714281178`*^9, 3.654269072729376*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Get", "[", "\"\<collinearSecondDerivativeVanishingAnsatz.mx\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.65426866406248*^9, 3.6542686743658123`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"changeNotation", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"N", "\[Rule]", 
+      RowBox[{"Nt", "[", 
+       RowBox[{"u", ",", "v", ",", "w"}], "]"}]}], ",", 
+     RowBox[{"G", "\[Rule]", 
+      RowBox[{"Gt", "[", 
+       RowBox[{"u", ",", "v", ",", "w"}], "]"}]}], ",", 
+     RowBox[{"O", "\[Rule]", 
+      RowBox[{"Ot", "[", 
+       RowBox[{"u", ",", "v", ",", "w"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"H", ",", "1"}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"H1", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"J", ",", "1"}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"J1", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"M", ",", "1"}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"M1", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"Q", ",", "\"\<ep\>\""}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"Qep", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"K", ",", "1"}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"K1", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Subscript", "[", 
+        RowBox[{"F", ",", "1"}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"F1", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"Superscript", "[", 
+        RowBox[{"\[CapitalOmega]", ",", "\"\<(2)\>\""}], "]"}], "[", 
+       RowBox[{"a_", ",", "b_", ",", "c_"}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"Omega2", "[", 
+       RowBox[{"a", ",", "b", ",", "c"}], "]"}]}], ",", 
+     RowBox[{
+      RowBox[{"Subscript", "[", 
+       RowBox[{
+        RowBox[{"OverTilde", "[", "\[CapitalPhi]", "]"}], ",", "6"}], "]"}], 
+      "\[Rule]", 
+      RowBox[{"Phi6", "[", 
+       RowBox[{"u", ",", "v", ",", "w"}], "]"}]}]}], "}"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{3.654306108698633*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"EMHVansatz8parameters", "[", 
+    RowBox[{"var1_", ",", "var2_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"var1", ",", "var2"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"collinearSecondDerivativeVanishingAnsatz", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"CircleDot", "[", 
+           RowBox[{"a_", ",", 
+            RowBox[{"Log", "[", "var1", "]"}], ",", 
+            RowBox[{"Log", "[", "var2", "]"}]}], "]"}], "\[RuleDelayed]", 
+          "a"}], ",", 
+         RowBox[{
+          RowBox[{"CircleDot", "[", "__", "]"}], "\[Rule]", "0"}]}], "}"}]}], 
+      "/.", "meToLance"}], "/.", "changeNotation"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.65426872894884*^9, 3.65426880996622*^9}, {
+  3.654269601808848*^9, 3.654269620109165*^9}, {3.6542696863487167`*^9, 
+  3.654269689398138*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", "u"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654269694349*^9, 3.654269703316399*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", "v"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274304926807*^9, 3.654274305802087*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", 
+    RowBox[{"1", "-", "u"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542743128198977`*^9, 3.654274314722369*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", 
+    RowBox[{"1", "-", "v"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274319300208*^9, 3.654274321722761*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", "yu"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274325178697*^9, 3.6542743291626453`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", "yv"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274333568597*^9, 3.654274333626597*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersStage1.mx\>\"", ",", "EMHVansatz8parameters"}], 
+   "]"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "u"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654269712301298*^9, 3.6542697124364023`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "v"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274354596175*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", 
+    RowBox[{"1", "-", "u"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.6542743632045183`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", 
+    RowBox[{"1", "-", "v"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274368828723*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "yu"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274379764518*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "yv"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274381742958*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersStage2.mx\>\"", ",", "EMHVansatz8parameters"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274391331684*^9, 3.654274391389439*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", "u"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542697239108*^9, 3.654269726022456*^9}, {
+  3.65427439675414*^9, 3.654274408945129*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", "v"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{3.654274412315114*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", 
+    RowBox[{"1", "-", "u"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274417648815*^9, 3.6542744179106197`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", 
+    RowBox[{"1", "-", "v"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274419699141*^9, 3.6542744199428062`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", "yu"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.65427440453755*^9, 3.6542744220543957`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", "yv"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274424443288*^9, 3.6542744245266542`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersStage3.mx\>\"", ",", "EMHVansatz8parameters"}], 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274434355171*^9, 3.654274434943266*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Save", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersMathematica.dat\>\"", ",", 
+    "EMHVansatz8parameters"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542721436387*^9, 3.654272153543679*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"EMHVansatz8parametersMaple", "[", 
+    RowBox[{"var1_", ",", "var2_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parametersMaple", "[", 
+     RowBox[{"var1", ",", "var2"}], "]"}], "=", 
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"var1", ",", "var2"}], "]"}], "/.", "convertMeToLance"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6542722548040667`*^9, 3.654272279302209*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"u", ",", "u"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654269694349*^9, 3.654269703316399*^9}, 
+   3.654274471826333*^9, 3.6543034723461514`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"u", ",", "v"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274304926807*^9, 3.654274305802087*^9}, 
+   3.654274472581099*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"u", ",", 
+    RowBox[{"1", "-", "u"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542743128198977`*^9, 3.654274314722369*^9}, 
+   3.65427447572139*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"u", ",", 
+    RowBox[{"1", "-", "v"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274319300208*^9, 3.654274321722761*^9}, 
+   3.6542744768848753`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"u", ",", "yu"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274325178697*^9, 3.6542743291626453`*^9}, 
+   3.654274478091688*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"u", ",", "yv"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274333568597*^9, 3.654274333626597*^9}, 
+   3.654274479362946*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersMapleStage1.mx\>\"", ",", 
+    "EMHVansatz8parametersMaple"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542744826730328`*^9, 3.654274485441633*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "u"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654269712301298*^9, 3.6542697124364023`*^9}, 
+   3.6542744879876537`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "v"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274354596175*^9}, 
+   3.6542744891078787`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", 
+    RowBox[{"1", "-", "u"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.6542743632045183`*^9}, 
+   3.654274490467169*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", 
+    RowBox[{"1", "-", "v"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274368828723*^9}, 
+   3.654274491667647*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "yu"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274379764518*^9}, 
+   3.654274493083914*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "u"}], ",", "yv"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274341156646*^9, 3.654274381742958*^9}, 
+   3.654274494603951*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersMapleStage2.mx\>\"", ",", 
+    "EMHVansatz8parametersMaple"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274391331684*^9, 3.654274391389439*^9}, {
+  3.654274501097761*^9, 3.654274504394664*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"yu", ",", "u"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542697239108*^9, 3.654269726022456*^9}, {
+   3.65427439675414*^9, 3.654274408945129*^9}, 3.654274506597139*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"yu", ",", "v"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{3.654274412315114*^9, 3.654274508436576*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"yu", ",", 
+    RowBox[{"1", "-", "u"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274417648815*^9, 3.6542744179106197`*^9}, 
+   3.654274509685854*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"yu", ",", 
+    RowBox[{"1", "-", "v"}]}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274419699141*^9, 3.6542744199428062`*^9}, 
+   3.654274510963896*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"yu", ",", "yu"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.65427440453755*^9, 3.6542744220543957`*^9}, 
+   3.6542745128844433`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parametersMaple", "[", 
+   RowBox[{"yu", ",", "yv"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274424443288*^9, 3.6542744245266542`*^9}, 
+   3.654274514235973*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersMapleStage3.mx\>\"", ",", 
+    "EMHVansatz8parametersMaple"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6542745231436653`*^9, 3.654274523208559*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Save", "[", 
+   RowBox[{
+   "\"\<EMHVansatz8parametersMaple.dat\>\"", ",", 
+    "EMHVansatz8parametersMaple"}], "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.654274532848452*^9, 3.654274536032218*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"v", ",", "v"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"u", ",", "u"}], "]"}], "/.", "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654268832815536*^9, 3.654268839871224*^9}, {
+  3.654269057367138*^9, 3.654269077209509*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654268849055732*^9, 3.6542691189211683`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"w", ",", "w"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"u", ",", "u"}], "]"}], "/.", "cycle"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.6542690974720373`*^9, 3.654269101290346*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542691271619997`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "v"}], ",", "v"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{
+      RowBox[{"1", "-", "u"}], ",", "u"}], "]"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.654268855417783*^9, 3.6542688555443163`*^9}, {
+  3.654269161242941*^9, 3.6542691700601187`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654268864642763*^9, 3.6542691786342077`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{
+    RowBox[{"1", "-", "w"}], ",", "w"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{
+       RowBox[{"1", "-", "u"}], ",", "u"}], "]"}], "/.", "cycle"}], "/.", 
+    "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269175512259*^9, 3.654269180022949*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654269188544228*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yv", ",", "yv"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "yu"}], "]"}], "/.", "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.6542688691223097`*^9, 3.654268870960815*^9}, {
+  3.654269203556952*^9, 3.6542692133342533`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654268879768086*^9, 3.654269221796907*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yw", ",", "yw"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"yu", ",", "yu"}], "]"}], "/.", "cycle"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269216888999*^9, 3.6542692215901947`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654269230221737*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yv", ",", "yw"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "yv"}], "]"}], "/.", "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654268878625353*^9, 3.654268880313285*^9}, {
+  3.654269236645002*^9, 3.654269246695719*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654268889395009*^9, 3.654269255329257*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yw", ",", "yu"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"yu", ",", "yv"}], "]"}], "/.", "cycle"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269261390113*^9, 3.6542692658961287`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542692755265217`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yv", ",", "yu"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "yv"}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"u", ",", "v"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269276637252*^9, 3.654269323962533*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542693324251823`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yw", ",", "yv"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "yv"}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"u", ",", "w"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269289785624*^9, 3.6542692917206783`*^9}, {
+  3.654269346495175*^9, 3.654269346561514*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542693554865313`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", "yw"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "yv"}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"v", ",", "w"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269353525354*^9, 3.6542693568579597`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654269365336095*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yv", ",", "v"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "u"}], "]"}], "/.", "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{
+  3.6542689280279093`*^9, {3.654269393515563*^9, 3.6542694028899403`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654268935973461*^9, 3.654269410875626*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yw", ",", "w"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"yu", ",", "u"}], "]"}], "/.", "cycle"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.6542694065711737`*^9, 3.6542694162135878`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542694248767767`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yv", ",", "w"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "v"}], "]"}], "/.", "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654268950815011*^9, 3.654268951655189*^9}, {
+  3.6542694341088753`*^9, 3.654269443858356*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542689601313877`*^9, 3.654269451635189*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yw", ",", "u"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"yu", ",", "v"}], "]"}], "/.", "cycle"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269448899398*^9, 3.6542694534480953`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542694611189823`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yv", ",", "u"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "v"}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"u", ",", "v"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.6542694689393883`*^9, 3.6542694762939157`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.65426948757434*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yw", ",", "v"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "v"}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"u", ",", "w"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269484506483*^9, 3.654269489510524*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6542694980253057`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"yu", ",", "w"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"yu", ",", "v"}], "]"}], "/.", 
+    RowBox[{"exchange", "[", 
+     RowBox[{"v", ",", "w"}], "]"}]}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269492185755*^9, 3.6542695000546722`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654269508971952*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"v", ",", "yu"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"EMHVansatz8parameters", "[", 
+     RowBox[{"u", ",", "yw"}], "]"}], "/.", "cycle"}], ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269032258898*^9, 3.654269032639853*^9}, {
+  3.654269517702487*^9, 3.654269533687673*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654269045834323*^9, 3.654269542117262*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"w", ",", "yv"}], "]"}], "-", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"EMHVansatz8parameters", "[", 
+      RowBox[{"u", ",", "yw"}], "]"}], "/.", "cycle"}], "/.", "cycle"}], 
+   ")"}]}]], "Input",
+ CellChangeTimes->{{3.654269538697192*^9, 3.6542695436565123`*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.654269552202549*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVansatz8parameters", "[", 
+   RowBox[{"u", ",", "u"}], "]"}], "/.", 
+  RowBox[{"coeff", "[", "a__"}]}]], "Input",
+ CellChangeTimes->{{3.654269039181601*^9, 3.654269043028736*^9}, {
+  3.654316542030602*^9, 3.654316546675527*^9}}]
+},
+WindowSize->{808, 587},
+WindowMargins->{{12, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 123, 2, 28, "Input"],
+Cell[684, 24, 197, 5, 28, "Input"],
+Cell[884, 31, 2617, 71, 114, "Input"],
+Cell[3504, 104, 933, 24, 97, "Input"],
+Cell[4440, 130, 179, 4, 28, "Input"],
+Cell[4622, 136, 182, 4, 28, "Input"],
+Cell[4807, 142, 209, 5, 28, "Input"],
+Cell[5019, 149, 207, 5, 28, "Input"],
+Cell[5229, 156, 185, 4, 28, "Input"],
+Cell[5417, 162, 183, 4, 28, "Input"],
+Cell[5603, 168, 168, 5, 28, "Input"],
+Cell[5774, 175, 209, 5, 28, "Input"],
+Cell[5986, 182, 207, 5, 28, "Input"],
+Cell[6196, 189, 234, 6, 28, "Input"],
+Cell[6433, 197, 232, 6, 28, "Input"],
+Cell[6668, 205, 208, 5, 28, "Input"],
+Cell[6879, 212, 208, 5, 28, "Input"],
+Cell[7090, 219, 234, 6, 28, "Input"],
+Cell[7327, 227, 229, 5, 28, "Input"],
+Cell[7559, 234, 159, 4, 28, "Input"],
+Cell[7721, 240, 210, 5, 28, "Input"],
+Cell[7934, 247, 210, 5, 28, "Input"],
+Cell[8147, 254, 185, 4, 28, "Input"],
+Cell[8335, 260, 186, 4, 28, "Input"],
+Cell[8524, 266, 234, 6, 28, "Input"],
+Cell[8761, 274, 235, 6, 28, "Input"],
+Cell[8999, 282, 462, 12, 63, "Input"],
+Cell[9464, 296, 234, 5, 28, "Input"],
+Cell[9701, 303, 213, 5, 28, "Input"],
+Cell[9917, 310, 239, 6, 28, "Input"],
+Cell[10159, 318, 240, 6, 28, "Input"],
+Cell[10402, 326, 216, 5, 28, "Input"],
+Cell[10621, 333, 214, 5, 28, "Input"],
+Cell[10838, 340, 247, 6, 28, "Input"],
+Cell[11088, 348, 242, 6, 28, "Input"],
+Cell[11333, 356, 240, 6, 28, "Input"],
+Cell[11576, 364, 265, 7, 28, "Input"],
+Cell[11844, 373, 263, 7, 28, "Input"],
+Cell[12110, 382, 239, 6, 28, "Input"],
+Cell[12352, 390, 239, 6, 28, "Input"],
+Cell[12594, 398, 294, 7, 28, "Input"],
+Cell[12891, 407, 257, 5, 28, "Input"],
+Cell[13151, 414, 186, 4, 28, "Input"],
+Cell[13340, 420, 241, 6, 28, "Input"],
+Cell[13584, 428, 241, 6, 28, "Input"],
+Cell[13828, 436, 218, 5, 28, "Input"],
+Cell[14049, 443, 217, 5, 28, "Input"],
+Cell[14269, 450, 247, 6, 28, "Input"],
+Cell[14519, 458, 236, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[14780, 468, 364, 9, 28, "Input"],
+Cell[15147, 479, 122, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15306, 486, 353, 10, 28, "Input"],
+Cell[15662, 498, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15799, 505, 424, 12, 28, "Input"],
+Cell[16226, 519, 122, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16385, 526, 405, 12, 28, "Input"],
+Cell[16793, 540, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16928, 547, 372, 9, 28, "Input"],
+Cell[17303, 558, 120, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17460, 565, 357, 10, 28, "Input"],
+Cell[17820, 577, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17955, 584, 368, 9, 28, "Input"],
+Cell[18326, 595, 120, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18483, 602, 357, 10, 28, "Input"],
+Cell[18843, 614, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18980, 621, 378, 10, 28, "Input"],
+Cell[19361, 633, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[19498, 640, 429, 11, 28, "Input"],
+Cell[19930, 653, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20067, 660, 380, 10, 28, "Input"],
+Cell[20450, 672, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20585, 679, 346, 9, 28, "Input"],
+Cell[20934, 690, 120, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21091, 697, 357, 10, 28, "Input"],
+Cell[21451, 709, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[21588, 716, 368, 9, 28, "Input"],
+Cell[21959, 727, 122, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22118, 734, 355, 10, 28, "Input"],
+Cell[22476, 746, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22613, 753, 380, 10, 28, "Input"],
+Cell[22996, 765, 97, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23130, 772, 376, 10, 28, "Input"],
+Cell[23509, 784, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[23646, 791, 378, 10, 28, "Input"],
+Cell[24027, 803, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24162, 810, 366, 9, 28, "Input"],
+Cell[24531, 821, 120, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[24688, 828, 355, 10, 28, "Input"],
+Cell[25046, 840, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[25159, 845, 266, 6, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)

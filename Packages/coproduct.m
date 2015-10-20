@@ -1,5 +1,6 @@
 (* ::Package:: *)
 
+If[$OperatingSystem=="Unix",$MathematicaLibrary="~/Mathematica/Mathematica Library/"];
 If[!ValueQ[stayInLyndonBasis],stayInLyndonBasis=True];
 Do[Evaluate[Symbol["toSingularArgN"<>ToString[jj]<>"Ew"<>ToString[ii]<>"HPL"][x_, \[Delta]_]]={},{ii,5,10},{jj,2,3}];
 SVHPLreplacements=irreducibleFunctionsToLineE[x_]=irreducibleDoubleScalingFunctionsToLineE[x_]={};
@@ -38,7 +39,7 @@ transcendentalWeight[\[Zeta][x__]]:=Total[Abs[List[x]]];
 transcendentalWeight[SVHPL[x__]]:=Length[List[x]];
 transcendentalWeight[IMPL[_,aVec_,_]]:=Length[aVec];
 transcendentalWeight[func_]:=0/;NumericQ[func]\[And]FreeQ[func,Pi];
-transcendentalWeight[CircleDot[x_,y__]]:=Sum[transcendentalWeight[i],{i,List[x,y]}];
+transcendentalWeight[CircleDot[x__]]:=Sum[transcendentalWeight[i],{i,List[x]}];
 transcendentalWeight[f_]:=0/;FreeQ[Plus,Times];
 
 coproduct[weight_:Null,func_]:=toStrictLyndonBasis[coproductMaster[weight,Expand[func/.\[Pi]to\[Zeta]/.\[Pi]->\[Zeta][0,1,0]/.SVHPLreplacements/.toIMPL]]/.\[Zeta][0,1,0]->\[Pi]/.If[FreeQ[func,G[__]],IMPLtoHPL,IMPLtoG]]/;TrueQ[stayInLyndonBasis]\[And]Last[weight]!=1;
@@ -195,7 +196,7 @@ toBinaryForm={HPL[word_,1-var_]:>Superscript[Subscript[h,FromDigits[word,2]],Str
 coproductEntry[0,var_]:=0;
 coproductEntry[func_,var_]:=coproductEntry[Expand[func],var]/;!MatchQ[Expand[func],func];
 coproductEntry[func_,var_]:=(coproductEntry[func,var]=coproduct[{transcendentalWeight[func]-1,1},func]/.{CircleDot[x_,Log[var]]:>x,CircleDot[x__,Log[y_]]:>0/;y=!=var})/;FreeQ[func,CircleDot];
-coproductEntry[func_,var_]:=If[(func/.{c_ CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})==1,func/.(CircleDot[x__,Log[y_]]:>0/;y=!=var),func/.{CircleDot[x__,Log[var]]:>CircleDot[x],CircleDot[__]:>0}]/;!FreeQ[func,CircleDot];
+coproductEntry[func_,var_]:=If[(func/.{c_ CircleDot[x__,y_]:>transcendentalWeight[y],CircleDot[x__,y_]:>transcendentalWeight[y]})==1,func/.{CircleDot[x__,Log[y_]]:>0/;y=!=var,CircleDot[x__,Log[var]]:>CircleDot[x]},func/.{CircleDot[x__,Log[var]]:>CircleDot[x],CircleDot[__]:>0}]/;!FreeQ[func,CircleDot];
 
 HPLfuncD[a_,{T,n_}]:=Nest[HPLfuncD[#,T]/.{HPL[{1},1/(T^2+1)]:>(Log[1+T^2]-2 Log[T])}&,a/.{HPL[{1},1/(T^2+1)]:>(Log[1+T^2]-2 Log[T])},n];
 HPLfuncD[a_,{var_,n_}]:=Nest[HPLfuncD[#,var]&,a,n]/;var=!=T;
@@ -228,11 +229,11 @@ symbolLevelFunctionsWeight[n_]:=symbolLevelFunctionsWeight[n]=Which[n>6,Join[Get
 beyondSymbolTerms[weight_]:=beyondSymbolTerms[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelFunctionsWeight[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelFunctionsWeight[n][[k]],{k,Length[symbolLevelFunctionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
 functionsWeight[n_]:=functionsWeight[n]=Join[symbolLevelFunctionsWeight[n],beyondSymbolTerms[n]];
 
-symbolLevelDoubleScalingFunctionsWeight[n_]:=symbolLevelDoubleScalingFunctionsWeight[n]=Which[n>3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"],Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_composite_double_scaling_functions_wfec.dat"],Array[Symbol["DS"<>ToString[n]],numDSfuncs[n]]],
-                                                                                              n==3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"],Array[Symbol["DS"<>ToString[n]],numDSfuncs[n]]],
-                                                                                              n<3,Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"]];
-beyondSymbolDoubleScalingTerms[weight_]:=beyondSymbolDoubleScalingTerms[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelDoubleScalingFunctionsWeight[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelDoubleScalingFunctionsWeight[n][[k]],{k,Length[symbolLevelDoubleScalingFunctionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
-doubleScalingFunctionsWeight[n_]:=doubleScalingFunctionsWeight[n]=Join[symbolLevelDoubleScalingFunctionsWeight[n],beyondSymbolDoubleScalingTerms[n]];
+symbolLevelFunctionsWeightDS[n_]:=symbolLevelFunctionsWeightDS[n]=Which[n>3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"],Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_composite_double_scaling_functions_wfec.dat"],Array[Symbol["DS"<>ToString[n]],numDSfuncs[n]]],
+                                                                    n==3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"],Array[Symbol["DS"<>ToString[n]],numDSfuncs[n]]],
+                                                                    n<3,Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"]];
+beyondSymbolTermsDS[weight_]:=beyondSymbolTermsDS[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelFunctionsWeightDS[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelFunctionsWeightDS[n][[k]],{k,Length[symbolLevelFunctionsWeightDS[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
+functionsWeightDS[n_]:=functionsWeightDS[n]=Join[symbolLevelFunctionsWeightDS[n],beyondSymbolTermsDS[n]];
 
 expandHPL[order_:10]:={HPL[{0},z_]:>Log[z],HPL[aVec_,z_]:>HPLexpansion[compressedNotation[aVec],z,order]};
 HPLexpansion[{m__},z_,order_]:=Sum[z^l*Z[{m},l],{l,1,order}];
