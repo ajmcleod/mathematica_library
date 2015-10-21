@@ -1,6 +1,6 @@
 (* ::Package:: *)
 
-If[$OperatingSystem=="Unix",$MathematicaLibrary="~/Mathematica/Mathematica Library/"];
+If[$OperatingSystem=="Unix",$MathematicaLibrary="~/Mathematica/Mathematica Library"];
 If[!ValueQ[stayInLyndonBasis],stayInLyndonBasis=True];
 Do[Evaluate[Symbol["toSingularArgN"<>ToString[jj]<>"Ew"<>ToString[ii]<>"HPL"][x_, \[Delta]_]]={},{ii,5,10},{jj,2,3}];
 SVHPLreplacements=irreducibleFunctionsToLineE[x_]=irreducibleDoubleScalingFunctionsToLineE[x_]={};
@@ -285,5 +285,5 @@ evaluateG[funcName_,expression_,vars_,points_]:=Module[{formattedExpression,func
 	Export[StringJoin[functionDirectory,"/points.csv"],points];]
 
 Gn[args__]:=Module[{},Gn[temp__]=.;
-    Get[$MathematicaLibrary<>"Function Library/GiNaC/Gn.m"];
+    Get[$MathematicaLibrary<>"/Function Library/GiNaC/Gn.m"];
     Gn[args]]/;$OperatingSystem=="Unix"
