@@ -1,0 +1,136 @@
+toLineE[DT3[1], {u, 0}] = 4*\[Zeta][3]
+ 
+toLineE[DT3[2], {u, 0}] = 4*\[Zeta][3]
+ 
+toLineE[DT4[1], {u, 0}] = -\[Zeta][2]^2/2
+ 
+toLineE[DT4[2], {u, 0}] = -(HPL[{0, 1}, 1 - u]*\[Zeta][2]) + 
+     \[Zeta][2]^2/2
+ 
+toLineE[DT4[3], {u, 0}] = (12*\[Zeta][2]^2)/5
+ 
+toLineE[DT4[4], {u, 0}] = (12*\[Zeta][2]^2)/5
+ 
+toLineE[DT4[5], {u, 0}] = (6*\[Zeta][2]^2)/5 - 2*Log[w]*\[Zeta][3]
+ 
+toLineE[DT4[6], {u, 0}] = (6*\[Zeta][2]^2)/5 + 
+     2*HPL[{1}, 1 - u]*\[Zeta][3]
+ 
+toLineE[DT4[7], {u, 0}] = -(Log[w]^2*\[Zeta][2]) + (3*\[Zeta][2]^2)/5 - 
+     2*Log[w]*\[Zeta][3]
+ 
+toLineE[DT4[8], {u, 0}] = -(HPL[{1}, 1 - u]^2*\[Zeta][2]) - 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][2] + (13*\[Zeta][2]^2)/5 + 
+     2*HPL[{1}, 1 - u]*\[Zeta][3]
+ 
+toLineE[DT4[9], {u, 0}] = HPL[{0, 1}, 1 - u]*\[Zeta][2] - \[Zeta][2]^2 - 
+     HPL[{1}, 1 - u]*\[Zeta][3] - Log[w]*\[Zeta][3]
+ 
+toLineE[DT5[1], {u, 0}] = 8*\[Zeta][5]
+ 
+toLineE[DT5[2], {u, 0}] = 8*\[Zeta][5]
+ 
+toLineE[DT5[3], {u, 0}] = -(HPL[{0, 1}, 1 - u]*\[Zeta][3]) + \[Zeta][5]/2
+ 
+toLineE[DT5[4], {u, 0}] = -(\[Zeta][2]*\[Zeta][3]) + \[Zeta][5]/2
+ 
+toLineE[DT5[5], {u, 0}] = -24*HPL[{0, 1}, 1 - u]*\[Zeta][3] - 
+     24*\[Zeta][2]*\[Zeta][3] + 72*\[Zeta][5]
+ 
+toLineE[DT5[6], {u, 0}] = -48*\[Zeta][2]*\[Zeta][3] + 72*\[Zeta][5]
+ 
+toLineE[DT5[7], {u, 0}] = (2*Log[w]*\[Zeta][2]^2)/5 + 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + (Log[w]^2*\[Zeta][3])/2 + 
+     \[Zeta][2]*\[Zeta][3] - (7*\[Zeta][5])/2
+ 
+toLineE[DT5[8], {u, 0}] = (-2*HPL[{1}, 1 - u]*\[Zeta][2]^2)/5 + 
+     (HPL[{1}, 1 - u]^2*\[Zeta][3])/2 + HPL[{0, 1}, 1 - u]*\[Zeta][3] + 
+     2*\[Zeta][2]*\[Zeta][3] - (7*\[Zeta][5])/2
+ 
+toLineE[DT5[9], {u, 0}] = -(Log[w]*\[Zeta][2]^2)/5 + 
+     HPL[{0, 1}, 1 - u]*\[Zeta][3] + 2*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][5]
+ 
+toLineE[DT5[10], {u, 0}] = -(HPL[{0, 0, 1}, 1 - u]*\[Zeta][2]) + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]^2)/5 + 2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 
+     2*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][5]
+ 
+toLineE[DT5[11], {u, 0}] = -2*Log[w]*\[Zeta][2]^2 - Log[w]^2*\[Zeta][3] - 
+     2*\[Zeta][2]*\[Zeta][3] - 9*\[Zeta][5]
+ 
+toLineE[DT5[12], {u, 0}] = 2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] - 4*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] - 
+     HPL[{1}, 1 - u]^2*\[Zeta][3] - 2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 
+     4*\[Zeta][2]*\[Zeta][3] - 9*\[Zeta][5]
+ 
+toLineE[DT5[13], {u, 0}] = -(HPL[{0, 0, 1}, 1 - u]*\[Zeta][2]) + 
+     HPL[{0, 1}, 1 - u]*\[Zeta][3] + 2*\[Zeta][2]*\[Zeta][3] - 
+     (7*\[Zeta][5])/2
+ 
+toLineE[DT5[14], {u, 0}] = 2*\[Zeta][2]*\[Zeta][3] - (7*\[Zeta][5])/2
+ 
+toLineE[DT5[15], {u, 0}] = -(Log[w]*\[Zeta][2]^2)/10 - 
+     HPL[{0, 1}, 1 - u]*\[Zeta][3] - (Log[w]^2*\[Zeta][3])/2 - 
+     \[Zeta][2]*\[Zeta][3] + (3*\[Zeta][5])/2
+ 
+toLineE[DT5[16], {u, 0}] = (HPL[{1}, 1 - u]*\[Zeta][2]^2)/10 - 
+     (HPL[{1}, 1 - u]^2*\[Zeta][3])/2 - HPL[{0, 1}, 1 - u]*\[Zeta][3] - 
+     \[Zeta][2]*\[Zeta][3] + (3*\[Zeta][5])/2
+ 
+toLineE[DT5[17], {u, 0}] = (-11*Log[w]*\[Zeta][2]^2)/5 + 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] - \[Zeta][2]*\[Zeta][3] - 
+     (19*\[Zeta][5])/2
+ 
+toLineE[DT5[18], {u, 0}] = 2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] - 4*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]^2)/5 + 5*\[Zeta][2]*\[Zeta][3] - 
+     (19*\[Zeta][5])/2
+ 
+toLineE[DT5[19], {u, 0}] = (4*Log[w]*\[Zeta][2]^2)/5 + 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 4*\[Zeta][2]*\[Zeta][3] - \[Zeta][5]
+ 
+toLineE[DT5[20], {u, 0}] = -2*HPL[{0, 0, 1}, 1 - u]*\[Zeta][2] - 
+     2*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] - (4*HPL[{1}, 1 - u]*\[Zeta][2]^2)/
+      5 + 2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 8*\[Zeta][2]*\[Zeta][3] - 
+     \[Zeta][5]
+ 
+toLineE[DT5[21], {u, 0}] = (-14*Log[w]*\[Zeta][2]^2)/5 - 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] - Log[w]^2*\[Zeta][3] - 
+     2*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][5]
+ 
+toLineE[DT5[22], {u, 0}] = 2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] - 4*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] + 
+     (4*HPL[{1}, 1 - u]*\[Zeta][2]^2)/5 - HPL[{1}, 1 - u]^2*\[Zeta][3] - 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 2*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][5]
+ 
+toLineE[DT5[23], {u, 0}] = (-11*Log[w]*\[Zeta][2]^2)/5 - 
+     2*Log[w]^2*\[Zeta][3] - 2*\[Zeta][2]*\[Zeta][3]
+ 
+toLineE[DT5[24], {u, 0}] = 2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] - 4*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]^2)/5 - 2*HPL[{1}, 1 - u]^2*\[Zeta][3] - 
+     4*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 6*\[Zeta][2]*\[Zeta][3]
+ 
+toLineE[DT5[25], {u, 0}] = -(Log[w]*\[Zeta][2]^2) - 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] - 2*\[Zeta][5]
+ 
+toLineE[DT5[26], {u, 0}] = 2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] - 2*HPL[{0, 0, 1}, 1 - u]*\[Zeta][2] - 
+     6*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] - HPL[{1}, 1 - u]*\[Zeta][2]^2 + 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 4*\[Zeta][2]*\[Zeta][3] - 2*\[Zeta][5]
+ 
+toLineE[DT5[27], {u, 0}] = (13*Log[w]*\[Zeta][2]^2)/5 + 
+     2*HPL[{0, 1}, 1 - u]*\[Zeta][3] - 2*\[Zeta][2]*\[Zeta][3] + 19*\[Zeta][5]
+ 
+toLineE[DT5[28], {u, 0}] = -2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] + 2*HPL[{0, 0, 1}, 1 - u]*\[Zeta][2] + 
+     6*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] - (3*HPL[{1}, 1 - u]*\[Zeta][2]^2)/
+      5 - 2*HPL[{0, 1}, 1 - u]*\[Zeta][3] - 6*\[Zeta][2]*\[Zeta][3] + 
+     19*\[Zeta][5]
+ 
+toLineE[DT5[29], {u, 0}] = (-11*Log[w]*\[Zeta][2]^2)/5 - 
+     2*Log[w]^2*\[Zeta][3] - 2*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][5]
+ 
+toLineE[DT5[30], {u, 0}] = 2*HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]*
+      \[Zeta][2] - 4*HPL[{0, 1, 1}, 1 - u]*\[Zeta][2] + 
+     (HPL[{1}, 1 - u]*\[Zeta][2]^2)/5 - 2*HPL[{1}, 1 - u]^2*\[Zeta][3] - 
+     4*HPL[{0, 1}, 1 - u]*\[Zeta][3] + 6*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][5]

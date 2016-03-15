@@ -3,13 +3,12 @@
 flipArgument[arg_]:=func_:>optimizeFlipArgumentReplacement[func,arg]
 flipArgument[{arg1_,argN__}]:=func_:>(optimizeFlipArgumentReplacement[func,arg1]/.flipArgument[{argN}])
 flipArgument[{arg1_}]:=flipArgument[arg1]
-optimizeFlipArgumentReplacement[func_,arg_]:=Module[{lettersAppearing,letters},
+optimizeFlipArgumentReplacement[func_,arg_]:=Module[{weightsAppearing,letters},
   If[FreeQ[func,G],
-    lettersAppearing=Select[Range[5,Max[transcendentalWeight[func],5]],!FreeQ[func,HPL[aVec_,arg]/;Length[aVec]==#]&];
-    If[FreeQ[lettersAppearing,5],If[Or@@Table[!FreeQ[func,HPL[aVec_,arg]/;Length[aVec]==ii],{ii,4}],AppendTo[lettersAppearing,5]]];
-    Expand[func/.Join@@Table[Symbol["flipArgument2Ew"<>ToString[ii]<>"HPL"][arg],{ii,lettersAppearing}]]
-   ,lettersAppearing=DeleteDuplicates[DeleteDuplicates[Flatten[Reap[func/.G[aVec_,arg]:>(Sow[letters[DeleteDuplicates[aVec],Length[aVec]]];0)][[2]]]]/.{}->Null/.letters[ll_,weight_]:>List[Sort[DeleteCases[ll,Alternatives[0,1]],LyndOrder[#1]<LyndOrder[#2]&],Max[weight,5]]/.Null->{}];
-    Expand[func/.Join@@Table[Symbol["flipArgument"<>ToString[Length[lettersAppearing[[ii,1]]]+2]<>"Ew"<>ToString[lettersAppearing[[ii,2]]]<>"G"][arg,lettersAppearing[[ii,1]]],{ii,Length[lettersAppearing]}]]]]
+    weightsAppearing=DeleteDuplicates[Max[#,5]&/@Select[Range[10],!FreeQ[func,HPL[aVec_,arg]/;Length[aVec]==#]&]];
+    Expand[func/.Join@@Table[Symbol["flipArgument2Ew"<>ToString[ii]<>"HPL"][arg],{ii,weightsAppearing}]]
+   ,weightsAppearing=DeleteDuplicates[DeleteDuplicates[Flatten[Reap[func/.G[aVec_,arg]:>(Sow[letters[DeleteDuplicates[aVec],Length[aVec]]];0)][[2]]]]/.{}->Null/.letters[ll_,weight_]:>List[Sort[DeleteCases[ll,Alternatives[0,1]],LyndOrder[#1]<LyndOrder[#2]&],Max[weight,5]]/.Null->{}];
+    Expand[func/.Join@@Table[Symbol["flipArgument"<>ToString[Length[weightsAppearing[[ii,1]]]+2]<>"Ew"<>ToString[weightsAppearing[[ii,2]]]<>"G"][arg,weightsAppearing[[ii,1]]],{ii,Length[weightsAppearing]}]]]]
 
 flipArgument2Ew5HPL[arg_]:=Module[{},flipArgument2Ew5HPL[temp_]=.;
   Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/Local Binaries/flipArgument2Ew5HPL_"<>ToString[Floor[$VersionNumber]]<>".mx"];

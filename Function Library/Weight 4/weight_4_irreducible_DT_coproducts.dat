@@ -1,0 +1,97 @@
+irreducibleFunctionCoproduct[{3, 1}, DT4[1]] = 
+    HPL[{1}, 1 - u]^3 \[CircleDot] Log[1 - u*w]/6 - 
+     (HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u*w]) \[CircleDot] Log[1 - w] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[1 - w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[2]] = 
+    HPL[{1}, 1 - w]^3 \[CircleDot] Log[1 - u*w]/6 - 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u*w]) \[CircleDot] Log[1 - u] - 
+     HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[1 - u]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[3]] = 
+    DT3[1] \[CircleDot] Log[1 - u*w] + 
+     2*(HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[1 - u] - 
+     4*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[4]] = 
+    DT3[2] \[CircleDot] Log[1 - u*w] + 
+     2*(HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[1 - w] - 
+     4*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[5]] = 
+    DT3[2] \[CircleDot] Log[1 - u] + 
+     2*(HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[1 - w] - 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[w] + 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     4*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[6]] = 
+    DT3[1] \[CircleDot] Log[1 - w] + 
+     2*(HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[1 - u] - 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[u] - 
+     2*HPL[{0, 0, 1}, 1 - u*w] \[CircleDot] Log[1 - w] - 
+     4*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[7]] = 
+    DT3[1] \[CircleDot] Log[1 - u] + 
+     2*(HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u*w] - 
+     2*(HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u*w]) \[CircleDot] Log[1 - w] + 
+     2*(HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u*w]) \[CircleDot] Log[w] + 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u] - 
+     4*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[1 - w] - 
+     2*HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[w]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[8]] = 
+    DT3[2] \[CircleDot] Log[1 - w] + 
+     2*(HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - u*w] - 
+     2*(HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u*w]) \[CircleDot] Log[1 - u] + 
+     2*(HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - u*w]) \[CircleDot] Log[u] - 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - w] - 
+     4*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[1 - u] - 
+     2*HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[u]
+ 
+irreducibleFunctionCoproduct[{3, 1}, DT4[9]] = 
+    -(HPL[{1}, 1 - w]*HPL[{0, 1}, 1 - u]) \[CircleDot] Log[1 - w] + 
+     (HPL[{1}, 1 - u]*HPL[{0, 1}, 1 - w]) \[CircleDot] Log[1 - u] - 
+     2*HPL[{0, 1, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 1, 1}, 1 - w] \[CircleDot] Log[1 - u] - 
+     2*HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[1 - u] + 
+     HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[u] + 
+     2*HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[1 - w] - 
+     HPL[{0, 1, 1}, 1 - u*w] \[CircleDot] Log[w]

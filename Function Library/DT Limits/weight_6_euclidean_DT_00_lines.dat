@@ -1,0 +1,345 @@
+toLineE[DT6[1], {0, 0}] = (53*\[Zeta][2]^3)/105 - 
+     2*Log[w]*\[Zeta][2]*\[Zeta][3] + 4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[2], {0, 0}] = (53*\[Zeta][2]^3)/105 - 
+     2*Log[u]*\[Zeta][2]*\[Zeta][3] + 4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[3], {0, 0}] = (356*\[Zeta][2]^3)/35 - 36*\[Zeta][3]^2
+ 
+toLineE[DT6[4], {0, 0}] = (356*\[Zeta][2]^3)/35 - 36*\[Zeta][3]^2
+ 
+toLineE[DT6[5], {0, 0}] = (-2*\[Zeta][2]^3)/105 - \[Zeta][3]^2
+ 
+toLineE[DT6[6], {0, 0}] = (-2*\[Zeta][2]^3)/105 - \[Zeta][3]^2
+ 
+toLineE[DT6[7], {0, 0}] = (16*\[Zeta][2]^3)/7
+ 
+toLineE[DT6[8], {0, 0}] = (16*\[Zeta][2]^3)/7
+ 
+toLineE[DT6[9], {0, 0}] = 60*\[Zeta][3]^2
+ 
+toLineE[DT6[10], {0, 0}] = 60*\[Zeta][3]^2
+ 
+toLineE[DT6[11], {0, 0}] = -(Log[u]^2*\[Zeta][2]^2)/10 + 
+     \[Zeta][2]^3/105 + 2*Log[u]*\[Zeta][2]*\[Zeta][3] + \[Zeta][3]^2 - 
+     4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[12], {0, 0}] = -(Log[w]^2*\[Zeta][2]^2)/10 + 
+     \[Zeta][2]^3/105 + 2*Log[w]*\[Zeta][2]*\[Zeta][3] + \[Zeta][3]^2 - 
+     4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[13], {0, 0}] = (Log[u]^2*\[Zeta][2]^2)/5 - 
+     (28*\[Zeta][2]^3)/15 + (Log[u]^3*\[Zeta][3])/6 + 
+     Log[u]*\[Zeta][2]*\[Zeta][3] - Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     (7*Log[u]*\[Zeta][5])/2
+ 
+toLineE[DT6[14], {0, 0}] = (Log[w]^2*\[Zeta][2]^2)/5 - 
+     (28*\[Zeta][2]^3)/15 + (Log[w]^3*\[Zeta][3])/6 - 
+     Log[u]*\[Zeta][2]*\[Zeta][3] + Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     (7*Log[w]*\[Zeta][5])/2
+ 
+toLineE[DT6[15], {0, 0}] = Log[w]^2*\[Zeta][2]^2 + (4*\[Zeta][2]^3)/105 + 
+     (Log[w]^3*\[Zeta][3])/3 + 4*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] + 6*\[Zeta][3]^2 - 9*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[16], {0, 0}] = Log[u]^2*\[Zeta][2]^2 + (4*\[Zeta][2]^3)/105 + 
+     (Log[u]^3*\[Zeta][3])/3 + 4*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] + 6*\[Zeta][3]^2 - 9*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[17], {0, 0}] = (Log[w]^2*\[Zeta][2]^2)/20 + 
+     (23*\[Zeta][2]^3)/70 - 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[18], {0, 0}] = (Log[u]^2*\[Zeta][2]^2)/20 + 
+     (23*\[Zeta][2]^3)/70 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[19], {0, 0}] = (-55*\[Zeta][2]^3)/42 + 
+     Log[u]*\[Zeta][2]*\[Zeta][3] + \[Zeta][3]^2 - (7*Log[u]*\[Zeta][5])/2
+ 
+toLineE[DT6[20], {0, 0}] = (-55*\[Zeta][2]^3)/42 + 
+     Log[w]*\[Zeta][2]*\[Zeta][3] + \[Zeta][3]^2 - (7*Log[w]*\[Zeta][5])/2
+ 
+toLineE[DT6[21], {0, 0}] = (-169*\[Zeta][2]^3)/210 + (5*\[Zeta][3]^2)/2
+ 
+toLineE[DT6[22], {0, 0}] = (-169*\[Zeta][2]^3)/210 + (5*\[Zeta][3]^2)/2
+ 
+toLineE[DT6[23], {0, 0}] = (97*\[Zeta][2]^3)/35 - 
+     (Log[w]^3*\[Zeta][3])/3 + 2*Log[w]*\[Zeta][2]*\[Zeta][3]
+ 
+toLineE[DT6[24], {0, 0}] = (97*\[Zeta][2]^3)/35 - 
+     (Log[u]^3*\[Zeta][3])/3 + 2*Log[u]*\[Zeta][2]*\[Zeta][3]
+ 
+toLineE[DT6[25], {0, 0}] = (356*\[Zeta][2]^3)/35 - 48*\[Zeta][3]^2
+ 
+toLineE[DT6[26], {0, 0}] = (356*\[Zeta][2]^3)/35 - 48*\[Zeta][3]^2
+ 
+toLineE[DT6[27], {0, 0}] = (Log[w]^2*\[Zeta][2]^2)/20 - 
+     (53*\[Zeta][2]^3)/105 + Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     (5*\[Zeta][3]^2)/2 - (3*Log[w]*\[Zeta][5])/2
+ 
+toLineE[DT6[28], {0, 0}] = (Log[u]^2*\[Zeta][2]^2)/20 - 
+     (53*\[Zeta][2]^3)/105 + Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     (5*\[Zeta][3]^2)/2 - (3*Log[u]*\[Zeta][5])/2
+ 
+toLineE[DT6[29], {0, 0}] = (Log[w]^2*\[Zeta][2]^2)/5 + 
+     (79*\[Zeta][2]^3)/210
+ 
+toLineE[DT6[30], {0, 0}] = (Log[u]^2*\[Zeta][2]^2)/5 + 
+     (79*\[Zeta][2]^3)/210
+ 
+toLineE[DT6[31], {0, 0}] = (-2*Log[w]^2*\[Zeta][2]^2)/5 - 
+     (61*\[Zeta][2]^3)/42 + 2*Log[w]*\[Zeta][2]*\[Zeta][3] + \[Zeta][3]^2 - 
+     4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[32], {0, 0}] = (-2*Log[u]^2*\[Zeta][2]^2)/5 - 
+     (61*\[Zeta][2]^3)/42 + 2*Log[u]*\[Zeta][2]*\[Zeta][3] + \[Zeta][3]^2 - 
+     4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[33], {0, 0}] = (-6*Log[w]^2*\[Zeta][2]^2)/5 - 
+     (136*\[Zeta][2]^3)/5 - 12*\[Zeta][3]^2 - 48*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[34], {0, 0}] = (-6*Log[u]^2*\[Zeta][2]^2)/5 - 
+     (136*\[Zeta][2]^3)/5 - 12*\[Zeta][3]^2 - 48*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[35], {0, 0}] = (4*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     (316*\[Zeta][2]^3)/105 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     2*Log[w]*\[Zeta][2]*\[Zeta][3] - 3*\[Zeta][3]^2 + 3*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[36], {0, 0}] = (4*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     (316*\[Zeta][2]^3)/105 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     2*Log[w]*\[Zeta][2]*\[Zeta][3] - 3*\[Zeta][3]^2 + 3*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[37], {0, 0}] = (Log[w]^2*\[Zeta][2]^2)/20 - 
+     (199*\[Zeta][2]^3)/105 - 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     (5*\[Zeta][3]^2)/2 + 2*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[38], {0, 0}] = (Log[u]^2*\[Zeta][2]^2)/20 - 
+     (199*\[Zeta][2]^3)/105 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     (5*\[Zeta][3]^2)/2 + 2*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[39], {0, 0}] = (-13*\[Zeta][2]^3)/10 - 
+     2*Log[w]*\[Zeta][2]*\[Zeta][3] - 3*\[Zeta][3]^2 - 4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[40], {0, 0}] = (-13*\[Zeta][2]^3)/10 - 
+     2*Log[u]*\[Zeta][2]*\[Zeta][3] - 3*\[Zeta][3]^2 - 4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[41], {0, 0}] = (-4*Log[w]^2*\[Zeta][2]^2)/5 - 
+     (85*\[Zeta][2]^3)/21 - 4*Log[w]*\[Zeta][2]*\[Zeta][3] - 2*\[Zeta][3]^2
+ 
+toLineE[DT6[42], {0, 0}] = (-4*Log[u]^2*\[Zeta][2]^2)/5 - 
+     (85*\[Zeta][2]^3)/21 - 4*Log[u]*\[Zeta][2]*\[Zeta][3] - 2*\[Zeta][3]^2
+ 
+toLineE[DT6[43], {0, 0}] = (2*\[Zeta][2]^3)/35 - 
+     2*Log[u]*\[Zeta][2]*\[Zeta][3] - 4*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     2*\[Zeta][3]^2 + 8*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[44], {0, 0}] = (2*\[Zeta][2]^3)/35 - 
+     4*Log[u]*\[Zeta][2]*\[Zeta][3] - 2*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     2*\[Zeta][3]^2 + 8*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[45], {0, 0}] = -(Log[w]^2*\[Zeta][2]^2)/5 - 
+     (55*\[Zeta][2]^3)/42 + (Log[w]^3*\[Zeta][3])/6 - (3*\[Zeta][3]^2)/2 - 
+     2*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[46], {0, 0}] = -(Log[u]^2*\[Zeta][2]^2)/5 - 
+     (55*\[Zeta][2]^3)/42 + (Log[u]^3*\[Zeta][3])/6 - (3*\[Zeta][3]^2)/2 - 
+     2*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[47], {0, 0}] = (-2*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     (2*Log[w]^2*\[Zeta][2]^2)/5 - (88*\[Zeta][2]^3)/105 + 
+     (Log[w]^3*\[Zeta][3])/6 - 2*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     \[Zeta][3]^2/2 + (3*Log[w]*\[Zeta][5])/2
+ 
+toLineE[DT6[48], {0, 0}] = (-2*Log[u]^2*\[Zeta][2]^2)/5 - 
+     (2*Log[u]*Log[w]*\[Zeta][2]^2)/5 - (88*\[Zeta][2]^3)/105 + 
+     (Log[u]^3*\[Zeta][3])/6 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     \[Zeta][3]^2/2 + (3*Log[u]*\[Zeta][5])/2
+ 
+toLineE[DT6[49], {0, 0}] = (3*Log[w]^2*\[Zeta][2]^2)/10 - 
+     (16*\[Zeta][2]^3)/15 + (Log[w]^3*\[Zeta][3])/3 + 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] + 2*\[Zeta][3]^2
+ 
+toLineE[DT6[50], {0, 0}] = (3*Log[u]^2*\[Zeta][2]^2)/10 - 
+     (16*\[Zeta][2]^3)/15 + (Log[u]^3*\[Zeta][3])/3 + 
+     4*Log[u]*\[Zeta][2]*\[Zeta][3] + 2*\[Zeta][3]^2
+ 
+toLineE[DT6[51], {0, 0}] = (2*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     (2*Log[w]^2*\[Zeta][2]^2)/5 + (29*\[Zeta][2]^3)/70 - 
+     (Log[w]^3*\[Zeta][3])/6 + 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     (3*\[Zeta][3]^2)/2 - (3*Log[w]*\[Zeta][5])/2
+ 
+toLineE[DT6[52], {0, 0}] = (2*Log[u]^2*\[Zeta][2]^2)/5 + 
+     (2*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (29*\[Zeta][2]^3)/70 - 
+     (Log[u]^3*\[Zeta][3])/6 + 2*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     (3*\[Zeta][3]^2)/2 - (3*Log[u]*\[Zeta][5])/2
+ 
+toLineE[DT6[53], {0, 0}] = (-3*Log[w]^2*\[Zeta][2]^2)/20 + 
+     (17*\[Zeta][2]^3)/21 + Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     Log[w]*\[Zeta][2]*\[Zeta][3] - \[Zeta][3]^2 + 2*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[54], {0, 0}] = (-3*Log[u]^2*\[Zeta][2]^2)/20 + 
+     (17*\[Zeta][2]^3)/21 - Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     Log[w]*\[Zeta][2]*\[Zeta][3] - \[Zeta][3]^2 + 2*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[55], {0, 0}] = (-11*Log[w]^2*\[Zeta][2]^2)/10 - 
+     (103*\[Zeta][2]^3)/105 + (Log[w]^3*\[Zeta][3])/3 + 2*\[Zeta][3]^2 - 
+     6*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[56], {0, 0}] = (-11*Log[u]^2*\[Zeta][2]^2)/10 - 
+     (103*\[Zeta][2]^3)/105 + (Log[u]^3*\[Zeta][3])/3 + 2*\[Zeta][3]^2 - 
+     6*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[57], {0, 0}] = (8*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     Log[w]^2*\[Zeta][2]^2 + (82*\[Zeta][2]^3)/21 + 
+     2*Log[u]*\[Zeta][2]*\[Zeta][3] + 6*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     5*\[Zeta][3]^2 - 7*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[58], {0, 0}] = Log[u]^2*\[Zeta][2]^2 + 
+     (8*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (82*\[Zeta][2]^3)/21 + 
+     6*Log[u]*\[Zeta][2]*\[Zeta][3] + 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     5*\[Zeta][3]^2 - 7*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[59], {0, 0}] = (4*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     (Log[w]^2*\[Zeta][2]^2)/2 - (268*\[Zeta][2]^3)/105 - 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] + 3*\[Zeta][3]^2 + Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[60], {0, 0}] = (Log[u]^2*\[Zeta][2]^2)/2 + 
+     (4*Log[u]*Log[w]*\[Zeta][2]^2)/5 - (268*\[Zeta][2]^3)/105 - 
+     4*Log[u]*\[Zeta][2]*\[Zeta][3] + 3*\[Zeta][3]^2 + Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[61], {0, 0}] = (-7*Log[w]^2*\[Zeta][2]^2)/10 + 
+     (137*\[Zeta][2]^3)/105 - \[Zeta][3]^2 - 4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[62], {0, 0}] = (-7*Log[u]^2*\[Zeta][2]^2)/10 + 
+     (137*\[Zeta][2]^3)/105 - \[Zeta][3]^2 - 4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[63], {0, 0}] = (-19*Log[w]^2*\[Zeta][2]^2)/10 - 
+     (239*\[Zeta][2]^3)/105 + 5*\[Zeta][3]^2 - 10*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[64], {0, 0}] = (-19*Log[u]^2*\[Zeta][2]^2)/10 - 
+     (239*\[Zeta][2]^3)/105 + 5*\[Zeta][3]^2 - 10*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[65], {0, 0}] = (16*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     (19*Log[w]^2*\[Zeta][2]^2)/5 + (544*\[Zeta][2]^3)/35 + 
+     (4*Log[w]^3*\[Zeta][3])/3 + 4*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     12*Log[w]*\[Zeta][2]*\[Zeta][3] - 2*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[66], {0, 0}] = (19*Log[u]^2*\[Zeta][2]^2)/5 + 
+     (16*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (544*\[Zeta][2]^3)/35 + 
+     (4*Log[u]^3*\[Zeta][3])/3 + 12*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] - 2*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[67], {0, 0}] = (1727*\[Zeta][2]^3)/105 - 
+     2*Log[w]^3*\[Zeta][3] + 4*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     10*Log[w]*\[Zeta][2]*\[Zeta][3] - 4*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[68], {0, 0}] = (1727*\[Zeta][2]^3)/105 - 
+     2*Log[u]^3*\[Zeta][3] + 10*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] - 4*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[69], {0, 0}] = (16*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     (11*Log[w]^2*\[Zeta][2]^2)/5 - (20*\[Zeta][2]^3)/3 - 
+     2*Log[u]*Log[w]^2*\[Zeta][3] - (4*Log[w]^3*\[Zeta][3])/3 - 
+     2*Log[u]*\[Zeta][2]*\[Zeta][3] + 6*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     11*\[Zeta][3]^2 - 11*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[70], {0, 0}] = (11*Log[u]^2*\[Zeta][2]^2)/5 + 
+     (16*Log[u]*Log[w]*\[Zeta][2]^2)/5 - (20*\[Zeta][2]^3)/3 - 
+     (4*Log[u]^3*\[Zeta][3])/3 - 2*Log[u]^2*Log[w]*\[Zeta][3] + 
+     6*Log[u]*\[Zeta][2]*\[Zeta][3] - 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     11*\[Zeta][3]^2 - 11*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[71], {0, 0}] = (8*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     (19*Log[w]^2*\[Zeta][2]^2)/10 - (254*\[Zeta][2]^3)/105 + 
+     (5*Log[w]^3*\[Zeta][3])/3 - 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     3*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[72], {0, 0}] = (19*Log[u]^2*\[Zeta][2]^2)/10 + 
+     (8*Log[u]*Log[w]*\[Zeta][2]^2)/5 - (254*\[Zeta][2]^3)/105 + 
+     (5*Log[u]^3*\[Zeta][3])/3 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     3*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[73], {0, 0}] = (-4*Log[w]^2*\[Zeta][2]^2)/5 - 
+     (238*\[Zeta][2]^3)/15 + 2*Log[w]^3*\[Zeta][3] - 
+     4*Log[u]*\[Zeta][2]*\[Zeta][3] - 12*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     2*\[Zeta][3]^2
+ 
+toLineE[DT6[74], {0, 0}] = (-4*Log[u]^2*\[Zeta][2]^2)/5 - 
+     (238*\[Zeta][2]^3)/15 + 2*Log[u]^3*\[Zeta][3] - 
+     12*Log[u]*\[Zeta][2]*\[Zeta][3] - 4*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     2*\[Zeta][3]^2
+ 
+toLineE[DT6[75], {0, 0}] = (-8*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     (19*Log[w]^2*\[Zeta][2]^2)/10 + (674*\[Zeta][2]^3)/105 - 
+     (5*Log[w]^3*\[Zeta][3])/3 + 2*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     2*\[Zeta][3]^2 + 3*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[76], {0, 0}] = (-19*Log[u]^2*\[Zeta][2]^2)/10 - 
+     (8*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (674*\[Zeta][2]^3)/105 - 
+     (5*Log[u]^3*\[Zeta][3])/3 + 2*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     2*\[Zeta][3]^2 + 3*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[77], {0, 0}] = (2*Log[w]^2*\[Zeta][2]^2)/5 - 
+     (29*\[Zeta][2]^3)/3 + 2*Log[w]^3*\[Zeta][3] - 
+     4*Log[u]*\[Zeta][2]*\[Zeta][3] - 6*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     \[Zeta][3]^2 + 2*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[78], {0, 0}] = (2*Log[u]^2*\[Zeta][2]^2)/5 - 
+     (29*\[Zeta][2]^3)/3 + 2*Log[u]^3*\[Zeta][3] - 
+     6*Log[u]*\[Zeta][2]*\[Zeta][3] - 4*Log[w]*\[Zeta][2]*\[Zeta][3] - 
+     \[Zeta][3]^2 + 2*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[79], {0, 0}] = (-12*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     (27*Log[w]^2*\[Zeta][2]^2)/10 + (118*\[Zeta][2]^3)/105 - 
+     (5*Log[w]^3*\[Zeta][3])/3 - 2*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     6*Log[w]*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][3]^2 + 11*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[80], {0, 0}] = (-27*Log[u]^2*\[Zeta][2]^2)/10 - 
+     (12*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (118*\[Zeta][2]^3)/105 - 
+     (5*Log[u]^3*\[Zeta][3])/3 - 6*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     2*Log[w]*\[Zeta][2]*\[Zeta][3] - 4*\[Zeta][3]^2 + 11*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[81], {0, 0}] = (16*Log[u]*Log[w]*\[Zeta][2]^2)/5 + 
+     (31*Log[w]^2*\[Zeta][2]^2)/10 - (16*\[Zeta][2]^3)/21 + 
+     (5*Log[w]^3*\[Zeta][3])/3 + 6*Log[w]*\[Zeta][2]*\[Zeta][3] + 
+     2*\[Zeta][3]^2 - 5*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[82], {0, 0}] = (31*Log[u]^2*\[Zeta][2]^2)/10 + 
+     (16*Log[u]*Log[w]*\[Zeta][2]^2)/5 - (16*\[Zeta][2]^3)/21 + 
+     (5*Log[u]^3*\[Zeta][3])/3 + 6*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     2*\[Zeta][3]^2 - 5*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[83], {0, 0}] = (-4*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     2*Log[w]^2*\[Zeta][2]^2 + (1343*\[Zeta][2]^3)/105 - 
+     (7*Log[w]^3*\[Zeta][3])/3 + 4*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     2*Log[w]*\[Zeta][2]*\[Zeta][3] + 2*\[Zeta][3]^2 + 6*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[84], {0, 0}] = -2*Log[u]^2*\[Zeta][2]^2 - 
+     (4*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (1343*\[Zeta][2]^3)/105 - 
+     (7*Log[u]^3*\[Zeta][3])/3 + 2*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] + 2*\[Zeta][3]^2 + 6*Log[u]*\[Zeta][5]
+ 
+toLineE[DT6[85], {0, 0}] = (-4*Log[u]*Log[w]*\[Zeta][2]^2)/5 - 
+     (11*Log[w]^2*\[Zeta][2]^2)/20 + (1159*\[Zeta][2]^3)/210 - 
+     (Log[w]^3*\[Zeta][3])/3 + Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     8*Log[w]*\[Zeta][2]*\[Zeta][3] + (9*\[Zeta][3]^2)/2 - 
+     (9*Log[w]*\[Zeta][5])/2
+ 
+toLineE[DT6[86], {0, 0}] = (-11*Log[u]^2*\[Zeta][2]^2)/20 - 
+     (4*Log[u]*Log[w]*\[Zeta][2]^2)/5 + (1159*\[Zeta][2]^3)/210 - 
+     (Log[u]^3*\[Zeta][3])/3 + 8*Log[u]*\[Zeta][2]*\[Zeta][3] + 
+     Log[w]*\[Zeta][2]*\[Zeta][3] + (9*\[Zeta][3]^2)/2 - 
+     (9*Log[u]*\[Zeta][5])/2
+ 
+toLineE[DT6[87], {0, 0}] = (-2*Log[u]^2*\[Zeta][2]^2)/5 + 
+     (2*Log[w]^2*\[Zeta][2]^2)/5 - 2*Log[u]*\[Zeta][5] + 2*Log[w]*\[Zeta][5]
+ 
+toLineE[DT6[88], {0, 0}] = 4*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3]
+ 
+toLineE[DT6[89], {0, 0}] = (-4*Log[u]^2*\[Zeta][2]^2)/5 + 
+     (4*Log[w]^2*\[Zeta][2]^2)/5 - (2*Log[u]^3*\[Zeta][3])/3 + 
+     (2*Log[w]^3*\[Zeta][3])/3 + 4*Log[u]*\[Zeta][2]*\[Zeta][3] - 
+     4*Log[w]*\[Zeta][2]*\[Zeta][3] - 16*Log[u]*\[Zeta][5] + 
+     16*Log[w]*\[Zeta][5]

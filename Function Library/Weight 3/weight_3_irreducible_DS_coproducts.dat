@@ -1,0 +1,7 @@
+irreducibleFunctionCoproduct[{2, 1}, DS3[1]] = 
+    (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]) \[CircleDot] Log[1 - u] + 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]) \[CircleDot] Log[1 - w] - 
+     (HPL[{1}, 1 - u]*HPL[{1}, 1 - w]) \[CircleDot] Log[1 - u - w] - 
+     HPL[{0, 1}, 1 - u] \[CircleDot] Log[1 - u - w] - 
+     HPL[{0, 1}, 1 - w] \[CircleDot] Log[1 - u - w] + 
+     \[Zeta][2] \[CircleDot] Log[1 - u - w]

@@ -1,6 +1,6 @@
 invertArgument2Ew7HPL[{x1_,xn___}, \[Delta]_:-1]:=Join@@Table[invertArgument2Ew7HPL[i, \[Delta]],{i,List[x1,xn]}];
 
-invertArgument2Ew7HPL[x_, \[Delta]_:-1] := invertArgument2Ew7HPL[x, \[Delta]] = {HPL[{0, 0, 0, 0, 0, 0, 1}, x] -> 
+invertArgument2Ew7HPL[x_, \[Delta]_:-1] := invertArgument2Ew7HPL[x, \[Delta]] = <|HPL[{0, 0, 0, 0, 0, 0, 1}, x] -> 
       (I/720)*Pi*\[Delta]*HPL[{0}, x^(-1)]^6 + HPL[{0}, x^(-1)]^7/5040 + 
        HPL[{0, 0, 0, 0, 0, 0, 1}, x^(-1)] - (HPL[{0}, x^(-1)]^5*\[Zeta][2])/
         60 - (2*HPL[{0}, x^(-1)]^3*\[Zeta][2]^2)/15 - 
@@ -748,4 +748,4 @@ invertArgument2Ew7HPL[x_, \[Delta]_:-1] := invertArgument2Ew7HPL[x, \[Delta]] = 
        (3*HPL[{0}, x^(-1)]*HPL[{0, 1}, x^(-1)]*\[Zeta][2]^2)/2 + 
        (3*HPL[{0, 0, 1}, x^(-1)]*\[Zeta][2]^2)/2 - 
        (3*HPL[{0, 1, 1}, x^(-1)]*\[Zeta][2]^2)/2 + ((3*I)/70)*Pi*\[Delta]*
-        \[Zeta][2]^3 + (3*HPL[{0}, x^(-1)]*\[Zeta][2]^3)/10 + \[Zeta][7]}
+        \[Zeta][2]^3 + (3*HPL[{0}, x^(-1)]*\[Zeta][2]^3)/10 + \[Zeta][7]|>

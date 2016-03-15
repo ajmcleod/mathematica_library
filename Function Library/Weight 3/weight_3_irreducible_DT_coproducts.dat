@@ -1,0 +1,13 @@
+irreducibleFunctionCoproduct[{2, 1}, DT3[1]] = 
+    HPL[{1}, 1 - w]^2 \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 1}, 1 - w] \[CircleDot] Log[1 - u] + 
+     2*HPL[{0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1}, 1 - u*w] \[CircleDot] Log[1 - u]
+ 
+irreducibleFunctionCoproduct[{2, 1}, DT3[2]] = 
+    HPL[{1}, 1 - u]^2 \[CircleDot] Log[1 - u*w] - 
+     2*HPL[{0, 1}, 1 - u] \[CircleDot] Log[1 - w] + 
+     2*HPL[{0, 1}, 1 - u] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1}, 1 - w] \[CircleDot] Log[1 - u*w] + 
+     2*HPL[{0, 1}, 1 - u*w] \[CircleDot] Log[1 - w]
