@@ -9,38 +9,26 @@ Get["irrToG.m"];
 Get["coproductDifferentiation.m"];
 Get["coproductIntegration.m"];
 Get["functionConversions.m"];
-Get["irreducible_function_coproducts.m"];
+Get[$MathematicaLibrary<>"/Function Library/Base Code/yGrading.m"];
+Get[$MathematicaLibrary<>"/Function Library/Base Code/irreducible_function_coproducts.m"];
+Get[$MathematicaLibrary<>"/Function Library/Base Code/irreducible_function_orbital_notation.m"];
+Get[$MathematicaLibrary<>"/Function Library/Base Code/Local Binaries/transcendental_weight_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+Get[$MathematicaLibrary<>"/Function Library/Base Code/Local Binaries/irreducibleFunctionCoproduct_"<>ToString[Floor[$VersionNumber]]<>".mx"];
+Get[$MathematicaLibrary<>"/Function Library/Base Code/functionLists.m"];
 Get[$MathematicaLibrary<>"/Function Library/MZV/MZV.m"];
 Get[$MathematicaLibrary<>"/Function Library/Identities/LyndRed/Lyndon.m"];
 Get[$MathematicaLibrary<>"/Function Library/Basis Conversions/basisConversion.m"];
 Get[$MathematicaLibrary<>"/Function Library/Identities/flipArgument/flipArgument.m"];
 Get[$MathematicaLibrary<>"/Function Library/Identities/invertArgument/invertArgument.m"];
 Get[$MathematicaLibrary<>"/Function Library/Identities/toSingularArgP/toSingularArgP.m"];
-Get[$MathematicaLibrary<>"/Function Library/Double Scaling Limits/uwLimits.m"];
-Get[$MathematicaLibrary<>"/Function Library/Spurious Pole Limits/uvLimits.m"];
+Get[$MathematicaLibrary<>"/Function Library/DS Limits/DS_limits.m"];
+Get[$MathematicaLibrary<>"/Function Library/DT Limits/DT_limits.m"];
+Get[$MathematicaLibrary<>"/Function Library/SP Limits/SP_limits.m"];
 Get[$MathematicaLibrary<>"/Function Library/Hexagon Limits/uvwLimits.m"];
 Get[$MathematicaLibrary<>"/Function Library/Six Points/MHV6.m"];
 Get[$MathematicaLibrary<>"/Function Library/Six Points/NMHV6.m"];
+Get[$MathematicaLibrary<>"/Function Library/Seven Points/heptagon.m"];
 Get[$MathematicaLibrary<>"/Function Library/Identities/Canonical Integration Limits/Local Binaries/canonical_integration_limits_"<>ToString[Floor[$VersionNumber]]<>".mx"];
-
-transcendentalWeight[Plus[x_,y__]]:=transcendentalWeight[x];
-transcendentalWeight[Power[func_,n_]]:=n*transcendentalWeight[func];
-transcendentalWeight[Times[x_,y__]]:=transcendentalWeight[Times[y]]/;NumericQ[x]\[And]FreeQ[x,Pi];
-transcendentalWeight[Times[x_,y__]]:=Plus[transcendentalWeight[x],transcendentalWeight[Times[y]]]/;!NumericQ[x]\[Or]!FreeQ[x,Pi];
-transcendentalWeight[Pi]:=1;
-transcendentalWeight[\[Pi]]:=1;
-transcendentalWeight[\[Delta]]:=0;
-transcendentalWeight[Log[_]]:=1;
-transcendentalWeight[PolyLog[a_,_]]:=a;
-transcendentalWeight[PolyLog[a_,b_,_]]:=a+b;
-transcendentalWeight[G[aVec_,_]]:=Length[aVec];
-transcendentalWeight[HPL[aVec_,_]]:=Length[aVec];
-transcendentalWeight[\[Zeta][x__]]:=Total[Abs[List[x]]];
-transcendentalWeight[SVHPL[x__]]:=Length[List[x]];
-transcendentalWeight[IMPL[_,aVec_,_]]:=Length[aVec];
-transcendentalWeight[func_]:=0/;NumericQ[func]\[And]FreeQ[func,Pi];
-transcendentalWeight[CircleDot[x__]]:=Sum[transcendentalWeight[i],{i,List[x]}];
-transcendentalWeight[f_]:=0/;FreeQ[Plus,Times];
 
 coproduct[weight_:Null,func_]:=toStrictLyndonBasis[coproductMaster[weight,Expand[func/.\[Pi]to\[Zeta]/.\[Pi]->\[Zeta][0,1,0]/.SVHPLreplacements/.toIMPL]]/.\[Zeta][0,1,0]->\[Pi]/.If[FreeQ[func,G[__]],IMPLtoHPL,IMPLtoG]]/;TrueQ[stayInLyndonBasis]\[And]Last[weight]!=1;
 coproduct[weight_:Null,func_]:=ReplaceAll[toStrictLyndonBasis[coproductMaster[weight,Expand[func/.\[Pi]to\[Zeta]/.\[Pi]->\[Zeta][0,1,0]/.SVHPLreplacements/.toIMPL]]/.\[Zeta][0,1,0]->\[Pi]/.If[FreeQ[func,G[__]],IMPLtoHPL,IMPLtoG]],CircleDot[a__,b_]:>CircleDot[a,b/.toLogs]]/;TrueQ[stayInLyndonBasis]\[And]Last[weight]==1;
@@ -184,11 +172,11 @@ checkIntegrability[func_,max]:=Module[{maxCoproduct,checkEntries,weight=transcen
 	Sum[Expand[checkEntries[i]],{i,weight-1}]];
 checkIntegrability[func_,last]:=Expand[func/.CircleDot[x_,y_]:>CircleDot[coproduct[{transcendentalWeight[func]-2,1},x],y]/.CircleDot[a__,b_,c_]:>CircleDot[a,b/.toLogs,c/.toLogs]/.\[Pi]to\[Zeta]/.{CircleDot[a___,Log[b_],Log[c_]]:>CircleDot[a]AngleBracket[b,c]}/.toHPL/.flipArgument[{u,v,w}]/.CircleDot[a__]:>toLinearBasis[CircleDot[a]]];
 
-yReplacements={yu->-((-1-u+v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1+u-v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])),yv->-((-1+u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])),yw->-((-1+u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2]))};
+yReplacements={yu->-((-1-u+v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1+u-v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])),yv->-((-1+u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])),yw->-((-1+u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])), y11 -> (1 - u4 - u5 + u1*u4*u5 - u3*u6 + Sqrt[\[CapitalDelta]1])/(1 - u4 - u5 + u1*u4*u5 - u3*u6 - Sqrt[\[CapitalDelta]1]), y12 -> (1 - u5 - u6 + u2*u5*u6 - u4*u7 + Sqrt[\[CapitalDelta]2])/(1 - u5 - u6 + u2*u5*u6 - u4*u7 - Sqrt[\[CapitalDelta]2]), y13 -> (-1 + u1*u5 + u6 + u7 - u3*u6*u7 - Sqrt[\[CapitalDelta]3])/(-1 + u1*u5 + u6 + u7 - u3*u6*u7 + Sqrt[\[CapitalDelta]3]), y14 -> (1 - u1 - u2*u6 - u7 + u1*u4*u7 + Sqrt[\[CapitalDelta]4])/(1 - u1 - u2*u6 - u7 + u1*u4*u7 - Sqrt[\[CapitalDelta]4]), y15 -> (1 - u1 - u2 + u1*u2*u5 - u3*u7 + Sqrt[\[CapitalDelta]5])/(1 - u1 - u2 + u1*u2*u5 - u3*u7 - Sqrt[\[CapitalDelta]5]), y16 -> (1 - u2 - u3 - u1*u4 + u2*u3*u6 + Sqrt[\[CapitalDelta]6])/(1 - u2 - u3 - u1*u4 + u2*u3*u6 - Sqrt[\[CapitalDelta]6]), y17 -> (1 - u3 - u4 - u2*u5 + u3*u4*u7 + Sqrt[\[CapitalDelta]7])/(1 - u3 - u4 - u2*u5 + u3*u4*u7 - Sqrt[\[CapitalDelta]7]), y21 -> ((1 - u5 - u6 + u2*u5*u6 - u4*u7 + 2*u4*u6*u7 - Sqrt[\[CapitalDelta]2])*(1 - u2 - u3 - u1*u4 + u2*u3*u6 + Sqrt[\[CapitalDelta]6]))/((1 - u5 - u6 + u2*u5*u6 - u4*u7 + 2*u4*u6*u7 + Sqrt[\[CapitalDelta]2])*(1 - u2 - u3 - u1*u4 + u2*u3*u6 - Sqrt[\[CapitalDelta]6])), y22 -> ((1 - u1*u5 - u6 - u7 + 2*u1*u5*u7 + u3*u6*u7 - Sqrt[\[CapitalDelta]3])*(1 - u3 - u4 - u2*u5 + u3*u4*u7 + Sqrt[\[CapitalDelta]7]))/((1 - u1*u5 - u6 - u7 + 2*u1*u5*u7 + u3*u6*u7 + Sqrt[\[CapitalDelta]3])*(1 - u3 - u4 - u2*u5 + u3*u4*u7 - Sqrt[\[CapitalDelta]7])), y23 -> ((1 - u4 - u5 + u1*u4*u5 - u3*u6 + Sqrt[\[CapitalDelta]1])*(1 - u1 - u2*u6 + 2*u1*u2*u6 - u7 + u1*u4*u7 - Sqrt[\[CapitalDelta]4]))/((1 - u4 - u5 + u1*u4*u5 - u3*u6 - Sqrt[\[CapitalDelta]1])*(1 - u1 - u2*u6 + 2*u1*u2*u6 - u7 + u1*u4*u7 + Sqrt[\[CapitalDelta]4])), y24 -> ((1 - u5 - u6 + u2*u5*u6 - u4*u7 + Sqrt[\[CapitalDelta]2])*(1 - u1 - u2 + u1*u2*u5 - u3*u7 + 2*u2*u3*u7 - Sqrt[\[CapitalDelta]5]))/((1 - u5 - u6 + u2*u5*u6 - u4*u7 - Sqrt[\[CapitalDelta]2])*(1 - u1 - u2 + u1*u2*u5 - u3*u7 + 2*u2*u3*u7 + Sqrt[\[CapitalDelta]5])), y25 -> ((-1 + u1*u5 + u6 + u7 - u3*u6*u7 - Sqrt[\[CapitalDelta]3])*(1 - u2 - u3 - u1*u4 + 2*u1*u3*u4 + u2*u3*u6 - Sqrt[\[CapitalDelta]6]))/((-1 + u1*u5 + u6 + u7 - u3*u6*u7 + Sqrt[\[CapitalDelta]3])*(1 - u2 - u3 - u1*u4 + 2*u1*u3*u4 + u2*u3*u6 + Sqrt[\[CapitalDelta]6])), y26 -> ((1 - u1 - u2*u6 - u7 + u1*u4*u7 + Sqrt[\[CapitalDelta]4])*(1 - u3 - u4 - u2*u5 + 2*u2*u4*u5 + u3*u4*u7 - Sqrt[\[CapitalDelta]7]))/((1 - u1 - u2*u6 - u7 + u1*u4*u7 - Sqrt[\[CapitalDelta]4])*(1 - u3 - u4 - u2*u5 + 2*u2*u4*u5 + u3*u4*u7 + Sqrt[\[CapitalDelta]7])), y27 -> ((1 - u4 - u5 + u1*u4*u5 - u3*u6 + 2*u3*u5*u6 - Sqrt[\[CapitalDelta]1])*(1 - u1 - u2 + u1*u2*u5 - u3*u7 + Sqrt[\[CapitalDelta]5]))/((1 - u4 - u5 + u1*u4*u5 - u3*u6 + 2*u3*u5*u6 + Sqrt[\[CapitalDelta]1])*(1 - u1 - u2 + u1*u2*u5 - u3*u7 - Sqrt[\[CapitalDelta]5]))};
+replace\[CapitalDelta]={\[CapitalDelta]->(1-u-v-w)^2-4u v w, \[CapitalDelta]1 -> 1 - 2*u4 + u4^2 - 2*u5 + 2*u4*u5 + 2*u1*u4*u5 - 2*u1*u4^2*u5 + u5^2 - 2*u1*u4*u5^2 + u1^2*u4^2*u5^2 - 2*u3*u6 + 2*u3*u4*u6 + 2*u3*u5*u6 - 4*u3*u4*u5*u6 + 2*u1*u3*u4*u5*u6 + u3^2*u6^2,  \[CapitalDelta]2 -> 1 - 2*u5 + u5^2 - 2*u6 + 2*u5*u6 + 2*u2*u5*u6 - 2*u2*u5^2*u6 + u6^2 - 2*u2*u5*u6^2 + u2^2*u5^2*u6^2 - 2*u4*u7 + 2*u4*u5*u7 + 2*u4*u6*u7 - 4*u4*u5*u6*u7 + 2*u2*u4*u5*u6*u7 + u4^2*u7^2, \[CapitalDelta]3 -> 1 - 2*u1*u5 + u1^2*u5^2 - 2*u6 + 2*u1*u5*u6 + u6^2 - 2*u7 + 2*u1*u5*u7 + 2*u6*u7 + 2*u3*u6*u7 - 4*u1*u5*u6*u7 + 2*u1*u3*u5*u6*u7 - 2*u3*u6^2*u7 + u7^2 - 2*u3*u6*u7^2 + u3^2*u6^2*u7^2, \[CapitalDelta]4 -> 1 - 2*u1 + u1^2 - 2*u2*u6 + 2*u1*u2*u6 + u2^2*u6^2 - 2*u7 + 2*u1*u7 + 2*u1*u4*u7 - 2*u1^2*u4*u7 + 2*u2*u6*u7 - 4*u1*u2*u6*u7 + 2*u1*u2*u4*u6*u7 + u7^2 - 2*u1*u4*u7^2 + u1^2*u4^2*u7^2,  \[CapitalDelta]5 -> 1 - 2*u1 + u1^2 - 2*u2 + 2*u1*u2 + u2^2 + 2*u1*u2*u5 - 2*u1^2*u2*u5 - 2*u1*u2^2*u5 + u1^2*u2^2*u5^2 - 2*u3*u7 + 2*u1*u3*u7 + 2*u2*u3*u7 - 4*u1*u2*u3*u7 + 2*u1*u2*u3*u5*u7 + u3^2*u7^2, \[CapitalDelta]6 -> 1 - 2*u2 + u2^2 - 2*u3 + 2*u2*u3 + u3^2 - 2*u1*u4 + 2*u1*u2*u4 + 2*u1*u3*u4 - 4*u1*u2*u3*u4 + u1^2*u4^2 + 2*u2*u3*u6 - 2*u2^2*u3*u6 - 2*u2*u3^2*u6 + 2*u1*u2*u3*u4*u6 + u2^2*u3^2*u6^2, \[CapitalDelta]7 -> 1 - 2*u3 + u3^2 - 2*u4 + 2*u3*u4 + u4^2 - 2*u2*u5 + 2*u2*u3*u5 + 2*u2*u4*u5 - 4*u2*u3*u4*u5 + u2^2*u5^2 + 2*u3*u4*u7 - 2*u3^2*u4*u7 - 2*u3*u4^2*u7 + 2*u2*u3*u4*u5*u7 + u3^2*u4^2*u7^2};
 uReplacements={1-u->(1-yu)(1-yu*yv*yw)/((1-yu*yv)(1-yu*yw)),1-v->(1-yv)(1-yu*yv*yw)/((1-yv yu)(1-yv*yw)),1-w->(1-yw)(1-yu*yv*yw)/((1-yw yu)(1-yw yv)),u->yu(1-yv)(1-yw)/((1-yu*yv)(1-yu*yw)),v->yv(1-yu)(1-yw)/((1-yv yu)(1-yv*yw)),w->yw(1-yu)(1-yv)/((1-yw yu)(1-yw yv))};
 \[Xi]replacements={Subscript[\[Xi],u]->((1-yu)*(1-yu*yv*yw))/((1-yu*yv)*(1-yu*yw)),Subscript[\[Xi],v]->((1-yv)*(1-yu*yv*yw))/((1-yu*yv)*(1-yv*yw)),Subscript[\[Xi],w]->((1-yw)*(1-yu*yv*yw))/((1-yu*yw)*(1-yv*yw)),\[Xi]->((1-yu)*(1-yu*yv*yw))/((1-yu*yv)*(1-yu*yw))};
 zLogReplacements = {Log[Subscript[z,u]]->Log[((1-yv)*(1-yu*yv)*yw)/(yv*(1-yw)*(1-yu*yw))]-Log[Subscript[zb,u]],Log[1-Subscript[z,u]]->Log[((1-yv*yw)*(1-yu*yv*yw))/(yv*(1-yw)*(1-yu*yw))]-Log[1-Subscript[zb,u]],Log[Subscript[z,v]]->Log[(yu*(1-yw)*(1-yv*yw))/((1-yu)*(1-yu*yv)*yw)]-Log[Subscript[zb,v]],Log[1-Subscript[z,v]]->Log[((1-yu*yw)*(1-yu*yv*yw))/((1-yu)*(1-yu*yv)*yw)]-Log[1-Subscript[zb,v]],Log[Subscript[z,w]]->Log[((1-yu)*yv*(1-yu*yw))/(yu*(1-yv)*(1-yv*yw))]-Log[Subscript[zb,w]],Log[1-Subscript[z,w]]->Log[((1-yu*yv)*(1-yu*yv*yw))/(yu*(1-yv)*(1-yv*yw))]-Log[1-Subscript[zb,w]],Log[z]->Log[((1-yv)*(1-yu*yv)*yw)/(yv*(1-yw)*(1-yu*yw))]-Log[zb],Log[1-z]->Log[((1-yv*yw)*(1-yu*yv*yw))/(yv*(1-yw)*(1-yu*yw))]-Log[1-zb]};
-yMatchReplacements={ -((-1 - u + v + w + Sqrt[-4*u*v*w + (-1 + u + v + w)^2])/(1 + u - v - w + Sqrt[-4*u*v*w + (-1 + u + v + w)^2]))->yu,-((-1+u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2]))->yv,-((-1+u+v-w+Sqrt[-4*u*v*w+(-1+u+v+w)^2])/(1-u-v+w+Sqrt[-4*u*v*w+(-1+u+v+w)^2]))->yw};
 uToMRK={u->1-\[Xi],v->\[Xi] z zp,w->\[Xi](1-z)(1-zp)};
 expandLogs={Log[a_ b_]:>Log[a]+Log[b],Log[Power[a_,b_]]:>b Log[a]};
 toBinaryForm={HPL[word_,1-var_]:>Superscript[Subscript[h,FromDigits[word,2]],StringJoin["[",ToString[Length[word]],"]"]][var]}
@@ -222,19 +210,6 @@ HPLseries[func_,{var_,var0_,order_}]:=Module[{tempVar,function,termsList,expandT
 	termsList=If[MatchQ[function,Plus[_,__]],List@@function,{function}];
 	Expand[Normal[Series[Expand[Simplify[Plus@@(expandToProperOrder/@termsList)]],{var,var0,order}]]]];*)
 
-symbolLevelFunctionsWeight[n_]:=symbolLevelFunctionsWeight[n]=Which[n>6,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_composite_functions_wfec.dat"],Array[Symbol["E"<>ToString[n]],numEfuncs[n]],Array[Symbol["O"<>ToString[n]],numOfuncs[n]]],
-                                                                    7>n>3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_composite_functions_wfec.dat"],Array[Symbol["H"<>ToString[n]],numHfuncs[n]]],
-                                                                    n==3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"],Array[Symbol["H"<>ToString[n]],numHfuncs[n]]],
-                                                                    n<3,Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_basis_wfec.dat"]];
-beyondSymbolTerms[weight_]:=beyondSymbolTerms[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelFunctionsWeight[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelFunctionsWeight[n][[k]],{k,Length[symbolLevelFunctionsWeight[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
-functionsWeight[n_]:=functionsWeight[n]=Join[symbolLevelFunctionsWeight[n],beyondSymbolTerms[n]];
-
-symbolLevelFunctionsWeightDS[n_]:=symbolLevelFunctionsWeightDS[n]=Which[n>3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"],Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_composite_double_scaling_functions_wfec.dat"],Array[Symbol["DS"<>ToString[n]],numDSfuncs[n]]],
-                                                                    n==3,Join[Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"],Array[Symbol["DS"<>ToString[n]],numDSfuncs[n]]],
-                                                                    n<3,Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[n]<>"/weight_"<>ToString[n]<>"_HPL_double_scaling_basis_wfec.dat"]];
-beyondSymbolTermsDS[weight_]:=beyondSymbolTermsDS[weight]=Module[{functionsOfWeight,beyondSymbolFunctions},Do[functionsOfWeight[n]=symbolLevelFunctionsWeightDS[n],{n,weight-2}];beyondSymbolFunctions=Flatten[Table[Table[MZV[weight-n][[j]]symbolLevelFunctionsWeightDS[n][[k]],{k,Length[symbolLevelFunctionsWeightDS[n]]},{j,Length[MZV[weight-n]]}],{n,weight-2}]]; Join[Reverse@beyondSymbolFunctions,MZV[weight]]];
-functionsWeightDS[n_]:=functionsWeightDS[n]=Join[symbolLevelFunctionsWeightDS[n],beyondSymbolTermsDS[n]];
-
 expandHPL[order_:10]:={HPL[{0},z_]:>Log[z],HPL[aVec_,z_]:>HPLexpansion[compressedNotation[aVec],z,order]};
 HPLexpansion[{m__},z_,order_]:=Sum[z^l*Z[{m},l],{l,1,order}];
 Z[{m1_,mr__},j_]:=Rational[Sign[m1]^(j+1),j^Abs[m1]]Sum[Power[Sign[m1],l+1]Z[{mr},l-1],{l,2,j}];
@@ -265,7 +240,8 @@ reduce[eqns_ ,ID_:mapleSolverID]:=Monitor[Module[{fullEqns=Normal[eqns],
 	initializing="writing equations to file";
 	Put[fullEqns,fileName<>"_equations.dat"];
 	Run["echo \"equations := $(cat "<>fileName<>"_equations.dat):\" > "<>fileName<>"_equations.dat"];
-	Run["echo \"read \`"<>Directory[]<>"/"<>fileName<>"_equations.dat"<>"\`: \nsolution := solve(equations, remove(has,remove(has,indets(equations),z),Log[[Xi]])): \nsave(solution, \`"<>Directory[]<>"/"<>fileName<>"_solution.dat"<>"\`): \" > "<>fileName<>".mpl"];Monitor[Monitor[While[!FileExistsQ[fileName<>"_done.dat"],initializing=StringJoin["waiting for maple: ",ToString[count]," seconds"];count +=1;Pause[1]],Text["nohup maple -q "<>Directory[]<>"/"<>fileName<>".mpl > maple_solver.log &"]],Text["maple "<>Directory[]<>"/"<>fileName<>".mpl"]];
+	Run["echo \"read \`"<>Directory[]<>"/"<>fileName<>"_equations.dat"<>"\`: \nsolution := solve(equations, remove(has,remove(has,indets(equations),z),Log[[Xi]])): \nsave(solution, \`"<>Directory[]<>"/"<>fileName<>"_solution.dat"<>"\`): \" > "<>fileName<>".mpl"];
+    Monitor[Monitor[While[!FileExistsQ[fileName<>"_done.dat"],initializing=StringJoin["waiting for maple: ",ToString[count]," seconds"];count +=1;Pause[1]],Text["nohup maple -q "<>Directory[]<>"/"<>fileName<>".mpl > maple_solver.log &"]],Text["maple "<>Directory[]<>"/"<>fileName<>".mpl"]];
     Run["rm "<>fileName<>"_done.dat"];
 	Run["sed -i '' 's/=/==/g' "<>fileName<>"_solution.dat"];
 	Run["sed -i '' 's/:==/=/g' "<>fileName<>"_solution.dat"];
@@ -287,3 +263,31 @@ evaluateG[funcName_,expression_,vars_,points_]:=Module[{formattedExpression,func
 Gn[args__]:=Module[{},Gn[temp__]=.;
     Get[$MathematicaLibrary<>"/Function Library/GiNaC/Gn.m"];
     Gn[args]]/;$OperatingSystem=="Unix"
+
+HtoEO = {H3[1] -> O3[1], H4[1] -> E4[1], H4[2] -> E4[2], H4[3] -> E4[3], 
+     H4[4] -> O4[1], H4[5] -> O4[2], H4[6] -> O4[3], H5[7] -> E5[1], 
+     H5[8] -> E5[2], H5[9] -> E5[3], H5[10] -> E5[4], H5[11] -> E5[5], 
+     H5[12] -> E5[6], H5[13] -> E5[7], H5[14] -> E5[8], H5[15] -> E5[9], 
+     H5[16] -> E5[10], H5[17] -> E5[11], H5[18] -> E5[12], H5[19] -> E5[13], 
+     H5[1] -> O5[1], H5[2] -> O5[2], H5[3] -> O5[3], H5[4] -> O5[4], 
+     H5[5] -> O5[5], H5[6] -> O5[6], H5[20] -> O5[7], H5[21] -> O5[8], 
+     H5[22] -> O5[9], H5[23] -> O5[10], H6[1] -> E6[1], H6[2] -> E6[2], 
+     H6[3] -> E6[3], H6[4] -> E6[4], H6[5] -> E6[5], H6[6] -> E6[6], 
+     H6[7] -> E6[7], H6[8] -> E6[8], H6[9] -> E6[9], H6[10] -> E6[10], 
+     H6[11] -> E6[11], H6[12] -> E6[12], H6[13] -> E6[13], H6[14] -> E6[14], 
+     H6[15] -> E6[15], H6[16] -> E6[16], H6[17] -> E6[17], H6[18] -> E6[18], 
+     H6[48] -> E6[19], H6[49] -> E6[20], H6[50] -> E6[21], H6[51] -> E6[22], 
+     H6[52] -> E6[23], H6[53] -> E6[24], H6[54] -> E6[25], H6[55] -> E6[26], 
+     H6[56] -> E6[27], H6[57] -> E6[28], H6[58] -> E6[29], H6[59] -> E6[30], 
+     H6[60] -> E6[31], H6[61] -> E6[32], H6[62] -> E6[33], H6[63] -> E6[34], 
+     H6[64] -> E6[35], H6[65] -> E6[36], H6[66] -> E6[37], H6[67] -> E6[38], 
+     H6[68] -> E6[39], H6[69] -> E6[40], H6[70] -> E6[41], H6[71] -> E6[42], 
+     H6[72] -> E6[43], H6[73] -> E6[44], H6[74] -> E6[45], H6[19] -> O6[1], 
+     H6[20] -> O6[2], H6[21] -> O6[3], H6[22] -> O6[4], H6[23] -> O6[5], 
+     H6[24] -> O6[6], H6[25] -> O6[7], H6[26] -> O6[8], H6[27] -> O6[9], 
+     H6[28] -> O6[10], H6[29] -> O6[11], H6[30] -> O6[12], H6[31] -> O6[13], 
+     H6[32] -> O6[14], H6[33] -> O6[15], H6[34] -> O6[16], H6[35] -> O6[17], 
+     H6[36] -> O6[18], H6[37] -> O6[19], H6[38] -> O6[20], H6[39] -> O6[21], 
+     H6[40] -> O6[22], H6[41] -> O6[23], H6[42] -> O6[24], H6[43] -> O6[25], 
+     H6[44] -> O6[26], H6[45] -> O6[27], H6[46] -> O6[28], H6[47] -> O6[29], 
+     H6[75] -> O6[30], H6[76] -> O6[31], H6[77] -> O6[32], H6[78] -> O6[33]};

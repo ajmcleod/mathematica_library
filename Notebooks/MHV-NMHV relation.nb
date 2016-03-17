@@ -1,0 +1,2274 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     82149,       2265]
+NotebookOptionsPosition[     76307,       2088]
+NotebookOutlinePosition[     76664,       2104]
+CellTagsIndexPosition[     76621,       2101]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.6584477504740458`*^9, 3.6584477518401213`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<noTSvanishingFunction.mx\>\"", "]"}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVloop5ansatzZZ", "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{"noTSvanishingFunctionCollinearVanishing", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "v", "]"}], ",", 
+          RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", 
+           RowBox[{"1", "-", "v"}], "]"}], ",", 
+          RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yv", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{
+         RowBox[{"-", "3"}], 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"2", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"2", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", "__", "]"}], "\[Rule]", "0"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658448100127228*^9, 3.658448104769271*^9}, 
+   3.6584481455890627`*^9, {3.658448177893999*^9, 3.6584482242969723`*^9}, {
+   3.658448305136239*^9, 3.65844842314363*^9}, {3.658448497074793*^9, 
+   3.658448516465757*^9}, {3.6584507754082823`*^9, 3.658450787314588*^9}, {
+   3.6585282672781477`*^9, 3.658528288833129*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<EMHVloop5ansatzZZ.mx\>\"", ",", "EMHVloop5ansatzZZ"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.658448503258924*^9, 3.6584485286981697`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVterms", "=", 
+   RowBox[{"DeleteDuplicates", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"Reap", "[", 
+       RowBox[{"EMHVloop5ansatzZZ", "/.", 
+        RowBox[{
+         RowBox[{"CircleDot", "[", "func_", "]"}], "\[RuleDelayed]", 
+         RowBox[{"Sow", "[", 
+          RowBox[{"CircleDot", "[", "func", "]"}], "]"}]}]}], "]"}], 
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.658450758104149*^9, 3.658450768238144*^9}, {
+  3.658450801112838*^9, 3.6584508274486713`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqnArray", "=", 
+   RowBox[{"CoefficientArrays", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Expand", "[", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"E6", "[", "4", "]"}], "]"}], "-", 
+        RowBox[{
+         RowBox[{"1", "/", "2"}], "*", 
+         RowBox[{"CircleDot", "[", 
+          RowBox[{"EMHV6", "[", "4", "]"}], "]"}]}], "-", 
+        "EMHVloop5ansatzZZ"}], "]"}], "/.", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", "func_", "]"}], "\[RuleDelayed]", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"Expand", "[", "func", "]"}], "]"}]}]}], ",", "EMHVterms"}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450855408306*^9, 3.658450896436809*^9}, {
+  3.6584509299963417`*^9, 3.658450959250718*^9}, {3.658452140694152*^9, 
+  3.6584521736977873`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"eqnArray", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.658450936232706*^9, 3.658450954173439*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.65845235544984*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+    "eqnArray", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450956864752*^9, 3.6584509797985973`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MHVNMHVreplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"eqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450980737876*^9, 3.6584510080485363`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "MHVNMHVreplacements", "]"}]], "Input",
+ CellChangeTimes->{{3.6584533201842213`*^9, 3.658453323540584*^9}}],
+
+Cell[BoxData[
+ FormBox["582", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658453323812929*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", "MHVNMHVreplacements", "]"}]}]], "Input",
+ CellChangeTimes->{{3.658453332202778*^9, 3.65845333729533*^9}}],
+
+Cell[BoxData[
+ FormBox["233", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6584533386887083`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"evenFuncsWeight", "[", "w_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"evenFuncsWeight", "[", "w", "]"}], "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"functionsWeight", "[", "w", "]"}], ",", 
+      RowBox[{
+       RowBox[{"EvenQ", "[", 
+        RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{
+  3.652534417512541*^9, {3.653926927824215*^9, 3.653926928493834*^9}, {
+   3.658174646532311*^9, 3.6581746466881332`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"oddFuncsWeight", "[", "w_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{"oddFuncsWeight", "[", "w", "]"}], "=", 
+    RowBox[{"Select", "[", 
+     RowBox[{
+      RowBox[{"functionsWeight", "[", "w", "]"}], ",", 
+      RowBox[{
+       RowBox[{"OddQ", "[", 
+        RowBox[{"yGrading", "[", "#", "]"}], "]"}], "&"}]}], "]"}]}]}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TSreplacements", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "-", "u"}], "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "v", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", "__", "]"}], "\[RuleDelayed]", "0"}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656362273427198*^9, 3.6563622852207603`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TSvanishingEqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"noTSvanishingFunction", "/.", "TSreplacements"}], ",", 
+       RowBox[{"CircleDot", "/@", 
+        RowBox[{"oddFuncsWeight", "[", "8", "]"}]}]}], "]"}], 
+     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.656362300116475*^9, 3.656362339596277*^9}, 
+   3.656362907472919*^9, 3.6581745930049143`*^9, 3.658174670396039*^9, 
+   3.6581748701805973`*^9, {3.6584536406133966`*^9, 3.658453653632832*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TSvanishingReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"TSvanishingEqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6563623458001537`*^9, 3.656362353484949*^9}, 
+   3.658174695397498*^9, {3.658453662451654*^9, 3.65845366259247*^9}, {
+   3.658454055146137*^9, 3.658454055904161*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", "TSvanishingReplacements", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6581753254074917`*^9, 3.6581753308773003`*^9}}],
+
+Cell[BoxData[
+ FormBox["588", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658454045356399*^9, 3.6584541502789288`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"evenBonusReplacements", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yv", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yv", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", "__", "]"}], "\[RuleDelayed]", "0"}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656441236260147*^9, 3.656441241413932*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"evenBonusEqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"noTSvanishingFunction", "/.", "evenBonusReplacements"}], ",", 
+       
+       RowBox[{"CircleDot", "/@", 
+        RowBox[{"evenFuncsWeight", "[", "8", "]"}]}]}], "]"}], 
+     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.65644123445919*^9, 3.656441261419375*^9}, {
+   3.656441308911373*^9, 3.656441321807765*^9}, 3.656441355744906*^9, {
+   3.6581751925279818`*^9, 3.658175211810198*^9}, {3.6584536753149776`*^9, 
+   3.658453686026616*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"evenBonusVanishingReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"evenBonusEqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656441339799905*^9, 3.656441367277485*^9}, 
+   3.658175219805276*^9, {3.65845407982102*^9, 3.6584540803634*^9}, {
+   3.658454195487505*^9, 3.6584541955809803`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", "evenBonusVanishingReplacements", "]"}]}]], "Input",
+ CellChangeTimes->{3.658175347592402*^9}],
+
+Cell[BoxData[
+ FormBox["485", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658454746035513*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"asEquations", "[", 
+      RowBox[{"TSvanishingReplacements", ",", "MHVNMHVreplacements"}], "]"}], 
+     ",", "3"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.658175926130328*^9, 3.658175948806778*^9}, {
+  3.658454159055615*^9, 3.6584541809460907`*^9}, {3.658454225543623*^9, 
+  3.658454225646625*^9}}],
+
+Cell[BoxData[
+ FormBox["233", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6584547556118507`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"asEquations", "[", 
+      RowBox[{"evenBonusVanishingReplacements", ",", "MHVNMHVreplacements"}], 
+      "]"}], ",", "3"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.658454201690374*^9, 3.6584542282703953`*^9}}],
+
+Cell[BoxData[
+ FormBox["233", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658454760705061*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"asEquations", "[", 
+      RowBox[{
+      "evenBonusVanishingReplacements", ",", "MHVNMHVreplacements", ",", 
+       "TSvanishingReplacements"}], "]"}], ",", "3"}], "]"}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.6584542193601723`*^9, 3.658454231614764*^9}}],
+
+Cell[BoxData[
+ FormBox["233", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658454822641336*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"815", "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"asEquations", "[", 
+      RowBox[{
+      "evenBonusVanishingReplacements", ",", "TSvanishingReplacements"}], 
+      "]"}], ",", "3"}], "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.658454839343582*^9, 3.658454845296521*^9}}],
+
+Cell[BoxData[
+ FormBox["484", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658454857463098*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "Get", "[", 
+   "\"\<noTSvanishingIntegrabilityAndCollinearVanishingReplacements.mx\>\"", 
+   "]"}], ";"}]], "Input",
+ CellChangeTimes->{{3.6584550856495533`*^9, 3.658455088624453*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"16685", "-", 
+  RowBox[{
+  "Length", "[", 
+   "noTSvanishingIntegrabilityAndCollinearVanishingReplacements", "]"}], "-", 
+  
+  RowBox[{"Length", "[", 
+   RowBox[{"MZV", "[", "10", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.6584555263896523`*^9, 3.658455539281579*^9}}],
+
+Cell[BoxData[
+ FormBox["41", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.65845552930849*^9, 3.6584555396676683`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+  "noTSvanishingIntegrabilityAndCollinearVanishingAndMHVNMHVReplacements", 
+   "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"asEquations", "[", 
+      RowBox[{
+      "noTSvanishingIntegrabilityAndCollinearVanishingReplacements", ",", 
+       "MHVNMHVreplacements"}], "]"}], ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6584555587596483`*^9, 3.658455579678937*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"16685", "-", 
+  RowBox[{
+  "Length", "[", 
+   "noTSvanishingIntegrabilityAndCollinearVanishingAndMHVNMHVReplacements", 
+   "]"}], "-", 
+  RowBox[{"Length", "[", 
+   RowBox[{"MZV", "[", "10", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{
+  3.658455523636229*^9, {3.65845559478172*^9, 3.658455596998501*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658455888176478*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<noTSvanishingAnsatz.dat\>\"", "]"}], 
+  ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"finalAnswerCheck", "=", 
+   RowBox[{"noTSvanishingAnsatz", "/.", 
+    RowBox[{
+    "Association", "@@", 
+     "noTSvanishingIntegrabilityAndCollinearVanishingAndMHVNMHVReplacements"}]\
+}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658455666983152*^9, 3.658455670721541*^9}, 
+   3.658455713669404*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<EMHV6coprod811.mx\>\"", "]"}], ";"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Expand", "[", 
+  RowBox[{
+   RowBox[{"EMHV6coprod811", "[", "5", "]"}], "-", "finalAnswerCheck"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.658455785662621*^9, 3.658455792991499*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658456026790277*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"preIntegrabilityNoTSvanishingAnsatzZZ", "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{"noTSvanishingAnsatz", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "v", "]"}], ",", 
+          RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", 
+           RowBox[{"1", "-", "v"}], "]"}], ",", 
+          RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yv", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{
+         RowBox[{"-", "3"}], 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"2", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"2", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", "__", "]"}], "\[Rule]", "0"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658456360126685*^9, 3.658456377704639*^9}, {
+  3.658456474437107*^9, 3.658456478211931*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"preIntegrabilityEqnArray", "=", 
+   RowBox[{"CoefficientArrays", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Expand", "[", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"E6", "[", "4", "]"}], "]"}], "-", 
+        RowBox[{
+         RowBox[{"1", "/", "2"}], "*", 
+         RowBox[{"CircleDot", "[", 
+          RowBox[{"EMHV6", "[", "4", "]"}], "]"}]}], "-", 
+        "preIntegrabilityNoTSvanishingAnsatzZZ"}], "]"}], "/.", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", "func_", "]"}], "\[RuleDelayed]", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"Expand", "[", "func", "]"}], "]"}]}]}], ",", 
+     RowBox[{"CircleDot", "/@", 
+      RowBox[{"evenFuncsWeight", "[", "8", "]"}]}]}], "]"}]}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.658450855408306*^9, 3.658450896436809*^9}, {
+  3.6584509299963417`*^9, 3.658450959250718*^9}, {3.658452140694152*^9, 
+  3.6584521736977873`*^9}, {3.658456448806403*^9, 3.6584564892475777`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{
+  "preIntegrabilityEqnArray", "\[LeftDoubleBracket]", "1", 
+   "\[RightDoubleBracket]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.658450936232706*^9, 3.658450954173439*^9}, 
+   3.6584564943039017`*^9}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.65845235544984*^9, 3.658456499163095*^9, 
+  3.658527749083014*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"preIntegrabilityEqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+    "preIntegrabilityEqnArray", "\[LeftDoubleBracket]", "2", 
+     "\[RightDoubleBracket]"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450956864752*^9, 3.6584509797985973`*^9}, {
+  3.658456504119907*^9, 3.6584565095400867`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"preIntegrabilityMHVNMHVreplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"preIntegrabilityEqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450980737876*^9, 3.6584510080485363`*^9}, {
+  3.65845651330371*^9, 3.658456532261359*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "preIntegrabilityMHVNMHVreplacements", "]"}]], "Input",\
+
+ CellChangeTimes->{{3.658456518982402*^9, 3.658456541766623*^9}}],
+
+Cell[BoxData[
+ FormBox["2797", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6584565420758953`*^9, 3.658527751146906*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TSreplacements", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "-", "u"}], "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "v", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", "__", "]"}], "\[RuleDelayed]", "0"}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656362273427198*^9, 3.6563622852207603`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TSvanishingEqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"noTSvanishingAnsatz", "/.", "TSreplacements"}], ",", 
+       RowBox[{"CircleDot", "/@", 
+        RowBox[{"oddFuncsWeight", "[", "8", "]"}]}]}], "]"}], 
+     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.656362300116475*^9, 3.656362339596277*^9}, 
+   3.656362907472919*^9, {3.658527730900661*^9, 3.658527748635632*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"TSvanishingReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"TSvanishingEqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6563623458001537`*^9, 3.656362353484949*^9}, {
+  3.658527765158012*^9, 3.6585277652662497`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"evenBonusReplacements", "=", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yv", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yv", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{"-", 
+       RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", "__", "]"}], "\[RuleDelayed]", "0"}]}], 
+    "}"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656441236260147*^9, 3.656441241413932*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"evenBonusEqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+     RowBox[{"CoefficientArrays", "[", 
+      RowBox[{
+       RowBox[{"noTSvanishingAnsatz", "/.", "evenBonusReplacements"}], ",", 
+       RowBox[{"CircleDot", "/@", 
+        RowBox[{"evenFuncsWeight", "[", "8", "]"}]}]}], "]"}], 
+     "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.65644123445919*^9, 3.656441261419375*^9}, {
+   3.656441308911373*^9, 3.656441321807765*^9}, 3.656441355744906*^9, 
+   3.658527811703998*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"evenBonusVanishingReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"evenBonusEqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.656441339799905*^9, 3.656441367277485*^9}, {
+  3.658527781739938*^9, 3.6585277818266582`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"allBonusReplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{
+     RowBox[{"asEquations", "[", 
+      RowBox[{
+      "preIntegrabilityMHVNMHVreplacements", ",", 
+       "evenBonusVanishingReplacements", ",", "TSvanishingReplacements"}], 
+      "]"}], ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6585277894114933`*^9, 3.658527837492764*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "allBonusReplacements", "]"}]], "Input",
+ CellChangeTimes->{{3.658527841566711*^9, 3.658527843584725*^9}}],
+
+Cell[BoxData[
+ FormBox["3835", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6585278446900663`*^9, 3.658528080870013*^9, 
+  3.658528113965149*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Length", "[", "preIntegrabilityMHVNMHVreplacements", "]"}], "+", 
+  RowBox[{"Length", "[", "evenBonusVanishingReplacements", "]"}], "+", 
+  RowBox[{"Length", "[", "TSvanishingReplacements", "]"}]}]], "Input",
+ CellChangeTimes->{{3.658527924322719*^9, 3.658527940394718*^9}, {
+  3.65852809901478*^9, 3.658528101838234*^9}}],
+
+Cell[BoxData[
+ FormBox["3835", TraditionalForm]], "Output",
+ CellChangeTimes->{3.6585279406904383`*^9, 3.658528071926299*^9, 
+  3.65852810218714*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVloop5ansatzCollinearVanishingZZ", "=", 
+   RowBox[{"Expand", "[", 
+    RowBox[{"noTSvanishingFunctionCollinearVanishing", "/.", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "v", "]"}], ",", 
+          RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", 
+           RowBox[{"1", "-", "v"}], "]"}], ",", 
+          RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"CircleDot", "[", "func", "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yv", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{
+         RowBox[{"-", "3"}], 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"2", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"2", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yu", "]"}], ",", 
+          RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"func_", ",", 
+          RowBox[{"Log", "[", "yw", "]"}], ",", 
+          RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+        RowBox[{"-", 
+         RowBox[{"CircleDot", "[", "func", "]"}]}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", "__", "]"}], "\[Rule]", "0"}]}], "}"}]}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658448100127228*^9, 3.658448104769271*^9}, 
+   3.6584481455890627`*^9, {3.658448177893999*^9, 3.6584482242969723`*^9}, {
+   3.658448305136239*^9, 3.65844842314363*^9}, {3.658448497074793*^9, 
+   3.658448516465757*^9}, {3.6584507754082823`*^9, 3.658450787314588*^9}, {
+   3.6585282672781477`*^9, 3.6585282740618973`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"EMHVcollinearVanishingTerms", "=", 
+   RowBox[{"DeleteDuplicates", "[", 
+    RowBox[{"Flatten", "[", 
+     RowBox[{
+      RowBox[{"Reap", "[", 
+       RowBox[{"EMHVloop5ansatzCollinearVanishingZZ", "/.", 
+        RowBox[{
+         RowBox[{"CircleDot", "[", "func_", "]"}], "\[RuleDelayed]", 
+         RowBox[{"Sow", "[", 
+          RowBox[{"CircleDot", "[", "func", "]"}], "]"}]}]}], "]"}], 
+      "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], "]"}], "]"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.658450758104149*^9, 3.658450768238144*^9}, {
+  3.658450801112838*^9, 3.6584508274486713`*^9}, {3.658528307379652*^9, 
+  3.658528314774334*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqnArray", "=", 
+   RowBox[{"CoefficientArrays", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"Expand", "[", 
+       RowBox[{
+        RowBox[{"CircleDot", "[", 
+         RowBox[{"E6", "[", "4", "]"}], "]"}], "-", 
+        RowBox[{
+         RowBox[{"1", "/", "2"}], "*", 
+         RowBox[{"CircleDot", "[", 
+          RowBox[{"EMHV6", "[", "4", "]"}], "]"}]}], "-", 
+        "EMHVloop5ansatzCollinearVanishingZZ"}], "]"}], "/.", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", "func_", "]"}], "\[RuleDelayed]", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"Expand", "[", "func", "]"}], "]"}]}]}], ",", 
+     "EMHVcollinearVanishingTerms"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450855408306*^9, 3.658450896436809*^9}, {
+  3.6584509299963417`*^9, 3.658450959250718*^9}, {3.658452140694152*^9, 
+  3.6584521736977873`*^9}, {3.65852832517927*^9, 3.658528329282058*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"eqnArray", "\[LeftDoubleBracket]", "1", "\[RightDoubleBracket]"}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.658450936232706*^9, 3.658450954173439*^9}}],
+
+Cell[BoxData[
+ FormBox["0", TraditionalForm]], "Output",
+ CellChangeTimes->{3.65845235544984*^9, 3.6585284596127043`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"eqns", "=", 
+   RowBox[{"Normal", "[", 
+    RowBox[{
+    "eqnArray", "\[LeftDoubleBracket]", "2", "\[RightDoubleBracket]"}], 
+    "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450956864752*^9, 3.6584509797985973`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"MHVNMHVreplacements", "=", 
+   RowBox[{"reduce", "[", 
+    RowBox[{"eqns", ",", "3"}], "]"}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.658450980737876*^9, 3.6584510080485363`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", "MHVNMHVreplacements", "]"}]], "Input",
+ CellChangeTimes->{{3.658528335222588*^9, 3.6585283397837543`*^9}}],
+
+Cell[BoxData[
+ FormBox["41", TraditionalForm]], "Output",
+ CellChangeTimes->{3.658528518825431*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["On DS Surface", "Subsection",
+ CellChangeTimes->{{3.659220966399672*^9, 3.659220972854039*^9}}],
+
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.6584477504740458`*^9, 3.6584477518401213`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"Log", "[", 
+     RowBox[{"1", "-", "v"}], "]"}], "\[Rule]", "0"}], ",", 
+   RowBox[{
+    RowBox[{"Log", "[", "yu", "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"Log", "[", "u", "]"}], "+", 
+     RowBox[{"Log", "[", 
+      RowBox[{"1", "+", "w"}], "]"}]}]}], ",", 
+   RowBox[{
+    RowBox[{"Log", "[", "yv", "]"}], "\[Rule]", "0"}], ",", 
+   RowBox[{
+    RowBox[{"Log", "[", "yw", "]"}], "\[Rule]", 
+    RowBox[{
+     RowBox[{"Log", "[", "w", "]"}], "+", 
+     RowBox[{"Log", "[", 
+      RowBox[{"1", "+", "u"}], "]"}]}]}]}], "}"}]], "Input",
+ CellChangeTimes->{{3.659222094164249*^9, 3.659222098463231*^9}, {
+  3.659222388688353*^9, 3.659222399352072*^9}, {3.659222433747037*^9, 
+  3.659222475699011*^9}, {3.6592226592590837`*^9, 3.659222660164076*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"log", "(", 
+      RowBox[{"1", "-", "v"}], ")"}], "\[Rule]", "0"}], ",", 
+    RowBox[{
+     RowBox[{"log", "(", "yu", ")"}], "\[Rule]", 
+     RowBox[{
+      RowBox[{"log", "(", "u", ")"}], "+", 
+      RowBox[{"log", "(", 
+       RowBox[{"w", "+", "1"}], ")"}]}]}], ",", 
+    RowBox[{
+     RowBox[{"log", "(", "yv", ")"}], "\[Rule]", "0"}], ",", 
+    RowBox[{
+     RowBox[{"log", "(", "yw", ")"}], "\[Rule]", 
+     RowBox[{
+      RowBox[{"log", "(", 
+       RowBox[{"u", "+", "1"}], ")"}], "+", 
+      RowBox[{"log", "(", "w", ")"}]}]}]}], "}"}], TraditionalForm]], "Output",\
+
+ CellChangeTimes->{3.6592788085463963`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"nfeCoproductsToDS", "=", 
+   RowBox[{"{", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"_", ",", 
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "-", "v"}], "]"}], ",", 
+        RowBox[{"Log", "[", "_", "]"}]}], "]"}], "\[Rule]", "0"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"_", ",", 
+        RowBox[{"Log", "[", "_", "]"}], ",", 
+        RowBox[{"Log", "[", 
+         RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "\[Rule]", "0"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"_", ",", 
+        RowBox[{"Log", "[", "yv", "]"}], ",", 
+        RowBox[{"Log", "[", "_", "]"}]}], "]"}], "\[Rule]", "0"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"_", ",", 
+        RowBox[{"Log", "[", "_", "]"}], ",", 
+        RowBox[{"Log", "[", "yv", "]"}]}], "]"}], "\[Rule]", "0"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "u", "]"}], ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}], ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "+", "\[IndentingNewLine]", 
+       
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "u", "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "w", "]"}], ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}], ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "+", "\[IndentingNewLine]", 
+       
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "w", "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "u", "]"}], ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}], ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "+", "\[IndentingNewLine]", 
+       
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "u", "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "w", "]"}], ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}], ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "+", "\[IndentingNewLine]", 
+       
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "w", "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yu", "]"}], ",", 
+        RowBox[{"Log", "[", "var_", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "u", "]"}], ",", 
+         RowBox[{"Log", "[", "var", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}], ",", 
+         RowBox[{"Log", "[", "var", "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "var_", "]"}], ",", 
+        RowBox[{"Log", "[", "yu", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "var", "]"}], ",", 
+         RowBox[{"Log", "[", "u", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "var", "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "yw", "]"}], ",", 
+        RowBox[{"Log", "[", "var_", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "w", "]"}], ",", 
+         RowBox[{"Log", "[", "var", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}], ",", 
+         RowBox[{"Log", "[", "var", "]"}]}], "]"}]}]}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"CircleDot", "[", 
+       RowBox[{"func_", ",", 
+        RowBox[{"Log", "[", "var_", "]"}], ",", 
+        RowBox[{"Log", "[", "yw", "]"}]}], "]"}], "\[RuleDelayed]", 
+      RowBox[{
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "var", "]"}], ",", 
+         RowBox[{"Log", "[", "w", "]"}]}], "]"}], "+", 
+       RowBox[{"CircleDot", "[", 
+        RowBox[{"func", ",", 
+         RowBox[{"Log", "[", "var", "]"}], ",", 
+         RowBox[{"Log", "[", 
+          RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}]}], "}"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.659222040959219*^9, 3.6592220620020237`*^9}, {
+  3.659222665372397*^9, 3.6592226893063393`*^9}, {3.659222813972939*^9, 
+  3.659222892350362*^9}, {3.659222982244388*^9, 3.659223101131762*^9}, {
+  3.659223174704818*^9, 3.659223272352215*^9}, {3.659223376828273*^9, 
+  3.659223423863229*^9}, {3.659223484546286*^9, 3.659223491067089*^9}, {
+  3.659278736045148*^9, 3.6592787897719812`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Get", "[", "\"\<noTSvanishingAnsatz.dat\>\"", "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.659228362799342*^9, 3.659228383635879*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp1", "=", 
+   RowBox[{"noTSvanishingAnsatz", "/.", "nfeCoproductsToDS"}]}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.659223614842868*^9, 3.659223616857642*^9}, 
+   3.659228389920536*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp2", "=", 
+   RowBox[{
+    RowBox[{"Expand", "[", 
+     RowBox[{"temp1", "/.", 
+      RowBox[{"flipArgument", "[", 
+       RowBox[{"1", "-", "v"}], "]"}]}], "]"}], "/.", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"___", ",", "1"}], "}"}], ",", "v"}], "]"}], "\[Rule]", 
+       "0"}], ",", 
+      RowBox[{
+       RowBox[{"HPL", "[", 
+        RowBox[{
+         RowBox[{"{", "0", "}"}], ",", "v"}], "]"}], "\[Rule]", 
+       RowBox[{"Log", "[", "v", "]"}]}]}], "}"}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.659223626653624*^9, 3.659223698403562*^9}, {
+  3.6592283941987*^9, 3.659228397517935*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp2deleteNow.mx\>\"", ",", "temp2"}], "]"}], ";"}]], "Input"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"DumpSave", "[", 
+     RowBox[{"\"\<temp2deleteNow.mx\>\"", ",", "temp2"}], "]"}], ";"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Get", "[", "\"\<temp2deleteNow.mx\>\"", "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.659245683953677*^9, 3.6592456993561573`*^9}, {
+  3.659278637737611*^9, 3.6592786478932247`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp3", "=", 
+   RowBox[{"temp2", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6592457053303537`*^9, 3.659245707250017*^9}, {
+  3.659245739321765*^9, 3.659245789855709*^9}, {3.659279242363222*^9, 
+  3.659279258477968*^9}, {3.659279292265647*^9, 3.6592793312423143`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"DumpSave", "[", 
+     RowBox[{"\"\<temp3deleteNow.mx\>\"", ",", "temp3"}], "]"}], ";"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Get", "[", "\"\<temp3deleteNow.mx\>\"", "]"}], ";"}]}]], "Input",
+ CellChangeTimes->{{3.659280182178029*^9, 3.659280191283309*^9}, {
+  3.6592879882582407`*^9, 3.659287996526492*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp4", "=", 
+   RowBox[{"temp3", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.65928401826542*^9, 3.6592840313296337`*^9}, {
+  3.6592851150070543`*^9, 3.6592851243280373`*^9}, {3.659288003123345*^9, 
+  3.659288004332264*^9}, {3.659293724835638*^9, 3.659293727237999*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp4deleteNow.mx\>\"", ",", "temp4"}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.659284043127062*^9, 3.659284044858348*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp5", "=", 
+   RowBox[{"temp4", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6592931934688883`*^9, 3.659293198219307*^9}, {
+  3.6592936849480133`*^9, 3.659293685032714*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp5deleteNow.mx\>\"", ",", "temp5"}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.659293332421503*^9, 3.659293335247759*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp6", "=", 
+   RowBox[{"temp5", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6592931934688883`*^9, 3.659293198219307*^9}, {
+  3.65929365523385*^9, 3.659293657871684*^9}, {3.6592936966537457`*^9, 
+  3.659293700904907*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp6deleteNow.mx\>\"", ",", "temp6"}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.659293332421503*^9, 3.659293335247759*^9}, {
+  3.659293704116725*^9, 3.6592937059051733`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp7", "=", 
+   RowBox[{"temp6", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6592931934688883`*^9, 3.659293198219307*^9}, {
+  3.65929365523385*^9, 3.659293657871684*^9}, {3.6592936966537457`*^9, 
+  3.659293700904907*^9}, {3.65929565763127*^9, 3.659295673219035*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp7deleteNow.mx\>\"", ",", "temp7"}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.659293332421503*^9, 3.659293335247759*^9}, {
+  3.659293704116725*^9, 3.6592937059051733`*^9}, {3.659295677589011*^9, 
+  3.659295679187208*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp8", "=", 
+   RowBox[{"temp7", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp8deleteNow.mx\>\"", ",", "temp8"}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp9", "=", 
+   RowBox[{"temp8", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp9deleteNow.mx\>\"", ",", "temp9"}], "]"}], ";"}]], "Input",\
+
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp10", "=", 
+   RowBox[{"temp9", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp10deleteNow.mx\>\"", ",", "temp10"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp11", "=", 
+   RowBox[{"temp10", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp11deleteNow.mx\>\"", ",", "temp11"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp12", "=", 
+   RowBox[{"temp11", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319457804038*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp12deleteNow.mx\>\"", ",", "temp12"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp13", "=", 
+   RowBox[{"temp12", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp13deleteNow.mx\>\"", ",", "temp13"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp14", "=", 
+   RowBox[{"temp13", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.6593221777168627`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{"DumpSave", "[", 
+     RowBox[{"\"\<temp14deleteNow.mx\>\"", ",", "temp14"}], "]"}], ";"}], 
+   "*)"}], "\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"Get", "[", "\"\<temp14deleteNow.mx\>\"", "]"}], ";"}]}]], "Input",\
+
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322184660467*^9}, {
+  3.659333523151761*^9, 3.659333534727182*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp15", "=", 
+   RowBox[{"temp14", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp15deleteNow.mx\>\"", ",", "temp15"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp16", "=", 
+   RowBox[{"temp15", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333703789068*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp16deleteNow.mx\>\"", ",", "temp16"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.659333710949769*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp17", "=", 
+   RowBox[{"temp16", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333751947583*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp17deleteNow.mx\>\"", ",", "temp17"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.65933373058219*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp18", "=", 
+   RowBox[{"temp17", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", "u", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333703789068*^9}, {
+  3.659333757069803*^9, 3.659333776247004*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp18deleteNow.mx\>\"", ",", "temp18"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.659333710949769*^9}, {3.659333804285585*^9, 
+  3.659333806875184*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp19", "=", 
+   RowBox[{"temp18", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", "v", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333703789068*^9}, {
+  3.659333757069803*^9, 3.659333776247004*^9}, {3.659333813844163*^9, 
+  3.6593338210841923`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp19deleteNow.mx\>\"", ",", "temp19"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.659333710949769*^9}, {3.659333804285585*^9, 
+  3.6593338264124613`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp20", "=", 
+   RowBox[{"temp19", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", "w", "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333703789068*^9}, {
+  3.659333757069803*^9, 3.659333776247004*^9}, {3.659333830061411*^9, 
+  3.659333841397335*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp20deleteNow.mx\>\"", ",", "temp20"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.659333710949769*^9}, {3.659333804285585*^9, 
+  3.659333806875184*^9}, {3.6593338449287987`*^9, 3.659333849310483*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp21", "=", 
+   RowBox[{"temp20", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333703789068*^9}, {
+  3.659333757069803*^9, 3.659333776247004*^9}, {3.659333830061411*^9, 
+  3.659333864110601*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp21deleteNow.mx\>\"", ",", "temp21"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.659333710949769*^9}, {3.659333804285585*^9, 
+  3.659333806875184*^9}, {3.6593338449287987`*^9, 3.65933387239881*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"temp22", "=", 
+   RowBox[{"temp21", "/.", 
+    RowBox[{
+     RowBox[{"CircleDot", "[", 
+      RowBox[{"func_", ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}], "\[RuleDelayed]", 
+     RowBox[{"CircleDot", "[", 
+      RowBox[{
+       RowBox[{"Expand", "[", 
+        RowBox[{"func", "/.", 
+         RowBox[{"irreducibleHexagonFunctionsToSurfaceE", "[", 
+          RowBox[{"v", "\[Rule]", "0"}], "]"}]}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "u"}], "]"}], ",", 
+       RowBox[{"Log", "[", 
+        RowBox[{"1", "-", "w"}], "]"}]}], "]"}]}]}]}], ";"}]], "Input",
+ CellChangeTimes->{{3.6593034210531883`*^9, 3.659303452039442*^9}, {
+  3.659305717296661*^9, 3.659305724663381*^9}, {3.659308733621952*^9, 
+  3.659308740037191*^9}, {3.6593090054937677`*^9, 3.659309018124835*^9}, {
+  3.659319449900519*^9, 3.659319490076936*^9}, {3.659322167285626*^9, 
+  3.659322197885379*^9}, {3.659333695341275*^9, 3.659333703789068*^9}, {
+  3.659333757069803*^9, 3.659333776247004*^9}, {3.659333830061411*^9, 
+  3.659333889447927*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"DumpSave", "[", 
+   RowBox[{"\"\<temp22deleteNow.mx\>\"", ",", "temp22"}], "]"}], 
+  ";"}]], "Input",
+ CellChangeTimes->{{3.6593034597750263`*^9, 3.6593034619763947`*^9}, {
+  3.659305729377866*^9, 3.659305731871262*^9}, {3.659308743328169*^9, 
+  3.659308745460949*^9}, {3.659309021063387*^9, 3.6593090240603447`*^9}, {
+  3.659319462065654*^9, 3.6593194638762417`*^9}, {3.659319497511923*^9, 
+  3.6593195001941767`*^9}, {3.65932218270708*^9, 3.659322202716915*^9}, {
+  3.659333709047573*^9, 3.659333710949769*^9}, {3.659333804285585*^9, 
+  3.659333806875184*^9}, {3.6593338449287987`*^9, 3.6593338956179533`*^9}}],
+
+Cell[BoxData["Quit"], "Input",
+ CellChangeTimes->{{3.6593339311138906`*^9, 3.659333931639216*^9}}]
+}, Open  ]]
+},
+WindowSize->{1078, 420},
+WindowMargins->{{63, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 125, 2, 28, "Input"],
+Cell[686, 24, 108, 3, 28, "Input"],
+Cell[797, 29, 3447, 83, 199, "Input"],
+Cell[4247, 114, 217, 5, 28, "Input"],
+Cell[4467, 121, 605, 15, 28, "Input"],
+Cell[5075, 138, 840, 22, 46, "Input"],
+Cell[CellGroupData[{
+Cell[5940, 164, 202, 4, 28, "Input"],
+Cell[6145, 170, 97, 2, 28, "Output"]
+}, Open  ]],
+Cell[6257, 175, 258, 7, 28, "Input"],
+Cell[6518, 184, 215, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[6758, 193, 145, 2, 28, "Input"],
+Cell[6906, 197, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7043, 204, 167, 3, 28, "Input"],
+Cell[7213, 209, 102, 2, 28, "Output"]
+}, Open  ]],
+Cell[7330, 214, 533, 15, 28, "Input"],
+Cell[7866, 231, 387, 12, 28, "Input"],
+Cell[8256, 245, 1411, 35, 97, "Input"],
+Cell[9670, 282, 627, 14, 28, "Input"],
+Cell[10300, 298, 351, 7, 28, "Input"],
+Cell[CellGroupData[{
+Cell[10676, 309, 176, 3, 28, "Input"],
+Cell[10855, 314, 124, 2, 28, "Output"]
+}, Open  ]],
+Cell[10994, 319, 1990, 50, 131, "Input"],
+Cell[12987, 371, 668, 16, 28, "Input"],
+Cell[13658, 389, 354, 7, 28, "Input"],
+Cell[CellGroupData[{
+Cell[14037, 400, 155, 3, 28, "Input"],
+Cell[14195, 405, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14332, 412, 423, 10, 28, "Input"],
+Cell[14758, 424, 102, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14897, 431, 333, 8, 28, "Input"],
+Cell[15233, 441, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15370, 448, 377, 10, 28, "Input"],
+Cell[15750, 460, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15887, 467, 342, 9, 28, "Input"],
+Cell[16232, 478, 100, 2, 28, "Output"]
+}, Open  ]],
+Cell[16347, 483, 222, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[16594, 493, 297, 8, 28, "Input"],
+Cell[16894, 503, 124, 2, 28, "Output"]
+}, Open  ]],
+Cell[17033, 508, 428, 11, 46, "Input"],
+Cell[CellGroupData[{
+Cell[17486, 523, 330, 9, 28, "Input"],
+Cell[17819, 534, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[17932, 539, 107, 3, 28, "Input"],
+Cell[18042, 544, 334, 9, 28, "Input"],
+Cell[18379, 555, 98, 2, 28, "Input"],
+Cell[CellGroupData[{
+Cell[18502, 561, 208, 5, 28, "Input"],
+Cell[18713, 568, 98, 2, 28, "Output"]
+}, Open  ]],
+Cell[18826, 573, 3221, 80, 199, "Input"],
+Cell[22050, 655, 994, 24, 63, "Input"],
+Cell[CellGroupData[{
+Cell[23069, 683, 250, 6, 28, "Input"],
+Cell[23322, 691, 144, 3, 28, "Output"]
+}, Open  ]],
+Cell[23481, 697, 342, 8, 28, "Input"],
+Cell[23826, 707, 295, 6, 28, "Input"],
+Cell[CellGroupData[{
+Cell[24146, 717, 161, 3, 28, "Input"],
+Cell[24310, 722, 125, 2, 28, "Output"]
+}, Open  ]],
+Cell[24450, 727, 1411, 35, 97, "Input"],
+Cell[25864, 764, 549, 13, 28, "Input"],
+Cell[26416, 779, 281, 6, 28, "Input"],
+Cell[26700, 787, 1990, 50, 131, "Input"],
+Cell[28693, 839, 580, 14, 28, "Input"],
+Cell[29276, 855, 284, 6, 28, "Input"],
+Cell[29563, 863, 398, 10, 46, "Input"],
+Cell[CellGroupData[{
+Cell[29986, 877, 144, 2, 28, "Input"],
+Cell[30133, 881, 150, 3, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[30320, 889, 357, 6, 28, "Input"],
+Cell[30680, 897, 149, 3, 28, "Output"]
+}, Open  ]],
+Cell[30844, 903, 3467, 83, 199, "Input"],
+Cell[34314, 988, 690, 16, 46, "Input"],
+Cell[35007, 1006, 922, 22, 46, "Input"],
+Cell[CellGroupData[{
+Cell[35954, 1032, 202, 4, 28, "Input"],
+Cell[36159, 1038, 121, 2, 28, "Output"]
+}, Open  ]],
+Cell[36295, 1043, 258, 7, 28, "Input"],
+Cell[36556, 1052, 215, 5, 28, "Input"],
+Cell[CellGroupData[{
+Cell[36796, 1061, 145, 2, 28, "Input"],
+Cell[36944, 1065, 99, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37080, 1072, 101, 1, 44, "Subsection"],
+Cell[37184, 1075, 125, 2, 28, "Input"],
+Cell[CellGroupData[{
+Cell[37334, 1081, 817, 22, 28, "Input"],
+Cell[38154, 1105, 699, 22, 28, "Output"]
+}, Open  ]],
+Cell[38868, 1130, 8168, 212, 301, "Input"],
+Cell[47039, 1344, 173, 4, 28, "Input"],
+Cell[47215, 1350, 225, 6, 28, "Input"],
+Cell[47443, 1358, 727, 22, 28, "Input"],
+Cell[48173, 1382, 131, 3, 28, "Input"],
+Cell[48307, 1387, 398, 10, 46, "Input"],
+Cell[48708, 1399, 827, 19, 63, "Input"],
+Cell[49538, 1420, 396, 10, 46, "Input"],
+Cell[49937, 1432, 828, 19, 63, "Input"],
+Cell[50768, 1453, 199, 5, 28, "Input"],
+Cell[50970, 1460, 732, 18, 63, "Input"],
+Cell[51705, 1480, 199, 5, 28, "Input"],
+Cell[51907, 1487, 838, 21, 63, "Input"],
+Cell[52748, 1510, 250, 6, 28, "Input"],
+Cell[53001, 1518, 883, 21, 63, "Input"],
+Cell[53887, 1541, 299, 7, 28, "Input"],
+Cell[54189, 1550, 681, 17, 63, "Input"],
+Cell[54873, 1569, 203, 5, 28, "Input"],
+Cell[55079, 1576, 730, 18, 63, "Input"],
+Cell[55812, 1596, 252, 6, 28, "Input"],
+Cell[56067, 1604, 780, 19, 63, "Input"],
+Cell[56850, 1625, 304, 7, 28, "Input"],
+Cell[57157, 1634, 887, 21, 63, "Input"],
+Cell[58047, 1657, 352, 7, 28, "Input"],
+Cell[58402, 1666, 936, 22, 63, "Input"],
+Cell[59341, 1690, 403, 8, 28, "Input"],
+Cell[59747, 1700, 878, 20, 63, "Input"],
+Cell[60628, 1722, 454, 9, 28, "Input"],
+Cell[61085, 1733, 929, 21, 63, "Input"],
+Cell[62017, 1756, 696, 15, 46, "Input"],
+Cell[62716, 1773, 927, 21, 63, "Input"],
+Cell[63646, 1796, 499, 9, 28, "Input"],
+Cell[64148, 1807, 1031, 23, 63, "Input"],
+Cell[65182, 1832, 548, 10, 28, "Input"],
+Cell[65733, 1844, 1031, 23, 63, "Input"],
+Cell[66767, 1869, 547, 10, 28, "Input"],
+Cell[67317, 1881, 1080, 24, 63, "Input"],
+Cell[68400, 1907, 597, 11, 28, "Input"],
+Cell[69000, 1920, 1131, 25, 63, "Input"],
+Cell[70134, 1947, 599, 11, 28, "Input"],
+Cell[70736, 1960, 1129, 25, 63, "Input"],
+Cell[71868, 1987, 645, 11, 28, "Input"],
+Cell[72516, 2000, 1187, 27, 63, "Input"],
+Cell[73706, 2029, 644, 11, 28, "Input"],
+Cell[74353, 2042, 1187, 27, 63, "Input"],
+Cell[75543, 2071, 647, 11, 28, "Input"],
+Cell[76193, 2084, 98, 1, 28, "Input"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

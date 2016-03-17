@@ -1,0 +1,2323 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    121663,       2313]
+NotebookOptionsPosition[    120828,       2279]
+NotebookOutlinePosition[    121183,       2295]
+CellTagsIndexPosition[    121140,       2292]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"<<", "coproduct.m"}]], "Input",
+ CellChangeTimes->{{3.665555844470496*^9, 3.665555846964357*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Select", "[", 
+  RowBox[{
+   RowBox[{"heptagonFunctionsWeight", "[", "4", "]"}], ",", 
+   RowBox[{
+    RowBox[{"FreeQ", "[", 
+     RowBox[{"#", ",", 
+      RowBox[{"Alternatives", "[", 
+       RowBox[{"HPL", ",", "\[Zeta]"}], "]"}]}], "]"}], "&"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.665556179791481*^9, 3.665556244922126*^9}}],
+
+Cell[BoxData[
+ FormBox[
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"\[CapitalEpsilon]4", "(", "1", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "2", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "3", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "4", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "5", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "6", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "7", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "8", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "9", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "10", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "11", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "12", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "13", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "14", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "15", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "16", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "17", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "18", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "19", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "20", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "21", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "22", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "23", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "24", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "25", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "26", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "27", ")"}], ",", 
+    RowBox[{"\[CapitalEpsilon]4", "(", "28", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "1", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "2", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "3", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "4", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "5", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "6", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "7", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "8", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "9", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "10", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "11", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "12", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "13", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "14", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "15", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "16", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "17", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "18", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "19", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "20", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "21", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "22", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "23", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "24", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "25", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "26", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "27", ")"}], ",", 
+    RowBox[{"\[CapitalOmicron]4", "(", "28", ")"}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u4"}], ",", 
+       RowBox[{"u2", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u6"}], ",", 
+       RowBox[{"u1", " ", "u4"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u4", " ", "u7"}], ",", 
+       RowBox[{"u2", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u6"}], ",", 
+       RowBox[{"u4", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u7"}], ",", 
+       RowBox[{"u1", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u6"}], ",", 
+       RowBox[{"u1", " ", "u4"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u7"}], ",", 
+       RowBox[{"u2", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u4"}], ",", 
+       RowBox[{"u3", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u5"}], ",", 
+       RowBox[{"u4", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u6"}], ",", 
+       RowBox[{"u1", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u4", " ", "u7"}], ",", 
+       RowBox[{"u2", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u4"}], ",", 
+       RowBox[{"u2", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u6"}], ",", 
+       RowBox[{"u1", " ", "u4"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u4", " ", "u7"}], ",", 
+       RowBox[{"u2", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u6"}], ",", 
+       RowBox[{"u4", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u7"}], ",", 
+       RowBox[{"u1", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u6"}], ",", 
+       RowBox[{"u1", " ", "u4"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u7"}], ",", 
+       RowBox[{"u2", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u4"}], ",", 
+       RowBox[{"u3", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u5"}], ",", 
+       RowBox[{"u4", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u3", " ", "u6"}], ",", 
+       RowBox[{"u1", " ", "u5"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u4", " ", "u7"}], ",", 
+       RowBox[{"u2", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u4"}], ",", 
+       RowBox[{"u2", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u4"}], ",", 
+       RowBox[{"u3", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u5"}], ",", 
+       RowBox[{"u4", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u6"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u2", " ", "u6"}], ",", 
+       RowBox[{"u4", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"ds4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"u1", " ", "u5"}], ",", 
+       RowBox[{"u3", " ", "u7"}]}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "1", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "2", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "3", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u7", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u1"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u5", ",", "u2"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "4", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u6", ",", "u3"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u4", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u6"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u7"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u1", ",", "u4"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u2", ",", "u5"}], ")"}]}], ",", 
+    RowBox[{
+     RowBox[{"dt4", "(", "5", ")"}], "\[InvisibleApplication]", 
+     RowBox[{"(", 
+      RowBox[{"u3", ",", "u6"}], ")"}]}]}], "}"}], TraditionalForm]], "Output",\
+
+ CellChangeTimes->{
+  3.6655561907618237`*^9, {3.665556230117375*^9, 3.665556245648202*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Sort", "@", 
+   RowBox[{"Join", "[", 
+    RowBox[{
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{"heptagonFunctionsWeight", "[", "1", "]"}], ",", 
+        RowBox[{"Select", "[", 
+         RowBox[{
+          RowBox[{"heptagonFunctionsWeight", "[", "4", "]"}], ",", 
+          RowBox[{
+           RowBox[{"FreeQ", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"Alternatives", "[", 
+              RowBox[{"HPL", ",", "\[Zeta]"}], "]"}]}], "]"}], "&"}]}], 
+         "]"}]}], "]"}], "]"}], ",", 
+     RowBox[{"Flatten", "[", 
+      RowBox[{"Outer", "[", 
+       RowBox[{"Times", ",", 
+        RowBox[{"heptagonFunctionsWeight", "[", "2", "]"}], ",", 
+        RowBox[{"Select", "[", 
+         RowBox[{
+          RowBox[{"heptagonFunctionsWeight", "[", "3", "]"}], ",", 
+          RowBox[{
+           RowBox[{"FreeQ", "[", 
+            RowBox[{"#", ",", 
+             RowBox[{"Alternatives", "[", 
+              RowBox[{"HPL", ",", "\[Zeta]"}], "]"}]}], "]"}], "&"}]}], 
+         "]"}]}], "]"}], "]"}]}], "]"}]}], "//", "InputForm"}]], "Input",
+ CellChangeTimes->{{3.66555601128335*^9, 3.665556162055479*^9}, 
+   3.665556251148581*^9, {3.665556319065014*^9, 3.6655563543502207`*^9}}],
+
+Cell["\<\
+{HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[1], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[1], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[1], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[1], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[1], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[1], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[1], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[2], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[2], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[2], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[2], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[2], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[2], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[2], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[3], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[3], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[3], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[3], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[3], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[3], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[3], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[4], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[4], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[4], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[4], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[4], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[4], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[4], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[5], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[5], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[5], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[5], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[5], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[5], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[5], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[6], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[6], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[6], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[6], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[6], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[6], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[6], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[7], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[7], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[7], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[7], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[7], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[7], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[7], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[8], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[8], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[8], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[8], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[8], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[8], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[8], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[9], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[9], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[9], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[9], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[9], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[9], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[9], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[10], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[10], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[10], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[10], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[10], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[10], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[10], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[11], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[11], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[11], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[11], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[11], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[11], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[11], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[12], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[12], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[12], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[12], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[12], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[12], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[12], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[13], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[13], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[13], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[13], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[13], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[13], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[13], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[14], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[14], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[14], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[14], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[14], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[14], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[14], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[15], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[15], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[15], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[15], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[15], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[15], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[15], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[16], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[16], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[16], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[16], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[16], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[16], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[16], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[17], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[17], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[17], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[17], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[17], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[17], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[17], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[18], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[18], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[18], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[18], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[18], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[18], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[18], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[19], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[19], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[19], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[19], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[19], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[19], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[19], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[20], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[20], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[20], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[20], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[20], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[20], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[20], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[21], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[21], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[21], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[21], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[21], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[21], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[21], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[22], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[22], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[22], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[22], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[22], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[22], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[22], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[23], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[23], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[23], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[23], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[23], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[23], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[23], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[24], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[24], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[24], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[24], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[24], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[24], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[24], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[25], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[25], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[25], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[25], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[25], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[25], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[25], HPL[{1}, 1 - \
+u1]*\[CapitalEpsilon]4[26], HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[26], 
+ HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[26], HPL[{1}, 1 - \
+u4]*\[CapitalEpsilon]4[26], HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[26], 
+ HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[26], HPL[{1}, 1 - \
+u7]*\[CapitalEpsilon]4[26], HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[27], 
+ HPL[{1}, 1 - u2]*\[CapitalEpsilon]4[27], HPL[{1}, 1 - \
+u3]*\[CapitalEpsilon]4[27], HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[27], 
+ HPL[{1}, 1 - u5]*\[CapitalEpsilon]4[27], HPL[{1}, 1 - \
+u6]*\[CapitalEpsilon]4[27], HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[27], 
+ HPL[{1}, 1 - u1]*\[CapitalEpsilon]4[28], HPL[{1}, 1 - \
+u2]*\[CapitalEpsilon]4[28], HPL[{1}, 1 - u3]*\[CapitalEpsilon]4[28], 
+ HPL[{1}, 1 - u4]*\[CapitalEpsilon]4[28], HPL[{1}, 1 - \
+u5]*\[CapitalEpsilon]4[28], HPL[{1}, 1 - u6]*\[CapitalEpsilon]4[28], 
+ HPL[{1}, 1 - u7]*\[CapitalEpsilon]4[28], HPL[{1}, 1 - \
+u1]^2*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*\[CapitalOmicron]3[1], HPL[{1}, 1 - u2]^2*\
+\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u3]^2*\[CapitalOmicron]3[1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*\
+\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u4]^2*\[CapitalOmicron]3[1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*\
+\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[1], HPL[{1}, 1 - u5]^2*\
+\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[1], HPL[{1}, 1 - u6]^2*\
+\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[1], HPL[{1}, 1 - \
+u6]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[1], 
+ HPL[{1}, 1 - u7]^2*\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u1]*\
+\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u2]*\[CapitalOmicron]3[1], 
+ HPL[{0, 1}, 1 - u3]*\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u4]*\
+\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u1*u4]*\[CapitalOmicron]3[1], 
+ HPL[{0, 1}, 1 - u5]*\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u1*u5]*\
+\[CapitalOmicron]3[1], 
+ HPL[{0, 1}, 1 - u2*u5]*\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u6]*\
+\[CapitalOmicron]3[1], 
+ HPL[{0, 1}, 1 - u2*u6]*\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u3*u6]*\
+\[CapitalOmicron]3[1], 
+ HPL[{0, 1}, 1 - u7]*\[CapitalOmicron]3[1], HPL[{0, 1}, 1 - u3*u7]*\
+\[CapitalOmicron]3[1], 
+ HPL[{0, 1}, 1 - u4*u7]*\[CapitalOmicron]3[1], \
+\[Zeta][2]*\[CapitalOmicron]3[1], HPL[{1}, 1 - u1]^2*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*\[CapitalOmicron]3[2], HPL[{1}, 1 - u2]^2*\
+\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u3]^2*\[CapitalOmicron]3[2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*\
+\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u4]^2*\[CapitalOmicron]3[2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*\
+\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[2], HPL[{1}, 1 - u5]^2*\
+\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[2], HPL[{1}, 1 - u6]^2*\
+\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[2], HPL[{1}, 1 - \
+u6]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[2], 
+ HPL[{1}, 1 - u7]^2*\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u1]*\
+\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u2]*\[CapitalOmicron]3[2], 
+ HPL[{0, 1}, 1 - u3]*\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u4]*\
+\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u1*u4]*\[CapitalOmicron]3[2], 
+ HPL[{0, 1}, 1 - u5]*\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u1*u5]*\
+\[CapitalOmicron]3[2], 
+ HPL[{0, 1}, 1 - u2*u5]*\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u6]*\
+\[CapitalOmicron]3[2], 
+ HPL[{0, 1}, 1 - u2*u6]*\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u3*u6]*\
+\[CapitalOmicron]3[2], 
+ HPL[{0, 1}, 1 - u7]*\[CapitalOmicron]3[2], HPL[{0, 1}, 1 - u3*u7]*\
+\[CapitalOmicron]3[2], 
+ HPL[{0, 1}, 1 - u4*u7]*\[CapitalOmicron]3[2], \
+\[Zeta][2]*\[CapitalOmicron]3[2], HPL[{1}, 1 - u1]^2*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*\[CapitalOmicron]3[3], HPL[{1}, 1 - u2]^2*\
+\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u3]^2*\[CapitalOmicron]3[3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*\
+\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u4]^2*\[CapitalOmicron]3[3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*\
+\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[3], HPL[{1}, 1 - u5]^2*\
+\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[3], HPL[{1}, 1 - u6]^2*\
+\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[3], HPL[{1}, 1 - \
+u6]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[3], 
+ HPL[{1}, 1 - u7]^2*\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u1]*\
+\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u2]*\[CapitalOmicron]3[3], 
+ HPL[{0, 1}, 1 - u3]*\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u4]*\
+\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u1*u4]*\[CapitalOmicron]3[3], 
+ HPL[{0, 1}, 1 - u5]*\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u1*u5]*\
+\[CapitalOmicron]3[3], 
+ HPL[{0, 1}, 1 - u2*u5]*\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u6]*\
+\[CapitalOmicron]3[3], 
+ HPL[{0, 1}, 1 - u2*u6]*\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u3*u6]*\
+\[CapitalOmicron]3[3], 
+ HPL[{0, 1}, 1 - u7]*\[CapitalOmicron]3[3], HPL[{0, 1}, 1 - u3*u7]*\
+\[CapitalOmicron]3[3], 
+ HPL[{0, 1}, 1 - u4*u7]*\[CapitalOmicron]3[3], \
+\[Zeta][2]*\[CapitalOmicron]3[3], HPL[{1}, 1 - u1]^2*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*\[CapitalOmicron]3[4], HPL[{1}, 1 - u2]^2*\
+\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u3]^2*\[CapitalOmicron]3[4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*\
+\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u4]^2*\[CapitalOmicron]3[4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*\
+\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[4], HPL[{1}, 1 - u5]^2*\
+\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[4], HPL[{1}, 1 - u6]^2*\
+\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[4], HPL[{1}, 1 - \
+u6]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[4], 
+ HPL[{1}, 1 - u7]^2*\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u1]*\
+\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u2]*\[CapitalOmicron]3[4], 
+ HPL[{0, 1}, 1 - u3]*\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u4]*\
+\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u1*u4]*\[CapitalOmicron]3[4], 
+ HPL[{0, 1}, 1 - u5]*\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u1*u5]*\
+\[CapitalOmicron]3[4], 
+ HPL[{0, 1}, 1 - u2*u5]*\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u6]*\
+\[CapitalOmicron]3[4], 
+ HPL[{0, 1}, 1 - u2*u6]*\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u3*u6]*\
+\[CapitalOmicron]3[4], 
+ HPL[{0, 1}, 1 - u7]*\[CapitalOmicron]3[4], HPL[{0, 1}, 1 - u3*u7]*\
+\[CapitalOmicron]3[4], 
+ HPL[{0, 1}, 1 - u4*u7]*\[CapitalOmicron]3[4], \
+\[Zeta][2]*\[CapitalOmicron]3[4], HPL[{1}, 1 - u1]^2*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*\[CapitalOmicron]3[5], HPL[{1}, 1 - u2]^2*\
+\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u3]^2*\[CapitalOmicron]3[5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*\
+\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u4]^2*\[CapitalOmicron]3[5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*\
+\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[5], HPL[{1}, 1 - u5]^2*\
+\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[5], HPL[{1}, 1 - u6]^2*\
+\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[5], HPL[{1}, 1 - \
+u6]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[5], 
+ HPL[{1}, 1 - u7]^2*\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u1]*\
+\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u2]*\[CapitalOmicron]3[5], 
+ HPL[{0, 1}, 1 - u3]*\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u4]*\
+\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u1*u4]*\[CapitalOmicron]3[5], 
+ HPL[{0, 1}, 1 - u5]*\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u1*u5]*\
+\[CapitalOmicron]3[5], 
+ HPL[{0, 1}, 1 - u2*u5]*\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u6]*\
+\[CapitalOmicron]3[5], 
+ HPL[{0, 1}, 1 - u2*u6]*\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u3*u6]*\
+\[CapitalOmicron]3[5], 
+ HPL[{0, 1}, 1 - u7]*\[CapitalOmicron]3[5], HPL[{0, 1}, 1 - u3*u7]*\
+\[CapitalOmicron]3[5], 
+ HPL[{0, 1}, 1 - u4*u7]*\[CapitalOmicron]3[5], \
+\[Zeta][2]*\[CapitalOmicron]3[5], HPL[{1}, 1 - u1]^2*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*\[CapitalOmicron]3[6], HPL[{1}, 1 - u2]^2*\
+\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u3]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u3]^2*\[CapitalOmicron]3[6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*\
+\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u4]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u4]^2*\[CapitalOmicron]3[6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*\
+\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u3]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*\[CapitalOmicron]3[6], HPL[{1}, 1 - u5]^2*\
+\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*\[CapitalOmicron]3[6], HPL[{1}, 1 - u6]^2*\
+\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u2]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u4]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[6], HPL[{1}, 1 - \
+u6]*HPL[{1}, 1 - u7]*\[CapitalOmicron]3[6], 
+ HPL[{1}, 1 - u7]^2*\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u1]*\
+\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u2]*\[CapitalOmicron]3[6], 
+ HPL[{0, 1}, 1 - u3]*\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u4]*\
+\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u1*u4]*\[CapitalOmicron]3[6], 
+ HPL[{0, 1}, 1 - u5]*\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u1*u5]*\
+\[CapitalOmicron]3[6], 
+ HPL[{0, 1}, 1 - u2*u5]*\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u6]*\
+\[CapitalOmicron]3[6], 
+ HPL[{0, 1}, 1 - u2*u6]*\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u3*u6]*\
+\[CapitalOmicron]3[6], 
+ HPL[{0, 1}, 1 - u7]*\[CapitalOmicron]3[6], HPL[{0, 1}, 1 - u3*u7]*\
+\[CapitalOmicron]3[6], 
+ HPL[{0, 1}, 1 - u4*u7]*\[CapitalOmicron]3[6], \
+\[Zeta][2]*\[CapitalOmicron]3[6], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[1], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[1], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[1], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[1], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[1], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[1], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[1], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[2], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[2], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[2], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[2], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[2], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[2], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[2], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[3], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[3], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[3], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[3], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[3], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[3], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[3], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[4], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[4], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[4], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[4], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[4], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[4], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[4], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[5], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[5], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[5], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[5], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[5], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[5], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[5], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[6], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[6], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[6], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[6], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[6], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[6], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[6], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[7], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[7], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[7], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[7], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[7], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[7], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[7], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[8], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[8], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[8], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[8], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[8], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[8], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[8], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[9], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[9], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[9], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[9], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[9], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[9], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[9], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[10], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[10], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[10], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[10], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[10], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[10], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[10], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[11], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[11], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[11], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[11], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[11], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[11], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[11], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[12], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[12], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[12], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[12], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[12], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[12], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[12], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[13], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[13], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[13], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[13], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[13], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[13], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[13], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[14], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[14], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[14], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[14], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[14], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[14], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[14], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[15], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[15], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[15], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[15], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[15], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[15], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[15], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[16], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[16], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[16], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[16], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[16], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[16], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[16], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[17], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[17], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[17], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[17], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[17], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[17], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[17], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[18], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[18], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[18], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[18], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[18], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[18], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[18], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[19], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[19], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[19], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[19], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[19], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[19], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[19], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[20], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[20], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[20], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[20], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[20], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[20], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[20], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[21], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[21], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[21], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[21], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[21], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[21], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[21], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[22], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[22], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[22], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[22], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[22], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[22], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[22], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[23], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[23], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[23], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[23], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[23], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[23], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[23], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[24], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[24], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[24], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[24], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[24], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[24], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[24], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[25], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[25], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[25], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[25], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[25], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[25], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[25], 
+ HPL[{1}, 1 - u1]*\[CapitalOmicron]4[26], HPL[{1}, 1 - \
+u2]*\[CapitalOmicron]4[26], HPL[{1}, 1 - u3]*\[CapitalOmicron]4[26], 
+ HPL[{1}, 1 - u4]*\[CapitalOmicron]4[26], HPL[{1}, 1 - \
+u5]*\[CapitalOmicron]4[26], HPL[{1}, 1 - u6]*\[CapitalOmicron]4[26], 
+ HPL[{1}, 1 - u7]*\[CapitalOmicron]4[26], HPL[{1}, 1 - \
+u1]*\[CapitalOmicron]4[27], HPL[{1}, 1 - u2]*\[CapitalOmicron]4[27], 
+ HPL[{1}, 1 - u3]*\[CapitalOmicron]4[27], HPL[{1}, 1 - \
+u4]*\[CapitalOmicron]4[27], HPL[{1}, 1 - u5]*\[CapitalOmicron]4[27], 
+ HPL[{1}, 1 - u6]*\[CapitalOmicron]4[27], HPL[{1}, 1 - \
+u7]*\[CapitalOmicron]4[27], HPL[{1}, 1 - u1]*\[CapitalOmicron]4[28], 
+ HPL[{1}, 1 - u2]*\[CapitalOmicron]4[28], HPL[{1}, 1 - \
+u3]*\[CapitalOmicron]4[28], HPL[{1}, 1 - u4]*\[CapitalOmicron]4[28], 
+ HPL[{1}, 1 - u5]*\[CapitalOmicron]4[28], HPL[{1}, 1 - \
+u6]*\[CapitalOmicron]4[28], HPL[{1}, 1 - u7]*\[CapitalOmicron]4[28], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u2]^2*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u1*u4, \
+u2*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u1*u4, \
+u2*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, \
+u2*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u1*u4, u2*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, \
+u2*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - u1]*ds3[1][u1*u4, \
+u2*u6], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - u3]*ds3[1][u1*u4, \
+u2*u6], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u1*u4, u2*u6], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u1*u4, u2*u6], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u1*u4, u2*u6], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - u7]*ds3[1][u1*u4, u2*u6], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u1*u4, u2*u6], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u1*u4, u2*u6], \[Zeta][2]*ds3[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u2]^2*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u1*u4, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u1*u4, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u1*u4, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - u1]*ds3[1][u1*u4, \
+u3*u6], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - u3]*ds3[1][u1*u4, \
+u3*u6], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u1*u4, u3*u6], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u1*u4, u3*u6], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u1*u4, u3*u6], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - u7]*ds3[1][u1*u4, u3*u6], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u1*u4, u3*u6], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u1*u4, u3*u6], \[Zeta][2]*ds3[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u2]^2*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u1*u5, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u1*u5, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u1*u5, u3*u6], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, \
+u3*u6], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - u1]*ds3[1][u1*u5, \
+u3*u6], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - u3]*ds3[1][u1*u5, \
+u3*u6], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u1*u5, u3*u6], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u1*u5, u3*u6], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u1*u5, u3*u6], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - u7]*ds3[1][u1*u5, u3*u6], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u1*u5, u3*u6], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u1*u5, u3*u6], \[Zeta][2]*ds3[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u2]^2*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u1*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u1*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u1*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - u1]*ds3[1][u1*u5, \
+u3*u7], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - u3]*ds3[1][u1*u5, \
+u3*u7], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u1*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u1*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u1*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - u7]*ds3[1][u1*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u1*u5, u3*u7], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u1*u5, u3*u7], \[Zeta][2]*ds3[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u2]^2*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u2*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u2*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u2*u5, u3*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, \
+u3*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - u1]*ds3[1][u2*u5, \
+u3*u7], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - u3]*ds3[1][u2*u5, \
+u3*u7], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u2*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u2*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u2*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - u7]*ds3[1][u2*u5, u3*u7], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u2*u5, u3*u7], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u2*u5, u3*u7], \[Zeta][2]*ds3[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u2]^2*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u2*u5, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u2*u5, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u2*u5, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - u1]*ds3[1][u2*u5, \
+u4*u7], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - u3]*ds3[1][u2*u5, \
+u4*u7], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u2*u5, u4*u7], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u2*u5, u4*u7], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u2*u5, u4*u7], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - u7]*ds3[1][u2*u5, u4*u7], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u2*u5, u4*u7], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u2*u5, u4*u7], \[Zeta][2]*ds3[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u1]^2*ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*
+  ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u2]^2*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u3]^2*ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*
+  ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u4]*ds3[1][u2*u6, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u4]^2*ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u5]*
+  ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*ds3[1][u2*u6, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u5]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u5]^2*ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u6]*
+  ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*ds3[1][u2*u6, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u6]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u6]^2*ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*
+  ds3[1][u2*u6, u4*u7], HPL[{1}, 1 - u2]*HPL[{1}, 1 - u7]*ds3[1][u2*u6, \
+u4*u7], 
+ HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u7]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u7]^2*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - u1]*ds3[1][u2*u6, \
+u4*u7], 
+ HPL[{0, 1}, 1 - u2]*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - u3]*ds3[1][u2*u6, \
+u4*u7], 
+ HPL[{0, 1}, 1 - u4]*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - \
+u1*u4]*ds3[1][u2*u6, u4*u7], 
+ HPL[{0, 1}, 1 - u5]*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - \
+u1*u5]*ds3[1][u2*u6, u4*u7], 
+ HPL[{0, 1}, 1 - u2*u5]*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - \
+u6]*ds3[1][u2*u6, u4*u7], 
+ HPL[{0, 1}, 1 - u2*u6]*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - u3*u6]*
+  ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - u7]*ds3[1][u2*u6, u4*u7], 
+ HPL[{0, 1}, 1 - u3*u7]*ds3[1][u2*u6, u4*u7], HPL[{0, 1}, 1 - u4*u7]*
+  ds3[1][u2*u6, u4*u7], \[Zeta][2]*ds3[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u1]*ds4[1][u1*u4, u2*u6], HPL[{1}, 1 - u2]*ds4[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u3]*ds4[1][u1*u4, u2*u6], HPL[{1}, 1 - u4]*ds4[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u5]*ds4[1][u1*u4, u2*u6], HPL[{1}, 1 - u6]*ds4[1][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u7]*ds4[1][u1*u4, u2*u6], HPL[{1}, 1 - u1]*ds4[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u2]*ds4[1][u1*u4, u3*u6], HPL[{1}, 1 - u3]*ds4[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]*ds4[1][u1*u4, u3*u6], HPL[{1}, 1 - u5]*ds4[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u6]*ds4[1][u1*u4, u3*u6], HPL[{1}, 1 - u7]*ds4[1][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u1]*ds4[1][u1*u5, u3*u6], HPL[{1}, 1 - u2]*ds4[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u3]*ds4[1][u1*u5, u3*u6], HPL[{1}, 1 - u4]*ds4[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u5]*ds4[1][u1*u5, u3*u6], HPL[{1}, 1 - u6]*ds4[1][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u7]*ds4[1][u1*u5, u3*u6], HPL[{1}, 1 - u1]*ds4[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u2]*ds4[1][u1*u5, u3*u7], HPL[{1}, 1 - u3]*ds4[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*ds4[1][u1*u5, u3*u7], HPL[{1}, 1 - u5]*ds4[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u6]*ds4[1][u1*u5, u3*u7], HPL[{1}, 1 - u7]*ds4[1][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u1]*ds4[1][u2*u5, u3*u7], HPL[{1}, 1 - u2]*ds4[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u3]*ds4[1][u2*u5, u3*u7], HPL[{1}, 1 - u4]*ds4[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*ds4[1][u2*u5, u3*u7], HPL[{1}, 1 - u6]*ds4[1][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u7]*ds4[1][u2*u5, u3*u7], HPL[{1}, 1 - u1]*ds4[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u2]*ds4[1][u2*u5, u4*u7], HPL[{1}, 1 - u3]*ds4[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]*ds4[1][u2*u5, u4*u7], HPL[{1}, 1 - u5]*ds4[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u6]*ds4[1][u2*u5, u4*u7], HPL[{1}, 1 - u7]*ds4[1][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u1]*ds4[1][u2*u6, u1*u4], HPL[{1}, 1 - u2]*ds4[1][u2*u6, u1*u4], 
+ HPL[{1}, 1 - u3]*ds4[1][u2*u6, u1*u4], HPL[{1}, 1 - u4]*ds4[1][u2*u6, u1*u4], 
+ HPL[{1}, 1 - u5]*ds4[1][u2*u6, u1*u4], HPL[{1}, 1 - u6]*ds4[1][u2*u6, u1*u4], 
+ HPL[{1}, 1 - u7]*ds4[1][u2*u6, u1*u4], HPL[{1}, 1 - u1]*ds4[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u2]*ds4[1][u2*u6, u4*u7], HPL[{1}, 1 - u3]*ds4[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u4]*ds4[1][u2*u6, u4*u7], HPL[{1}, 1 - u5]*ds4[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u6]*ds4[1][u2*u6, u4*u7], HPL[{1}, 1 - u7]*ds4[1][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u1]*ds4[1][u3*u6, u1*u4], HPL[{1}, 1 - u2]*ds4[1][u3*u6, u1*u4], 
+ HPL[{1}, 1 - u3]*ds4[1][u3*u6, u1*u4], HPL[{1}, 1 - u4]*ds4[1][u3*u6, u1*u4], 
+ HPL[{1}, 1 - u5]*ds4[1][u3*u6, u1*u4], HPL[{1}, 1 - u6]*ds4[1][u3*u6, u1*u4], 
+ HPL[{1}, 1 - u7]*ds4[1][u3*u6, u1*u4], HPL[{1}, 1 - u1]*ds4[1][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u2]*ds4[1][u3*u6, u1*u5], HPL[{1}, 1 - u3]*ds4[1][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u4]*ds4[1][u3*u6, u1*u5], HPL[{1}, 1 - u5]*ds4[1][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u6]*ds4[1][u3*u6, u1*u5], HPL[{1}, 1 - u7]*ds4[1][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u1]*ds4[1][u3*u7, u1*u5], HPL[{1}, 1 - u2]*ds4[1][u3*u7, u1*u5], 
+ HPL[{1}, 1 - u3]*ds4[1][u3*u7, u1*u5], HPL[{1}, 1 - u4]*ds4[1][u3*u7, u1*u5], 
+ HPL[{1}, 1 - u5]*ds4[1][u3*u7, u1*u5], HPL[{1}, 1 - u6]*ds4[1][u3*u7, u1*u5], 
+ HPL[{1}, 1 - u7]*ds4[1][u3*u7, u1*u5], HPL[{1}, 1 - u1]*ds4[1][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u2]*ds4[1][u3*u7, u2*u5], HPL[{1}, 1 - u3]*ds4[1][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u4]*ds4[1][u3*u7, u2*u5], HPL[{1}, 1 - u5]*ds4[1][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u6]*ds4[1][u3*u7, u2*u5], HPL[{1}, 1 - u7]*ds4[1][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u1]*ds4[1][u4*u7, u2*u5], HPL[{1}, 1 - u2]*ds4[1][u4*u7, u2*u5], 
+ HPL[{1}, 1 - u3]*ds4[1][u4*u7, u2*u5], HPL[{1}, 1 - u4]*ds4[1][u4*u7, u2*u5], 
+ HPL[{1}, 1 - u5]*ds4[1][u4*u7, u2*u5], HPL[{1}, 1 - u6]*ds4[1][u4*u7, u2*u5], 
+ HPL[{1}, 1 - u7]*ds4[1][u4*u7, u2*u5], HPL[{1}, 1 - u1]*ds4[1][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u2]*ds4[1][u4*u7, u2*u6], HPL[{1}, 1 - u3]*ds4[1][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u4]*ds4[1][u4*u7, u2*u6], HPL[{1}, 1 - u5]*ds4[1][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u6]*ds4[1][u4*u7, u2*u6], HPL[{1}, 1 - u7]*ds4[1][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u1]*ds4[2][u1*u4, u2*u6], HPL[{1}, 1 - u2]*ds4[2][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u3]*ds4[2][u1*u4, u2*u6], HPL[{1}, 1 - u4]*ds4[2][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u5]*ds4[2][u1*u4, u2*u6], HPL[{1}, 1 - u6]*ds4[2][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u7]*ds4[2][u1*u4, u2*u6], HPL[{1}, 1 - u1]*ds4[2][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u2]*ds4[2][u1*u4, u3*u6], HPL[{1}, 1 - u3]*ds4[2][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]*ds4[2][u1*u4, u3*u6], HPL[{1}, 1 - u5]*ds4[2][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u6]*ds4[2][u1*u4, u3*u6], HPL[{1}, 1 - u7]*ds4[2][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u1]*ds4[2][u1*u5, u3*u6], HPL[{1}, 1 - u2]*ds4[2][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u3]*ds4[2][u1*u5, u3*u6], HPL[{1}, 1 - u4]*ds4[2][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u5]*ds4[2][u1*u5, u3*u6], HPL[{1}, 1 - u6]*ds4[2][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u7]*ds4[2][u1*u5, u3*u6], HPL[{1}, 1 - u1]*ds4[2][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u2]*ds4[2][u1*u5, u3*u7], HPL[{1}, 1 - u3]*ds4[2][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*ds4[2][u1*u5, u3*u7], HPL[{1}, 1 - u5]*ds4[2][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u6]*ds4[2][u1*u5, u3*u7], HPL[{1}, 1 - u7]*ds4[2][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u1]*ds4[2][u2*u5, u3*u7], HPL[{1}, 1 - u2]*ds4[2][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u3]*ds4[2][u2*u5, u3*u7], HPL[{1}, 1 - u4]*ds4[2][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*ds4[2][u2*u5, u3*u7], HPL[{1}, 1 - u6]*ds4[2][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u7]*ds4[2][u2*u5, u3*u7], HPL[{1}, 1 - u1]*ds4[2][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u2]*ds4[2][u2*u5, u4*u7], HPL[{1}, 1 - u3]*ds4[2][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]*ds4[2][u2*u5, u4*u7], HPL[{1}, 1 - u5]*ds4[2][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u6]*ds4[2][u2*u5, u4*u7], HPL[{1}, 1 - u7]*ds4[2][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u1]*ds4[2][u2*u6, u1*u4], HPL[{1}, 1 - u2]*ds4[2][u2*u6, u1*u4], 
+ HPL[{1}, 1 - u3]*ds4[2][u2*u6, u1*u4], HPL[{1}, 1 - u4]*ds4[2][u2*u6, u1*u4], 
+ HPL[{1}, 1 - u5]*ds4[2][u2*u6, u1*u4], HPL[{1}, 1 - u6]*ds4[2][u2*u6, u1*u4], 
+ HPL[{1}, 1 - u7]*ds4[2][u2*u6, u1*u4], HPL[{1}, 1 - u1]*ds4[2][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u2]*ds4[2][u2*u6, u4*u7], HPL[{1}, 1 - u3]*ds4[2][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u4]*ds4[2][u2*u6, u4*u7], HPL[{1}, 1 - u5]*ds4[2][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u6]*ds4[2][u2*u6, u4*u7], HPL[{1}, 1 - u7]*ds4[2][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u1]*ds4[2][u3*u6, u1*u4], HPL[{1}, 1 - u2]*ds4[2][u3*u6, u1*u4], 
+ HPL[{1}, 1 - u3]*ds4[2][u3*u6, u1*u4], HPL[{1}, 1 - u4]*ds4[2][u3*u6, u1*u4], 
+ HPL[{1}, 1 - u5]*ds4[2][u3*u6, u1*u4], HPL[{1}, 1 - u6]*ds4[2][u3*u6, u1*u4], 
+ HPL[{1}, 1 - u7]*ds4[2][u3*u6, u1*u4], HPL[{1}, 1 - u1]*ds4[2][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u2]*ds4[2][u3*u6, u1*u5], HPL[{1}, 1 - u3]*ds4[2][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u4]*ds4[2][u3*u6, u1*u5], HPL[{1}, 1 - u5]*ds4[2][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u6]*ds4[2][u3*u6, u1*u5], HPL[{1}, 1 - u7]*ds4[2][u3*u6, u1*u5], 
+ HPL[{1}, 1 - u1]*ds4[2][u3*u7, u1*u5], HPL[{1}, 1 - u2]*ds4[2][u3*u7, u1*u5], 
+ HPL[{1}, 1 - u3]*ds4[2][u3*u7, u1*u5], HPL[{1}, 1 - u4]*ds4[2][u3*u7, u1*u5], 
+ HPL[{1}, 1 - u5]*ds4[2][u3*u7, u1*u5], HPL[{1}, 1 - u6]*ds4[2][u3*u7, u1*u5], 
+ HPL[{1}, 1 - u7]*ds4[2][u3*u7, u1*u5], HPL[{1}, 1 - u1]*ds4[2][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u2]*ds4[2][u3*u7, u2*u5], HPL[{1}, 1 - u3]*ds4[2][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u4]*ds4[2][u3*u7, u2*u5], HPL[{1}, 1 - u5]*ds4[2][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u6]*ds4[2][u3*u7, u2*u5], HPL[{1}, 1 - u7]*ds4[2][u3*u7, u2*u5], 
+ HPL[{1}, 1 - u1]*ds4[2][u4*u7, u2*u5], HPL[{1}, 1 - u2]*ds4[2][u4*u7, u2*u5], 
+ HPL[{1}, 1 - u3]*ds4[2][u4*u7, u2*u5], HPL[{1}, 1 - u4]*ds4[2][u4*u7, u2*u5], 
+ HPL[{1}, 1 - u5]*ds4[2][u4*u7, u2*u5], HPL[{1}, 1 - u6]*ds4[2][u4*u7, u2*u5], 
+ HPL[{1}, 1 - u7]*ds4[2][u4*u7, u2*u5], HPL[{1}, 1 - u1]*ds4[2][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u2]*ds4[2][u4*u7, u2*u6], HPL[{1}, 1 - u3]*ds4[2][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u4]*ds4[2][u4*u7, u2*u6], HPL[{1}, 1 - u5]*ds4[2][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u6]*ds4[2][u4*u7, u2*u6], HPL[{1}, 1 - u7]*ds4[2][u4*u7, u2*u6], 
+ HPL[{1}, 1 - u1]*ds4[3][u1*u4, u2*u6], HPL[{1}, 1 - u2]*ds4[3][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u3]*ds4[3][u1*u4, u2*u6], HPL[{1}, 1 - u4]*ds4[3][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u5]*ds4[3][u1*u4, u2*u6], HPL[{1}, 1 - u6]*ds4[3][u1*u4, u2*u6], 
+ HPL[{1}, 1 - u7]*ds4[3][u1*u4, u2*u6], HPL[{1}, 1 - u1]*ds4[3][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u2]*ds4[3][u1*u4, u3*u6], HPL[{1}, 1 - u3]*ds4[3][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u4]*ds4[3][u1*u4, u3*u6], HPL[{1}, 1 - u5]*ds4[3][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u6]*ds4[3][u1*u4, u3*u6], HPL[{1}, 1 - u7]*ds4[3][u1*u4, u3*u6], 
+ HPL[{1}, 1 - u1]*ds4[3][u1*u5, u3*u6], HPL[{1}, 1 - u2]*ds4[3][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u3]*ds4[3][u1*u5, u3*u6], HPL[{1}, 1 - u4]*ds4[3][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u5]*ds4[3][u1*u5, u3*u6], HPL[{1}, 1 - u6]*ds4[3][u1*u5, u3*u6], 
+ HPL[{1}, 1 - u7]*ds4[3][u1*u5, u3*u6], HPL[{1}, 1 - u1]*ds4[3][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u2]*ds4[3][u1*u5, u3*u7], HPL[{1}, 1 - u3]*ds4[3][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u4]*ds4[3][u1*u5, u3*u7], HPL[{1}, 1 - u5]*ds4[3][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u6]*ds4[3][u1*u5, u3*u7], HPL[{1}, 1 - u7]*ds4[3][u1*u5, u3*u7], 
+ HPL[{1}, 1 - u1]*ds4[3][u2*u5, u3*u7], HPL[{1}, 1 - u2]*ds4[3][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u3]*ds4[3][u2*u5, u3*u7], HPL[{1}, 1 - u4]*ds4[3][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u5]*ds4[3][u2*u5, u3*u7], HPL[{1}, 1 - u6]*ds4[3][u2*u5, u3*u7], 
+ HPL[{1}, 1 - u7]*ds4[3][u2*u5, u3*u7], HPL[{1}, 1 - u1]*ds4[3][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u2]*ds4[3][u2*u5, u4*u7], HPL[{1}, 1 - u3]*ds4[3][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u4]*ds4[3][u2*u5, u4*u7], HPL[{1}, 1 - u5]*ds4[3][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u6]*ds4[3][u2*u5, u4*u7], HPL[{1}, 1 - u7]*ds4[3][u2*u5, u4*u7], 
+ HPL[{1}, 1 - u1]*ds4[3][u2*u6, u4*u7], HPL[{1}, 1 - u2]*ds4[3][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u3]*ds4[3][u2*u6, u4*u7], HPL[{1}, 1 - u4]*ds4[3][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u5]*ds4[3][u2*u6, u4*u7], HPL[{1}, 1 - u6]*ds4[3][u2*u6, u4*u7], 
+ HPL[{1}, 1 - u7]*ds4[3][u2*u6, u4*u7], HPL[{1}, 1 - u1]^2*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u2]*dt3[1][u1, u4], HPL[{1}, 1 - \
+u2]^2*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u3]*dt3[1][u1, u4], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u3]*
+  dt3[1][u1, u4], HPL[{1}, 1 - u3]^2*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u1, u4], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u1, u4], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u1, u4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u1, u4], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u1, u4], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u1, u4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u1, u4], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u1, u4], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u1, u4], HPL[{1}, 1 - \
+u6]^2*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u1, u4], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u1, u4], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u1, u4], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u1, u4], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u1, u4], HPL[{0, 1}, 1 - u1]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u1, u4], HPL[{0, 1}, 1 - u3]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u1, u4], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u1, u4], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u1, u4], HPL[{0, 1}, 1 - u6]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u1, u4], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u1, u4], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u1, u4], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u1, u4], \[Zeta][2]*dt3[1][u1, u4], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u1, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u1, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u1, u5], HPL[{1}, 1 - \
+u3]^2*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u1, u5], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u1, u5], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u1, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u1, u5], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u1, u5], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u1, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u1, u5], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u1, u5], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u1, u5], HPL[{1}, 1 - \
+u6]^2*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u1, u5], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u1, u5], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u1, u5], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u1, u5], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u1, u5], HPL[{0, 1}, 1 - u1]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u1, u5], HPL[{0, 1}, 1 - u3]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u1, u5], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u1, u5], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u1, u5], HPL[{0, 1}, 1 - u6]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u1, u5], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u1, u5], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u1, u5], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u1, u5], \[Zeta][2]*dt3[1][u1, u5], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u2, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u2, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u2, u5], HPL[{1}, 1 - \
+u3]^2*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u2, u5], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u2, u5], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u2, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u2, u5], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u2, u5], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u2, u5], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u2, u5], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u2, u5], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u2, u5], HPL[{1}, 1 - \
+u6]^2*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u2, u5], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u2, u5], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u2, u5], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u2, u5], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u2, u5], HPL[{0, 1}, 1 - u1]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u2, u5], HPL[{0, 1}, 1 - u3]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u2, u5], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u2, u5], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u2, u5], HPL[{0, 1}, 1 - u6]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u2, u5], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u2, u5], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u2, u5], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u2, u5], \[Zeta][2]*dt3[1][u2, u5], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u2, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u2, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u2, u6], HPL[{1}, 1 - \
+u3]^2*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u2, u6], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u2, u6], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u2, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u2, u6], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u2, u6], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u2, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u2, u6], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u2, u6], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u2, u6], HPL[{1}, 1 - \
+u6]^2*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u2, u6], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u2, u6], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u2, u6], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u2, u6], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u2, u6], HPL[{0, 1}, 1 - u1]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u2, u6], HPL[{0, 1}, 1 - u3]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u2, u6], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u2, u6], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u2, u6], HPL[{0, 1}, 1 - u6]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u2, u6], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u2, u6], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u2, u6], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u2, u6], \[Zeta][2]*dt3[1][u2, u6], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u3, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u3, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u3, u6], HPL[{1}, 1 - \
+u3]^2*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u3, u6], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u3, u6], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u3, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u3, u6], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u3, u6], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u3, u6], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u3, u6], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u3, u6], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u3, u6], HPL[{1}, 1 - \
+u6]^2*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u3, u6], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u3, u6], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u3, u6], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u3, u6], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u3, u6], HPL[{0, 1}, 1 - u1]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u3, u6], HPL[{0, 1}, 1 - u3]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u3, u6], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u3, u6], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u3, u6], HPL[{0, 1}, 1 - u6]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u3, u6], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u3, u6], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u3, u6], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u3, u6], \[Zeta][2]*dt3[1][u3, u6], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u3, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u3, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u3, u7], HPL[{1}, 1 - \
+u3]^2*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u3, u7], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u3, u7], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u3, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u3, u7], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u3, u7], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u3, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u3, u7], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u3, u7], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u3, u7], HPL[{1}, 1 - \
+u6]^2*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u3, u7], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u3, u7], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u3, u7], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u3, u7], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u3, u7], HPL[{0, 1}, 1 - u1]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u3, u7], HPL[{0, 1}, 1 - u3]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u3, u7], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u3, u7], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u3, u7], HPL[{0, 1}, 1 - u6]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u3, u7], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u3, u7], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u3, u7], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u3, u7], \[Zeta][2]*dt3[1][u3, u7], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u4, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u4, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u4, u1], HPL[{1}, 1 - \
+u3]^2*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u4, u1], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u4, u1], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u4, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u4, u1], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u4, u1], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u4, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u4, u1], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u4, u1], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u4, u1], HPL[{1}, 1 - \
+u6]^2*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u4, u1], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u4, u1], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u4, u1], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u4, u1], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u4, u1], HPL[{0, 1}, 1 - u1]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u4, u1], HPL[{0, 1}, 1 - u3]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u4, u1], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u4, u1], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u4, u1], HPL[{0, 1}, 1 - u6]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u4, u1], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u4, u1], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u4, u1], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u4, u1], \[Zeta][2]*dt3[1][u4, u1], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u4, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u4, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u4, u7], HPL[{1}, 1 - \
+u3]^2*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u4, u7], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u4, u7], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u4, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u4, u7], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u4, u7], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u4, u7], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u4, u7], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u4, u7], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u4, u7], HPL[{1}, 1 - \
+u6]^2*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u4, u7], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u4, u7], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u4, u7], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u4, u7], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u4, u7], HPL[{0, 1}, 1 - u1]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u4, u7], HPL[{0, 1}, 1 - u3]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u4, u7], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u4, u7], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u4, u7], HPL[{0, 1}, 1 - u6]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u4, u7], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u4, u7], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u4, u7], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u4, u7], \[Zeta][2]*dt3[1][u4, u7], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u5, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u5, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u5, u1], HPL[{1}, 1 - \
+u3]^2*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u5, u1], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u5, u1], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u5, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u5, u1], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u5, u1], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u5, u1], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u5, u1], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u5, u1], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u5, u1], HPL[{1}, 1 - \
+u6]^2*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u5, u1], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u5, u1], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u5, u1], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u5, u1], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u5, u1], HPL[{0, 1}, 1 - u1]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u5, u1], HPL[{0, 1}, 1 - u3]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u5, u1], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u5, u1], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u5, u1], HPL[{0, 1}, 1 - u6]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u5, u1], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u5, u1], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u5, u1], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u5, u1], \[Zeta][2]*dt3[1][u5, u1], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u5, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u5, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u5, u2], HPL[{1}, 1 - \
+u3]^2*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u5, u2], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u5, u2], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u5, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u5, u2], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u5, u2], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u5, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u5, u2], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u5, u2], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u5, u2], HPL[{1}, 1 - \
+u6]^2*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u5, u2], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u5, u2], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u5, u2], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u5, u2], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u5, u2], HPL[{0, 1}, 1 - u1]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u5, u2], HPL[{0, 1}, 1 - u3]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u5, u2], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u5, u2], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u5, u2], HPL[{0, 1}, 1 - u6]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u5, u2], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u5, u2], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u5, u2], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u5, u2], \[Zeta][2]*dt3[1][u5, u2], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u6, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u6, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u6, u2], HPL[{1}, 1 - \
+u3]^2*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u6, u2], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u6, u2], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u6, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u6, u2], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u6, u2], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u6, u2], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u6, u2], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u6, u2], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u6, u2], HPL[{1}, 1 - \
+u6]^2*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u6, u2], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u6, u2], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u6, u2], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u6, u2], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u6, u2], HPL[{0, 1}, 1 - u1]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u6, u2], HPL[{0, 1}, 1 - u3]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u6, u2], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u6, u2], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u6, u2], HPL[{0, 1}, 1 - u6]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u6, u2], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u6, u2], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u6, u2], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u6, u2], \[Zeta][2]*dt3[1][u6, u2], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u6, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u6, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u6, u3], HPL[{1}, 1 - \
+u3]^2*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u6, u3], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u6, u3], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u6, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u6, u3], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u6, u3], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u6, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u6, u3], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u6, u3], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u6, u3], HPL[{1}, 1 - \
+u6]^2*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u6, u3], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u6, u3], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u6, u3], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u6, u3], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u6, u3], HPL[{0, 1}, 1 - u1]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u6, u3], HPL[{0, 1}, 1 - u3]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u6, u3], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u6, u3], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u6, u3], HPL[{0, 1}, 1 - u6]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u6, u3], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u6, u3], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u6, u3], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u6, u3], \[Zeta][2]*dt3[1][u6, u3], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u7, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u7, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u7, u3], HPL[{1}, 1 - \
+u3]^2*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u7, u3], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u7, u3], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u7, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u7, u3], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u7, u3], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u7, u3], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u7, u3], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u7, u3], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u7, u3], HPL[{1}, 1 - \
+u6]^2*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u7, u3], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u7, u3], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u7, u3], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u7, u3], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u7, u3], HPL[{0, 1}, 1 - u1]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u7, u3], HPL[{0, 1}, 1 - u3]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u7, u3], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u7, u3], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u7, u3], HPL[{0, 1}, 1 - u6]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u7, u3], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u7, u3], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u7, u3], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u7, u3], \[Zeta][2]*dt3[1][u7, u3], 
+ HPL[{1}, 1 - u1]^2*dt3[1][u7, u4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u2]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u2]^2*dt3[1][u7, u4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u3]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u3]*dt3[1][u7, u4], HPL[{1}, 1 - \
+u3]^2*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u4]*dt3[1][u7, u4], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u4]*
+  dt3[1][u7, u4], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u4]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u4]^2*dt3[1][u7, u4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u5]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u5]*dt3[1][u7, u4], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u5]*
+  dt3[1][u7, u4], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u5]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u5]^2*dt3[1][u7, u4], HPL[{1}, 1 - u1]*HPL[{1}, 1 - \
+u6]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u2]*HPL[{1}, 1 - u6]*dt3[1][u7, u4], HPL[{1}, 1 - u3]*HPL[{1}, \
+1 - u6]*
+  dt3[1][u7, u4], HPL[{1}, 1 - u4]*HPL[{1}, 1 - u6]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u5]*HPL[{1}, 1 - u6]*dt3[1][u7, u4], HPL[{1}, 1 - \
+u6]^2*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u1]*HPL[{1}, 1 - u7]*dt3[1][u7, u4], HPL[{1}, 1 - u2]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u7, u4], HPL[{1}, 1 - u3]*HPL[{1}, 1 - u7]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u4]*HPL[{1}, 1 - u7]*dt3[1][u7, u4], HPL[{1}, 1 - u5]*HPL[{1}, \
+1 - u7]*
+  dt3[1][u7, u4], HPL[{1}, 1 - u6]*HPL[{1}, 1 - u7]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u7]^2*dt3[1][u7, u4], HPL[{0, 1}, 1 - u1]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u2]*dt3[1][u7, u4], HPL[{0, 1}, 1 - u3]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u4]*dt3[1][u7, u4], HPL[{0, 1}, 1 - u1*u4]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u5]*dt3[1][u7, u4], HPL[{0, 1}, 1 - u1*u5]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u2*u5]*dt3[1][u7, u4], HPL[{0, 1}, 1 - u6]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u2*u6]*dt3[1][u7, u4], HPL[{0, 1}, 1 - u3*u6]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u7]*dt3[1][u7, u4], HPL[{0, 1}, 1 - u3*u7]*dt3[1][u7, u4], 
+ HPL[{0, 1}, 1 - u4*u7]*dt3[1][u7, u4], \[Zeta][2]*dt3[1][u7, u4], 
+ HPL[{1}, 1 - u1]*dt4[1][u1, u4], HPL[{1}, 1 - u2]*dt4[1][u1, u4], 
+ HPL[{1}, 1 - u3]*dt4[1][u1, u4], HPL[{1}, 1 - u4]*dt4[1][u1, u4], 
+ HPL[{1}, 1 - u5]*dt4[1][u1, u4], HPL[{1}, 1 - u6]*dt4[1][u1, u4], 
+ HPL[{1}, 1 - u7]*dt4[1][u1, u4], HPL[{1}, 1 - u1]*dt4[1][u1, u5], 
+ HPL[{1}, 1 - u2]*dt4[1][u1, u5], HPL[{1}, 1 - u3]*dt4[1][u1, u5], 
+ HPL[{1}, 1 - u4]*dt4[1][u1, u5], HPL[{1}, 1 - u5]*dt4[1][u1, u5], 
+ HPL[{1}, 1 - u6]*dt4[1][u1, u5], HPL[{1}, 1 - u7]*dt4[1][u1, u5], 
+ HPL[{1}, 1 - u1]*dt4[1][u2, u5], HPL[{1}, 1 - u2]*dt4[1][u2, u5], 
+ HPL[{1}, 1 - u3]*dt4[1][u2, u5], HPL[{1}, 1 - u4]*dt4[1][u2, u5], 
+ HPL[{1}, 1 - u5]*dt4[1][u2, u5], HPL[{1}, 1 - u6]*dt4[1][u2, u5], 
+ HPL[{1}, 1 - u7]*dt4[1][u2, u5], HPL[{1}, 1 - u1]*dt4[1][u2, u6], 
+ HPL[{1}, 1 - u2]*dt4[1][u2, u6], HPL[{1}, 1 - u3]*dt4[1][u2, u6], 
+ HPL[{1}, 1 - u4]*dt4[1][u2, u6], HPL[{1}, 1 - u5]*dt4[1][u2, u6], 
+ HPL[{1}, 1 - u6]*dt4[1][u2, u6], HPL[{1}, 1 - u7]*dt4[1][u2, u6], 
+ HPL[{1}, 1 - u1]*dt4[1][u3, u6], HPL[{1}, 1 - u2]*dt4[1][u3, u6], 
+ HPL[{1}, 1 - u3]*dt4[1][u3, u6], HPL[{1}, 1 - u4]*dt4[1][u3, u6], 
+ HPL[{1}, 1 - u5]*dt4[1][u3, u6], HPL[{1}, 1 - u6]*dt4[1][u3, u6], 
+ HPL[{1}, 1 - u7]*dt4[1][u3, u6], HPL[{1}, 1 - u1]*dt4[1][u3, u7], 
+ HPL[{1}, 1 - u2]*dt4[1][u3, u7], HPL[{1}, 1 - u3]*dt4[1][u3, u7], 
+ HPL[{1}, 1 - u4]*dt4[1][u3, u7], HPL[{1}, 1 - u5]*dt4[1][u3, u7], 
+ HPL[{1}, 1 - u6]*dt4[1][u3, u7], HPL[{1}, 1 - u7]*dt4[1][u3, u7], 
+ HPL[{1}, 1 - u1]*dt4[1][u4, u1], HPL[{1}, 1 - u2]*dt4[1][u4, u1], 
+ HPL[{1}, 1 - u3]*dt4[1][u4, u1], HPL[{1}, 1 - u4]*dt4[1][u4, u1], 
+ HPL[{1}, 1 - u5]*dt4[1][u4, u1], HPL[{1}, 1 - u6]*dt4[1][u4, u1], 
+ HPL[{1}, 1 - u7]*dt4[1][u4, u1], HPL[{1}, 1 - u1]*dt4[1][u4, u7], 
+ HPL[{1}, 1 - u2]*dt4[1][u4, u7], HPL[{1}, 1 - u3]*dt4[1][u4, u7], 
+ HPL[{1}, 1 - u4]*dt4[1][u4, u7], HPL[{1}, 1 - u5]*dt4[1][u4, u7], 
+ HPL[{1}, 1 - u6]*dt4[1][u4, u7], HPL[{1}, 1 - u7]*dt4[1][u4, u7], 
+ HPL[{1}, 1 - u1]*dt4[1][u5, u1], HPL[{1}, 1 - u2]*dt4[1][u5, u1], 
+ HPL[{1}, 1 - u3]*dt4[1][u5, u1], HPL[{1}, 1 - u4]*dt4[1][u5, u1], 
+ HPL[{1}, 1 - u5]*dt4[1][u5, u1], HPL[{1}, 1 - u6]*dt4[1][u5, u1], 
+ HPL[{1}, 1 - u7]*dt4[1][u5, u1], HPL[{1}, 1 - u1]*dt4[1][u5, u2], 
+ HPL[{1}, 1 - u2]*dt4[1][u5, u2], HPL[{1}, 1 - u3]*dt4[1][u5, u2], 
+ HPL[{1}, 1 - u4]*dt4[1][u5, u2], HPL[{1}, 1 - u5]*dt4[1][u5, u2], 
+ HPL[{1}, 1 - u6]*dt4[1][u5, u2], HPL[{1}, 1 - u7]*dt4[1][u5, u2], 
+ HPL[{1}, 1 - u1]*dt4[1][u6, u2], HPL[{1}, 1 - u2]*dt4[1][u6, u2], 
+ HPL[{1}, 1 - u3]*dt4[1][u6, u2], HPL[{1}, 1 - u4]*dt4[1][u6, u2], 
+ HPL[{1}, 1 - u5]*dt4[1][u6, u2], HPL[{1}, 1 - u6]*dt4[1][u6, u2], 
+ HPL[{1}, 1 - u7]*dt4[1][u6, u2], HPL[{1}, 1 - u1]*dt4[1][u6, u3], 
+ HPL[{1}, 1 - u2]*dt4[1][u6, u3], HPL[{1}, 1 - u3]*dt4[1][u6, u3], 
+ HPL[{1}, 1 - u4]*dt4[1][u6, u3], HPL[{1}, 1 - u5]*dt4[1][u6, u3], 
+ HPL[{1}, 1 - u6]*dt4[1][u6, u3], HPL[{1}, 1 - u7]*dt4[1][u6, u3], 
+ HPL[{1}, 1 - u1]*dt4[1][u7, u3], HPL[{1}, 1 - u2]*dt4[1][u7, u3], 
+ HPL[{1}, 1 - u3]*dt4[1][u7, u3], HPL[{1}, 1 - u4]*dt4[1][u7, u3], 
+ HPL[{1}, 1 - u5]*dt4[1][u7, u3], HPL[{1}, 1 - u6]*dt4[1][u7, u3], 
+ HPL[{1}, 1 - u7]*dt4[1][u7, u3], HPL[{1}, 1 - u1]*dt4[1][u7, u4], 
+ HPL[{1}, 1 - u2]*dt4[1][u7, u4], HPL[{1}, 1 - u3]*dt4[1][u7, u4], 
+ HPL[{1}, 1 - u4]*dt4[1][u7, u4], HPL[{1}, 1 - u5]*dt4[1][u7, u4], 
+ HPL[{1}, 1 - u6]*dt4[1][u7, u4], HPL[{1}, 1 - u7]*dt4[1][u7, u4], 
+ HPL[{1}, 1 - u1]*dt4[2][u1, u4], HPL[{1}, 1 - u2]*dt4[2][u1, u4], 
+ HPL[{1}, 1 - u3]*dt4[2][u1, u4], HPL[{1}, 1 - u4]*dt4[2][u1, u4], 
+ HPL[{1}, 1 - u5]*dt4[2][u1, u4], HPL[{1}, 1 - u6]*dt4[2][u1, u4], 
+ HPL[{1}, 1 - u7]*dt4[2][u1, u4], HPL[{1}, 1 - u1]*dt4[2][u1, u5], 
+ HPL[{1}, 1 - u2]*dt4[2][u1, u5], HPL[{1}, 1 - u3]*dt4[2][u1, u5], 
+ HPL[{1}, 1 - u4]*dt4[2][u1, u5], HPL[{1}, 1 - u5]*dt4[2][u1, u5], 
+ HPL[{1}, 1 - u6]*dt4[2][u1, u5], HPL[{1}, 1 - u7]*dt4[2][u1, u5], 
+ HPL[{1}, 1 - u1]*dt4[2][u2, u5], HPL[{1}, 1 - u2]*dt4[2][u2, u5], 
+ HPL[{1}, 1 - u3]*dt4[2][u2, u5], HPL[{1}, 1 - u4]*dt4[2][u2, u5], 
+ HPL[{1}, 1 - u5]*dt4[2][u2, u5], HPL[{1}, 1 - u6]*dt4[2][u2, u5], 
+ HPL[{1}, 1 - u7]*dt4[2][u2, u5], HPL[{1}, 1 - u1]*dt4[2][u2, u6], 
+ HPL[{1}, 1 - u2]*dt4[2][u2, u6], HPL[{1}, 1 - u3]*dt4[2][u2, u6], 
+ HPL[{1}, 1 - u4]*dt4[2][u2, u6], HPL[{1}, 1 - u5]*dt4[2][u2, u6], 
+ HPL[{1}, 1 - u6]*dt4[2][u2, u6], HPL[{1}, 1 - u7]*dt4[2][u2, u6], 
+ HPL[{1}, 1 - u1]*dt4[2][u3, u6], HPL[{1}, 1 - u2]*dt4[2][u3, u6], 
+ HPL[{1}, 1 - u3]*dt4[2][u3, u6], HPL[{1}, 1 - u4]*dt4[2][u3, u6], 
+ HPL[{1}, 1 - u5]*dt4[2][u3, u6], HPL[{1}, 1 - u6]*dt4[2][u3, u6], 
+ HPL[{1}, 1 - u7]*dt4[2][u3, u6], HPL[{1}, 1 - u1]*dt4[2][u3, u7], 
+ HPL[{1}, 1 - u2]*dt4[2][u3, u7], HPL[{1}, 1 - u3]*dt4[2][u3, u7], 
+ HPL[{1}, 1 - u4]*dt4[2][u3, u7], HPL[{1}, 1 - u5]*dt4[2][u3, u7], 
+ HPL[{1}, 1 - u6]*dt4[2][u3, u7], HPL[{1}, 1 - u7]*dt4[2][u3, u7], 
+ HPL[{1}, 1 - u1]*dt4[2][u4, u1], HPL[{1}, 1 - u2]*dt4[2][u4, u1], 
+ HPL[{1}, 1 - u3]*dt4[2][u4, u1], HPL[{1}, 1 - u4]*dt4[2][u4, u1], 
+ HPL[{1}, 1 - u5]*dt4[2][u4, u1], HPL[{1}, 1 - u6]*dt4[2][u4, u1], 
+ HPL[{1}, 1 - u7]*dt4[2][u4, u1], HPL[{1}, 1 - u1]*dt4[2][u4, u7], 
+ HPL[{1}, 1 - u2]*dt4[2][u4, u7], HPL[{1}, 1 - u3]*dt4[2][u4, u7], 
+ HPL[{1}, 1 - u4]*dt4[2][u4, u7], HPL[{1}, 1 - u5]*dt4[2][u4, u7], 
+ HPL[{1}, 1 - u6]*dt4[2][u4, u7], HPL[{1}, 1 - u7]*dt4[2][u4, u7], 
+ HPL[{1}, 1 - u1]*dt4[2][u5, u1], HPL[{1}, 1 - u2]*dt4[2][u5, u1], 
+ HPL[{1}, 1 - u3]*dt4[2][u5, u1], HPL[{1}, 1 - u4]*dt4[2][u5, u1], 
+ HPL[{1}, 1 - u5]*dt4[2][u5, u1], HPL[{1}, 1 - u6]*dt4[2][u5, u1], 
+ HPL[{1}, 1 - u7]*dt4[2][u5, u1], HPL[{1}, 1 - u1]*dt4[2][u5, u2], 
+ HPL[{1}, 1 - u2]*dt4[2][u5, u2], HPL[{1}, 1 - u3]*dt4[2][u5, u2], 
+ HPL[{1}, 1 - u4]*dt4[2][u5, u2], HPL[{1}, 1 - u5]*dt4[2][u5, u2], 
+ HPL[{1}, 1 - u6]*dt4[2][u5, u2], HPL[{1}, 1 - u7]*dt4[2][u5, u2], 
+ HPL[{1}, 1 - u1]*dt4[2][u6, u2], HPL[{1}, 1 - u2]*dt4[2][u6, u2], 
+ HPL[{1}, 1 - u3]*dt4[2][u6, u2], HPL[{1}, 1 - u4]*dt4[2][u6, u2], 
+ HPL[{1}, 1 - u5]*dt4[2][u6, u2], HPL[{1}, 1 - u6]*dt4[2][u6, u2], 
+ HPL[{1}, 1 - u7]*dt4[2][u6, u2], HPL[{1}, 1 - u1]*dt4[2][u6, u3], 
+ HPL[{1}, 1 - u2]*dt4[2][u6, u3], HPL[{1}, 1 - u3]*dt4[2][u6, u3], 
+ HPL[{1}, 1 - u4]*dt4[2][u6, u3], HPL[{1}, 1 - u5]*dt4[2][u6, u3], 
+ HPL[{1}, 1 - u6]*dt4[2][u6, u3], HPL[{1}, 1 - u7]*dt4[2][u6, u3], 
+ HPL[{1}, 1 - u1]*dt4[2][u7, u3], HPL[{1}, 1 - u2]*dt4[2][u7, u3], 
+ HPL[{1}, 1 - u3]*dt4[2][u7, u3], HPL[{1}, 1 - u4]*dt4[2][u7, u3], 
+ HPL[{1}, 1 - u5]*dt4[2][u7, u3], HPL[{1}, 1 - u6]*dt4[2][u7, u3], 
+ HPL[{1}, 1 - u7]*dt4[2][u7, u3], HPL[{1}, 1 - u1]*dt4[2][u7, u4], 
+ HPL[{1}, 1 - u2]*dt4[2][u7, u4], HPL[{1}, 1 - u3]*dt4[2][u7, u4], 
+ HPL[{1}, 1 - u4]*dt4[2][u7, u4], HPL[{1}, 1 - u5]*dt4[2][u7, u4], 
+ HPL[{1}, 1 - u6]*dt4[2][u7, u4], HPL[{1}, 1 - u7]*dt4[2][u7, u4], 
+ HPL[{1}, 1 - u1]*dt4[3][u1, u4], HPL[{1}, 1 - u2]*dt4[3][u1, u4], 
+ HPL[{1}, 1 - u3]*dt4[3][u1, u4], HPL[{1}, 1 - u4]*dt4[3][u1, u4], 
+ HPL[{1}, 1 - u5]*dt4[3][u1, u4], HPL[{1}, 1 - u6]*dt4[3][u1, u4], 
+ HPL[{1}, 1 - u7]*dt4[3][u1, u4], HPL[{1}, 1 - u1]*dt4[3][u1, u5], 
+ HPL[{1}, 1 - u2]*dt4[3][u1, u5], HPL[{1}, 1 - u3]*dt4[3][u1, u5], 
+ HPL[{1}, 1 - u4]*dt4[3][u1, u5], HPL[{1}, 1 - u5]*dt4[3][u1, u5], 
+ HPL[{1}, 1 - u6]*dt4[3][u1, u5], HPL[{1}, 1 - u7]*dt4[3][u1, u5], 
+ HPL[{1}, 1 - u1]*dt4[3][u2, u5], HPL[{1}, 1 - u2]*dt4[3][u2, u5], 
+ HPL[{1}, 1 - u3]*dt4[3][u2, u5], HPL[{1}, 1 - u4]*dt4[3][u2, u5], 
+ HPL[{1}, 1 - u5]*dt4[3][u2, u5], HPL[{1}, 1 - u6]*dt4[3][u2, u5], 
+ HPL[{1}, 1 - u7]*dt4[3][u2, u5], HPL[{1}, 1 - u1]*dt4[3][u2, u6], 
+ HPL[{1}, 1 - u2]*dt4[3][u2, u6], HPL[{1}, 1 - u3]*dt4[3][u2, u6], 
+ HPL[{1}, 1 - u4]*dt4[3][u2, u6], HPL[{1}, 1 - u5]*dt4[3][u2, u6], 
+ HPL[{1}, 1 - u6]*dt4[3][u2, u6], HPL[{1}, 1 - u7]*dt4[3][u2, u6], 
+ HPL[{1}, 1 - u1]*dt4[3][u3, u6], HPL[{1}, 1 - u2]*dt4[3][u3, u6], 
+ HPL[{1}, 1 - u3]*dt4[3][u3, u6], HPL[{1}, 1 - u4]*dt4[3][u3, u6], 
+ HPL[{1}, 1 - u5]*dt4[3][u3, u6], HPL[{1}, 1 - u6]*dt4[3][u3, u6], 
+ HPL[{1}, 1 - u7]*dt4[3][u3, u6], HPL[{1}, 1 - u1]*dt4[3][u3, u7], 
+ HPL[{1}, 1 - u2]*dt4[3][u3, u7], HPL[{1}, 1 - u3]*dt4[3][u3, u7], 
+ HPL[{1}, 1 - u4]*dt4[3][u3, u7], HPL[{1}, 1 - u5]*dt4[3][u3, u7], 
+ HPL[{1}, 1 - u6]*dt4[3][u3, u7], HPL[{1}, 1 - u7]*dt4[3][u3, u7], 
+ HPL[{1}, 1 - u1]*dt4[3][u4, u1], HPL[{1}, 1 - u2]*dt4[3][u4, u1], 
+ HPL[{1}, 1 - u3]*dt4[3][u4, u1], HPL[{1}, 1 - u4]*dt4[3][u4, u1], 
+ HPL[{1}, 1 - u5]*dt4[3][u4, u1], HPL[{1}, 1 - u6]*dt4[3][u4, u1], 
+ HPL[{1}, 1 - u7]*dt4[3][u4, u1], HPL[{1}, 1 - u1]*dt4[3][u4, u7], 
+ HPL[{1}, 1 - u2]*dt4[3][u4, u7], HPL[{1}, 1 - u3]*dt4[3][u4, u7], 
+ HPL[{1}, 1 - u4]*dt4[3][u4, u7], HPL[{1}, 1 - u5]*dt4[3][u4, u7], 
+ HPL[{1}, 1 - u6]*dt4[3][u4, u7], HPL[{1}, 1 - u7]*dt4[3][u4, u7], 
+ HPL[{1}, 1 - u1]*dt4[3][u5, u1], HPL[{1}, 1 - u2]*dt4[3][u5, u1], 
+ HPL[{1}, 1 - u3]*dt4[3][u5, u1], HPL[{1}, 1 - u4]*dt4[3][u5, u1], 
+ HPL[{1}, 1 - u5]*dt4[3][u5, u1], HPL[{1}, 1 - u6]*dt4[3][u5, u1], 
+ HPL[{1}, 1 - u7]*dt4[3][u5, u1], HPL[{1}, 1 - u1]*dt4[3][u5, u2], 
+ HPL[{1}, 1 - u2]*dt4[3][u5, u2], HPL[{1}, 1 - u3]*dt4[3][u5, u2], 
+ HPL[{1}, 1 - u4]*dt4[3][u5, u2], HPL[{1}, 1 - u5]*dt4[3][u5, u2], 
+ HPL[{1}, 1 - u6]*dt4[3][u5, u2], HPL[{1}, 1 - u7]*dt4[3][u5, u2], 
+ HPL[{1}, 1 - u1]*dt4[3][u6, u2], HPL[{1}, 1 - u2]*dt4[3][u6, u2], 
+ HPL[{1}, 1 - u3]*dt4[3][u6, u2], HPL[{1}, 1 - u4]*dt4[3][u6, u2], 
+ HPL[{1}, 1 - u5]*dt4[3][u6, u2], HPL[{1}, 1 - u6]*dt4[3][u6, u2], 
+ HPL[{1}, 1 - u7]*dt4[3][u6, u2], HPL[{1}, 1 - u1]*dt4[3][u6, u3], 
+ HPL[{1}, 1 - u2]*dt4[3][u6, u3], HPL[{1}, 1 - u3]*dt4[3][u6, u3], 
+ HPL[{1}, 1 - u4]*dt4[3][u6, u3], HPL[{1}, 1 - u5]*dt4[3][u6, u3], 
+ HPL[{1}, 1 - u6]*dt4[3][u6, u3], HPL[{1}, 1 - u7]*dt4[3][u6, u3], 
+ HPL[{1}, 1 - u1]*dt4[3][u7, u3], HPL[{1}, 1 - u2]*dt4[3][u7, u3], 
+ HPL[{1}, 1 - u3]*dt4[3][u7, u3], HPL[{1}, 1 - u4]*dt4[3][u7, u3], 
+ HPL[{1}, 1 - u5]*dt4[3][u7, u3], HPL[{1}, 1 - u6]*dt4[3][u7, u3], 
+ HPL[{1}, 1 - u7]*dt4[3][u7, u3], HPL[{1}, 1 - u1]*dt4[3][u7, u4], 
+ HPL[{1}, 1 - u2]*dt4[3][u7, u4], HPL[{1}, 1 - u3]*dt4[3][u7, u4], 
+ HPL[{1}, 1 - u4]*dt4[3][u7, u4], HPL[{1}, 1 - u5]*dt4[3][u7, u4], 
+ HPL[{1}, 1 - u6]*dt4[3][u7, u4], HPL[{1}, 1 - u7]*dt4[3][u7, u4], 
+ HPL[{1}, 1 - u1]*dt4[4][u1, u4], HPL[{1}, 1 - u2]*dt4[4][u1, u4], 
+ HPL[{1}, 1 - u3]*dt4[4][u1, u4], HPL[{1}, 1 - u4]*dt4[4][u1, u4], 
+ HPL[{1}, 1 - u5]*dt4[4][u1, u4], HPL[{1}, 1 - u6]*dt4[4][u1, u4], 
+ HPL[{1}, 1 - u7]*dt4[4][u1, u4], HPL[{1}, 1 - u1]*dt4[4][u1, u5], 
+ HPL[{1}, 1 - u2]*dt4[4][u1, u5], HPL[{1}, 1 - u3]*dt4[4][u1, u5], 
+ HPL[{1}, 1 - u4]*dt4[4][u1, u5], HPL[{1}, 1 - u5]*dt4[4][u1, u5], 
+ HPL[{1}, 1 - u6]*dt4[4][u1, u5], HPL[{1}, 1 - u7]*dt4[4][u1, u5], 
+ HPL[{1}, 1 - u1]*dt4[4][u2, u5], HPL[{1}, 1 - u2]*dt4[4][u2, u5], 
+ HPL[{1}, 1 - u3]*dt4[4][u2, u5], HPL[{1}, 1 - u4]*dt4[4][u2, u5], 
+ HPL[{1}, 1 - u5]*dt4[4][u2, u5], HPL[{1}, 1 - u6]*dt4[4][u2, u5], 
+ HPL[{1}, 1 - u7]*dt4[4][u2, u5], HPL[{1}, 1 - u1]*dt4[4][u2, u6], 
+ HPL[{1}, 1 - u2]*dt4[4][u2, u6], HPL[{1}, 1 - u3]*dt4[4][u2, u6], 
+ HPL[{1}, 1 - u4]*dt4[4][u2, u6], HPL[{1}, 1 - u5]*dt4[4][u2, u6], 
+ HPL[{1}, 1 - u6]*dt4[4][u2, u6], HPL[{1}, 1 - u7]*dt4[4][u2, u6], 
+ HPL[{1}, 1 - u1]*dt4[4][u3, u6], HPL[{1}, 1 - u2]*dt4[4][u3, u6], 
+ HPL[{1}, 1 - u3]*dt4[4][u3, u6], HPL[{1}, 1 - u4]*dt4[4][u3, u6], 
+ HPL[{1}, 1 - u5]*dt4[4][u3, u6], HPL[{1}, 1 - u6]*dt4[4][u3, u6], 
+ HPL[{1}, 1 - u7]*dt4[4][u3, u6], HPL[{1}, 1 - u1]*dt4[4][u3, u7], 
+ HPL[{1}, 1 - u2]*dt4[4][u3, u7], HPL[{1}, 1 - u3]*dt4[4][u3, u7], 
+ HPL[{1}, 1 - u4]*dt4[4][u3, u7], HPL[{1}, 1 - u5]*dt4[4][u3, u7], 
+ HPL[{1}, 1 - u6]*dt4[4][u3, u7], HPL[{1}, 1 - u7]*dt4[4][u3, u7], 
+ HPL[{1}, 1 - u1]*dt4[4][u4, u1], HPL[{1}, 1 - u2]*dt4[4][u4, u1], 
+ HPL[{1}, 1 - u3]*dt4[4][u4, u1], HPL[{1}, 1 - u4]*dt4[4][u4, u1], 
+ HPL[{1}, 1 - u5]*dt4[4][u4, u1], HPL[{1}, 1 - u6]*dt4[4][u4, u1], 
+ HPL[{1}, 1 - u7]*dt4[4][u4, u1], HPL[{1}, 1 - u1]*dt4[4][u4, u7], 
+ HPL[{1}, 1 - u2]*dt4[4][u4, u7], HPL[{1}, 1 - u3]*dt4[4][u4, u7], 
+ HPL[{1}, 1 - u4]*dt4[4][u4, u7], HPL[{1}, 1 - u5]*dt4[4][u4, u7], 
+ HPL[{1}, 1 - u6]*dt4[4][u4, u7], HPL[{1}, 1 - u7]*dt4[4][u4, u7], 
+ HPL[{1}, 1 - u1]*dt4[4][u5, u1], HPL[{1}, 1 - u2]*dt4[4][u5, u1], 
+ HPL[{1}, 1 - u3]*dt4[4][u5, u1], HPL[{1}, 1 - u4]*dt4[4][u5, u1], 
+ HPL[{1}, 1 - u5]*dt4[4][u5, u1], HPL[{1}, 1 - u6]*dt4[4][u5, u1], 
+ HPL[{1}, 1 - u7]*dt4[4][u5, u1], HPL[{1}, 1 - u1]*dt4[4][u5, u2], 
+ HPL[{1}, 1 - u2]*dt4[4][u5, u2], HPL[{1}, 1 - u3]*dt4[4][u5, u2], 
+ HPL[{1}, 1 - u4]*dt4[4][u5, u2], HPL[{1}, 1 - u5]*dt4[4][u5, u2], 
+ HPL[{1}, 1 - u6]*dt4[4][u5, u2], HPL[{1}, 1 - u7]*dt4[4][u5, u2], 
+ HPL[{1}, 1 - u1]*dt4[4][u6, u2], HPL[{1}, 1 - u2]*dt4[4][u6, u2], 
+ HPL[{1}, 1 - u3]*dt4[4][u6, u2], HPL[{1}, 1 - u4]*dt4[4][u6, u2], 
+ HPL[{1}, 1 - u5]*dt4[4][u6, u2], HPL[{1}, 1 - u6]*dt4[4][u6, u2], 
+ HPL[{1}, 1 - u7]*dt4[4][u6, u2], HPL[{1}, 1 - u1]*dt4[4][u6, u3], 
+ HPL[{1}, 1 - u2]*dt4[4][u6, u3], HPL[{1}, 1 - u3]*dt4[4][u6, u3], 
+ HPL[{1}, 1 - u4]*dt4[4][u6, u3], HPL[{1}, 1 - u5]*dt4[4][u6, u3], 
+ HPL[{1}, 1 - u6]*dt4[4][u6, u3], HPL[{1}, 1 - u7]*dt4[4][u6, u3], 
+ HPL[{1}, 1 - u1]*dt4[4][u7, u3], HPL[{1}, 1 - u2]*dt4[4][u7, u3], 
+ HPL[{1}, 1 - u3]*dt4[4][u7, u3], HPL[{1}, 1 - u4]*dt4[4][u7, u3], 
+ HPL[{1}, 1 - u5]*dt4[4][u7, u3], HPL[{1}, 1 - u6]*dt4[4][u7, u3], 
+ HPL[{1}, 1 - u7]*dt4[4][u7, u3], HPL[{1}, 1 - u1]*dt4[4][u7, u4], 
+ HPL[{1}, 1 - u2]*dt4[4][u7, u4], HPL[{1}, 1 - u3]*dt4[4][u7, u4], 
+ HPL[{1}, 1 - u4]*dt4[4][u7, u4], HPL[{1}, 1 - u5]*dt4[4][u7, u4], 
+ HPL[{1}, 1 - u6]*dt4[4][u7, u4], HPL[{1}, 1 - u7]*dt4[4][u7, u4], 
+ HPL[{1}, 1 - u1]*dt4[5][u1, u4], HPL[{1}, 1 - u2]*dt4[5][u1, u4], 
+ HPL[{1}, 1 - u3]*dt4[5][u1, u4], HPL[{1}, 1 - u4]*dt4[5][u1, u4], 
+ HPL[{1}, 1 - u5]*dt4[5][u1, u4], HPL[{1}, 1 - u6]*dt4[5][u1, u4], 
+ HPL[{1}, 1 - u7]*dt4[5][u1, u4], HPL[{1}, 1 - u1]*dt4[5][u1, u5], 
+ HPL[{1}, 1 - u2]*dt4[5][u1, u5], HPL[{1}, 1 - u3]*dt4[5][u1, u5], 
+ HPL[{1}, 1 - u4]*dt4[5][u1, u5], HPL[{1}, 1 - u5]*dt4[5][u1, u5], 
+ HPL[{1}, 1 - u6]*dt4[5][u1, u5], HPL[{1}, 1 - u7]*dt4[5][u1, u5], 
+ HPL[{1}, 1 - u1]*dt4[5][u2, u5], HPL[{1}, 1 - u2]*dt4[5][u2, u5], 
+ HPL[{1}, 1 - u3]*dt4[5][u2, u5], HPL[{1}, 1 - u4]*dt4[5][u2, u5], 
+ HPL[{1}, 1 - u5]*dt4[5][u2, u5], HPL[{1}, 1 - u6]*dt4[5][u2, u5], 
+ HPL[{1}, 1 - u7]*dt4[5][u2, u5], HPL[{1}, 1 - u1]*dt4[5][u2, u6], 
+ HPL[{1}, 1 - u2]*dt4[5][u2, u6], HPL[{1}, 1 - u3]*dt4[5][u2, u6], 
+ HPL[{1}, 1 - u4]*dt4[5][u2, u6], HPL[{1}, 1 - u5]*dt4[5][u2, u6], 
+ HPL[{1}, 1 - u6]*dt4[5][u2, u6], HPL[{1}, 1 - u7]*dt4[5][u2, u6], 
+ HPL[{1}, 1 - u1]*dt4[5][u3, u6], HPL[{1}, 1 - u2]*dt4[5][u3, u6], 
+ HPL[{1}, 1 - u3]*dt4[5][u3, u6], HPL[{1}, 1 - u4]*dt4[5][u3, u6], 
+ HPL[{1}, 1 - u5]*dt4[5][u3, u6], HPL[{1}, 1 - u6]*dt4[5][u3, u6], 
+ HPL[{1}, 1 - u7]*dt4[5][u3, u6], HPL[{1}, 1 - u1]*dt4[5][u3, u7], 
+ HPL[{1}, 1 - u2]*dt4[5][u3, u7], HPL[{1}, 1 - u3]*dt4[5][u3, u7], 
+ HPL[{1}, 1 - u4]*dt4[5][u3, u7], HPL[{1}, 1 - u5]*dt4[5][u3, u7], 
+ HPL[{1}, 1 - u6]*dt4[5][u3, u7], HPL[{1}, 1 - u7]*dt4[5][u3, u7], 
+ HPL[{1}, 1 - u1]*dt4[5][u4, u7], HPL[{1}, 1 - u2]*dt4[5][u4, u7], 
+ HPL[{1}, 1 - u3]*dt4[5][u4, u7], HPL[{1}, 1 - u4]*dt4[5][u4, u7], 
+ HPL[{1}, 1 - u5]*dt4[5][u4, u7], HPL[{1}, 1 - u6]*dt4[5][u4, u7], 
+ HPL[{1}, 1 - u7]*dt4[5][u4, u7]}\
+\>", "Output",
+ CellChangeTimes->{{3.6655560989560757`*^9, 3.6655561127530003`*^9}, {
+   3.665556155583838*^9, 3.665556162615456*^9}, 3.665556252072209*^9, {
+   3.665556335289926*^9, 3.665556356155643*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"heptagonFunctionsWeight", "[", "2", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.665556533652193*^9, 3.665556543419745*^9}}],
+
+Cell[BoxData[
+ FormBox["43", TraditionalForm]], "Output",
+ CellChangeTimes->{{3.665556536879404*^9, 3.6655565439836082`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"numFuncs", "[", "\[CapitalOmicron]4", "]"}], "+", 
+     RowBox[{"numFuncs", "[", "\[CapitalEpsilon]4", "]"}], "+", 
+     RowBox[{
+      RowBox[{"numFuncs", "[", "DT4", "]"}], "*", "7"}], "+", 
+     RowBox[{
+      RowBox[{"numFuncs", "[", "DS4", "]"}], "*", "7"}]}], ")"}], "*", 
+   RowBox[{"Length", "[", 
+    RowBox[{"heptagonFunctionsWeight", "[", "1", "]"}], "]"}]}], "+", 
+  RowBox[{
+   RowBox[{"(", 
+    RowBox[{
+     RowBox[{"numFuncs", "[", "\[CapitalOmicron]3", "]"}], "+", 
+     RowBox[{
+      RowBox[{"numFuncs", "[", "DT3", "]"}], "*", "7"}], "+", 
+     RowBox[{
+      RowBox[{"numFuncs", "[", "DS3", "]"}], "*", "7"}]}], ")"}], "*", 
+   RowBox[{"Length", "[", 
+    RowBox[{"heptagonFunctionsWeight", "[", "2", "]"}], "]"}]}]}]], "Input",
+ CellChangeTimes->{{3.6655564540878077`*^9, 3.665556568130789*^9}}],
+
+Cell[BoxData[
+ FormBox["2239", TraditionalForm]], "Output",
+ CellChangeTimes->{3.665556568682685*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Length", "[", 
+  RowBox[{"Out", "[", "15", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.665556576462842*^9, 3.665556580971991*^9}}],
+
+Cell[BoxData[
+ FormBox["2239", TraditionalForm]], "Output",
+ CellChangeTimes->{3.665556581439582*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 587},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (December 4, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 121, 2, 28, "Input"],
+Cell[CellGroupData[{
+Cell[704, 26, 360, 10, 28, "Input"],
+Cell[1067, 38, 19648, 524, 335, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[20752, 567, 1282, 32, 114, "Input"],
+Cell[22037, 601, 97101, 1619, 17245, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[119175, 2225, 175, 3, 28, "Input"],
+Cell[119353, 2230, 125, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[119515, 2237, 896, 23, 63, "Input"],
+Cell[120414, 2262, 101, 2, 28, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[120552, 2269, 156, 3, 28, "Input"],
+Cell[120711, 2274, 101, 2, 28, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

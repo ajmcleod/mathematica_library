@@ -33,8 +33,6 @@ coproductD[func_,z]:=coproductD[func,Subscript[z,u]];
 coproductD[func_,zb]:=coproductD[func,Subscript[zb,u]];
 coproductD[func_,\[Xi]]:=coproductD[func,Subscript[\[Xi],u]];
 
-replace\[CapitalDelta]={\[CapitalDelta]->(1-u-v-w)^2-4u v w};
-
 exteriorD[func_,n_:max]:=Simplify[Expand[exteriorDeriv[func,n]],0<u<1\[And]0<v<1\[And]0<w<1];
 exteriorDeriv[Plus[x_,y__],n_]:=Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}];
 exteriorDeriv[c_ Plus[x_,y__],n_]:=c Plus@@Table[exteriorDeriv[List[x,y][[i]],n],{i,Length@List[x,y]}]/;NumericQ[c];

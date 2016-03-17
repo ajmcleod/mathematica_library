@@ -4,13 +4,13 @@
 stayInLyndonBasis=True;
 variables={1-u-w,1-u,1-w,u,w};
 uniquePairs={{u,w},{u,1-w},{u,1-u-w},{w,1-u},{w,1-u-w},{1-u,1-w},{1-u,1-u-w},{1-w,1-u-w}};
-sortedFunctionsWeightDS[weight_]:=sortedFunctionsWeightDS[weight]=Sort[functionsWeightDS[weight]];
+sortedFunctionsWeightDS[weight_]:=sortedFunctionsWeightDS[weight]=Sort[functionsWeight[DS,weight]];
 
 loadFunctionsAndDefinitions[weight_]:=Block[{},
-	currentWeightLyndonBasisFunctions=Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[weight]<>"/weight_"<>ToString[weight]<>"_HPL_double_scaling_basis_wfec.dat"];	
-	currentWeightCompositeFunctions=Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[weight]<>"/weight_"<>ToString[weight]<>"_composite_double_scaling_functions_wfec.dat"];
+	currentWeightLyndonBasisFunctions=Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[weight]<>"/weight_"<>ToString[weight]<>"_HPL_DS_basis.dat"];	
+	currentWeightCompositeFunctions=Get[$MathematicaLibrary<>"/Function Library/Weight "<>ToString[weight]<>"/weight_"<>ToString[weight]<>"_composite_DS_functions.dat"];
 	
-    knownCurrentWeightFunctions=DeleteCases[Join[currentWeightCompositeFunctions,currentWeightLyndonBasisFunctions,beyondSymbolTermsDS[weight]],Alternatives@@MZV[currentWeight]];
+    knownCurrentWeightFunctions=DeleteCases[Join[currentWeightCompositeFunctions,currentWeightLyndonBasisFunctions,beyondSymbolTerms[DS,weight]],Alternatives@@MZV[currentWeight]];
 	previousWeightFunctions=sortedFunctionsWeightDS[weight-1];
 	previousPreviousWeightFunctions=sortedFunctionsWeightDS[weight-2];
 
@@ -27,7 +27,7 @@ functionToVector[func_]:=functionToVectorBasis[Expand[func]];
 functionToVectorBasis[0]:=ConstantArray[0,Length@coefficients];
 functionToVectorBasis[func_]:=Module[{sparse=CoefficientArrays[toCoefficients[Expand[func]],coefficients]}, If[sparse[[1]]!=0,Print["Function could not be converted to vector because of these terms: "<>ToString[sparse[[1]]]]]; Normal[sparse[[2]]]];
 
-vectorToFunction[vec_]:=vec.coefficients/.{a[x_,y_]:>CircleDot[previousWeightFunctions[[x]],y/.{(1-u-w)->Log[1-u-w],(1-u)-> Log[1-u],(1-w)-> Log[1-w],u->Log[u],w->Log[w]}]};
+vectorToFunction[vec_]:=vec.coefficients/.{a[x_,y_]:>CircleDot[previousWeightTerms[[x]],Log[y]]};
 toCoefficients[Plus[func1_,funcN__]]:=Sum[toCoefficients[i],{i,List[func1,funcN]}];
 toCoefficients[func_]:=toCoefficients[coproduct[{currentWeight-1,1},func]]/;!MatchQ[func,CircleDot[__,_]]\[And]!MatchQ[func,Times[_,CircleDot[__,_]]]\[And]!MatchQ[func,Plus[_,__]];
 toCoefficients[func_]:=(func/.{CircleDot[x_,y_]:>a[Position[previousWeightTerms,x][[1,1]],y]}/.toLogs/.Log[y_]:>y)/;MatchQ[func,CircleDot[__,_]]\[Or]MatchQ[func,Times[_,CircleDot[__,_]]];

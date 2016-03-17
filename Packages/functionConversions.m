@@ -10,10 +10,10 @@ G[aVec_,0]:=0/;Last[aVec]=!=0;
 IMPL[0,aVec_,0]:=0/;Length[aVec]>=1;  
 HPL[aVec_,1]:=((HPL[aVec,x]/.HPLtoIMPL)/.x->1)/;Last[aVec]==1\[Or]Last[aVec]==-1;
 HPL[aVec_,-1]:=((HPL[aVec,x]/.HPLtoIMPL)/.x->-1)/;Last[aVec]==1\[Or]Last[aVec]==-1;
-G[aVec_,1]:=((G[aVec,x]/.GtoIMPL)/.x->1)/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
-G[aVec_,-1]:=((G[aVec,x]/.GtoIMPL)/.x->-1)/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
-IMPL[0,aVec_,1]:=Expand[ReplaceAll[toStrictLyndonBasis[IMPL[0,aVec,\[CapitalIota]]/.toHPL]/.toIMPL,IMPL[0,aVector_,\[CapitalIota]]:>IMPLwordToMZV[aVector]]]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
-IMPL[0,aVec_,-1]:=Expand[ReplaceAll[toStrictLyndonBasis[IMPL[0,-aVec,\[CapitalIota]]/.toHPL]/.toIMPL,IMPL[0,aVector_,\[CapitalIota]]:>IMPLwordToMZV[aVector]]]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+G[aVec_,1]:=((toLyndonBasis[G[aVec,x]]/.GtoIMPL)/.x->1)/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+G[aVec_,-1]:=((toLyndonBasis[G[aVec,x]]/.GtoIMPL)/.x->-1)/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+IMPL[0,aVec_,1]:=Expand[ReplaceAll[toLyndonBasis[IMPL[0,aVec,\[CapitalIota]]/.toHPL]/.toIMPL,IMPL[0,aVector_,\[CapitalIota]]:>IMPLwordToMZV[aVector]]]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
+IMPL[0,aVec_,-1]:=Expand[ReplaceAll[toLyndonBasis[IMPL[0,-aVec,\[CapitalIota]]/.toHPL]/.toIMPL,IMPL[0,aVector_,\[CapitalIota]]:>IMPLwordToMZV[aVector]]]/;Count[aVec,Alternatives[0,-1,1]]==Length[aVec];
 IMPLwordToMZV[aVector_]:=Module[{pos},If[Length[aVector]==1,Which[aVector=={1},-\[Zeta][1],aVector=={0},0,aVector=={-1},Log[2]],If[Abs[First[aVector]]==1,((-1)^Count[aVector,1])\[Zeta]@@compressedNotation[Reverse[aVector]]]]]; 
 (*G[aVec_,1]:=Expand[Expand[G[aVec/u,1/u]/.GtoIMPL/.IMPLtoHPL/.toSingularArgP[1/u,\[Delta]]/.invertArgument[1/(1-u),\[Delta]]]/.Power[\[Delta],n_?EvenQ]:>1/.\[Pi]to\[Zeta]/.HPLtoG]/;Count[aVec,Alternatives[0,1,u]]==Length[aVec];*)
 
